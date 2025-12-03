@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   # Запуск при пуше в remake ветку
   push:
-    branches: [ main ]
+    branches: [ master ]
   
   # Возможность запустить вручную
   workflow_dispatch:
