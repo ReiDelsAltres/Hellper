@@ -75,6 +75,9 @@ export default class Index {
     }
 }
 
+const loc = window.location;
+console.log(`[App] initialized at ${loc.href} (origin: ${loc.origin}, path: ${loc.pathname}${loc.search}${loc.hash})`);
+
 const APP_GRAIL: Triplet<UniHtml> = TripletBuilder.create(
     "./src/components/AppGrail.html",
     "./src/components/AppGrail.html.css",

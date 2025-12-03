@@ -66,6 +66,8 @@ export default class Index {
         ]);
     }
 }
+const loc = window.location;
+console.log(`[App] initialized at ${loc.href} (origin: ${loc.origin}, path: ${loc.pathname}${loc.search}${loc.hash})`);
 const APP_GRAIL = TripletBuilder.create("./src/components/AppGrail.html", "./src/components/AppGrail.html.css", "./src/components/AppGrail.html.ts")
     .withAccess(AccessType.BOTH)
     .withUni(AppGrail)
