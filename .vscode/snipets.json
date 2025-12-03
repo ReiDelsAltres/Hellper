@@ -1,0 +1,8 @@
+"foreach": {
+  "prefix": "@foreach",
+  "body": [
+    "@for (item in collection) {",
+    "}"
+  ],
+  "description": "foreach"
+}

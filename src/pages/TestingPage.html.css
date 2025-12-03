@@ -1,0 +1,57 @@
+.page {
+  min-width: 100%;
+  min-height: 100%;
+
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.semestr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  justify-content: center;
+
+  .semestr-item {
+
+    .subject-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      gap: 10px;
+      /* make each action card use a two-column layout: content left, chips right */
+      re-button > div.content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        /* ensure the content doesn't overflow the button area */
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* vertical stack of chips aligned to the right */
+      re-button > div.content .chip-column {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+        /* don't allow chips column to collapse */
+        flex-shrink: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .semestr-item p {
+    text-align: center;
+  }
+}

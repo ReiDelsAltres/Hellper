@@ -1,0 +1,40 @@
+<paper-component simple="true" class="page">
+    <div class="header">
+        <h1 id="subject-name">@(subject.translatedName)</h1>
+        <h2 id="subject-translated-name">@(subject.name)</h2>
+        <div class="meta-row">
+            <span class="label">Группа:</span>
+            @for (group in subject.groups) {
+            <re-chip color="primary" variant="outlined" id="group-chip">@(group)</re-chip>
+            }
+        </div>
+        <div class="meta-row">
+            <span class="label">Преподаватель:</span>
+            <re-chip color="primary" variant="outlined" id="teacher-chip">@(subject.teacher)</re-chip>
+        </div>
+    </div>
+
+    <div class="mode-selector">
+        @for (mode in testModes) {
+        <re-button class="mode-item" data-mode="@(mode.name)">
+            <div class="mode-content">
+                <span class="mode-title">@(mode.name)</span>
+                <span class="mode-description">@(mode.description)</span>
+            </div>
+            <re-chip variant="filled" color="@(mode.colorP)" class="mode-count">@(mode.numQuestions)</re-chip>
+        </re-button>
+        }
+
+        <re-button class="mode-item settings-item" id="mode-settings">
+            <svg-icon icon="settings" size="md"></svg-icon>
+        </re-button>
+    </div>
+
+    <re-button variant="outlined" color="tertiary" full-width class="start-button" id="start-test" data-link>
+        ЗАПУСТИТЬ
+    </re-button>
+
+    <re-button variant="outlined" color="primary" full-width class="all-questions-button" id="all-questions">
+        ВСЕ ВОПРОСЫ
+    </re-button>
+</paper-component>

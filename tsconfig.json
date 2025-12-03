@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "allowArbitraryExtensions": true,
+
+    "target": "esnext",
+    "module": "esnext",
+
+    "lib": [
+      "es2023",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@Purper": ["./node_modules/@reidelsaltres/pureper/src/index.js"]
+    },
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "outDir": "./out",
+
+    //"resolveJsonModule": true,
+    "rewriteRelativeImportExtensions": true,
+
+    "sourceMap": true
+  },
+  "include": ["./src","./index.html.ts","./404.html.ts"],
+  "exclude": [ "./test"]
+}

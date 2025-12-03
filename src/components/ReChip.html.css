@@ -1,0 +1,134 @@
+:host([hidden]) {
+    display: none;
+}
+
+:host {
+    border-radius: 999px;
+
+    /* make chips behave predictably inside flex containers */
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    font-size: var(--chip-font-size);
+    padding: var(--chip-padding-y) var(--chip-padding-x);
+
+    border: var(--chip-border);
+    background-color: var(--chip-bg-color);
+    color: var(--chip-text-color);
+}
+:host(:hover):host(:not([interactive="false"])) {
+    background-color: var(--chip-hover-bg-color);
+}
+
+:host([color="primary"]), :host(:not([color])) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-primary);
+    --chip-text-color: var(--color-text-primary-contrast);
+    --chip-hover-bg-color: var(--color-primary-distinctive);
+}
+:host([color="secondary"]) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-secondary);
+    --chip-text-color: var(--color-text-primary-contrast);
+    --chip-hover-bg-color: var(--color-secondary-distinctive);
+}
+:host([color="tertiary"]) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-tertiary);
+    --chip-text-color: var(--color-text-primary-contrast);
+    --chip-hover-bg-color: var(--color-tertiary-distinctive);
+}
+:host([color="additional"]) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-additional);
+    --chip-text-color: var(--color-text-additional-contrast);
+    --chip-hover-bg-color: var(--color-additional-distinctive);
+}
+:host([color="info"]) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-info);
+    --chip-text-color: var(--color-text-info-contrast);
+    --chip-hover-bg-color: var(--color-info-distinctive);
+}
+:host([color="success"]) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-success);
+    --chip-text-color: var(--color-text-success-contrast);
+    --chip-hover-bg-color: var(--color-success-distinctive);
+}
+:host([color="warning"]) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-warning);
+    --chip-text-color: var(--color-text-warning-contrast);
+    --chip-hover-bg-color: var(--color-warning-distinctive);
+}
+:host([color="error"]) {
+    --chip-border: none;
+
+    --chip-bg-color: var(--color-error);
+    --chip-text-color: var(--color-text-error-contrast);
+    --chip-hover-bg-color: var(--color-error-distinctive);
+}
+
+:host([variant="outlined"]) {
+    --chip-bg-color: transparent;
+    --chip-border: 1px solid var(--chip-text-color);
+}
+:host([variant="outlined"]):host([color="primary"]),
+:host([variant="outlined"]):host(:not([color])) {
+    --chip-text-color: var(--color-primary);
+    
+    --chip-hover-bg-color: var(--color-primary-container);
+}
+:host([variant="outlined"]):host([color="secondary"]) {
+    --chip-text-color: var(--color-secondary);
+    --chip-hover-bg-color: var(--color-secondary-container);
+}
+:host([variant="outlined"]):host([color="tertiary"]) {
+    --chip-text-color: var(--color-tertiary);
+    --chip-hover-bg-color: var(--color-tertiary-container);
+}
+:host([variant="outlined"]):host([color="additional"]) {
+    --chip-text-color: var(--color-additional);
+    --chip-hover-bg-color: var(--color-additional-container);
+}
+:host([variant="outlined"]):host([color="info"]) {
+    --chip-text-color: var(--color-info);
+    --chip-hover-bg-color: var(--color-info-container);
+}
+:host([variant="outlined"]):host([color="success"]) {
+    --chip-text-color: var(--color-success);
+    --chip-hover-bg-color: var(--color-success-container);
+}
+:host([variant="outlined"]):host([color="warning"]) {
+    --chip-text-color: var(--color-warning);
+    --chip-hover-bg-color: var(--color-warning-container);
+}
+:host([variant="outlined"]):host([color="error"]) {
+    --chip-text-color: var(--color-error);
+    --chip-hover-bg-color: var(--color-error-container);
+}
+
+:host([size="small"]) {
+    --chip-font-size: 0.78rem;
+    --chip-padding-y: 4px;
+    --chip-padding-x: 8px;
+}
+:host([size="medium"]), :host(:not([size])) {
+    --chip-font-size: 0.85rem;
+    --chip-padding-y: 6px;
+    --chip-padding-x: 10px;
+}
+:host([size="large"]) {
+    --chip-font-size: 1rem;
+    --chip-padding-y: 8px;
+    --chip-padding-x: 12px;
+}

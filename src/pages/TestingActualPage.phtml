@@ -1,0 +1,18 @@
+<paper-component simple="true" class="page testing-actual-page">
+</paper-component>
+
+<div class="questions-container">
+    @for (question in questions) {
+    <paper-component class="question-card">
+        <paper-component class="titleBlock">
+            <re-chip>@(question.Id)</re-chip>
+            <span>@(question.Title)</span>
+        </paper-component>
+        <paper-component  class="answers-container">
+            @for (answer in question.Answers) {
+            <re-button variant="outlined" color="empty" class="btn">@(answer)</re-button>
+            }
+        </paper-component>
+    </paper-component>
+    }
+</div>

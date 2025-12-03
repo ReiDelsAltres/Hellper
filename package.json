@@ -1,0 +1,13 @@
+{
+  "name": "@reidelsaltres/hellper",
+  "version": "0.0.1",
+  "description": "Test",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "test": "npx tsc -p tests/tsconfig.json"
+  },
+  "dependencies": {
+    "@reidelsaltres/pureper": "^0.1.80"
+  }
+}
