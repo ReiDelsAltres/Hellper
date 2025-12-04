@@ -1,4 +1,4 @@
-import { UniHtml, Triplet, TripletBuilder, AccessType, Router, HOSTING_ORIGIN } from "@Purper";
+import { UniHtml, Triplet, TripletBuilder, AccessType, Router, HOSTING_ORIGIN, HOSTING } from "@Purper";
 
 import PalettePage from "./src/pages/PalettePage.html.js"
 import MathPage from "./src/pages/MathPage.html.js"
@@ -249,7 +249,7 @@ Index.initialize().then(() => {
         Router.tryRouteTo(persistedRoute);
     }
     else {
-        Router.tryRouteTo(new URL("/", HOSTING_ORIGIN));
+        Router.tryRouteTo(new URL(HOSTING, HOSTING_ORIGIN));
     }
 }).catch(error => {
     console.error("Error during initialization:", error);
