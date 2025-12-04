@@ -1,5 +1,8 @@
-import { IElementHolder, Component } from "@Purper";
+import { Component } from "@Purper";
 export default class ColorPalettePreview extends Component {
-    protected preLoad(holder: IElementHolder): Promise<void>;
+    static get observedAttributes(): string[];
+    onConnected(): void;
+    onAttributeChanged(name: string, oldValue: string | null, newValue: string | null): void;
+    private updatePalette;
 }
 //# sourceMappingURL=ColorPalettePreview.html.d.ts.map

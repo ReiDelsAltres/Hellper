@@ -320,6 +320,12 @@
     --btn-min-height: 42px;
     --btn-border-radius: 10px;
 }
+:host([size="extra-large"]) {
+    --btn-font-size: 1.5rem;
+    --btn-padding: 4px 12px;
+    --btn-min-height: 60px;
+    --btn-border-radius: 18px;
+}
 
 /* Icon-only button */
 :host(.icon-only) {

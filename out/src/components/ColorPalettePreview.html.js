@@ -1,22 +1,49 @@
-import { Component } from "@Purper";
-export default class ColorPalettePreview extends Component {
-    preLoad(holder) {
-        const title = holder.element.getElementsByClassName("title");
-        let themeName;
-        for (const clas of this.classList) {
-            if (!clas.match('.+-theme'))
-                continue;
-            themeName = clas.replace('-theme', '');
-            break;
-        }
-        title[0].textContent = themeName;
-        const colors = holder.element.getElementsByClassName("color");
-        for (const colorElement of colors) {
-            colorElement.getElementsByClassName("hex")[0].textContent = ""
-                + getComputedStyle(document.documentElement)
-                    .getPropertyValue(`--color-${colorElement.classList[1]}`).trim().toUpperCase();
-        }
-        return;
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Component, ReComponent, AccessType } from "@Purper";
+let ColorPalettePreview = class ColorPalettePreview extends Component {
+    static get observedAttributes() {
+        return [
+            "theme"
+        ];
     }
-}
+    onConnected() {
+        requestAnimationFrame(() => this.updatePalette());
+    }
+    onAttributeChanged(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            this.updatePalette();
+        }
+    }
+    updatePalette() {
+        const root = this.shadowRoot ?? this;
+        const nameEl = root.querySelector(".palette-name");
+        // Extract theme name from class list (e.g., "blazor-theme" → "Blazor")
+        const themeClass = Array.from(this.classList).find(c => c.endsWith("-theme"));
+        if (nameEl && themeClass) {
+            const themeName = themeClass.replace("-theme", "");
+            nameEl.textContent = themeName.charAt(0).toUpperCase() + themeName.slice(1);
+        }
+        // Update color blocks with computed values
+        const styles = getComputedStyle(this);
+        const blocks = root.querySelectorAll(".color-block");
+        blocks.forEach((block) => {
+            const varName = block.dataset.var;
+            if (!varName)
+                return;
+            const value = styles.getPropertyValue(varName).trim();
+            if (value) {
+                block.style.background = value;
+            }
+        });
+    }
+};
+ColorPalettePreview = __decorate([
+    ReComponent("./src/components/ColorPalettePreview.phtml", "./src/components/ColorPalettePreview.html.css", "./src/components/ColorPalettePreview.html.ts", AccessType.BOTH, "color-palette")
+], ColorPalettePreview);
+export default ColorPalettePreview;
 //# sourceMappingURL=ColorPalettePreview.html.js.map

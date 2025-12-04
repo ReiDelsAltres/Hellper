@@ -8,7 +8,7 @@ import "./src/pages/TestingPage.html.js";
 import "./src/pages/TestingSubPage.html.js";
 import "./src/pages/TestingActualPage.html.js";
 import NavigationDrawer from "./src/components/NavigationDrawer.html.js";
-import ColorPalettePreview from "./src/components/ColorPalettePreview.html.js";
+import "./src/components/ColorPalettePreview.html.js";
 import SvgIcon from "./src/components/SvgIcon.html.js";
 import ReButton from "./src/components/ReButton.html.js";
 import ReChip from "./src/components/ReChip.html.js";
@@ -25,7 +25,7 @@ export default class Index {
             CHESS_BOARD.register("markup", "chess-board"),
             PAPER.register("markup", "paper-component"),
             NAVIGATION_DRAWER.register("markup", "navigation-drawer"),
-            COLOR_PALETTE_PREVIEW.register("markup", "color-palette"),
+            /*COLOR_PALETTE_PREVIEW.register("markup", "color-palette"),*/
             SVG_ICON.register("markup", "svg-icon"),
             RE_BUTTON.register("markup", "re-button"),
             RE_CHIP.register("markup", "re-chip"),
@@ -86,10 +86,13 @@ const NAVIGATION_DRAWER = TripletBuilder.create("./src/components/NavigationDraw
     .withUni(NavigationDrawer)
     .withLightDOMCss("./src/components/NavigationDrawer.html.lt.css")
     .build();
-const COLOR_PALETTE_PREVIEW = TripletBuilder.create("./src/components/ColorPalettePreview.html", "./src/components/ColorPalettePreview.html.css", "./src/components/ColorPalettePreview.html.js")
+/*const COLOR_PALETTE_PREVIEW: Triplet<UniHtml> = TripletBuilder.create(
+    "./src/components/ColorPalettePreview.html",
+    "./src/components/ColorPalettePreview.html.css",
+    "./src/components/ColorPalettePreview.html.js")
     .withAccess(AccessType.BOTH)
     .withUni(ColorPalettePreview)
-    .build();
+    .build();*/
 const SVG_ICON = TripletBuilder.create("./src/components/SvgIcon.html", "./src/components/SvgIcon.html.css", "./src/components/SvgIcon.html.js")
     .withAccess(AccessType.BOTH)
     .withUni(SvgIcon)
