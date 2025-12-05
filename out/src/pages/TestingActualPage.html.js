@@ -28,6 +28,8 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.questions.forEach(q => q.shuffleAnswers(this.params.randomSource));
         return Promise.resolve();
     }
+    async preLoad(holder) {
+    }
 };
 TestingActualPage = __decorate([
     RePage("./src/pages/TestingActualPage.phtml", "./src/pages/TestingActualPage.html.css", "./src/pages/TestingActualPage.html.ts", AccessType.BOTH, "/testing/actual"),

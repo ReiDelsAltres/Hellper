@@ -1,7 +1,7 @@
 import { IElementHolder, Component, ReComponent, AccessType } from "@Purper";
 
 @ReComponent(
-    "./src/components/ColorPalettePreview.phtml",
+    "./src/components/ColorPalettePreview.html",
     "./src/components/ColorPalettePreview.html.css",
     "./src/components/ColorPalettePreview.html.ts",
     AccessType.BOTH,

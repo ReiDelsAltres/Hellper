@@ -1,0 +1,124 @@
+:host {
+  display: inline;
+  color: var(--typography-color, var(--color-text, #c1c1c4));
+  font-family: var(--font-family, "Inter", "Segoe UI", system-ui, sans-serif);
+  font-weight: var(--typography-weight, 500);
+  line-height: var(--typography-line-height, 1.4);
+  letter-spacing: var(--typography-letter, 0);
+  text-transform: var(--typography-transform, none);
+}
+
+
+/* Alignment */
+:host([align="left"]) .typo-text,
+:host(:not([align])) .typo-text { text-align: left; }
+:host([align="center"]) .typo-text { text-align: center; }
+:host([align="right"]) .typo-text { text-align: right; }
+:host([align="justify"]) .typo-text { text-align: justify; }
+
+/* Transform */
+:host([uppercase]) { --typography-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Truncate */
+:host([truncate]) .typo-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:host([text][color="empty"]), :host([text="true"][color="empty"]) {
+    --typography-color: var(--color-text-empty);
+}
+:host([text][color="primary"]), :host([text="true"][color="primary"]) {
+    --typography-color: var(--color-text-primary);
+}
+:host([text][color="secondary"]), :host([text="true"][color="secondary"]) {
+    --typography-color: var(--color-text-secondary);
+}
+:host([text][color="tertiary"]), :host([text="true"][color="tertiary"]) {
+    --typography-color: var(--color-text-tertiary);
+}
+:host([text][color="additional"]), :host([text="true"][color="additional"]) {
+    --typography-color: var(--color-text-additional);
+}
+:host([text][color="primary"]), :host([text="true"][color="primary"]) {
+    --typography-color: var(--color-text-primary);
+}
+/* Color tokens */
+:host([color="empty"]) { --typography-color: var(--color-empty); }
+:host([color="primary"]), :host(:not([color])) { --typography-color: var(--color-primary); }
+:host([color="secondary"]) { --typography-color: var(--color-secondary); }
+:host([color="tertiary"]) { --typography-color: var(--color-tertiary); }
+:host([color="additional"]) { --typography-color: var(--color-additional); }
+:host([color="info"]) { --typography-color: var(--color-info); }
+:host([color="success"]) { --typography-color: var(--color-success); }
+:host([color="warning"]) { --typography-color: var(--color-warning); }
+:host([color="error"]) { --typography-color: var(--color-error); }
+:host([color="muted"]) { --typography-color: color-mix(in srgb, var(--color-text, #c1c1c4) 70%, #fff 5%); }
+
+/* Variants */
+:host([variant="display"]) {
+  --typography-weight: 800;
+  --typography-line-height: 1.15;
+  --typography-letter: -0.02em;
+  font-size: clamp(2rem, 3vw + 1rem, 3.4rem);
+}
+
+:host([variant="headline"]) {
+  --typography-weight: 700;
+  --typography-line-height: 1.2;
+  --typography-letter: -0.01em;
+  font-size: clamp(1.6rem, 2vw + 0.8rem, 2.4rem);
+}
+
+:host([variant="title"]) {
+  --typography-weight: 700;
+  --typography-line-height: 1.25;
+  font-size: 1.4rem;
+}
+
+:host([variant="subtitle"]) {
+  --typography-weight: 600;
+  --typography-line-height: 1.35;
+  font-size: 1.1rem;
+}
+
+:host([variant="body"]), :host(:not([variant])) {
+  --typography-weight: 500;
+  --typography-line-height: 1.45;
+  font-size: 1rem;
+}
+
+:host([variant="body-2"]) {
+  --typography-weight: 500;
+  --typography-line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+:host([variant="caption"]) {
+  --typography-weight: 600;
+  --typography-line-height: 1.4;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+:host([variant="overline"]) {
+  --typography-weight: 700;
+  --typography-line-height: 1.4;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Weight overrides */
+:host([weight="400"]) { --typography-weight: 400; }
+:host([weight="500"]) { --typography-weight: 500; }
+:host([weight="600"]) { --typography-weight: 600; }
+:host([weight="700"]) { --typography-weight: 700; }
+:host([weight="800"]) { --typography-weight: 800; }
+
+@media (max-width: 640px) {
+  :host([variant="display"]) { font-size: clamp(1.8rem, 4vw + 0.4rem, 2.6rem); }
+  :host([variant="headline"]) { font-size: clamp(1.4rem, 3vw + 0.3rem, 2rem); }
+  :host([variant="title"]) { font-size: 1.25rem; }
+}

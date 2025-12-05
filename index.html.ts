@@ -6,9 +6,12 @@ import SubjectsPage from "./src/pages/SubjectsPage.html.js"
 import ButtonsPage from "./src/pages/ButtonsPage.html.js"
 import ChessHomePage from "./src/pages/ChessHomePage.html.js"
 import ChessHistoryPage from "./src/pages/ChessHistoryPage.html.js"
+
 import "./src/pages/TestingPage.html.js"
 import "./src/pages/TestingSubPage.html.js"
 import "./src/pages/TestingActualPage.html.js"
+import "./src/components/ColorPalettePreview.html.js"
+import "./src/components/ReTypography.html.js"
 
 import NavigationDrawer from "./src/components/NavigationDrawer.html.js";
 import  "./src/components/ColorPalettePreview.html.js";
@@ -53,7 +56,7 @@ export default class Index {
             
             PAPER.init(),
             NAVIGATION_DRAWER.init(),
-            COLOR_PALETTE_PREVIEW.init(),
+            //COLOR_PALETTE_PREVIEW.init(),
             SVG_ICON.init(),
             RE_BUTTON.init(),
             RE_CHIP.init(),

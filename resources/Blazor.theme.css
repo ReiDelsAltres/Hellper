@@ -5,7 +5,7 @@
     --color-empty-black: #494f52;
 
     --color-text-empty: var(--color-empty);
-    --color-text-empty-contrast: #fff;
+    --color-text-empty-contrast: #494f52;
     /* Primary */
     --color-primary: #594ae2;
     --color-primary-distinctive: #5a47ff;

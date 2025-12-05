@@ -43,7 +43,7 @@ let ColorPalettePreview = class ColorPalettePreview extends Component {
     }
 };
 ColorPalettePreview = __decorate([
-    ReComponent("./src/components/ColorPalettePreview.phtml", "./src/components/ColorPalettePreview.html.css", "./src/components/ColorPalettePreview.html.ts", AccessType.BOTH, "color-palette")
+    ReComponent("./src/components/ColorPalettePreview.html", "./src/components/ColorPalettePreview.html.css", "./src/components/ColorPalettePreview.html.ts", AccessType.BOTH, "color-palette")
 ], ColorPalettePreview);
 export default ColorPalettePreview;
 //# sourceMappingURL=ColorPalettePreview.html.js.map

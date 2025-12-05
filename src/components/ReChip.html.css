@@ -20,7 +20,13 @@
 :host(:hover):host(:not([interactive="false"])) {
     background-color: var(--chip-hover-bg-color);
 }
+:host([color="empty"]) {
+    --chip-border: none;
 
+    --chip-bg-color: var(--color-empty);
+    --chip-text-color: var(--color-text-empty-contrast);
+    --chip-hover-bg-color: var(--color-empty-distinctive);
+}
 :host([color="primary"]), :host(:not([color])) {
     --chip-border: none;
 
@@ -82,37 +88,41 @@
     --chip-bg-color: transparent;
     --chip-border: 1px solid var(--chip-text-color);
 }
-:host([variant="outlined"]):host([color="primary"]),
-:host([variant="outlined"]):host(:not([color])) {
+:host([variant="outlined"][color="empty"]) {
+    --chip-text-color: var(--color-empty);
+    --chip-hover-bg-color: var(--color-empty-container);
+}
+:host([variant="outlined"][color="primary"]),
+:host([variant="outlined"]:not([color])) {
     --chip-text-color: var(--color-primary);
     
     --chip-hover-bg-color: var(--color-primary-container);
 }
-:host([variant="outlined"]):host([color="secondary"]) {
+:host([variant="outlined"][color="secondary"]) {
     --chip-text-color: var(--color-secondary);
     --chip-hover-bg-color: var(--color-secondary-container);
 }
-:host([variant="outlined"]):host([color="tertiary"]) {
+:host([variant="outlined"][color="tertiary"]) {
     --chip-text-color: var(--color-tertiary);
     --chip-hover-bg-color: var(--color-tertiary-container);
 }
-:host([variant="outlined"]):host([color="additional"]) {
+:host([variant="outlined"][color="additional"]) {
     --chip-text-color: var(--color-additional);
     --chip-hover-bg-color: var(--color-additional-container);
 }
-:host([variant="outlined"]):host([color="info"]) {
+:host([variant="outlined"][color="info"]) {
     --chip-text-color: var(--color-info);
     --chip-hover-bg-color: var(--color-info-container);
 }
-:host([variant="outlined"]):host([color="success"]) {
+:host([variant="outlined"][color="success"]) {
     --chip-text-color: var(--color-success);
     --chip-hover-bg-color: var(--color-success-container);
 }
-:host([variant="outlined"]):host([color="warning"]) {
+:host([variant="outlined"][color="warning"]) {
     --chip-text-color: var(--color-warning);
     --chip-hover-bg-color: var(--color-warning-container);
 }
-:host([variant="outlined"]):host([color="error"]) {
+:host([variant="outlined"][color="error"]) {
     --chip-text-color: var(--color-error);
     --chip-hover-bg-color: var(--color-error-container);
 }
@@ -131,4 +141,9 @@
     --chip-font-size: 1rem;
     --chip-padding-y: 8px;
     --chip-padding-x: 12px;
+}
+:host([size="extra-large"]) {
+    --chip-font-size: 1.5rem;
+    --chip-padding-y: 12px;
+    --chip-padding-x: 18px;
 }

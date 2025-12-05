@@ -33,6 +33,9 @@ export default class TestingActualPage extends Page {
         this.questions.forEach(q => q.shuffleAnswers(this.params.randomSource));
         return Promise.resolve();
     }
+    protected async preLoad(holder: IElementHolder): Promise<void> {
+        
+    }
 }
 
 class TemporaryQuestion implements Question {

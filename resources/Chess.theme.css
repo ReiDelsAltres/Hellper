@@ -1,4 +1,7 @@
 .chess-theme {
+    --color-empty: #ffffff;
+    --color-text-empty: var(--color-empty);
+    --color-text-empty-contrast: #111111;
     /* Primary - light squares */
     --color-primary: #111111;
     --color-primary-distinctive: #5d5d5d;

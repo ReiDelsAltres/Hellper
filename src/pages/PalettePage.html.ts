@@ -8,6 +8,7 @@ export default class PalettePage extends Page {
         const themeMap: Record<string, string> = {
             "blazor-theme": "Blazor",
             "brass-theme": "Brass",
+            "brass-dark-theme": "BrassDark",
             "chess-theme": "Chess",
         };
 

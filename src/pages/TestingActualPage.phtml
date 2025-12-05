@@ -5,10 +5,12 @@
     @for (question in questions) {
     <paper-component class="question-card">
         <paper-component class="titleBlock">
-            <re-chip>@(question.Id)</re-chip>
-            <span>@(question.Title)</span>
+            <div>
+                <re-chip color="empty">@(question.Id)</re-chip>
+                <re-typography color="empty">@(question.Title)</re-typography>
+            </div>
         </paper-component>
-        <paper-component  class="answers-container">
+        <paper-component class="answers-container">
             @for (answer in question.Answers) {
             <re-button variant="outlined" color="empty" class="btn">@(answer)</re-button>
             }

@@ -6,6 +6,7 @@ export default class PalettePage extends Page {
         const themeMap = {
             "blazor-theme": "Blazor",
             "brass-theme": "Brass",
+            "brass-dark-theme": "BrassDark",
             "chess-theme": "Chess",
         };
         const items = Array.from(holder.element.querySelectorAll(".palette-item"));
