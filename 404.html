@@ -14,12 +14,21 @@
         const HOSTING = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep) + "/";
 
         const full = window.location.href;
-        sessionStorage.setItem("spa:persisted-route", full);
-
-        window.location.replace(HOSTING);
 
         console.log("Redirecting from:", full);
         console.log("Redirecting to:", HOSTING);
+
+        setTimeout(() => {
+            console.log("Waited for 2 seconds");
+
+            sessionStorage.setItem("spa:persisted-route", full);
+
+            window.location.replace(HOSTING);
+        }, 10000);
+
+        const tt = "Hellper/testing";
+        const gg = tt.split('/').slice(0, 1 + pathSegmentsToKeep) + "/";
+        console.log("Test:", gg);
     </script>
     <!-- Redirect Script -->
 </head>
