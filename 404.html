@@ -11,7 +11,7 @@
         const pathSegmentsToKeep = window.location.origin.includes(".github.io") ? 1 : 0;
 
         const l = window.location;
-        const HOSTING = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep) + "/";
+        const HOSTING = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + "/";
 
         const full = window.location.href;
 
@@ -19,11 +19,14 @@
         console.log("Saved:", full);
         console.log("Redirecting to:", HOSTING);
 
-        setTimeout(() => {
-            //sessionStorage.setItem("spa:persisted-route", full);
+        /*setTimeout(() => {
+            sessionStorage.setItem("spa:persisted-route", full);
 
-            //window.location.replace(HOSTING);
-        }, 10000);
+            window.location.replace(HOSTING);
+        }, 10000);*/
+        sessionStorage.setItem("spa:persisted-route", full);
+
+        window.location.replace(HOSTING);
 
         /*const tt = "Hellper/testing";
         const gg = tt.split('/').slice(0, 1 + pathSegmentsToKeep) + "/";
