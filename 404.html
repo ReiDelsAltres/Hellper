@@ -11,7 +11,7 @@
         const pathSegmentsToKeep = window.location.origin.includes(".github.io") ? 1 : 0;
 
         const l = window.location;
-        const HOSTING = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + "/";
+        const HOSTING = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/').toString() + "/";
 
         const full = window.location.href;
 
