@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pureper</title>
 
-    <script type="importmap">
-        {"imports": {"@Purper": "./node_modules/@reidelsaltres/pureper/out/index.js"}}
-    </script>
-
     <!-- Redirect Script -->
-    <script type="module" src="./out/404.html.js"></script>
+    <script type="module">
+        const pathSegmentsToKeep = window.location.origin.includes(".github.io") ? 1 : 0;
+
+        const l = window.location;
+        const HOSTING = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep) + "/";
+
+        const full = window.location.href;
+        sessionStorage.setItem("spa:persisted-route", full);
+
+        window.location.replace(HOSTING);
+
+        console.log("Redirecting from:", full);
+        console.log("Redirecting to:", HOSTING);
+    </script>
     <!-- Redirect Script -->
 </head>
+
 <body>
     <p>Redirecting...</p>
 </body>
+
 </html>

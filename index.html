@@ -19,6 +19,10 @@
     <script type="module" defer>
         import { rewriteDomLinks } from "./out/src/redirectRules.js";
 
+        if (window.location.pathname === "/index.html") {
+            window.location.replace("/");
+        }
+
         const runRewrite = () => rewriteDomLinks(document);
 
         if (document.readyState === "loading") {

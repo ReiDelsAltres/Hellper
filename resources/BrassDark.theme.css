@@ -46,15 +46,19 @@
 
     /* Utilities - slightly darker signals */
     --color-info: #1f6aa0;
+    --color-text-info: var(--color-info);
     --color-text-info-contrast: #ffffff;
 
     --color-success: #1f7b6e;
+    --color-text-success: var(--color-success);
     --color-text-success-contrast: #ffffff;
 
     --color-warning: #b87c2c;
+    --color-text-warning: var(--color-warning);
     --color-text-warning-contrast: #0f0b08;
 
     --color-error: #9f2f2f;
+    --color-text-error: var(--color-error);
     --color-text-error-contrast: #ffffff;
 
     --color-text: #dcd3c6; /* light warm text */

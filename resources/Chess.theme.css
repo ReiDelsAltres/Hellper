@@ -40,15 +40,19 @@
 
     /* Utility Colors */
     --color-info: var(--color-primary);
+    --color-text-info: var(--color-info);
     --color-text-info-contrast: white;
 
     --color-success: var(--color-primary);
+    --color-text-success: var(--color-success);
     --color-text-success-contrast: white;
 
     --color-warning: var(--color-primary);
+    --color-text-warning: var(--color-warning);
     --color-text-warning-contrast: white;
 
     --color-error: var(--color-primary);
+    --color-text-error: var(--color-error);
     --color-text-error-contrast: white;
 
     --color-text: var(--color-primary);

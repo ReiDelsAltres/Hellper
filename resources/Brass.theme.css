@@ -1,5 +1,5 @@
 .brass-theme {
-    --color-empty: #fffaf6; /* warm off-white */
+    --color-empty: #f1b482; /* warm off-white */
     --color-empty-distinctive: #d9cfc6; /* muted warm gray */
     --color-empty-light: #f6efe6; /* very light warm */
     --color-empty-black: #4a4038; /* warm dark for contrast */
@@ -49,15 +49,19 @@
 
     /* Utility Colors — keep standard signals but slightly harmonized */
     --color-info: #2b7fb4; /* keep cool blue */
+    --color-text-info: var(--color-info);
     --color-text-info-contrast: #ffffff;
 
     --color-success: #2a9d8f;
+    --color-text-success: var(--color-success);
     --color-text-success-contrast: #ffffff;
 
     --color-warning: #e9b253; /* amber-style to match brass */
+    --color-text-warning: var(--color-warning);
     --color-text-warning-contrast: #ffffff;
 
     --color-error: #c53b3b; /* warm red */
+    --color-text-error: var(--color-error);
     --color-text-error-contrast: #ffffff;
 
     --color-text: #312a24; /* dark text with warm tone */

@@ -44,15 +44,19 @@
 
     /* Utility Colors */
     --color-info: #2196f3;
+    --color-text-info: var(--color-info);
     --color-text-info-contrast: #fff;
 
     --color-success: #4caf50;
+    --color-text-success: var(--color-success);
     --color-text-success-contrast: #fff;
 
     --color-warning: #ff9800;
+    --color-text-warning: var(--color-warning);
     --color-text-warning-contrast: #fff;
 
     --color-error: #f44336;
+    --color-text-error: var(--color-error);
     --color-text-error-contrast: #fff;
 
     --color-text: #c1c1c4;

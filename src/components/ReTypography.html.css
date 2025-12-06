@@ -26,35 +26,44 @@
   white-space: nowrap;
 }
 
-:host([text][color="empty"]), :host([text="true"][color="empty"]) {
-    --typography-color: var(--color-text-empty);
+:host([contrast][color="empty"]), :host([contrast="true"][color="empty"]) {
+    --typography-color: var(--color-text-empty-contrast);
 }
-:host([text][color="primary"]), :host([text="true"][color="primary"]) {
-    --typography-color: var(--color-text-primary);
+:host([contrast][color="primary"]), :host([contrast="true"][color="primary"]) {
+    --typography-color: var(--color-text-primary-contrast);
 }
-:host([text][color="secondary"]), :host([text="true"][color="secondary"]) {
-    --typography-color: var(--color-text-secondary);
+:host([contrast][color="secondary"]), :host([contrast="true"][color="secondary"]) {
+    --typography-color: var(--color-text-secondary-contrast);
 }
-:host([text][color="tertiary"]), :host([text="true"][color="tertiary"]) {
-    --typography-color: var(--color-text-tertiary);
+:host([contrast][color="tertiary"]), :host([contrast="true"][color="tertiary"]) {
+    --typography-color: var(--color-text-tertiary-contrast);
 }
-:host([text][color="additional"]), :host([text="true"][color="additional"]) {
-    --typography-color: var(--color-text-additional);
+:host([contrast][color="additional"]), :host([contrast="true"][color="additional"]) {
+    --typography-color: var(--color-text-additional-contrast);
 }
-:host([text][color="primary"]), :host([text="true"][color="primary"]) {
-    --typography-color: var(--color-text-primary);
+:host([contrast][color="info"]), :host([contrast="true"][color="info"]) {
+    --typography-color: var(--color-text-info-contrast);
+}
+:host([contrast][color="success"]), :host([contrast="true"][color="success"]) {
+    --typography-color: var(--color-text-success-contrast);
+}
+:host([contrast][color="warning"]), :host([contrast="true"][color="warning"]) {
+    --typography-color: var(--color-text-warning-contrast);
+}
+:host([contrast][color="error"]), :host([contrast="true"][color="error"]) {
+    --typography-color: var(--color-text-error-contrast);
 }
 /* Color tokens */
-:host([color="empty"]) { --typography-color: var(--color-empty); }
-:host([color="primary"]), :host(:not([color])) { --typography-color: var(--color-primary); }
-:host([color="secondary"]) { --typography-color: var(--color-secondary); }
-:host([color="tertiary"]) { --typography-color: var(--color-tertiary); }
-:host([color="additional"]) { --typography-color: var(--color-additional); }
-:host([color="info"]) { --typography-color: var(--color-info); }
-:host([color="success"]) { --typography-color: var(--color-success); }
-:host([color="warning"]) { --typography-color: var(--color-warning); }
-:host([color="error"]) { --typography-color: var(--color-error); }
-:host([color="muted"]) { --typography-color: color-mix(in srgb, var(--color-text, #c1c1c4) 70%, #fff 5%); }
+:host([color="empty"]) { --typography-color: var(--color-text-empty); }
+:host([color="primary"]), :host(:not([color])) { --typography-color: var(--color-text-primary); }
+:host([color="secondary"]) { --typography-color: var(--color-text-secondary); }
+:host([color="tertiary"]) { --typography-color: var(--color-text-tertiary); }
+:host([color="additional"]) { --typography-color: var(--color-text-additional); }
+:host([color="info"]) { --typography-color: var(--color-text-info); }
+:host([color="success"]) { --typography-color: var(--color-text-success); }
+:host([color="warning"]) { --typography-color: var(--color-text-warning); }
+:host([color="error"]) { --typography-color: var(--color-text-error); }
+
 
 /* Variants */
 :host([variant="display"]) {
