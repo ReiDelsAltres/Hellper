@@ -252,7 +252,7 @@ Index.initialize().then(() => {
         Router.tryRouteTo(persistedRoute);
     }
     else {
-        Router.tryRouteTo(new URL(HOSTING, HOSTING_ORIGIN));
+        Router.tryRouteTo(new URL(HOSTING + "/", HOSTING_ORIGIN));
     }
 }).catch(error => {
     console.error("Error during initialization:", error);
