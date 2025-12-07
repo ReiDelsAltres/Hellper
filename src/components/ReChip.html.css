@@ -25,8 +25,16 @@
     color: var(--chip-text-color);
 }
 
-:host(:hover):host(:not([interactive="false"])) {
-    background-color: var(--chip-hover-bg-color);
+:host(:hover:not([interactive="false"])) {
+    cursor: not-allowed;
+    pointer-events: none;
+    transform: none;
+}
+:host([disabled]) {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+    transform: none;
 }
 
 :host([color="empty"]) {

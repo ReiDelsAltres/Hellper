@@ -9,6 +9,7 @@
 }
 
 .titleBlock {
+  display: flex;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -36,4 +37,18 @@
   min-width: 250px;
   max-width: 480px;
   box-sizing: border-box;
+}
+
+.result-stats {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+  margin-bottom: 10px;
+}
+
+.popH {
+  margin-bottom: 16px;
+}
+
+.typo {
+  display: block;
 }

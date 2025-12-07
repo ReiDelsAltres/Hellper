@@ -295,6 +295,80 @@
             </div>
         </section>
 
+        <!-- PopUp Section -->
+        <section class="component-section">
+            <h2 class="section-title">PopUp</h2>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Обычный (закрывается по клику на overlay)</h3>
+                <div class="component-row align-center">
+                    <re-button color="primary" id="open-popup-btn">Open popup</re-button>
+
+                    <pop-up id="demo-popup">
+                        <h3 style="margin:0 0 8px 0">Popup title</h3>
+                        <p style="margin:0 0 12px 0">This is a demo popup. Click outside to close.</p>
+                        <div style="text-align:right">
+                            <re-button color="secondary" id="close-popup-btn">Close</re-button>
+                        </div>
+                    </pop-up>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Modal (не закрывается по клику на overlay)</h3>
+                <div class="component-row align-center">
+                    <re-button color="additional" id="open-modal-btn">Open modal</re-button>
+
+                    <pop-up id="demo-modal" modal>
+                        <h3 style="margin:0 0 8px 0">Modal popup</h3>
+                        <p style="margin:0 0 12px 0">This modal won't close when clicking outside. Use the button.</p>
+                        <div style="text-align:right">
+                            <re-button color="error" id="close-modal-btn">Close modal</re-button>
+                        </div>
+                    </pop-up>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Anchored (привязан к кнопке)</h3>
+                <div class="component-row align-center" style="gap: 16px;">
+                    <re-button color="tertiary" id="anchor-target">Anchor target</re-button>
+
+                    <pop-up id="demo-anchored" anchor="#anchor-target" placement="bottom">
+                        <div style="min-width: 180px;">
+                            <div style="font-weight: 600; margin-bottom: 6px;">Anchored popup</div>
+                            <div style="font-size: 0.9rem; color: var(--color-text-secondary, #666);">
+                                This popup is attached to the button above.
+                            </div>
+                        </div>
+                    </pop-up>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3 class="subsection-title">Anchored (разные позиции)</h3>
+                <div class="component-row align-center" style="gap: 12px; flex-wrap: wrap;">
+                    <re-button color="info" size="small" id="anchor-bottom">Bottom ↓</re-button>
+                    <re-button color="info" size="small" id="anchor-top">Top ↑</re-button>
+                    <re-button color="info" size="small" id="anchor-left">Left ←</re-button>
+                    <re-button color="info" size="small" id="anchor-right">Right →</re-button>
+
+                    <pop-up id="popup-bottom" anchor="#anchor-bottom" placement="bottom">
+                        <div>Popup below</div>
+                    </pop-up>
+                    <pop-up id="popup-top" anchor="#anchor-top" placement="top">
+                        <div>Popup above</div>
+                    </pop-up>
+                    <pop-up id="popup-left" anchor="#anchor-left" placement="left">
+                        <div>Popup left</div>
+                    </pop-up>
+                    <pop-up id="popup-right" anchor="#anchor-right" placement="right">
+                        <div>Popup right</div>
+                    </pop-up>
+                </div>
+            </div>
+        </section>
+
         <!-- ReTypography Section -->
         <section class="component-section">
             <h2 class="section-title">ReTypography</h2>

@@ -19,6 +19,7 @@ import  "./src/components/ColorPalettePreview.html.js";
 import ReButton from "./src/components/ReButton.html.js";
 import ReChip from "./src/components/ReChip.html.js";
 import ReIcon from "./src/components/ReIcon.html.js";
+import PopUp from "./src/components/PopUp.html.js";
 import DebuggerPage from "./src/pages/DebuggerPage.html.js";
 import SubjectPage from "./src/pages/SubjectsPage.html.js";
 import DynamicPage from "./src/pages/DynamicPage.html.js";
@@ -37,6 +38,7 @@ export default class Index {
             RE_BUTTON.register("markup", "re-button"),
             RE_CHIP.register("markup", "re-chip"),
             RE_ICON.register("markup", "re-icon"),
+            POPUP.register("markup", "pop-up"),
 
             MAIN_PAGE.register("router", "/"),
             PALETTE_PAGE.register("router", "/palettes"),
@@ -62,6 +64,7 @@ export default class Index {
             RE_BUTTON.init(),
             RE_CHIP.init(),
             RE_ICON.init(),
+            POPUP.init(),
 
             MAIN_PAGE.init(),
             PALETTE_PAGE.init(),
@@ -147,6 +150,14 @@ const RE_ICON: Triplet<UniHtml> = TripletBuilder.create(
     "./src/components/ReIcon.html.js")
     .withAccess(AccessType.BOTH)
     .withUni(ReIcon)
+    .build();
+
+const POPUP: Triplet<UniHtml> = TripletBuilder.create(
+    "./src/components/PopUp.html",
+    "./src/components/PopUp.html.css",
+    "./src/components/PopUp.html.js")
+    .withAccess(AccessType.BOTH)
+    .withUni(PopUp)
     .build();
 
 const MAIN_PAGE: Triplet<UniHtml> = TripletBuilder.create(

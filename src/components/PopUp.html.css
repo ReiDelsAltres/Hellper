@@ -1,0 +1,123 @@
+:host {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+:host([open]) {
+    display: flex;
+}
+
+/* Anchored mode — no fullscreen overlay */
+:host([anchored]) {
+    position: absolute;
+    inset: auto;
+    width: max-content;
+}
+
+:host([anchored]) .popup-overlay {
+    display: none;
+}
+
+/* Overlay — dark background */
+.popup-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+:host([open]) .popup-overlay {
+    opacity: 1;
+}
+
+/* Container — the popup box */
+.popup-container {
+    position: relative;
+    background-color: var(--paper-background-color);
+    background-image: var(--paper-background-image);
+    background-size: var(--paper-background-size);
+    background-size: var(--paper-background-size);
+
+    border-radius: 12px;
+    padding: 16px 20px;
+    min-width: 200px;
+    max-width: min(90vw, 500px);
+    max-height: 85vh;
+    overflow: auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95) translateY(-10px);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+:host([open]) .popup-container {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* Anchored container — smaller shadow, no transform animation */
+:host([anchored]) .popup-container {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    transform: none;
+}
+
+:host([anchored][open]) .popup-container {
+    transform: none;
+}
+
+/* Arrow for anchored popup */
+.popup-arrow {
+    display: none;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--paper-background, #fff);
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+:host([anchored]) .popup-arrow {
+    display: block;
+}
+
+/* Arrow positions */
+:host([placement="bottom"]) .popup-arrow,
+:host(:not([placement])) .popup-arrow {
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+}
+
+:host([placement="top"]) .popup-arrow {
+    bottom: -6px;
+    left: 50%;
+    margin-left: -6px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+:host([placement="left"]) .popup-arrow {
+    right: -6px;
+    top: 50%;
+    margin-top: -6px;
+    box-shadow: 2px -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+:host([placement="right"]) .popup-arrow {
+    left: -6px;
+    top: 50%;
+    margin-top: -6px;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive: smaller padding on mobile */
+@media (max-width: 480px) {
+    .popup-container {
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+}

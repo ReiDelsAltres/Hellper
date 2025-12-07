@@ -2,6 +2,7 @@ import { AccessType, Fetcher, IElementHolder, Page, RePage } from "@Purper";
 import { Subject } from "./TestingPage.html";
 import QuestionParser, { Question } from "../../tri/QuestionParser.js";
 import SeededShuffle from "../lib/SeededShuffle.js";
+import PopUp from "../components/PopUp.html.js";
 
 @RePage(
     "./src/pages/TestingActualPage.hmle",
@@ -17,6 +18,7 @@ export default class TestingActualPage extends Page {
         randomSource: string
     };
     private questions: TemporaryQuestion[];
+    private statuses: AnswerStatus[] = [];
     public constructor(params?: string) {
         super();
         this.params = JSON.parse(decodeURIComponent(params));
@@ -34,18 +36,55 @@ export default class TestingActualPage extends Page {
             this.questions = this.questions.slice(0, Number(this.params.limits));
         }
 
+        this.statuses = new Array(this.questions.length).fill(AnswerStatus.UNANSWERED);
+
+
+        var seed = this.params.randomSource;
         this.questions.forEach(q => {
-            q.shuffleAnswers(this.params.randomSource);
+            q.shuffleAnswers(seed);
+            seed = SeededShuffle.deriveNextSeed(seed);
             q.Answers.push("Пропустить вопрос");
         });
 
         return Promise.resolve();
     }
-    protected async preLoad(holder: IElementHolder): Promise<void> {
+
+    private resolveEnding() {
+        if (this.statuses.some(s => s === AnswerStatus.UNANSWERED)) return;
+
+        const correct = this.statuses.filter(s => s === AnswerStatus.SUCCESS).length;
+        const wrong = this.statuses.filter(s => s === AnswerStatus.WRONG).length;
+        const skip = this.statuses.filter(s => s === AnswerStatus.SKIP).length;
+
+        // Update popup content
+        (this['resultCorrect'] as HTMLElement).textContent = String(correct);
+        (this['resultWrong'] as HTMLElement).textContent = String(wrong);
+        (this['resultSkip'] as HTMLElement).textContent = String(skip);
+
+        //25 => 24 * 2 - 1 = 47;
+        if (this.questions.length === 25) {
+            const score = (correct * 2) - wrong;
+            (this['resultScore'] as HTMLElement).textContent = String(score);
+            (this['resultScoreBlock'] as HTMLElement).style.display = 'block';
+        }
+
+        // Open result popup
+        (this['resultPopup'] as PopUp).open();
     }
 
-    private handleClick(event: Event, element: HTMLElement, qidx: number, aidx: number): void {
-        console.log('Clicked answer:', (event.target as HTMLElement).innerText);
+    private closeResult(): void {
+        (this['resultPopup'] as PopUp).close();
+    }
+
+    private handleClick(event: Event, element: HTMLElement, 
+        params: { qidx: number, aidx: number, c0: string, c1: string, c2: string }): void {
+        
+        const { qidx, aidx, c0, c1, c2 } = params;
+        console.log('Clicked answer:', params);
+        for (const c of [c0, c1, c2]) {
+            const chip = this[c] as HTMLElement;
+            chip.setAttribute("disabled", "true");
+        }
         for (let i = 0; i < 6; i++) {
             const tt = this[qidx + "-" + i] as HTMLElement;
             tt.setAttribute("disabled", "true");
@@ -65,24 +104,34 @@ export default class TestingActualPage extends Page {
         switch (aidx) {
             case question.RDd:
                 element.setAttribute('color', 'success');
+                this.statuses[qidx] = AnswerStatus.SUCCESS;
                 break;
             case question.Answers.length - 1:
                 element.setAttribute('color', 'warning');
+                this.statuses[qidx] = AnswerStatus.SKIP;
                 break;
             default:
                 element.setAttribute('color', 'error');
+                this.statuses[qidx] = AnswerStatus.WRONG;
                 break;
         }
+        this.resolveEnding();
     }
 }
 
+enum AnswerStatus {
+    SUCCESS = "success",
+    WRONG = "wrong",
+    SKIP = "skip",
+    UNANSWERED = "unanswered"
+}
 class TemporaryQuestion implements Question {
     public Id: number;
     public RDd: number;
     public Title: string;
     public Answers: string[];
 
-    public localId: number;
+    public localId: number
 
     constructor(data: Question, fallbackId: number, localId: number) {
         this.Id = data.Id ?? fallbackId;

@@ -53,5 +53,18 @@ export default class SeededShuffle {
     static shuffle(items, seed) {
         return this.shuffleWithMapping(items, seed).shuffled;
     }
+    /**
+     * Derive a new seed string from an existing seed.
+     * This is deterministic: given the same input seed and index the result will be the same.
+     * Use the optional index to create a sequence of derived seeds (0,1,2...).
+     * The output is a compact base36 representation of a 32-bit hash.
+     */
+    static deriveNextSeed(seed, index = 0) {
+        // Ensure we always have a string base
+        const input = (seed ?? '') + '|' + String(index);
+        const next = this.hashSeed(input) >>> 0; // force unsigned
+        // return a compact base36 representation
+        return next.toString(36);
+    }
 }
 //# sourceMappingURL=SeededShuffle.js.map

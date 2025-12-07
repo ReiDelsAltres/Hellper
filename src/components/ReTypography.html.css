@@ -1,11 +1,13 @@
 :host {
-  display: inline;
+  display: flex;
   color: var(--typography-color, var(--color-text, #c1c1c4));
   font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
   font-weight: var(--typography-weight, 500);
   line-height: var(--typography-line-height, 1.4);
   letter-spacing: var(--typography-letter, 0);
   text-transform: var(--typography-transform, none);
+
+  gap: 5px;
 }
 
 
@@ -38,6 +40,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+:host([disabled]) {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
 }
 
 :host([original][color="empty"]),

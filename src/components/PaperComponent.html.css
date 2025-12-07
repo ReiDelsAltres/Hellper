@@ -22,7 +22,7 @@
     border-bottom-left-radius: var(--paper-border-bottom-left-radius);
     border-bottom-right-radius: var(--paper-border-bottom-right-radius);
 
-    color: var(--loc-paper-color, --color-primary);
+    color: var(--loc-paper-color);
 }
 
 :host(:not([simple="true"])) {
@@ -40,7 +40,7 @@
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-:host([color="primary"]) {
+:host([color="primary"]), :host(:not([color])) {
     --loc-paper-color: var(--color-primary);
 }
 

@@ -12,6 +12,7 @@ import SeededShuffle from "../lib/SeededShuffle.js";
 let TestingActualPage = class TestingActualPage extends Page {
     params;
     questions;
+    statuses = [];
     constructor(params) {
         super();
         this.params = JSON.parse(decodeURIComponent(params));
@@ -25,16 +26,44 @@ let TestingActualPage = class TestingActualPage extends Page {
         if (this.params.limits && this.params.limits > 0) {
             this.questions = this.questions.slice(0, Number(this.params.limits));
         }
+        this.statuses = new Array(this.questions.length).fill(AnswerStatus.UNANSWERED);
+        var seed = this.params.randomSource;
         this.questions.forEach(q => {
-            q.shuffleAnswers(this.params.randomSource);
+            q.shuffleAnswers(seed);
+            seed = SeededShuffle.deriveNextSeed(seed);
             q.Answers.push("Пропустить вопрос");
         });
         return Promise.resolve();
     }
-    async preLoad(holder) {
+    resolveEnding() {
+        if (this.statuses.some(s => s === AnswerStatus.UNANSWERED))
+            return;
+        const correct = this.statuses.filter(s => s === AnswerStatus.SUCCESS).length;
+        const wrong = this.statuses.filter(s => s === AnswerStatus.WRONG).length;
+        const skip = this.statuses.filter(s => s === AnswerStatus.SKIP).length;
+        // Update popup content
+        this['resultCorrect'].textContent = String(correct);
+        this['resultWrong'].textContent = String(wrong);
+        this['resultSkip'].textContent = String(skip);
+        //25 => 24 * 2 - 1 = 47;
+        if (this.questions.length === 25) {
+            const score = (correct * 2) - wrong;
+            this['resultScore'].textContent = String(score);
+            this['resultScoreBlock'].style.display = 'block';
+        }
+        // Open result popup
+        this['resultPopup'].open();
     }
-    handleClick(event, element, qidx, aidx) {
-        console.log('Clicked answer:', event.target.innerText);
+    closeResult() {
+        this['resultPopup'].close();
+    }
+    handleClick(event, element, params) {
+        const { qidx, aidx, c0, c1, c2 } = params;
+        console.log('Clicked answer:', params);
+        for (const c of [c0, c1, c2]) {
+            const chip = this[c];
+            chip.setAttribute("disabled", "true");
+        }
         for (let i = 0; i < 6; i++) {
             const tt = this[qidx + "-" + i];
             tt.setAttribute("disabled", "true");
@@ -52,14 +81,18 @@ let TestingActualPage = class TestingActualPage extends Page {
         switch (aidx) {
             case question.RDd:
                 element.setAttribute('color', 'success');
+                this.statuses[qidx] = AnswerStatus.SUCCESS;
                 break;
             case question.Answers.length - 1:
                 element.setAttribute('color', 'warning');
+                this.statuses[qidx] = AnswerStatus.SKIP;
                 break;
             default:
                 element.setAttribute('color', 'error');
+                this.statuses[qidx] = AnswerStatus.WRONG;
                 break;
         }
+        this.resolveEnding();
     }
 };
 TestingActualPage = __decorate([
@@ -67,6 +100,13 @@ TestingActualPage = __decorate([
     __metadata("design:paramtypes", [String])
 ], TestingActualPage);
 export default TestingActualPage;
+var AnswerStatus;
+(function (AnswerStatus) {
+    AnswerStatus["SUCCESS"] = "success";
+    AnswerStatus["WRONG"] = "wrong";
+    AnswerStatus["SKIP"] = "skip";
+    AnswerStatus["UNANSWERED"] = "unanswered";
+})(AnswerStatus || (AnswerStatus = {}));
 class TemporaryQuestion {
     Id;
     RDd;

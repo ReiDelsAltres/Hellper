@@ -1,21 +1,36 @@
 <paper-component simple="true" class="page testing-actual-page">
 </paper-component>
 
+<pop-up @[ref]="resultPopup" modal>
+    <re-typography variant="headline" class="popH">Результаты теста</re-typography>
+    <div class="result-stats">
+        <re-typography>Правильных: <re-chip color="success" @[ref]="resultCorrect">0</re-chip></re-typography>
+        <re-typography>Неправильных: <re-chip color="error" @[ref]="resultWrong">0</re-chip></re-typography>
+        <re-typography>Пропущено: <re-chip color="warning" @[ref]="resultSkip">0</re-chip></re-typography>
+    </div>
+    <div class="result-score" @[ref]="resultScoreBlock" style="display:none">
+        <re-typography>Баллы: <re-chip @[ref]="resultScore">0</re-chip></re-typography>
+    </div>
+    <re-button color="primary" full-width @[onclick]="closeResult()">Закрыть</re-button>
+</pop-up>
+
 <div class="questions-container">
     @for (index, question in questions) {
     <paper-component class="question-card">
         <paper-component class="titleBlock">
-            <div>
-                <re-chip color="empty">@(index + 1)</re-chip>
-                <re-chip color="empty">@(question.Id)</re-chip>
-                <re-typography color="empty">@(question.Title)</re-typography>
-            </div>
+            <re-typography @[ref]="@('c' + index + '-' + '2')" color="empty" class="typo">
+                <re-chip color="empty" @[ref]="@('c' + index + '-' + '0')">@(index + 1)</re-chip>
+                <re-chip color="empty" @[ref]="@('c' + index + '-' + '1')">@(question.Id)</re-chip>
+                @(question.Title)
+            </re-typography>
         </paper-component>
         <paper-component class="answers-container">
             @for (aidx, answer in question.Answers) {
-            <re-button color="empty" class="btn"
-                @[ref]="@(index) + '-' + @(aidx)"
-                @[onclick]="handleClick(event,element,@(index),@(aidx))">@(answer)</re-button>
+            <re-button color="empty" class="btn" @[ref]="@(index) + '-' + @(aidx)" @[onclick]="handleClick(event,element,{qidx: @(index), aidx: @(aidx), 
+                    c0: '@('c' + index + '-' + '0')', 
+                    c1: '@('c' + index + '-' + '1')',
+                    c2: '@('c' + index + '-' + '2')'
+                    })">@(answer)</re-button>
             }
         </paper-component>
     </paper-component>
