@@ -37,9 +37,9 @@ let TestingActualPage = class TestingActualPage extends Page {
         console.log('Clicked answer:', event.target.innerText);
         for (let i = 0; i < 6; i++) {
             const tt = this[qidx + "-" + i];
+            tt.setAttribute("disabled", "true");
             if (tt === element)
                 continue;
-            tt.setAttribute("disabled", "true");
             const question = this.questions[qidx];
             switch (i) {
                 case question.RDd:

@@ -48,9 +48,9 @@ export default class TestingActualPage extends Page {
         console.log('Clicked answer:', (event.target as HTMLElement).innerText);
         for (let i = 0; i < 6; i++) {
             const tt = this[qidx + "-" + i] as HTMLElement;
-            if (tt === element) continue;
-
             tt.setAttribute("disabled", "true");
+            if (tt === element) continue;
+            
             const question = this.questions[qidx];
 
             switch (i) {
