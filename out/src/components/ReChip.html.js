@@ -32,15 +32,15 @@ export default class ReChip extends Component {
         // icon
         const icon = this.getAttribute('icon');
         if (icon && this.iconSlot) {
-            let existing = this.iconSlot.querySelector('svg-icon');
+            let existing = this.iconSlot.querySelector('re-icon');
             if (existing) {
                 existing.setAttribute('icon', icon);
             }
             else {
-                const svg = document.createElement('svg-icon');
-                svg.setAttribute('icon', icon);
-                svg.setAttribute('size', 'sm');
-                this.iconSlot.appendChild(svg);
+                const reIcon = document.createElement('re-icon');
+                reIcon.setAttribute('icon', icon);
+                reIcon.setAttribute('size', 'sm');
+                this.iconSlot.appendChild(reIcon);
             }
             this.iconSlot.classList.add('has-icon');
         }

@@ -2,17 +2,20 @@
 </paper-component>
 
 <div class="questions-container">
-    @for (question in questions) {
+    @for (index, question in questions) {
     <paper-component class="question-card">
         <paper-component class="titleBlock">
             <div>
+                <re-chip color="empty">@(index + 1)</re-chip>
                 <re-chip color="empty">@(question.Id)</re-chip>
-                <re-typography contrast color="empty">@(question.Title)</re-typography>
+                <re-typography color="empty">@(question.Title)</re-typography>
             </div>
         </paper-component>
         <paper-component class="answers-container">
-            @for (answer in question.Answers) {
-            <re-button variant="outlined" color="empty" class="btn">@(answer)</re-button>
+            @for (aidx, answer in question.Answers) {
+            <re-button color="empty" class="btn"
+                @[ref]="@(index) + '-' + @(aidx)"
+                @[onclick]="handleClick(event,element,@(index),@(aidx))">@(answer)</re-button>
             }
         </paper-component>
     </paper-component>

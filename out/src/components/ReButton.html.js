@@ -37,19 +37,20 @@ export default class ReButton extends Component {
         const color = this.getAttribute('color') || 'primary';
         const variant = this.getAttribute('variant') || 'filled';
         if (iconName) {
-            // Проверяем, есть ли уже svg-icon
-            let existingIcon = this.iconSlot.querySelector('svg-icon');
+            // Проверяем, есть ли уже re-icon
+            let existingIcon = this.iconSlot.querySelector('re-icon');
             if (existingIcon) {
                 existingIcon.setAttribute('icon', iconName);
             }
             else {
                 // Создаем новую иконку
-                const svgIcon = document.createElement('svg-icon');
-                svgIcon.setAttribute('icon', iconName);
-                svgIcon.setAttribute('size', 'sm');
-                if (variant !== 'filled')
-                    svgIcon.setAttribute('color', color);
-                this.iconSlot.appendChild(svgIcon);
+                const reIcon = document.createElement('re-icon');
+                reIcon.setAttribute('icon', iconName);
+                reIcon.setAttribute('size', 'sm');
+                if (variant === 'filled')
+                    reIcon.setAttribute('variant', 'contrast');
+                reIcon.setAttribute('color', color);
+                this.iconSlot.appendChild(reIcon);
             }
             this.iconSlot.classList.add('has-icon');
         }

@@ -1,71 +1,48 @@
 .brass-theme {
-    --color-empty: #f1b482; /* warm off-white */
-    --color-empty-distinctive: #d9cfc6; /* muted warm gray */
-    --color-empty-light: #f6efe6; /* very light warm */
-    --color-empty-black: #4a4038; /* warm dark for contrast */
-
-    --color-text-empty: var(--color-empty);
-    --color-text-empty-contrast: var(--color-empty-black);
+    --color-empty: #d9cfc6; /* warm off-white */
+    --color-empty-contrast: #4a4038; /* muted warm gray */
+    --color-empty-hover: color-mix(in srgb, var(--color-empty) 60%, black);
 
     /* Brass / Bronze primary family */
     /* Primary: light brass/gold */
     --color-primary: #caa169; /* medium warm brass */
-    --color-primary-distinctive: #a6783f; /* deeper brass */
-    --color-primary-light: #e2c69b; /* highlight */
-    --color-primary-black: #5b3f2a; /* grounding dark */
-
-    --color-text-primary: var(--color-primary);
-    --color-text-primary-contrast: #ffffff;
+    --color-primary-contrast: #ffffff; /* deeper brass */
+    --color-primary-hover: color-mix(in srgb, var(--color-primary) 28%, #efe6db);
 
     /* Secondary — warm copper / burnt-sienna */
     /* Secondary: cool teal for contrast */
     --color-secondary: #2f8f86; /* mid teal for contrast */
-    --color-secondary-distinctive: #1f6d66; /* darker teal */
-    --color-secondary-light: #7fd6cf; /* lighter teal */
-    --color-secondary-black: #164f49;
-
-    --color-text-secondary: var(--color-secondary);
-    --color-text-secondary-contrast: #ffffff;
+    --color-secondary-contrast: #ffffff; /* darker teal */
+    --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 28%, #efe6db);
 
     /* Tertiary — pale warm accent */
     /* Tertiary: warm coral/peach */
     --color-tertiary: #ff986a; /* mid coral */
-    --color-tertiary-distinctive: #ff7043; /* vivid coral */
-    --color-tertiary-light: #ffccb3;
-    --color-tertiary-black: #8a4631;
-
-    --color-text-tertiary: var(--color-tertiary);
-    --color-text-tertiary-contrast: #ffffff;
+    --color-tertiary-contrast: #ffffff; /* vivid coral */
+    --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 28%, #efe6db);
 
     /* Additional — muted olive/bronze */
     /* Additional: soft olive/sage */
     --color-additional: #9aa471; /* olive/sage mid */
-    --color-additional-distinctive: #758244; /* deeper olive */
-    --color-additional-light: #dbe3c0;
-    --color-additional-black: #596034;
-
-    --color-text-additional: var(--color-additional);
-    --color-text-additional-contrast: #ffffff;
+    --color-additional-contrast: #ffffff; /* deeper olive */
+    --color-additional-hover: color-mix(in srgb, var(--color-additional) 28%, #efe6db);
 
     /* Utility Colors — keep standard signals but slightly harmonized */
     --color-info: #2b7fb4; /* keep cool blue */
-    --color-text-info: var(--color-info);
-    --color-text-info-contrast: #ffffff;
-
+    --color-info-contrast: #ffffff;
+    --color-info-hover: color-mix(in srgb, var(--color-info) 28%, #efe6db);
+    
     --color-success: #2a9d8f;
-    --color-text-success: var(--color-success);
-    --color-text-success-contrast: #ffffff;
+    --color-success-contrast: #ffffff;
+    --color-success-hover: color-mix(in srgb, var(--color-success) 28%, #efe6db);
 
     --color-warning: #e9b253; /* amber-style to match brass */
-    --color-text-warning: var(--color-warning);
-    --color-text-warning-contrast: #ffffff;
+    --color-warning-contrast: #ffffff;
+    --color-warning-hover: color-mix(in srgb, var(--color-warning) 28%, #efe6db);
 
     --color-error: #c53b3b; /* warm red */
-    --color-text-error: var(--color-error);
-    --color-text-error-contrast: #ffffff;
-
-    --color-text: #312a24; /* dark text with warm tone */
-    --color-text-disabled: #8f8a84;
+    --color-error-contrast: #ffffff;
+    --color-error-hover: color-mix(in srgb, var(--color-error) 28%, #efe6db);
 
     /* Surface color — mid-light warm */
     --surface: #f3ede6; /* warm, but not too bright */
@@ -83,17 +60,17 @@
         conic-gradient(from 180deg at 50% 30%, rgba(255,255,255,0.025), rgba(0,0,0,0.02) 25%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0.02) 75%, rgba(255,255,255,0.025)),
         /* brushed metal lines */
         repeating-linear-gradient(100deg, rgba(255,255,255,0.02) 0 1px, rgba(0,0,0,0.015) 1px 6px),
-        linear-gradient(160deg, color-mix(in srgb, var(--surface) 92%, var(--color-primary-light) 8%), color-mix(in srgb, var(--surface-dark) 8%, var(--surface) 92%));
+        linear-gradient(160deg, color-mix(in srgb, var(--surface) 92%, var(--color-primary) 8%), color-mix(in srgb, var(--surface-dark) 8%, var(--surface) 92%));
     --app-background-color: color-mix(in srgb, var(--color-primary) 10%, var(--surface, #f3ede6));
 
     --app-bars-background-size: 100% 100%, 100% 6px, auto;
     --app-bars-background-position: center, bottom, center;
     /* bars: heavier metallic sweep and a polished rim */
     --app-bars-background-image: 
-        linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 32%, rgba(0,0,0,0.06)) 0%, color-mix(in srgb, var(--color-secondary) 22%, rgba(0,0,0,0.05)) 100%),
-        linear-gradient(90deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
-        repeating-linear-gradient(90deg, rgba(0,0,0,0.025) 0 1px, rgba(255,255,255,0.02) 1px 8px);
-    --app-bars-background-color: color-mix(in srgb, var(--surface-dark) 62%, var(--color-primary-black));
+        linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 18%, rgba(255,255,255,0.25)) 0%, color-mix(in srgb, var(--color-secondary) 14%, rgba(255,255,255,0.2)) 100%),
+        linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05)),
+        repeating-linear-gradient(90deg, rgba(0,0,0,0.015) 0 1px, rgba(255,255,255,0.025) 1px 8px);
+    --app-bars-background-color: color-mix(in srgb, var(--surface-light) 75%, var(--color-primary) 25%);
 
 
     --paper-background-size: cover, 520px 220px, 100% 100%;
@@ -111,20 +88,4 @@
 
     --paper-border-style: none;
     --paper-border-color: none;
-
-    --page-primary: var(--color-primary-black);
-
-    --color-surface: var(--surface);
-    --color-surface-light: var(--surface-light);
-    --color-surface-dark: var(--surface-dark);
-
-    --color-empty-container: color-mix(in srgb, var(--color-empty) 60%, black);
-    --color-primary-container: color-mix(in srgb, var(--color-primary) 28%, #efe6db);
-    --color-secondary-container: color-mix(in srgb, var(--color-secondary) 28%, #efe6db);
-    --color-tertiary-container: color-mix(in srgb, var(--color-tertiary) 28%, #efe6db);
-    --color-additional-container: color-mix(in srgb, var(--color-additional) 28%, #efe6db);
-    --color-success-container: color-mix(in srgb, var(--color-success) 28%, #efe6db);
-    --color-warning-container: color-mix(in srgb, var(--color-warning) 28%, #efe6db);
-    --color-error-container: color-mix(in srgb, var(--color-error) 28%, #efe6db);
-    --color-info-container: color-mix(in srgb, var(--color-info) 28%, #efe6db);
 }

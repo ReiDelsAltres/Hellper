@@ -1,7 +1,7 @@
 :host {
   display: inline;
   color: var(--typography-color, var(--color-text, #c1c1c4));
-  font-family: var(--font-family, "Inter", "Segoe UI", system-ui, sans-serif);
+  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
   font-weight: var(--typography-weight, 500);
   line-height: var(--typography-line-height, 1.4);
   letter-spacing: var(--typography-letter, 0);
@@ -11,13 +11,27 @@
 
 /* Alignment */
 :host([align="left"]) .typo-text,
-:host(:not([align])) .typo-text { text-align: left; }
-:host([align="center"]) .typo-text { text-align: center; }
-:host([align="right"]) .typo-text { text-align: right; }
-:host([align="justify"]) .typo-text { text-align: justify; }
+:host(:not([align])) .typo-text {
+  text-align: left;
+}
+
+:host([align="center"]) .typo-text {
+  text-align: center;
+}
+
+:host([align="right"]) .typo-text {
+  text-align: right;
+}
+
+:host([align="justify"]) .typo-text {
+  text-align: justify;
+}
 
 /* Transform */
-:host([uppercase]) { --typography-transform: uppercase; letter-spacing: 0.08em; }
+:host([uppercase]) {
+  --typography-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 
 /* Truncate */
 :host([truncate]) .typo-text {
@@ -26,43 +40,88 @@
   white-space: nowrap;
 }
 
-:host([contrast][color="empty"]), :host([contrast="true"][color="empty"]) {
-    --typography-color: var(--color-text-empty-contrast);
+:host([original][color="empty"]),
+:host([original="true"][color="empty"]) {
+  --typography-color: var(--color-empty);
 }
-:host([contrast][color="primary"]), :host([contrast="true"][color="primary"]) {
-    --typography-color: var(--color-text-primary-contrast);
+
+:host([original][color="primary"]),
+:host([original="true"][color="primary"]) {
+  --typography-color: var(--color-primary);
 }
-:host([contrast][color="secondary"]), :host([contrast="true"][color="secondary"]) {
-    --typography-color: var(--color-text-secondary-contrast);
+
+:host([original][color="secondary"]),
+:host([original="true"][color="secondary"]) {
+  --typography-color: var(--color-secondary);
 }
-:host([contrast][color="tertiary"]), :host([contrast="true"][color="tertiary"]) {
-    --typography-color: var(--color-text-tertiary-contrast);
+
+:host([original][color="tertiary"]),
+:host([original="true"][color="tertiary"]) {
+  --typography-color: var(--color-tertiary);
 }
-:host([contrast][color="additional"]), :host([contrast="true"][color="additional"]) {
-    --typography-color: var(--color-text-additional-contrast);
+
+:host([original][color="additional"]),
+:host([original="true"][color="additional"]) {
+  --typography-color: var(--color-additional);
 }
-:host([contrast][color="info"]), :host([contrast="true"][color="info"]) {
-    --typography-color: var(--color-text-info-contrast);
+
+:host([original][color="info"]),
+:host([original="true"][color="info"]) {
+  --typography-color: var(--color-info);
 }
-:host([contrast][color="success"]), :host([contrast="true"][color="success"]) {
-    --typography-color: var(--color-text-success-contrast);
+
+:host([original][color="success"]),
+:host([original="true"][color="success"]) {
+  --typography-color: var(--color-success);
 }
-:host([contrast][color="warning"]), :host([contrast="true"][color="warning"]) {
-    --typography-color: var(--color-text-warning-contrast);
+
+:host([original][color="warning"]),
+:host([original="true"][color="warning"]) {
+  --typography-color: var(--color-warning);
 }
-:host([contrast][color="error"]), :host([contrast="true"][color="error"]) {
-    --typography-color: var(--color-text-error-contrast);
+
+:host([original][color="error"]),
+:host([original="true"][color="error"]) {
+  --typography-color: var(--color-error);
 }
+
 /* Color tokens */
-:host([color="empty"]) { --typography-color: var(--color-text-empty); }
-:host([color="primary"]), :host(:not([color])) { --typography-color: var(--color-text-primary); }
-:host([color="secondary"]) { --typography-color: var(--color-text-secondary); }
-:host([color="tertiary"]) { --typography-color: var(--color-text-tertiary); }
-:host([color="additional"]) { --typography-color: var(--color-text-additional); }
-:host([color="info"]) { --typography-color: var(--color-text-info); }
-:host([color="success"]) { --typography-color: var(--color-text-success); }
-:host([color="warning"]) { --typography-color: var(--color-text-warning); }
-:host([color="error"]) { --typography-color: var(--color-text-error); }
+:host([color="empty"]) {
+  --typography-color: var(--color-empty-contrast);
+}
+
+:host([color="primary"]),
+:host(:not([color])) {
+  --typography-color: var(--color-primary-contrast);
+}
+
+:host([color="secondary"]) {
+  --typography-color: var(--color-secondary-contrast);
+}
+
+:host([color="tertiary"]) {
+  --typography-color: var(--color-tertiary-contrast);
+}
+
+:host([color="additional"]) {
+  --typography-color: var(--color-additional-contrast);
+}
+
+:host([color="info"]) {
+  --typography-color: var(--color-info-contrast);
+}
+
+:host([color="success"]) {
+  --typography-color: var(--color-success-contrast);
+}
+
+:host([color="warning"]) {
+  --typography-color: var(--color-warning-contrast);
+}
+
+:host([color="error"]) {
+  --typography-color: var(--color-error-contrast);
+}
 
 
 /* Variants */
@@ -92,7 +151,8 @@
   font-size: 1.1rem;
 }
 
-:host([variant="body"]), :host(:not([variant])) {
+:host([variant="body"]),
+:host(:not([variant])) {
   --typography-weight: 500;
   --typography-line-height: 1.45;
   font-size: 1rem;
@@ -120,14 +180,36 @@
 }
 
 /* Weight overrides */
-:host([weight="400"]) { --typography-weight: 400; }
-:host([weight="500"]) { --typography-weight: 500; }
-:host([weight="600"]) { --typography-weight: 600; }
-:host([weight="700"]) { --typography-weight: 700; }
-:host([weight="800"]) { --typography-weight: 800; }
+:host([weight="400"]) {
+  --typography-weight: 400;
+}
+
+:host([weight="500"]) {
+  --typography-weight: 500;
+}
+
+:host([weight="600"]) {
+  --typography-weight: 600;
+}
+
+:host([weight="700"]) {
+  --typography-weight: 700;
+}
+
+:host([weight="800"]) {
+  --typography-weight: 800;
+}
 
 @media (max-width: 640px) {
-  :host([variant="display"]) { font-size: clamp(1.8rem, 4vw + 0.4rem, 2.6rem); }
-  :host([variant="headline"]) { font-size: clamp(1.4rem, 3vw + 0.3rem, 2rem); }
-  :host([variant="title"]) { font-size: 1.25rem; }
+  :host([variant="display"]) {
+    font-size: clamp(1.8rem, 4vw + 0.4rem, 2.6rem);
+  }
+
+  :host([variant="headline"]) {
+    font-size: clamp(1.4rem, 3vw + 0.3rem, 2rem);
+  }
+
+  :host([variant="title"]) {
+    font-size: 1.25rem;
+  }
 }

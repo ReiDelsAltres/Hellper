@@ -1,68 +1,45 @@
 /* Night / dark variation of Brass theme */
 .brass-dark-theme {
     --color-empty: #0b0705; /* deep almost-black neutral */
-    --color-empty-distinctive: #2f2a26; /* charcoal warm */
-    --color-empty-light: #3b352f; /* dark warm gray */
-    --color-empty-black: #000000;
-
-    --color-text-empty: var(--color-empty);
-    --color-text-empty-contrast: var(--color-text);
+    --color-empty-contrast: #dcd3c6; /* charcoal warm */
+    --color-empty-hover: color-mix(in srgb, var(--color-empty) 30%, black);
 
     /* Primary: dark warm brass */
     --color-primary: #8f6e3a; /* brass base */
-    --color-primary-distinctive: #6f542d; /* darker brass */
-    --color-primary-light: #b08a55; /* highlight */
-    --color-primary-black: #2f2316; /* near-black */
-
-    --color-text-primary: var(--color-primary);
-    --color-text-primary-contrast: #14100e;
+    --color-primary-contrast: #14100e; /* darker brass */
+    --color-primary-hover: color-mix(in srgb, var(--color-primary) 18%, black);
 
     /* Secondary: deeper teal/cyan for contrast */
     --color-secondary: #1f6d66;
-    --color-secondary-distinctive: #124d49;
-    --color-secondary-light: #3f9b95;
-    --color-secondary-black: #0d3f3b;
-
-    --color-text-secondary: var(--color-secondary);
-    --color-text-secondary-contrast: #e9efe8;
+    --color-secondary-contrast: #e9efe8;
+    --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 18%, black);
 
     /* Tertiary: muted coral accent */
     --color-tertiary: #c85d36;
-    --color-tertiary-distinctive: #a74428;
-    --color-tertiary-light: #e08a66;
-    --color-tertiary-black: #2e1209;
-
-    --color-text-tertiary: var(--color-tertiary);
-    --color-text-tertiary-contrast: #fffaf6;
+    --color-tertiary-contrast: #fffaf6;
+    --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 18%, black);
 
     /* Additional: darker olive / sage */
     --color-additional: #6f7a51;
-    --color-additional-distinctive: #556136;
-    --color-additional-light: #97a16f;
-    --color-additional-black: #2b3320;
-
-    --color-text-additional: var(--color-additional);
-    --color-text-additional-contrast: #fffaf6;
+    --color-additional-contrast: #fffaf6;
+    --color-additional-hover: color-mix(in srgb, var(--color-additional) 18%, black);
 
     /* Utilities - slightly darker signals */
     --color-info: #1f6aa0;
-    --color-text-info: var(--color-info);
     --color-text-info-contrast: #ffffff;
+    --color-info-hover: color-mix(in srgb, var(--color-info) 18%, black);
 
     --color-success: #1f7b6e;
-    --color-text-success: var(--color-success);
     --color-text-success-contrast: #ffffff;
+    --color-success-hover: color-mix(in srgb, var(--color-success) 18%, black);
 
     --color-warning: #b87c2c;
-    --color-text-warning: var(--color-warning);
     --color-text-warning-contrast: #0f0b08;
+    --color-warning-hover: color-mix(in srgb, var(--color-warning) 18%, black);
 
     --color-error: #9f2f2f;
-    --color-text-error: var(--color-error);
     --color-text-error-contrast: #ffffff;
-
-    --color-text: #dcd3c6; /* light warm text */
-    --color-text-disabled: #9a8f86;
+    --color-error-hover: color-mix(in srgb, var(--color-error) 18%, black);
 
     /* Surfaces for dark theme */
     --surface: #15110f; /* main dark surface */
@@ -73,26 +50,26 @@
     --app-background-size: 1400px 700px, 900px 420px, 100% 100%, auto;
     --app-background-position: 8% 18%, 86% 72%, center, center;
     --app-background-image:
-        radial-gradient(1200px 540px at 8% 18%, color-mix(in srgb, var(--color-primary-black) 36%, rgba(255,255,255,0.02)) 0%, transparent 42%),
-        radial-gradient(720px 360px at 86% 72%, color-mix(in srgb, var(--color-secondary-black) 32%, rgba(255,255,255,0.01)) 0%, transparent 44%),
+        radial-gradient(1200px 540px at 8% 18%, color-mix(in srgb, var(--color-primary) 36%, rgba(255,255,255,0.02)) 0%, transparent 42%),
+        radial-gradient(720px 360px at 86% 72%, color-mix(in srgb, var(--color-secondary) 32%, rgba(255,255,255,0.01)) 0%, transparent 44%),
         /* specular ring */
         conic-gradient(from 200deg at 50% 28%, rgba(255,255,255,0.02), rgba(0,0,0,0.06) 25%, rgba(255,255,255,0.01) 50%),
         /* brushed metal micro-lines */
         repeating-linear-gradient(100deg, rgba(255,255,255,0.01) 0 1px, rgba(0,0,0,0.04) 1px 8px),
-        linear-gradient(160deg, color-mix(in srgb, var(--surface) 90%, var(--color-primary-black) 8%), color-mix(in srgb, var(--surface-dark) 20%, var(--surface) 80%));
-    --app-background-color: color-mix(in srgb, var(--surface, #15110f) 86%, var(--color-primary-black) 10%);
+        linear-gradient(160deg, color-mix(in srgb, var(--surface) 90%, var(--color-primary) 8%), color-mix(in srgb, var(--surface-dark) 20%, var(--surface) 80%));
+    --app-background-color: color-mix(in srgb, var(--surface, #15110f) 86%, var(--color-primary) 10%);
 
     --app-bars-background-size: 100% 100%, 100% 6px, auto;
     --app-bars-background-position: center top, top, center;
     --app-bars-background-image:
-        linear-gradient(90deg, color-mix(in srgb, var(--color-primary-black) 36%, rgba(255,255,255,0.02)) 0%, color-mix(in srgb, var(--color-secondary-black) 24%, rgba(255,255,255,0.01)) 100%),
+        linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 36%, rgba(255,255,255,0.02)) 0%, color-mix(in srgb, var(--color-secondary) 24%, rgba(255,255,255,0.01)) 100%),
         linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00)),
         repeating-linear-gradient(90deg, rgba(0,0,0,0.05) 0 2px, rgba(255,255,255,0.02) 2px 10px);
-    --app-bars-background-color: color-mix(in srgb, var(--surface-dark) 80%, var(--color-primary-black));
+    --app-bars-background-color: color-mix(in srgb, var(--surface-dark) 80%, var(--color-primary));
 
     --paper-background-size: cover, 520px 220px, 100% 100%;
     --paper-background-position: center, 6% 10%, center;
-    --paper-background-image: radial-gradient(520px 220px at 6% 10%, color-mix(in srgb, var(--color-primary-black) 18%, rgba(255,255,255,0.02)) 0%, transparent 48%),
+    --paper-background-image: radial-gradient(520px 220px at 6% 10%, color-mix(in srgb, var(--color-primary) 18%, rgba(255,255,255,0.02)) 0%, transparent 48%),
                           linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.18)),
                           repeating-linear-gradient(0deg, rgba(0,0,0,0.04) 0 2px, rgba(255,255,255,0.01) 2px 8px);
     --paper-background-color: color-mix(in srgb, var(--surface) 88%, var(--surface-dark) 12%);
@@ -101,21 +78,4 @@
     --paper-border-top-right-radius: 14px;
     --paper-border-bottom-left-radius: 14px;
     --paper-border-bottom-right-radius: 14px;
-
-    --page-primary: var(--color-primary-black);
-
-    --color-surface: var(--surface);
-    --color-surface-light: var(--surface-light);
-    --color-surface-dark: var(--surface-dark);
-
-    /* containers tuned for dark */
-    --color-empty-container: color-mix(in srgb, var(--color-empty) 30%, black);
-    --color-primary-container: color-mix(in srgb, var(--color-primary) 18%, black);
-    --color-secondary-container: color-mix(in srgb, var(--color-secondary) 18%, black);
-    --color-tertiary-container: color-mix(in srgb, var(--color-tertiary) 18%, black);
-    --color-additional-container: color-mix(in srgb, var(--color-additional) 18%, black);
-    --color-success-container: color-mix(in srgb, var(--color-success) 18%, black);
-    --color-warning-container: color-mix(in srgb, var(--color-warning) 18%, black);
-    --color-error-container: color-mix(in srgb, var(--color-error) 18%, black);
-    --color-info-container: color-mix(in srgb, var(--color-info) 18%, black);
 }

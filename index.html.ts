@@ -4,6 +4,7 @@ import PalettePage from "./src/pages/PalettePage.html.js"
 import MathPage from "./src/pages/MathPage.html.js"
 import SubjectsPage from "./src/pages/SubjectsPage.html.js"
 import ButtonsPage from "./src/pages/ButtonsPage.html.js"
+import ComponentShowcasePage from "./src/pages/ComponentShowcasePage.html.js"
 import ChessHomePage from "./src/pages/ChessHomePage.html.js"
 import ChessHistoryPage from "./src/pages/ChessHistoryPage.html.js"
 
@@ -15,9 +16,9 @@ import "./src/components/ReTypography.html.js"
 
 import NavigationDrawer from "./src/components/NavigationDrawer.html.js";
 import  "./src/components/ColorPalettePreview.html.js";
-import SvgIcon from "./src/components/SvgIcon.html.js";
 import ReButton from "./src/components/ReButton.html.js";
 import ReChip from "./src/components/ReChip.html.js";
+import ReIcon from "./src/components/ReIcon.html.js";
 import DebuggerPage from "./src/pages/DebuggerPage.html.js";
 import SubjectPage from "./src/pages/SubjectsPage.html.js";
 import DynamicPage from "./src/pages/DynamicPage.html.js";
@@ -33,12 +34,13 @@ export default class Index {
             PAPER.register("markup", "paper-component"),
             NAVIGATION_DRAWER.register("markup", "navigation-drawer"),
             /*COLOR_PALETTE_PREVIEW.register("markup", "color-palette"),*/
-            SVG_ICON.register("markup", "svg-icon"),
             RE_BUTTON.register("markup", "re-button"),
             RE_CHIP.register("markup", "re-chip"),
+            RE_ICON.register("markup", "re-icon"),
 
             MAIN_PAGE.register("router", "/"),
             PALETTE_PAGE.register("router", "/palettes"),
+            COMPONENT_SHOWCASE_PAGE.register("router", "/components"),
             BUTTONS_PAGE.register("router", "/buttons"),
             ABOUT_PAGE.register("router", "/about"),
             DEBUGGER_PAGE.register("router", "/debugger"),
@@ -57,12 +59,13 @@ export default class Index {
             PAPER.init(),
             NAVIGATION_DRAWER.init(),
             //COLOR_PALETTE_PREVIEW.init(),
-            SVG_ICON.init(),
             RE_BUTTON.init(),
             RE_CHIP.init(),
+            RE_ICON.init(),
 
             MAIN_PAGE.init(),
             PALETTE_PAGE.init(),
+            COMPONENT_SHOWCASE_PAGE.init(),
             BUTTONS_PAGE.init(),
             ABOUT_PAGE.init(),
             DEBUGGER_PAGE.init(),
@@ -122,14 +125,6 @@ const NAVIGATION_DRAWER: Triplet<UniHtml> = TripletBuilder.create(
     .withUni(ColorPalettePreview)
     .build();*/
 
-const SVG_ICON: Triplet<UniHtml> = TripletBuilder.create(
-    "./src/components/SvgIcon.html",
-    "./src/components/SvgIcon.html.css",
-    "./src/components/SvgIcon.html.js")
-    .withAccess(AccessType.BOTH)
-    .withUni(SvgIcon)
-    .build();
-
 const RE_BUTTON: Triplet<UniHtml> = TripletBuilder.create(
     "./src/components/ReButton.html",
     "./src/components/ReButton.html.css",
@@ -146,6 +141,14 @@ const RE_CHIP: Triplet<UniHtml> = TripletBuilder.create(
     .withUni(ReChip)
     .build();
 
+const RE_ICON: Triplet<UniHtml> = TripletBuilder.create(
+    "./src/components/ReIcon.html",
+    "./src/components/ReIcon.html.css",
+    "./src/components/ReIcon.html.js")
+    .withAccess(AccessType.BOTH)
+    .withUni(ReIcon)
+    .build();
+
 const MAIN_PAGE: Triplet<UniHtml> = TripletBuilder.create(
     "./src/pages/MainPage.html",
     "./src/pages/MainPage.html.css")
@@ -158,6 +161,14 @@ const PALETTE_PAGE: Triplet<UniHtml> = TripletBuilder.create(
     "./src/pages/PalettePage.html.js")
     .withAccess(AccessType.BOTH)
     .withUni(PalettePage)
+    .build()
+
+const COMPONENT_SHOWCASE_PAGE: Triplet<UniHtml> = TripletBuilder.create(
+    "./src/pages/ComponentShowcasePage.html",
+    "./src/pages/ComponentShowcasePage.html.css",
+    "./src/pages/ComponentShowcasePage.html.js")
+    .withAccess(AccessType.BOTH)
+    .withUni(ComponentShowcasePage)
     .build()
 
 const BUTTONS_PAGE: Triplet<UniHtml> = TripletBuilder.create(

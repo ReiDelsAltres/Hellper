@@ -24,8 +24,12 @@
 
     z-index: 1200;
 
-    background: var(--surface-dark);
-    color: var(--color-text-primary-contrast);
+    background-size: var(--app-bars-background-size);
+    background-position: var(--app-bars-background-position);
+    background-image: var(--app-bars-background-image);
+    background-color: var(--app-bars-background-color);
+
+    color: var(--color-primary-contrast);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18), 0 1.5px 4px rgba(0, 0, 0, 0.10);
 
     transition: box-shadow 0.2s, width 0.35s cubic-bezier(.4, 0, .2, 1);

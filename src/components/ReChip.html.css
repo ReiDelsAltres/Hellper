@@ -5,6 +5,13 @@
 :host {
     border-radius: 999px;
 
+    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+    font-size: var(--btn-font-size, 0.875rem);
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    white-space: wrap;
+
     /* make chips behave predictably inside flex containers */
     display: inline-flex;
     align-items: center;
@@ -17,111 +24,123 @@
     background-color: var(--chip-bg-color);
     color: var(--chip-text-color);
 }
+
 :host(:hover):host(:not([interactive="false"])) {
     background-color: var(--chip-hover-bg-color);
 }
+
 :host([color="empty"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-empty);
-    --chip-text-color: var(--color-text-empty-contrast);
-    --chip-hover-bg-color: var(--color-empty-distinctive);
+    --chip-text-color: var(--color-empty-contrast);
+    --chip-hover-bg-color: var(--color-empty-hover);
 }
-:host([color="primary"]), :host(:not([color])) {
+
+:host([color="primary"]),
+:host(:not([color])) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-primary);
-    --chip-text-color: var(--color-text-primary-contrast);
-    --chip-hover-bg-color: var(--color-primary-distinctive);
+    --chip-text-color: var(--color-primary-contrast);
+    --chip-hover-bg-color: var(--color-primary-hover);
 }
+
 :host([color="secondary"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-secondary);
-    --chip-text-color: var(--color-text-primary-contrast);
-    --chip-hover-bg-color: var(--color-secondary-distinctive);
+    --chip-text-color: var(--color-secondary-contrast);
+    --chip-hover-bg-color: var(--color-secondary-hover);
 }
+
 :host([color="tertiary"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-tertiary);
-    --chip-text-color: var(--color-text-primary-contrast);
-    --chip-hover-bg-color: var(--color-tertiary-distinctive);
+    --chip-text-color: var(--color-tertiary-contrast);
+    --chip-hover-bg-color: var(--color-tertiary-hover);
 }
+
 :host([color="additional"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-additional);
-    --chip-text-color: var(--color-text-additional-contrast);
-    --chip-hover-bg-color: var(--color-additional-distinctive);
+    --chip-text-color: var(--color-additional-contrast);
+    --chip-hover-bg-color: var(--color-additional-hover);
 }
+
 :host([color="info"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-info);
-    --chip-text-color: var(--color-text-info-contrast);
-    --chip-hover-bg-color: var(--color-info-distinctive);
+    --chip-text-color: var(--color-info-contrast);
+    --chip-hover-bg-color: var(--color-info-hover);
 }
+
 :host([color="success"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-success);
-    --chip-text-color: var(--color-text-success-contrast);
-    --chip-hover-bg-color: var(--color-success-distinctive);
+    --chip-text-color: var(--color-success-contrast);
+    --chip-hover-bg-color: var(--color-success-hover);
 }
+
 :host([color="warning"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-warning);
-    --chip-text-color: var(--color-text-warning-contrast);
-    --chip-hover-bg-color: var(--color-warning-distinctive);
+    --chip-text-color: var(--color-warning-contrast);
+    --chip-hover-bg-color: var(--color-warning-hover);
 }
+
 :host([color="error"]) {
     --chip-border: none;
 
     --chip-bg-color: var(--color-error);
-    --chip-text-color: var(--color-text-error-contrast);
-    --chip-hover-bg-color: var(--color-error-distinctive);
+    --chip-text-color: var(--color-error-contrast);
+    --chip-hover-bg-color: var(--color-error-hover);
 }
 
 :host([variant="outlined"]) {
     --chip-bg-color: transparent;
     --chip-border: 1px solid var(--chip-text-color);
 }
+
 :host([variant="outlined"][color="empty"]) {
     --chip-text-color: var(--color-empty);
-    --chip-hover-bg-color: var(--color-empty-container);
 }
+
 :host([variant="outlined"][color="primary"]),
 :host([variant="outlined"]:not([color])) {
     --chip-text-color: var(--color-primary);
-    
-    --chip-hover-bg-color: var(--color-primary-container);
 }
+
 :host([variant="outlined"][color="secondary"]) {
     --chip-text-color: var(--color-secondary);
-    --chip-hover-bg-color: var(--color-secondary-container);
 }
+
 :host([variant="outlined"][color="tertiary"]) {
     --chip-text-color: var(--color-tertiary);
-    --chip-hover-bg-color: var(--color-tertiary-container);
 }
+
 :host([variant="outlined"][color="additional"]) {
     --chip-text-color: var(--color-additional);
-    --chip-hover-bg-color: var(--color-additional-container);
 }
+
 :host([variant="outlined"][color="info"]) {
     --chip-text-color: var(--color-info);
-    --chip-hover-bg-color: var(--color-info-container);
 }
+
 :host([variant="outlined"][color="success"]) {
     --chip-text-color: var(--color-success);
-    --chip-hover-bg-color: var(--color-success-container);
 }
+
 :host([variant="outlined"][color="warning"]) {
     --chip-text-color: var(--color-warning);
     --chip-hover-bg-color: var(--color-warning-container);
 }
+
 :host([variant="outlined"][color="error"]) {
     --chip-text-color: var(--color-error);
     --chip-hover-bg-color: var(--color-error-container);
@@ -132,16 +151,20 @@
     --chip-padding-y: 4px;
     --chip-padding-x: 8px;
 }
-:host([size="medium"]), :host(:not([size])) {
+
+:host([size="medium"]),
+:host(:not([size])) {
     --chip-font-size: 0.85rem;
     --chip-padding-y: 6px;
     --chip-padding-x: 10px;
 }
+
 :host([size="large"]) {
     --chip-font-size: 1rem;
     --chip-padding-y: 8px;
     --chip-padding-x: 12px;
 }
+
 :host([size="extra-large"]) {
     --chip-font-size: 1.5rem;
     --chip-padding-y: 12px;

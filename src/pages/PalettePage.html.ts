@@ -9,6 +9,8 @@ export default class PalettePage extends Page {
             "blazor-theme": "Blazor",
             "brass-theme": "Brass",
             "brass-dark-theme": "BrassDark",
+            "copper-theme": "Copper",
+            "chinese-new-year-theme": "ChineseNewYear",
             "chess-theme": "Chess",
         };
 

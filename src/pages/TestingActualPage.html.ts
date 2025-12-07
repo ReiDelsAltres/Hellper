@@ -4,7 +4,7 @@ import QuestionParser, { Question } from "../../tri/QuestionParser.js";
 import SeededShuffle from "../lib/SeededShuffle.js";
 
 @RePage(
-    "./src/pages/TestingActualPage.phtml",
+    "./src/pages/TestingActualPage.hmle",
     "./src/pages/TestingActualPage.html.css",
     "./src/pages/TestingActualPage.html.ts",
     AccessType.BOTH,
@@ -23,18 +23,56 @@ export default class TestingActualPage extends Page {
     }
     protected async preInit(): Promise<void> {
         const jj = await Fetcher.fetchJSON('../../resources/data' + '/' + this.params.subject.file);
+
         var i = 1;
+
         this.questions = (jj as QuestionParser).Questions
             .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
         this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
+
         if (this.params.limits && this.params.limits > 0) {
             this.questions = this.questions.slice(0, Number(this.params.limits));
         }
-        this.questions.forEach(q => q.shuffleAnswers(this.params.randomSource));
+
+        this.questions.forEach(q => {
+            q.shuffleAnswers(this.params.randomSource);
+            q.Answers.push("Пропустить вопрос");
+        });
+
         return Promise.resolve();
     }
     protected async preLoad(holder: IElementHolder): Promise<void> {
-        
+    }
+
+    private handleClick(event: Event, element: HTMLElement, qidx: number, aidx: number): void {
+        console.log('Clicked answer:', (event.target as HTMLElement).innerText);
+        for (let i = 0; i < 6; i++) {
+            const tt = this[qidx + "-" + i] as HTMLElement;
+            if (tt === element) continue;
+
+            tt.setAttribute("disabled", "true");
+            const question = this.questions[qidx];
+
+            switch (i) {
+                case question.RDd:
+                    tt.setAttribute('color', 'success');
+                    tt.setAttribute("variant", "outlined");
+                    break;
+            }
+        }
+
+        const question = this.questions[qidx];
+        switch (aidx) {
+            case question.RDd:
+                element.setAttribute('color', 'success');
+                break;
+            case question.Answers.length - 1:
+                element.setAttribute('color', 'warning');
+                break;
+            default:
+                element.setAttribute('color', 'error');
+                break;
+        }
     }
 }
 
