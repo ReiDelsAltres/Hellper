@@ -81,6 +81,5 @@ navigation-drawer li {
     /* Reduce vertical spacing on small screens */
     #page {
         padding: 12px;
-        margin-top: 0;
     }
 }
