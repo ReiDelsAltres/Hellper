@@ -70,6 +70,7 @@ navigation-drawer li {
     /* On phones the content should be full width when sidebar is hidden */
     navigation-drawer[state="open"] + #page,
     navigation-drawer[state="mini"] + #page,
+    
     app-layout[sidebar="mini"] + #page,
     app-layout[sidebar="open"] + #page,
     app-layout[sidebar="full"] + #page,
@@ -80,6 +81,6 @@ navigation-drawer li {
     /* Reduce vertical spacing on small screens */
     #page {
         padding: 12px;
-        margin-top: 0 !important;
+        margin-top: 0;
     }
 }
