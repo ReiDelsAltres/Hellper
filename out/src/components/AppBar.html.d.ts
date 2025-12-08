@@ -7,6 +7,8 @@ export default class AppBar extends Component {
     private slotChangeHandler;
     private mouseEnter;
     private mouseLeave;
+    private pointerEnter;
+    private pointerLeave;
     private onTouchStart;
     private onTouchEnd;
     private onFocusIn;

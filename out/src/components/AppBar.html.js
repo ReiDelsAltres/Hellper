@@ -17,8 +17,8 @@ let AppBar = class AppBar extends Component {
         // listen for mouse/pointer/touch/focus events so hover-like state works on mobile
         this.addEventListener('mouseenter', this.mouseEnter);
         this.addEventListener('mouseleave', this.mouseLeave);
-        this.addEventListener('pointerenter', this.mouseEnter);
-        this.addEventListener('pointerleave', this.mouseLeave);
+        this.addEventListener('pointerenter', this.pointerEnter);
+        this.addEventListener('pointerleave', this.pointerLeave);
         this.addEventListener('touchstart', this.onTouchStart, { passive: true });
         this.addEventListener('touchend', this.onTouchEnd, { passive: true });
         this.addEventListener('focusin', this.onFocusIn);
@@ -34,6 +34,7 @@ let AppBar = class AppBar extends Component {
         this.propagateToSlot(s);
     };
     mouseEnter = () => {
+        // legacy mouse events
         this.isHovered = true;
         this.propagateTypeToSlotsIfNeeded();
     };
@@ -41,15 +42,26 @@ let AppBar = class AppBar extends Component {
         this.isHovered = false;
         this.propagateTypeToSlotsIfNeeded();
     };
-    onTouchStart = () => {
-        // treat a touch start as hover enter on touch devices
+    pointerEnter = (e) => {
+        // only treat non-touch pointers as hover-like
+        if (e.pointerType === 'touch')
+            return;
         this.isHovered = true;
         this.propagateTypeToSlotsIfNeeded();
     };
-    onTouchEnd = () => {
-        // remove hovered state shortly after touch ends so interactions still feel responsive
+    pointerLeave = (e) => {
+        if (e.pointerType === 'touch')
+            return;
         this.isHovered = false;
-        // small timeout allows click handlers on children to run
+        this.propagateTypeToSlotsIfNeeded();
+    };
+    onTouchStart = () => {
+        // On touch devices we do NOT change the hover state: we want "not hovered" behavior
+        // so leave `isHovered` as-is (usually false) and re-run propagation to ensure current state
+        this.propagateTypeToSlotsIfNeeded();
+    };
+    onTouchEnd = () => {
+        // After a touch interaction we still keep non-hovered behavior; just re-run propagation
         setTimeout(() => this.propagateTypeToSlotsIfNeeded(), 20);
     };
     onFocusIn = () => {
@@ -65,8 +77,8 @@ let AppBar = class AppBar extends Component {
         this.slots?.forEach(s => s.removeEventListener('slotchange', this.slotChangeHandler));
         this.removeEventListener('mouseenter', this.mouseEnter);
         this.removeEventListener('mouseleave', this.mouseLeave);
-        this.removeEventListener('pointerenter', this.mouseEnter);
-        this.removeEventListener('pointerleave', this.mouseLeave);
+        this.removeEventListener('pointerenter', this.pointerEnter);
+        this.removeEventListener('pointerleave', this.pointerLeave);
         this.removeEventListener('touchstart', this.onTouchStart);
         this.removeEventListener('touchend', this.onTouchEnd);
         this.removeEventListener('focusin', this.onFocusIn);
