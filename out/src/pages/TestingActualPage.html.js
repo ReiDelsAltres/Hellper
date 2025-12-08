@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { AccessType, Fetcher, Page, RePage } from "@Purper";
+import { AccessType, Fetcher, Page, RePage, Router } from "@Purper";
 import SeededShuffle from "../lib/SeededShuffle.js";
 import { KatexUtils } from "../KatexUtils.js";
 let TestingActualPage = class TestingActualPage extends Page {
@@ -19,6 +19,10 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.params = JSON.parse(decodeURIComponent(params));
     }
     async preInit() {
+        const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
+            ? crypto.randomUUID()
+            : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+        this.params.randomSource = newSeed;
         const jj = await Fetcher.fetchJSON('../../resources/data' + '/' + this.params.subject.file);
         var i = 1;
         this.questions = jj.Questions
@@ -48,6 +52,13 @@ let TestingActualPage = class TestingActualPage extends Page {
             // non-fatal — continue without breaking page
             console.warn('KaTeX auto-render failed', e);
         }
+        // Update seed display (if present) so user can see the session UUID
+        try {
+            const seedEl = this['seedDisplay'];
+            if (seedEl)
+                seedEl.textContent = String(this.params.randomSource ?? '');
+        }
+        catch (_) { }
     }
     resolveEnding() {
         if (this.statuses.some(s => s === AnswerStatus.UNANSWERED))
@@ -107,6 +118,19 @@ let TestingActualPage = class TestingActualPage extends Page {
                 break;
         }
         this.resolveEnding();
+    }
+    // Regenerate a new randomSource and reload this page via SPA router (no full browser reload)
+    regenerateShuffle() {
+        // Build new url keeping other params intact and trigger SPA navigation which reloads this page
+        try {
+            const paramsStr = encodeURIComponent(JSON.stringify(this.params));
+            const url = new URL('/testing/actual?params=' + paramsStr, window.location.origin);
+            Router.tryRouteTo(url, true);
+        }
+        catch (e) {
+            // fallback: simple reload of current page
+            window.location.href = window.location.pathname + '?params=' + encodeURIComponent(JSON.stringify(this.params));
+        }
     }
 };
 TestingActualPage = __decorate([

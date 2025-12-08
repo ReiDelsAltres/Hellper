@@ -9,5 +9,6 @@ export default class TestingActualPage extends Page {
     private resolveEnding;
     private closeResult;
     private handleClick;
+    private regenerateShuffle;
 }
 //# sourceMappingURL=TestingActualPage.html.d.ts.map

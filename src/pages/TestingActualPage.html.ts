@@ -1,4 +1,4 @@
-import { AccessType, Fetcher, IElementHolder, Page, RePage } from "@Purper";
+import { AccessType, Fetcher, IElementHolder, Page, RePage, Router } from "@Purper";
 import { Subject } from "./TestingPage.html";
 import QuestionParser, { Question } from "../../tri/QuestionParser.js";
 import SeededShuffle from "../lib/SeededShuffle.js";
@@ -25,6 +25,11 @@ export default class TestingActualPage extends Page {
         this.params = JSON.parse(decodeURIComponent(params));
     }
     protected async preInit(): Promise<void> {
+        const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
+            ? crypto.randomUUID()
+            : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+
+        this.params.randomSource = newSeed;
         const jj = await Fetcher.fetchJSON('../../resources/data' + '/' + this.params.subject.file);
 
         var i = 1;
@@ -60,6 +65,12 @@ export default class TestingActualPage extends Page {
             // non-fatal — continue without breaking page
             console.warn('KaTeX auto-render failed', e);
         }
+
+        // Update seed display (if present) so user can see the session UUID
+        try {
+            const seedEl = this['seedDisplay'] as HTMLElement | undefined;
+            if (seedEl) seedEl.textContent = String(this.params.randomSource ?? '');
+        } catch (_) { }
     }
 
     private resolveEnding() {
@@ -129,6 +140,20 @@ export default class TestingActualPage extends Page {
                 break;
         }
         this.resolveEnding();
+    }
+
+    // Regenerate a new randomSource and reload this page via SPA router (no full browser reload)
+    private regenerateShuffle(): void {
+
+        // Build new url keeping other params intact and trigger SPA navigation which reloads this page
+        try {
+            const paramsStr = encodeURIComponent(JSON.stringify(this.params));
+            const url = new URL('/testing/actual?params=' + paramsStr, window.location.origin);
+            Router.tryRouteTo(url, true);
+        } catch (e) {
+            // fallback: simple reload of current page
+            window.location.href = window.location.pathname + '?params=' + encodeURIComponent(JSON.stringify(this.params));
+        }
     }
 }
 

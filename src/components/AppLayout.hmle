@@ -1,10 +1,10 @@
 <div class="layout-controls">
     <div class="switchers">
-        <re-button class="sidebar-toggle" variant="outlined" icon="menu" @[ref]="sidebarBtn" @[onclick]="toggleAppbar(0)"></re-button>
-        <re-button variant="outlined" icon="menu" @[ref]="topbarBtn" @[onclick]="toggleAppbar(1)"></re-button>
+        <re-button class= "tgl sidebar-toggle" variant="outlined" icon="menu" @[ref]="sidebarBtn" @[onclick]="toggleAppbar(0)"></re-button>
+        <re-button class="tgl" variant="outlined" icon="menu" @[ref]="topbarBtn" @[onclick]="toggleAppbar(1)"></re-button>
     </div>
     <div class="add">
-        <re-button class="setting" variant="outlined" icon="settings" @[ref]="settingsBtn"></re-button>
+        <re-button class="tgl setting" variant="outlined" icon="settings" @[ref]="settingsBtn"></re-button>
     </div>
 </div>
 

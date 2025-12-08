@@ -1,4 +1,8 @@
 <paper-component simple="true" class="page testing-actual-page">
+    <div class="controls-row">
+        <div class="seed-indicator">UUID: <span @[ref]="seedDisplay">unknown</span></div>
+        <re-button color="primary" variant="outlined" @[onclick]="regenerateShuffle()">New shuffle</re-button>
+    </div>
 </paper-component>
 
 <pop-up @[ref]="resultPopup" modal>

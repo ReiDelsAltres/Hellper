@@ -27,7 +27,7 @@ let TestingSubPage = class TestingSubPage extends Page {
         const params = {
             subject: this.subject,
             limits: this.activeMode.numQuestions,
-            randomSource: crypto.randomUUID()
+            randomSource: null
         };
         return "/testing/actual?params=" + encodeURIComponent(JSON.stringify(params));
     }
