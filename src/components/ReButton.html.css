@@ -75,6 +75,16 @@
     z-index: 1;
 }
 
+/* Compact mode: hide the textual/slotted content (used by sidebars/app-bars) */
+:host([compact]) .btn-text {
+    display: none;
+}
+
+/* When compact we keep only the icon visible */
+:host([compact]) .btn-icon {
+    display: flex;
+}
+
 /* Icon slot */
 .btn-icon {
     display: none;

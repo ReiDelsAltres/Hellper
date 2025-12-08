@@ -8,6 +8,6 @@
     "test": "npx tsc -p tests/tsconfig.json"
   },
   "dependencies": {
-    "@reidelsaltres/pureper": "^0.1.125"
+    "@reidelsaltres/pureper": "^0.1.128"
   }
 }

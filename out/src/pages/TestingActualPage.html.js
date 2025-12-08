@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { AccessType, Fetcher, Page, RePage } from "@Purper";
 import SeededShuffle from "../lib/SeededShuffle.js";
+import { KatexUtils } from "../KatexUtils.js";
 let TestingActualPage = class TestingActualPage extends Page {
     params;
     questions;
@@ -34,6 +35,19 @@ let TestingActualPage = class TestingActualPage extends Page {
             q.Answers.push("Пропустить вопрос");
         });
         return Promise.resolve();
+    }
+    async postLoad(holder) {
+        // Auto-render KaTeX formulas (if any) inside page content after render
+        try {
+            // KatexUtils.autoRender accepts an Element — holder.element may be a DocumentFragment
+            const el = holder.element;
+            if (el)
+                KatexUtils.autoRender(el);
+        }
+        catch (e) {
+            // non-fatal — continue without breaking page
+            console.warn('KaTeX auto-render failed', e);
+        }
     }
     resolveEnding() {
         if (this.statuses.some(s => s === AnswerStatus.UNANSWERED))

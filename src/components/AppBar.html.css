@@ -1,0 +1,107 @@
+:host {
+    display: block;
+    position: fixed;
+
+    height: 100%;
+
+    z-index: 2;
+
+    background-color: var(--app-bars-background-color);
+    background-image: var(--app-bars-background-image);
+    background-size: var(--app-bars-background-size);
+    background-position: var(--app-bars-background-position);
+
+    transition: width 0.35s cubic-bezier(.4, 0, .2, 1);
+}
+
+:host(:not([type])),
+:host([type="mini"]) {
+    width: 88px;
+}
+
+:host(:not([type]):hover),
+:host([type="mini"]:hover) {
+    width: 288px;
+}
+
+:host([type="full"]) {
+    width: 288px;
+}
+
+.head {
+    height: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 80%;
+}
+
+.foot {
+    height: 10%;
+}
+
+.main {
+    margin-top: 2vh;
+}
+
+.sub {
+    margin-bottom: 2vh;
+}
+
+@media (max-width: 768px) {
+    :host {
+        display: flex;
+        flex-direction: row;
+        position: sticky;
+        width: 100% !important;
+    }
+
+    :host(:not([type])),
+    :host([type="mini"]) {
+        height: 60px;
+    }
+
+    :host([type="full"]) {
+        height: 140px;
+    }
+
+    .head {
+        width: 10%;
+        height: 100%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 80%;
+        height: 100%;
+    }
+
+    .foot {
+        width: 10%;
+        height: 100%;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 0;
+        margin-left: 2vw;
+    }
+
+    .sub {
+        display: flex;
+        justify-content: center;
+
+        margin-bottom: 0;
+        margin-right: 2vw;
+    }
+
+}

@@ -32,7 +32,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 12px;
         /* ensure the content doesn't overflow the button area */
         width: 100%;
         box-sizing: border-box;

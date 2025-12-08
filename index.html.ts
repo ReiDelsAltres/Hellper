@@ -14,6 +14,8 @@ import "./src/pages/TestingActualPage.html.js"
 import "./src/components/ColorPalettePreview.html.js"
 import "./src/components/ReTypography.html.js"
 
+import "./src/components/AppBar.html.js";
+
 import NavigationDrawer from "./src/components/NavigationDrawer.html.js";
 import  "./src/components/ColorPalettePreview.html.js";
 import ReButton from "./src/components/ReButton.html.js";
@@ -23,14 +25,12 @@ import PopUp from "./src/components/PopUp.html.js";
 import DebuggerPage from "./src/pages/DebuggerPage.html.js";
 import SubjectPage from "./src/pages/SubjectsPage.html.js";
 import DynamicPage from "./src/pages/DynamicPage.html.js";
-import AppGrail from "./src/components/AppGrail.html.js";
 import Paper from "./src/components/PaperComponent.html.js";
 import ChessBoard from "./src/components/ChessBoard.html.js";
 
 export default class Index {
     public static async initialize(): Promise<void> {
         await Promise.all([     
-            APP_GRAIL.register("markup", "app-grail"),
             CHESS_BOARD.register("markup", "chess-board"),
             PAPER.register("markup", "paper-component"),
             NAVIGATION_DRAWER.register("markup", "navigation-drawer"),
@@ -55,7 +55,6 @@ export default class Index {
             CHESS_HOME_PAGE.register("router", "/chess"),
             CHESS_HISTORY_PAGE.register("router", "/chess/history"),
 
-            APP_GRAIL.init(),
             CHESS_BOARD.init(),
             
             PAPER.init(),
@@ -86,14 +85,6 @@ export default class Index {
 
 const loc = window.location;
 console.log(`[App] initialized at ${loc.href} (origin: ${loc.origin}, path: ${loc.pathname}${loc.search}${loc.hash})`);
-
-const APP_GRAIL: Triplet<UniHtml> = TripletBuilder.create(
-    "./src/components/AppGrail.html",
-    "./src/components/AppGrail.html.css",
-    "./src/components/AppGrail.html.ts")
-    .withAccess(AccessType.BOTH)
-    .withUni(AppGrail)
-    .build();
 
 const PAPER: Triplet<UniHtml> = TripletBuilder.create(
     "./src/components/PaperComponent.html",

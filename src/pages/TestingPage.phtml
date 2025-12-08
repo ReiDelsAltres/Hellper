@@ -14,7 +14,10 @@
           href="/testing/sub?subject=@(encodeURIComponent(JSON.stringify(subject)))">
           <div class="content">
             <div class="meta">
-              <h3>@(subject.name)</h3>
+              <div>
+                <h3>@(subject.translatedName)</h3>
+                <!--<h4>@(subject.name)</h4> -->
+              </div>
               <p>Преподаватель: @(subject.teacher)</p>
             </div>
             <div class="chip-column">
