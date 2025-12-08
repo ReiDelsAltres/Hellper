@@ -7,6 +7,10 @@ export default class AppBar extends Component {
     private slotChangeHandler;
     private mouseEnter;
     private mouseLeave;
+    private onTouchStart;
+    private onTouchEnd;
+    private onFocusIn;
+    private onFocusOut;
     onDisconnected(): void;
     onAttributeChanged(name: string, oldValue: any, newValue: any): void;
     private propagateTypeToSlotsIfNeeded;

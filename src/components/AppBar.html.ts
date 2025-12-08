@@ -18,9 +18,15 @@ export default class AppBar extends Component {
         this.slots = this.shadowRoot!.querySelectorAll('slot');
         this.slots.forEach(s => s.addEventListener('slotchange', this.slotChangeHandler));
 
-        // listen for mouse hover on the host element
+        // listen for mouse/pointer/touch/focus events so hover-like state works on mobile
         this.addEventListener('mouseenter', this.mouseEnter);
         this.addEventListener('mouseleave', this.mouseLeave);
+        this.addEventListener('pointerenter', this.mouseEnter);
+        this.addEventListener('pointerleave', this.mouseLeave);
+        this.addEventListener('touchstart', this.onTouchStart, { passive: true });
+        this.addEventListener('touchend', this.onTouchEnd, { passive: true });
+        this.addEventListener('focusin', this.onFocusIn);
+        this.addEventListener('focusout', this.onFocusOut);
 
         // set initial hover state and try to propagate
         this.isHovered = this.matches(':hover');
@@ -43,10 +49,40 @@ export default class AppBar extends Component {
         this.propagateTypeToSlotsIfNeeded();
     };
 
+    private onTouchStart = () => {
+        // treat a touch start as hover enter on touch devices
+        this.isHovered = true;
+        this.propagateTypeToSlotsIfNeeded();
+    };
+
+    private onTouchEnd = () => {
+        // remove hovered state shortly after touch ends so interactions still feel responsive
+        this.isHovered = false;
+        // small timeout allows click handlers on children to run
+        setTimeout(() => this.propagateTypeToSlotsIfNeeded(), 20);
+    };
+
+    private onFocusIn = () => {
+        // focused state should be considered hovered for accessibility
+        this.isHovered = true;
+        this.propagateTypeToSlotsIfNeeded();
+    };
+
+    private onFocusOut = () => {
+        this.isHovered = false;
+        this.propagateTypeToSlotsIfNeeded();
+    };
+
     onDisconnected(): void {
         this.slots?.forEach(s => s.removeEventListener('slotchange', this.slotChangeHandler));
         this.removeEventListener('mouseenter', this.mouseEnter);
         this.removeEventListener('mouseleave', this.mouseLeave);
+        this.removeEventListener('pointerenter', this.mouseEnter);
+        this.removeEventListener('pointerleave', this.mouseLeave);
+        this.removeEventListener('touchstart', this.onTouchStart);
+        this.removeEventListener('touchend', this.onTouchEnd);
+        this.removeEventListener('focusin', this.onFocusIn);
+        this.removeEventListener('focusout', this.onFocusOut);
     }
 
     onAttributeChanged(name: string, oldValue: any, newValue: any): void {
