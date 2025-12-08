@@ -19,6 +19,26 @@
     display: flex;
 }
 
+.switchers .sidebar-toggle {
+    display: inline-flex;
+}
+
+/* On small screens (phones) hide the sidebar toggle button by default */
+@media (max-width: 600px) {
+    .layout-controls .switchers .sidebar-toggle {
+        display: none;
+    }
+    /* Hide the sidebar itself on small screens */
+    app-bar.sidebar {
+        display: none !important;
+        --app-display: none;
+    }
+    .setting {
+        display: none !important;
+        --app-display: none;
+    }
+}
+
 .add {
     display: flex;
     justify-content: center;

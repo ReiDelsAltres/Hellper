@@ -41,7 +41,7 @@
 /* Mode Selector */
 .mode-selector {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 0;
   margin-bottom: 16px;
 }
@@ -65,4 +65,41 @@ re-button.mode-item {
   justify-content: space-between;
 
   padding: 20px 24px;
+}
+
+/* Mobile / small screens */
+@media (max-width: 900px) {
+  .page {
+    padding: 20px 12px;
+  }
+
+  .header h1 { font-size: 1.6rem; }
+  .header h2 { font-size: 1rem; }
+
+  re-button.mode-item {
+    flex-basis: 100%;
+    min-width: 100%;
+    width: 100%;
+    padding: 14px 16px;
+    box-sizing: border-box;
+  }
+
+  .mode-content { align-items: stretch; }
+
+  .mode-count { position: relative; right: auto; margin-left: auto; }
+
+  .start-button,
+  .all-questions-button {
+    width: 100%;
+    display: block;
+    margin-top: 12px;
+  }
+
+  /* Reduce overall spacing for very small screens */
+  @media (max-width: 420px) {
+    .page { padding: 12px 10px; }
+    .header h1 { font-size: 1.4rem; }
+    .header h2 { font-size: 0.9rem; }
+    re-button.mode-item { padding: 10px 12px; }
+  }
 }
