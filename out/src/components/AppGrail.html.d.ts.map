@@ -1,1 +1,1 @@
-{"version":3,"file":"AppGrail.html.d.ts","sourceRoot":"","sources":["../../../src/components/AppGrail.html.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,SAAS,CAAC;AAEpC,MAAM,CAAC,OAAO,OAAO,QAAS,SAAQ,SAAS;IAC3C,MAAM,CAAC,kBAAkB,WAAgC;CAC5D"}
+{"version":3,"file":"AppGrail.html.d.ts","sourceRoot":"","sources":["../../../src/components/AppGrail.html.ts"],"names":[],"mappings":"AAAA,OAAO,EAAc,SAAS,EAAe,MAAM,SAAS,CAAC;AAS7D,MAAM,CAAC,OAAO,OAAO,QAAS,SAAQ,SAAS;IAC3C,OAAO,CAAC,MAAM,CAAU;IAExB,OAAO,CAAC,MAAM;CAWjB"}

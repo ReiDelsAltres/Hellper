@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "esnext",
+    "lib": ["es2020", "DOM"],
+    "allowJs": false,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}

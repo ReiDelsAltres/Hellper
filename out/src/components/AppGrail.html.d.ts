@@ -1,5 +1,6 @@
-import { Component } from '@Purper';
+import { Component } from "@Purper";
 export default class AppGrail extends Component {
-    static observedAttributes: string[];
+    private opened;
+    private toggle;
 }
 //# sourceMappingURL=AppGrail.html.d.ts.map

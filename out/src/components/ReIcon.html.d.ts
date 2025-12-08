@@ -30,6 +30,10 @@ export default class ReIcon extends Component {
      */
     private updateIcon;
     /**
+     * Apply visual attributes (size, color, variant, spin, pulse, rotate, flip, badge)
+     */
+    private updateVisuals;
+    /**
      * Получить список всех доступных иконок
      */
     static getAvailableIcons(): string[];

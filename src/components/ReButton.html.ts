@@ -6,7 +6,7 @@ export default class ReButton extends Component {
     static get observedAttributes() {
         return [
             'variant', 'size', 'color', 'icon', 'disabled',
-            'loading', 'full-width', 'type', 'href'
+            'loading', 'full-width', 'type', 'href', "mini"
         ];
     }
 
@@ -51,13 +51,21 @@ export default class ReButton extends Component {
 
             if (existingIcon) {
                 existingIcon.setAttribute('icon', iconName);
+                // Keep nested re-icon synced with button attributes
+                const btnSize = this.getAttribute('size') || '';
+                const mapSize = btnSize === 'small' ? 'sm' : (btnSize === 'large' ? 'lg' : 'md');
+                existingIcon.setAttribute('size', mapSize);
+                existingIcon.setAttribute('color', color);
+                if (variant === 'filled') existingIcon.setAttribute('variant', 'contrast');
+                else existingIcon.removeAttribute('variant');
             } else {
                 // Создаем новую иконку
                 const reIcon = document.createElement('re-icon');
                 reIcon.setAttribute('icon', iconName);
-                reIcon.setAttribute('size', 'sm');
-                if (variant === 'filled')
-                    reIcon.setAttribute('variant', 'contrast');
+                const btnSize = this.getAttribute('size') || '';
+                const mapSize = btnSize === 'small' ? 'sm' : (btnSize === 'large' ? 'lg' : 'md');
+                reIcon.setAttribute('size', mapSize);
+                if (variant === 'filled') reIcon.setAttribute('variant', 'contrast');
                 reIcon.setAttribute('color', color);
                 this.iconSlot!.appendChild(reIcon);
             }

@@ -27,9 +27,9 @@
     border-radius: var(--btn-border-radius, 8px);
     min-height: var(--btn-min-height);
 
-    /* Colors */
     background-color: var(--btn-bg-color);
     color: var(--btn-text-color);
+
 
     /* Effects */
     cursor: pointer;
@@ -76,12 +76,12 @@
 }
 
 /* Compact mode: hide the textual/slotted content (used by sidebars/app-bars) */
-:host([compact]) .btn-text {
+:host([mini]) .btn-text {
     display: none;
 }
 
 /* When compact we keep only the icon visible */
-:host([compact]) .btn-icon {
+:host([mini]) .btn-icon {
     display: flex;
 }
 
@@ -209,6 +209,49 @@
     --btn-text-color: var(--color-info-contrast);
     --btn-hover-bg-color: var(--color-info-hover);
 }
+
+:host([variant="filled"]),
+:host(:not([variant])) {
+}
+
+:host([variant="filled"][color="empty"]) {
+    --btn-bg-color: var(--color-empty);
+    --btn-text-color: var(--color-empty-contrast);
+}
+:host([variant="filled"][color="primary"]),
+:host([variant="filled"]:not([color])) {
+    --btn-bg-color: var(--color-primary);
+    --btn-text-color: var(--color-primary-contrast);
+}
+:host([variant="filled"][color="secondary"]) {
+    --btn-bg-color: var(--color-secondary);
+    --btn-text-color: var(--color-secondary-contrast);
+}
+:host([variant="filled"][color="tertiary"]) {
+    --btn-bg-color: var(--color-tertiary);
+    --btn-text-color: var(--color-tertiary-contrast);
+}
+:host([variant="filled"][color="additional"]) {
+    --btn-bg-color: var(--color-additional);
+    --btn-text-color: var(--color-additional-contrast);
+}
+:host([variant="filled"][color="success"]) {
+    --btn-bg-color: var(--color-success);
+    --btn-text-color: var(--color-success-contrast);
+}
+:host([variant="filled"][color="warning"]) {
+    --btn-bg-color: var(--color-warning);
+    --btn-text-color: var(--color-warning-contrast);
+}
+:host([variant="filled"][color="error"]) {
+    --btn-bg-color: var(--color-error);
+    --btn-text-color: var(--color-error-contrast);
+}
+:host([variant="filled"][color="info"]) {
+    --btn-bg-color: var(--color-info);
+    --btn-text-color: var(--color-info-contrast);
+}
+
 
 /* Outlined */
 :host([variant="outlined"]) {

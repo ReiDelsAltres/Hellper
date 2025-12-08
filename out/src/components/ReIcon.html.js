@@ -104,8 +104,16 @@ export default class ReIcon extends Component {
         this.iconWrapper = holder.element.querySelector('.icon-wrapper');
         this.updateIcon();
         this.onAttributeChangedCallback((name, oldValue, newValue) => {
+            // icon change requires regenerating SVG path
             if (name === 'icon') {
                 this.updateIcon();
+                return;
+            }
+            // other attribute changes affect visual representation / classes
+            if ([
+                'size', 'color', 'variant', 'interactive', 'spin', 'pulse', 'disabled', 'rotate', 'flip', 'badge'
+            ].includes(name)) {
+                this.updateVisuals();
             }
         });
         return Promise.resolve();
@@ -145,6 +153,70 @@ export default class ReIcon extends Component {
             // Очищаем старое содержимое и добавляем новый path
             this.svgElement.innerHTML = '';
             this.svgElement.appendChild(pathElement);
+            // Ensure visuals match current attributes after (re)creating svg
+            this.updateVisuals();
+        }
+    }
+    /**
+     * Apply visual attributes (size, color, variant, spin, pulse, rotate, flip, badge)
+     */
+    updateVisuals() {
+        // apply size classes
+        const size = this.getAttribute('size') || '';
+        this.iconWrapper?.querySelectorAll('.re-icon-svg').forEach(svg => {
+            svg.classList.remove('size-xs', 'size-sm', 'size-md', 'size-lg', 'size-xl', 'size-xxl');
+            if (size)
+                svg.classList.add(`size-${size}`);
+        });
+        // apply spin/pulse/interactive/disabled classes
+        const spin = this.hasAttribute('spin');
+        const pulse = this.hasAttribute('pulse');
+        const interactive = this.hasAttribute('interactive');
+        const disabled = this.hasAttribute('disabled');
+        if (this.svgElement) {
+            this.svgElement.classList.toggle('spin', spin);
+            this.svgElement.classList.toggle('pulse', pulse);
+            this.svgElement.classList.toggle('interactive', interactive);
+            this.svgElement.classList.toggle('disabled', disabled);
+        }
+        // rotation / flip transforms
+        if (this.svgElement) {
+            const rotate = this.getAttribute('rotate');
+            const flip = this.getAttribute('flip');
+            let transformParts = [];
+            if (rotate)
+                transformParts.push(`rotate(${rotate}deg)`);
+            if (flip === 'horizontal' || flip === 'both')
+                transformParts.push('scaleX(-1)');
+            if (flip === 'vertical' || flip === 'both')
+                transformParts.push('scaleY(-1)');
+            this.svgElement.style.transform = transformParts.join(' ');
+        }
+        // badge: show or hide simple badge element on wrapper
+        const badgeVal = this.getAttribute('badge');
+        let badgeEl = this.iconWrapper?.querySelector('.re-icon-badge');
+        if (badgeVal != null && badgeVal !== '') {
+            if (!badgeEl && this.iconWrapper) {
+                badgeEl = document.createElement('span');
+                badgeEl.className = 're-icon-badge';
+                this.iconWrapper.appendChild(badgeEl);
+            }
+            if (badgeEl)
+                badgeEl.textContent = badgeVal;
+        }
+        else if (badgeVal === '') {
+            // empty string badge => dot indicator
+            if (!badgeEl && this.iconWrapper) {
+                badgeEl = document.createElement('span');
+                badgeEl.className = 're-icon-badge';
+                this.iconWrapper.appendChild(badgeEl);
+            }
+            if (badgeEl)
+                badgeEl.textContent = '';
+        }
+        else {
+            if (badgeEl)
+                badgeEl.remove();
         }
     }
     /**

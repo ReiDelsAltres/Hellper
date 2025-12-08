@@ -1,0 +1,25 @@
+:host {
+}
+.layout-controls {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2001;
+    gap: 8px;
+    
+    padding: 8px;
+
+    /*background-color: var(--app-bars-background-color);
+    background-image: var(--app-bars-background-image);
+    background-size: var(--app-bars-background-size);
+    background-position: var(--app-bars-background-position);*/
+}
+
+.switchers {
+    display: flex;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+}

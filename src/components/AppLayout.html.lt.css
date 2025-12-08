@@ -1,0 +1,13 @@
+app-layout[sidebar="mini"] + #page {
+    margin-left: 88px;
+}
+app-layout[sidebar="hidden"] + #page {
+    margin-left: 0px;
+}
+/* topbar influences vertical offset */
+app-layout[topbar="mini"] + #page {
+    margin-top: 44px;
+}
+app-layout[topbar="hidden"] + #page {
+    margin-top: 0px;
+}

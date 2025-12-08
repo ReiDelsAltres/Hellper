@@ -6,6 +6,7 @@ html, body {
     padding: 0;
 }
 body {
+    position: absolute;
     min-height: 100vh;
 
     color: var(--color-primary);
@@ -22,13 +23,15 @@ navigation-drawer[state="open"] + #page {
 navigation-drawer[state="mini"] + #page {
     margin-left: 88px;
 }
+
 #page {
+    position: relative;
     min-height: calc(100vh - 20px * 2);
     
     margin: 0px;
     padding: 20px;
 
-    transition: margin-left 0.35s cubic-bezier(.4, 0, .2, 1);
+    transition: margin-left 0.35s cubic-bezier(.4, 0, .2, 1), margin-top 0.35s cubic-bezier(.4, 0, .2, 1);
 }
 
 a:-webkit-any-link {

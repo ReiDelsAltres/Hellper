@@ -50,6 +50,7 @@
 
     <!-- Puppet Init -->
     <link rel="stylesheet" href="index.html.css">
+    <link rel="stylesheet" href="./out/src/components/AppLayout.html.lt.css">
     <!-- Puppet Init -->
 
     <!-- KaTeX JavaScript -->
@@ -82,25 +83,27 @@
 </head>
 
 <body>
-    <app-bar>
-        <re-button variant="text" icon="home" color="primary" full-width href="/" 
-        data-link>
+    <app-layout>
+        <!-- Sidebar (vertical, left) -->
+        <re-button slot="sidebar" variant="text" icon="home" color="primary" full-width href="/" data-link>
             <span class="onlyin-open">Home</span>
         </re-button>
-        <re-button variant="text" icon="info" color="additional" full-width href="/testing"
-            data-link>
+        <re-button slot="sidebar" variant="text" icon="info" color="additional" full-width href="/testing" data-link>
             <span class="onlyin-open">Testing</span>
         </re-button>
-
-        <re-button variant="text" icon="palette" color="secondary" full-width href="/palettes"
-            data-link slot="sub">
+        <re-button slot="sidebar-sub" variant="text" icon="palette" color="secondary" full-width href="/palettes" data-link>
             <span class="onlyin-open">Палитры</span>
         </re-button>
-        <re-button variant="text" icon="view_list" color="tertiary" full-width href="/components"
-            data-link slot="sub">
+        <re-button slot="sidebar-sub" variant="text" icon="view_list" color="tertiary" full-width href="/components" data-link>
             <span class="onlyin-open">Компоненты</span>
         </re-button>
-    </app-bar>
+
+        <!-- Topbar (horizontal, top) -->
+        <re-button slot="topbar" variant="text" icon="home" color="primary" href="/" data-link>Home</re-button>
+        <re-button slot="topbar" variant="text" icon="info" color="additional" href="/testing" data-link>Testing</re-button>
+        <re-button slot="topbar-sub" variant="text" icon="palette" color="secondary" href="/palettes" data-link>Палитры</re-button>
+        <re-button slot="topbar-sub" variant="text" icon="view_list" color="tertiary" href="/components" data-link>Компоненты</re-button>
+    </app-layout>
     <div id="page">
     </div>
 </body>
