@@ -1,0 +1,5 @@
+<paper-component class="page">
+    @for (question in questions) {
+
+    }
+</paper-component>

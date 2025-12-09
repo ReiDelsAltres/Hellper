@@ -7,48 +7,52 @@
     --color-empty-hover: color-mix(in srgb, var(--color-empty) 60%, black);
 
     /* Primary: Imperial Red */
-    --color-primary: #ff1744;
+    /* softened imperial red (less neon, deeper tone) */
+    --color-primary: #e33b3a;
     /* vibrant scarlet red */
-    --color-primary-contrast: #ffffff;
+    --color-primary-contrast: #fff4f5; /* slightly warm pink — less stark than pure white */
     --color-primary-hover: color-mix(in srgb, var(--color-primary) 28%, #fff5f5);
 
     /* Secondary: Lucky Gold */
-    --color-secondary: #ffea00;
+    /* muted gold / warm saffron */
+    --color-secondary: #e6c84a;
     /* bright vivid gold */
     --color-secondary-contrast: #2c1810;
     --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 28%, #fff8dc);
 
     /* Tertiary: Lantern Orange */
-    --color-tertiary: #ff5722;
+    /* lantern orange, slightly toned down */
+    --color-tertiary: #ff7a4d;
     /* vivid orange-red */
-    --color-tertiary-contrast: #ffffff;
+    --color-tertiary-contrast: #fff6f3; /* softer warm off-white */
     --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 28%, #fff5f0);
 
     /* Additional: Dragon Jade */
-    --color-additional: #00e676;
+    /* dragon jade, calmer */
+    --color-additional: #00b884;
     /* bright jade green */
-    --color-additional-contrast: #ffffff;
+    --color-additional-contrast: #f5fff8; /* muted pale green instead of pure white */
     --color-additional-hover: color-mix(in srgb, var(--color-additional) 28%, #f0fff4);
 
     /* Utility Colors */
     --color-info: #4169e1;
     /* royal blue */
-    --color-info-contrast: #ffffff;
+    --color-info-contrast: #f0f6ff; /* soft pale blue */
     --color-info-hover: color-mix(in srgb, var(--color-info) 28%, #f0f8ff);
 
     --color-success: #32cd32;
     /* lime green */
-    --color-success-contrast: #ffffff;
+    --color-success-contrast: #f0fff4; /* pale mint */
     --color-success-hover: color-mix(in srgb, var(--color-success) 28%, #f0fff4);
 
     --color-warning: #ff8c00;
     /* dark orange */
-    --color-warning-contrast: #ffffff;
+    --color-warning-contrast: #fff7e6; /* warm cream — less glaring */
     --color-warning-hover: color-mix(in srgb, var(--color-warning) 28%, #fff8dc);
 
     --color-error: #b22222;
     /* firebrick red */
-    --color-error-contrast: #ffffff;
+    --color-error-contrast: #fff0f0; /* gentle pale red */
     --color-error-hover: color-mix(in srgb, var(--color-error) 28%, #fff5f5);
 
     /* Surface colors — warm paper tones */
@@ -58,26 +62,6 @@
     /* pure white */
     --surface-dark: #fef5e7;
     /* light cream */
-
-    /* Text colors */
-    --color-text-empty: var(--color-empty);
-    --color-text-empty-contrast: var(--color-empty-contrast);
-    --color-text-primary: var(--color-primary);
-    --color-text-primary-contrast: var(--color-primary-contrast);
-    --color-text-secondary: var(--color-secondary);
-    --color-text-secondary-contrast: var(--color-secondary-contrast);
-    --color-text-tertiary: var(--color-tertiary);
-    --color-text-tertiary-contrast: var(--color-tertiary-contrast);
-    --color-text-additional: var(--color-additional);
-    --color-text-additional-contrast: var(--color-additional-contrast);
-    --color-text-info: var(--color-info);
-    --color-text-info-contrast: var(--color-info-contrast);
-    --color-text-success: var(--color-success);
-    --color-text-success-contrast: var(--color-success-contrast);
-    --color-text-warning: var(--color-warning);
-    --color-text-warning-contrast: var(--color-warning-contrast);
-    --color-text-error: var(--color-error);
-    --color-text-error-contrast: var(--color-error-contrast);
 
     /* Festive lantern pattern background */
     --app-background-size: 83px 83px;

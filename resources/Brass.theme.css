@@ -6,42 +6,42 @@
     /* Brass / Bronze primary family */
     /* Primary: light brass/gold */
     --color-primary: #caa169; /* medium warm brass */
-    --color-primary-contrast: #ffffff; /* deeper brass */
+    --color-primary-contrast: #3a2b18; /* darker, deeper brass for contrast */
     --color-primary-hover: color-mix(in srgb, var(--color-primary) 28%, #efe6db);
 
     /* Secondary — warm copper / burnt-sienna */
     /* Secondary: cool teal for contrast */
     --color-secondary: #2f8f86; /* mid teal for contrast */
-    --color-secondary-contrast: #ffffff; /* darker teal */
+    --color-secondary-contrast: #072e2b; /* deeper teal contrast */
     --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 28%, #efe6db);
 
     /* Tertiary — pale warm accent */
     /* Tertiary: warm coral/peach */
     --color-tertiary: #ff986a; /* mid coral */
-    --color-tertiary-contrast: #ffffff; /* vivid coral */
+    --color-tertiary-contrast: #4a2314; /* richer/darker coral contrast */
     --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 28%, #efe6db);
 
     /* Additional — muted olive/bronze */
     /* Additional: soft olive/sage */
     --color-additional: #9aa471; /* olive/sage mid */
-    --color-additional-contrast: #ffffff; /* deeper olive */
+    --color-additional-contrast: #2b3216; /* darker olive contrast */
     --color-additional-hover: color-mix(in srgb, var(--color-additional) 28%, #efe6db);
 
     /* Utility Colors — keep standard signals but slightly harmonized */
     --color-info: #2b7fb4; /* keep cool blue */
-    --color-info-contrast: #ffffff;
+    --color-info-contrast: #082232; /* darker info text */
     --color-info-hover: color-mix(in srgb, var(--color-info) 28%, #efe6db);
     
     --color-success: #2a9d8f;
-    --color-success-contrast: #ffffff;
+    --color-success-contrast: #0f3b32; /* darker success contrast */
     --color-success-hover: color-mix(in srgb, var(--color-success) 28%, #efe6db);
 
     --color-warning: #e9b253; /* amber-style to match brass */
-    --color-warning-contrast: #ffffff;
+    --color-warning-contrast: #2b1e0b; /* darker amber for contrast */
     --color-warning-hover: color-mix(in srgb, var(--color-warning) 28%, #efe6db);
 
     --color-error: #c53b3b; /* warm red */
-    --color-error-contrast: #ffffff;
+    --color-error-contrast: #2b0b0b; /* darker red contrast */
     --color-error-hover: color-mix(in srgb, var(--color-error) 28%, #efe6db);
 
     /* Surface color — mid-light warm */

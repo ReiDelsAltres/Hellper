@@ -26,6 +26,29 @@ export default class ComponentShowcasePage extends Page {
             root.querySelector(`#anchor-${placement}`)?.addEventListener('click', () => popup?.toggle());
         }
 
+        // ReInput interactive demo
+        const interactiveInput = root.querySelector('#example-input-interactive') as HTMLElement | null;
+        const readBtn = root.querySelector('#read-value-btn') as HTMLElement | null;
+        const clearBtn = root.querySelector('#clear-value-btn') as HTMLElement | null;
+        const output = root.querySelector('#interactive-value') as HTMLElement | null;
+
+        readBtn?.addEventListener('click', () => {
+            if (!interactiveInput) return;
+            // the component exposes getValue() but we don't have TS type here – call via any
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            const val = (interactiveInput as any).getValue?.() ?? '';
+            if (output) output.textContent = val;
+        });
+
+        clearBtn?.addEventListener('click', () => {
+            if (!interactiveInput) return;
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            (interactiveInput as any).setValue?.('');
+            if (output) output.textContent = '';
+        });
+
         return Promise.resolve();
     }
 }

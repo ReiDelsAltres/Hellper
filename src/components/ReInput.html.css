@@ -1,0 +1,288 @@
+/* ═══════════════════════════════════════════════════════════════
+   ReInput Component Styles (based on ReButton pattern)
+   ═══════════════════════════════════════════════════════════════ */
+
+:host {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    /* Typography */
+    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+    font-size: var(--input-font-size, 0.875rem);
+    font-weight: 400;
+    line-height: 1;
+
+    /* Layout */
+    padding: var(--input-padding);
+    border: var(--input-border, 1px solid var(--color-outline, rgba(0,0,0,0.23)));
+    border-radius: var(--input-border-radius, 8px);
+
+    min-height: var(--input-min-height);
+    min-width: var(--input-min-width, 120px);
+
+    background-color: var(--input-bg-color, transparent);
+    color: var(--input-text-color, var(--color-on-surface, #1a1a1a));
+
+    /* Effects */
+    cursor: text;
+    overflow: hidden;
+    outline: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--input-shadow, none);
+}
+
+/* Hover state */
+:host(:hover) {
+    border-color: var(--input-hover-border-color, var(--color-on-surface, #1a1a1a));
+}
+
+/* Focus state */
+:host(.focused) {
+    border-color: var(--input-focus-border-color, var(--color-primary, #1976d2));
+    box-shadow: var(--input-focus-shadow, 0 0 0 3px var(--color-primary-container, rgba(25, 118, 210, 0.15)));
+}
+
+/* Disabled state */
+:host([disabled]) {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Readonly state */
+:host([readonly]) {
+    background-color: var(--color-surface-variant, rgba(0,0,0,0.04));
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Inner elements
+   ───────────────────────────────────────────────────────────── */
+
+.input-field {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    z-index: 1;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+input::placeholder {
+    color: var(--color-on-surface-variant, rgba(0,0,0,0.5));
+}
+
+/* Icon slot */
+.input-icon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.input-icon.has-icon {
+    display: flex;
+}
+
+/* Clear button */
+.input-clear {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.input-clear.has-clear {
+    display: flex;
+}
+
+/* Ripple placeholder (for future use) */
+.input-ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Variants
+   ───────────────────────────────────────────────────────────── */
+
+/* Outlined (default) */
+:host([variant="outlined"]),
+:host(:not([variant])) {
+    --input-bg-color: transparent;
+    --input-border: 1px solid var(--color-outline, rgba(0,0,0,0.23));
+}
+
+/* Filled */
+:host([variant="filled"]) {
+    --input-bg-color: var(--color-surface-variant, rgba(0,0,0,0.06));
+    --input-border: none;
+    border-radius: var(--input-border-radius, 8px) var(--input-border-radius, 8px) 0 0;
+    border-bottom: 2px solid var(--color-outline, rgba(0,0,0,0.42));
+}
+
+:host([variant="filled"]:hover) {
+    --input-bg-color: var(--color-surface-variant-hover, rgba(0,0,0,0.09));
+}
+
+:host([variant="filled"].focused) {
+    border-bottom-color: var(--color-primary, #1976d2);
+    box-shadow: none;
+}
+
+/* Text (minimal) */
+:host([variant="text"]) {
+    --input-bg-color: transparent;
+    --input-border: none;
+    --input-shadow: none;
+    border-bottom: 1px solid var(--color-outline, rgba(0,0,0,0.23));
+    border-radius: 0;
+}
+
+:host([variant="text"].focused) {
+    border-bottom-color: var(--color-primary, #1976d2);
+    box-shadow: none;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Colors
+   ───────────────────────────────────────────────────────────── */
+
+:host([color="primary"]),
+:host(:not([color])) {
+    --input-focus-border-color: var(--color-primary);
+    --input-focus-shadow: 0 0 0 3px var(--color-primary-container, rgba(25, 118, 210, 0.15));
+}
+
+:host([color="secondary"]) {
+    --input-focus-border-color: var(--color-secondary);
+    --input-focus-shadow: 0 0 0 3px var(--color-secondary-container, rgba(156, 39, 176, 0.15));
+}
+
+:host([color="tertiary"]) {
+    --input-focus-border-color: var(--color-tertiary);
+    --input-focus-shadow: 0 0 0 3px var(--color-tertiary-container, rgba(0, 150, 136, 0.15));
+}
+
+:host([color="success"]) {
+    --input-focus-border-color: var(--color-success);
+    --input-focus-shadow: 0 0 0 3px var(--color-success-container, rgba(76, 175, 80, 0.15));
+}
+
+:host([color="warning"]) {
+    --input-focus-border-color: var(--color-warning);
+    --input-focus-shadow: 0 0 0 3px var(--color-warning-container, rgba(255, 152, 0, 0.15));
+}
+
+:host([color="error"]) {
+    --input-focus-border-color: var(--color-error);
+    --input-focus-shadow: 0 0 0 3px var(--color-error-container, rgba(244, 67, 54, 0.15));
+}
+
+:host([color="info"]) {
+    --input-focus-border-color: var(--color-info);
+    --input-focus-shadow: 0 0 0 3px var(--color-info-container, rgba(33, 150, 243, 0.15));
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Sizes
+   ───────────────────────────────────────────────────────────── */
+
+:host([size="small"]) {
+    --input-font-size: 0.75rem;
+    --input-padding: 6px 10px;
+    --input-min-height: 32px;
+    --input-border-radius: 6px;
+}
+
+:host([size="medium"]),
+:host(:not([size])) {
+    --input-font-size: 0.875rem;
+    --input-padding: 8px 12px;
+    --input-min-height: 40px;
+    --input-border-radius: 8px;
+}
+
+:host([size="large"]) {
+    --input-font-size: 1rem;
+    --input-padding: 12px 16px;
+    --input-min-height: 48px;
+    --input-border-radius: 10px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Mini (compact) mode
+   ───────────────────────────────────────────────────────────── */
+
+:host([mini]) {
+    --input-padding: 8px;
+    --input-min-width: var(--input-min-height, 40px);
+    width: var(--input-min-height, 40px);
+    height: var(--input-min-height, 40px);
+    border-radius: 50%;
+}
+
+:host([mini]) .input-field {
+    display: none;
+}
+
+:host([mini]) .input-clear {
+    display: none;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Responsive
+   ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    :host {
+        --input-min-height: 44px;
+        --input-padding: 10px 14px;
+    }
+
+    :host([size="small"]) {
+        --input-min-height: 36px;
+        --input-padding: 8px 12px;
+    }
+
+    :host([size="large"]) {
+        --input-min-height: 52px;
+        --input-padding: 14px 18px;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :host {
+        border-width: 2px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    :host {
+        transition: none;
+    }
+}

@@ -1,44 +1,44 @@
 /* Night / dark variation of Brass theme */
 .brass-dark-theme {
     --color-empty: #0b0705; /* deep almost-black neutral */
-    --color-empty-contrast: #dcd3c6; /* charcoal warm */
+    --color-empty-contrast: #bfb2a4; /* darker warm charcoal */
     --color-empty-hover: color-mix(in srgb, var(--color-empty) 30%, black);
 
     /* Primary: dark warm brass */
     --color-primary: #8f6e3a; /* brass base */
-    --color-primary-contrast: #14100e; /* darker brass */
+    --color-primary-contrast: #ca9b7b; /* darker brass (toned down for lower contrast) */
     --color-primary-hover: color-mix(in srgb, var(--color-primary) 18%, black);
 
     /* Secondary: deeper teal/cyan for contrast */
     --color-secondary: #1f6d66;
-    --color-secondary-contrast: #e9efe8;
+    --color-secondary-contrast: #cfded2;
     --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 18%, black);
 
     /* Tertiary: muted coral accent */
     --color-tertiary: #c85d36;
-    --color-tertiary-contrast: #fffaf6;
+    --color-tertiary-contrast: #efe2dc;
     --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 18%, black);
 
     /* Additional: darker olive / sage */
     --color-additional: #6f7a51;
-    --color-additional-contrast: #fffaf6;
+    --color-additional-contrast: #efe2dc;
     --color-additional-hover: color-mix(in srgb, var(--color-additional) 18%, black);
 
     /* Utilities - slightly darker signals */
     --color-info: #1f6aa0;
-    --color-text-info-contrast: #ffffff;
+    --color-text-info-contrast: #eef6ff;
     --color-info-hover: color-mix(in srgb, var(--color-info) 18%, black);
 
     --color-success: #1f7b6e;
-    --color-text-success-contrast: #ffffff;
+    --color-text-success-contrast: #e8f6f2;
     --color-success-hover: color-mix(in srgb, var(--color-success) 18%, black);
 
     --color-warning: #b87c2c;
-    --color-text-warning-contrast: #0f0b08;
+    --color-text-warning-contrast: #0d0a07;
     --color-warning-hover: color-mix(in srgb, var(--color-warning) 18%, black);
 
     --color-error: #9f2f2f;
-    --color-text-error-contrast: #ffffff;
+    --color-text-error-contrast: #efe0e0;
     --color-error-hover: color-mix(in srgb, var(--color-error) 18%, black);
 
     /* Surfaces for dark theme */

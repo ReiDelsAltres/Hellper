@@ -453,5 +453,85 @@
                 </div>
             </div>
         </section>
+
+        <!-- ReInput Section -->
+        <section class="component-section">
+            <h2 class="section-title">ReInput</h2>
+
+            <!-- Variants -->
+            <div class="subsection">
+                <h3 class="subsection-title">Варианты</h3>
+                <div class="component-row">
+                    <re-input variant="outlined" placeholder="Outlined (default)"></re-input>
+                    <re-input variant="filled" placeholder="Filled"></re-input>
+                    <re-input variant="text" placeholder="Text (underline)"></re-input>
+                </div>
+            </div>
+
+            <!-- Colors -->
+            <div class="subsection">
+                <h3 class="subsection-title">Цвета (focus)</h3>
+                <div class="component-row">
+                    <re-input color="primary" placeholder="Primary"></re-input>
+                    <re-input color="secondary" placeholder="Secondary"></re-input>
+                    <re-input color="success" placeholder="Success"></re-input>
+                    <re-input color="warning" placeholder="Warning"></re-input>
+                    <re-input color="error" placeholder="Error"></re-input>
+                    <re-input color="info" placeholder="Info"></re-input>
+                </div>
+            </div>
+
+            <!-- Sizes -->
+            <div class="subsection">
+                <h3 class="subsection-title">Размеры</h3>
+                <div class="component-row align-center">
+                    <re-input size="small" placeholder="Small"></re-input>
+                    <re-input size="medium" placeholder="Medium"></re-input>
+                    <re-input size="large" placeholder="Large"></re-input>
+                </div>
+            </div>
+
+            <!-- With Icons -->
+            <div class="subsection">
+                <h3 class="subsection-title">С иконками</h3>
+                <div class="component-row">
+                    <re-input icon="search" placeholder="Поиск"></re-input>
+                    <re-input icon="user" placeholder="Имя пользователя"></re-input>
+                    <re-input icon="mail" type="email" placeholder="Email"></re-input>
+                </div>
+            </div>
+
+            <!-- Clearable -->
+            <div class="subsection">
+                <h3 class="subsection-title">С кнопкой очистки</h3>
+                <div class="component-row">
+                    <re-input clearable placeholder="Введите текст и очистите" value="Пример текста"></re-input>
+                    <re-input clearable icon="search" placeholder="Поиск с очисткой"></re-input>
+                </div>
+            </div>
+
+            <!-- States -->
+            <div class="subsection">
+                <h3 class="subsection-title">Состояния</h3>
+                <div class="component-row">
+                    <re-input placeholder="Обычное"></re-input>
+                    <re-input disabled placeholder="Отключено"></re-input>
+                    <re-input readonly value="Только чтение"></re-input>
+                </div>
+            </div>
+
+            <!-- Interactive demo -->
+            <div class="subsection">
+                <h3 class="subsection-title">Интерактивный пример</h3>
+                <div class="component-row">
+                    <re-input clearable icon="edit" placeholder="Введите что-нибудь" id="example-input-interactive"></re-input>
+                    <div style="display:flex;gap:8px;align-items:center;">
+                        <re-button color="primary" id="read-value-btn">Прочитать</re-button>
+                        <re-button color="secondary" id="clear-value-btn">Очистить</re-button>
+                        <span id="interactive-value" style="font-weight:600;color:var(--color-text-secondary,#555)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </div>

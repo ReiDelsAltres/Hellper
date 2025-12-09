@@ -18,14 +18,15 @@
     <re-button color="primary" full-width @[onclick]="closeResult()">Закрыть</re-button>
 </pop-up>
 
+
 <div class="questions-container">
     @for (index, question in questions) {
     <paper-component class="question-card">
         <paper-component class="titleBlock">
             <re-typography @[ref]="@('c' + index + '-' + '2')" color="empty" class="typo">
-                <re-chip color="empty" @[ref]="@('c' + index + '-' + '0')">@(index + 1)</re-chip>
-                <re-chip color="empty" @[ref]="@('c' + index + '-' + '1')">@(question.Id)</re-chip>
-                @(question.Title)
+                <re-chip class="floated" color="empty" @[ref]="@('c' + index + '-' + '0')">@(index + 1)</re-chip>
+                <re-chip class="floated" color="empty" @[ref]="@('c' + index + '-' + '1')">@(question.Id)</re-chip>
+                <span class="tt">@(question.Title)</span>
             </re-typography>
         </paper-component>
         <paper-component class="answers-container">

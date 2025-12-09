@@ -1,0 +1,6 @@
+<span class="input-icon" @[ref]="icon"></span>
+<span class="input-field">
+    <input part="input" @[ref]="input"/>
+</span>
+<span class="input-clear" @[ref]="clearBtn"></span>
+<span class="input-ripple"></span>

@@ -14,8 +14,10 @@ import "./src/pages/TestingActualPage.html.js"
 import "./src/components/ColorPalettePreview.html.js"
 import "./src/components/ReTypography.html.js"
 
+import "./src/components/ReInput.html.js"
 import "./src/components/AppBar.html.js";
 import "./src/components/AppLayout.html.js";
+import "./src/pages/TestingAllPage.html.js";
 
 import NavigationDrawer from "./src/components/NavigationDrawer.html.js";
 import  "./src/components/ColorPalettePreview.html.js";

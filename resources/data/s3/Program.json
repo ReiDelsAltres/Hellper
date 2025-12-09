@@ -1,0 +1,3317 @@
+{
+    "UseIndex": true,
+    "Questions": [
+        {
+            "Id": 1,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\nint i = 0;\nSystem.out.print(++i);\nSystem.out.print(i++);\nSystem.out.print(i);",
+            "Answers": [
+                "112",
+                "2",
+                "3",
+                "0",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 2,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\nint i = 0;\nSystem.out.print(++i);\nSystem.out.print(i++);",
+            "Answers": [
+                "11",
+                "0",
+                "2",
+                "1",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 3,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\nint i = 0;\nSystem.out.print(++i);",
+            "Answers": [
+                "1",
+                "0",
+                "2",
+                "1 1",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 4,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\nint i = 0;\nSystem.out.print(i++);",
+            "Answers": [
+                "0",
+                "1",
+                "2",
+                "1 1",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 5,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\nint i = 0;\nSystem.out.print(i++);\nSystem.out.print(i++);",
+            "Answers": [
+                "01",
+                "10",
+                "00",
+                "11",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 6,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\nint i = 0;\nSystem.out.print(i++);\nSystem.out.print(i++);",
+            "Answers": [
+                "01",
+                "12",
+                "10",
+                "00",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 7,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\n\nclass Car{\npublic String myCar = \"Ferrari\" ;\nCar()\n{\nthis.myCar=\"Mersedes\";\n}\n}\npublic class Test{\npublic static void main(String ... args){\nCar myCar = new Car();\nSystem.out.println(myCar.myCar);\n}\n}",
+            "Answers": [
+                "Mersedes",
+                "Ferrari",
+                "MersedesFerrari",
+                "FerrariMersedes",
+                "Heçnə cıxmayacaqdır"
+            ]
+        },
+        {
+            "Id": 8,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\n\nclass Car{\npublic String myCar = \"Ferrari\" ;\n}\npublic class Test{\npublic static void main(String ... args){\nCar myCar = new Car();\nSystem.out.println(myCar.myCar);\n}\n}",
+            "Answers": [
+                "Ferrari",
+                "Null",
+                "\"\"",
+                "Ferrari Ferrari",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 9,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\n\nclass Car{\npublic String myCar = \"Ferrari\" ;\nCar()\n{\nthis.myCar=\"Mersedes\";\n}\n\nCar(String mashin)\n{\nthis.myCar=mashin;\n}\n}\npublic class Test{\npublic static void main(String ... args){\nCar myCar = new Car();\nSystem.out.println(myCar.myCar);\nCar myCar1 = new Car(\"Lada\");\nSystem.out.println(myCar1.myCar);\n}\n}",
+            "Answers": [
+                "Mersedes\nLada",
+                "Mersedes",
+                "Mersedes\nFerrari Lada",
+                "Ferrari Lada",
+                "Lada"
+            ]
+        },
+        {
+            "Id": 10,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\n\nclass Car{\npublic String myCar = \"Ferrari\" ;\nCar()\n{\nthis.myCar=\"Mersedes\";\n}\n\nCar(String mashin)\n{\nthis.myCar=mashin;\n}\n}\npublic class Test{\npublic static void main(String ... args){\nCar myCar = new Car();\nSystem.out.println(myCar.myCar);\n}\n}",
+            "Answers": [
+                "Mersedes",
+                "Lada",
+                "Mersedes\nFerrari Lada",
+                "Ferrari Lada",
+                "Mersedes Lada"
+            ]
+        },
+        {
+            "Id": 11,
+            "Title": "Tutaq ki, Mashin (class Mashin{} ) sinfi verilmisdir. Sinfə (Klassa) uygun obyekt necə elan olunur?",
+            "Answers": [
+                "Mashin obj= new Mashin();",
+                "Mashin obj= new Object();",
+                "Mashin obj;",
+                "Mashin  new Mashin();",
+                "Mashin();"
+            ]
+        },
+        {
+            "Id": 12,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\nclass Naqliyyat{\nString tipi=\"Neqliyyat vasitesi\";\nString adı=\"Tranvay\";\n}\npublic class Test{\npublic static void main(String ... args){\nNaqliyyat myCar = new Naqliyyat ();\n}\n}",
+            "Answers": [
+                "Heç bir cavab çıxmayacaq",
+                "Neqliyyat vasitesi",
+                "Neqliyyat vasitesi Tranvay",
+                "Tranvay Neqliyyat vasitesi",
+                "Tranvay"
+            ]
+        },
+        {
+            "Id": 13,
+            "Title": "Код дан:\nclass Quest1 {\nprivate static void main (String a)\n{\nSystem.out.println(\"Java 2\");\n}\n}\n\nЧто нужно исправить, чтобы после выполнения не было получена ошибка?",
+            "Answers": [
+                "String нужно поменять на String[]  и private на public",
+                "Класс Quest1 нужно обявить как public",
+                "В методе main() String нужно поменять на  String[]",
+                "Нужно сделать модификатор метода main() публичным",
+                "Нужно поднять настройки из метода main()"
+            ]
+        },
+        {
+            "Id": 14,
+            "Title": "Выберите вариант, который действительно относится к языку Java:",
+            "Answers": [
+                "Можно создать метод, который не принадлежит ни к одному классу;",
+                "Оператор Goto можно использовать",
+                "Вы не можете создавать производные классы",
+                "Методы должны быть объявлены только один раз",
+                "Это не открытая платформа."
+            ]
+        },
+        {
+            "Id": 14,
+            "Title": "Код дан:\n\nclass Quest3 {\npublic static void main(String s[ ])\n{ String args;\nSystem.out.print(args + s);\n}\n}\n\nРезультат выполнения будет следующим:",
+            "Answers": [
+                "Ошибка компиляции: переменная args должна быть инициализирована заранее",
+                "Ошибка компиляции: параметр метода main() неверен",
+                "Ошибка компиляции: ошибка типа во время печати()",
+                "Ошибка компиляции: тип данных, возвращаемых в метод main, не должен быть пустым",
+                "Нет ошибок компиляции"
+            ]
+        },
+        {
+            "Id": 15,
+            "Title": "Код дан:\npublic class Quest4 {\npublic static void main(String[] args) {\nbyte b[]=new byte[80];\nfor (int i=0;i<b.length;i++)\nb[i]=(byte) 34;\nSystem.out.print(\"Ok\");\n} } \n\nРезультат выполнения будет следующим:",
+            "Answers": [
+                "На экране появится ОК;",
+                "Ошибка компиляции: 34 не соответствует типу;",
+                "Ошибка компиляции: тип b не соответствует ;",
+                "Ошибка компиляции: массив уже инициализирован.",
+                "Ничего не выйдет на экран"
+            ]
+        },
+        {
+            "Id": 16,
+            "Title": "Код дан:\npublic class Quest5{\npublic static void main(){\nSystem.out.print(\"А\");\n}\npublic static void main(String args){\nSystem.out.print(\"D\");\n}\npublic static void main(String[] args){\nSystem.out.print(\"В\");\n}\n}\n\nРезультат выполнения будет следующим:",
+            "Answers": [
+                "B;",
+                "D;",
+                "ВDА;",
+                "Ошибка компиляции;",
+                "АDВ."
+            ]
+        },
+        {
+            "Id": 17,
+            "Title": "Какие строки не будут считаться ошибочными при компиляции в соответствии с комментарием?\npublic class Test{\npublic static void main(String[] args){\nfloat f = 7.0;  //1\nchar c = \"z\";  //2\nbyte b = 255; //3\nboolean n = null;  //4\nint i = 32565;  //5\nint j = 'm'; //6\n}\n}",
+            "Answers": [
+                "Строки 5 и 6",
+                "Строки 3, 5, 6",
+                "Строки 5 и 6",
+                "Все строки",
+                "Строки 1 и 2"
+            ]
+        },
+        {
+            "Id": 18,
+            "Title": "Какой из операторов условного перехода правильный?",
+            "Answers": [
+                "if (i<j)\nSystem.out.print(\"-5-\");",
+                "if (i<j)\nthen System.out.print(\"-2-\");",
+                "if i<j {\nSystem.out.print(\"-3-\"); }",
+                "if [i<j]\nSystem.out.print(\"-4-\");",
+                "if {i<j}\nthen System.out.print(\"-6-\");."
+            ]
+        },
+        {
+            "Id": 19,
+            "Title": "Какой идентификатор соответствует требованиям java?",
+            "Answers": [
+                "int _2int_;",
+                "int int_#;",
+                "int int;",
+                "int 2$int;",
+                "int #int."
+            ]
+        },
+        {
+            "Id": 20,
+            "Title": "Какой идентификатор соответствует требованиям java?",
+            "Answers": [
+                "int $int;",
+                "int int_#;",
+                "int int;",
+                "int ?2_;",
+                "int 2int;"
+            ]
+        },
+        {
+            "Id": 21,
+            "Title": "Какой из массивов правильно объявлен?\nint a1[3] = {};\nint a2[] = new int[]{1,2,3};\nint a3[] = new int[](1,2,3);\nint a4[] = new int[3];\nint a5[] = new int[](1,2,3};",
+            "Answers": [
+                "a2 и a4",
+                "a1",
+                "a3",
+                "a4",
+                "a5"
+            ]
+        },
+        {
+            "Id": 22,
+            "Title": "Код дан:\npublic class Quest5 {\n{\nSystem.out.print(\"1\");\n}\nstatic {\nSystem.out.print(\"2\");\n}\nQuest5()\n{\nSystem.out.print(\"3\");\n}\npublic static void main(String[] args) {\nSystem.out.print(\"4\");\n}\n}\n\nЧто выйдет на экран в результате компиляции?",
+            "Answers": [
+                "24",
+                "4",
+                "34",
+                "1234",
+                "14"
+            ]
+        },
+        {
+            "Id": 23,
+            "Title": "Для чего нужен этот код:\nFor (int i = 2; i <= 100; i ++) {\nboolean isPrime = true;\n\nfor(int j = 2; j < i; j++) {\nif( i % j == 0) {\nisPrime = false;\nbreak;\n}\n}\n\nif(isPrime) {\nSystem.out.println(i);\n}\n}",
+            "Answers": [
+                "Выводит на экран простые числа в интервале [2, 100]",
+                "Выводит на экран квадраты чисел в интервале [2, 100]",
+                "Суммирует комплексные числа в интервале экрана [2, 100]",
+                "Ничего не выводит",
+                "Суммирует числа в интервале [2, 100] экрана"
+            ]
+        },
+        {
+            "Id": 24,
+            "Title": "Код дан:\npublic class Calculator {\n    int num = 100;\n    public void calc(int num) {\n        this.num = num * 10;\n    }\n    public void printNum() {\n        System.out.println(num);\n    }\n    public static void main(String[] args) {\n        Calculator obj = new Calculator();\n        obj.calc(2);\n        obj.printNum();\n    }\n}\nКаким будет результат компиляции?",
+            "Answers": [
+                "20",
+                "100",
+                "1000",
+                "2",
+                "200"
+            ]
+        },
+        {
+            "Id": 25,
+            "Title": "Код дан:\npublic class MyStuff {\n    String name;\n    MyStuff(String n) {\n        name = n;\n    }\n    public static void main(String[] args) {\n        MyStuff m1 = new MyStuff(\"guitar\");\n        MyStuff m2 = new MyStuff(\"tv\");\n        System.out.println(m2.name);\n    }\n    }\nКаким будет результат компиляции?",
+            "Answers": [
+                "tv",
+                "Tv guitar",
+                "Tv",
+                "quitar",
+                "Guitar"
+            ]
+        },
+        {
+            "Id": 26,
+            "Title": "Код дан:\n// Строка n1\nswitch (cardVal) {\n    case 4: case 5: case 6:\n    case 7: case 8:\n        System.out.println(\"Hit\");\n        break;\n    case 9: case 10: case 11:\n        System.out.println(\"Double\");\n        break;\n    case 15: case 16:\n        System.out.println(\"Surrender\");\n        break;\n    default:\n        System.out.println(\"Stand\");\n}\n/Какой фрагмент кода можно добавить самостоятельно в \"//Строка n1\", чтобы печатать слово \" Stand?",
+            "Answers": [
+                "int cardVal = 14;",
+                "int cardVal = 10;",
+                "int cardVal = 6;",
+                "int cardVal = 11;",
+                "int cardVal = 15;"
+            ]
+        },
+        {
+            "Id": 27,
+            "Title": "В какие символы в Java заключаются строковые литералы?",
+            "Answers": [
+                "В двойные кавычки",
+                "В апострофы",
+                "В одинарные кавычки",
+                "Кавычки не используются",
+                "Все ответы не верны"
+            ]
+        },
+        {
+            "Id": 28,
+            "Title": "Как по другому называют параметры методов?",
+            "Answers": [
+                "Аргументы",
+                "Значения",
+                "Литералы",
+                "Переменные",
+                "Атрибуты и литералы"
+            ]
+        },
+        {
+            "Id": 29,
+            "Title": "Что будет выведено на экран при вызове System.out.println();?",
+            "Answers": [
+                "Пустая строка",
+                "Ничего",
+                "Версия Java",
+                "System",
+                "Out"
+            ]
+        },
+        {
+            "Id": 30,
+            "Title": "Означает ли в Java конец строки конец оператора?",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Не всегда",
+                "Иногда",
+                "Все ответы не верны"
+            ]
+        },
+        {
+            "Id": 31,
+            "Title": "Какое из значений лучше объявить константой?",
+            "Answers": [
+                "Число Pi",
+                "Сумма на счету",
+                "Скорость",
+                "Все что меняет значение",
+                "Все ответы не верны"
+            ]
+        },
+        {
+            "Id": 32,
+            "Title": "Какой объявление переменной является правильным?",
+            "Answers": [
+                "int i = 1;",
+                "Integer i = 1;",
+                "a = 4.5;",
+                "b=4.5D;",
+                "int d=3.6F;"
+            ]
+        },
+        {
+            "Id": 33,
+            "Title": "Код дан:\nStringBuilder s1 = new StringBuilder(\"Java\");\nString s2 = \"Love\";\ns1.append(s2);\ns1.substring(4);\nint foundAt = s1.indexOf(s2);\nSystem.out.println(foundAt);\n\nКаким будет результат компиляции?",
+            "Answers": [
+                "4",
+                "3",
+                "-1",
+                "Появится ошибка StringIndexOutOfBoundsException",
+                "5."
+            ]
+        },
+        {
+            "Id": 34,
+            "Title": "Код дан:\npublic class Test {\n    public static void main(String[] args) {\n        int x = 10;\n        int y = 2;\n        try {\n            for (int z = 2; z >= 0; z--) {\n                int ans = x / z;\n                System.out.print(ans + \" \");\n            }\n        } catch (Exception e1) {\n            System.out.println(\"E1\");\n        }    }\n}\nКаким будет результат компиляции?",
+            "Answers": [
+                "5 10 E1",
+                "E1",
+                "E2",
+                "Компилировать будет невозможно.",
+                "E1 E2"
+            ]
+        },
+        {
+            "Id": 35,
+            "Title": "Код дан:\nimport java.util.Scanner;\npublic class Test {\npublic static void main(String[] args) {\nScanner s = new Scanner(System.in);\nint accum = 0;\nfor (int x = 0; x < 4; x++) {\naccum += s.nextInt();\n}\nSystem.out.println(accum);\n}\n}\n\nДля чего нужен этот код?",
+            "Answers": [
+                "4 раза вводятся цифры с клавиатуры в конце их сумма выводится на экран",
+                "Ненужный",
+                "Суммирует элементы массива",
+                "Скомпилировать его будет невозможно.",
+                "Вывод элементов массива на экран"
+            ]
+        },
+        {
+            "Id": 36,
+            "Title": "Какие из этих строк будут скомпилированы без ошибок?\na) float f = 7.0F;\nb) char c = \"z\";\nv) byte b = 255;\nq) boolean n = null;\nd) int i = 32565;\ne) char j = 'ъ';\nИз ответов выберите правильный.",
+            "Answers": [
+                "a,d,e",
+                "a,q,d,e",
+                "a,q,v,d,e",
+                "q,d,e",
+                "a,b,v,q,d,e"
+            ]
+        },
+        {
+            "Id": 37,
+            "Title": "Какой результат вы увидите на экране в результате выполнения этой программы?\npublic class Task1{\npublic static void main(String[] args) {\nString st = \"Mesele1\";\nStringBuilder stB = new StringBuilder();\nstB.append(st);\nstB = stB.reverse();\nSystem.out.println(stB);\n}\n}",
+            "Answers": [
+                "1eleseM",
+                "1elesM",
+                "1eles",
+                "Mesele1",
+                "Ответ не выйдет"
+            ]
+        },
+        {
+            "Id": 38,
+            "Title": "Какой результат вы увидите на экране в результате выполнения этой программы?\npublic class Task2{\npublic static void main(String[] args) {\nString st = new String(\"Hello\");\nint counter = 0;\nchar[] charsArray = st.toCharArray();\nfor (int i=0; i<st.length();i++) {\nfor(int j=i+1; j<st.length();j++) {\nif (charsArray [i] == charsArray [j]) {\nSystem.out.println(charsArray [j]);\ncounter ++;\nbreak;\n}\n}\n}\n}",
+            "Answers": [
+                "l",
+                "H",
+                "e",
+                "o",
+                "Ho"
+            ]
+        },
+        {
+            "Id": 39,
+            "Title": "Какой ответ будет получен в результате компиляции и решения программы без аргументов?\n\npublic class Main {\npublic static void main(String[] args) {\nSystem.out.println(args.length);\n}\n}",
+            "Answers": [
+                "Он будет скомпилирован, и вы увидите цифру \" 0 \" на экране",
+                "Не будет компилироваться",
+                "Будет скомпилирован, но получит ошибку",
+                "Вы никогда не увидите экран, который будет скомпилирован.",
+                "Он будет скомпилирован, и вы увидите Null на экране"
+            ]
+        },
+        {
+            "Id": 40,
+            "Title": "Какой результат вы увидите на экране в результате выполнения этой программы?\npublic class Switch {\npublic static void main(String[] args) {\nint i = 3;\nswitch(i)\n{\ndefault:\nSystem.out.println(\"default\");\ncase 1:\nSystem.out.println(\"1\");\ncase 2:\nSystem.out.println(\"2\");\n}\n}\n}",
+            "Answers": [
+                "default 1 2",
+                "1",
+                "2",
+                "default",
+                "Ответ не будет получен"
+            ]
+        },
+        {
+            "Id": 41,
+            "Title": "Какому типу переменной соответствует идентификатор alma?\nalma = 7.0F;\nВыберите правильный ответ.",
+            "Answers": [
+                "float",
+                "String",
+                "int",
+                "byte",
+                "double"
+            ]
+        },
+        {
+            "Id": 42,
+            "Title": "Какому типу переменной соответствует идентификатор alma?\nalma = 1227.2335446576;\nВыберите правильный ответ.",
+            "Answers": [
+                "double",
+                "String",
+                "int",
+                "byte",
+                "float"
+            ]
+        },
+        {
+            "Id": 43,
+            "Title": "Какому типу переменной соответствует идентификатор alma?\nalma = 'a';\nВыберите правильный ответ.",
+            "Answers": [
+                "char",
+                "double",
+                "int",
+                "byte",
+                "float"
+            ]
+        },
+        {
+            "Id": 44,
+            "Title": "Какому типу переменной соответствует идентификатор alma?\nalma = \"2\";\nВыберите правильный ответ.",
+            "Answers": [
+                "String",
+                "double",
+                "int",
+                "byte",
+                "char"
+            ]
+        },
+        {
+            "Id": 45,
+            "Title": "Можно ли объявить идентификатор alma с типом переменной byte?\nalma = 128;\nВыберите правильный ответ.",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Можно объявить",
+                "Нет разницы",
+                "Всегда можно"
+            ]
+        },
+        {
+            "Id": 46,
+            "Title": "Можно ли объявить идентификатор alma с типом переменной int?\nalma = “128”;\nВыберите правильный ответ.",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Можно объявить",
+                "Нет разницы",
+                "Всегда можно"
+            ]
+        },
+        {
+            "Id": 47,
+            "Title": "Можно ли объявить идентификатор alma с типом переменной String?\nalma = 128;\nВыберите правильный ответ.",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Можно объявить",
+                "Нет разницы",
+                "Всегда можно"
+            ]
+        },
+        {
+            "Id": 48,
+            "Title": "Можно ли объявить идентификатор a с типом переменной String?\nString a= 'b';\nВыберите правильный ответ.",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Можно объявить",
+                "Нет разницы",
+                "Всегда можно"
+            ]
+        },
+        {
+            "Id": 49,
+            "Title": "Можно ли объявить идентификатор a с типом переменной char?\nchar a= 'b';\nВыберите правильный ответ.",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Можно объявить",
+                "Нет разницы",
+                "Нельзя"
+            ]
+        },
+        {
+            "Id": 50,
+            "Title": "Правильно ли объявлен идентификатор a?\nint a= 2;\nВыберите правильный ответ.",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Можно объявить",
+                "Нет разницы",
+                "Нельзя"
+            ]
+        },
+        {
+            "Id": 51,
+            "Title": "Можно ли объявить идентификатор a с типом переменной boolean?\nboolean a= “true”;\nВыберите правильный ответ.",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Можно объявить",
+                "Нет разницы",
+                "Всегда можно"
+            ]
+        },
+        {
+            "Id": 52,
+            "Title": "Можно ли объявить идентификатор a с типом переменной boolean?\nboolean a= true;\nВыберите правильный ответ.",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Можно объявить",
+                "Нет разницы",
+                "Нельзя"
+            ]
+        },
+        {
+            "Id": 53,
+            "Title": "Код дан:\npublicclass IfElseExample{\n\npublicstatic void main(String args[]){\nint num=120;\nif( num < 50){\nSystem.out.println(\"num is less than 50\");\n}\nelse{\nSystem.out.println(\"num is greater than or equal 50\");\n}\n}\n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "num is greater than or equal 50",
+                "num is less than 50",
+                "Ошибка компиляции",
+                "Ничего не выйдет на экран",
+                "120"
+            ]
+        },
+        {
+            "Id": 54,
+            "Title": "Код дан:\n\npublicclass IfElseIfExample{\npublicstatic void main(String args[]){\nint num=1234;\nif(num<100&& num>=1){\nSystem.out.println(\"Its a two digit number\");\n}\nelseif(num<1000&& num>=100){\nSystem.out.println(\"Its a three digit number\");\n}\nelseif(num<10000&& num>=1000){\nSystem.out.println(\"Its a four digit number\");\n}\nelseif(num<100000&& num>=10000){\nSystem.out.println(\"Its a five digit number\");\n}\nelse{\nSystem.out.println(\"number is not between 1 & 99999\");\n}\n}\n}\n\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "Its a four digit number",
+                "Its a two digit number",
+                "Ошибка компиляции",
+                "Its a five digit number",
+                "Its a three digit number"
+            ]
+        },
+        {
+            "Id": 55,
+            "Title": "Код дан:\npublic static void main(String args[]){\nint num=2;\nswitch(num+2)\n{\ncase 1:\nSystem.out.println(\"Case1: Value is: \"+num);\ncase 2:\nSystem.out.println(\"Case2: Value is: \"+num);\ncase 3:\nSystem.out.println(\"Case3: Value is: \"+num);\ndefault:\nSystem.out.println(\"Default: Value is: \"+num);\n}\n}\n}\n\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "Default: Value is: 2",
+                "Default: Value is: 4",
+                "Ошибка компиляции",
+                "Default: Value is: 1",
+                "Default: Value is: 3"
+            ]
+        },
+        {
+            "Id": 56,
+            "Title": "Код дан:\npublic class SwitchCaseExample2 {\n\npublic static void main(String args[]){\nint i=2;\nswitch(i)\n{\ncase 1:\nSystem.out.print(\"Case1 \");\ncase 2:\nSystem.out.print(\"Case2 \");\ncase 3:\nSystem.out.print(\"Case3 \");\ncase 4:\nSystem.out.print(\"Case4 \");\ndefault:\nSystem.out.print(\"Default \");\n}\n}\n\n\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "Case2 Case3 Case4 Default",
+                "Case1",
+                "Case3 Default",
+                "Case2 Case3",
+                "Case4 Default"
+            ]
+        },
+        {
+            "Id": 57,
+            "Title": "Код дан:\npublic class SwitchCaseExample2 {\n\npublic static void main(String args[]){\nint i=2;\nswitch(i)\n{\ncase 1:\nSystem.out.println(\"Case1 \");\nbreak;\ncase 2:\nSystem.out.println(\"Case2 \");\nbreak;\ncase 3:\nSystem.out.println(\"Case3 \");\nbreak;\ncase 4:\nSystem.out.println(\"Case4 \");\nbreak;\ndefault:\nSystem.out.println(\"Default \");\n}\n}\n}\n\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "Case2",
+                "Case1",
+                "Case3",
+                "Case4",
+                "Case4 Default"
+            ]
+        },
+        {
+            "Id": 58,
+            "Title": "Код дан:\npublic class Test {\n public static void main(String[] args) {\n  for (int i = 10; i > 1; i--) {\n   if (i == 5 & i>=4) {\n    System.out.println(\"The value of i is: \" + i);\n   }\n  }\n }\n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "The value of i is: 5",
+                "The value of i is: 6",
+                "The value of i is: 7",
+                "The value of i is: 8",
+                "The value of i is: 9"
+            ]
+        },
+        {
+            "Id": 59,
+            "Title": "Код дан:\npublic class Test {\n public static void main(String[] args) {\n  for (int i = 10; i > 1; i--) {\n   if (i == 2 & i>=4) {\n    System.out.println(\"The value of i is: \" + i);\n   }\n  }\n }\n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "Ничего не выйдет на экран",
+                "The value of i is: 4",
+                "The value of i is: 5",
+                "The value of i is: 6",
+                "The value of i is: 8"
+            ]
+        },
+        {
+            "Id": 60,
+            "Title": "Код дан:\npublic class Test {\n public static void main(String[] args) {\n  for (int i = 10; i > 1; i--) {\n   if (i == 1 & i>=4) {\n    System.out.println(\"The value of i is: \" + i);\n   }\n  }\n }\n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "Ничего не выйдет на экран",
+                "The value of i is: 4",
+                "The value of i is: 5",
+                "The value of i is: 6",
+                "The value of i is: 8"
+            ]
+        },
+        {
+            "Id": 61,
+            "Title": "Код дан:\npublic class Test {\n public static void main(String[] args) {\n  for (int i = 10; i > 1; i--) {\n   if (i == 4 & i>=4) {\n    System.out.println(\"The value of i is: \" + i);\n   }\n  }\n }\n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "The value of i is: 4",
+                "Ничего не выйдет на экран",
+                "The value of i is: 4",
+                "The value of i is: 5",
+                "The value of i is: 6"
+            ]
+        },
+        {
+            "Id": 62,
+            "Title": "В написании какого оператора if нет ошибки?\n1. if (i!=j) System.out.print(\"-5-\");\n2. if (i!<j) then System.out.print(\"-2-\");\n3. if i<j { System.out.print(\"-3-\"); }\n4. if [i<j] System.out.print(\"-4-\");\n5. if {i<j} then System.out.print(\"-6-\");",
+            "Answers": [
+                "1",
+                "2,1",
+                "3,5",
+                "4,3",
+                "Все написаны правильно"
+            ]
+        },
+        {
+            "Id": 63,
+            "Title": "Для каких значений $i$ после выполнения оператора if (i==5) System.out.print(\"-5-\") будет получен результат «-5-» на экране?",
+            "Answers": [
+                "5",
+                "когда i больше 5",
+                "когда i меньше 5",
+                "для всех значений i",
+                "когда i=-5"
+            ]
+        },
+        {
+            "Id": 64,
+            "Title": "Какой ответ появится в результате выполнения этого кода на экране?\npublic class Test {\n public static void main(String[] args) {\n  int i=6,j=8;\n  if (i!=j) System.out.print(\"-5-\"+\"  \"+j);\n }\n}",
+            "Answers": [
+                "-5-  8",
+                "Ничего не выйдет на экран",
+                "6",
+                "8",
+                "-5-  6"
+            ]
+        },
+        {
+            "Id": 65,
+            "Title": "Для каких значений $j$ после выполнения оператора if (j<=8) System.out.print(\"-8-\") будет получен результат «-8-» на экране?",
+            "Answers": [
+                "когда j меньше или равно 8",
+                "8",
+                "когда j больше 8",
+                "когда j меньше 8",
+                "для всех значений j"
+            ]
+        },
+        {
+            "Id": 66,
+            "Title": "Если $i=8$, тогда при каких значениях $j$ в результате выполнения оператора if (i=j) System.out.print(\"-8-\") будет получен результат «-8-» на экране?",
+            "Answers": [
+                "8",
+                "когда j больше 8",
+                "когда j меньше 8",
+                "для всех значений j",
+                "когда j=-8"
+            ]
+        },
+        {
+            "Id": 67,
+            "Title": "Если $i=7$, тогда при каких значениях $j$ в результате выполнения if (i>=j & j<8) System.out.print(j) будет получен результат «8» на экране?",
+            "Answers": [
+                "Таких значений нет",
+                "когда j больше 8",
+                "когда j меньше 8",
+                "для всех значений j",
+                "когда j=8"
+            ]
+        },
+        {
+            "Id": 68,
+            "Title": "Если $i=7$, тогда при каких значениях $j$ в результате выполнения if (i<=j & j>=6) System.out.print(j) будет получен результат «8» на экране?",
+            "Answers": [
+                "8",
+                "Таких значений нет",
+                "когда j меньше 7",
+                "для всех значений j",
+                "когда j=6"
+            ]
+        },
+        {
+            "Id": 69,
+            "Title": "Какой оператор for объявлен правильно?\n1. for ( i=1;i<=6;i-);\n2. for (int  i=1; i<=6; i++);\n3. for (i i=1;int  i<=6; i++);\n4. for ( i=1; i<=6; int i++);\n5. for ( i=1; i<=6 i++);",
+            "Answers": [
+                "2",
+                "2,1",
+                "3,5",
+                "4,3",
+                "Все."
+            ]
+        },
+        {
+            "Id": 70,
+            "Title": "Какой оператор for объявлен правильно?\n1. for ( j>=1; i<=6;i-);\n2. for (int  i=1; i<=8; i++);\n3. for (float i=1;int  i<=8; i++);\n4. for ( i=1; i<=7; int i++);\n5. for ( i=1; i<=6 i++);",
+            "Answers": [
+                "2",
+                "2,1",
+                "3,5",
+                "4,3",
+                "Dct."
+            ]
+        },
+        {
+            "Id": 71,
+            "Title": "Код дан:\nclass ForLoopExample3{\n public static void main(String args[]){\n  int arr[]={2,11,45,9};\n  for(int num : arr){\n   if (num>9 & num<=11)\n    System.out.print(num+\" \");\n  }\n }\n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "11",
+                "2 11 45 9",
+                "45",
+                "9",
+                "45 9"
+            ]
+        },
+        {
+            "Id": 72,
+            "Title": "Код дан:\npublic class Test {\n public static void main(String[] args) {\n  String arr[] = {\"hi\", \"hello\", \"bye\"};\n  for (String str : arr) {\n   System.out.print(str);\n  }\n }\n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "hihellobye",
+                "Hi hello bye",
+                "Hello",
+                "hello",
+                "hello bye"
+            ]
+        },
+        {
+            "Id": 73,
+            "Title": "На какие две группы типов в основном делятся типы переменных в Java?",
+            "Answers": [
+                "К примитивным и ссылочным типам.",
+                "К примитивным и массивным типам.",
+                "К строковым и ссылочным типам.",
+                "Из массивов и классов",
+                "Нет такого разделения"
+            ]
+        },
+        {
+            "Id": 74,
+            "Title": "К какой основной группе типов относится тип String в Java?",
+            "Answers": [
+                "К ссылочным.",
+                "К примитивным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 75,
+            "Title": "К какой основной группе типов относится тип int в Java?",
+            "Answers": [
+                "К примитивным.",
+                "К ссылочным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 76,
+            "Title": "К какой основной группе типов относится тип double в Java?",
+            "Answers": [
+                "К примитивным.",
+                "К ссылочным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 77,
+            "Title": "К какой основной группе типов относится тип char в Java?",
+            "Answers": [
+                "К примитивным.",
+                "К ссылочным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 78,
+            "Title": "К какой основной группе типов относится тип boolean в Java?",
+            "Answers": [
+                "К примитивным.",
+                "К ссылочным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 79,
+            "Title": "К какой основной группе типов относится тип float в Java?",
+            "Answers": [
+                "К примитивным.",
+                "К ссылочным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 80,
+            "Title": "К какой основной группе типов относится тип char в Java?",
+            "Answers": [
+                "К примитивным.",
+                "К ссылочным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 81,
+            "Title": "К какой основной группе типов относится тип array в Java?",
+            "Answers": [
+                "К ссылочным.",
+                "К примитивным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 82,
+            "Title": "К какой основной группе типов относится тип array в Java?",
+            "Answers": [
+                "К ссылочным.",
+                "К примитивным.",
+                "Нет такого разделения",
+                "К массивам",
+                "К примитивным и ссылочным типам."
+            ]
+        },
+        {
+            "Id": 83,
+            "Title": "Объект это переменная?",
+            "Answers": [
+                "Объект является экземпляром Class",
+                "Это массивы.",
+                "Это такой же тип как Class.",
+                "Переменный примтивного типа.",
+                "В Java нет такого понятия"
+            ]
+        },
+        {
+            "Id": 84,
+            "Title": "Java это объектно-ориентированный язык программирования?",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Процедурный язык программированияя",
+                "Язык для описания классов",
+                "Не язык высокого уровня программирования"
+            ]
+        },
+        {
+            "Id": 85,
+            "Title": "Кто создал язык программирования Java?",
+            "Answers": [
+                "Он был создан Джеймсом Гослингом в Sun Microsystems.",
+                "Он был создан Биллом Гейтсом в Microsoft.",
+                "Стив Джобс в Apple",
+                "Нет автора",
+                "Компанией Oracle"
+            ]
+        },
+        {
+            "Id": 86,
+            "Title": "Какой компании в настоящее время принадлежит лицензия на язык программирования Java?",
+            "Answers": [
+                "Oracle",
+                "Microsoft",
+                "Sun Microsystems",
+                "Open source system",
+                "Android"
+            ]
+        },
+        {
+            "Id": 87,
+            "Title": "While – Loop:\nwhile(condition) {\n statement(s);\n}\nкогда проверяет условие цикла?",
+            "Answers": [
+                "В начале",
+                "В конце",
+                "Внутри цикла",
+                "Завсит от условия",
+                "Во всех случаях особеннго в конце"
+            ]
+        },
+        {
+            "Id": 88,
+            "Title": "Команды внутри опретора While – Loop\nwhile(condition) {\n statement(s);\n}\nвсегда выполняются?",
+            "Answers": [
+                "Зависит от условия",
+                "Нет",
+                "Зависит от внутренних условий",
+                "Не зависит от условия",
+                "Всегда"
+            ]
+        },
+        {
+            "Id": 89,
+            "Title": "Команды внутри опретора While – Loop\nwhile(condition) {\n statement(s);\n}\nмогут ли не выполняются?",
+            "Answers": [
+                "Зависит от условия",
+                "Нет",
+                "Зависит от внутренних условий",
+                "Не зависит от условия",
+                "Всегда"
+            ]
+        },
+        {
+            "Id": 90,
+            "Title": "Код дан:\nclass WhileLoopExample{\n public static void main(String args[]){\n  int i=10;\n  while(i>1){\n   System.out.println(i);\n   i--;\n  }\n }\n}\nДля чего нужен этот код?",
+            "Answers": [
+                "Выводит на экран цифры от 10 до 2.",
+                "Увеличивает цифры",
+                "Выводит на экран цифры от 2 до 10.",
+                "Выводит на экран цифры от 1 до 10.",
+                "Выводит на экран цифры от 10 до 0."
+            ]
+        },
+        {
+            "Id": 91,
+            "Title": "Код дан:\nclass WhileLoopExample {\n public static void main(String args[]){\n  int i=1;\n  while(i>1 & i<=10){\n   System.out.println(i);\n   i--;\n  }\n }\n}\nДля чего нужен этот код?",
+            "Answers": [
+                "Ничего",
+                "0",
+                "Ошибка компиляции",
+                "Выводит на экран цифры от 1 до 10.",
+                "Выводит на экран цифры от 2 до 10."
+            ]
+        },
+        {
+            "Id": 92,
+            "Title": "Код дан:\nclass WhileLoopExample2{\n public static void main(String args[]){\n  int i=10;\n  while(i>1 & i<=10) {\n   System.out.println(i);\n   i++;\n  }\n }\n}\nЧто будет отображено на экране?",
+            "Answers": [
+                "10",
+                "1",
+                "Ничего",
+                "Выводит на экран цифры от 1 до 10.",
+                "Выводит на экран цифры от 2 до 10."
+            ]
+        },
+        {
+            "Id": 93,
+            "Title": "Код дан:\nclass WhileLoopExample2{\n public static void main(String args[]){\n  int i=10;\n  while(i<=20) {\n   System.out.println(i);\n   i++;\n  }\n }\n}\nЧто будет отображено на экране?",
+            "Answers": [
+                "Выводит на экран цифры от 10 до 20",
+                "Увеличивает цифры",
+                "Выводит на экран цифры от 20 до 10.",
+                "Выводит на экран цифры от 0 до 10.",
+                "Выводит на экран цифры от 20 до 0."
+            ]
+        },
+        {
+            "Id": 94,
+            "Title": "Код дан:\nclass WhileLoopExample2{\n public static void main(String args[]){\n  int i=1;\n  while(i<=10) {\n   System.out.println(i);\n   i++;\n  }\n }\n}\nЧто будет отображено на экране?",
+            "Answers": [
+                "Выводит на экран цифры от 1 до 10",
+                "Увеличивает цифры",
+                "Выводит на экран цифры от 2 до 10.",
+                "Выводит на экран цифры от 10 до 1.",
+                "Выводит на экран цифры от 10 до 0."
+            ]
+        },
+        {
+            "Id": 95,
+            "Title": "Код дан:\nclass Test {\n public static void main(String args[]){\n  int i=1;\n  while(i>0) {\n   System.out.println(i);\n   if (i>=20) break;\n   i++;\n  }\n }\n}\nЧто будет отображено на экране?",
+            "Answers": [
+                "Выводит на экран цифры от 1 до 10",
+                "Увеличивает цифры",
+                "Выводит на экран цифры от 2 до 10.",
+                "Выводит на экран цифры от 10 до 1.",
+                "Выводит на экран цифры от 10 до 0."
+            ]
+        },
+        {
+            "Id": 96,
+            "Title": "Какой класс используется для вычисления математических выражений в Java?",
+            "Answers": [
+                "Math",
+                "import  java.lang.Math1.*;",
+                "Mathematical",
+                "Sin.",
+                "Count."
+            ]
+        },
+        {
+            "Id": 97,
+            "Title": "Какая команда используется для добавления внешних классов в код в Java?",
+            "Answers": [
+                "import",
+                "include",
+                "namespace",
+                "uses",
+                "use"
+            ]
+        },
+        {
+            "Id": 98,
+            "Title": "Какой класс используется для работы с клавиатурой Java?",
+            "Answers": [
+                "Scanner",
+                "Math;",
+                "Scanner и Math",
+                "System",
+                "Вызываются By default."
+            ]
+        },
+        {
+            "Id": 99,
+            "Title": "Код дан:\nclass Test {\n public static void main(String args[]){\n  int i=1;\n  while(i>0) {\n   System.out.println(i);\n   if (i>=20) break;\n   i++;\n  }\n }\n}\nКогда закончится цикл по этому коду?",
+            "Answers": [
+                "При i>=20",
+                "При i>=20",
+                "Никогда",
+                "При i>1",
+                "При i>0"
+            ]
+        },
+        {
+            "Id": 100,
+            "Title": "SE верися Java-что это?",
+            "Answers": [
+                "Java SE-стандартная версия используется для работы над проектами среднего уровня",
+                "Для работы над большими проектами",
+                "Мобильная версия",
+                "Для пультов и т.д.",
+                "Он предназначен для создания графических интерфейсов."
+            ]
+        },
+        {
+            "Id": 101,
+            "Title": "EE версия Java-что это?",
+            "Answers": [
+                "Для работы над большими проектами",
+                "Стандартная версия используется для работы над проектами среднего уровня",
+                "Мобильная версия",
+                "Для пультов и т.д.",
+                "Он предназначен для создания графических интерфейсов."
+            ]
+        },
+        {
+            "Id": 102,
+            "Title": "ME версия Java-что это?",
+            "Answers": [
+                "Мобильная версия",
+                "Для работы над большими проектами",
+                "Стандартная версия используется для работы над проектами среднего уровня",
+                "Мобильная версия",
+                "Он предназначен для создания графических интерфейсов."
+            ]
+        },
+        {
+            "Id": 103,
+            "Title": "Java Card – что это?",
+            "Answers": [
+                "Создание программ для пультов и других смарт устройств",
+                "Для работы над большими проектами",
+                "Стандартная версия используется для работы над проектами среднего уровня",
+                "Мобильная версия",
+                "Он предназначен для создания графических интерфейсов."
+            ]
+        },
+        {
+            "Id": 104,
+            "Title": "Java Fx – что это?",
+            "Answers": [
+                "Он предназначен для создания графических интерфейсов.",
+                "Для создания программ для пультов и других смарт устройств",
+                "Для работы над большими проектами",
+                "Стандартная версия используется для работы над проектами среднего уровня",
+                "Мобильная версия"
+            ]
+        },
+        {
+            "Id": 105,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Select all в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+A",
+                "Sift+A",
+                "Sİft+F2",
+                "Sift",
+                "Alt"
+            ]
+        },
+        {
+            "Id": 106,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Cut в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+X",
+                "Sift+Alt",
+                "Ctrl+s",
+                "Ctrl+A",
+                "Sift"
+            ]
+        },
+        {
+            "Id": 107,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Copy в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+C",
+                "Ctrl+A",
+                "Ctrl+S",
+                "Ctrl+A",
+                "Sift+Alt"
+            ]
+        },
+        {
+            "Id": 108,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Paste в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+V",
+                "Ctrl+S",
+                "Ctrl+A",
+                "Ctrl+Sift",
+                "Ctrl+A"
+            ]
+        },
+        {
+            "Id": 109,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Undo в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+Z",
+                "Ctrl+A",
+                "Ctrl+S",
+                "Ctrl+F2",
+                "Ctrl+F1"
+            ]
+        },
+        {
+            "Id": 110,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Delete word after curser в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+Delete",
+                "Ctrl+F5",
+                "Ctrl+F6",
+                "Sift",
+                "Alt"
+            ]
+        },
+        {
+            "Id": 111,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Delete word befor curser в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+Backspace",
+                "Ctrl+A",
+                "Ctrl+D",
+                "Ctrl+s",
+                "Ctrl+D"
+            ]
+        },
+        {
+            "Id": 112,
+            "Title": "Какая из приведенных ниже сочетаний клавиш предназначена для преобразования операторов в режим комментирования с помощью редактора программы Java?",
+            "Answers": [
+                "Ctrl+/",
+                "Ctrl+S",
+                "Ctrl+D",
+                "Ctrl+A",
+                "Ctrl+s"
+            ]
+        },
+        {
+            "Id": 113,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Close Folder в Visual Studio Code?",
+            "Answers": [
+                "Ctrl+K+F",
+                "Ctrl+C",
+                "Ctrl+A",
+                "Ctrl+S",
+                "Ctrl+V"
+            ]
+        },
+        {
+            "Id": 114,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Save document в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+S",
+                "Ctrl+d",
+                "Ctrl",
+                "Sift",
+                "Alt"
+            ]
+        },
+        {
+            "Id": 115,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Save as document в редакторе программы Java?",
+            "Answers": [
+                "Ctrl+Sift+S",
+                "Ctrl+S",
+                "Ctrl+D",
+                "Sift+A",
+                "Sift+f"
+            ]
+        },
+        {
+            "Id": 116,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к Open File в Visual Studio Code?",
+            "Answers": [
+                "Ctrl+O",
+                "Sift",
+                "Alt",
+                "Sift+A",
+                "Alt+"
+            ]
+        },
+        {
+            "Id": 117,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к quickly switch programs?",
+            "Answers": [
+                "Alt+Tab",
+                "Sift",
+                "Alt",
+                "Tab",
+                "Alt+F1"
+            ]
+        },
+        {
+            "Id": 118,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к quickly close windows?",
+            "Answers": [
+                "Alt+F4",
+                "Sift+Alt",
+                "Sift",
+                "Alt",
+                "Alt+Sift"
+            ]
+        },
+        {
+            "Id": 119,
+            "Title": "Какое из приведенных ниже сочетаний клавиш относится к quickly return to desktop?",
+            "Answers": [
+                "Windows+D",
+                "Alt",
+                "Sift",
+                "Alt+F2",
+                "Alt+Sift"
+            ]
+        },
+        {
+            "Id": 120,
+            "Title": "Что представляет собой знак $\\%$ в Java-программе?",
+            "Answers": [
+                "Остаток от деления",
+                "Сбор",
+                "Возведение в степень",
+                "Умножение",
+                "Раздел"
+            ]
+        },
+        {
+            "Id": 121,
+            "Title": "Какое из приведенных команд запускает на выполнение программу в Visual Studio Code?",
+            "Answers": [
+                "Run",
+                "Sift",
+                "Alt",
+                "Sum",
+                "Alt+F1"
+            ]
+        },
+        {
+            "Id": 122,
+            "Title": "Какое из приведенных команд запускает на выполнение программу в режиме Start Debugging в Visual Studio Code?",
+            "Answers": [
+                "F6",
+                "F1",
+                "F2",
+                "F4",
+                "F8"
+            ]
+        },
+        {
+            "Id": 123,
+            "Title": "Что представляет собой $\\texttt{(A == B)}$ в Java-программе?",
+            "Answers": [
+                "программа выполняется, если значения А и B равны.",
+                "программа выполняется, если значения A и B не равны.",
+                "программа выполняется, если A меньше B.",
+                "Если A меньше B или равно B, выполняется программа",
+                "программа выполняется, если A больше B"
+            ]
+        },
+        {
+            "Id": 124,
+            "Title": "Что представляет собой $\\texttt{(A != B)}$ в Java-программе?",
+            "Answers": [
+                "программа выполняется, если значения A и B не равны.",
+                "программа выполняется, если значения А и B равны.",
+                "программа выполняется, если A меньше B.",
+                "Если A меньше B или равно B, выполняется программа",
+                "программа выполняется, если A больше B"
+            ]
+        },
+        {
+            "Id": 125,
+            "Title": "Что представляет собой $\\texttt{(A < B)}$ в Java-программе?",
+            "Answers": [
+                "программа выполняется, если A меньше B.",
+                "программа выполняется, если значения A и B не равны.",
+                "программа выполняется, если значения А и B равны.",
+                "Если A меньше B или равно B, выполняется программа",
+                "программа выполняется, если A больше B"
+            ]
+        },
+        {
+            "Id": 126,
+            "Title": "Что представляет собой $\\texttt{(A > B)}$ в Java-программе?",
+            "Answers": [
+                "программа выполняется, если A больше B",
+                "программа выполняется, если A меньше B.",
+                "программа выполняется, если значения A и B не равны.",
+                "программа выполняется, если значения А и B равны.",
+                "Если A меньше B или равно B, выполняется программа"
+            ]
+        },
+        {
+            "Id": 127,
+            "Title": "Что представляет собой $\\texttt{(A <= B)}$ в Java-программе?",
+            "Answers": [
+                "Если A меньше B или равно B, выполняется программа",
+                "программа выполняется, если A меньше B.",
+                "программа выполняется, если значения A и B не равны.",
+                "программа выполняется, если значения А и B равны.",
+                "программа выполняется, если A больше B"
+            ]
+        },
+        {
+            "Id": 128,
+            "Title": "Что представляет собой $\\texttt{(A >= B)}$ в Java-программе?",
+            "Answers": [
+                "Если A больше B или равно B, выполняется программа",
+                "программа выполняется, если A меньше B.",
+                "программа выполняется, если значения A и B не равны.",
+                "программа выполняется, если значения А и B равны.",
+                "программа выполняется, если A больше B"
+            ]
+        },
+        {
+            "Id": 129,
+            "Title": "Каковы условные команды в программе Java?",
+            "Answers": [
+                "If else",
+                "Int for",
+                "for, do, while",
+                "do, while",
+                "while int"
+            ]
+        },
+        {
+            "Id": 130,
+            "Title": "Каковы команды цикла в программе Java?",
+            "Answers": [
+                "for, do, while",
+                "int, for",
+                "int, do",
+                "do, if",
+                "if, else"
+            ]
+        },
+        {
+            "Id": 131,
+            "Title": "В программе Java какая переменная пишется в одинарных кавычках?",
+            "Answers": [
+                "Char",
+                "String",
+                "For",
+                "Do",
+                "If"
+            ]
+        },
+        {
+            "Id": 132,
+            "Title": "Что из приведенного ниже не возвращает значения в программе Java?",
+            "Answers": [
+                "Void",
+                "If",
+                "Int",
+                "Else",
+                "Do"
+            ]
+        },
+        {
+            "Id": 133,
+            "Title": "Какой из приведенных ниже символов является символом комментария в программе Java?",
+            "Answers": [
+                "//",
+                "+",
+                "/",
+                "*",
+                "%"
+            ]
+        },
+        {
+            "Id": 134,
+            "Title": "Для чего предназначена $\\texttt{“toUpperCase()”}$ в программе Java?",
+            "Answers": [
+                "Преобразует строку в буквы верхнего регистра",
+                "Преобразует строку в буквы нижнего регистра",
+                "Нет такого метода",
+                "Удаляет пробелы с обоих концов строки",
+                "Удаляет строку"
+            ]
+        },
+        {
+            "Id": 135,
+            "Title": "Для чего предназначена $\\texttt{“toLowerCase()”}$ в программе Java?",
+            "Answers": [
+                "Преобразует строку в буквы нижнего регистра",
+                "Преобразует строку в буквы верхнего регистра",
+                "Нет такого метода",
+                "Удаляет пробелы с обоих концов строки",
+                "Удаляет строку"
+            ]
+        },
+        {
+            "Id": 136,
+            "Title": "Какая команда определяет длину строки в программе Java?",
+            "Answers": [
+                "length()",
+                "Int",
+                "If",
+                "Or",
+                "Else"
+            ]
+        },
+        {
+            "Id": 137,
+            "Title": "Какой результат получится после выполнения этого кода?\npackage com.ZJAVAKITABI;\nclass Dowhileloop {\npublic static void main(String [] arguments) {\ndo{System.out.println('Zabilin 28 yaşı var'); }\nwhile(27 > 28);\n}}",
+            "Answers": [
+                "Zabilin 28 yaşı var",
+                "Zabilin 30 yaşı var",
+                "Zabilin 24 yaşı var",
+                "Zabilin 29 yaşı var",
+                "Zabilin 20 yaşı var"
+            ]
+        },
+        {
+            "Id": 138,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass sualsherti {\npublic static void maint(String[] arguments) {\nString Cinsi='kişi';\nSystem.out.print((Cinsi.equals('kişi')) ? 'Cənab' : 'Xanım');\nSystem.out.print('Zabil İbayev')ı\n}\n}",
+            "Answers": [
+                "Cənab Zabil İbayev",
+                "Cənab Zabil",
+                "Cənab",
+                "Cənab İbayev",
+                "İbayev"
+            ]
+        },
+        {
+            "Id": 139,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass Riyazimisallar {\npublic static void main(String [] arguments) {\nint eded1= 10; int eded2= 10;\nint cavab= eded1+eded2;\nSystem.out.println(eded1 + '+' + eded2 + '='+ cavab);",
+            "Answers": [
+                "10+10=20",
+                "8+12=20",
+                "10+8=18",
+                "10+9=29",
+                "7+13=20"
+            ]
+        },
+        {
+            "Id": 140,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass HesabArdicilligi {\npublic static void main(String [] arguments) {\nint z = 5;\nint cavab = ++z*6+4-1*10/2;\nSystem.out.println(cavab);",
+            "Answers": [
+                "35",
+                "56",
+                "21",
+                "23",
+                "56"
+            ]
+        },
+        {
+            "Id": 141,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass Birbirtoplama {\npublic static void main(String [] arguments) {\nint z, cavab1, a, cavab2;\nz - 3;    a=3;\ncavab1 = z++ * 10;cavab2 = ++a * 10;\nSystem.out.print(cavab1 + ' ');System.out.println(cavab2);",
+            "Answers": [
+                "30 40",
+                "50 40",
+                "20 30",
+                "25 62",
+                "21 42"
+            ]
+        },
+        {
+            "Id": 142,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass Weight {\n    public static void main(String [] arguments){\n        int Zabilin_kilosu, idman, tetil, indiki_kilo;\n        Zabilin_kilosu = 90;\n        tetil = 15;\n        idman = -10;\n        Zabilin_kilosu = Zabilin_kilosu + tetil + idman;\n        System.out.println(Zabilin_kilosu);\n    }\n}",
+            "Answers": [
+                "95",
+                "25",
+                "35",
+                "46",
+                "62"
+            ]
+        },
+        {
+            "Id": 143,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass CHAR {\n    public static void main(String [] arguments){\n        char regem1 = 'A';\n        char _reqem2 = '0';\n        System.out.println(regem1);\n        System.out.println(_reqem2);\n    }\n}",
+            "Answers": [
+                "A 0",
+                "A A",
+                "A B",
+                "A B",
+                "A C"
+            ]
+        },
+        {
+            "Id": 144,
+            "Title": "Для чего предназначен { } в программе Java?",
+            "Answers": [
+                "указывает начальную и конечную точку для программ, которые вы пишете.",
+                "знак комментария",
+                "Остаток от деления",
+                "суммирование",
+                "умножение"
+            ]
+        },
+        {
+            "Id": 145,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass UzunluqString{\n    public static void main(String [] arguments){\n        int minimum = 6;\n        String sifre = \"IBAYEV\";\n        int olcemk = sifre.length();\n        System.out.println(olcemk == minimum);\n    }\n}",
+            "Answers": [
+                "True",
+                "minimum",
+                "sifre",
+                "olcemek",
+                "İBAYEB"
+            ]
+        },
+        {
+            "Id": 146,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass Reqemdeyishenler {\n    public static void main(String [] arguments){\n        int tam_eded = 10;\n        final int SABITEDED = 10;\n        float kesr_eded = 2.5F;\n        double cavab = tam_eded + SABITEDED + kesr_eded;\n        System.out.println(cavab);\n    }\n}",
+            "Answers": [
+                "22.5",
+                "12.5",
+                "23.6",
+                "52.6",
+                "41.6"
+            ]
+        },
+        {
+            "Id": 147,
+            "Title": "Какой результат получится после выполнения этого кода?\npublic static void main(String [] arguments){\n    int z = 5, a;\n    for(a = 0; z * a <= 50; a += 1) {\n        System.out.println(z + \"*\" + a + \"=\" + (z * a));\n    }\n}",
+            "Answers": [
+                "Числа умноженные на 5 по одному от 0 до 10",
+                "Числа умноженные на 5 по одному от 0 до 20",
+                "Числа умноженные на 5 по одному от 0 до 50",
+                "Числа умноженные на 5 по одному от 0 до 25",
+                "Числа умноженные на 5 по одному от 0 до 30"
+            ]
+        },
+        {
+            "Id": 148,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass Whileloop {\n    public static void main(String[] arguments) {\n        int hava = -1;\n        while (hava < 0) { System.out.println(\"Sobani yandir qis geldi\"); break; }\n    }\n}",
+            "Answers": [
+                "Sobani yandir qiş gəldi",
+                "Sobani yandir",
+                "Qiş gəldi",
+                "Hava",
+                "Soba"
+            ]
+        },
+        {
+            "Id": 149,
+            "Title": "Java proqramında nəticə nə çıxacaq ?\nint ilin_gunleri = 365;\nayin_gunleri :\nwhile (ilin_gunleri <= 365) {\n    for (int i = 1; i <= 365; i++) { System.out.print(i + \" \" ); }\n    if (i > 30) { break ayin_gunleri; }\n}",
+            "Answers": [
+                "Числа в интервале от 1 до 31",
+                "31",
+                "1",
+                "12",
+                "13"
+            ]
+        }
+        ,
+        {
+            "Id": 150,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass Methodazan {\n    public static void main(String[] arguments) {\n        int a = 5;\n        int b = 6;\n        System.out.println(method(a, b)+5);\n    }\n\n    public static int method(int a, int b) {\n        int c = (a + b);\n        return c;\n    }\n}",
+            "Answers": [
+                "16",
+                "20",
+                "30",
+                "40",
+                "50"
+            ]
+        },
+        {
+            "Id": 151,
+            "Title": "Какой результат получится после выполнения этого кода?\nclass Methodazan {\n    public static void main(String[] arguments) {\n        method();\n    }\n\n    public static void method() {\n        int a = 5;\n        int b = 6;\n        int c = (a + b);\n        System.out.println(c);\n    }\n}",
+            "Answers": [
+                "11",
+                "12",
+                "13",
+                "14",
+                "15"
+            ]
+        },
+        {
+            "Id": 152,
+            "Title": "Для чего нужен Run?",
+            "Answers": [
+                "запуск программы",
+                "закрытие программы",
+                "выдача программы в память",
+                "редактирование программы",
+                "присвоить программе память с новым именем."
+            ]
+        },
+        {
+            "Id": 153,
+            "Title": "Какой из приведенных ниже отражает остаток от деления в языке Java?",
+            "Answers": [
+                "%",
+                "–",
+                "+",
+                "/",
+                ";"
+            ]
+        },
+        {
+            "Id": 154,
+            "Title": "Как отобразить в программе на java значения A и B, если они равны?",
+            "Answers": [
+                "A==B",
+                "A/b",
+                "A+B",
+                "A-B",
+                "A*B"
+            ]
+        },
+        {
+            "Id": 155,
+            "Title": "Как отобразить в программе на java значения A и B, если они не равны?",
+            "Answers": [
+                "A!=B",
+                "A+B",
+                "A=B",
+                "A-B",
+                "A==B"
+            ]
+        },
+        {
+            "Id": 156,
+            "Title": "Как отобразить в программе на java значения A и B, если A меньше B?",
+            "Answers": [
+                "A < B",
+                "A-B",
+                "A",
+                "B",
+                "AB"
+            ]
+        },
+        {
+            "Id": 157,
+            "Title": "Как отобразить в программе на java значения A и B, если A больше B?",
+            "Answers": [
+                "A>B",
+                "A=B",
+                "A*B",
+                "AB",
+                "A%B"
+            ]
+        },
+        {
+            "Id": 158,
+            "Title": "Сколько кавычек нужно для представления переменной Char в программе Java??",
+            "Answers": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ]
+        },
+        {
+            "Id": 159,
+            "Title": "Ctrl+X в редакторе языка Java-это сочетание клавиш какой команды?",
+            "Answers": [
+                "Cut",
+                "Copy",
+                "Save",
+                "Open",
+                "Save as"
+            ]
+        },
+        {
+            "Id": 160,
+            "Title": "Ctrl+V в редакторе языка Java-это сочетание клавиш какой команды?",
+            "Answers": [
+                "Paste",
+                "Cut",
+                "Copy",
+                "Save",
+                "Bold"
+            ]
+        },
+        {
+            "Id": 161,
+            "Title": "Что такое Void в программе Java?",
+            "Answers": [
+                "не возвращает ничего после выполнения команд  методов",
+                "Сложение",
+                "Вычитание",
+                "Умножение",
+                "Деление"
+            ]
+        },
+        {
+            "Id": 162,
+            "Title": "Что такое команда length() в следующем коде  String a; a=\"Salam\"; System.out.println(a.length())?",
+            "Answers": [
+                "для определения длины строки в программе.",
+                "для удаления строки в программе",
+                "для добавления строк в программу",
+                "для выбора строк в программе.",
+                "для раскраски строки в программе."
+            ]
+        },
+        {
+            "Id": 163,
+            "Title": "Какой из приведенных ниже способов используется для присвоения целых чисел переменным в программе java?",
+            "Answers": [
+                "int long",
+                "if for",
+                "char if",
+                "else if",
+                "for long"
+            ]
+        },
+        {
+            "Id": 164,
+            "Title": "Типы переменных int и  long - для чего они предназначены?",
+            "Answers": [
+                "Для присвоения целых чисел переменным",
+                "для присвоения отрицательных чисел переменным",
+                "используется для присвоения положительных чисел переменным",
+                "используется для определения чисел переменных, разделенных на 2",
+                "используется для определения чисел переменных, разделенных на 5"
+            ]
+        },
+        {
+            "Id": 165,
+            "Title": "Типы переменных double и float - для чего они предназначены?",
+            "Answers": [
+                "Для присвоения вещественных чисел переменным",
+                "Для присвоения логических чисел переменным",
+                "Для присвоения текстов",
+                "используется для присвоения отрицательных чисел переменным.",
+                "используется для присвоения положительных чисел переменным."
+            ]
+        },
+        {
+            "Id": 166,
+            "Title": "Какой из приведенных ниже способов используется для присвоения действительных чисел переменной в языке java?",
+            "Answers": [
+                "Double float",
+                "Char int",
+                "For int",
+                "If else",
+                "If for"
+            ]
+        },
+        {
+            "Id": 167,
+            "Title": "boalean-переменная-для чего она предназначена в программе java?",
+            "Answers": [
+                "Объявление переменных логического типа",
+                "Объявление символов",
+                "Используется для присвоения положительных чисел переменным.",
+                "Для изучения действительных чисел",
+                "Переменная используется для обозначения целых чисел"
+            ]
+        },
+        {
+            "Id": 168,
+            "Title": "Какой из приведенных ниже типов используется для присвоения переменных логического типа в программе java?",
+            "Answers": [
+                "Boaleam",
+                "If",
+                "For",
+                "Int",
+                "Else"
+            ]
+        },
+        {
+            "Id": 169,
+            "Title": "Какой из приведенных ниже типов переменных используется для присвоения символов в языке  Java?",
+            "Answers": [
+                "Byte,char",
+                "if ,int",
+                "Int, for",
+                "else",
+                "long"
+            ]
+        },
+        {
+            "Id": 170,
+            "Title": "Byte и char - переменные-для чего они предназначены в Java-программе?",
+            "Answers": [
+                "Объявление символов",
+                "Объявление переменных логического типа",
+                "Используется для присвоения положительных чисел переменным.",
+                "Для изучения действительных чисел",
+                "Переменная используется для обозначения целых чисел"
+            ]
+        },
+        {
+            "Id": 171,
+            "Title": "/*  */ - какое у н их предназначение ?",
+            "Answers": [
+                "Комментарии",
+                "Сложение",
+                "Вычитание",
+                "Умножение",
+                "Деление"
+            ]
+        },
+        {
+            "Id": 172,
+            "Title": "Какой из приведенных ниже символов является символом комментария в программе java?",
+            "Answers": [
+                "/*  */",
+                "+",
+                "*",
+                "=",
+                "=="
+            ]
+        },
+        {
+            "Id": 173,
+            "Title": "Какой из приведенных ниже переводит курсор на новую строку в языке java?",
+            "Answers": [
+                "Println",
+                "If",
+                "for",
+                "if",
+                "else"
+            ]
+        },
+        {
+            "Id": 174,
+            "Title": "-    это знак какой команды??",
+            "Answers": [
+                "Run",
+                "Save",
+                "Save as",
+                "Int",
+                "If"
+            ]
+        },
+        {
+            "Id": 175,
+            "Title": "Какое из приведенных ниже исползуется для выполнения операции суммирования?",
+            "Answers": [
+                "+",
+                "/",
+                "\"",
+                "%",
+                "?"
+            ]
+        },
+        {
+            "Id": 176,
+            "Title": "Какое из приведенных ниже исползуется для выполнения операции умножения?",
+            "Answers": [
+                "*",
+                ":",
+                "()",
+                "!",
+                "~"
+            ]
+        },
+        {
+            "Id": 177,
+            "Title": "Какое из приведенных ниже исползуется для выполнения операции деления?",
+            "Answers": [
+                "/",
+                "*",
+                "//",
+                "///",
+                "–"
+            ]
+        },
+        {
+            "Id": 178,
+            "Title": "Какое из приведенных ниже исползуется для выполнения операции вычитания?",
+            "Answers": [
+                "–",
+                "//",
+                "%",
+                "№",
+                "!"
+            ]
+        },
+        {
+            "Id": 179,
+            "Title": "К какому типу переменной соответствует идентификатор книги?\nkitab= 'k';",
+            "Answers": [
+                "char",
+                "int ",
+                "float",
+                "byte",
+                "double"
+            ]
+        },
+        {
+            "Id": 180,
+            "Title": "К какому типу переменной соответствует идентификатор qalam?\nqаlаm= \"2\";",
+            "Answers": [
+                "String",
+                "Char",
+                "Byte",
+                "If",
+                "For"
+            ]
+        },
+        {
+            "Id": 181,
+            "Title": "К какому типу переменной соответствует идентификатор kitab?\nkitab= \u201c k \u201d;",
+            "Answers": [
+                "String",
+                "int ",
+                "float",
+                "byte",
+                "double"
+            ]
+        },
+        {
+            "Id": 182,
+            "Title": "можно ли объявить идентификатор kitab с типом переменной byte?\nkitab = 128;",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Всегда можно",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 183,
+            "Title": "можно ли объявить идентификатор kitab с типом переменной int?\nkitab= \u201c128\u201d;",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Всегда можно",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 184,
+            "Title": "можно ли объявить идентификатор armud с типом переменной String?\narmud = 128;",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Всегда можно",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 185,
+            "Title": "можно ли объявить идентификатор d с типом переменной String?\nString   d= 'd';",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Всегда можно",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 186,
+            "Title": "можно ли объявить идентификатор d с типом переменной char?\n char   e= 'g';",
+            "Answers": [
+                "Да",
+                "Нет",
+                "По рассмотрению",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 187,
+            "Title": "можно ли объявить идентификатор k с типом переменной char?\nchar   k= 'u';",
+            "Answers": [
+                "Да",
+                "Нет",
+                "По рассмотрению",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 188,
+            "Title": "можно ли объявить идентификатор d с типом переменной char?\nchar   d= 'u';",
+            "Answers": [
+                "Да",
+                "Нет",
+                "По рассмотрению",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 189,
+            "Title": "можно ли объявить идентификатор m с типом переменной char?\nchar   m= \"u\";",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Всегда можно",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 190,
+            "Title": "можно ли объявить идентификатор asd с типом переменной char?\nchar   asd= \"u\";",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Всегда можно",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 191,
+            "Title": "правильно ли объявлен идентификатор d?\nint  d= 6;",
+            "Answers": [
+                "Да",
+                "Нет",
+                "По рассмотрению",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 192,
+            "Title": "правильно ли объявлен идентификатор g?\nint  g= 6;",
+            "Answers": [
+                "Да",
+                "Нет",
+                "По рассмотрению",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 193,
+            "Title": "правильно ли объявлен идентификатор  m?\nboolean  m= \u201ctrue\u201d;",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Всегда можно",
+                "Нет правильных ответов",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 194,
+            "Title": "Для каких значений l после выполнения оператора  if (l==5) System.out.print(\"-5-\") будет получен результат «-5-» на экране?",
+            "Answers": [
+                "5",
+                "когда l больше 5",
+                "когда  l меньше 5",
+                "для всех значений l",
+                "когда l=-5"
+            ]
+        },
+        {
+            "Id": 195,
+            "Title": "Для каких значений alma после выполнения оператора  if (alma<=68) System.out.print(\"Alma\") будет получен результат «Alma» на экране?",
+            "Answers": [
+                "когда l больше или равно 68",
+                "68",
+                "когда  l меньше 5",
+                "для всех значений l",
+                "когда l=-5"
+            ]
+        },
+        {
+            "Id": 196,
+            "Title": "Для каких значений alma и armud после выполнения оператора  if (alma<=68 & armud>=68) System.out.print(\"Alma\") будет получен результат «Alma» на экране?",
+            "Answers": [
+                "когда alma меньше равно 68 и armud больше и равно 68",
+                "alma=68 и armud=68",
+                "alma>68 и armud=68",
+                "alma=68 и armud<68",
+                "когда armud=68"
+            ]
+        },
+        {
+            "Id": 197,
+            "Title": "Для каких значений lk после выполнения оператора  if (lk==5) System.out.print(lk) будет получен результат «125» на экране?",
+            "Answers": [
+                "5",
+                "когда l больше 125",
+                "когда  lменьше 125",
+                "для всех значений l",
+                "когда l=-5"
+            ]
+        },
+        {
+            "Id": 198,
+            "Title": "Будет ли отображен результат выполнения   оператора if  если lk=300 if (lk<=125) System.out.print(lk)?",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Во всех значениях",
+                "Оператор неправильный",
+                "когда lk достигнет значения 300"
+            ]
+        },
+        {
+            "Id": 199,
+            "Title": "Сколько байтов в памяти выделяется для переменной short в Java?",
+            "Answers": [
+                "2 bayt",
+                "3 bayt",
+                "4 bayt",
+                "5 bayt ",
+                "7 bayt"
+            ]
+        },
+        {
+            "Id": 200,
+            "Title": "Для какого из следующих типов переменных, отводится   2 байта места в памяти в языке Java ?",
+            "Answers": [
+                "short ",
+                "long",
+                "double",
+                "float",
+                "byte"
+            ]
+        },
+        {
+            "Id": 201,
+            "Title": "Сколько байтов в памяти выделяется для переменной int в Java?",
+            "Answers": [
+                "4 bayt",
+                "5 bayt ",
+                "6 bayt",
+                "8bayt",
+                "7 bayt "
+            ]
+        },
+        {
+            "Id": 202,
+            "Title": "Для какого из следующих типов переменных, отводится   4 байта места в памяти в языке Java ?",
+            "Answers": [
+                "int ",
+                "short",
+                "double",
+                "byte",
+                "long"
+            ]
+        },
+        {
+            "Id": 203,
+            "Title": "Для какого из следующих типов переменных, отводится   4 байта места в памяти в языке Java ?",
+            "Answers": [
+                "float ",
+                "short",
+                "double",
+                "byte",
+                "long"
+            ]
+        },
+        {
+            "Id": 204,
+            "Title": "Для чего нужен диалог show confim в программе Java?",
+            "Answers": [
+                "для подтверждения",
+                "для ввода",
+                "отображение простой информации",
+                "Все варианты верны",
+                "Для предупреждения"
+            ]
+        },
+        {
+            "Id": 205,
+            "Title": "Для чего нужен диалог show input dialog в программе Java?",
+            "Answers": [
+                "для ввода",
+                "для подтверждения",
+                "отображение простой информации",
+                "Все варианты верны",
+                "Для предупреждения"
+            ]
+        },
+        {
+            "Id": 206,
+            "Title": "Для чего нужен диалог show message dialog в программе Java??",
+            "Answers": [
+                "отображение простой информации",
+                "для ввода",
+                "для подтверждения",
+                "Для предупреждения",
+                "Все варианты верны"
+            ]
+        },
+        {
+            "Id": 207,
+            "Title": "Какая из приведенных ниже используется для информационного диалога   в  Java?",
+            "Answers": [
+                "show message dialog",
+                "show confam dialog",
+                "show input dialog",
+                "Warning",
+                "Все ответы верны"
+            ]
+        },
+        {
+            "Id": 208,
+            "Title": "Какая из приведенных ниже используется для диалогового ввода  в  Java?",
+            "Answers": [
+                "show input dialog",
+                "Все ответы верны",
+                "Warning",
+                "show message dialog",
+                "show confam dialog"
+            ]
+        },
+        {
+            "Id": 209,
+            "Title": "Какая из приведенных ниже используется для диалогового  подтверждения в  Java?",
+            "Answers": [
+                "show confim dialog",
+                "Все ответы верны",
+                "Warning",
+                "show message dialog",
+                "show input"
+            ]
+        },
+        {
+            "Id": 210,
+            "Title": "Что отражает &  в Java?",
+            "Answers": [
+                "И",
+                "ИЛИ",
+                "И-ИЛИ",
+                "ИЛИ-И ",
+                "Не используется в языке Java"
+            ]
+        },
+        {
+            "Id": 211,
+            "Title": "Что отражает & &  в Java?",
+            "Answers": [
+                "для проверки того, являются ли оба его логических операнда true ",
+                "для проверки того, являются ли оба его логических операнда false ",
+                "для проверки того, являются ли один из логических операндов true ",
+                "для проверки того, являются ли один из логических операндов false",
+                "Не используется в языке Java"
+            ]
+        },
+        {
+            "Id": 212,
+            "Title": "В этом выражение 'Class Name'  Name -это?",
+            "Answers": [
+                "Имя класса",
+                "Класс",
+                "Простое название",
+                "Все ответы верны ",
+                "Тип переменной"
+            ]
+        },
+        {
+            "Id": 213,
+            "Title": "Что отражает ||  в Java??",
+            "Answers": [
+                "Сокращённое OR",
+                "Логическое AND (И)",
+                "Сокращённое AND",
+                "Все ответы верны ",
+                "AND с присваиванием"
+            ]
+        },
+        {
+            "Id": 214,
+            "Title": "Что отражает | в Java??",
+            "Answers": [
+                "Логическое OR (ИЛИ)",
+                "Логическое AND (И)",
+                "Сокращённое AND",
+                "Все ответы верны ",
+                "AND с присваиванием"
+            ]
+        },
+        {
+            "Id": 215,
+            "Title": "Что представляет собой '++' рядом с переменной в программе Java?",
+            "Answers": [
+                "Increment",
+                "Decrement",
+                "Все ответы верны ",
+                "Деление",
+                "Уменьшение "
+            ]
+        },
+        {
+            "Id": 216,
+            "Title": "Что представляет собой '--' рядом с переменной в программе Java?",
+            "Answers": [
+                "Decrement",
+                "Increment",
+                "Все ответы верны ",
+                "Деление",
+                "Уменьшение "
+            ]
+        },
+        {
+            "Id": 217,
+            "Title": "Что из приведенного ниже имеет смысл, если в языке Java.",
+            "Answers": [
+                "if",
+                "+",
+                "Все ответы верны ",
+                "do",
+                "//"
+            ]
+        },
+        {
+            "Id": 218,
+            "Title": "i+=j подходит к какому  перечисленных ниже?",
+            "Answers": [
+                "i = i + j",
+                "i = i // j",
+                "i = i & j",
+                "i = i % j",
+                "i = i * j"
+            ]
+        },
+        {
+            "Id": 219,
+            "Title": "String используется для .",
+            "Answers": [
+                "для объявления переменных типа строка",
+                "для объявления переменных типа символ",
+                "для объявления переменных типа класс",
+                "для объявления переменных типа объект",
+                "Все ответы верны"
+            ]
+        },
+        {
+            "Id": 220,
+            "Title": "Язык Java чувствителен к верхному и  нижнему регистру.",
+            "Answers": [
+                "Верно",
+                "Не верно",
+                "Не имеет значения",
+                "Может быть",
+                "Все ответы верны"
+            ]
+        },
+        {
+            "Id": 221,
+            "Title": "Как можно узнать, содержит ли строка последовательность символов.",
+            "Answers": [
+                "Используя Contain",
+                "Используя If",
+                "Используя For",
+                "Используя Int",
+                "Используя Else"
+            ]
+        },
+        {
+            "Id": 222,
+            "Title": "Какой из приведенных ниже типов может хранить символ в своей памяти. Одна буква или одна цифра?",
+            "Answers": [
+                "char",
+                "float",
+                "double",
+                "long",
+                "bit"
+            ]
+        },
+        {
+            "Id": 223,
+            "Title": "Какой тип исполъьзуется для представления вещественных чисел?",
+            "Answers": [
+                "double , float",
+                "char",
+                "String",
+                "int",
+                "boolean"
+            ]
+        },
+        {
+            "Id": 224,
+            "Title": "Какой из приведенных ниже типов используется для отображения конца строк в Java?",
+            "Answers": [
+                ";",
+                "/",
+                "*",
+                "–",
+                "=="
+            ]
+        },
+        {
+            "Id": 225,
+            "Title": "Что  показывает конец одной команды в программе Java?",
+            "Answers": [
+                ";",
+                "*",
+                "//",
+                "?",
+                "№"
+            ]
+        },
+        {
+            "Id": 226,
+            "Title": "В программе Java какой из этих типов  может запоминать целые числа, в интервале [– 127, 128]?.",
+            "Answers": [
+                "Byte ",
+                "If",
+                "Else",
+                "Short",
+                "Long"
+            ]
+        },
+        {
+            "Id": 227,
+            "Title": "В программе Java какой из этих типов  может запоминать целые числа, в интервале [–32768, 32767]?",
+            "Answers": [
+                "Short",
+                "Int",
+                "Byte ",
+                "If",
+                "Else"
+            ]
+        },
+        {
+            "Id": 228,
+            "Title": "Какой тип использеутся для представления объектов?.",
+            "Answers": [
+                "Class",
+                "Int",
+                "Byte ",
+                "If",
+                "Else"
+            ]
+        },
+        {
+            "Id": 229,
+            "Title": "Что выведет этот код?\n\npublic static void main(String[] args) {\n        // TODO code application logic here\\\n  System.out.print(\"Salam ilham\");\n        \n  System.out.print(\" necesiz\");\n  System.out.print(\" nə iş gorursen \" );         \n    } \n}\nКакой ответ появится в результате выполнения этого кода на экране?",
+            "Answers": [
+                "Salam ilham necesiz nə iş gorursen",
+                "Salam",
+                "Ilham",
+                "Necesiz",
+                "nə iş gorursen"
+            ]
+        },
+        {
+            "Id": 230,
+            "Title": "К какой группе типов относится  int в Java?",
+            "Answers": [
+                "Pirmitive",
+                "Refrence",
+                "Array",
+                "Char",
+                "Object"
+            ]
+        },
+        {
+            "Id": 231,
+            "Title": "К какой группе типов относятся  boolean, float в Java?",
+            "Answers": [
+                "Pirmitive",
+                "Refrence",
+                "Array",
+                "Char",
+                "Object"
+            ]
+        },
+        {
+            "Id": 232,
+            "Title": "К какой группе типов относятся  byte, double  в Java?",
+            "Answers": [
+                "Pirmitive",
+                "Refrence",
+                "Array",
+                "Char",
+                "Object"
+            ]
+        },
+        {
+            "Id": 233,
+            "Title": "К какой группе типов относятся  class, array в Java?",
+            "Answers": [
+                "Refrence",
+                "Pirmitive",
+                "Array",
+                "Char",
+                "Object"
+            ]
+        },
+        {
+            "Id": 234,
+            "Title": "i-=j подходит к какому  перечисленных ниже?",
+            "Answers": [
+                "i = i - j",
+                "i = i // j",
+                "i = i & j",
+                "i = i % j",
+                "i = i + j"
+            ]
+        },
+        {
+            "Id": 235,
+            "Title": "Какой метод запускает программу на Java?",
+            "Answers": [
+                "метод main ",
+                "любой, его можно задавать в настройках проекта ",
+                "запуск программы происходит через компиляцию проекта, основного метода нет",
+                "метод главный",
+                "Все ответы не верны"
+            ]
+        },
+        {
+            "Id": 236,
+            "Title": "Что выведет этот код? \nint a = 9;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); break;\n    case 9: System.out.print (\"9\"); break;\n    case 10: System.out.print (\"10\"); break;\n    default: System.out.print (\"!\");\n}\n",
+            "Answers": [
+                "9",
+                "10",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 237,
+            "Title": "Что выведется на экран? \nfor (int i = 10; i < 20; i += 2) {\n    if (i > 15)\n        break;\n    if (i % 4 == 0)\n        continue;\n    System.out.println (i);\n}\n",
+            "Answers": [
+                "10 14",
+                "10",
+                "14",
+                "20",
+                "15"
+            ]
+        },
+        {
+            "Id": 238,
+            "Title": "Для чего можно использовать Java?",
+            "Answers": [
+                "для всего перечисленного ",
+                "для разработки сайтов ",
+                "для создания программ для ПК ",
+                "для создания игр ",
+                "для разработки приложений "
+            ]
+        },
+        {
+            "Id": 239,
+            "Title": "Как правильно объявить массив?",
+            "Answers": [
+                "int[] a = new int[] {1, 2, 3, 4, 5}; ",
+                "int a = new int[] {1, 2, 3, 4, 5}; ",
+                "int[] a = new int {1, 2, 3, 4, 5}; ",
+                "int a[] = 1, 2, 3, 4, 5; ",
+                "int[] a = int[] {1, 2, 3, 4, 5}; "
+            ]
+        },
+        {
+            "Id": 240,
+            "Title": "Что такое аргумент метода?",
+            "Answers": [
+                "переменная, в которую записывается результат работы метода ",
+                "значение или переменная, передаваемая в метод для участия в его работе ",
+                "значение, указываемое после ключевого слова \"return\" ",
+                "любая переменная, участвующая в работе метода ",
+                "переменная, объявленная в теле метода "
+            ]
+        },
+        {
+            "Id": 241,
+            "Title": "Тернарный оператор это:",
+            "Answers": [
+                "? : ",
+                "&& ",
+                "! ",
+                "^ ",
+                "||"
+            ]
+        },
+        {
+            "Id": 242,
+            "Title": "Что такое ООП?",
+            "Answers": [
+                "объектно-ориентированное программирование — методология программирования, основанная на представлении программы в виде совокупности объектов, каждый из которых является экземпляром определенного класса, а классы образуют иерархию наследования ",
+                "объектно-ориентированное программирование — так называют любой тип программирования, в котором используются понятия высокого уровня и, в отличие от Assembler, в котором не работают напрямую с ячейками памяти ПК ",
+                "объектно-ориентированное программирование — просто красивое понятие. Если вдуматься, оно не несет дополнительной смысловой нагрузки, просто программисты любят аббревиатуры, так области их знаний выглядят сложнее ",
+                "очень одинокий программист ",
+                "Сложная программа"
+            ]
+        },
+        {
+            "Id": 243,
+            "Title": "Как объявить класс в коде?",
+            "Answers": [
+                "class MyClass {} ",
+                "new class MyClass {} ",
+                "select * from class MyClass {} ",
+                "MyClass extends class {} ",
+                "new MyClass ()"
+            ]
+        },
+        {
+            "Id": 244,
+            "Title": "Для чего используется оператор NEW?",
+            "Answers": [
+                "для создания экземпляра класса ",
+                "для создания новой переменной ",
+                "для объявления нового класса ",
+                "это антагонист оператора OLD ",
+                "Все ответы верны"
+            ]
+        },
+        {
+            "Id": 245,
+            "Title": "Как называется оператор увеличения, который увеличивает значение переменной на единицу?",
+            "Answers": [
+                "инкремент ",
+                "декремент ",
+                "нет такого оператора ",
+                "ассосиация",
+                "пересечение"
+            ]
+        },
+        {
+            "Id": 246,
+            "Title": "Чем является ключевое слово «public»?",
+            "Answers": [
+                "модификатором доступа ",
+                "литералом ",
+                "оператором ",
+                "типом данных ",
+                "нет такого слова"
+            ]
+        },
+        {
+            "Id": 247,
+            "Title": "Чем является ключевое слово «private»?",
+            "Answers": [
+                "модификатором доступа ",
+                "литералом ",
+                "оператором ",
+                "типом данных ",
+                "нет такого слова"
+            ]
+        },
+        {
+            "Id": 248,
+            "Title": "Как правильно объявить массив?",
+            "Answers": [
+                "int[] a = new int[] {6,8,7,8,9}; ",
+                "int a = new int[] {6,8,7,8,9}; ",
+                "int[] a = new int {6,8,7,8,9}; ",
+                "int a[] = 6,8,7,8,9; ",
+                "int[] a = int[] {6,8,7,8,9}; "
+            ]
+        },
+        {
+            "Id": 249,
+            "Title": "Что выведет этот код? \nint a = 10;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); break;\n    case 9: System.out.print (\"9\"); break;\n    case 10: System.out.print (\"10\"); break;\n    default: System.out.print (\"!\");\n}\n",
+            "Answers": [
+                "10",
+                "5",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 250,
+            "Title": "Что выведет этот код? \nint a = 5;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); break;\n    case 9: System.out.print (\"9\"); break;\n    case 10: System.out.print (\"10\"); break;\n    default: System.out.print (\"!\");\n}\n",
+            "Answers": [
+                "5",
+                "10",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 251,
+            "Title": "Что выведет этот код? \nint a = 0;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); break;\n    case 9: System.out.print (\"9\"); break;\n    case 10: System.out.print (\"10\"); break;\n    default: System.out.print (\"!\");\n}",
+            "Answers": [
+                "0",
+                "10",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 252,
+            "Title": "Что выведет этот код? \nint a = 8;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); break;\n    case 9: System.out.print (\"9\"); break;\n    case 10: System.out.print (\"10\"); break;\n    default: System.out.print (\"!\");\n}",
+            "Answers": [
+                "!",
+                "10",
+                "910",
+                "95",
+                "5"
+            ]
+        },
+        {
+            "Id": 253,
+            "Title": "Что выведет этот код? \nint a = 5;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); ;\n    case 9: System.out.print (\"9\");\n    case 10: System.out.print (\"10\"); break;\n    default: System.out.print (\"!\");\n}",
+            "Answers": [
+                "59",
+                "10",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 254,
+            "Title": "Что выведет этот код? \nint a = 5;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); ;\n    case 9: System.out.print (\"9\");\n    case 10: System.out.print (\"10\");\n    default: System.out.print (\"!\");\n}",
+            "Answers": [
+                "5 9 10  !",
+                "10",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 255,
+            "Title": "Что выведет этот код? \nint a = 10;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\"); ;\n    case 9: System.out.print (\"9\");\n    case 10: System.out.print (\"10\");\n    default: System.out.print (\"!\");\n}",
+            "Answers": [
+                "10  !",
+                "10",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 256,
+            "Title": "Что выведет этот код? \nint a = 9;\nswitch (a) {\n    case 0: System.out.print (\"0\");break;\n    case 5: System.out.print (\"5\") break ;\n    case 9: System.out.print (\"9\");\n    case 10: System.out.print (\"10\");\n    default: System.out.print (\"!\");\n}",
+            "Answers": [
+                "9 10  !",
+                "10",
+                "910",
+                "95",
+                "!"
+            ]
+        },
+        {
+            "Id": 257,
+            "Title": "Что выведется на экран? \nfor (int i = 10; i < 10; i += 2) {\n    if (i > 15)\n        break;\n    if (i % 4 == 0)\n        continue;\n    System.out.println (i);\n}",
+            "Answers": [
+                "Ничего",
+                "10",
+                "14",
+                "20",
+                "15"
+            ]
+        },
+        {
+            "Id": 258,
+            "Title": "Что выведется на экран? \nfor (int i = 10; i < 10; i += 2) {\n    if (i > 15)\n        break;\n    if (i % 4 == 0)\n        continue;\n    System.out.println (i);\n}",
+            "Answers": [
+                "10 14",
+                "10",
+                "14",
+                "20",
+                "15"
+            ]
+        },
+        {
+            "Id": 259,
+            "Title": "Что выведется на экран? \nfor (int i = 10; i < 10; i += 2) {\n    if (i > 15)\n        break;\n    if (i % 4 == 0)\n        continue;\n    System.out.println (i);\n}",
+            "Answers": [
+                "10 11 13 14 ",
+                "10 11",
+                "14 ",
+                "10",
+                "11"
+            ]
+        },
+        {
+            "Id": 260,
+            "Title": "For  оператор это:",
+            "Answers": [
+                "Оператор цикла",
+                "Оператор  ",
+                "Тернарный оператор",
+                "Условный оператор",
+                "Оператор для вывода на экран информации"
+            ]
+        },
+        {
+            "Id": 261,
+            "Title": "while   оператор это:",
+            "Answers": [
+                "Оператор цикла",
+                "Оператор  ",
+                "Тернарный оператор",
+                "Условный оператор",
+                "Оператор для вывода на экран информации"
+            ]
+        },
+        {
+            "Id": 262,
+            "Title": "do-while   оператор это:",
+            "Answers": [
+                "Оператор цикла",
+                "Оператор  ",
+                "Тернарный оператор",
+                "Условный оператор",
+                "Оператор для вывода на экран информации"
+            ]
+        },
+        {
+            "Id": 263,
+            "Title": "if   оператор это:",
+            "Answers": [
+                "Условный оператор",
+                "Оператор цикла",
+                "Оператор  ",
+                "Тернарный оператор",
+                "Оператор для вывода на экран информации"
+            ]
+        },
+        {
+            "Id": 264,
+            "Title": "if-else   оператор это:",
+            "Answers": [
+                "Условный оператор",
+                "Оператор цикла",
+                "Оператор  ",
+                "Тернарный оператор",
+                "Оператор для вывода на экран информации"
+            ]
+        },
+        {
+            "Id": 265,
+            "Title": "switch   оператор это:",
+            "Answers": [
+                "Условный оператор",
+                "Оператор цикла",
+                "Оператор  ",
+                "Тернарный оператор",
+                "Оператор для вывода на экран информации"
+            ]
+        },
+        {
+            "Id": 266,
+            "Title": "Что произойдет после компиляции кода и запуска программы без аргументов:\n\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(args.length);\n    }\n}\n",
+            "Answers": [
+                "Код скомпилируется, а на консоль будет выведено число '0' ",
+                "Код не скомпилируется ",
+                "Код скомпилируется, но во время выполнения будет выброшено исключение NullPointerException ",
+                "Код скомпилируется, и на экране будет отображены все аргументы",
+                "Код скомпилируется, но ничего не выведет на консоль"
+            ]
+        },
+        {
+            "Id": 267,
+            "Title": "Как можно уничтожить объект в Java?",
+            "Answers": [
+                "этого нельзя сделать вручную",
+                "присвоить null всем ссылкам на объект",
+                "вызвать Runtime.getRuntime().gc()",
+                "вызвать метод finalize() у объекта",
+                "вызвать деструктор у объекта"
+            ]
+        },
+        {
+            "Id": 268,
+            "Title": "Каким будет результат компиляции и выполнения данного кода:\n\npublic class Switch {\n    public static void main(String[] args) {\n        int i = 3;\n        switch(i) {\n            default:\n                System.out.println(\"default\");\n            case 1:\n                System.out.println(\"1\");\n            case 2:\n                System.out.println(\"2\");\n        }\n    }\n}\n",
+            "Answers": [
+                "default 1 2",
+                "1",
+                "2",
+                "3",
+                "1 2"
+            ]
+        },
+        {
+            "Id": 269,
+            "Title": "Что напечатает следующий код:\n\nint i = 0;\nSystem.out.print(++i);\nSystem.out.print(i++);\nSystem.out.print(i);",
+            "Answers": [
+                "1 1 2",
+                "1",
+                "2 1",
+                "1 2 ",
+                "1 2 1"
+            ]
+        },
+        {
+            "Id": 270,
+            "Title": "Скомпилируется ли следующий код, если оба класса будут объявлены в файле Test.java? \n\n//Test.java\npublic class Car{\n    public String myCar = \"Ferrari\" ;\n}\npublic class Test{\n    public static void main(String ... args){\n        Car myCar = new Car();\n        System.out.println(myCar.myCar);\n    }\n}\n",
+            "Answers": [
+                "Код не скомпилируется из-за класса Car. Только один из классов в файле может быть объявлен как public.1",
+                "Код  скомпилируется.",
+                "Код не скомпилируется из-за класса Test. ",
+                "Код скомпилируется и будет получена ошибка.",
+                "Все ответы не верны"
+            ]
+        },
+        {
+            "Id": 271,
+            "Title": "Скомпилируется ли следующий код, если оба класса будут объявлены в файле Test.java? \n\n//Test.java\nclass Car{\n    public String myCar = \"Ferrari\" ;\n}\npublic class Test{\n    public static void main(String ... args){\n        Car myCar = new Car();\n        System.out.println(myCar.myCar);\n    }\n}\n",
+            "Answers": [
+                "Код  скомпилируется.",
+                "Код не скомпилируется из-за класса Car. Только один из классов в файле может быть объявлен как public.1",
+                "Код  скомпилируется.",
+                "Код не скомпилируется из-за класса Test. ",
+                "Код скомпилируется и будет получена ошибка."
+            ]
+        },
+        {
+            "Id": 272,
+            "Title": "Имеется ли в у типа String  метода trim?",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Этот метод относится к другому типу",
+                "Все ответы не верны",
+                "Не trim a trima"
+            ]
+        },
+        {
+            "Id": 273,
+            "Title": "Имеется ли в у типа String  метода length?",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Этот метод относится к другому типу",
+                "Все ответы не верны",
+                "Не length a len"
+            ]
+        },
+        {
+            "Id": 274,
+            "Title": "Имеется ли в у типа String  метода replace?",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Этот метод относится к другому типу",
+                "Все ответы не верны",
+                "Не replace  a rep"
+            ]
+        },
+        {
+            "Id": 275,
+            "Title": "Имеется ли в у типа String  метода ValueOf?",
+            "Answers": [
+                "Да",
+                "Нет",
+                "Этот метод относится к другому типу",
+                "Все ответы не верны",
+                "Не ValueOf a ValueOf"
+            ]
+        },
+        {
+            "Id": 276,
+            "Title": "Необходимо ли создавать экземпляр класса Math чтобы вызывать его методы?",
+            "Answers": [
+                "Нет",
+                "Да",
+                "Нет такого класса",
+                "Все ответы не верны",
+                "Для этого класса всегда создаются объекты."
+            ]
+        },
+        {
+            "Id": 277,
+            "Title": "Что делает метод Math.sqrt(...)?",
+            "Answers": [
+                "Извлекает квадратный корень из числа ",
+                "Возводит число в степень",
+                "Возвращает абсолютное значение",
+                "Все ответы не верны",
+                "Возводит число в квадрат"
+            ]
+        },
+        {
+            "Id": 278,
+            "Title": "Какие математические константы определены в классе Math?",
+            "Answers": [
+                "E и PI",
+                "Золотое сечение и PI",
+                "Константы Пифагора и Феодора",
+                "Exp",
+                "Log"
+            ]
+        },
+        {
+            "Id": 279,
+            "Title": "Какое значение окажется в переменной x в результате выполнения этого кода?\ndouble x = Math.pow(2.0, 3.0);",
+            "Answers": [
+                "8",
+                "3",
+                "9",
+                "6",
+                "1"
+            ]
+        },
+        {
+            "Id": 280,
+            "Title": "Какое значение окажется в переменной x в результате выполнения этого кода?\ndouble y = Math.pow(5.0, 2.0);",
+            "Answers": [
+                "25",
+                "3",
+                "10",
+                "2.5",
+                "7"
+            ]
+        },
+        {
+            "Id": 281,
+            "Title": "Сколько типов данных с плавающей точкой существует в языке Java?",
+            "Answers": [
+                "2 ",
+                "1 ",
+                "3",
+                "4",
+                "5"
+            ]
+        },
+        {
+            "Id": 282,
+            "Title": "На каком месте должен находится тип данных при объявлении переменно в языке Java?",
+            "Answers": [
+                "Перед названием переменной ",
+                "Перед модификатором доступа ",
+                "После названия переменной  ",
+                "В любом месте",
+                "В середине "
+            ]
+        },
+        {
+            "Id": 283,
+            "Title": "Можно ли одновременно объявлять и инициализировать переменную в одной строке кода? ",
+            "Answers": [
+                "Да ",
+                "Нет ",
+                "После названия переменной  ",
+                "Перед названием переменной ",
+                "Перед модификатором доступа "
+            ]
+        },
+        {
+            "Id": 284,
+            "Title": "Вызовет ли ошибку следующая строка кода:\nButton button = new Button();?",
+            "Answers": [
+                "Нет ",
+                "Да ",
+                "Если  использется new то да",
+                "Если  использется new то ()",
+                "Если  использется = то да"
+            ]
+        },
+        {
+            "Id": 285,
+            "Title": "Допустимо ли в Java объявление переменных вида:\nint a=8,b;?",
+            "Answers": [
+                "Да",
+                "Нет ",
+                "Если  использется int нет",
+                "Если  использется ; тогда нет",
+                "Если  используется =8 тогда нет"
+            ]
+        },
+        {
+            "Id": 286,
+            "Title": "Должна ли быть точка запятой в конце объявления переменной?",
+            "Answers": [
+                "Да",
+                "Нет ",
+                "Не всегда",
+                "В редких случаях",
+                "Можно ставить и  точку в конце "
+            ]
+        },
+        {
+            "Id": 287,
+            "Title": "Можно ли символ «+» использовать в названии переменной?",
+            "Answers": [
+                "Да",
+                "Нет ",
+                "Можно ставить в конце",
+                "В редких случаях",
+                "Можно ставить в начале "
+            ]
+        },
+        {
+            "Id": 288,
+            "Title": "С какого символа может начинаться имя переменной в языке Java?",
+            "Answers": [
+                "С буквы ",
+                "С цифры ",
+                "С любого символа  ",
+                "С символа !",
+                "Нет ограничений"
+            ]
+        },
+        {
+            "Id": 289,
+            "Title": "Декремент — это ...",
+            "Answers": [
+                "уменьшение значения на 1 ",
+                "увеличение значения на 1 ",
+                "умножение значения на 1 ",
+                "деление значения на 1 ",
+                "увеличение значения на 2"
+            ]
+        },
+        {
+            "Id": 290,
+            "Title": "Инкремент — это ...",
+            "Answers": [
+                "увеличение значения на 1 ",
+                "уменьшение значения на 1 ",
+                "умножение значения на 1 ",
+                "деление значения на 1 ",
+                "увеличение значения на 2"
+            ]
+        },
+        {
+            "Id": 291,
+            "Title": "Станут ли одинаковыми значения x и y в результате выполнения этого кода? \nint x= 5; \nint y = x++;",
+            "Answers": [
+                "Нет",
+                "Да ",
+                "Эти операции не правильные",
+                "x не зависит от y",
+                "Все ответы верны"
+            ]
+        },
+        {
+            "Id": 292,
+            "Title": "Что будет выведено в консоли в результате выполнения этого кода? \nint x = 5; \nx = x++ + x++; \nSystem.out.println(x);",
+            "Answers": [
+                "11",
+                "5",
+                "2",
+                "4",
+                "4 "
+            ]
+        },
+        {
+            "Id": 293,
+            "Title": "Что будет выведено в консоли в результате выполнения этого кода? \nint x = 2; \nx = x++ + x++; \nSystem.out.println(x);",
+            "Answers": [
+                "5",
+                "4",
+                "10",
+                "12",
+                "6"
+            ]
+        },
+        {
+            "Id": 294,
+            "Title": "Что будет выведено в консоли в результате выполнения этого кода? \nint x = 3; \nx = x++ + x++; \nSystem.out.println(x);",
+            "Answers": [
+                "7",
+                "3",
+                "6",
+                "12",
+                "8"
+            ]
+        },
+        {
+            "Id": 295,
+            "Title": "Какой результат будет получен если применить оператор инкремента к переменой типа char?",
+            "Answers": [
+                "Значением переменной станет следующий по порядку символ Unicode ",
+                "Будет выдано сообщение об ошибке ",
+                "Значение переменной не изменится  ",
+                "Ничего не произойдет с переменным ",
+                "Все ответы верны"
+            ]
+        },
+        {
+            "Id": 296,
+            "Title": "Какие значения окажутся в переменных x и y в результате выполнения этого кода?\nint x = 1;\nint y = ++y;",
+            "Answers": [
+                "2; 2 ",
+                "1;2 ",
+                "2;1 ",
+                "1;1",
+                "1;"
+            ]
+        },
+        {
+            "Id": 297,
+            "Title": "Как выглядит оператор инкремента?",
+            "Answers": [
+                "++ ",
+                "--",
+                "+ ",
+                "+=",
+                "== "
+            ]
+        },
+        {
+            "Id": 298,
+            "Title": "Как выглядит оператор декремента?",
+            "Answers": [
+                "+--",
+                "--",
+                "+ ",
+                "+=",
+                "== "
+            ]
+        },
+        {
+            "Id": 299,
+            "Title": "Что происходит с комментариями при выполнении программы на Java?",
+            "Answers": [
+                "Они игнорируются ",
+                "Они выполняются ",
+                "Они выполняются не всегда ",
+                "Они выводятся на консоль  ",
+                "Они выполняются при удовлетворении условия"
+            ]
+        },
+        {
+            "Id": 300,
+            "Title": "Что должно следовать после ключевого слова «class»?",
+            "Answers": [
+                "Имя класса ",
+                "Модификатор доступа ",
+                "Тип данных ",
+                "Тип класса",
+                "Ничего"
+            ]
+        }
+    ]
+}
