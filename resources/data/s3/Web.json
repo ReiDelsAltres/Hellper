@@ -335,49 +335,49 @@
             "Id": 31,
             "Title": "Какой тег используется для создания таблицы в HTML?",
             "Answers": [
-                "<table>",
-                "<list>",
-                "<tab>",
-                "<td>",
-                "<tr>"
+                "&lt;table&gt;",
+                "&lt;list&gt;",
+                "&lt;tab&gt;",
+                "&lt;td&gt;",
+                "&lt;tr&gt;"
             ]
         },
         {
             "Id": 32,
             "Title": "Какой тег определяет строку в таблице HTML?",
             "Answers": [
-                "<tr>",
-                "<td>",
-                "<th>",
-                "<table>",
-                "<row>"
+                "&lt;tr&gt;",
+                "&lt;td&gt;",
+                "&lt;th&gt;",
+                "&lt;table&gt;",
+                "&lt;row&gt;"
             ]
         },
         {
             "Id": 33,
             "Title": "Какими тегами определяется ячейка таблицы?",
             "Answers": [
-                "<td> и </td>",
-                "<table> и </table>",
-                "<tr> и </tr>",
-                "<th> и </th>",
-                "<row> и </row>"
+                "&lt;td&gt; и &lt;/td&gt;",
+                "&lt;table&gt; и &lt;/table&gt;",
+                "&lt;tr&gt; и &lt;/tr&gt;",
+                "&lt;th&gt; и &lt;/th&gt;",
+                "&lt;row&gt; и &lt;/row&gt;"
             ]
         },
         {
             "Id": 34,
             "Title": "Какой тег используется для заголовков таблицы?",
             "Answers": [
-                "<th>",
-                "<title>",
-                "<thead>",
-                "<td>",
-                "<caption>"
+                "&lt;th&gt;",
+                "&lt;title&gt;",
+                "&lt;thead&gt;",
+                "&lt;td&gt;",
+                "&lt;caption&gt;"
             ]
         },
         {
             "Id": 35,
-            "Title": "Для чего используется тег <th>?",
+            "Title": "Для чего используется тег &lt;th&gt;?",
             "Answers": [
                 "Для определения заголовков таблицы",
                 "Для определения строк таблицы",
@@ -388,7 +388,7 @@
         },
         {
             "Id": 36,
-            "Title": "Что обозначает тег <tr>?",
+            "Title": "Что обозначает тег &lt;tr&gt;?",
             "Answers": [
                 "Строку таблицы",
                 "Запись таблицы",
@@ -399,7 +399,7 @@
         },
         {
             "Id": 37,
-            "Title": "Что означает тег <td>?",
+            "Title": "Что означает тег &lt;td&gt;?",
             "Answers": [
                 "Данные таблицы",
                 "Документ таблицы",
@@ -410,51 +410,51 @@
         },
         {
             "Id": 38,
-            "Title": "Какие теги можно размещать внутри строки таблицы <tr>?",
+            "Title": "Какие теги можно размещать внутри строки таблицы &lt;tr&gt;?",
             "Answers": [
-                "<td>",
-                "<tr>",
-                "<br>",
-                "<hr>",
-                "<dd>"
+                "&lt;td&gt;",
+                "&lt;tr&gt;",
+                "&lt;br&gt;",
+                "&lt;hr&gt;",
+                "&lt;dd&gt;"
             ]
         },
         {
             "Id": 39,
             "Title": "Какой тег по умолчанию делает заголовки таблицы ?",
             "Answers": [
-                "<th>",
-                "<td>",
-                "<tr>",
-                "<table>",
-                "<caption>"
+                "&lt;th&gt;",
+                "&lt;td&gt;",
+                "&lt;tr&gt;",
+                "&lt;table&gt;",
+                "&lt;caption&gt;"
             ]
         },
         {
             "Id": 40,
-            "Title": "Какой тег добавляет страку <ul>?",
+            "Title": "Какой тег добавляет страку &lt;ul&gt;?",
             "Answers": [
-                "<li>",
-                "<br>",
-                "<la>",
-                "<tt>",
-                "<h1>"
+                "&lt;li&gt;",
+                "&lt;br&gt;",
+                "&lt;la&gt;",
+                "&lt;tt&gt;",
+                "&lt;h1&gt;"
             ]
         },
         {
             "Id": 41,
             "Title": "Какой тег используется для создания формы в HTML?",
             "Answers": [
-                "<form>",
-                "<input>",
-                "<button>",
-                "<table>",
-                "<div>"
+                "&lt;form&gt;",
+                "&lt;input&gt;",
+                "&lt;button&gt;",
+                "&lt;table&gt;",
+                "&lt;div&gt;"
             ]
         },
         {
             "Id": 42,
-            "Title": "Для чего используется тег <form>?",
+            "Title": "Для чего используется тег &lt;form&gt;?",
             "Answers": [
                 "Для сбора данных от пользователя",
                 "Для отображения изображений",
@@ -467,16 +467,16 @@
             "Id": 43,
             "Title": "Какой элемент формы используется чаще всего?",
             "Answers": [
-                "<input>",
-                "<p>",
-                "<header>",
-                "<img>",
-                "<footer>"
+                "&lt;input&gt;",
+                "&lt;p&gt;",
+                "&lt;header&gt;",
+                "&lt;img&gt;",
+                "&lt;footer&gt;"
             ]
         },
         {
             "Id": 44,
-            "Title": "Какой атрибут тега <form> указывает адрес, куда отправляются данные формы?",
+            "Title": "Какой атрибут тега &lt;form&gt; указывает адрес, куда отправляются данные формы?",
             "Answers": [
                 "action",
                 "method",
@@ -500,82 +500,82 @@
             "Id": 46,
             "Title": "Какой элемент создает однострочное текстовое поле?",
             "Answers": [
-                "<input type=\"text\">",
-                "<input type=\"password\">",
-                "<textarea>",
-                "<input type=\"checkbox\">",
-                "<input type=\"submit\">"
+                "&lt;input type=\"text\"&gt;",
+                "&lt;input type=\"password\"&gt;",
+                "&lt;textarea&gt;",
+                "&lt;input type=\"checkbox\"&gt;",
+                "&lt;input type=\"submit\"&gt;"
             ]
         },
         {
             "Id": 47,
             "Title": "Какой элемент создает поле для ввода пароля?",
             "Answers": [
-                "<input type=\"password\">",
-                "<input type=\"text\">",
-                "<input type=\"button\">",
-                "<input type=\"hidden\">",
-                "<textarea>"
+                "&lt;input type=\"password\"&gt;",
+                "&lt;input type=\"text\"&gt;",
+                "&lt;input type=\"button\"&gt;",
+                "&lt;input type=\"hidden\"&gt;",
+                "&lt;textarea&gt;"
             ]
         },
         {
             "Id": 48,
-            "Title": "Какой тип элемента <input> создает кнопку отправки формы?",
+            "Title": "Какой тип элемента &lt;input&gt; создает кнопку отправки формы?",
             "Answers": [
-                "<input type=\"submit\">",
-                "<input type=\"text\">",
-                "<input type=\"checkbox\">",
-                "<input type=\"radio\">",
-                "<input type=\"file\">"
+                "&lt;input type=\"submit\"&gt;",
+                "&lt;input type=\"text\"&gt;",
+                "&lt;input type=\"checkbox\"&gt;",
+                "&lt;input type=\"radio\"&gt;",
+                "&lt;input type=\"file\"&gt;"
             ]
         },
         {
             "Id": 49,
-            "Title": "Какой тип <input> создает радиокнопку?",
+            "Title": "Какой тип &lt;input&gt; создает радиокнопку?",
             "Answers": [
-                "<input type=\"radio\">",
-                "<input type=\"checkbox\">",
-                "<input type=\"text\">",
-                "<input type=\"submit\">",
-                "<input type=\"reset\">"
+                "&lt;input type=\"radio\"&gt;",
+                "&lt;input type=\"checkbox\"&gt;",
+                "&lt;input type=\"text\"&gt;",
+                "&lt;input type=\"submit\"&gt;",
+                "&lt;input type=\"reset\"&gt;"
             ]
         },
         {
             "Id": 50,
-            "Title": "Какой тип <input> создает чекбокс?",
+            "Title": "Какой тип &lt;input&gt; создает чекбокс?",
             "Answers": [
-                "<input type=\"checkbox\">",
-                "<input type=\"radio\">",
-                "<input type=\"button\">",
-                "<input type=\"text\">",
-                "<input type=\"hidden\">"
+                "&lt;input type=\"checkbox\"&gt;",
+                "&lt;input type=\"radio\"&gt;",
+                "&lt;input type=\"button\"&gt;",
+                "&lt;input type=\"text\"&gt;",
+                "&lt;input type=\"hidden\"&gt;"
             ]
         },
         {
             "Id": 51,
             "Title": "Какой тег используется для подписей к элементам формы?",
             "Answers": [
-                "<label>",
-                "<caption>",
-                "<legend>",
-                "<h3>",
-                "<b>"
+                "&lt;label&gt;",
+                "&lt;caption&gt;",
+                "&lt;legend&gt;",
+                "&lt;h3&gt;",
+                "&lt;b&gt;"
             ]
         },
         {
             "Id": 52,
             "Title": "Какой тег используется для создания многострочного поля ввода текста?",
             "Answers": [
-                "<textarea>",
-                "<input type=\"text\">",
-                "<div>",
-                "<form>",
-                "<label>"
+                "&lt;textarea&gt;",
+                "&lt;input type=\"text\"&gt;",
+                "&lt;div&gt;",
+                "&lt;form&gt;",
+                "&lt;label&gt;"
             ]
         },
         {
             "Id": 53,
-            "Title": "Какой атрибут элемента <input> определяет его тип?",
+            "Title": "Какой атрибут элемента &lt;input&gt; определяет его тип?",
             "Answers": [
                 "type",
                 "value",
@@ -608,7 +608,7 @@
         },
         {
             "Id": 56,
-            "Title": "<h1 class=”myclass”>My text</h1> .myclass{ background:red; color:blue; }",
+            "Title": "&lt;h1 class=”myclass”&gt;My text&lt;/h1&gt; .myclass{ background:red; color:blue; }",
             "Answers": [
                 "Заголовок «My text» с красным фоном и синим текстом",
                 "Заголовок «My text», но без каких-либо стилей",
@@ -709,22 +709,22 @@
             "Id": 65,
             "Title": "Какой HTML элемент используется для внутреннего CSS?",
             "Answers": [
-                "<style>",
-                "<link>",
-                "<script>",
-                "<css>",
-                "<head>"
+                "&lt;style&gt;",
+                "&lt;link&gt;",
+                "&lt;script&gt;",
+                "&lt;css&gt;",
+                "&lt;head&gt;"
             ]
         },
         {
             "Id": 66,
             "Title": "Какой HTML элемент используется для подключения внешнего CSS файла?",
             "Answers": [
-                "<link>",
-                "<style>",
-                "<script>",
-                "<meta>",
-                "<body>"
+                "&lt;link&gt;",
+                "&lt;style&gt;",
+                "&lt;script&gt;",
+                "&lt;meta&gt;",
+                "&lt;body&gt;"
             ]
         },
         {
@@ -734,7 +734,7 @@
                 "{} Фигурные скобки",
                 "[]Квадратные скобки",
                 "() Круглые скобки",
-                "<>Угловые скобки",
+                "&lt;&gt;Угловые скобки",
                 "\"\" Кавычки"
             ]
         },
@@ -808,11 +808,11 @@
             "Id": 74,
             "Title": "Какой элемент используется для применения внутреннего CSS к одной HTML странице?",
             "Answers": [
-                "<style>",
-                "<link>",
-                "<script>",
-                "<head>",
-                "<body>"
+                "&lt;style&gt;",
+                "&lt;link&gt;",
+                "&lt;script&gt;",
+                "&lt;head&gt;",
+                "&lt;body&gt;"
             ]
         },
         {
@@ -910,8 +910,8 @@
                 "Да",
                 "Нет",
                 "Только два класса",
-                "Только <div>",
-                "Только <p>"
+                "Только &lt;div&gt;",
+                "Только &lt;p&gt;"
             ]
         },
         {
@@ -1136,7 +1136,7 @@
         },
         {
             "Id": 104,
-            "Title": "Как сделать текст в заголовке <h2> зеленым?",
+            "Title": "Как сделать текст в заголовке &lt;h2&gt; зеленым?",
             "Answers": [
                 "h2 {color: green;}",
                 "h2.green-grey",
@@ -1149,154 +1149,154 @@
             "Id": 105,
             "Title": "Выберите правильное HTML-написание элемента input",
             "Answers": [
-                "<input>",
+                "&lt;input&gt;",
                 "input",
-                "<in put>",
+                "&lt;in put&gt;",
                 "input.",
-                "i.nput>"
+                "i.nput&gt;"
             ]
         },
         {
             "Id": 106,
             "Title": "Выберите правильное HTML-написание элемента textarea.",
             "Answers": [
-                "<textarea>",
-                "<text_area>",
-                "<tex-tarea>",
-                "<textarea/>",
-                "<textareaa>"
+                "&lt;textarea&gt;",
+                "&lt;text_area&gt;",
+                "&lt;tex-tarea&gt;",
+                "&lt;textarea/&gt;",
+                "&lt;textareaa&gt;"
             ]
         },
         {
             "Id": 107,
             "Title": "Выберите правильное HTML-написание элемента button",
             "Answers": [
-                "<button>",
-                "<but_ton>",
-                "<bu-tton>",
-                "<button/>",
-                "<buttonn>"
+                "&lt;button&gt;",
+                "&lt;but_ton&gt;",
+                "&lt;bu-tton&gt;",
+                "&lt;button/&gt;",
+                "&lt;buttonn&gt;"
             ]
         },
         {
             "Id": 108,
             "Title": "Выберите правильное HTML-написание элемента form",
             "Answers": [
-                "<form>",
-                "<fo_rm>",
-                "<fo-rm>",
-                "<form/>",
-                "<formm>"
+                "&lt;form&gt;",
+                "&lt;fo_rm&gt;",
+                "&lt;fo-rm&gt;",
+                "&lt;form/&gt;",
+                "&lt;formm&gt;"
             ]
         },
         {
             "Id": 109,
             "Title": "Выберите правильное полное HTML-написание элемента img с атрибутами src и alt.",
             "Answers": [
-                "<img src=\"image.jpg\" alt=\"описание\">",
-                "<img src=\"image.jpg\">",
-                "<im_g src=\"image.jpg\" alt=\"описание\">",
-                "<img/>",
-                "<img alt=\"описание\">"
+                "&lt;img src=\"image.jpg\" alt=\"описание\"&gt;",
+                "&lt;img src=\"image.jpg\"&gt;",
+                "&lt;im_g src=\"image.jpg\" alt=\"описание\"&gt;",
+                "&lt;img/&gt;",
+                "&lt;img alt=\"описание\"&gt;"
             ]
         },
         {
             "Id": 110,
             "Title": "Выберите правильное полное HTML-написание элемента a с атрибутом href.",
             "Answers": [
-                "<a href=\"https://example.com\">Ссылка</a>",
-                "<a>Ссылка</a href=\"https://example.com\">",
-                "<a href=>Ссылка</a https://example.com>",
-                "<a href=\"example.com\"/ Ссылка= alt>",
-                "<link href=\"https://example.com\">Ссылка</link>"
+                "&lt;a href=\"https://example.com\"&gt;Ссылка&lt;/a&gt;",
+                "&lt;a&gt;Ссылка&lt;/a href=\"https://example.com\"&gt;",
+                "&lt;a href=&gt;Ссылка&lt;/a https://example.com&gt;",
+                "&lt;a href=\"example.com\"/ Ссылка= alt&gt;",
+                "&lt;link href=\"https://example.com\"&gt;Ссылка&lt;/link&gt;"
             ]
         },
         {
             "Id": 111,
             "Title": "Выберите правильное HTML-написание элемента списка ul",
             "Answers": [
-                "<ul></ul>",
-                "<u_l></u_l>",
-                "<u-l></u-l>",
-                "<ul/>",
-                "<ull></ull>"
+                "&lt;ul&gt;&lt;/ul&gt;",
+                "&lt;u_l&gt;&lt;/u_l&gt;",
+                "&lt;u-l&gt;&lt;/u-l&gt;",
+                "&lt;ul/&gt;",
+                "&lt;ull&gt;&lt;/ull&gt;"
             ]
         },
         {
             "Id": 112,
             "Title": "Выберите правильное HTML-написание элемента table",
             "Answers": [
-                "<table></table>",
-                "<tabl_e></tabl_e>",
-                "<ta-ble></ta-ble>",
-                "<table/>",
-                "<tablee></tablee>"
+                "&lt;table&gt;&lt;/table&gt;",
+                "&lt;tabl_e&gt;&lt;/tabl_e&gt;",
+                "&lt;ta-ble&gt;&lt;/ta-ble&gt;",
+                "&lt;table/&gt;",
+                "&lt;tablee&gt;&lt;/tablee&gt;"
             ]
         },
         {
             "Id": 113,
             "Title": "Выберите правильное HTML-написание элемента div",
             "Answers": [
-                "<div></div>",
-                "<di.v></di.v>",
-                "<d-iv></d-iv>",
-                "<div/><div/>",
-                "<divv></divv>"
+                "&lt;div&gt;&lt;/div&gt;",
+                "&lt;di.v&gt;&lt;/di.v&gt;",
+                "&lt;d-iv&gt;&lt;/d-iv&gt;",
+                "&lt;div/&gt;&lt;div/&gt;",
+                "&lt;divv&gt;&lt;/divv&gt;"
             ]
         },
         {
             "Id": 114,
             "Title": "Выберите правильное HTML-написание элемента p",
             "Answers": [
-                "<p></p>",
-                "<p_></p_>",
-                "<p-p></p-p>",
-                "<p/><p/>",
-                "<pp></pp>"
+                "&lt;p&gt;&lt;/p&gt;",
+                "&lt;p_&gt;&lt;/p_&gt;",
+                "&lt;p-p&gt;&lt;/p-p&gt;",
+                "&lt;p/&gt;&lt;p/&gt;",
+                "&lt;pp&gt;&lt;/pp&gt;"
             ]
         },
         {
             "Id": 115,
             "Title": "Выберите правильное HTML-написание элемента h1.",
             "Answers": [
-                "<h1></h1>",
-                "<h_1></h_1>",
-                "<h-1></h-1>",
-                "<h1/><h1/>",
-                "<h11></h11>"
+                "&lt;h1&gt;&lt;/h1&gt;",
+                "&lt;h_1&gt;&lt;/h_1&gt;",
+                "&lt;h-1&gt;&lt;/h-1&gt;",
+                "&lt;h1/&gt;&lt;h1/&gt;",
+                "&lt;h11&gt;&lt;/h11&gt;"
             ]
         },
         {
             "Id": 116,
             "Title": "Выберите правильное HTML-написание элемента заголовка страницы.",
             "Answers": [
-                "<header></header>",
-                "<head></head>",
-                "<headr></headr>",
-                "<header/>",
-                "<hdr></hdr>"
+                "&lt;header&gt;&lt;/header&gt;",
+                "&lt;head&gt;&lt;/head&gt;",
+                "&lt;headr&gt;&lt;/headr&gt;",
+                "&lt;header/&gt;",
+                "&lt;hdr&gt;&lt;/hdr&gt;"
             ]
         },
         {
             "Id": 117,
             "Title": "Выберите правильное HTML-написание нижнего колонтитула.",
             "Answers": [
-                "<footer></footer>",
-                "<foot></foot>",
-                "<footr></footr>",
-                "<footer/>",
-                "<ftr></ftr>"
+                "&lt;footer&gt;&lt;/footer&gt;",
+                "&lt;foot&gt;&lt;/foot&gt;",
+                "&lt;footr&gt;&lt;/footr&gt;",
+                "&lt;footer/&gt;",
+                "&lt;ftr&gt;&lt;/ftr&gt;"
             ]
         },
         {
             "Id": 118,
             "Title": "Выберите правильное HTML-написание навигационного блока.",
             "Answers": [
-                "<nav></nav>",
-                "<nv></nv>",
-                "<nar></nar>",
-                "<nav/>",
-                "<nv></nv>"
+                "&lt;nav&gt;&lt;/nav&gt;",
+                "&lt;nv&gt;&lt;/nv&gt;",
+                "&lt;nar&gt;&lt;/nar&gt;",
+                "&lt;nav/&gt;",
+                "&lt;nv&gt;&lt;/nv&gt;"
             ]
         },
         {
@@ -1523,33 +1523,33 @@
             "Id": 139,
             "Title": "Выберите правильное HTML-написание основного контента страницы.",
             "Answers": [
-                "<main></main>",
-                "<mains></mains>",
-                "<mnss></mnss>",
-                "<main/main/>",
-                "<boss></boss>"
+                "&lt;main&gt;&lt;/main&gt;",
+                "&lt;mains&gt;&lt;/mains&gt;",
+                "&lt;mnss&gt;&lt;/mnss&gt;",
+                "&lt;main/main/&gt;",
+                "&lt;boss&gt;&lt;/boss&gt;"
             ]
         },
         {
             "Id": 140,
             "Title": "Выберите правильное HTML-написание семантического раздела страницы.",
             "Answers": [
-                "<section></section>",
-                "<sect></sect>",
-                "<section/>",
-                "<sections></sections>",
-                "<sectts></sectts>"
+                "&lt;section&gt;&lt;/section&gt;",
+                "&lt;sect&gt;&lt;/sect&gt;",
+                "&lt;section/&gt;",
+                "&lt;sections&gt;&lt;/sections&gt;",
+                "&lt;sectts&gt;&lt;/sectts&gt;"
             ]
         },
         {
             "Id": 141,
             "Title": "Выберите правильное HTML-написание отдельной статьи.",
             "Answers": [
-                "<article></article>",
-                "<artt></artt>",
-                "<article//article>",
-                "<arct></arct>",
-                "<atrr></atrr>"
+                "&lt;article&gt;&lt;/article&gt;",
+                "&lt;artt&gt;&lt;/artt&gt;",
+                "&lt;article//article&gt;",
+                "&lt;arct&gt;&lt;/arct&gt;",
+                "&lt;atrr&gt;&lt;/atrr&gt;"
             ]
         },
         {
@@ -1587,7 +1587,7 @@
         },
         {
             "Id": 145,
-            "Title": "Как горизонтально центрировать блочный элемент, например <div>?",
+            "Title": "Как горизонтально центрировать блочный элемент, например &lt;div&gt;?",
             "Answers": [
                 "задав margin: 0 auto",
                 "установив text-align: left",
@@ -1677,11 +1677,11 @@
             "Id": 153,
             "Title": "Какой meta-тег используется для контроля области просмотра?",
             "Answers": [
-                "<meta name=\"viewport\">",
-                "<meta name=\"screen\">",
-                "<meta name=\"device\">",
-                "<meta name=\"size\">",
-                "<meta name=\"scale\">"
+                "&lt;meta name=\"viewport\"&gt;",
+                "&lt;meta name=\"screen\"&gt;",
+                "&lt;meta name=\"device\"&gt;",
+                "&lt;meta name=\"size\"&gt;",
+                "&lt;meta name=\"scale\"&gt;"
             ]
         },
         {
@@ -1829,7 +1829,7 @@
         },
         {
             "Id": 167,
-            "Title": "Для чего используется элемент <select> в HTML?",
+            "Title": "Для чего используется элемент &lt;select&gt; в HTML?",
             "Answers": [
                 "Создание списка для выбора",
                 "Вставка изображения на страницу",
@@ -1840,7 +1840,7 @@
         },
         {
             "Id": 168,
-            "Title": "Что делает атрибут multiple у элемента <select> в HTML?",
+            "Title": "Что делает атрибут multiple у элемента &lt;select&gt; в HTML?",
             "Answers": [
                 "Позволяет выбрать несколько вариантов одновременно",
                 "Создает кнопку для отправки формы одновременно",
@@ -2075,7 +2075,7 @@
             "Answers": [
                 "let arr = [1, 2, 3]",
                 "let arr = {1, 2, 3}",
-                "let arr = <1, 2, 3>",
+                "let arr = &lt;1, 2, 3&gt;",
                 "let arr = (1, 2, 3)",
                 "let arr = \"1, 2, 3\""
             ]
@@ -2614,7 +2614,7 @@
             "Answers": [
                 "Значения, передаваемые параметрам",
                 "Название переменной  var a=9",
-                "Часть HTML <form>/<form>",
+                "Часть HTML &lt;form&gt;/&lt;form&gt;",
                 "Встроенная функция Date()",
                 "Тип данных type of() string"
             ]
@@ -2909,11 +2909,11 @@
             "Id": 265,
             "Title": "Что возвращает const newElem = document.createElement(\"p\") ?",
             "Answers": [
-                "Создаёт новый элемент <p> и сохраняет его в переменной",
-                "Удаляет существующий элемент <p> со страницы",
-                "Находит первый элемент <p> на странице",
-                "Меняет текст внутри элемента <p>",
-                "Присваивает элементу <p> CSS-класс"
+                "Создаёт новый элемент &lt;p&gt; и сохраняет его в переменной",
+                "Удаляет существующий элемент &lt;p&gt; со страницы",
+                "Находит первый элемент &lt;p&gt; на странице",
+                "Меняет текст внутри элемента &lt;p&gt;",
+                "Присваивает элементу &lt;p&gt; CSS-класс"
             ]
         },
         {
@@ -2944,7 +2944,7 @@
             "Answers": [
                 "HTML элемент с id=demo",
                 "Все элементы страницы",
-                "Коллекцию всех тегов <p>",
+                "Коллекцию всех тегов &lt;p&gt;",
                 "Содержимое всех форм",
                 "Текст документа"
             ]
@@ -2957,7 +2957,7 @@
                 "Удаляет все",
                 "Добавляет текст",
                 "Меняет цвет",
-                "Создает <div>"
+                "Создает &lt;div&gt;"
             ]
         },
         {
@@ -3030,21 +3030,21 @@
             "Id": 276,
             "Title": "Как начинается PHP-скрипт?",
             "Answers": [
-                "<?php",
-                "<script>",
-                "<php>",
-                "<?",
-                "</php>"
+                "&lt;?php",
+                "&lt;script&gt;",
+                "&lt;php&gt;",
+                "&lt;?",
+                "&lt;/php&gt;"
             ]
         },
         {
             "Id": 277,
             "Title": "Как заканчивается PHP-скрипт?",
             "Answers": [
-                "?>",
-                "</>",
-                "<?",
-                "<script>",
+                "?&gt;",
+                "&lt;/&gt;",
+                "&lt;?",
+                "&lt;script&gt;",
                 ""
             ]
         },
@@ -3132,7 +3132,7 @@
                 "/* Это комментарий */ - комментарий",
                 "// Это комментарий -комментарий",
                 "# Это комментарий- комментарий",
-                "<!-- Это комментарий →- комментарий",
+                "&lt;!-- Это комментарий →- комментарий",
                 "** Это комментарий **-комментарий"
             ]
         },
@@ -3283,11 +3283,11 @@
             "Id": 299,
             "Title": "Как проверить успешность подключения к серверу?",
             "Answers": [
-                "$conn->connect_error",
-                "$conn->query",
-                "$conn->execute",
-                "$conn->status",
-                "$conn->ready"
+                "$conn-&gt;connect_error",
+                "$conn-&gt;query",
+                "$conn-&gt;execute",
+                "$conn-&gt;status",
+                "$conn-&gt;ready"
             ]
         },
         {
@@ -3305,20 +3305,20 @@
             "Id": 301,
             "Title": "Как выполнить SQL-запрос в PHP?",
             "Answers": [
-                "$conn->query($sql)",
-                "$conn->execute($sql)",
-                "$conn->run($sql)",
-                "$conn->perform($sql)",
-                "$conn->submit($sql)"
+                "$conn-&gt;query($sql)",
+                "$conn-&gt;execute($sql)",
+                "$conn-&gt;run($sql)",
+                "$conn-&gt;perform($sql)",
+                "$conn-&gt;submit($sql)"
             ]
         },
         {
             "Id": 302,
             "Title": "Как закрыть соединение с базой данных?",
             "Answers": [
-                "$conn->close()",
+                "$conn-&gt;close()",
                 "mysqli_close($sql)",
-                "$conn->exit()",
+                "$conn-&gt;exit()",
                 "close_connection()",
                 "disconnect($conn)"
             ]
@@ -3338,8 +3338,8 @@
             "Id": 304,
             "Title": "Как получить результат SELECT-запроса?",
             "Answers": [
-                "$result = $conn->query($sql)",
-                "$result = $conn->fetch()",
+                "$result = $conn-&gt;query($sql)",
+                "$result = $conn-&gt;fetch()",
                 "$result = mysqli_execute($sql)",
                 "$result = get_data($sql)",
                 "$result = db_query($sql)"
@@ -3350,10 +3350,10 @@
             "Title": "Как вывести имя и фамилию из строки результата?",
             "Answers": [
                 "echo $row[\"name\"] . \" \" . $row[\"lastname\"]",
-                "echo $row->name . \" \" . $row->lastname",
+                "echo $row-&gt;name . \" \" . $row-&gt;lastname",
                 "print $row[name] + \" \" + $row[lastname]",
                 "echo $row[name] . \"-\" . $row[lastname]",
-                "print $row->getName() . \" \" . $row->getLastname()"
+                "print $row-&gt;getName() . \" \" . $row-&gt;getLastname()"
             ]
         },
         {
