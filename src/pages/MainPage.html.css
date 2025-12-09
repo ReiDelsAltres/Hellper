@@ -518,3 +518,72 @@
         font-size: 1.5rem;
     }
 }
+
+/* Extra small/mobile rules */
+@media (max-width: 480px) {
+    .main-page {
+        padding: 1.25rem 0.75rem;
+    }
+
+    /* tone down large background on small screens for performance/readability */
+    #page::before {
+        opacity: 0.06;
+        filter: blur(40px);
+        background-size: 300% 300%;
+    }
+
+    .hero-section {
+        padding: 1.25rem 1rem;
+        margin: 0.75rem 1rem 1.25rem;
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+        letter-spacing: -0.5px;
+        line-height: 1.05;
+    }
+
+    .logo { width: 120px; }
+
+    /* actions become full width and stack */
+    .actions {
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+    .actions .r1 {
+        width: 100%;
+        padding: .9rem 1rem !important;
+        font-size: 1rem !important;
+        border-width: 2px !important;
+    }
+
+    .subtitle { font-size: 1.0rem; max-width: 90%; }
+
+    /* Make feature cards single column and reduce spacing */
+    .feature-card { flex: 1 1 100%; padding: 1rem 1rem; }
+
+    /* groups and chips stack nicely */
+    .groups { gap: 0.8rem; }
+    .groups re-chip, .groups re-chip[role="chip"] { font-size: 0.95rem; padding: 0.45rem 0.8rem; }
+
+    .info-section paper-component, .hero-section, .page-footer paper-component {
+        padding-left: 0.9rem; padding-right: 0.9rem;
+    }
+
+    .subjects-list { grid-template-columns: 1fr; gap: 0.6rem; }
+
+    /* smaller step numbers */
+    .step-number { width: 44px; height: 44px; font-size: 1.25rem; }
+
+}
+
+/* Very small screens - extra compact */
+@media (max-width: 360px) {
+    .title { font-size: 1.9rem; }
+    .subtitle { font-size: 0.95rem; }
+    .hero-section { padding: .75rem .75rem; margin: .5rem; }
+    #page::before { opacity: 0.05; filter: blur(30px); }
+    .logo { width: 100px; }
+    .actions .r1 { font-size: .95rem !important; padding: .75rem 1rem !important; }
+}

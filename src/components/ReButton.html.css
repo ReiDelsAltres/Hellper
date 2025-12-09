@@ -25,7 +25,9 @@
     padding: var(--btn-padding);
     border: var(--btn-border, 1px solid transparent);
     border-radius: var(--btn-border-radius, 8px);
+
     min-height: var(--btn-min-height);
+    min-width: var(--btn-min-width);
 
     background-color: var(--btn-bg-color);
     color: var(--btn-text-color);
@@ -354,7 +356,10 @@
 :host([size="small"]) {
     --btn-font-size: 0.75rem;
     --btn-padding: 1px 6px;
+
     --btn-min-height: 30px;
+    --btn-min-width: 30px
+
     --btn-border-radius: 6px;
 }
 
@@ -362,21 +367,30 @@
 :host(:not([size])) {
     --btn-font-size: 0.875rem;
     --btn-padding: 2px 8px;
+
     --btn-min-height: 36px;
+    --btn-min-width: 36px;
+
     --btn-border-radius: 8px;
 }
 
 :host([size="large"]) {
     --btn-font-size: 1rem;
     --btn-padding: 2px 8px;
+
     --btn-min-height: 42px;
+    --btn-min-width: 42px;
+
     --btn-border-radius: 10px;
 }
 
 :host([size="extra-large"]) {
     --btn-font-size: 1.5rem;
     --btn-padding: 4px 12px;
+    
     --btn-min-height: 60px;
+    --btn-min-width: 60px;
+
     --btn-border-radius: 18px;
 }
 

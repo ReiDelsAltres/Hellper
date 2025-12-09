@@ -6,7 +6,7 @@ app-layout[sidebar="hidden"] + #page {
 }
 /* topbar influences vertical offset */
 app-layout[topbar="mini"] + #page {
-    margin-top: 44px;
+    margin-top: 66px;
 }
 app-layout[topbar="hidden"] + #page {
     margin-top: 0px;

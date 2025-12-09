@@ -22,7 +22,7 @@
 :host(:not([type])),
 :host([type="mini"]) {
     --app-bar-vertical-width: 88px;
-    --app-bar-horizontal-height: 44px;
+    --app-bar-horizontal-height: 66px;
 }
 
 :host(:not([type]):hover:not([no-hover])),
