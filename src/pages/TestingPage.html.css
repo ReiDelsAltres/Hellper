@@ -54,3 +54,7 @@
     text-align: center;
   }
 }
+.btn {
+  flex: 1;
+  flex-basis: 350px;
+}

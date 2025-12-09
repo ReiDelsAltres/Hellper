@@ -27,7 +27,10 @@ export default class TestingPage extends Page {
       /*new Subject("Xarici dildə işgüzar və akademik kommunikasiya  - 3", "İsmayılova A.A", ["759ITS","759KM"], "Английский язык"),
       new Subject("Sistem proqramlaşdırma", "Həsənova V.R", ["759ITS"], "Системное программирование"),*/
     ]),
-  ]
+  ];
+  protected async preInit(): Promise<void> {
+    this.semestrs.reverse();
+  }
   // intentionally empty page — no logic
   protected preLoad(holder: IElementHolder): Promise<void> {
     return Promise.resolve();

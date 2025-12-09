@@ -1,6 +1,7 @@
 import { IElementHolder, Page } from "@Purper";
 export default class TestingPage extends Page {
     private semestrs;
+    protected preInit(): Promise<void>;
     protected preLoad(holder: IElementHolder): Promise<void>;
 }
 export declare class Subject {

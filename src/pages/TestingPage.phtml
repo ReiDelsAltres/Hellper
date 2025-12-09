@@ -10,7 +10,7 @@
       <p>Semestr @(semestr.number)</p>
       <div class="subject-list">
         @for (subject in semestr.subjects) {
-        <re-button variant="outlined" color="additional" data-link
+        <re-button class="btn" variant="outlined" color="additional" data-link
           href="/testing/sub?subject=@(encodeURIComponent(JSON.stringify(subject)))">
           <div class="content">
             <div class="meta">

@@ -27,6 +27,9 @@ let TestingPage = class TestingPage extends Page {
             new Subject("Sistem proqramlaşdırma", "Həsənova V.R", ["759ITS"], "Системное программирование"),*/
         ]),
     ];
+    async preInit() {
+        this.semestrs.reverse();
+    }
     // intentionally empty page — no logic
     preLoad(holder) {
         return Promise.resolve();
