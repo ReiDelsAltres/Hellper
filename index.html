@@ -5,26 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <base id="app-base" href="/" />
-    <script>
-        // Ensure relative URLs resolve under the hosting root (e.g. GitHub Pages "/Hellper/").
-        // This script runs during parsing (before later <link>/<script>), so the base applies to them.
-        (function () {
-            const isGithubPages = window.location.origin.includes(".github.io");
-            const pathSegmentsToKeep = isGithubPages ? 1 : 0;
-            const parts = window.location.pathname.split('/').filter(Boolean);
-            const hostingRoot = parts.slice(0, pathSegmentsToKeep).join('/');
-            const basePath = '/' + (hostingRoot ? hostingRoot + '/' : '');
-
-            const baseEl = document.getElementById('app-base');
-            if (baseEl) baseEl.setAttribute('href', basePath);
-
-            // Normalize direct hits to ".../index.html" back to the app root.
-            if (window.location.pathname.endsWith('/index.html')) {
-                window.location.replace(basePath);
-            }
-        })();
-    </script>
+    <!-- Make all relative URLs resolve under the current folder (e.g. /Hellper/ on GitHub Pages) -->
+    <base href="./">
 
     <title>Pureper</title>
 
@@ -63,11 +45,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
         integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
 
-    <script type="module" src="src/KatexUtils.js" defer></script>
+    <script type="module" src="./src/KatexUtils.js" defer></script>
 
     <!-- Puppet Init -->
-    <link rel="stylesheet" href="index.html.css">
-    <link rel="stylesheet" href="./out/src/components/AppLayout.html.lt.css">
+    <link rel="stylesheet" href="./index.html.css">
+    <link rel="stylesheet" href="./src/components/AppLayout.html.lt.css">
     <!-- Puppet Init -->
 
     <!-- KaTeX JavaScript -->
