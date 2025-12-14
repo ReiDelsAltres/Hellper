@@ -41,7 +41,7 @@ export default class TestingSubPage extends Page {
     // We await here so the initial render will show the correct number right after preLoad resolves.
     try {
       if (this.subject && this.subject.file) {
-        const data = await Fetcher.fetchJSON('../../resources/data' + '/' + this.subject.file);
+        const data = await Fetcher.fetchJSON('/resources/data' + '/' + this.subject.file);
         if (data && Array.isArray(data.Questions)) {
           this.testModes[2].numQuestions = data.Questions.length;
 

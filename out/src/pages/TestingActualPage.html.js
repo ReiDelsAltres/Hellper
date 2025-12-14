@@ -23,7 +23,7 @@ let TestingActualPage = class TestingActualPage extends Page {
             ? crypto.randomUUID()
             : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
         this.params.randomSource = newSeed;
-        const jj = await Fetcher.fetchJSON('../../resources/data' + '/' + this.params.subject.file);
+        const jj = await Fetcher.fetchJSON('/resources/data' + '/' + this.params.subject.file);
         var i = 1;
         this.questions = jj.Questions
             .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
