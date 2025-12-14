@@ -1,5 +1,3 @@
-import { Fetcher } from "@Purper";
-
 const TS_EXTENSION_REGEX = /\.ts$/i;
 
 /**
@@ -52,11 +50,6 @@ export function rewriteDomLinks(root: ParentNode = document): void {
     if (value) {
       candidates.push([script, key]);
     }
-  });
-
-  root.querySelectorAll<HTMLLinkElement>('link[href]').forEach((link) => {
-    const href = link.getAttribute('href');
-    link.setAttribute("href", Fetcher.resolveUrl(href!));
   });
 
   candidates.forEach(([element, attr]) => {
