@@ -1,3 +1,4 @@
+import { Fetcher } from "@Purper";
 const TS_EXTENSION_REGEX = /\.ts$/i;
 /**
  * Применяет правило перенаправления:
@@ -42,6 +43,10 @@ export function rewriteDomLinks(root = document) {
         if (value) {
             candidates.push([script, key]);
         }
+    });
+    root.querySelectorAll('link[href]').forEach((link) => {
+        const href = link.getAttribute('href');
+        link.setAttribute("href", Fetcher.resolveUrl(href));
     });
     candidates.forEach(([element, attr]) => {
         const value = element.getAttribute(attr);
