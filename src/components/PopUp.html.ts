@@ -1,5 +1,11 @@
-import { Component, IElementHolder } from "@Purper";
+import { Component, IElementHolder, ReComponent } from "@Purper";
 
+@ReComponent({
+    markupURL: "./src/components/PopUp.html",
+    cssURL: "./src/components/PopUp.html.css",
+    jsURL: "./src/components/PopUp.html.js",
+    class: PopUp,
+}, "pop-up")
 export default class PopUp extends Component {
     static get observedAttributes() {
         return ['open', 'modal', 'anchor', 'placement'];

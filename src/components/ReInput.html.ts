@@ -1,12 +1,11 @@
 import { IElementHolder, Component, AccessType, ReComponent } from "@Purper";
 
-@ReComponent(
-    "./src/components/ReInput.hmle",
-    "./src/components/ReInput.html.css",
-    "./src/components/ReInput.html.ts",
-    AccessType.BOTH,
-    "re-input"
-)
+@ReComponent({
+    markupURL: "./src/components/ReInput.hmle",
+    cssURL: "./src/components/ReInput.html.css",
+    jsURL: "./src/components/ReInput.html.ts",
+    class: ReInput,
+},"re-input")
 export default class ReInput extends Component {
     private input?: HTMLInputElement;
     private icon?: HTMLElement;

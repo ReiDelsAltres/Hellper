@@ -1,6 +1,13 @@
-import { IElementHolder, Page } from "@Purper";
+import { IElementHolder, Page, RePage } from "@Purper";
 import PopUp from "../components/PopUp.html.js";
 
+
+@RePage({
+    markupURL: "./src/pages/ComponentShowcasePage.html",
+    cssURL: "./src/pages/ComponentShowcasePage.html.css",
+    jsURL: "./src/pages/ComponentShowcasePage.html.ts",
+    class: ComponentShowcasePage,
+}, "/components")
 export default class ComponentShowcasePage extends Page {
     protected preLoad(holder: IElementHolder): Promise<void> {
         const root = holder.element;

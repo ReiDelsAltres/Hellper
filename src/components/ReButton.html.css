@@ -3,6 +3,10 @@
     flex-basis: 100%;
 }
 
+:host([hidden]), :host([hidden="true"]) {
+    display: none !important;
+}
+
 /* Button Component Styles */
 :host {
     position: relative;
@@ -75,16 +79,6 @@
     justify-content: center;
     text-align: center;
     z-index: 1;
-}
-
-/* Compact mode: hide the textual/slotted content (used by sidebars/app-bars) */
-:host([mini]) .btn-text {
-    display: none;
-}
-
-/* When compact we keep only the icon visible */
-:host([mini]) .btn-icon {
-    display: flex;
 }
 
 /* Icon slot */
@@ -442,6 +436,18 @@
     animation: btn-spin 1s linear infinite;
     z-index: 2;
 }
+
+/*|------------------------------------------MINI--------------------------------------|*/
+/* Compact mode: hide the textual/slotted content (used by sidebars/app-bars) */
+:host([mini]) .btn-text {
+    display: none;
+}
+
+/* When compact we keep only the icon visible */
+:host([mini]) .btn-icon {
+    display: flex;
+}
+/*|------------------------------------------MINI--------------------------------------|*/
 
 @keyframes btn-spin {
     0% {

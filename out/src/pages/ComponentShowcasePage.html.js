@@ -1,5 +1,11 @@
-import { Page } from "@Purper";
-export default class ComponentShowcasePage extends Page {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Page, RePage } from "@Purper";
+let ComponentShowcasePage = class ComponentShowcasePage extends Page {
     preLoad(holder) {
         const root = holder.element;
         // PopUp demo handlers
@@ -44,5 +50,14 @@ export default class ComponentShowcasePage extends Page {
         });
         return Promise.resolve();
     }
-}
+};
+ComponentShowcasePage = __decorate([
+    RePage({
+        markupURL: "./src/pages/ComponentShowcasePage.html",
+        cssURL: "./src/pages/ComponentShowcasePage.html.css",
+        jsURL: "./src/pages/ComponentShowcasePage.html.ts",
+        class: ComponentShowcasePage,
+    }, "/components")
+], ComponentShowcasePage);
+export default ComponentShowcasePage;
 //# sourceMappingURL=ComponentShowcasePage.html.js.map

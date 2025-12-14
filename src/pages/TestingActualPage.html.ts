@@ -5,13 +5,12 @@ import SeededShuffle from "../lib/SeededShuffle.js";
 import { KatexUtils } from "../KatexUtils.js";
 import PopUp from "../components/PopUp.html.js";
 
-@RePage(
-    "./src/pages/TestingActualPage.hmle",
-    "./src/pages/TestingActualPage.html.css",
-    "./src/pages/TestingActualPage.html.ts",
-    AccessType.BOTH,
-    "/testing/actual"
-)
+@RePage({
+    markupURL: "./src/pages/TestingActualPage.hmle",
+    cssURL: "./src/pages/TestingActualPage.html.css",
+    jsURL: "./src/pages/TestingActualPage.html.ts",
+    class: TestingActualPage,
+}, "/testing/actual")
 export default class TestingActualPage extends Page {
     private params: {
         subject: Subject,

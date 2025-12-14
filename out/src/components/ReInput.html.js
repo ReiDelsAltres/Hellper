@@ -4,7 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component, AccessType, ReComponent } from "@Purper";
+import { Component, ReComponent } from "@Purper";
 let ReInput = class ReInput extends Component {
     input;
     icon;
@@ -214,7 +214,12 @@ let ReInput = class ReInput extends Component {
     }
 };
 ReInput = __decorate([
-    ReComponent("./src/components/ReInput.hmle", "./src/components/ReInput.html.css", "./src/components/ReInput.html.ts", AccessType.BOTH, "re-input")
+    ReComponent({
+        markupURL: "./src/components/ReInput.hmle",
+        cssURL: "./src/components/ReInput.html.css",
+        jsURL: "./src/components/ReInput.html.ts",
+        class: ReInput,
+    }, "re-input")
 ], ReInput);
 export default ReInput;
 //# sourceMappingURL=ReInput.html.js.map

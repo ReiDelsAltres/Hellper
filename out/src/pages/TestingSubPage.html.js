@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { AccessType, Fetcher, Page, RePage } from "@Purper";
+import { Fetcher, Page, RePage } from "@Purper";
 let TestingSubPage = class TestingSubPage extends Page {
     subject;
     testModes = [
@@ -132,7 +132,12 @@ let TestingSubPage = class TestingSubPage extends Page {
     }
 };
 TestingSubPage = __decorate([
-    RePage("./src/pages/TestingSubPage.phtml", "./src/pages/TestingSubPage.html.css", "./src/pages/TestingSubPage.html.ts", AccessType.BOTH, "/testing/sub"),
+    RePage({
+        markupURL: "./src/pages/TestingSubPage.phtml",
+        cssURL: "./src/pages/TestingSubPage.html.css",
+        jsURL: "./src/pages/TestingSubPage.html.ts",
+        class: TestingSubPage,
+    }, "/testing/sub"),
     __metadata("design:paramtypes", [String])
 ], TestingSubPage);
 export default TestingSubPage;

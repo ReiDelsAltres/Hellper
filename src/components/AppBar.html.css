@@ -14,7 +14,7 @@
 * {
     display: var(--app-display);
 }
-:host([type="hidden"]) {
+:host([hidden]) {
     --app-display: none;
     --app-bar-vertical-width: 0 !important;
     --app-bar-horizontal-height: 0 !important;
@@ -26,7 +26,9 @@
 }
 
 :host(:not([type]):hover:not([no-hover])),
-:host([type="mini"]:hover:not([no-hover])) {
+:host(:not([type]):hover:not([no-hover="true"])),
+:host([type="mini"]:hover:not([no-hover])),
+:host([type="mini"]:hover:not([no-hover="true"])) {
     --app-bar-vertical-width: 288px;
     --app-bar-horizontal-height: 128px;
 }
@@ -36,8 +38,8 @@
     --app-bar-horizontal-height: 128px;
 }
 
-:host(:not([pos])),
-:host([pos="vertical"]) {
+:host(:not([orientation])),
+:host([orientation="vertical"]) {
     display: flex;
     flex-direction: column;
     height: 100%;  

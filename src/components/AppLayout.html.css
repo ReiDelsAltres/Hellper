@@ -19,10 +19,6 @@
     display: flex;
 }
 
-.switchers .sidebar-toggle {
-    display: inline-flex;
-}
-
 /* On small screens (phones) hide the sidebar toggle button by default */
 @media (max-width: 600px) {
     .layout-controls .switchers .sidebar-toggle {

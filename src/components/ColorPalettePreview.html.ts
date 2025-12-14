@@ -1,12 +1,11 @@
 import { IElementHolder, Component, ReComponent, AccessType } from "@Purper";
 
-@ReComponent(
-    "./src/components/ColorPalettePreview.html",
-    "./src/components/ColorPalettePreview.html.css",
-    "./src/components/ColorPalettePreview.html.ts",
-    AccessType.BOTH,
-    "color-palette"
-)
+@ReComponent({
+    markupURL: "./src/components/ColorPalettePreview.html",
+    cssURL: "./src/components/ColorPalettePreview.html.css",
+    jsURL: "./src/components/ColorPalettePreview.html.js",
+    class: ColorPalettePreview,
+}, "color-palette")
 export default class ColorPalettePreview extends Component {
     static get observedAttributes() {
         return [

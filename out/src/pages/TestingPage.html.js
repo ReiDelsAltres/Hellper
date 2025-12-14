@@ -4,10 +4,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { AccessType, Page, RePage } from "@Purper";
+import { Page, RePage } from "@Purper";
 let TestingPage = class TestingPage extends Page {
     semestrs = [
-        new Semestr("&#8544;", []),
+        new Semestr("&#8544;", [
+            new Subject("Riyazi Analiz", "p.ü.f.d. Səmədzadə F.N", ["759ITS", "759KM"], "Математический анализ", "s1/Math.json"),
+        ]),
         new Semestr("&#8545;", [
             new Subject("InfTech", "Həsənov Elçin Qafar oğlu", ["759ITS"], "Инфоомационные технологии", "s2/FunOfIT.json"),
             new Subject("BaseProg", "Həsənov Elçin Qafar oğlu", ["759ITS"], "Основы программирования", "s2/Programming.json"),
@@ -36,7 +38,12 @@ let TestingPage = class TestingPage extends Page {
     }
 };
 TestingPage = __decorate([
-    RePage("./src/pages/TestingPage.phtml", "./src/pages/TestingPage.html.css", "./src/pages/TestingPage.html.ts", AccessType.BOTH, "/testing")
+    RePage({
+        markupURL: "./src/pages/TestingPage.phtml",
+        cssURL: "./src/pages/TestingPage.html.css",
+        jsURL: "./src/pages/TestingPage.html.ts",
+        class: TestingPage,
+    }, "/testing")
 ], TestingPage);
 export default TestingPage;
 class Semestr {

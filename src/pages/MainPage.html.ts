@@ -1,12 +1,11 @@
 import { AccessType, Page, RePage } from "@Purper";
 
-@RePage(
-    "./src/pages/MainPage.html",
-    "./src/pages/MainPage.html.css",
-    "./src/pages/MainPage.html.ts",
-    AccessType.BOTH,
-    "/"
-)
+@RePage({
+    markupURL: "./src/pages/MainPage.html",
+    cssURL: "./src/pages/MainPage.html.css",
+    jsURL: "./src/pages/MainPage.html.ts",
+    class: MainPage,
+},"/")
 export default class MainPage extends Page {
     
 }

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { AccessType, Fetcher, Page, RePage, Router } from "@Purper";
+import { Fetcher, Page, RePage, Router } from "@Purper";
 import SeededShuffle from "../lib/SeededShuffle.js";
 import { KatexUtils } from "../KatexUtils.js";
 let TestingActualPage = class TestingActualPage extends Page {
@@ -134,7 +134,12 @@ let TestingActualPage = class TestingActualPage extends Page {
     }
 };
 TestingActualPage = __decorate([
-    RePage("./src/pages/TestingActualPage.hmle", "./src/pages/TestingActualPage.html.css", "./src/pages/TestingActualPage.html.ts", AccessType.BOTH, "/testing/actual"),
+    RePage({
+        markupURL: "./src/pages/TestingActualPage.hmle",
+        cssURL: "./src/pages/TestingActualPage.html.css",
+        jsURL: "./src/pages/TestingActualPage.html.ts",
+        class: TestingActualPage,
+    }, "/testing/actual"),
     __metadata("design:paramtypes", [String])
 ], TestingActualPage);
 export default TestingActualPage;

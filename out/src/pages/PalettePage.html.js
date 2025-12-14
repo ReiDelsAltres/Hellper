@@ -1,8 +1,14 @@
 // PalettePage.html.js
 // Simplified palette page that creates color-palette components
-import { Page, setTheme } from "@Purper";
-export default class PalettePage extends Page {
-    preLoad(holder) {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Page, RePage, setTheme } from "@Purper";
+let PalettePage = class PalettePage extends Page {
+    async preLoad(holder) {
         const themeMap = {
             "blazor-theme": "Blazor",
             "brass-theme": "Brass",
@@ -41,5 +47,14 @@ export default class PalettePage extends Page {
         });
         return Promise.resolve();
     }
-}
+};
+PalettePage = __decorate([
+    RePage({
+        markupURL: "./src/pages/PalettePage.html",
+        cssURL: "./src/pages/PalettePage.html.css",
+        jsURL: "./src/pages/PalettePage.html.ts",
+        class: PalettePage,
+    }, "/palettes")
+], PalettePage);
+export default PalettePage;
 //# sourceMappingURL=PalettePage.html.js.map

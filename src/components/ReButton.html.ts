@@ -1,5 +1,11 @@
-import { IElementHolder, Component } from "@Purper";
+import { IElementHolder, Component, ReComponent } from "@Purper";
 
+@ReComponent({
+    markupURL: "./src/components/ReButton.html",
+    cssURL: "./src/components/ReButton.html.css",
+    jsURL: "./src/components/ReButton.html.js",
+    class: ReButton,
+}, "re-button")
 export default class ReButton extends Component {
     private iconSlot?: HTMLElement;
 

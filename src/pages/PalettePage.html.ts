@@ -1,10 +1,16 @@
 // PalettePage.html.js
 // Simplified palette page that creates color-palette components
 
-import { IElementHolder, Page, setTheme } from "@Purper";
+import { IElementHolder, Page, RePage, setTheme } from "@Purper";
 
+@RePage({
+    markupURL: "./src/pages/PalettePage.html",
+    cssURL: "./src/pages/PalettePage.html.css",
+    jsURL: "./src/pages/PalettePage.html.ts",
+    class: PalettePage,
+}, "/palettes")
 export default class PalettePage extends Page {
-  protected preLoad(holder: IElementHolder): Promise<void> {
+  protected async preLoad(holder: IElementHolder): Promise<void> {
         const themeMap: Record<string, string> = {
             "blazor-theme": "Blazor",
             "brass-theme": "Brass",

@@ -1,17 +1,16 @@
 import { AccessType, Component, IElementHolder, ReComponent } from "@Purper";
 import AppBar from "./AppBar.html";
 
-@ReComponent(
-    "./src/components/AppLayout.hmle",
-    "./src/components/AppLayout.html.css",
-    "./src/components/AppLayout.html.ts",
-    AccessType.BOTH,
-    "app-layout",
-    "./src/components/AppLayout.html.lt.css"
-)
+@ReComponent({
+    markupURL: "./src/components/AppLayout.hmle",
+    cssURL: "./src/components/AppLayout.html.css",
+    ltCssURL: "./src/components/AppLayout.html.lt.css",
+    jsURL: "./src/components/AppLayout.html.ts",
+    class: AppLayout,
+}, "app-layout")
 export default class AppLayout extends Component {
     static get observedAttributes() {
-        return ["sidebar-hidden", "topbar-hidden"];
+        return ["sidebar", "topbar"];
     }
 
     private sidebarBtn!: HTMLButtonElement;
@@ -21,43 +20,40 @@ export default class AppLayout extends Component {
 
     protected async preLoad(holder: IElementHolder): Promise<void> {
         // ensure the host reflects the current sidebar/topbar type so outside CSS (eg. page) can react
-        try {
-            const sType = this.sidebar?.getAttribute('type') ?? null;
-            if (sType) this.setAttribute('sidebar', sType);
+        const sType = this.sidebar?.getAttribute('type') ?? null;
+        if (sType) this.setAttribute('sidebar', sType);
 
-            const tType = this.topbar?.getAttribute('type') ?? null;
-            if (tType) this.setAttribute('topbar', tType);
-        } catch {
-            // ignore if refs are not available
-        }
+        const tType = this.topbar?.getAttribute('type') ?? null;
+        if (tType) this.setAttribute('topbar', tType);
     }
 
-    private toggleAppbar(barId: number): void {
+    private toggleAppbar(barId: number) {
         switch (barId) {
             case 0:
-                var isHidden = this.sidebar.getAttribute("type") === "hidden";
+                var isHidden = this.sidebar.hidden;
                 if (isHidden) {
-                    this.sidebar.setAttribute("type", "mini");
+                    this.sidebar.hidden = false;
                     this.setAttribute('sidebar', 'mini');
                     this.sidebarBtn.setAttribute("variant", "outlined");
                 } else {
-                    this.sidebar.setAttribute("type", "hidden");
+                    this.sidebar.hidden = true;
                     this.setAttribute('sidebar', 'hidden');
                     this.sidebarBtn.setAttribute("variant", "filled");
                 }
                 break;
-            case 1: 
-                var isHidden = this.topbar.getAttribute("type") === "hidden";
+            case 1:
+                var isHidden = this.topbar.hidden;
                 if (isHidden) {
-                    this.topbar.setAttribute("type", "mini");
+                    this.topbar.hidden = false;
                     this.setAttribute('topbar', 'mini');
                     this.topbarBtn.setAttribute("variant", "outlined");
                 } else {
-                    this.topbar.setAttribute("type", "hidden");
+                    this.topbar.hidden = true;
                     this.setAttribute('topbar', 'hidden');
                     this.topbarBtn.setAttribute("variant", "filled");
                 }
                 break;
         }
+
     }
 }

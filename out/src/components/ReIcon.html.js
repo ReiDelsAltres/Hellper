@@ -1,4 +1,11 @@
-import { Component } from "@Purper";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var ReIcon_1;
+import { Component, ReComponent } from "@Purper";
 /**
  * ReIcon — универсальный компонент иконки в стиле ReButton/ReChip
  * Содержит встроенную библиотеку Material Design иконок
@@ -16,7 +23,8 @@ import { Component } from "@Purper";
  * - flip: horizontal | vertical | both
  * - badge: текст или пустая строка для точки
  */
-export default class ReIcon extends Component {
+let ReIcon = class ReIcon extends Component {
+    static { ReIcon_1 = this; }
     iconWrapper;
     svgElement;
     /**
@@ -131,7 +139,7 @@ export default class ReIcon extends Component {
             }
             return;
         }
-        const iconConfig = ReIcon.iconLibrary.get(iconName);
+        const iconConfig = ReIcon_1.iconLibrary.get(iconName);
         if (!iconConfig) {
             console.warn(`[ReIcon] Icon "${iconName}" not found in library`);
             return;
@@ -223,13 +231,13 @@ export default class ReIcon extends Component {
      * Получить список всех доступных иконок
      */
     static getAvailableIcons() {
-        return Array.from(ReIcon.iconLibrary.keys());
+        return Array.from(ReIcon_1.iconLibrary.keys());
     }
     /**
      * Проверить, существует ли иконка в библиотеке
      */
     static hasIcon(name) {
-        return ReIcon.iconLibrary.has(name);
+        return ReIcon_1.iconLibrary.has(name);
     }
     // Публичные методы
     /**
@@ -295,5 +303,14 @@ export default class ReIcon extends Component {
             this.removeAttribute('badge');
         }
     }
-}
+};
+ReIcon = ReIcon_1 = __decorate([
+    ReComponent({
+        markupURL: "./src/components/ReIcon.html",
+        cssURL: "./src/components/ReIcon.html.css",
+        jsURL: "./src/components/ReIcon.html.js",
+        class: ReIcon,
+    }, "re-icon")
+], ReIcon);
+export default ReIcon;
 //# sourceMappingURL=ReIcon.html.js.map

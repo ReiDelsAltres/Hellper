@@ -1,4 +1,4 @@
-import { IElementHolder, Component } from "@Purper";
+import { IElementHolder, Component, ReComponent } from "@Purper";
 
 /**
  * Интерфейс для конфигурации иконок
@@ -26,6 +26,12 @@ interface IconConfig {
  * - flip: horizontal | vertical | both
  * - badge: текст или пустая строка для точки
  */
+@ReComponent({
+    markupURL: "./src/components/ReIcon.html",
+    cssURL: "./src/components/ReIcon.html.css",
+    jsURL: "./src/components/ReIcon.html.js",
+    class: ReIcon,
+}, "re-icon")
 export default class ReIcon extends Component {
     private iconWrapper?: HTMLElement;
     private svgElement?: SVGSVGElement;

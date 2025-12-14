@@ -1,14 +1,17 @@
 import { AccessType, IElementHolder, Page, RePage } from "@Purper";
 
 
-@RePage("./src/pages/TestingPage.phtml",
-    "./src/pages/TestingPage.html.css",
-    "./src/pages/TestingPage.html.ts",
-    AccessType.BOTH,
-    "/testing")
+@RePage({
+  markupURL: "./src/pages/TestingPage.phtml",
+  cssURL: "./src/pages/TestingPage.html.css",
+  jsURL: "./src/pages/TestingPage.html.ts",
+  class: TestingPage,
+}, "/testing")
 export default class TestingPage extends Page {
   private semestrs: Semestr[] = [
-    new Semestr("&#8544;", []),
+    new Semestr("&#8544;", [
+      new Subject("Riyazi Analiz", "p.ü.f.d. Səmədzadə F.N",["759ITS", "759KM"], "Математический анализ","s1/Math.json"),
+    ]),
     new Semestr("&#8545;", [
       new Subject("InfTech", "Həsənov Elçin Qafar oğlu", ["759ITS"], "Инфоомационные технологии","s2/FunOfIT.json"),
       new Subject("BaseProg", "Həsənov Elçin Qafar oğlu", ["759ITS"], "Основы программирования","s2/Programming.json"),

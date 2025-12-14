@@ -4,7 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component, ReComponent, AccessType } from "@Purper";
+import { Component, ReComponent } from "@Purper";
 let ColorPalettePreview = class ColorPalettePreview extends Component {
     static get observedAttributes() {
         return [
@@ -43,7 +43,12 @@ let ColorPalettePreview = class ColorPalettePreview extends Component {
     }
 };
 ColorPalettePreview = __decorate([
-    ReComponent("./src/components/ColorPalettePreview.html", "./src/components/ColorPalettePreview.html.css", "./src/components/ColorPalettePreview.html.ts", AccessType.BOTH, "color-palette")
+    ReComponent({
+        markupURL: "./src/components/ColorPalettePreview.html",
+        cssURL: "./src/components/ColorPalettePreview.html.css",
+        jsURL: "./src/components/ColorPalettePreview.html.js",
+        class: ColorPalettePreview,
+    }, "color-palette")
 ], ColorPalettePreview);
 export default ColorPalettePreview;
 //# sourceMappingURL=ColorPalettePreview.html.js.map

@@ -1,12 +1,11 @@
 import { IElementHolder, Component, ReComponent, AccessType } from "@Purper";
 
-@ReComponent(
-  "./src/components/ReTypography.html",
-  "./src/components/ReTypography.html.css",
-  "./src/components/ReTypography.html.ts",
-  AccessType.BOTH,
-  "re-typography"
-)
+@ReComponent({
+  markupURL: "./src/components/ReTypography.html",
+  cssURL: "./src/components/ReTypography.html.css",
+  jsURL: "./src/components/ReTypography.html.ts",
+  class: ReTypography,
+},"re-typography")
 export default class ReTypography extends Component {
   static get observedAttributes() {
     return ["variant", "weight", "color", "align", "uppercase", "truncate"];

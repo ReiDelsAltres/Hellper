@@ -4,11 +4,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { AccessType, Page, RePage } from "@Purper";
+import { Page, RePage } from "@Purper";
 let TestingAllPage = class TestingAllPage extends Page {
+    questions;
 };
 TestingAllPage = __decorate([
-    RePage("./src/pages/TestingAllPage.hmle", "./src/pages/TestingAllPage.html.css", "./src/pages/TestingAllPage.html.ts", AccessType.BOTH, "/testing/all")
+    RePage({
+        markupURL: "./src/pages/TestingAllPage.hmle",
+        cssURL: "./src/pages/TestingAllPage.html.css",
+        jsURL: "./src/pages/TestingAllPage.html.ts",
+        class: TestingAllPage,
+    }, "/testing/all")
 ], TestingAllPage);
 export default TestingAllPage;
 //# sourceMappingURL=TestingAllPage.html.js.map

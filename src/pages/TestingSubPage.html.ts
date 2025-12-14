@@ -3,11 +3,12 @@ import { Subject } from "./TestingPage.html";
 import QuestionParser from './../../tri/QuestionParser';
 import ReButton from "src/components/ReButton.html";
 
-@RePage("./src/pages/TestingSubPage.phtml",
-  "./src/pages/TestingSubPage.html.css",
-  "./src/pages/TestingSubPage.html.ts",
-  AccessType.BOTH,
-  "/testing/sub")
+@RePage({
+  markupURL: "./src/pages/TestingSubPage.phtml",
+  cssURL: "./src/pages/TestingSubPage.html.css",
+  jsURL: "./src/pages/TestingSubPage.html.ts",
+  class: TestingSubPage,
+}, "/testing/sub")
 export default class TestingSubPage extends Page {
   private subject: Subject;
   private testModes: TestMode[] = [

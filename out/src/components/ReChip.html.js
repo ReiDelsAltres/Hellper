@@ -1,5 +1,11 @@
-import { Component } from "@Purper";
-export default class ReChip extends Component {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+import { Component, ReComponent } from "@Purper";
+let ReChip = class ReChip extends Component {
     chip;
     iconSlot;
     removeSlot;
@@ -49,5 +55,14 @@ export default class ReChip extends Component {
             this.iconSlot.classList.remove('has-icon');
         }
     }
-}
+};
+ReChip = __decorate([
+    ReComponent({
+        markupURL: "./src/components/ReChip.html",
+        cssURL: "./src/components/ReChip.html.css",
+        jsURL: "./src/components/ReChip.html.js",
+        class: ReChip,
+    }, "re-chip")
+], ReChip);
+export default ReChip;
 //# sourceMappingURL=ReChip.html.js.map

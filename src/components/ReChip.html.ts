@@ -1,5 +1,11 @@
-import { IElementHolder, Component } from "@Purper";
+import { IElementHolder, Component, ReComponent } from "@Purper";
 
+@ReComponent({
+  markupURL: "./src/components/ReChip.html",
+  cssURL: "./src/components/ReChip.html.css",
+  jsURL: "./src/components/ReChip.html.js",
+  class: ReChip,
+}, "re-chip")
 export default class ReChip extends Component {
   private chip?: HTMLElement;
   private iconSlot?: HTMLElement;
