@@ -1,7 +1,7 @@
 import { AccessType, Fetcher, IElementHolder, Page, RePage, Router } from "@Purper";
 import { Subject } from "./TestingPage.html";
-import QuestionParser from './../../tri/QuestionParser';
-import ReButton from "src/components/ReButton.html";
+import ReButton from "../components/ReButton.html.js";
+import ReButtonGroup from "../components/ReButtonGroup.html.js";
 
 @RePage({
   markupURL: "./src/pages/TestingSubPage.phtml",
@@ -17,19 +17,19 @@ export default class TestingSubPage extends Page {
     new TestMode("Мазохизм", "Ты адекватный?", null, "error"),
   ];
   private activeMode: TestMode = this.testModes[1];
+  private activeTestType: string = "main";
+
+  private inputTestType?: ReButtonGroup;
 
   constructor(subject?: string) {
     super();
     this.subject = JSON.parse(decodeURIComponent(subject));
   }
-  protected async preInit(): Promise<void> {
-    
-    return Promise.resolve();
-  }
   private getAllParamsForTesting(): string {
     const params = {
       subject: this.subject,
       limits: this.activeMode.numQuestions,
+      testType: this.activeTestType,
       randomSource: null
     };
     return "/testing/actual?params=" + encodeURIComponent(JSON.stringify(params));
@@ -57,6 +57,7 @@ export default class TestingSubPage extends Page {
       // non-fatal — just log
       console.warn('Failed to load questions for subject:', e);
     }
+
     allConn.forEach((item) => {
       item.addEventListener('click', async (event) => {
         // Use currentTarget because event.target can be a child node (span, chip, svg)
@@ -123,6 +124,48 @@ export default class TestingSubPage extends Page {
   }
   protected async postLoad(holder: IElementHolder): Promise<void> {
     document.getElementById('start-test')?.setAttribute('href', this.getAllParamsForTesting());
+
+    // Listen to test type changes from button group
+    if (this.inputTestType) {
+      this.inputTestType.addEventListener('selection-change', (ev: Event) => {
+        const detail = (ev as CustomEvent).detail;
+        if (detail && detail.value) {
+          this.activeTestType = detail.value as string;
+          document.getElementById('start-test')?.setAttribute('href', this.getAllParamsForTesting());
+        }
+      });
+    }
+
+    // Toggle optionBlock open/close when Options button is clicked
+    const settingsBtn = holder.element.querySelector('.settings-item') as HTMLElement | null;
+    const optionBlock = holder.element.querySelector('.optionBlock') as HTMLElement | null;
+
+    if (settingsBtn && optionBlock) {
+      const closeOnOutside = (ev: Event) => {
+        if (!optionBlock.contains(ev.target as Node) && !settingsBtn.contains(ev.target as Node)) {
+          optionBlock.classList.remove('open');
+          settingsBtn.removeAttribute('aria-pressed');
+          settingsBtn.removeAttribute('aria-expanded');
+          document.removeEventListener('click', closeOnOutside);
+        }
+      };
+
+      settingsBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const isOpen = optionBlock.classList.toggle('open');
+        if (isOpen) {
+          settingsBtn.setAttribute('aria-pressed', 'true');
+          settingsBtn.setAttribute('aria-expanded', 'true');
+          // close when clicking outside
+          setTimeout(() => document.addEventListener('click', closeOnOutside));
+        } else {
+          settingsBtn.removeAttribute('aria-pressed');
+          settingsBtn.removeAttribute('aria-expanded');
+          document.removeEventListener('click', closeOnOutside);
+        }
+      });
+    }
+
     return Promise.resolve();
   }
 

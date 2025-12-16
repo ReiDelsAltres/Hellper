@@ -3,8 +3,9 @@ export default class TestingSubPage extends Page {
     private subject;
     private testModes;
     private activeMode;
+    private activeTestType;
+    private inputTestType?;
     constructor(subject?: string);
-    protected preInit(): Promise<void>;
     private getAllParamsForTesting;
     protected preLoad(holder: IElementHolder): Promise<void>;
     protected postLoad(holder: IElementHolder): Promise<void>;

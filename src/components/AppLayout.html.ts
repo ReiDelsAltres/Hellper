@@ -25,9 +25,20 @@ export default class AppLayout extends Component {
 
         const tType = this.topbar?.getAttribute('type') ?? null;
         if (tType) this.setAttribute('topbar', tType);
+
+        this.sidebar.addEventListener("mouseenter", (event) => {
+            this.sidebar.notifyAllChildren((el) => {
+                el.removeAttribute("mini");
+            });
+        });
+        this.sidebar.addEventListener("mouseleave", (event) => {
+            this.sidebar.notifyAllChildren((el) => {
+                el.setAttribute("mini", "");
+            });
+        });
     }
 
-    private toggleAppbar(barId: number) {
+    public toggleAppbar(barId: number) {
         switch (barId) {
             case 0:
                 var isHidden = this.sidebar.hidden;

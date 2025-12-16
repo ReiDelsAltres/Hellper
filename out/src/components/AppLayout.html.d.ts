@@ -6,6 +6,6 @@ export default class AppLayout extends Component {
     private sidebar;
     private topbar;
     protected preLoad(holder: IElementHolder): Promise<void>;
-    private toggleAppbar;
+    toggleAppbar(barId: number): void;
 }
 //# sourceMappingURL=AppLayout.html.d.ts.map

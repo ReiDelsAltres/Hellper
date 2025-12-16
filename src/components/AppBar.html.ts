@@ -64,7 +64,7 @@ export default class AppBar extends Component {
         this._noHover = value;
     }
 
-    private notifyAllChildren(not: (element: Element) => void,
+    public notifyAllChildren(not: (element: Element) => void,
         holder: Element | DocumentFragment = this as unknown as Element) {
             (holder as any).querySelectorAll("slot").forEach(slt => {
                 slt.assignedElements({ flatten: true }).forEach(not);

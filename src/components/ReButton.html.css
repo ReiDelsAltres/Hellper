@@ -449,6 +449,86 @@
 }
 /*|------------------------------------------MINI--------------------------------------|*/
 
+/*|------------------------------------------TOGGLE / SELECTED--------------------------------------|*/
+/* Toggle button - selected state */
+:host([selected]) {
+    --btn-selected-indicator: 3px;
+}
+
+/* Selected - Filled variant */
+:host([selected][variant="filled"]),
+:host([selected]:not([variant])) {
+    box-shadow: inset 0 0 0 var(--btn-selected-indicator) rgba(255, 255, 255, 0.4),
+                0 2px 8px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.9);
+}
+
+/* Selected - Outlined variant */
+:host([selected][variant="outlined"]) {
+    --btn-border: 2px solid currentColor;
+    background-color: var(--btn-text-color);
+    color: var(--color-surface, #fff);
+}
+
+/* Selected - Text variant */
+:host([selected][variant="text"]) {
+    background-color: var(--btn-text-color);
+    color: var(--color-surface, #fff);
+    --btn-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Selected colors for outlined/text variants */
+:host([selected][variant="outlined"][color="primary"]),
+:host([selected][variant="outlined"]:not([color])),
+:host([selected][variant="text"][color="primary"]),
+:host([selected][variant="text"]:not([color])) {
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+}
+
+:host([selected][variant="outlined"][color="secondary"]),
+:host([selected][variant="text"][color="secondary"]) {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-contrast);
+}
+
+:host([selected][variant="outlined"][color="tertiary"]),
+:host([selected][variant="text"][color="tertiary"]) {
+    background-color: var(--color-tertiary);
+    color: var(--color-tertiary-contrast);
+}
+
+:host([selected][variant="outlined"][color="additional"]),
+:host([selected][variant="text"][color="additional"]) {
+    background-color: var(--color-additional);
+    color: var(--color-additional-contrast);
+}
+
+:host([selected][variant="outlined"][color="success"]),
+:host([selected][variant="text"][color="success"]) {
+    background-color: var(--color-success);
+    color: var(--color-success-contrast);
+}
+
+:host([selected][variant="outlined"][color="warning"]),
+:host([selected][variant="text"][color="warning"]) {
+    background-color: var(--color-warning);
+    color: var(--color-warning-contrast);
+}
+
+:host([selected][variant="outlined"][color="error"]),
+:host([selected][variant="text"][color="error"]) {
+    background-color: var(--color-error);
+    color: var(--color-error-contrast);
+}
+
+:host([selected][variant="outlined"][color="info"]),
+:host([selected][variant="text"][color="info"]) {
+    background-color: var(--color-info);
+    color: var(--color-info-contrast);
+}
+/*|------------------------------------------TOGGLE / SELECTED--------------------------------------|*/
+
 @keyframes btn-spin {
     0% {
         transform: rotate(0deg);

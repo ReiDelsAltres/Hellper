@@ -18,8 +18,10 @@ import "./src/components/AppLayout.html.js";
 
 import "./src/components/ColorPalettePreview.html.js";
 import "./src/components/ReButton.html.js";
+import "./src/components/ReButtonGroup.html.js";
 import "./src/components/ReChip.html.js";
 import "./src/components/ReIcon.html.js";
+import "./src/components/ReCheckbox.html.js";
 import "./src/components/PopUp.html.js";
 import "./src/components/PaperComponent.html.js";
 

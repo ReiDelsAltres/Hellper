@@ -14,6 +14,6 @@ export default class AppBar extends Component {
     set orientation(value: "vertical" | "horizontal");
     set hidden(value: boolean);
     set noHover(value: boolean);
-    private notifyAllChildren;
+    notifyAllChildren(not: (element: Element) => void, holder?: Element | DocumentFragment): void;
 }
 //# sourceMappingURL=AppBar.html.d.ts.map

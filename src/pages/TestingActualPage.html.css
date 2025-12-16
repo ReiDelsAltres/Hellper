@@ -30,14 +30,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 12px;
-  min-width: 100%;
+
+  max-width: 100%;
+  min-width: 80%;
+
+  box-sizing: border-box;
 }
 
 .questions-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -46,9 +49,20 @@
 }
 
 .question-card {
-  min-width: 250px;
-  max-width: 480px;
+  position: absolute;
   box-sizing: border-box;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Fallback for no-JS: stack vertically */
+.questions-container:not(.masonry-initialized) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.questions-container:not(.masonry-initialized) .question-card {
+  position: relative;
 }
 
 .result-stats {
@@ -59,6 +73,21 @@
 
 .popH {
   margin-bottom: 16px;
+}
+
+.confirm-text {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.confirm-buttons re-button {
+  flex: 1;
 }
 
 .typo {
@@ -74,4 +103,28 @@
 
 .tt {
   white-space: pre-line;
+}
+
+/* Finish exam button container */
+.finish-exam-container {
+  position: sticky;
+  bottom: 20px;
+  margin-top: 32px;
+  padding: 16px;
+  z-index: 10;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Restart button container */
+.restart-container {
+  position: sticky;
+  bottom: 20px;
+  margin-top: 32px;
+  padding: 16px;
+  z-index: 10;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }

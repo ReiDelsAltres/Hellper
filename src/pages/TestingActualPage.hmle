@@ -1,10 +1,3 @@
-<paper-component simple="true" class="page testing-actual-page">
-    <div class="controls-row">
-        <div class="seed-indicator">UUID: <span @[ref]="seedDisplay">unknown</span></div>
-        <re-button color="primary" variant="outlined" @[onclick]="regenerateShuffle()">New shuffle</re-button>
-    </div>
-</paper-component>
-
 <pop-up @[ref]="resultPopup" modal>
     <re-typography variant="headline" class="popH">Результаты теста</re-typography>
     <div class="result-stats">
@@ -16,6 +9,15 @@
         <re-typography>Баллы: <re-chip @[ref]="resultScore">0</re-chip></re-typography>
     </div>
     <re-button color="primary" full-width @[onclick]="closeResult()">Закрыть</re-button>
+</pop-up>
+
+<pop-up @[ref]="confirmPopup" modal>
+    <re-typography variant="headline" class="popH">Завершить тест?</re-typography>
+    <re-typography class="confirm-text">После завершения вы не сможете изменить ответы.</re-typography>
+    <div class="confirm-buttons">
+        <re-button color="empty" variant="filled" @[onclick]="cancelFinish()">Отмена</re-button>
+        <re-button color="error" variant="filled" @[onclick]="confirmFinish()">Завершить</re-button>
+    </div>
 </pop-up>
 
 
@@ -41,3 +43,15 @@
     </paper-component>
     }
 </div>
+
+<paper-component simple="true" class="finish-exam-container" @[ref]="finishExamContainer">
+    <re-button color="error" variant="filled" size="large" full-width @[onclick]="finishExam()">
+        Завершить тест
+    </re-button>
+</paper-component>
+
+<paper-component simple="true" class="restart-container" @[ref]="restartContainer">
+    <re-button color="primary" variant="filled" size="large" full-width icon="refresh" @[onclick]="regenerateShuffle()">
+        Перезапустить тест
+    </re-button>
+</paper-component>

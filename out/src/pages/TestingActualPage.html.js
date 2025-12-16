@@ -14,6 +14,8 @@ let TestingActualPage = class TestingActualPage extends Page {
     params;
     questions;
     statuses = [];
+    selectedAnswers = []; // Track selected answer index per question (for exam mode)
+    isExamMode = false;
     constructor(params) {
         super();
         this.params = JSON.parse(decodeURIComponent(params));
@@ -32,6 +34,8 @@ let TestingActualPage = class TestingActualPage extends Page {
             this.questions = this.questions.slice(0, Number(this.params.limits));
         }
         this.statuses = new Array(this.questions.length).fill(AnswerStatus.UNANSWERED);
+        this.selectedAnswers = new Array(this.questions.length).fill(null);
+        this.isExamMode = this.params.testType === 'exam';
         var seed = this.params.randomSource;
         this.questions.forEach(q => {
             q.shuffleAnswers(seed);
@@ -59,9 +63,75 @@ let TestingActualPage = class TestingActualPage extends Page {
                 seedEl.textContent = String(this.params.randomSource ?? '');
         }
         catch (_) { }
+        // Show/hide finish exam button based on mode
+        const finishContainer = this['finishExamContainer'];
+        if (finishContainer) {
+            finishContainer.style.display = this.isExamMode ? 'block' : 'none';
+        }
+        // Hide restart button initially
+        const restartContainer = this['restartContainer'];
+        if (restartContainer) {
+            restartContainer.style.display = 'none';
+        }
+        // Initialize masonry layout
+        this.initMasonry();
     }
-    resolveEnding() {
-        if (this.statuses.some(s => s === AnswerStatus.UNANSWERED))
+    masonryResizeObserver;
+    initMasonry() {
+        const container = document.querySelector('.questions-container');
+        if (!container)
+            return;
+        const layoutMasonry = () => {
+            const cards = Array.from(container.querySelectorAll('.question-card'));
+            if (cards.length === 0)
+                return;
+            const containerWidth = container.clientWidth;
+            const gap = 20;
+            const minColumnWidth = 320;
+            // Calculate number of columns based on container width
+            let columns = Math.max(1, Math.floor((containerWidth + gap) / (minColumnWidth + gap)));
+            // Limit columns based on screen size
+            if (containerWidth < 600)
+                columns = 1;
+            else if (containerWidth < 900)
+                columns = Math.min(columns, 2);
+            else if (containerWidth < 1200)
+                columns = Math.min(columns, 3);
+            else if (containerWidth < 1600)
+                columns = Math.min(columns, 4);
+            else
+                columns = Math.min(columns, 5);
+            const columnWidth = (containerWidth - gap * (columns - 1)) / columns;
+            const columnHeights = new Array(columns).fill(0);
+            cards.forEach((card) => {
+                // Find the shortest column
+                const shortestColumn = columnHeights.indexOf(Math.min(...columnHeights));
+                // Position the card
+                const x = shortestColumn * (columnWidth + gap);
+                const y = columnHeights[shortestColumn];
+                card.style.width = `${columnWidth}px`;
+                card.style.transform = `translate(${x}px, ${y}px)`;
+                // Update column height
+                columnHeights[shortestColumn] += card.offsetHeight + gap;
+            });
+            // Set container height
+            container.style.height = `${Math.max(...columnHeights) - gap}px`;
+            container.classList.add('masonry-initialized');
+        };
+        // Initial layout after a small delay to ensure cards are rendered
+        requestAnimationFrame(() => {
+            layoutMasonry();
+        });
+        // Re-layout on resize
+        this.masonryResizeObserver = new ResizeObserver(() => {
+            layoutMasonry();
+        });
+        this.masonryResizeObserver.observe(container);
+        // Also listen for window resize as backup
+        window.addEventListener('resize', layoutMasonry);
+    }
+    resolveEnding(forceShow = false) {
+        if (!forceShow && this.statuses.some(s => s === AnswerStatus.UNANSWERED))
             return;
         const correct = this.statuses.filter(s => s === AnswerStatus.SUCCESS).length;
         const wrong = this.statuses.filter(s => s === AnswerStatus.WRONG).length;
@@ -81,43 +151,146 @@ let TestingActualPage = class TestingActualPage extends Page {
     }
     closeResult() {
         this['resultPopup'].close();
+        // Show restart button after closing results
+        const restartContainer = this['restartContainer'];
+        if (restartContainer) {
+            restartContainer.style.display = 'block';
+        }
+        // Hide finish exam button if it was visible
+        const finishContainer = this['finishExamContainer'];
+        if (finishContainer) {
+            finishContainer.style.display = 'none';
+        }
     }
     handleClick(event, element, params) {
         const { qidx, aidx, c0, c1, c2 } = params;
         console.log('Clicked answer:', params);
-        for (const c of [c0, c1, c2]) {
-            const chip = this[c];
-            chip.setAttribute("disabled", "true");
-        }
-        for (let i = 0; i < 6; i++) {
-            const tt = this[qidx + "-" + i];
-            tt.setAttribute("disabled", "true");
-            if (tt === element)
-                continue;
-            const question = this.questions[qidx];
-            switch (i) {
-                case question.RDd:
-                    tt.setAttribute('color', 'success');
-                    tt.setAttribute("variant", "outlined");
-                    break;
+        const question = this.questions[qidx];
+        if (this.isExamMode) {
+            // Exam mode: just select the answer, don't reveal correctness
+            // Remove 'selected' from all answers in this question
+            for (let i = 0; i < question.Answers.length; i++) {
+                const btn = this[qidx + "-" + i];
+                if (btn) {
+                    btn.removeAttribute('selected');
+                }
+            }
+            // Mark clicked answer as selected
+            element.setAttribute('selected', '');
+            this.selectedAnswers[qidx] = aidx;
+            // Update status silently (will be revealed later)
+            if (aidx === question.RDd) {
+                this.statuses[qidx] = AnswerStatus.SUCCESS;
+            }
+            else if (aidx === question.Answers.length - 1) {
+                this.statuses[qidx] = AnswerStatus.SKIP;
+            }
+            else {
+                this.statuses[qidx] = AnswerStatus.WRONG;
             }
         }
-        const question = this.questions[qidx];
-        switch (aidx) {
-            case question.RDd:
-                element.setAttribute('color', 'success');
-                this.statuses[qidx] = AnswerStatus.SUCCESS;
-                break;
-            case question.Answers.length - 1:
-                element.setAttribute('color', 'warning');
-                this.statuses[qidx] = AnswerStatus.SKIP;
-                break;
-            default:
-                element.setAttribute('color', 'error');
-                this.statuses[qidx] = AnswerStatus.WRONG;
-                break;
+        else {
+            // Normal mode: disable and show colors immediately
+            for (const c of [c0, c1, c2]) {
+                const chip = this[c];
+                chip.setAttribute("disabled", "true");
+            }
+            for (let i = 0; i < 6; i++) {
+                const tt = this[qidx + "-" + i];
+                if (!tt)
+                    continue;
+                tt.setAttribute("disabled", "true");
+                if (tt === element)
+                    continue;
+                if (i === question.RDd) {
+                    tt.setAttribute('color', 'success');
+                    tt.setAttribute("variant", "outlined");
+                }
+            }
+            switch (aidx) {
+                case question.RDd:
+                    element.setAttribute('color', 'success');
+                    this.statuses[qidx] = AnswerStatus.SUCCESS;
+                    break;
+                case question.Answers.length - 1:
+                    element.setAttribute('color', 'warning');
+                    this.statuses[qidx] = AnswerStatus.SKIP;
+                    break;
+                default:
+                    element.setAttribute('color', 'error');
+                    this.statuses[qidx] = AnswerStatus.WRONG;
+                    break;
+            }
+            this.resolveEnding();
         }
-        this.resolveEnding();
+    }
+    /**
+     * Показать popup подтверждения завершения экзамена
+     */
+    finishExam() {
+        if (!this.isExamMode)
+            return;
+        this['confirmPopup'].open();
+    }
+    /**
+     * Отменить завершение экзамена
+     */
+    cancelFinish() {
+        this['confirmPopup'].close();
+    }
+    /**
+     * Подтвердить завершение экзамена - показать все результаты
+     */
+    confirmFinish() {
+        this['confirmPopup'].close();
+        // Mark unanswered questions as skipped
+        for (let qidx = 0; qidx < this.questions.length; qidx++) {
+            if (this.selectedAnswers[qidx] === null) {
+                this.statuses[qidx] = AnswerStatus.SKIP;
+            }
+        }
+        // Reveal all answers
+        for (let qidx = 0; qidx < this.questions.length; qidx++) {
+            const question = this.questions[qidx];
+            const selectedIdx = this.selectedAnswers[qidx];
+            // Disable chips
+            for (const suffix of ['0', '1', '2']) {
+                const chip = this['c' + qidx + '-' + suffix];
+                if (chip)
+                    chip.setAttribute('disabled', 'true');
+            }
+            // Process all answer buttons
+            for (let i = 0; i < question.Answers.length; i++) {
+                const btn = this[qidx + '-' + i];
+                if (!btn)
+                    continue;
+                btn.setAttribute('disabled', 'true');
+                btn.removeAttribute('selected');
+                // Show correct answer
+                if (i === question.RDd) {
+                    if (selectedIdx === i) {
+                        // User selected the correct answer
+                        btn.setAttribute('color', 'success');
+                    }
+                    else {
+                        // Show correct answer that wasn't selected
+                        btn.setAttribute('color', 'success');
+                        btn.setAttribute('variant', 'outlined');
+                    }
+                }
+                else if (selectedIdx === i) {
+                    // User selected this wrong answer
+                    if (i === question.Answers.length - 1) {
+                        btn.setAttribute('color', 'warning'); // Skip
+                    }
+                    else {
+                        btn.setAttribute('color', 'error'); // Wrong
+                    }
+                }
+            }
+        }
+        // Show results popup
+        this.resolveEnding(true);
     }
     // Regenerate a new randomSource and reload this page via SPA router (no full browser reload)
     regenerateShuffle() {

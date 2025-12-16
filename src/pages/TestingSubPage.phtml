@@ -29,6 +29,12 @@
             Options
         </re-button>
     </div>
+    <paper-component @[ref]="optionBlock" class="optionBlock">
+        <re-button-group @[ref]="inputTestType" selection="single" value="main">
+            <re-button value="main" color="primary">Основной режим</re-button>
+            <re-button value="exam" color="tertiary">Экзаменационный режим</re-button>
+        </re-button-group>
+    </paper-component>
 
     <re-button variant="outlined" color="tertiary" full-width class="start-button" id="start-test" data-link>
         ЗАПУСТИТЬ

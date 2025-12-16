@@ -10,7 +10,8 @@ let ReButton = class ReButton extends Component {
     static get observedAttributes() {
         return [
             'variant', 'size', 'color', 'icon', 'disabled',
-            'loading', 'full-width', 'type', 'href', "mini"
+            'loading', 'full-width', 'type', 'href', 'mini',
+            'toggle', 'selected'
         ];
     }
     preLoad(holder) {
@@ -83,6 +84,10 @@ let ReButton = class ReButton extends Component {
             event.stopPropagation();
             return;
         }
+        // Toggle mode - переключаем selected
+        if (this.hasAttribute('toggle')) {
+            this.toggleSelected();
+        }
         // Эмитируем кастомное событие
         this.dispatchEvent(new CustomEvent('button-click', {
             detail: {
@@ -95,6 +100,42 @@ let ReButton = class ReButton extends Component {
         }));
     }
     // Публичные методы для управления состоянием кнопки
+    /**
+     * Переключить selected состояние (для toggle режима)
+     */
+    toggleSelected() {
+        if (this.hasAttribute('selected')) {
+            this.removeAttribute('selected');
+        }
+        else {
+            this.setAttribute('selected', '');
+        }
+        this.dispatchEvent(new CustomEvent('toggle-change', {
+            detail: {
+                selected: this.hasAttribute('selected'),
+                value: this.getAttribute('value') || this.textContent?.trim()
+            },
+            bubbles: true,
+            cancelable: true
+        }));
+    }
+    /**
+     * Проверить, выбрана ли кнопка
+     */
+    isSelected() {
+        return this.hasAttribute('selected');
+    }
+    /**
+     * Установить selected состояние
+     */
+    setSelected(selected) {
+        if (selected) {
+            this.setAttribute('selected', '');
+        }
+        else {
+            this.removeAttribute('selected');
+        }
+    }
     /**
      * Показать состояние загрузки
      */

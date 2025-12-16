@@ -8,6 +8,18 @@ export default class ReButton extends Component {
     private updateIcon;
     private handleClick;
     /**
+     * Переключить selected состояние (для toggle режима)
+     */
+    toggleSelected(): void;
+    /**
+     * Проверить, выбрана ли кнопка
+     */
+    isSelected(): boolean;
+    /**
+     * Установить selected состояние
+     */
+    setSelected(selected: boolean): void;
+    /**
      * Показать состояние загрузки
      */
     showLoading(): void;

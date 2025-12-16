@@ -16,17 +16,17 @@ let TestingSubPage = class TestingSubPage extends Page {
         new TestMode("Мазохизм", "Ты адекватный?", null, "error"),
     ];
     activeMode = this.testModes[1];
+    activeTestType = "main";
+    inputTestType;
     constructor(subject) {
         super();
         this.subject = JSON.parse(decodeURIComponent(subject));
-    }
-    async preInit() {
-        return Promise.resolve();
     }
     getAllParamsForTesting() {
         const params = {
             subject: this.subject,
             limits: this.activeMode.numQuestions,
+            testType: this.activeTestType,
             randomSource: null
         };
         return "/testing/actual?params=" + encodeURIComponent(JSON.stringify(params));
@@ -114,6 +114,44 @@ let TestingSubPage = class TestingSubPage extends Page {
     }
     async postLoad(holder) {
         document.getElementById('start-test')?.setAttribute('href', this.getAllParamsForTesting());
+        // Listen to test type changes from button group
+        if (this.inputTestType) {
+            this.inputTestType.addEventListener('selection-change', (ev) => {
+                const detail = ev.detail;
+                if (detail && detail.value) {
+                    this.activeTestType = detail.value;
+                    document.getElementById('start-test')?.setAttribute('href', this.getAllParamsForTesting());
+                }
+            });
+        }
+        // Toggle optionBlock open/close when Options button is clicked
+        const settingsBtn = holder.element.querySelector('.settings-item');
+        const optionBlock = holder.element.querySelector('.optionBlock');
+        if (settingsBtn && optionBlock) {
+            const closeOnOutside = (ev) => {
+                if (!optionBlock.contains(ev.target) && !settingsBtn.contains(ev.target)) {
+                    optionBlock.classList.remove('open');
+                    settingsBtn.removeAttribute('aria-pressed');
+                    settingsBtn.removeAttribute('aria-expanded');
+                    document.removeEventListener('click', closeOnOutside);
+                }
+            };
+            settingsBtn.addEventListener('click', (ev) => {
+                ev.stopPropagation();
+                const isOpen = optionBlock.classList.toggle('open');
+                if (isOpen) {
+                    settingsBtn.setAttribute('aria-pressed', 'true');
+                    settingsBtn.setAttribute('aria-expanded', 'true');
+                    // close when clicking outside
+                    setTimeout(() => document.addEventListener('click', closeOnOutside));
+                }
+                else {
+                    settingsBtn.removeAttribute('aria-pressed');
+                    settingsBtn.removeAttribute('aria-expanded');
+                    document.removeEventListener('click', closeOnOutside);
+                }
+            });
+        }
         return Promise.resolve();
     }
     /**
