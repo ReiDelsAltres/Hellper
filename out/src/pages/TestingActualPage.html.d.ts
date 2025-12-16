@@ -7,8 +7,14 @@ export default class TestingActualPage extends Page {
     protected preInit(): Promise<void>;
     protected postLoad(holder: IElementHolder): Promise<void>;
     private resolveEnding;
-    private closeResult;
-    private handleClick;
+    closeResult(): void;
+    handleClick(event: Event, element: HTMLElement, params: {
+        qidx: number;
+        aidx: number;
+        c0: string;
+        c1: string;
+        c2: string;
+    }): void;
     private regenerateShuffle;
 }
 //# sourceMappingURL=TestingActualPage.html.d.ts.map

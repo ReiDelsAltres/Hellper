@@ -14,6 +14,7 @@ import PopUp from "../components/PopUp.html.js";
 export default class TestingActualPage extends Page {
     private params: {
         subject: Subject,
+        type: string,
         limits: number,
         randomSource: string
     };
@@ -95,11 +96,11 @@ export default class TestingActualPage extends Page {
         (this['resultPopup'] as PopUp).open();
     }
 
-    private closeResult(): void {
+    public closeResult(): void {
         (this['resultPopup'] as PopUp).close();
     }
 
-    private handleClick(event: Event, element: HTMLElement, 
+    public handleClick(event: Event, element: HTMLElement, 
         params: { qidx: number, aidx: number, c0: string, c1: string, c2: string }): void {
         
         const { qidx, aidx, c0, c1, c2 } = params;
