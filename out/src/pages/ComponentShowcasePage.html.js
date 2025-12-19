@@ -48,6 +48,54 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
             if (output)
                 output.textContent = '';
         });
+        // Number validation demo
+        const numberValidationMsg = root.querySelector('#number-validation-msg');
+        ['#input-number-range', '#input-number-step', '#input-number-large'].forEach(selector => {
+            const input = root.querySelector(selector);
+            input?.addEventListener('input-validate', (e) => {
+                const detail = e.detail;
+                if (numberValidationMsg) {
+                    numberValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    numberValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
+        });
+        // Date validation demo
+        const dateValidationMsg = root.querySelector('#date-validation-msg');
+        ['#input-date-any', '#input-date-2024', '#input-date-past'].forEach(selector => {
+            const input = root.querySelector(selector);
+            input?.addEventListener('input-validate', (e) => {
+                const detail = e.detail;
+                if (dateValidationMsg) {
+                    dateValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    dateValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
+        });
+        // Length validation demo
+        const lengthValidationMsg = root.querySelector('#length-validation-msg');
+        ['#input-length-range', '#input-length-max', '#input-length-min'].forEach(selector => {
+            const input = root.querySelector(selector);
+            input?.addEventListener('input-validate', (e) => {
+                const detail = e.detail;
+                if (lengthValidationMsg) {
+                    lengthValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    lengthValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
+        });
+        // Pattern validation demo
+        const patternValidationMsg = root.querySelector('#pattern-validation-msg');
+        ['#input-pattern-letters', '#input-pattern-phone', '#input-pattern-email'].forEach(selector => {
+            const input = root.querySelector(selector);
+            input?.addEventListener('input-validate', (e) => {
+                const detail = e.detail;
+                if (patternValidationMsg) {
+                    patternValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    patternValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
+        });
         return Promise.resolve();
     }
 };

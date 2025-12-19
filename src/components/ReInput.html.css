@@ -11,7 +11,7 @@
     box-sizing: border-box;
 
     /* Typography */
-    font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+    font-family: var(--font-family);
     font-size: var(--input-font-size, 0.875rem);
     font-weight: 400;
     line-height: 1;
@@ -24,8 +24,8 @@
     min-height: var(--input-min-height);
     min-width: var(--input-min-width, 120px);
 
-    background-color: var(--input-bg-color, transparent);
-    color: var(--input-text-color, var(--color-on-surface, #1a1a1a));
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
 
     /* Effects */
     cursor: text;
@@ -55,7 +55,7 @@
 
 /* Readonly state */
 :host([readonly]) {
-    background-color: var(--color-surface-variant, rgba(0,0,0,0.04));
+    background-color: var(--color-surface);
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -84,7 +84,8 @@ input {
 }
 
 input::placeholder {
-    color: var(--color-on-surface-variant, rgba(0,0,0,0.5));
+    color: var(--input-text-color);
+    opacity: 0.5;
 }
 
 /* Icon slot */
@@ -132,78 +133,181 @@ input::placeholder {
 :host([variant="outlined"]),
 :host(:not([variant])) {
     --input-bg-color: transparent;
-    --input-border: 1px solid var(--color-outline, rgba(0,0,0,0.23));
+    --input-border: 1px solid var(--color-empty);
+    --input-text-color: var(--color-empty-contrast);
+}
+
+:host([variant="outlined"]:hover),
+:host(:not([variant]):hover) {
+    border-color: var(--color-primary);
+}
+
+:host([variant="outlined"].focused),
+:host(:not([variant]).focused) {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-hover);
 }
 
 /* Filled */
 :host([variant="filled"]) {
-    --input-bg-color: var(--color-surface-variant, rgba(0,0,0,0.06));
-    --input-border: none;
-    border-radius: var(--input-border-radius, 8px) var(--input-border-radius, 8px) 0 0;
-    border-bottom: 2px solid var(--color-outline, rgba(0,0,0,0.42));
+    --input-bg-color: var(--surface-dark);
+    --input-border: 1px solid transparent;
+    --input-text-color: var(--color-empty-contrast);
 }
 
 :host([variant="filled"]:hover) {
-    --input-bg-color: var(--color-surface-variant-hover, rgba(0,0,0,0.09));
+    --input-bg-color: var(--surface);
+    border-color: var(--color-primary);
 }
 
 :host([variant="filled"].focused) {
-    border-bottom-color: var(--color-primary, #1976d2);
-    box-shadow: none;
+    --input-bg-color: var(--surface);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-hover);
 }
 
-/* Text (minimal) */
+/* Text (underline only) */
 :host([variant="text"]) {
     --input-bg-color: transparent;
     --input-border: none;
-    --input-shadow: none;
-    border-bottom: 1px solid var(--color-outline, rgba(0,0,0,0.23));
+    --input-text-color: var(--color-empty-contrast);
     border-radius: 0;
+    border-bottom: 1px solid var(--color-empty);
+}
+
+:host([variant="text"]:hover) {
+    border-bottom-color: var(--color-primary);
 }
 
 :host([variant="text"].focused) {
-    border-bottom-color: var(--color-primary, #1976d2);
+    border-bottom-color: var(--color-primary);
     box-shadow: none;
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Colors
+   Colors (override focus states per color)
    ───────────────────────────────────────────────────────────── */
 
 :host([color="primary"]),
 :host(:not([color])) {
     --input-focus-border-color: var(--color-primary);
-    --input-focus-shadow: 0 0 0 3px var(--color-primary-container, rgba(25, 118, 210, 0.15));
+    --input-focus-shadow: 0 0 0 2px var(--color-primary-hover);
 }
 
 :host([color="secondary"]) {
     --input-focus-border-color: var(--color-secondary);
-    --input-focus-shadow: 0 0 0 3px var(--color-secondary-container, rgba(156, 39, 176, 0.15));
+    --input-focus-shadow: 0 0 0 2px var(--color-secondary-hover);
 }
 
 :host([color="tertiary"]) {
     --input-focus-border-color: var(--color-tertiary);
-    --input-focus-shadow: 0 0 0 3px var(--color-tertiary-container, rgba(0, 150, 136, 0.15));
+    --input-focus-shadow: 0 0 0 2px var(--color-tertiary-hover);
+}
+
+:host([color="additional"]) {
+    --input-focus-border-color: var(--color-additional);
+    --input-focus-shadow: 0 0 0 2px var(--color-additional-hover);
 }
 
 :host([color="success"]) {
     --input-focus-border-color: var(--color-success);
-    --input-focus-shadow: 0 0 0 3px var(--color-success-container, rgba(76, 175, 80, 0.15));
+    --input-focus-shadow: 0 0 0 2px var(--color-success-hover);
 }
 
 :host([color="warning"]) {
     --input-focus-border-color: var(--color-warning);
-    --input-focus-shadow: 0 0 0 3px var(--color-warning-container, rgba(255, 152, 0, 0.15));
+    --input-focus-shadow: 0 0 0 2px var(--color-warning-hover);
 }
 
 :host([color="error"]) {
     --input-focus-border-color: var(--color-error);
-    --input-focus-shadow: 0 0 0 3px var(--color-error-container, rgba(244, 67, 54, 0.15));
+    --input-focus-shadow: 0 0 0 2px var(--color-error-hover);
 }
 
 :host([color="info"]) {
     --input-focus-border-color: var(--color-info);
-    --input-focus-shadow: 0 0 0 3px var(--color-info-container, rgba(33, 150, 243, 0.15));
+    --input-focus-shadow: 0 0 0 2px var(--color-info-hover);
+}
+
+:host([color="empty"]) {
+    --input-focus-border-color: var(--color-empty);
+    --input-focus-shadow: 0 0 0 2px var(--color-empty-hover);
+}
+
+/* Apply color to border on hover and focus */
+:host([color="secondary"]:hover),
+:host([color="secondary"].focused) {
+    border-color: var(--color-secondary);
+}
+
+:host([color="tertiary"]:hover),
+:host([color="tertiary"].focused) {
+    border-color: var(--color-tertiary);
+}
+
+:host([color="additional"]:hover),
+:host([color="additional"].focused) {
+    border-color: var(--color-additional);
+}
+
+:host([color="success"]:hover),
+:host([color="success"].focused) {
+    border-color: var(--color-success);
+}
+
+:host([color="warning"]:hover),
+:host([color="warning"].focused) {
+    border-color: var(--color-warning);
+}
+
+:host([color="error"]:hover),
+:host([color="error"].focused) {
+    border-color: var(--color-error);
+}
+
+:host([color="info"]:hover),
+:host([color="info"].focused) {
+    border-color: var(--color-info);
+}
+
+:host([color="empty"]:hover),
+:host([color="empty"].focused) {
+    border-color: var(--color-empty);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Validation States
+   ───────────────────────────────────────────────────────────── */
+
+/* Valid state */
+:host(.valid) {
+    --input-border-color: var(--color-success);
+}
+
+:host(.valid:not(.focused)) {
+    border-color: var(--color-success);
+}
+
+/* Invalid state */
+:host(.invalid) {
+    --input-border-color: var(--color-error);
+    animation: shake 0.3s ease-in-out;
+}
+
+:host(.invalid:not(.focused)) {
+    border-color: var(--color-error);
+}
+
+:host(.invalid.focused) {
+    --input-focus-border-color: var(--color-error);
+    --input-focus-shadow: 0 0 0 3px var(--color-error-hover);
+    border-color: var(--color-error);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-4px); }
+    40%, 80% { transform: translateX(4px); }
 }
 
 /* ─────────────────────────────────────────────────────────────

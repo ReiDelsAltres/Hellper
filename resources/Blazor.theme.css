@@ -1,4 +1,6 @@
 .blazor-theme {
+    --font-familu: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
     --color-empty: #32333d;
     --color-empty-contrast: rgb(191, 208, 216);
     --color-empty-hover: color-mix(in srgb, var(--color-empty) 60%, black);
@@ -62,9 +64,11 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e
     --app-background-position: none;
     --app-background-image: none
         /*repeating-radial-gradient(circle at 0 0, transparent 0, var(--surface) 35px),
-        repeating-linear-gradient(var(--color-primary), var(--surface))*/;
+        repeating-linear-gradient(var(--color-primary), var(--surface))*/
+    ;
     --app-background-color: #3e3878;
-    /*color-mix(in srgb, var(--color-primary) 10%, black)*/;
+    /*color-mix(in srgb, var(--color-primary) 10%, black)*/
+    ;
 
     --app-bars-background-size: none;
     --app-bars-background-position: none;
@@ -75,7 +79,8 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e
     --paper-background-position: auto;
     --paper-background-image: none
         /*repeating-radial-gradient(circle at 0 0, transparent 0, var(--surface) 35px),
-        repeating-linear-gradient(var(--surface-dark), var(--surface))*/;
+        repeating-linear-gradient(var(--surface-dark), var(--surface))*/
+    ;
     --paper-background-color: var(--surface);
 
     --paper-border-top-left-radius: 15px;

@@ -28,6 +28,7 @@ let TestingActualPage = class TestingActualPage extends Page {
         const jj = await Fetcher.fetchJSON('./resources/data' + '/' + this.params.subject.file);
         var i = 1;
         this.questions = jj.Questions
+            .slice(this.params.startFrom ?? 0, this.params.endAt ?? undefined)
             .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
         this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
         if (this.params.limits && this.params.limits > 0) {

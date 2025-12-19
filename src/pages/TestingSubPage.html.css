@@ -93,6 +93,33 @@ re-button.mode-item {
   pointer-events: auto;
 }
 
+/* Option inputs */
+.option-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 0 8px;
+}
+
+.option-input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.option-input-row label {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary, #666);
+  font-weight: 500;
+}
+
+.option-input-row re-input {
+  width: 100%;
+}
+
 /* Ensure options and settings button behave nicely on small screens */
 @media (max-width: 480px) {
   .optionBlock.open {

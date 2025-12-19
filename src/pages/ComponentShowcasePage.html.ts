@@ -1,5 +1,6 @@
 import { IElementHolder, Page, RePage } from "@Purper";
 import PopUp from "../components/PopUp.html.js";
+import ReInput from "../components/ReInput.html.js";
 
 
 @RePage({
@@ -54,6 +55,58 @@ export default class ComponentShowcasePage extends Page {
             // @ts-ignore
             (interactiveInput as any).setValue?.('');
             if (output) output.textContent = '';
+        });
+
+        // Number validation demo
+        const numberValidationMsg = root.querySelector('#number-validation-msg') as HTMLElement | null;
+        ['#input-number-range', '#input-number-step', '#input-number-large'].forEach(selector => {
+            const input = root.querySelector(selector) as ReInput | null;
+            input?.addEventListener('input-validate', (e: Event) => {
+                const detail = (e as CustomEvent).detail;
+                if (numberValidationMsg) {
+                    numberValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    numberValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
+        });
+
+        // Date validation demo
+        const dateValidationMsg = root.querySelector('#date-validation-msg') as HTMLElement | null;
+        ['#input-date-any', '#input-date-2024', '#input-date-past'].forEach(selector => {
+            const input = root.querySelector(selector) as ReInput | null;
+            input?.addEventListener('input-validate', (e: Event) => {
+                const detail = (e as CustomEvent).detail;
+                if (dateValidationMsg) {
+                    dateValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    dateValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
+        });
+
+        // Length validation demo
+        const lengthValidationMsg = root.querySelector('#length-validation-msg') as HTMLElement | null;
+        ['#input-length-range', '#input-length-max', '#input-length-min'].forEach(selector => {
+            const input = root.querySelector(selector) as ReInput | null;
+            input?.addEventListener('input-validate', (e: Event) => {
+                const detail = (e as CustomEvent).detail;
+                if (lengthValidationMsg) {
+                    lengthValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    lengthValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
+        });
+
+        // Pattern validation demo
+        const patternValidationMsg = root.querySelector('#pattern-validation-msg') as HTMLElement | null;
+        ['#input-pattern-letters', '#input-pattern-phone', '#input-pattern-email'].forEach(selector => {
+            const input = root.querySelector(selector) as ReInput | null;
+            input?.addEventListener('input-validate', (e: Event) => {
+                const detail = (e as CustomEvent).detail;
+                if (patternValidationMsg) {
+                    patternValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    patternValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
+                }
+            });
         });
 
         return Promise.resolve();

@@ -5,6 +5,11 @@ export default class TestingSubPage extends Page {
     private activeMode;
     private activeTestType;
     private inputTestType?;
+    private inputStartFrom?;
+    private inputQuestionCount?;
+    private inputEndAt?;
+    private totalQuestions;
+    private modeElements?;
     constructor(subject?: string);
     private getAllParamsForTesting;
     protected preLoad(holder: IElementHolder): Promise<void>;

@@ -3,6 +3,9 @@ export default class ReInput extends Component {
     private input?;
     private icon?;
     private clearBtn?;
+    private errorMsg?;
+    private _isValid;
+    private _validationMessage;
     static get observedAttributes(): string[];
     protected preLoad(holder: IElementHolder): Promise<void>;
     private updateInput;
@@ -14,6 +17,8 @@ export default class ReInput extends Component {
     private handleChange;
     private handleFocus;
     private handleBlur;
+    private handleKeydown;
+    private validate;
     /** Получить текущее значение */
     getValue(): string;
     /** Установить значение */
@@ -32,11 +37,23 @@ export default class ReInput extends Component {
     setIcon(iconName: string): void;
     /** Установить placeholder */
     setPlaceholder(text: string): void;
-    /** Установить вариант */
-    setVariant(variant: 'filled' | 'outlined' | 'text'): void;
     /** Установить цвет */
     setColor(color: 'primary' | 'secondary' | 'tertiary' | 'additional' | 'success' | 'warning' | 'error' | 'info'): void;
     /** Установить размер */
     setSize(size: 'small' | 'medium' | 'large'): void;
+    /** Проверить валидность значения */
+    isValid(): boolean;
+    /** Получить сообщение об ошибке валидации */
+    getValidationMessage(): string;
+    /** Установить ограничение для чисел */
+    setNumberRange(min?: number, max?: number, step?: number): void;
+    /** Установить ограничение для даты */
+    setDateRange(min?: string, max?: string): void;
+    /** Установить ограничение длины строки */
+    setLengthRange(minlength?: number, maxlength?: number): void;
+    /** Установить паттерн валидации */
+    setPattern(pattern: string, title?: string): void;
+    /** Сбросить состояние валидации */
+    resetValidation(): void;
 }
 //# sourceMappingURL=ReInput.html.d.ts.map

@@ -18,28 +18,53 @@ let TestingSubPage = class TestingSubPage extends Page {
     activeMode = this.testModes[1];
     activeTestType = "main";
     inputTestType;
+    inputStartFrom;
+    inputQuestionCount;
+    inputEndAt;
+    totalQuestions = 0;
+    modeElements;
     constructor(subject) {
         super();
         this.subject = JSON.parse(decodeURIComponent(subject));
     }
     getAllParamsForTesting() {
+        const startFrom = this.inputStartFrom?.getValue() ? parseInt(this.inputStartFrom.getValue(), 10) : null;
+        const questionCount = this.inputQuestionCount?.getValue() ? parseInt(this.inputQuestionCount.getValue(), 10) : null;
+        const endAt = this.inputEndAt?.getValue() ? parseInt(this.inputEndAt.getValue(), 10) : null;
         const params = {
             subject: this.subject,
-            limits: this.activeMode.numQuestions,
+            limits: questionCount ?? this.activeMode.numQuestions,
             testType: this.activeTestType,
-            randomSource: null
+            randomSource: null,
+            startFrom: startFrom,
+            endAt: endAt
         };
         return "/testing/actual?params=" + encodeURIComponent(JSON.stringify(params));
     }
     async preLoad(holder) {
         var allConn = holder.element.querySelectorAll('.mode-item');
+        this.modeElements = allConn;
         // Fetch questions count for the massochism mode and update UI immediately
         // We await here so the initial render will show the correct number right after preLoad resolves.
         try {
             if (this.subject && this.subject.file) {
                 const data = await Fetcher.fetchJSON('./resources/data' + '/' + this.subject.file);
                 if (data && Array.isArray(data.Questions)) {
-                    this.testModes[2].numQuestions = data.Questions.length;
+                    this.totalQuestions = data.Questions.length;
+                    this.testModes[2].numQuestions = this.totalQuestions;
+                    // Update max values for inputs
+                    if (this.inputStartFrom) {
+                        this.inputStartFrom.setAttribute('max', String(this.totalQuestions));
+                        this.inputStartFrom.setAttribute('placeholder', '1');
+                    }
+                    if (this.inputQuestionCount) {
+                        this.inputQuestionCount.setAttribute('max', String(this.totalQuestions));
+                        this.inputQuestionCount.setAttribute('placeholder', String(this.totalQuestions));
+                    }
+                    if (this.inputEndAt) {
+                        this.inputEndAt.setAttribute('max', String(this.totalQuestions));
+                        this.inputEndAt.setAttribute('placeholder', String(this.totalQuestions));
+                    }
                     // Update UI chip for the masochism mode if present in DOM
                     const masEl = holder.element.querySelector(`.mode-item[data-mode="${this.testModes[2].name}"]`);
                     if (masEl) {
@@ -70,6 +95,11 @@ let TestingSubPage = class TestingSubPage extends Page {
                     return;
                 }
                 this.activeMode = newMode;
+                // Update question count placeholder based on selected mode
+                if (this.inputQuestionCount) {
+                    this.inputQuestionCount.setValue('');
+                    this.inputQuestionCount.setAttribute('placeholder', String(this.activeMode.numQuestions ?? this.totalQuestions));
+                }
                 // apply color and variants to mode-items only when we have a valid activeMode
                 allConn.forEach((el) => {
                     // leave settings button untouched
@@ -94,6 +124,10 @@ let TestingSubPage = class TestingSubPage extends Page {
         // Ensure initial colors and variants reflect currently active mode
         const initialMode = this.activeMode ?? this.testModes[0];
         if (initialMode) {
+            // Set initial question count placeholder
+            if (this.inputQuestionCount) {
+                this.inputQuestionCount.setAttribute('placeholder', String(initialMode.numQuestions ?? this.totalQuestions));
+            }
             allConn.forEach((el) => {
                 // leave settings button untouched
                 el.setAttribute('color', initialMode.colorP);
@@ -124,6 +158,26 @@ let TestingSubPage = class TestingSubPage extends Page {
                 }
             });
         }
+        // Listen to input changes for question range
+        const updateHref = () => {
+            document.getElementById('start-test')?.setAttribute('href', this.getAllParamsForTesting());
+        };
+        this.inputStartFrom?.addEventListener('input-change', updateHref);
+        this.inputQuestionCount?.addEventListener('input-change', (ev) => {
+            updateHref();
+            const detail = ev.detail;
+            const value = detail?.value;
+            // If user manually entered a value, deselect all modes and set info color
+            if (value && value.length > 0) {
+                this.modeElements?.forEach((el) => {
+                    if (el.classList.contains('settings-item'))
+                        return;
+                    el.setAttribute('color', 'info');
+                    el.setAttribute('variant', 'outlined');
+                });
+            }
+        });
+        this.inputEndAt?.addEventListener('input-change', updateHref);
         // Toggle optionBlock open/close when Options button is clicked
         const settingsBtn = holder.element.querySelector('.settings-item');
         const optionBlock = holder.element.querySelector('.optionBlock');

@@ -17,6 +17,8 @@ export default class TestingActualPage extends Page {
         type: string,
         limits: number,
         testType: "main" | "exam",
+        startFrom: number | null,
+        endAt: number | null,
         randomSource: string
     };
     private questions: TemporaryQuestion[];
@@ -36,8 +38,8 @@ export default class TestingActualPage extends Page {
         const jj = await Fetcher.fetchJSON('./resources/data' + '/' + this.params.subject.file);
 
         var i = 1;
-
         this.questions = (jj as QuestionParser).Questions
+            .slice(this.params.startFrom ?? 0, this.params.endAt ?? undefined)
             .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
         this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
 

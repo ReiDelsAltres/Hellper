@@ -1,7 +1,7 @@
 :host {
   display: flex;
   color: var(--typography-color, var(--color-text, #c1c1c4));
-  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-family: var(--font-family);
   font-weight: var(--typography-weight, 500);
   line-height: var(--typography-line-height, 1.4);
   letter-spacing: var(--typography-letter, 0);
