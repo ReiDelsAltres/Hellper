@@ -8,7 +8,7 @@ import { AccessType, IElementHolder, Page, RePage } from "@Purper";
   class: TestingPage,
 }, "/testing")
 export default class TestingPage extends Page {
-  private semestrs: Semestr[] = [
+  public semestrs: Semestr[] = [
     new Semestr("&#8544;", [
       new Subject("Riyazi Analiz", "p.ü.f.d. Səmədzadə F.N",["759ITS", "759KM"], "Математический анализ","s1/Math.json"),
     ]),

@@ -1,8 +1,13 @@
 import { IElementHolder, Page } from "@Purper";
 export default class TestingPage extends Page {
-    private semestrs;
+    semestrs: Semestr[];
     protected preInit(): Promise<void>;
     protected preLoad(holder: IElementHolder): Promise<void>;
+}
+declare class Semestr {
+    private number;
+    private subjects;
+    constructor(number: string, subjects: Subject[]);
 }
 export declare class Subject {
     name: string;
@@ -12,4 +17,5 @@ export declare class Subject {
     groups: string[];
     constructor(name: string, teacher: string, groups: string[], translatedName?: string, file?: string);
 }
+export {};
 //# sourceMappingURL=TestingPage.html.d.ts.map
