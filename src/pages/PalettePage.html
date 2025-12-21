@@ -1,47 +1,15 @@
 <div class="palette-page">
     <div class="page-header">
-        <h1 class="page-title">🎨 Цветовые Палитры</h1>
+        <re-icon icon="palette" size="xxl" color="primary" class="header-icon"></re-icon>
+        <h1 class="page-title">Цветовые Палитры</h1>
         <p class="page-subtitle">Выберите тему оформления для приложения</p>
     </div>
     
-    <main class="palette-gallery" role="main">
-        <div class="palette-item blazor-theme" tabindex="0" aria-label="Blazor тема">
-            <color-palette class="blazor-theme"></color-palette>
-            <div class="palette-label">Blazor</div>
-            <div class="palette-badge">Активна</div>
-        </div>
-        
-        <div class="palette-item brass-theme" tabindex="0" aria-label="Brass тема">
-            <color-palette class="brass-theme"></color-palette>
-            <div class="palette-label">Brass</div>
-            <div class="palette-badge">Активна</div>
-        </div>
-        <div class="palette-item brass-dark-theme" tabindex="0" aria-label="Brass Dark тема">
-            <color-palette class="brass-dark-theme"></color-palette>
-            <div class="palette-label">Brass Dark</div>
-            <div class="palette-badge">Активна</div>
-        </div>
-        
-        <div class="palette-item copper-theme" tabindex="0" aria-label="Copper тема">
-            <color-palette class="copper-theme"></color-palette>
-            <div class="palette-label">Copper</div>
-            <div class="palette-badge">Активна</div>
-        </div>
-        
-        <div class="palette-item chinese-new-year-theme" tabindex="0" aria-label="Chinese New Year тема">
-            <color-palette class="chinese-new-year-theme"></color-palette>
-            <div class="palette-label">Chinese New Year</div>
-            <div class="palette-badge">Активна</div>
-        </div>
-        
-        <div class="palette-item chess-theme" tabindex="0" aria-label="Chess тема">
-            <color-palette class="chess-theme"></color-palette>
-            <div class="palette-label">Chess</div>
-            <div class="palette-badge">Активна</div>
-        </div>
+    <main class="palette-gallery" role="main" @[ref]="gallery">
+        <!-- Themes will be dynamically loaded -->
     </main>
     
     <footer class="page-footer">
-        <p class="hint">Нажмите на палитру чтобы применить тему</p>
+        <re-typography variant="caption" color="empty">Нажмите на палитру чтобы применить тему</re-typography>
     </footer>
 </div>

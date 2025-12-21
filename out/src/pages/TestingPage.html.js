@@ -26,6 +26,7 @@ let TestingPage = class TestingPage extends Page {
             new Subject("Proqramlaşdırma əsasları - 2", "Kuliyev M.X", ["759KM"], "Программирование", "s3/Program.json"),
             new Subject("Web sistemləri və texnologiyaları", "Cəbrayılova G.H", ["759ITS"], "Веб системы и технологии", "s3/Web.json"),
             new Subject("Dövrlər nəzəriyyəsi", "Qax.D.B", ["759KM"], "Теория цепей", "s3/ChainTheory.json"),
+            new Subject("Sistem Programlaşdırma", "Gasanova Vusala Ramiz qızı", ["759ITS"], "Системное программирование [BETA]", "s3/Vusala.json"),
             /*new Subject("Xarici dildə işgüzar və akademik kommunikasiya  - 3", "İsmayılova A.A", ["759ITS","759KM"], "Английский язык"),
             new Subject("Sistem proqramlaşdırma", "Həsənova V.R", ["759ITS"], "Системное программирование"),*/
         ]),

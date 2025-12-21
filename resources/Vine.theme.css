@@ -1,0 +1,73 @@
+.vine-theme {
+    --font-familu: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --color-empty: #f7eee5; /* Ivory cream (light) */
+    --color-empty-contrast: #7b011e; /* Rich burgundy for text */
+    --color-empty-hover: color-mix(in srgb, var(--color-empty) 10%, black);
+
+    /* Primary (keep unchanged) */
+    --color-primary: #7b011e;
+    --color-primary-contrast: #fff;
+    --color-primary-hover: color-mix(in srgb, var(--color-primary) 18%, black);
+
+    /* Secondary (wine rose) */
+    --color-secondary: #9c334b;
+    --color-secondary-contrast: #fff;
+    --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 16%, black);
+
+    /* Tertiary (warm gold accent) */
+    --color-tertiary: #d1ae84;
+    --color-tertiary-contrast: #2b1e20;
+    --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 14%, black);
+
+    /* Additional Colors (muted plum) */
+    --color-additional: #7a2a3f;
+    --color-additional-contrast: #fff;
+    --color-additional-hover: color-mix(in srgb, var(--color-additional) 14%, black);
+
+    /* Utility Colors (wine-tinged variants) */
+    --color-info: #7b406f; /* wine-lilac */
+    --color-info-contrast: #fff;
+    --color-info-hover: color-mix(in srgb, var(--color-info) 14%, black);
+
+    --color-success: #6b8a36; /* slightly brighter olive */
+    --color-success-contrast: #fff;
+    --color-success-hover: color-mix(in srgb, var(--color-success) 14%, black);
+    --color-warning: #c6863b; /* amber */
+    --color-warning-contrast: #fff;
+    --color-warning-hover: color-mix(in srgb, var(--color-warning) 14%, black);
+
+    --color-error: #9c1e2a; /* strong error red */
+    --color-error-contrast: #fff;
+    --color-error-hover: color-mix(in srgb, var(--color-error) 14%, black);
+    /*Surface color*/
+    --surface: #f7eee5; /* Ivory cream surface (light) */
+    --surface-light: #fff8f9;
+    --surface-dark: #efe6e9; /* subtle darker cream */
+
+    /*Wrapped*/
+    --app-background-size: none;
+    --app-background-position: none;
+    --app-background-image: none;
+    --app-background-color: var(--surface);
+
+    --app-bars-background-size: none;
+    --app-bars-background-position: none;
+    --app-bars-background-image: none;
+    --app-bars-background-color: color-mix(in srgb, var(--color-primary) 6%, var(--surface));
+
+    --paper-background-size: auto;
+    --paper-background-position: auto;
+    --paper-background-image: none;
+    --paper-background-color: var(--surface);
+    --paper-border-style: solid;
+    --paper-border-color: color-mix(in srgb, var(--color-primary) 6%, transparent);
+
+    --paper-border-top-left-radius: 15px;
+    --paper-border-top-right-radius: 15px;
+    --paper-border-bottom-left-radius: 15px;
+    --paper-border-bottom-right-radius: 15px;
+
+    --paper-border-style: none;
+    --paper-border-color: none;
+}
