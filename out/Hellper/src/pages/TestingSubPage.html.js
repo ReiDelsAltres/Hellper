@@ -21,11 +21,9 @@ let TestingSubPage = class TestingSubPage extends Page {
     inputStartFrom;
     inputQuestionCount;
     inputNoShuffle;
-    noShuffle = false;
     inputEndAt;
     totalQuestions = 0;
     modeElements;
-    startTestButton;
     constructor(subject) {
         super();
         this.subject = JSON.parse(decodeURIComponent(subject));
@@ -39,7 +37,7 @@ let TestingSubPage = class TestingSubPage extends Page {
             limits: questionCount ?? this.activeMode.numQuestions,
             testType: this.activeTestType,
             randomSource: null,
-            noShuffle: this.noShuffle,
+            noShuffle: this.inputNoShuffle?.getValue() ?? false,
             startFrom: startFrom,
             endAt: endAt
         };
@@ -182,15 +180,6 @@ let TestingSubPage = class TestingSubPage extends Page {
             }
         });
         this.inputEndAt?.addEventListener('input-change', updateHref);
-        // Keep `noShuffle` property in sync with checkbox and update href on changes
-        if (this.inputNoShuffle) {
-            // initialize from current checkbox state
-            this.noShuffle = !!this.inputNoShuffle.checked.value;
-            this.inputNoShuffle.checked.subscribe((key, oldVal, newVal) => {
-                this.noShuffle = !!newVal;
-                document.getElementById('start-test')?.setAttribute('href', this.getAllParamsForTesting());
-            });
-        }
         // Toggle optionBlock open/close when Options button is clicked
         const settingsBtn = holder.element.querySelector('.settings-item');
         const optionBlock = holder.element.querySelector('.optionBlock');

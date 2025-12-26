@@ -3,6 +3,7 @@ import { Subject } from "./TestingPage.html";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
 import ReInput from "../components/ReInput.html.js";
+import ReCheckbox from "src/components/ReCheckbox.html.js";
 
 @RePage({
   markupURL: "./src/pages/TestingSubPage.phtml",
@@ -23,9 +24,13 @@ export default class TestingSubPage extends Page {
   private inputTestType?: ReButtonGroup;
   private inputStartFrom?: ReInput;
   private inputQuestionCount?: ReInput;
+  private inputNoShuffle?: ReCheckbox;
+  private noShuffle: boolean = false;
   private inputEndAt?: ReInput;
   private totalQuestions: number = 0;
   private modeElements?: NodeListOf<Element>;
+
+  private startTestButton?: ReButton;
 
   constructor(subject?: string) {
     super();
@@ -35,12 +40,12 @@ export default class TestingSubPage extends Page {
     const startFrom = this.inputStartFrom?.getValue() ? parseInt(this.inputStartFrom.getValue(), 10) : null;
     const questionCount = this.inputQuestionCount?.getValue() ? parseInt(this.inputQuestionCount.getValue(), 10) : null;
     const endAt = this.inputEndAt?.getValue() ? parseInt(this.inputEndAt.getValue(), 10) : null;
-
     const params = {
       subject: this.subject,
       limits: questionCount ?? this.activeMode.numQuestions,
       testType: this.activeTestType,
       randomSource: null,
+      noShuffle: this.noShuffle,
       startFrom: startFrom,
       endAt: endAt
     };
@@ -196,6 +201,16 @@ export default class TestingSubPage extends Page {
       }
     });
     this.inputEndAt?.addEventListener('input-change', updateHref);
+
+    // Keep `noShuffle` property in sync with checkbox and update href on changes
+    if (this.inputNoShuffle) {
+      // initialize from current checkbox state
+      this.noShuffle = !!this.inputNoShuffle.checked.value;
+      this.inputNoShuffle.checked.subscribe((key, oldVal, newVal) => {
+        this.noShuffle = !!newVal;
+        document.getElementById('start-test')?.setAttribute('href', this.getAllParamsForTesting());
+      });
+    }
 
     // Toggle optionBlock open/close when Options button is clicked
     const settingsBtn = holder.element.querySelector('.settings-item') as HTMLElement | null;

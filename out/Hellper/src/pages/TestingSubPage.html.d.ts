@@ -8,11 +8,9 @@ export default class TestingSubPage extends Page {
     private inputStartFrom?;
     private inputQuestionCount?;
     private inputNoShuffle?;
-    private noShuffle;
     private inputEndAt?;
     private totalQuestions;
     private modeElements?;
-    private startTestButton?;
     constructor(subject?: string);
     private getAllParamsForTesting;
     protected preLoad(holder: IElementHolder): Promise<void>;

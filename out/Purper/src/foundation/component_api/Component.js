@@ -26,7 +26,17 @@ export default class Component extends Class(HTMLElement).extend(UniHtml).build(
     connectedCallback() {
         this.attachShadow({ mode: 'open' });
         for (const attr of this._attributes) {
-            attr.initialize(this.getAttribute(attr.name) ?? attr.value);
+            const vv = this.getAttribute(attr.name);
+            if (vv === null || vv === "") {
+                if (this.hasAttribute(attr.name)) {
+                    attr.initialize(true);
+                }
+                else {
+                    attr.initialize(null);
+                }
+                continue;
+            }
+            attr.initialize(vv);
         }
         this.onConnected();
         this.load(this.shadowRoot);

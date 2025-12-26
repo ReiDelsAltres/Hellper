@@ -8,14 +8,16 @@ export default class Attribute {
         this.component = component;
         this.component["_attributes"].push(this);
         this._name = name;
-        this._defaultValue = value ?? "";
+        this._defaultValue = value;
         this._value = value;
     }
     notify(oldValue, newValue) {
         this.listeners.forEach(listener => listener(oldValue, newValue));
     }
     initialize(initValue) {
-        this._value = initValue;
+        this._value = initValue ?? this._defaultValue;
+        if (this.component.observedAttributes === undefined)
+            this.component.observedAttributes = [];
         this.component.observedAttributes.push(this._name);
     }
     /*--------------------------------------------------------------------------|
@@ -48,6 +50,12 @@ export default class Attribute {
             this.component.removeAttribute(this._name);
         else
             this.component.setAttribute(this._name, val.toString());
+    }
+    isDefault() {
+        return this.value === this._defaultValue;
+    }
+    isExist() {
+        return this.value !== undefined && this.value !== null && this.value !== "";
     }
     subscribe(listener) {
         this.listeners.push((o, n) => listener(this._name, o, n));

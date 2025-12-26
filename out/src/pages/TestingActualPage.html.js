@@ -30,7 +30,8 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.questions = jj.Questions
             .slice(this.params.startFrom ?? 0, this.params.endAt ?? undefined)
             .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
-        this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
+        if (!this.params.noShuffle)
+            this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
         if (this.params.limits && this.params.limits > 0) {
             this.questions = this.questions.slice(0, Number(this.params.limits));
         }

@@ -30,28 +30,34 @@
         </re-button>
     </div>
     <paper-component @[ref]="optionBlock" class="optionBlock">
-        <re-button-group @[ref]="inputTestType" selection="single" value="main">
-            <re-button value="main" color="primary">Основной режим</re-button>
-            <re-button value="exam" color="tertiary">Экзаменационный режим</re-button>
-        </re-button-group>
+        <div class="group1">
+            <re-button-group @[ref]="inputTestType" selection="single" value="main">
+                <re-button value="main" color="primary">Основной режим</re-button>
+                <re-button value="exam" color="tertiary">Экзаменационный режим</re-button>
+            </re-button-group>
+            <re-checkbox @[ref]="inputNoShuffle" label="Без перемешивания вопросов"></re-checkbox>
+        </div>
 
         <div class="option-inputs">
             <div class="option-input-row">
                 <label>С какого вопроса:</label>
-                <re-input @[ref]="inputStartFrom" type="number" min="1" placeholder="1" icon="arrow-right" size="small"></re-input>
+                <re-input @[ref]="inputStartFrom" type="number" min="1" placeholder="1" icon="arrow-right"
+                    size="small"></re-input>
             </div>
             <div class="option-input-row">
                 <label>Количество вопросов:</label>
-                <re-input @[ref]="inputQuestionCount" type="number" min="1" placeholder="Все" icon="hash" size="small"></re-input>
+                <re-input @[ref]="inputQuestionCount" type="number" min="1" placeholder="Все" icon="hash"
+                    size="small"></re-input>
             </div>
             <div class="option-input-row">
                 <label>До какого вопроса:</label>
-                <re-input @[ref]="inputEndAt" type="number" min="1" placeholder="Последний" icon="arrow-left" size="small"></re-input>
+                <re-input @[ref]="inputEndAt" type="number" min="1" placeholder="Последний" icon="arrow-left"
+                    size="small"></re-input>
             </div>
         </div>
     </paper-component>
 
-    <re-button variant="outlined" color="tertiary" full-width class="start-button" id="start-test" data-link>
+    <re-button @[ref]="startTestButton" variant="outlined" color="tertiary" full-width class="start-button" id="start-test" data-link>
         ЗАПУСТИТЬ
     </re-button>
 

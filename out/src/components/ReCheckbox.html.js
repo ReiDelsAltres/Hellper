@@ -4,148 +4,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component, ReComponent } from "@Purper";
+import { Component, ReComponent, Attribute } from "@Purper";
 let ReCheckbox = class ReCheckbox extends Component {
     box;
     labelEl;
-    static get observedAttributes() {
-        return ['checked', 'disabled', 'indeterminate', 'color', 'size', 'label', 'name', 'value', 'mini'];
-    }
-    preLoad(holder) {
-        this.box = holder.element.querySelector('.checkbox-box');
-        this.labelEl = holder.element.querySelector('.checkbox-label');
-        // Make focusable
-        if (!this.hasAttribute('tabindex')) {
-            this.setAttribute('tabindex', '0');
-        }
-        // Click toggles checked
+    checked = new Attribute(this, 'checked');
+    indeterminate = new Attribute(this, 'indeterminate');
+    disabled = new Attribute(this, 'disabled');
+    color = new Attribute(this, 'color');
+    size = new Attribute(this, 'size');
+    label = new Attribute(this, 'label');
+    name = new Attribute(this, 'name');
+    mini = new Attribute(this, 'mini');
+    async preLoad(holder) {
+        this.labelEl.textContent = this.label.value;
+        this.label.subscribe((name, oldValue, newValue) => this.labelEl.textContent = newValue);
         this.addEventListener('click', this.handleClick.bind(this));
-        // Keyboard support (Space / Enter)
-        this.addEventListener('keydown', this.handleKeydown.bind(this));
-        // Initial state
-        this.updateCheckbox();
-        // Observe attribute changes
-        this.onAttributeChangedCallback(() => {
-            this.updateCheckbox();
-        });
-        return Promise.resolve();
-    }
-    updateCheckbox() {
-        // Sync aria and visual state
-        const checked = this.hasAttribute('checked');
-        const indeterminate = this.hasAttribute('indeterminate');
-        this.setAttribute('aria-checked', indeterminate ? 'mixed' : String(checked));
-        if (checked) {
-            this.classList.add('checked');
-        }
-        else {
-            this.classList.remove('checked');
-        }
-        if (indeterminate) {
-            this.classList.add('indeterminate');
-        }
-        else {
-            this.classList.remove('indeterminate');
-        }
-        // Mini mode
-        if (this.hasAttribute('mini')) {
-            this.classList.add('mini');
-        }
-        else {
-            this.classList.remove('mini');
-        }
     }
     handleClick(event) {
-        if (this.hasAttribute('disabled')) {
+        if (this.disabled.value) {
             event.preventDefault();
             event.stopPropagation();
             return;
         }
-        this.toggle();
-    }
-    handleKeydown(event) {
-        if (this.hasAttribute('disabled'))
-            return;
-        if (event.key === ' ' || event.key === 'Enter') {
-            event.preventDefault();
-            this.toggle();
-        }
-    }
-    // ─────────────────────────────────────────────────────────────
-    // Public API
-    // ─────────────────────────────────────────────────────────────
-    /** Переключить состояние */
-    toggle() {
-        // Clear indeterminate on toggle
-        if (this.hasAttribute('indeterminate')) {
-            this.removeAttribute('indeterminate');
-        }
-        if (this.hasAttribute('checked')) {
-            this.removeAttribute('checked');
-        }
-        else {
-            this.setAttribute('checked', '');
-        }
-        this.dispatchEvent(new CustomEvent('checkbox-change', {
-            detail: { checked: this.isChecked(), value: this.getValue() },
-            bubbles: true,
-            cancelable: true
-        }));
-    }
-    /** Установить состояние */
-    setChecked(checked) {
-        if (checked) {
-            this.setAttribute('checked', '');
-        }
-        else {
-            this.removeAttribute('checked');
-        }
-        this.removeAttribute('indeterminate');
-    }
-    /** Получить состояние */
-    isChecked() {
-        return this.hasAttribute('checked');
-    }
-    /** Получить значение (атрибут value или 'on') */
-    getValue() {
-        return this.getAttribute('value') || 'on';
-    }
-    /** Установить значение */
-    setValue(val) {
-        this.setAttribute('value', val);
-    }
-    /** Установить indeterminate */
-    setIndeterminate(indeterminate) {
-        if (indeterminate) {
-            this.setAttribute('indeterminate', '');
-        }
-        else {
-            this.removeAttribute('indeterminate');
-        }
-    }
-    /** Включить */
-    enable() {
-        this.removeAttribute('disabled');
-    }
-    /** Отключить */
-    disable() {
-        this.setAttribute('disabled', '');
-    }
-    /** Установить цвет */
-    setColor(color) {
-        this.setAttribute('color', color);
-    }
-    /** Установить размер */
-    setSize(size) {
-        this.setAttribute('size', size);
-    }
-    /** Фокус */
-    focus() {
-        super.focus();
-    }
-    /** Снять фокус */
-    blur() {
-        super.blur();
+        if (this.indeterminate.value)
+            this.indeterminate.value = false;
+        this.checked.value = !this.checked.value;
     }
 };
 ReCheckbox = __decorate([

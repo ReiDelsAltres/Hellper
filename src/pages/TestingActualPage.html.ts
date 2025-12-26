@@ -19,7 +19,8 @@ export default class TestingActualPage extends Page {
         testType: "main" | "exam",
         startFrom: number | null,
         endAt: number | null,
-        randomSource: string
+        randomSource: string,
+        noShuffle: boolean
     };
     private questions: TemporaryQuestion[];
     private statuses: AnswerStatus[] = [];
@@ -41,7 +42,8 @@ export default class TestingActualPage extends Page {
         this.questions = (jj as QuestionParser).Questions
             .slice(this.params.startFrom ?? 0, this.params.endAt ?? undefined)
             .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
-        this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
+        if (!this.params.noShuffle)
+            this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
 
         if (this.params.limits && this.params.limits > 0) {
             this.questions = this.questions.slice(0, Number(this.params.limits));
@@ -107,10 +109,10 @@ export default class TestingActualPage extends Page {
             const containerWidth = container.clientWidth;
             const gap = 20;
             const minColumnWidth = 320;
-            
+
             // Calculate number of columns based on container width
             let columns = Math.max(1, Math.floor((containerWidth + gap) / (minColumnWidth + gap)));
-            
+
             // Limit columns based on screen size
             if (containerWidth < 600) columns = 1;
             else if (containerWidth < 900) columns = Math.min(columns, 2);
@@ -124,7 +126,7 @@ export default class TestingActualPage extends Page {
             cards.forEach((card) => {
                 // Find the shortest column
                 const shortestColumn = columnHeights.indexOf(Math.min(...columnHeights));
-                
+
                 // Position the card
                 const x = shortestColumn * (columnWidth + gap);
                 const y = columnHeights[shortestColumn];
@@ -195,9 +197,9 @@ export default class TestingActualPage extends Page {
         }
     }
 
-    public handleClick(event: Event, element: HTMLElement, 
+    public handleClick(event: Event, element: HTMLElement,
         params: { qidx: number, aidx: number, c0: string, c1: string, c2: string }): void {
-        
+
         const { qidx, aidx, c0, c1, c2 } = params;
         console.log('Clicked answer:', params);
 
@@ -236,7 +238,7 @@ export default class TestingActualPage extends Page {
                 if (!tt) continue;
                 tt.setAttribute("disabled", "true");
                 if (tt === element) continue;
-                
+
                 if (i === question.RDd) {
                     tt.setAttribute('color', 'success');
                     tt.setAttribute("variant", "outlined");
