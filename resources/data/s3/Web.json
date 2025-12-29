@@ -920,9 +920,9 @@
             "Answers": [
                 "/* комментарий */",
                 "// комментарий",
-                "<!-- комментарий -->",
+                "&lt;!-- комментарий --&gt;",
                 "## комментарий",
-                "<!-- комментарий -->"
+                "&lt;!-- комментарий --&gt;"
             ]
         },
         {
@@ -3085,7 +3085,7 @@
             "Id": 281,
             "Title": "Как объявляется переменная в PHP?",
             "Answers": [
-                "$variable",
+                "\uFF04variable",
                 "var variable",
                 "let variable",
                 "#variable",
@@ -3111,7 +3111,7 @@
                 "/**/  С помощью",
                 "## С помощью",
                 ";; С помощью",
-                "$$ С помощью"
+                "\uFF04\uFF04 С помощью"
             ]
         },
         {
@@ -3122,7 +3122,7 @@
                 "// С помощью",
                 "/**/С помощью",
                 ";;С помощью",
-                "$$С помощью"
+                "\uFF04\uFF04С помощью"
             ]
         },
         {
@@ -3195,7 +3195,7 @@
             "Id": 291,
             "Title": "Какой символ используется для всех переменных в PHP?",
             "Answers": [
-                "$ символ",
+                "\uFF04 символ",
                 "& символ",
                 "@ символ",
                 "# символ",
@@ -3228,11 +3228,11 @@
             "Id": 294,
             "Title": "Как объявить переменную в PHP?",
             "Answers": [
-                "$x = 5",
+                "\uFF04x = 5",
                 "var x = 5",
                 "let x = 5",
                 "x := 5",
-                "declare $x = 5"
+                "declare \uFF04x = 5"
             ]
         },
         {
@@ -3250,11 +3250,11 @@
             "Id": 296,
             "Title": "Как присвоить строковое значение переменной?",
             "Answers": [
-                "$name = \"John\"",
-                "$name = John",
-                "$name := \"John\"",
-                "$name == \"John\"",
-                "var $name = \"John\""
+                "\uFF04name = \"John\"",
+                "\uFF04name = John",
+                "\uFF04name := \"John\"",
+                "\uFF04name == \"John\"",
+                "var \uFF04name = \"John\""
             ]
         },
         {
@@ -3283,44 +3283,44 @@
             "Id": 299,
             "Title": "Как проверить успешность подключения к серверу?",
             "Answers": [
-                "$conn-&gt;connect_error",
-                "$conn-&gt;query",
-                "$conn-&gt;execute",
-                "$conn-&gt;status",
-                "$conn-&gt;ready"
+                "\uFF04conn-&gt;connect_error",
+                "\uFF04conn-&gt;query",
+                "\uFF04conn-&gt;execute",
+                "\uFF04conn-&gt;status",
+                "\uFF04conn-&gt;ready"
             ]
         },
         {
             "Id": 300,
             "Title": "Как создать новое подключение к MySQL в PHP?",
             "Answers": [
-                "new mysqli($servername, $username, $password, $dbname)",
-                "mysqli_connect($username, $password)",
-                "mysql_open($dbname)",
-                "new pdo($dsn)",
-                "db_connect($servername)"
+                "new mysqli(\uFF04servername, \uFF04username, \uFF04password, \uFF04dbname)",
+                "mysqli_connect(\uFF04username, \uFF04password)",
+                "mysql_open(\uFF04dbname)",
+                "new pdo(\uFF04dsn)",
+                "db_connect(\uFF04servername)"
             ]
         },
         {
             "Id": 301,
             "Title": "Как выполнить SQL-запрос в PHP?",
             "Answers": [
-                "$conn-&gt;query($sql)",
-                "$conn-&gt;execute($sql)",
-                "$conn-&gt;run($sql)",
-                "$conn-&gt;perform($sql)",
-                "$conn-&gt;submit($sql)"
+                "\uFF04conn-&gt;query(\uFF04sql)",
+                "\uFF04conn-&gt;execute(\uFF04sql)",
+                "\uFF04conn-&gt;run(\uFF04sql)",
+                "\uFF04conn-&gt;perform(\uFF04sql)",
+                "\uFF04conn-&gt;submit(\uFF04sql)"
             ]
         },
         {
             "Id": 302,
             "Title": "Как закрыть соединение с базой данных?",
             "Answers": [
-                "$conn-&gt;close()",
-                "mysqli_close($sql)",
-                "$conn-&gt;exit()",
+                "\uFF04conn-&gt;close()",
+                "mysqli_close(\uFF04sql)",
+                "\uFF04conn-&gt;exit()",
                 "close_connection()",
-                "disconnect($conn)"
+                "disconnect(\uFF04conn)"
             ]
         },
         {
@@ -3338,22 +3338,22 @@
             "Id": 304,
             "Title": "Как получить результат SELECT-запроса?",
             "Answers": [
-                "$result = $conn-&gt;query($sql)",
-                "$result = $conn-&gt;fetch()",
-                "$result = mysqli_execute($sql)",
-                "$result = get_data($sql)",
-                "$result = db_query($sql)"
+                "\uFF04result = \uFF04conn-&gt;query(\uFF04sql)",
+                "\uFF04result = \uFF04conn-&gt;fetch()",
+                "\uFF04result = mysqli_execute(\uFF04sql)",
+                "\uFF04result = get_data(\uFF04sql)",
+                "\uFF04result = db_query(\uFF04sql)"
             ]
         },
         {
             "Id": 305,
             "Title": "Как вывести имя и фамилию из строки результата?",
             "Answers": [
-                "echo $row[\"name\"] . \" \" . $row[\"lastname\"]",
-                "echo $row-&gt;name . \" \" . $row-&gt;lastname",
-                "print $row[name] + \" \" + $row[lastname]",
-                "echo $row[name] . \"-\" . $row[lastname]",
-                "print $row-&gt;getName() . \" \" . $row-&gt;getLastname()"
+                "echo \uFF04row[\"name\"] . \" \" . \uFF04row[\"lastname\"]",
+                "echo \uFF04row-&gt;name . \" \" . \uFF04row-&gt;lastname",
+                "print \uFF04row[name] + \" \" + \uFF04row[lastname]",
+                "echo \uFF04row[name] . \"-\" . \uFF04row[lastname]",
+                "print \uFF04row-&gt;getName() . \" \" . \uFF04row-&gt;getLastname()"
             ]
         },
         {

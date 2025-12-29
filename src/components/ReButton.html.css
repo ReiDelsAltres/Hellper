@@ -23,7 +23,7 @@
     font-weight: 500;
     line-height: 1;
     text-decoration: none;
-    white-space: wrap;
+    white-space: normal;
 
     /* Layout */
     padding: var(--btn-padding);
@@ -79,6 +79,10 @@
     justify-content: center;
     text-align: center;
     z-index: 1;
+
+    white-space: normal;
+    overflow-wrap: fragile;
+    word-break: break-word;
 }
 
 /* Icon slot */
