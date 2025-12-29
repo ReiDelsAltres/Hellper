@@ -6,14 +6,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { Page, RePage } from "@Purper";
 let TestingAllPage = class TestingAllPage extends Page {
-    questions;
+    questions = [];
 };
 TestingAllPage = __decorate([
     RePage({
         markupURL: "./src/pages/TestingAllPage.hmle",
         cssURL: "./src/pages/TestingAllPage.html.css",
-        jsURL: "./src/pages/TestingAllPage.html.ts",
-        class: TestingAllPage,
+        jsURL: "./src/pages/TestingAllPage.html.ts"
     }, "/testing/all")
 ], TestingAllPage);
 export default TestingAllPage;
