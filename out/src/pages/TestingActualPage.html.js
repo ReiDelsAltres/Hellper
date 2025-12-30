@@ -21,10 +21,12 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.params = JSON.parse(decodeURIComponent(params));
     }
     async preInit() {
-        const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
-            ? crypto.randomUUID()
-            : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
-        this.params.randomSource = newSeed;
+        if (this.params.randomSource === null) {
+            const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
+                ? crypto.randomUUID()
+                : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+            this.params.randomSource = newSeed;
+        }
         const jj = await Fetcher.fetchJSON('./resources/data' + '/' + this.params.subject.file);
         var i = 1;
         this.questions = jj.Questions
@@ -296,16 +298,12 @@ let TestingActualPage = class TestingActualPage extends Page {
     }
     // Regenerate a new randomSource and reload this page via SPA router (no full browser reload)
     regenerateShuffle() {
-        // Build new url keeping other params intact and trigger SPA navigation which reloads this page
-        try {
-            const paramsStr = encodeURIComponent(JSON.stringify(this.params));
-            const url = new URL('/testing/actual?params=' + paramsStr, window.location.origin);
-            Router.tryRouteTo(url, true);
-        }
-        catch (e) {
-            // fallback: simple reload of current page
-            window.location.href = window.location.pathname + '?params=' + encodeURIComponent(JSON.stringify(this.params));
-        }
+        const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
+            ? crypto.randomUUID()
+            : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+        this.params.randomSource = newSeed;
+        const paramsStr = encodeURIComponent(JSON.stringify(this.params));
+        Router.tryRouteTo(new URL(Fetcher.resolveUrl('/testing/actual?params=' + paramsStr)), true);
     }
 };
 TestingActualPage = __decorate([

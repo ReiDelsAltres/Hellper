@@ -220,8 +220,7 @@ let ReInput = class ReInput extends Component {
         // Number input restriction
         if (type === 'number') {
             const currentValue = this.input?.value || '';
-            const selectionStart = this.input?.selectionStart || 0;
-            const selectionEnd = this.input?.selectionEnd || 0;
+            const { start: selectionStart, end: selectionEnd } = this.getSelection();
             // Allow minus sign at the beginning only if min allows negative
             const min = this.getAttribute('min');
             const allowNegative = min == null || parseFloat(min) < 0;
@@ -261,7 +260,8 @@ let ReInput = class ReInput extends Component {
         if (maxlength != null && type !== 'number' && type !== 'date') {
             const currentLength = this.input?.value.length || 0;
             const maxLen = parseInt(maxlength, 10);
-            const selectionLength = (this.input?.selectionEnd || 0) - (this.input?.selectionStart || 0);
+            const { start, end } = this.getSelection();
+            const selectionLength = end - start;
             if (currentLength - selectionLength >= maxLen && event.key.length === 1) {
                 event.preventDefault();
                 return;
@@ -271,8 +271,7 @@ let ReInput = class ReInput extends Component {
         const pattern = this.getAttribute('pattern');
         if (pattern != null && event.key.length === 1) {
             const currentValue = this.input?.value || '';
-            const selectionStart = this.input?.selectionStart || 0;
-            const selectionEnd = this.input?.selectionEnd || 0;
+            const { start: selectionStart, end: selectionEnd } = this.getSelection();
             // Simulate new value
             const before = currentValue.substring(0, selectionStart);
             const after = currentValue.substring(selectionEnd);
@@ -291,6 +290,25 @@ let ReInput = class ReInput extends Component {
                 }
             }
         }
+    }
+    /**
+     * Get normalized selection range for the input field.
+     * Some input types/browsers return null for selectionStart/End,
+     * so fallback to value length (caret at end). Also ensure start <= end.
+     */
+    getSelection() {
+        if (!this.input)
+            return { start: 0, end: 0 };
+        let start = (typeof this.input.selectionStart === 'number') ? this.input.selectionStart : this.input.value.length;
+        let end = (typeof this.input.selectionEnd === 'number') ? this.input.selectionEnd : this.input.value.length;
+        start = Math.max(0, Math.min(start, this.input.value.length));
+        end = Math.max(0, Math.min(end, this.input.value.length));
+        if (start > end) {
+            const t = start;
+            start = end;
+            end = t;
+        }
+        return { start, end };
     }
     validate() {
         if (!this.input)

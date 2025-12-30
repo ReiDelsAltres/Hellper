@@ -31,11 +31,13 @@ export default class TestingActualPage extends Page {
         this.params = JSON.parse(decodeURIComponent(params));
     }
     protected async preInit(): Promise<void> {
-        const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
-            ? crypto.randomUUID()
-            : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
+        if (this.params.randomSource === null) {
+            const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
+                ? crypto.randomUUID()
+                : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
 
-        this.params.randomSource = newSeed;
+            this.params.randomSource = newSeed;
+        }
         const jj = await Fetcher.fetchJSON('./resources/data' + '/' + this.params.subject.file);
 
         var i = 1;
@@ -337,16 +339,14 @@ export default class TestingActualPage extends Page {
 
     // Regenerate a new randomSource and reload this page via SPA router (no full browser reload)
     private regenerateShuffle(): void {
+        const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
+            ? crypto.randomUUID()
+            : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
 
-        // Build new url keeping other params intact and trigger SPA navigation which reloads this page
-        try {
-            const paramsStr = encodeURIComponent(JSON.stringify(this.params));
-            const url = new URL('/testing/actual?params=' + paramsStr, window.location.origin);
-            Router.tryRouteTo(url, true);
-        } catch (e) {
-            // fallback: simple reload of current page
-            window.location.href = window.location.pathname + '?params=' + encodeURIComponent(JSON.stringify(this.params));
-        }
+        this.params.randomSource = newSeed;
+
+        const paramsStr = encodeURIComponent(JSON.stringify(this.params));
+        Router.tryRouteTo(new URL(Fetcher.resolveUrl('/testing/actual?params=' + paramsStr)), true);
     }
 }
 

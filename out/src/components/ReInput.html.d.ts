@@ -18,6 +18,12 @@ export default class ReInput extends Component {
     private handleFocus;
     private handleBlur;
     private handleKeydown;
+    /**
+     * Get normalized selection range for the input field.
+     * Some input types/browsers return null for selectionStart/End,
+     * so fallback to value length (caret at end). Also ensure start <= end.
+     */
+    private getSelection;
     private validate;
     /** Получить текущее значение */
     getValue(): string;
