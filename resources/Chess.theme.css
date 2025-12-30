@@ -1,4 +1,6 @@
 .chess-theme {
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
     --color-empty: #ffffff;
     --color-empty-contrast: #111111;
     --color-empty-hover: color-mix(in srgb, var(--color-empty) 60%, black);

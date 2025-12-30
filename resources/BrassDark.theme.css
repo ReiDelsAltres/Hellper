@@ -1,12 +1,18 @@
 /* Night / dark variation of Brass theme */
 .brass-dark-theme {
-    --color-empty: #0b0705; /* deep almost-black neutral */
-    --color-empty-contrast: #bfb2a4; /* darker warm charcoal */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --color-empty: #0b0705;
+    /* deep almost-black neutral */
+    --color-empty-contrast: #bfb2a4;
+    /* darker warm charcoal */
     --color-empty-hover: color-mix(in srgb, var(--color-empty) 30%, black);
 
     /* Primary: dark warm brass */
-    --color-primary: #8f6e3a; /* brass base */
-    --color-primary-contrast: #ca9b7b; /* darker brass (toned down for lower contrast) */
+    --color-primary: #8f6e3a;
+    /* brass base */
+    --color-primary-contrast: #ca9b7b;
+    /* darker brass (toned down for lower contrast) */
     --color-primary-hover: color-mix(in srgb, var(--color-primary) 18%, black);
 
     /* Secondary: deeper teal/cyan for contrast */
@@ -42,36 +48,39 @@
     --color-error-hover: color-mix(in srgb, var(--color-error) 18%, black);
 
     /* Surfaces for dark theme */
-    --surface: #15110f; /* main dark surface */
-    --surface-light: #231d19; /* slightly lighter paper */
-    --surface-dark: #0b0705; /* darkest */
+    --surface: #15110f;
+    /* main dark surface */
+    --surface-light: #231d19;
+    /* slightly lighter paper */
+    --surface-dark: #0b0705;
+    /* darkest */
 
     /* Backgrounds - heavy metallic night gradients (no new vars) */
     --app-background-size: 1400px 700px, 900px 420px, 100% 100%, auto;
     --app-background-position: 8% 18%, 86% 72%, center, center;
     --app-background-image:
-        radial-gradient(1200px 540px at 8% 18%, color-mix(in srgb, var(--color-primary) 36%, rgba(255,255,255,0.02)) 0%, transparent 42%),
-        radial-gradient(720px 360px at 86% 72%, color-mix(in srgb, var(--color-secondary) 32%, rgba(255,255,255,0.01)) 0%, transparent 44%),
+        radial-gradient(1200px 540px at 8% 18%, color-mix(in srgb, var(--color-primary) 36%, rgba(255, 255, 255, 0.02)) 0%, transparent 42%),
+        radial-gradient(720px 360px at 86% 72%, color-mix(in srgb, var(--color-secondary) 32%, rgba(255, 255, 255, 0.01)) 0%, transparent 44%),
         /* specular ring */
-        conic-gradient(from 200deg at 50% 28%, rgba(255,255,255,0.02), rgba(0,0,0,0.06) 25%, rgba(255,255,255,0.01) 50%),
+        conic-gradient(from 200deg at 50% 28%, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.06) 25%, rgba(255, 255, 255, 0.01) 50%),
         /* brushed metal micro-lines */
-        repeating-linear-gradient(100deg, rgba(255,255,255,0.01) 0 1px, rgba(0,0,0,0.04) 1px 8px),
+        repeating-linear-gradient(100deg, rgba(255, 255, 255, 0.01) 0 1px, rgba(0, 0, 0, 0.04) 1px 8px),
         linear-gradient(160deg, color-mix(in srgb, var(--surface) 90%, var(--color-primary) 8%), color-mix(in srgb, var(--surface-dark) 20%, var(--surface) 80%));
     --app-background-color: color-mix(in srgb, var(--surface, #15110f) 86%, var(--color-primary) 10%);
 
     --app-bars-background-size: 100% 100%, 100% 6px, auto;
     --app-bars-background-position: center top, top, center;
     --app-bars-background-image:
-        linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 36%, rgba(255,255,255,0.02)) 0%, color-mix(in srgb, var(--color-secondary) 24%, rgba(255,255,255,0.01)) 100%),
-        linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.00)),
-        repeating-linear-gradient(90deg, rgba(0,0,0,0.05) 0 2px, rgba(255,255,255,0.02) 2px 10px);
+        linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 36%, rgba(255, 255, 255, 0.02)) 0%, color-mix(in srgb, var(--color-secondary) 24%, rgba(255, 255, 255, 0.01)) 100%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.00)),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0 2px, rgba(255, 255, 255, 0.02) 2px 10px);
     --app-bars-background-color: color-mix(in srgb, var(--surface-dark) 80%, var(--color-primary));
 
     --paper-background-size: cover, 520px 220px, 100% 100%;
     --paper-background-position: center, 6% 10%, center;
-    --paper-background-image: radial-gradient(520px 220px at 6% 10%, color-mix(in srgb, var(--color-primary) 18%, rgba(255,255,255,0.02)) 0%, transparent 48%),
-                          linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.18)),
-                          repeating-linear-gradient(0deg, rgba(0,0,0,0.04) 0 2px, rgba(255,255,255,0.01) 2px 8px);
+    --paper-background-image: radial-gradient(520px 220px at 6% 10%, color-mix(in srgb, var(--color-primary) 18%, rgba(255, 255, 255, 0.02)) 0%, transparent 48%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.18)),
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.04) 0 2px, rgba(255, 255, 255, 0.01) 2px 8px);
     --paper-background-color: color-mix(in srgb, var(--surface) 88%, var(--surface-dark) 12%);
 
     --paper-border-top-left-radius: 14px;

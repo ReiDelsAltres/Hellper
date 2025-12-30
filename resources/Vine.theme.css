@@ -1,5 +1,5 @@
 .vine-theme {
-    --font-familu: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
     --color-empty: #f7eee5; /* Ivory cream (light) */
     --color-empty-contrast: #7b011e; /* Rich burgundy for text */

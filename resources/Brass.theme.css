@@ -1,84 +1,106 @@
 .brass-theme {
-    --color-empty: #d9cfc6; /* warm off-white */
-    --color-empty-contrast: #4a4038; /* muted warm gray */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --color-empty: #d9cfc6;
+    /* warm off-white */
+    --color-empty-contrast: #4a4038;
+    /* muted warm gray */
     --color-empty-hover: color-mix(in srgb, var(--color-empty) 60%, black);
 
     /* Brass / Bronze primary family */
     /* Primary: light brass/gold */
-    --color-primary: #caa169; /* medium warm brass */
-    --color-primary-contrast: #3a2b18; /* darker, deeper brass for contrast */
+    --color-primary: #caa169;
+    /* medium warm brass */
+    --color-primary-contrast: #3a2b18;
+    /* darker, deeper brass for contrast */
     --color-primary-hover: color-mix(in srgb, var(--color-primary) 28%, #efe6db);
 
     /* Secondary — warm copper / burnt-sienna */
     /* Secondary: cool teal for contrast */
-    --color-secondary: #2f8f86; /* mid teal for contrast */
-    --color-secondary-contrast: #072e2b; /* deeper teal contrast */
+    --color-secondary: #2f8f86;
+    /* mid teal for contrast */
+    --color-secondary-contrast: #072e2b;
+    /* deeper teal contrast */
     --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 28%, #efe6db);
 
     /* Tertiary — pale warm accent */
     /* Tertiary: warm coral/peach */
-    --color-tertiary: #ff986a; /* mid coral */
-    --color-tertiary-contrast: #4a2314; /* richer/darker coral contrast */
+    --color-tertiary: #ff986a;
+    /* mid coral */
+    --color-tertiary-contrast: #4a2314;
+    /* richer/darker coral contrast */
     --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 28%, #efe6db);
 
     /* Additional — muted olive/bronze */
     /* Additional: soft olive/sage */
-    --color-additional: #9aa471; /* olive/sage mid */
-    --color-additional-contrast: #2b3216; /* darker olive contrast */
+    --color-additional: #9aa471;
+    /* olive/sage mid */
+    --color-additional-contrast: #2b3216;
+    /* darker olive contrast */
     --color-additional-hover: color-mix(in srgb, var(--color-additional) 28%, #efe6db);
 
     /* Utility Colors — keep standard signals but slightly harmonized */
-    --color-info: #2b7fb4; /* keep cool blue */
-    --color-info-contrast: #082232; /* darker info text */
+    --color-info: #2b7fb4;
+    /* keep cool blue */
+    --color-info-contrast: #082232;
+    /* darker info text */
     --color-info-hover: color-mix(in srgb, var(--color-info) 28%, #efe6db);
-    
+
     --color-success: #2a9d8f;
-    --color-success-contrast: #0f3b32; /* darker success contrast */
+    --color-success-contrast: #0f3b32;
+    /* darker success contrast */
     --color-success-hover: color-mix(in srgb, var(--color-success) 28%, #efe6db);
 
-    --color-warning: #e9b253; /* amber-style to match brass */
-    --color-warning-contrast: #2b1e0b; /* darker amber for contrast */
+    --color-warning: #e9b253;
+    /* amber-style to match brass */
+    --color-warning-contrast: #2b1e0b;
+    /* darker amber for contrast */
     --color-warning-hover: color-mix(in srgb, var(--color-warning) 28%, #efe6db);
 
-    --color-error: #c53b3b; /* warm red */
-    --color-error-contrast: #2b0b0b; /* darker red contrast */
+    --color-error: #c53b3b;
+    /* warm red */
+    --color-error-contrast: #2b0b0b;
+    /* darker red contrast */
     --color-error-hover: color-mix(in srgb, var(--color-error) 28%, #efe6db);
 
     /* Surface color — mid-light warm */
-    --surface: #f3ede6; /* warm, but not too bright */
-    --surface-light: #fffaf8; /* paper */
-    --surface-dark: #e7ddcf; /* subtle contrast */
+    --surface: #f3ede6;
+    /* warm, but not too bright */
+    --surface-light: #fffaf8;
+    /* paper */
+    --surface-dark: #e7ddcf;
+    /* subtle contrast */
 
     /*Wrapped*/
     --app-background-size: 1400px 600px, 900px 420px, 100% 100%, auto;
     --app-background-position: 10% 20%, 84% 70%, center, center;
     /* metallic background: large warm pool, cool counter highlight, brushed sheen, subtle noise */
     --app-background-image:
-        radial-gradient(1100px 520px at 10% 20%, color-mix(in srgb, var(--color-primary) 42%, rgba(255,255,255,0.02)) 0%, transparent 42%),
-        radial-gradient(740px 380px at 84% 70%, color-mix(in srgb, var(--color-secondary) 36%, rgba(255,255,255,0.02)) 0%, transparent 44%),
+        radial-gradient(1100px 520px at 10% 20%, color-mix(in srgb, var(--color-primary) 42%, rgba(255, 255, 255, 0.02)) 0%, transparent 42%),
+        radial-gradient(740px 380px at 84% 70%, color-mix(in srgb, var(--color-secondary) 36%, rgba(255, 255, 255, 0.02)) 0%, transparent 44%),
         /* conic micro speculars */
-        conic-gradient(from 180deg at 50% 30%, rgba(255,255,255,0.025), rgba(0,0,0,0.02) 25%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0.02) 75%, rgba(255,255,255,0.025)),
+        conic-gradient(from 180deg at 50% 30%, rgba(255, 255, 255, 0.025), rgba(0, 0, 0, 0.02) 25%, rgba(255, 255, 255, 0.02) 50%, rgba(0, 0, 0, 0.02) 75%, rgba(255, 255, 255, 0.025)),
         /* brushed metal lines */
-        repeating-linear-gradient(100deg, rgba(255,255,255,0.02) 0 1px, rgba(0,0,0,0.015) 1px 6px),
+        repeating-linear-gradient(100deg, rgba(255, 255, 255, 0.02) 0 1px, rgba(0, 0, 0, 0.015) 1px 6px),
         linear-gradient(160deg, color-mix(in srgb, var(--surface) 92%, var(--color-primary) 8%), color-mix(in srgb, var(--surface-dark) 8%, var(--surface) 92%));
     --app-background-color: color-mix(in srgb, var(--color-primary) 10%, var(--surface, #f3ede6));
 
     --app-bars-background-size: 100% 100%, 100% 6px, auto;
     --app-bars-background-position: center, bottom, center;
     /* bars: heavier metallic sweep and a polished rim */
-    --app-bars-background-image: 
-        linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 18%, rgba(255,255,255,0.25)) 0%, color-mix(in srgb, var(--color-secondary) 14%, rgba(255,255,255,0.2)) 100%),
-        linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05)),
-        repeating-linear-gradient(90deg, rgba(0,0,0,0.015) 0 1px, rgba(255,255,255,0.025) 1px 8px);
+    --app-bars-background-image:
+        linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 18%, rgba(255, 255, 255, 0.25)) 0%, color-mix(in srgb, var(--color-secondary) 14%, rgba(255, 255, 255, 0.2)) 100%),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05)),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.015) 0 1px, rgba(255, 255, 255, 0.025) 1px 8px);
     --app-bars-background-color: color-mix(in srgb, var(--surface-light) 75%, var(--color-primary) 25%);
 
 
     --paper-background-size: cover, 520px 220px, 100% 100%;
     --paper-background-position: center, 8% 12%, center;
     /* paper: metallic vignette with soft gloss and faint grain to feel substantial */
-    --paper-background-image: radial-gradient(520px 220px at 8% 12%, color-mix(in srgb, var(--color-primary) 26%, rgba(255,255,255,0.03)) 0%, transparent 52%),
-                          linear-gradient(180deg, rgba(255,255,255,0.48), rgba(255,255,255,0.06)),
-                          repeating-linear-gradient(0deg, rgba(0,0,0,0.01) 0 2px, rgba(255,255,255,0.02) 2px 8px);
+    --paper-background-image: radial-gradient(520px 220px at 8% 12%, color-mix(in srgb, var(--color-primary) 26%, rgba(255, 255, 255, 0.03)) 0%, transparent 52%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.06)),
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.01) 0 2px, rgba(255, 255, 255, 0.02) 2px 8px);
     --paper-background-color: color-mix(in srgb, var(--surface, #f3ede6) 92%, #ffffff);
 
     --paper-border-top-left-radius: 15px;
