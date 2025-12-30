@@ -1,5 +1,21 @@
 <pop-up @[ref]="resultPopup" modal>
     <re-typography variant="headline" class="popH">Результаты теста</re-typography>
+    <svg class="christmas-svg" viewBox="0 0 64 80" width="64" height="80" xmlns="http://www.w3.org/2000/svg" role="img"
+        focusable="false">
+        <g class="tree">
+            <polygon points="32,6 6,48 58,48" fill="#0e8f3e" />
+            <polygon points="32,20 10,60 54,60" fill="#0aa144" />
+            <polygon points="32,34 14,72 50,72" fill="#07813a" />
+            <rect x="26" y="72" width="12" height="8" fill="#6b3f1d" />
+        </g>
+        <g class="lights">
+            <circle class="light l1" cx="20" cy="46" r="2" fill="#ffd54f" />
+            <circle class="light l2" cx="36" cy="38" r="2" fill="#ff8a80" />
+            <circle class="light l3" cx="28" cy="56" r="2" fill="#80deea" />
+            <circle class="light l4" cx="16" cy="60" r="2" fill="#ffcc80" />
+            <circle class="light l5" cx="44" cy="54" r="2" fill="#f48fb1" />
+        </g>
+    </svg>
     <div class="result-stats">
         <re-typography>Правильных: <re-chip color="success" @[ref]="resultCorrect">0</re-chip></re-typography>
         <re-typography>Неправильных: <re-chip color="error" @[ref]="resultWrong">0</re-chip></re-typography>
@@ -21,7 +37,7 @@
 </pop-up>
 
 
-<div class="questions-container">
+<div id="top" class="questions-container">
     @for (index, question in questions) {
     <paper-component class="question-card">
         <paper-component class="titleBlock">

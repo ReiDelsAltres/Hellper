@@ -11,6 +11,11 @@ export default class TestingActualPage extends Page {
     private masonryResizeObserver?;
     private initMasonry;
     private resolveEnding;
+    /**
+     * Build a ring of lights around the tree with count equal to number of questions
+     * and mark first `correct` lights as active (green). Caps total lights to avoid huge DOM.
+     */
+    private updateChristmasLights;
     closeResult(): void;
     handleClick(event: Event, element: HTMLElement, params: {
         qidx: number;

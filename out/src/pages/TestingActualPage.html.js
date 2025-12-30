@@ -150,8 +150,83 @@ let TestingActualPage = class TestingActualPage extends Page {
             this['resultScore'].textContent = String(score);
             this['resultScoreBlock'].style.display = 'block';
         }
+        // Update christmas lights (rebuild ring and mark active lights)
+        try {
+            this.updateChristmasLights(correct);
+        }
+        catch (_) { }
         // Open result popup
         this['resultPopup'].open();
+    }
+    /**
+     * Build a ring of lights around the tree with count equal to number of questions
+     * and mark first `correct` lights as active (green). Caps total lights to avoid huge DOM.
+     */
+    updateChristmasLights(correct) {
+        try {
+            const svg = document.querySelector('.christmas-svg');
+            if (!svg)
+                return;
+            const totalQuestions = (this.questions && this.questions.length) ? this.questions.length : 1;
+            const MAX_LIGHTS = 120;
+            const desiredLights = Math.max(1, Math.min(MAX_LIGHTS, totalQuestions));
+            // Ensure lights group exists
+            let lightsGroup = svg.querySelector('.lights');
+            if (!lightsGroup) {
+                lightsGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                lightsGroup.setAttribute('class', 'lights');
+                svg.appendChild(lightsGroup);
+            }
+            // If different count, rebuild as ring around tree center
+            const existing = Array.from(lightsGroup.querySelectorAll('circle'));
+            if (existing.length !== desiredLights) {
+                lightsGroup.innerHTML = '';
+                const centerX = 32;
+                const centerY = 40;
+                // radius grows slightly with more lights but limited
+                const radius = 18 + Math.min(22, Math.floor(desiredLights / 6));
+                const baseColors = ['#ffd54f', '#ff8a80', '#80deea', '#ffcc80', '#f48fb1'];
+                for (let i = 0; i < desiredLights; i++) {
+                    const angle = (i / desiredLights) * Math.PI * 2;
+                    const jitter = (i % 3 === 0) ? 0.6 : 0; // small radial variation
+                    const cx = centerX + (radius + jitter) * Math.cos(angle);
+                    const cy = centerY + (radius + jitter) * Math.sin(angle);
+                    const r = desiredLights > 80 ? 0.6 : desiredLights > 40 ? 1.0 : 1.6;
+                    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    circle.setAttribute('class', 'light l' + ((i % 5) + 1));
+                    circle.setAttribute('cx', String(cx));
+                    circle.setAttribute('cy', String(cy));
+                    circle.setAttribute('r', String(r));
+                    circle.setAttribute('fill', baseColors[i % baseColors.length]);
+                    lightsGroup.appendChild(circle);
+                }
+            }
+            const lights = Array.from(lightsGroup.querySelectorAll('.light'));
+            const activeCount = Math.max(0, Math.min(lights.length, correct));
+            lights.forEach((l, idx) => {
+                const el = l;
+                if (!el.getAttribute('data-orig-fill'))
+                    el.setAttribute('data-orig-fill', el.getAttribute('fill') || '');
+                if (idx < activeCount) {
+                    el.setAttribute('fill', '#00e676');
+                    el.classList.add('active');
+                }
+                else {
+                    const orig = el.getAttribute('data-orig-fill') || '';
+                    if (orig)
+                        el.setAttribute('fill', orig);
+                    el.classList.remove('active');
+                }
+            });
+            const proportion = correct / Math.max(1, totalQuestions);
+            const glowLevel = Math.max(0, Math.min(5, Math.round(proportion * 5)));
+            for (let i = 0; i <= 5; i++)
+                svg.classList.remove('glow-' + i);
+            svg.classList.add('glow-' + glowLevel);
+        }
+        catch (e) {
+            console.warn('updateChristmasLights failed', e);
+        }
     }
     closeResult() {
         this['resultPopup'].close();
@@ -304,6 +379,7 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.params.randomSource = newSeed;
         const paramsStr = encodeURIComponent(JSON.stringify(this.params));
         Router.tryRouteTo(new URL(Fetcher.resolveUrl('/testing/actual?params=' + paramsStr)), true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 };
 TestingActualPage = __decorate([
