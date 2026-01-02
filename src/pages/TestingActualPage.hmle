@@ -1,6 +1,6 @@
 <pop-up @[ref]="resultPopup" modal>
     <re-typography variant="headline" class="popH">Результаты теста</re-typography>
-    <svg class="christmas-svg" viewBox="0 0 64 80" width="64" height="80" xmlns="http://www.w3.org/2000/svg" role="img"
+    <!---<svg class="christmas-svg" viewBox="0 0 64 80" width="64" height="80" xmlns="http://www.w3.org/2000/svg" role="img"
         focusable="false">
         <g class="tree">
             <polygon points="32,6 6,48 58,48" fill="#0e8f3e" />
@@ -15,7 +15,7 @@
             <circle class="light l4" cx="16" cy="60" r="2" fill="#ffcc80" />
             <circle class="light l5" cx="44" cy="54" r="2" fill="#f48fb1" />
         </g>
-    </svg>
+    </svg>--->
     <div class="result-stats">
         <re-typography>Правильных: <re-chip color="success" @[ref]="resultCorrect">0</re-chip></re-typography>
         <re-typography>Неправильных: <re-chip color="error" @[ref]="resultWrong">0</re-chip></re-typography>

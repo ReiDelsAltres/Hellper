@@ -24,7 +24,7 @@ export default class TestingPage extends Page {
     new Semestr("&#8546;", [
       new Subject("Verilənlər bazası sistemləri", "Kuliyev M.X", ["759ITS","759KM"], "Базы данных","s3/MySQL.json"),
       new Subject("Kompüter arxitekturası -1", "Kuliyev M.X", ["759ITS","759KM"], "Архитектура компьютера","s3/PCArch.json"),
-      new Subject("Ehtimal nəzəriyyəsi və riyazi statistika", "Dos.Əliyeva X.H", ["759ITS","759KM"], "Математическая статистика [in progress]","s3/Math.json"),
+      new Subject("Ehtimal nəzəriyyəsi və riyazi statistika", "Dos.Əliyeva X.H", ["759ITS","759KM"], "Математическая статистика","s3/Math.json"),
       new Subject("Proqramlaşdırma əsasları - 2", "Kuliyev M.X", ["759KM"], "Программирование","s3/Program.json"),
       new Subject("Web sistemləri və texnologiyaları", "Cəbrayılova G.H", ["759ITS"], "Веб системы и технологии", "s3/Web.json"),
       new Subject("Dövrlər nəzəriyyəsi", "Qax.D.B", ["759KM"], "Теория цепей", "s3/ChainTheory.json"),
