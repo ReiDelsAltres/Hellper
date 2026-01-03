@@ -1,0 +1,4548 @@
+{
+    "UseIndex": true,
+    "Questions": [
+        {
+            "Id": 1,
+            "Title": "Choose the correct definition: the final version of software, if no big bugs are found",
+            "Answers": [
+                "Release candidate",
+                "Beta version",
+                "Alpha version",
+                "Prototype",
+                "Final patch"
+            ]
+        },
+        {
+            "Id": 2,
+            "Title": "Choose the correct definition: Information about problems or how good something is",
+            "Answers": [
+                "Feedback",
+                "Data entry",
+                "Report",
+                "Bug log",
+                "Review"
+            ]
+        },
+        {
+            "Id": 3,
+            "Title": "Choose the correct definition: The second stage of testing software",
+            "Answers": [
+                "Beta testing",
+                "Alpha testing",
+                "Unit testing",
+                "Deployment",
+                "Release"
+            ]
+        },
+        {
+            "Id": 4,
+            "Title": "Choose the correct definition: The first stage of testing software",
+            "Answers": [
+                "Alpha testing",
+                "Beta testing",
+                "Debugging",
+                "Maintenance",
+                "Requirement analysis"
+            ]
+        },
+        {
+            "Id": 5,
+            "Title": "Choose the correct definition: An important stage in a project",
+            "Answers": [
+                "Milestone",
+                "Deadline",
+                "Step",
+                "Task",
+                "Phase"
+            ]
+        },
+        {
+            "Id": 6,
+            "Title": "Choose the correct definition: Writing software",
+            "Answers": [
+                "Coding",
+                "Testing",
+                "Designing",
+                "Deploying",
+                "Maintenance"
+            ]
+        },
+        {
+            "Id": 7,
+            "Title": "Choose the correct answer: The main internal board in a computer is…",
+            "Answers": [
+                "Motherboard",
+                "Sound card",
+                "Network card",
+                "Hard drive",
+                "RAM stick"
+            ]
+        },
+        {
+            "Id": 8,
+            "Title": "Choose the correct answer: Which part stores temporary data?",
+            "Answers": [
+                "RAM",
+                "HDD",
+                "SSD",
+                "CPU",
+                "ROM"
+            ]
+        },
+        {
+            "Id": 9,
+            "Title": "Choose the correct answer: What connects devices to the motherboard?",
+            "Answers": [
+                "Ports and buses",
+                "Software",
+                "Monitor",
+                "Power supply",
+                "Keyboard"
+            ]
+        },
+        {
+            "Id": 10,
+            "Title": "Choose the correct answer: “Gigabyte” means…",
+            "Answers": [
+                "$10^9$ bytes",
+                "$10^6$ bytes",
+                "$10^3$ bytes",
+                "$10^{12}$ bytes",
+                "$10^1$ bytes"
+            ]
+        },
+        {
+            "Id": 11,
+            "Title": "Choose the correct answer: “Peripheral devices” include…",
+            "Answers": [
+                "Printers and mice",
+                "CPU and RAM",
+                "Motherboard",
+                "Internal HDD",
+                "BIOS"
+            ]
+        },
+        {
+            "Id": 12,
+            "Title": "Choose the correct answer: A monitor is a…",
+            "Answers": [
+                "Output device",
+                "Input device",
+                "Storage device",
+                "Processing unit",
+                "Network adapter"
+            ]
+        },
+        {
+            "Id": 13,
+            "Title": "Choose the correct answer: What is a graphics card also called?",
+            "Answers": [
+                "Video card",
+                "Sound card",
+                "Ethernet card",
+                "Memory card",
+                "CPU"
+            ]
+        },
+        {
+            "Id": 14,
+            "Title": "Which unit measures storage capacity?",
+            "Answers": [
+                "Byte",
+                "Hertz",
+                "Watt",
+                "Volt",
+                "Ampere"
+            ]
+        },
+        {
+            "Id": 15,
+            "Title": "Choose the correct answer: What is $GHz$ a measure of?",
+            "Answers": [
+                "Clock speed",
+                "Storage size",
+                "Weight",
+                "Screen resolution",
+                "Voltage"
+            ]
+        },
+        {
+            "Id": 16,
+            "Title": "Choose the correct answer: Which is NOT a storage device?",
+            "Answers": [
+                "Monitor",
+                "SSD",
+                "Hard drive",
+                "USB flash drive",
+                "DVD-ROM"
+            ]
+        },
+        {
+            "Id": 17,
+            "Title": "Choose the correct answer: “SSD” means…",
+            "Answers": [
+                "Solid State Drive",
+                "Super Speed Disk",
+                "System Storage Device",
+                "Software System Design",
+                "Secure Static Drive"
+            ]
+        },
+        {
+            "Id": 18,
+            "Title": "Complete the Phrasal Verbs: Lock…",
+            "Answers": [
+                "out",
+                "in",
+                "over",
+                "across",
+                "between"
+            ]
+        },
+        {
+            "Id": 19,
+            "Title": "Complete the Phrasal Verbs: Be up and running…",
+            "Answers": [
+                "mean to be working",
+                "mean to be sleeping",
+                "mean to be broken",
+                "mean to be installing",
+                "mean to be deleted"
+            ]
+        },
+        {
+            "Id": 20,
+            "Title": "Complete the Phrasal Verbs: Disk…",
+            "Answers": [
+                "partitioning",
+                "running",
+                "locking",
+                "seeing",
+                "moving"
+            ]
+        },
+        {
+            "Id": 21,
+            "Title": "Complete the Phrasal Verbs: Run…",
+            "Answers": [
+                "out of",
+                "into",
+                "between",
+                "under",
+                "over"
+            ]
+        },
+        {
+            "Id": 22,
+            "Title": "Choose the correct definition: Settings on a computer, file or folder that say who can use it",
+            "Answers": [
+                "Permissions",
+                "Wallpapers",
+                "Drivers",
+                "Shortcuts",
+                "Extensions"
+            ]
+        },
+        {
+            "Id": 23,
+            "Title": "Choose the correct definition: Install on many computers at the same time",
+            "Answers": [
+                "Roll out",
+                "Delete",
+                "Copy",
+                "Zip",
+                "Format"
+            ]
+        },
+        {
+            "Id": 24,
+            "Title": "Choose the correct definition: Change, set again",
+            "Answers": [
+                "Reset",
+                "Run",
+                "Lock",
+                "Delete",
+                "Open"
+            ]
+        },
+        {
+            "Id": 25,
+            "Title": "Choose the correct answer: The same data must not be in any other record. We called this field the …………",
+            "Answers": [
+                "Unique field",
+                "General field",
+                "Copy field",
+                "Random field",
+                "Secondary field"
+            ]
+        },
+        {
+            "Id": 26,
+            "Title": "Choose the correct answer: One important point is that one field in each record must be…………",
+            "Answers": [
+                "Unique",
+                "Repeated",
+                "Invisible",
+                "Deleted",
+                "Empty"
+            ]
+        },
+        {
+            "Id": 27,
+            "Title": "Choose the correct answer: There are several ways to get data out of database. It is …………",
+            "Answers": [
+                "Queries and Reports",
+                "Formatting",
+                "Hardware",
+                "Cables",
+                "Sound"
+            ]
+        },
+        {
+            "Id": 28,
+            "Title": "Choose the correct answer: …………is used for entering data into tables",
+            "Answers": [
+                "A form",
+                "A printer",
+                "A speaker",
+                "A cable",
+                "A fan"
+            ]
+        },
+        {
+            "Id": 29,
+            "Title": "Choose the correct answer: Tables look like a …………",
+            "Answers": [
+                "Grid",
+                "Circle",
+                "Triangle",
+                "Cube",
+                "Line"
+            ]
+        },
+        {
+            "Id": 30,
+            "Title": "Choose the correct answer: A database has several parts. These are called …………",
+            "Answers": [
+                "Tables",
+                "Keyboards",
+                "Monitors",
+                "Fans",
+                "Chips"
+            ]
+        },
+        {
+            "Id": 31,
+            "Title": "Choose the correct answer: “Videoconference” means…",
+            "Answers": [
+                "A meeting held by video link",
+                "A movie",
+                "A phone call without video",
+                "A text message",
+                "A book"
+            ]
+        },
+        {
+            "Id": 32,
+            "Title": "Choose the correct answer: “How about hiring a new technician?” — means…",
+            "Answers": [
+                "Making a suggestion",
+                "Giving an order",
+                "Reporting a bug",
+                "Complaining",
+                "Greeting"
+            ]
+        },
+        {
+            "Id": 33,
+            "Title": "Choose the correct answer: What are minutes?",
+            "Answers": [
+                "A written record of a meeting",
+                "Time measurement only",
+                "The name of a software",
+                "People in a meeting",
+                "A list of tasks"
+            ]
+        },
+        {
+            "Id": 34,
+            "Title": "The chairperson…",
+            "Answers": [
+                "leads the meeting",
+                "takes notes only",
+                "is not allowed to speak",
+                "repairs the computers",
+                "cleans the office"
+            ]
+        },
+        {
+            "Id": 35,
+            "Title": "What is an agenda?",
+            "Answers": [
+                "A list of things to discuss",
+                "A computer virus",
+                "A type of database",
+                "A programming language",
+                "A hardware component"
+            ]
+        },
+        {
+            "Id": 36,
+            "Title": "Choose the correct definition: a small part inside smartphones and other devices that measures change of speed",
+            "Answers": [
+                "Accelerometer",
+                "Battery",
+                "Screen",
+                "Antenna",
+                "Speaker"
+            ]
+        },
+        {
+            "Id": 37,
+            "Title": "Choose the correct definition: Stored information, e.g. on a computer",
+            "Answers": [
+                "Data",
+                "Hardware",
+                "Plastic",
+                "Cable",
+                "Heat"
+            ]
+        },
+        {
+            "Id": 38,
+            "Title": "Choose the correct definition: A word used to show that something is completely correct and true",
+            "Answers": [
+                "Accurate",
+                "False",
+                "Maybe",
+                "Vague",
+                "Slow"
+            ]
+        },
+        {
+            "Id": 39,
+            "Title": "Choose the correct definition: Give information",
+            "Answers": [
+                "Provide",
+                "Delete",
+                "Hide",
+                "Ignore",
+                "Wait"
+            ]
+        },
+        {
+            "Id": 40,
+            "Title": "Choose the correct definition: Changing written or printed words to data that a computer can understand",
+            "Answers": [
+                "Digitizing",
+                "Printing",
+                "Erasing",
+                "Painting",
+                "Scrolling"
+            ]
+        },
+        {
+            "Id": 41,
+            "Title": "Choose the correct definition: The position of something",
+            "Answers": [
+                "Location",
+                "Speed",
+                "Weight",
+                "Color",
+                "Price"
+            ]
+        },
+        {
+            "Id": 42,
+            "Title": "Choose the correct definition: Add electronic information to something, e.g. a photo",
+            "Answers": [
+                "Tag",
+                "Crop",
+                "Delete",
+                "Blur",
+                "Print"
+            ]
+        },
+        {
+            "Id": 43,
+            "Title": "Choose the correct definition: Change something to make it suit a special purpose",
+            "Answers": [
+                "Adapt",
+                "Break",
+                "Forget",
+                "Buy",
+                "Lose"
+            ]
+        },
+        {
+            "Id": 44,
+            "Title": "Choose the correct answer: “Security” means…",
+            "Answers": [
+                "Protection of data and systems",
+                "Type of monitor",
+                "Internet speed",
+                "Amount of RAM",
+                "Coding style"
+            ]
+        },
+        {
+            "Id": 45,
+            "Title": "Choose the correct answer: “Alphanumeric” means…",
+            "Answers": [
+                "Consisting of letters and numbers",
+                "Only numbers",
+                "Only symbols",
+                "Only capital letters",
+                "Binary code"
+            ]
+        },
+        {
+            "Id": 46,
+            "Title": "Choose the correct answer: Which is NOT an IT rule?",
+            "Answers": [
+                "Share your password with everyone",
+                "Don't install pirated software",
+                "Back up your data",
+                "Use strong passwords",
+                "Lock your computer when leaving"
+            ]
+        },
+        {
+            "Id": 47,
+            "Title": "Choose the correct answer: A group of connected computers mean….",
+            "Answers": [
+                "Network",
+                "Processor",
+                "Database",
+                "Algorithm",
+                "Folder"
+            ]
+        },
+        {
+            "Id": 48,
+            "Title": "Choose the correct answer: “Network” means…",
+            "Answers": [
+                "Two or more computers connected together",
+                "A single offline PC",
+                "A computer mouse",
+                "The power supply",
+                "The plastic case"
+            ]
+        },
+        {
+            "Id": 49,
+            "Title": "Choose the correct answer: “Data” means…",
+            "Answers": [
+                "Information processed by a computer",
+                "Computer hardware",
+                "The physical monitor",
+                "The user's desk",
+                "Electrical power"
+            ]
+        },
+        {
+            "Id": 50,
+            "Title": "Choose the correct answer: You mustn’t…",
+            "Answers": [
+                "hack into other systems",
+                "use a mouse",
+                "turn on the monitor",
+                "type on the keyboard",
+                "save your files"
+            ]
+        },
+        {
+            "Id": 51,
+            "Title": "Choose the correct answer: Passwords must be…",
+            "Answers": [
+                "Secret and strong",
+                "Written on the monitor",
+                "Shared with friends",
+                "Short and simple",
+                "The same for all sites"
+            ]
+        },
+        {
+            "Id": 52,
+            "Title": "Choose the correct answer: What does “launch” mean in business?",
+            "Answers": [
+                "To start or introduce a new product",
+                "To close a company",
+                "To fire employees",
+                "To eat lunch",
+                "To delete a database"
+            ]
+        },
+        {
+            "Id": 53,
+            "Title": "Choose the correct answer: Companies like Apple and Google are…",
+            "Answers": [
+                "Tech giants",
+                "Small startups",
+                "Local groceries",
+                "Hardware-only shops",
+                "Non-profit organizations"
+            ]
+        },
+        {
+            "Id": 54,
+            "Title": "Choose the correct answer: “Service centers” are places where…",
+            "Answers": [
+                "Equipment is repaired",
+                "Food is sold",
+                "Cars are parked",
+                "Games are played",
+                "Software is deleted"
+            ]
+        },
+        {
+            "Id": 55,
+            "Title": "Choose the correct answer: Which tense is used in “Do you work for Futachiba?”",
+            "Answers": [
+                "Present Simple",
+                "Past Continuous",
+                "Future Perfect",
+                "Present Perfect",
+                "Imperative"
+            ]
+        },
+        {
+            "Id": 56,
+            "Title": "Choose the correct answer: What does “sell” mean?",
+            "Answers": [
+                "To give something for money",
+                "To buy something",
+                "To fix a bug",
+                "To write code",
+                "To lose data"
+            ]
+        },
+        {
+            "Id": 57,
+            "Title": "Choose the correct answer: A customer is…",
+            "Answers": [
+                "A person who buys goods or services",
+                "A person who writes software",
+                "A type of computer virus",
+                "A network cable",
+                "A database table"
+            ]
+        },
+        {
+            "Id": 58,
+            "Title": "Choose the correct answer: “Digital World” develops…",
+            "Answers": [
+                "Software solutions",
+                "Physical furniture",
+                "Fast food",
+                "Cleaning services",
+                "Paper books"
+            ]
+        },
+        {
+            "Id": 59,
+            "Title": "Choose the correct answer: “IB Group” offers…",
+            "Answers": [
+                "IT consultancy and services",
+                "Clothing",
+                "Medical surgery",
+                "Taxi services",
+                "Mining equipment"
+            ]
+        },
+        {
+            "Id": 60,
+            "Title": "Choose the correct answer: “Futachiba” produces…",
+            "Answers": [
+                "Hardware components",
+                "Soft drinks",
+                "Vegetables",
+                "Magazines",
+                "Movies"
+            ]
+        },
+        {
+            "Id": 61,
+            "Title": "Choose the correct answer: A product launch is…",
+            "Answers": [
+                "An event to introduce a new product",
+                "The end of a product's life",
+                "A software bug",
+                "A type of motherboard",
+                "A network protocol"
+            ]
+        },
+        {
+            "Id": 62,
+            "Title": "Choose the correct answer: What does a cloud computing company provide?",
+            "Answers": [
+                "Online storage and services",
+                "Weather forecasts",
+                "Physical hard drives",
+                "Monitor repair",
+                "Cable management"
+            ]
+        },
+        {
+            "Id": 63,
+            "Title": "Choose the correct answer: What does a hardware company produce?",
+            "Answers": [
+                "Physical components like CPUs",
+                "Operating systems",
+                "Mobile apps",
+                "Websites",
+                "Anti-virus software"
+            ]
+        },
+        {
+            "Id": 64,
+            "Title": "Choose the correct answer: “I am responsible for IT projects.” — What does this mean?",
+            "Answers": [
+                "It is my job to manage them",
+                "I hate IT projects",
+                "I don't know what IT is",
+                "I am a customer",
+                "I am looking for a job"
+            ]
+        },
+        {
+            "Id": 65,
+            "Title": "Choose the correct answer: “I check my email twice a day.” — What does this show?",
+            "Answers": [
+                "Frequency",
+                "Location",
+                "Past action",
+                "Future plan",
+                "Ability"
+            ]
+        },
+        {
+            "Id": 66,
+            "Title": "Choose the correct answer: Which expression means “not often”?",
+            "Answers": [
+                "Rarely",
+                "Always",
+                "Usually",
+                "Every day",
+                "Frequently"
+            ]
+        },
+        {
+            "Id": 67,
+            "Title": "Choose the correct answer: Which of the following is NOT an IT job?",
+            "Answers": [
+                "Waiter",
+                "Web designer",
+                "Network administrator",
+                "Software engineer",
+                "Data analyst"
+            ]
+        },
+        {
+            "Id": 68,
+            "Title": "Choose the correct answer: “She maintains servers.” — What does “maintains” mean?",
+            "Answers": [
+                "Keeps them in good condition",
+                "Breaks them",
+                "Sells them",
+                "Deletes them",
+                "Buys them"
+            ]
+        },
+        {
+            "Id": 69,
+            "Title": "Choose the correct answer: What does a network technician do?",
+            "Answers": [
+                "Sets up and fixes networks",
+                "Writes novels",
+                "Cooks food",
+                "Designs clothes",
+                "Sells insurance"
+            ]
+        },
+        {
+            "Id": 70,
+            "Title": "Choose the correct answer: What is the adverb of frequency in this sentence: “He usually checks his emails”?",
+            "Answers": [
+                "usually",
+                "checks",
+                "emails",
+                "he",
+                "his"
+            ]
+        },
+        {
+            "Id": 71,
+            "Title": "Choose the correct answer: Which phrase means “to take care of computers”?",
+            "Answers": [
+                "To maintain computers",
+                "To break computers",
+                "To ignore computers",
+                "To sell computers",
+                "To lose computers"
+            ]
+        },
+        {
+            "Id": 72,
+            "Title": "Complete the definition: A database administrator is responsible for...",
+            "Answers": [
+                "managing and securing data",
+                "writing marketing articles",
+                "designing office furniture",
+                "cleaning the server room",
+                "delivering hardware"
+            ]
+        },
+        {
+            "Id": 73,
+            "Title": "Complete the definition: A helpdesk supervisor mainly...",
+            "Answers": [
+                "manages the support team",
+                "codes the core kernel",
+                "manufactures microchips",
+                "installs cables underground",
+                "designs logos"
+            ]
+        },
+        {
+            "Id": 74,
+            "Title": "Choose the correct answer: Who manages a group of IT professionals working on a project?",
+            "Answers": [
+                "Project manager",
+                "Data entry clerk",
+                "Security guard",
+                "Receptionist",
+                "End user"
+            ]
+        },
+        {
+            "Id": 75,
+            "Title": "Choose the correct answer: Which job is responsible for analyzing system performance?",
+            "Answers": [
+                "Systems analyst",
+                "Accountant",
+                "Secretary",
+                "Sales representative",
+                "Driver"
+            ]
+        },
+        {
+            "Id": 76,
+            "Title": "Choose the correct answer: What does a software developer do?",
+            "Answers": [
+                "Writes and tests code",
+                "Fixes broken monitors",
+                "Sells printers",
+                "Manages the building",
+                "Delivers mail"
+            ]
+        },
+        {
+            "Id": 77,
+            "Title": "Choose the correct answer: Which sentence is correct?",
+            "Answers": [
+                "He works as a developer.",
+                "He work as a developer.",
+                "He working as a developer.",
+                "He are a developer.",
+                "He be a developer."
+            ]
+        },
+        {
+            "Id": 78,
+            "Title": "Choose the correct answer: “He maintains the company’s network.” — What is his job?",
+            "Answers": [
+                "Network administrator",
+                "Graphic designer",
+                "HR manager",
+                "Janitor",
+                "CEO"
+            ]
+        },
+        {
+            "Id": 79,
+            "Title": "Choose the correct definition: Which of the following is a duty of a project manager?",
+            "Answers": [
+                "Planning and tracking tasks",
+                "Soldering components",
+                "Writing CSS only",
+                "Cleaning the keyboards",
+                "Buying coffee"
+            ]
+        },
+        {
+            "Id": 80,
+            "Title": "Choose the correct definition: What does a systems analyst do?",
+            "Answers": [
+                "Studies systems to improve them",
+                "Writes poems",
+                "Fixes cars",
+                "Only answers phones",
+                "Creates 3D models"
+            ]
+        },
+        {
+            "Id": 81,
+            "Title": "Choose the correct definition. software comes with this to show you are the owner",
+            "Answers": [
+                "License",
+                "Battery",
+                "Packaging",
+                "Coupon",
+                "Sticker"
+            ]
+        },
+        {
+            "Id": 82,
+            "Title": "Choose the correct definition. Rules about how you can use software",
+            "Answers": [
+                "Terms and conditions",
+                "Color palette",
+                "File size",
+                "Screen brightness",
+                "Font style"
+            ]
+        },
+        {
+            "Id": 83,
+            "Title": "Choose the correct definition. A series of actions to do something",
+            "Answers": [
+                "Process",
+                "Random event",
+                "Hardware",
+                "Storage",
+                "Pixel"
+            ]
+        },
+        {
+            "Id": 84,
+            "Title": "Choose the correct definition. Settings for a user",
+            "Answers": [
+                "Profile",
+                "Password",
+                "Hardware",
+                "Driver",
+                "Registry"
+            ]
+        },
+        {
+            "Id": 85,
+            "Title": "Choose the correct definition. Copy data to another place so you don’t lose it",
+            "Answers": [
+                "Back up",
+                "Delete",
+                "Move",
+                "Format",
+                "Zip"
+            ]
+        },
+        {
+            "Id": 86,
+            "Title": "Choose the correct definition. Switch a computer off and on again",
+            "Answers": [
+                "Restart",
+                "Sleep",
+                "Hibernate",
+                "Crash",
+                "Overclock"
+            ]
+        },
+        {
+            "Id": 87,
+            "Title": "Choose the correct definition. The drive that the computer reads first when starting up",
+            "Answers": [
+                "Boot drive",
+                "Backup drive",
+                "External drive",
+                "Network drive",
+                "Optical drive"
+            ]
+        },
+        {
+            "Id": 88,
+            "Title": "Choose the correct definition. Split a hard drive into parts that act like separate drives",
+            "Answers": [
+                "Partition",
+                "Defragment",
+                "Format",
+                "Compress",
+                "Delete"
+            ]
+        },
+        {
+            "Id": 89,
+            "Title": "Choose the correct definition: Start again",
+            "Answers": [
+                "Reboot",
+                "Shutdown",
+                "Log off",
+                "Install",
+                "Download"
+            ]
+        },
+        {
+            "Id": 90,
+            "Title": "Choose the correct definition: Letters, numbers, punctuation marks…",
+            "Answers": [
+                "Characters",
+                "Files",
+                "Folders",
+                "Cables",
+                "Chips"
+            ]
+        },
+        {
+            "Id": 91,
+            "Title": "Choose the correct definition: Having only letters and numbers",
+            "Answers": [
+                "Alphanumeric",
+                "Binary",
+                "Hexadecimal",
+                "Symbolic",
+                "Graphical"
+            ]
+        },
+        {
+            "Id": 92,
+            "Title": "Choose the correct definition: A group of connected computers",
+            "Answers": [
+                "Network",
+                "Stand-alone PC",
+                "Hard drive",
+                "Operating system",
+                "Keyboard"
+            ]
+        },
+        {
+            "Id": 93,
+            "Title": "Choose the correct definition: A secret word that you type into a computer before you can use it",
+            "Answers": [
+                "Password",
+                "Username",
+                "Protocol",
+                "Script",
+                "Command"
+            ]
+        },
+        {
+            "Id": 94,
+            "Title": "Choose the correct definition: Information such as numbers and details about people",
+            "Answers": [
+                "Data",
+                "Hardware",
+                "Power",
+                "Plastic",
+                "Sound"
+            ]
+        },
+        {
+            "Id": 95,
+            "Title": "Choose the correct definition: Keeping something safe",
+            "Answers": [
+                "Security",
+                "Risk",
+                "Threat",
+                "Vulnerability",
+                "Error"
+            ]
+        },
+        {
+            "Id": 96,
+            "Title": "Choose the correct definition: Person in charge of IT",
+            "Answers": [
+                "IT Manager",
+                "Receptionist",
+                "Cleaner",
+                "Security guard",
+                "Accountant"
+            ]
+        },
+        {
+            "Id": 97,
+            "Title": "Choose the correct answer: A helpdesk technician usually…",
+            "Answers": [
+                "solves user problems",
+                "writes legal contracts",
+                "performs surgery",
+                "drives a truck",
+                "paints walls"
+            ]
+        },
+        {
+            "Id": 98,
+            "Title": "Choose the correct answer: Which job maintains company databases?",
+            "Answers": [
+                "Database administrator",
+                "Web designer",
+                "Hardware engineer",
+                "Social media manager",
+                "Office manager"
+            ]
+        },
+        {
+            "Id": 99,
+            "Title": "Choose the correct answer: Who supervises IT projects?",
+            "Answers": [
+                "Project manager",
+                "Intern",
+                "Customer",
+                "Competitor",
+                "Retailer"
+            ]
+        },
+        {
+            "Id": 100,
+            "Title": "Choose the correct answer: A systems analyst mainly…",
+            "Answers": [
+                "evaluates and designs IT systems",
+                "repairs printers physically",
+                "cleans monitors",
+                "sells software licenses",
+                "installs electric plugs"
+            ]
+        },
+        {
+            "Id": 101,
+            "Title": "Choose the correct answer: Who designs and writes programs?",
+            "Answers": [
+                "Software developer",
+                "Project manager",
+                "Data entry clerk",
+                "Hardware engineer",
+                "End user"
+            ]
+        },
+        {
+            "Id": 102,
+            "Title": "Complete the phrases: Project",
+            "Answers": [
+                "manager",
+                "mouse",
+                "monitor",
+                "cable",
+                "keyboard"
+            ]
+        },
+        {
+            "Id": 103,
+            "Title": "Complete the phrases: Software",
+            "Answers": [
+                "developer",
+                "hard drive",
+                "battery",
+                "screen",
+                "socket"
+            ]
+        },
+        {
+            "Id": 104,
+            "Title": "Complete the phrases: Helpdesk",
+            "Answers": [
+                "technician",
+                "webcam",
+                "router",
+                "joystick",
+                "motherboard"
+            ]
+        },
+        {
+            "Id": 105,
+            "Title": "Complete the phrases: Database",
+            "Answers": [
+                "administrator",
+                "designer",
+                "printer",
+                "scanner",
+                "microphone"
+            ]
+        },
+        {
+            "Id": 106,
+            "Title": "Choose the correct sentence: We …. money if we …. tablets.",
+            "Answers": [
+                "save / use",
+                "will save / using",
+                "saving / use",
+                "saves / uses",
+                "saved / used"
+            ]
+        },
+        {
+            "Id": 107,
+            "Title": "Choose the correct sentence: If we …. a problem, we …. a message.",
+            "Answers": [
+                "have / send",
+                "has / sends",
+                "having / sending",
+                "had / sent",
+                "will have / sent"
+            ]
+        },
+        {
+            "Id": 108,
+            "Title": "Choose the correct sentence: If you …. a tablet, it …. .",
+            "Answers": [
+                "drop / breaks",
+                "drops / break",
+                "dropping / breaking",
+                "dropped / broken",
+                "will drop / break"
+            ]
+        },
+        {
+            "Id": 109,
+            "Title": "Complete the sentence: A device people wear on their heads that includes a microphone is ….",
+            "Answers": [
+                "headset",
+                "monitor",
+                "mouse",
+                "keyboard",
+                "printer"
+            ]
+        },
+        {
+            "Id": 110,
+            "Title": "Complete: a device that shows a copy of the computer`s screen on a large screen is ….",
+            "Answers": [
+                "data projector",
+                "scanner",
+                "webcam",
+                "hard drive",
+                "router"
+            ]
+        },
+        {
+            "Id": 111,
+            "Title": "Complete the sentence: A part of a laptop computer used instead of a mouse for moving the cursor is ….",
+            "Answers": [
+                "touchpad",
+                "keyboard",
+                "screen",
+                "battery",
+                "USB port"
+            ]
+        },
+        {
+            "Id": 112,
+            "Title": "Choose the correct translation: Цифровой мир",
+            "Answers": [
+                "Digital World",
+                "Analog World",
+                "Cyber Space",
+                "Virtual Reality",
+                "Electronic Earth"
+            ]
+        },
+        {
+            "Id": 113,
+            "Title": "Choose the correct translation: Системная материнская плата",
+            "Answers": [
+                "System motherboard",
+                "Power supply",
+                "Hard drive",
+                "Video card",
+                "Sound card"
+            ]
+        },
+        {
+            "Id": 114,
+            "Title": "Choose the correct translation: Отчет об обслуживании",
+            "Answers": [
+                "Service Report",
+                "Financial Statement",
+                "News Feed",
+                "User Manual",
+                "Code Review"
+            ]
+        },
+        {
+            "Id": 115,
+            "Title": "Find the correct translation: Источник бесперебойного питания",
+            "Answers": [
+                "Uninterruptible Power Supply ($UPS$)",
+                "Universal Serial Bus ($USB$)",
+                "Central Processing Unit ($CPU$)",
+                "Graphics Processing Unit ($GPU$)",
+                "Local Area Network ($LAN$)"
+            ]
+        },
+        {
+            "Id": 116,
+            "Title": "Choose the correct synonyms: Electricity socket",
+            "Answers": [
+                "power point",
+                "light bulb",
+                "hard drive",
+                "monitor",
+                "mouse"
+            ]
+        },
+        {
+            "Id": 117,
+            "Title": "Choose the correct synonyms: Unplug",
+            "Answers": [
+                "disconnect",
+                "connect",
+                "delete",
+                "install",
+                "run"
+            ]
+        },
+        {
+            "Id": 118,
+            "Title": "Choose the correct synonyms: Push",
+            "Answers": [
+                "press",
+                "pull",
+                "break",
+                "spin",
+                "lift"
+            ]
+        },
+        {
+            "Id": 119,
+            "Title": "Choose the correct synonyms: Turn on",
+            "Answers": [
+                "switch on",
+                "switch off",
+                "log out",
+                "reboot",
+                "format"
+            ]
+        },
+        {
+            "Id": 120,
+            "Title": "Choose the correct synonyms: Put in",
+            "Answers": [
+                "insert",
+                "remove",
+                "copy",
+                "paste",
+                "select"
+            ]
+        },
+        {
+            "Id": 121,
+            "Title": "Choose the correct synonyms: Plug (into)",
+            "Answers": [
+                "connect to a socket",
+                "cut a wire",
+                "delete a file",
+                "close a program",
+                "save data"
+            ]
+        },
+        {
+            "Id": 122,
+            "Title": "Match actions to their results. Select the icon",
+            "Answers": [
+                "to highlight it",
+                "to delete it",
+                "to move the window",
+                "to see more text",
+                "to close the menu"
+            ]
+        },
+        {
+            "Id": 123,
+            "Title": "Match actions to their results. Drag the title bar",
+            "Answers": [
+                "to move the window",
+                "to highlight it",
+                "to open the file",
+                "to shutdown",
+                "to scroll down"
+            ]
+        },
+        {
+            "Id": 124,
+            "Title": "Match actions to their results. Slide the scrollbar down",
+            "Answers": [
+                "to see more information below",
+                "to change the color",
+                "to delete the text",
+                "to save the file",
+                "to maximize the window"
+            ]
+        },
+        {
+            "Id": 125,
+            "Title": "Match actions to their results. Click on a menu",
+            "Answers": [
+                "to see a list of choices",
+                "to format the disk",
+                "to restart the system",
+                "to zoom in",
+                "to check spelling"
+            ]
+        },
+        {
+            "Id": 126,
+            "Title": "Match actions to their results. Double click on the title bar",
+            "Answers": [
+                "to maximize or restore the window",
+                "to shut down the PC",
+                "to print a document",
+                "to connect to WiFi",
+                "to empty the bin"
+            ]
+        },
+        {
+            "Id": 127,
+            "Title": "Find the appropriate translation: блок-схема",
+            "Answers": [
+                "flowchart",
+                "database",
+                "network",
+                "hard drive",
+                "motherboard"
+            ]
+        },
+        {
+            "Id": 128,
+            "Title": "Find the appropriate translation: арендовать новый компьютер",
+            "Answers": [
+                "rent a new computer",
+                "buy a new computer",
+                "fix a new computer",
+                "sell a new computer",
+                "delete a new computer"
+            ]
+        },
+        {
+            "Id": 129,
+            "Title": "Choose the correct translation: средние компании",
+            "Answers": [
+                "medium-sized companies",
+                "large companies",
+                "small shops",
+                "international groups",
+                "local users"
+            ]
+        },
+        {
+            "Id": 130,
+            "Title": "Choose the correct translation: поставщик",
+            "Answers": [
+                "supplier",
+                "customer",
+                "employee",
+                "manager",
+                "developer"
+            ]
+        },
+        {
+            "Id": 131,
+            "Title": "Choose the correct translation: системный аналитик",
+            "Answers": [
+                "systems analyst",
+                "project manager",
+                "database admin",
+                "web designer",
+                "hardware specialist"
+            ]
+        },
+        {
+            "Id": 132,
+            "Title": "Choose the correct translation: разработчик программного обеспечения",
+            "Answers": [
+                "software developer",
+                "network engineer",
+                "helpdesk technician",
+                "data analyst",
+                "systems analyst"
+            ]
+        },
+        {
+            "Id": 133,
+            "Title": "Choose the correct translation: руководитель проекта",
+            "Answers": [
+                "project manager",
+                "team leader",
+                "CEO",
+                "sales rep",
+                "accountant"
+            ]
+        },
+        {
+            "Id": 134,
+            "Title": "Choose the correct translation: администратор база данных",
+            "Answers": [
+                "database administrator",
+                "it manager",
+                "helpdesk supervisor",
+                "system engineer",
+                "network specialist"
+            ]
+        },
+        {
+            "Id": 135,
+            "Title": "Fill in the gap: …. stands for Automated Teller Machine",
+            "Answers": [
+                "$ATM$",
+                "$PIN$",
+                "$URL$",
+                "$GUI$",
+                "$RAM$"
+            ]
+        },
+        {
+            "Id": 136,
+            "Title": "Fill in the gap: …. stands for Personal Identification Number",
+            "Answers": [
+                "$PIN$",
+                "$ATM$",
+                "$IP$",
+                "$DNS$",
+                "$SSD$"
+            ]
+        },
+        {
+            "Id": 137,
+            "Title": "Fill in the gap: …. stands for Uniform Resource Locator",
+            "Answers": [
+                "$URL$",
+                "$HTTP$",
+                "$HTML$",
+                "$FTP$",
+                "$WWW$"
+            ]
+        },
+        {
+            "Id": 138,
+            "Title": "Complete: …. stands for Graphical User Interface",
+            "Answers": [
+                "$GUI$",
+                "$API$",
+                "$OS$",
+                "$UI$",
+                "$UX$"
+            ]
+        },
+        {
+            "Id": 139,
+            "Title": "Fill in the gap: …. stands for Digital World",
+            "Answers": [
+                "$DW$",
+                "$IT$",
+                "$AI$",
+                "$VR$",
+                "$AR$"
+            ]
+        },
+        {
+            "Id": 140,
+            "Title": "Fill in the gap: …. stands for Service Report",
+            "Answers": [
+                "$SR$",
+                "$PR$",
+                "$HR$",
+                "$CR$",
+                "$DR$"
+            ]
+        },
+        {
+            "Id": 141,
+            "Title": "Complete: …. stands for Internet Service Provider",
+            "Answers": [
+                "$ISP$",
+                "$IP$",
+                "$TCP$",
+                "$UDP$",
+                "$DNS$"
+            ]
+        },
+        {
+            "Id": 142,
+            "Title": "Fill in the gap: …. stands for Human Resources",
+            "Answers": [
+                "$HR$",
+                "$PR$",
+                "$IT$",
+                "$CEO$",
+                "$PM$"
+            ]
+        },
+        {
+            "Id": 143,
+            "Title": "Fill in the gap: …. stands for Wide Area Network",
+            "Answers": [
+                "$WAN$",
+                "$LAN$",
+                "$PAN$",
+                "$MAN$",
+                "$VPN$"
+            ]
+        },
+        {
+            "Id": 144,
+            "Title": "Fill in the gap: …. stands for Virtual Private Network",
+            "Answers": [
+                "$VPN$",
+                "$VPC$",
+                "$VLAN$",
+                "$VDI$",
+                "$VPS$"
+            ]
+        },
+        {
+            "Id": 145,
+            "Title": "Fill in the gap: …. stands for Secure Socket Layer",
+            "Answers": [
+                "$SSL$",
+                "$TLS$",
+                "$SSH$",
+                "$HTTPS$",
+                "$AES$"
+            ]
+        },
+        {
+            "Id": 146,
+            "Title": "Complete: Short for Escape is ….",
+            "Answers": [
+                "$Esc$",
+                "$Alt$",
+                "$Ctrl$",
+                "$Fn$",
+                "$Del$"
+            ]
+        },
+        {
+            "Id": 147,
+            "Title": "Complete: Short for Function is ….",
+            "Answers": [
+                "$Fn$",
+                "$F1$",
+                "$F12$",
+                "$Func$",
+                "$F$"
+            ]
+        },
+        {
+            "Id": 148,
+            "Title": "Complete: Short for Alternate ….",
+            "Answers": [
+                "$Alt$",
+                "$Esc$",
+                "$Tab$",
+                "$Shift$",
+                "$Enter$"
+            ]
+        },
+        {
+            "Id": 149,
+            "Title": "Complete the sentence: Short for control is ….",
+            "Answers": [
+                "$Ctrl$",
+                "$Cmd$",
+                "$C$",
+                "$Tab$",
+                "$Shift$"
+            ]
+        },
+        {
+            "Id": 150,
+            "Title": "Complete the sentence: An …. is any peripheral that receives data from a computer",
+            "Answers": [
+                "output device",
+                "input device",
+                "storage device",
+                "processing unit",
+                "motherboard"
+            ]
+        },
+        {
+            "Id": 151,
+            "Title": "Complete the sentence: An …. is any hardware device that sends data to a computer",
+            "Answers": [
+                "input device",
+                "output device",
+                "storage device",
+                "display unit",
+                "power supply"
+            ]
+        },
+        {
+            "Id": 152,
+            "Title": "Fill in the gap: …. is to archive and compress them into one file of smaller size using a program",
+            "Answers": [
+                "Zipping",
+                "Deleting",
+                "Formatting",
+                "Printing",
+                "Scrolling"
+            ]
+        },
+        {
+            "Id": 153,
+            "Title": "Fill in the gap: …. stands for Wi-Fi protected access",
+            "Answers": [
+                "$WPA$",
+                "$WEP$",
+                "$WPS$",
+                "$WAN$",
+                "$WLAN$"
+            ]
+        },
+        {
+            "Id": 154,
+            "Title": "Complete: … is a technology that allows computers and other devices to communicate via a wireless signal",
+            "Answers": [
+                "Wi-Fi",
+                "Ethernet",
+                "USB",
+                "HDMI",
+                "VGA"
+            ]
+        },
+        {
+            "Id": 155,
+            "Title": "Complete: …. is a piece of programming code inserted into other programming to cause damage",
+            "Answers": [
+                "A virus",
+                "A patch",
+                "An update",
+                "A driver",
+                "A backup"
+            ]
+        },
+        {
+            "Id": 156,
+            "Title": "Fill in the gap: …. stands for control unit",
+            "Answers": [
+                "$CU$",
+                "$ALU$",
+                "$CPU$",
+                "$GPU$",
+                "$OS$"
+            ]
+        },
+        {
+            "Id": 157,
+            "Title": "Fill in the gap: …. stands for Artificial Intelligence",
+            "Answers": [
+                "$AI$",
+                "$IT$",
+                "$AR$",
+                "$VR$",
+                "$BI$"
+            ]
+        },
+        {
+            "Id": 158,
+            "Title": "Fill in the gap: …. stands for American Standards Code for Information Interchange",
+            "Answers": [
+                "$ASCII$",
+                "$ANSI$",
+                "$ISO$",
+                "$IEEE$",
+                "$UTF$"
+            ]
+        },
+        {
+            "Id": 159,
+            "Title": "Fill in the gap: …. stands for information technology",
+            "Answers": [
+                "$IT$",
+                "$AI$",
+                "$CS$",
+                "$DT$",
+                "$ICT$"
+            ]
+        },
+        {
+            "Id": 160,
+            "Title": "Fill in the gap: …. stands for Advanced Technology",
+            "Answers": [
+                "$AT$",
+                "$XT$",
+                "$BT$",
+                "$MT$",
+                "$PT$"
+            ]
+        },
+        {
+            "Id": 161,
+            "Title": "Fill in the gap: …. stands for international business machine",
+            "Answers": [
+                "$IBM$",
+                "$HP$",
+                "$DELL$",
+                "$MSI$",
+                "$AMD$"
+            ]
+        },
+        {
+            "Id": 162,
+            "Title": "Fill in the gap: …. stands for Ariphmetic Logic Unit",
+            "Answers": [
+                "$ALU$",
+                "$CPU$",
+                "$FPU$",
+                "$GPU$",
+                "$CU$"
+            ]
+        },
+        {
+            "Id": 163,
+            "Title": "Fill in the gap: …. stands for basic input output system",
+            "Answers": [
+                "$BIOS$",
+                "$UEFI$",
+                "$CMOS$",
+                "$POST$",
+                "$BOOT$"
+            ]
+        },
+        {
+            "Id": 164,
+            "Title": "Fill in the gap: …. stands for Bits per second",
+            "Answers": [
+                "$bps$",
+                "$GB$",
+                "$Hz$",
+                "$V$",
+                "$W$"
+            ]
+        },
+        {
+            "Id": 165,
+            "Title": "Fill in the gap: …. stands for Color Graphics Adapter",
+            "Answers": [
+                "$CGA$",
+                "$VGA$",
+                "$EGA$",
+                "$HDMI$",
+                "$DVI$"
+            ]
+        },
+        {
+            "Id": 166,
+            "Title": "Fill in the gap: …. stands for file allocation table",
+            "Answers": [
+                "$FAT$",
+                "$NTFS$",
+                "$EXT4$",
+                "$APFS$",
+                "$HFS$"
+            ]
+        },
+        {
+            "Id": 167,
+            "Title": "Fill in the gap: …. stands for frequently asked questions",
+            "Answers": [
+                "$FAQ$",
+                "$Q&A$",
+                "$TOS$",
+                "$DIY$",
+                "$FYI$"
+            ]
+        },
+        {
+            "Id": 168,
+            "Title": "Fill in the gap: …. stands for graphics interchange format",
+            "Answers": [
+                "$GIF$",
+                "$JPEG$",
+                "$PNG$",
+                "$TIFF$",
+                "$BMP$"
+            ]
+        },
+        {
+            "Id": 169,
+            "Title": "Fill in the gap: …. stands for internet protocol",
+            "Answers": [
+                "$IP$",
+                "$TCP$",
+                "$UDP$",
+                "$HTTP$",
+                "$FTP$"
+            ]
+        },
+        {
+            "Id": 170,
+            "Title": "Fill in the gap: …. stands for multimedia personal computer",
+            "Answers": [
+                "$MPC$",
+                "$PC$",
+                "$laptop$",
+                "$PDA$",
+                "$workstation$"
+            ]
+        },
+        {
+            "Id": 171,
+            "Title": "Fill in the gap: …. stands for Uninterruptable Power Supply",
+            "Answers": [
+                "$UPS$",
+                "$PSU$",
+                "$USB$",
+                "$CPU$",
+                "$RAM$"
+            ]
+        },
+        {
+            "Id": 172,
+            "Title": "Fill in the gap: …. stands for Hard Disc Drive",
+            "Answers": [
+                "$HDD$",
+                "$SSD$",
+                "$CD$",
+                "$DVD$",
+                "$FDD$"
+            ]
+        },
+        {
+            "Id": 173,
+            "Title": "Fill in the gap: …. stands for Super Video Graphics Adapter",
+            "Answers": [
+                "$SVGA$",
+                "$VGA$",
+                "$HDMI$",
+                "$XGA$",
+                "$UXGA$"
+            ]
+        },
+        {
+            "Id": 174,
+            "Title": "Fill in the gap: …. stands for Universal Serial Bus",
+            "Answers": [
+                "$USB$",
+                "$BUS$",
+                "$PCI$",
+                "$AGP$",
+                "$SATA$"
+            ]
+        },
+        {
+            "Id": 175,
+            "Title": "Fill in the gap: …. stands for Computer Assisted Translation",
+            "Answers": [
+                "$CAT$",
+                "$CAD$",
+                "$CAM$",
+                "$CAE$",
+                "$CASE$"
+            ]
+        },
+        {
+            "Id": 176,
+            "Title": "Fill in the gap: …. stands for World Wide Web",
+            "Answers": [
+                "$WWW$",
+                "$URL$",
+                "$HTTP$",
+                "$HTML$",
+                "$ISP$"
+            ]
+        },
+        {
+            "Id": 177,
+            "Title": "Fill in the gap: …. stands for asymmetric digital subscriber line",
+            "Answers": [
+                "$ADSL$",
+                "$DSL$",
+                "$ISDN$",
+                "$FTTH$",
+                "$LTE$"
+            ]
+        },
+        {
+            "Id": 178,
+            "Title": "Fill in the gap: …. stands for computer-aided design",
+            "Answers": [
+                "$CAD$",
+                "$CAT$",
+                "$CAM$",
+                "$CAE$",
+                "$CASE$"
+            ]
+        },
+        {
+            "Id": 179,
+            "Title": "Fill in the gap: …. stands for personal computer",
+            "Answers": [
+                "$PC$",
+                "$CPU$",
+                "$RAM$",
+                "$OS$",
+                "$HD$"
+            ]
+        },
+        {
+            "Id": 180,
+            "Title": "Fill in the gap: …. stands for central processing unit",
+            "Answers": [
+                "$CPU$",
+                "$GPU$",
+                "$ALU$",
+                "$CU$",
+                "$PSU$"
+            ]
+        },
+        {
+            "Id": 181,
+            "Title": "Fill in the gap: …. stands for digital video",
+            "Answers": [
+                "$DV$",
+                "$HD$",
+                "$DVD$",
+                "$MP4$",
+                "$AVI$"
+            ]
+        },
+        {
+            "Id": 182,
+            "Title": "Fill in the gap: …. stands for hard disk drive",
+            "Answers": [
+                "$HDD$",
+                "$SSD$",
+                "$RAM$",
+                "$ROM$",
+                "$FDD$"
+            ]
+        },
+        {
+            "Id": 183,
+            "Title": "Fill in the gap: …. stands for hyper-text markup language",
+            "Answers": [
+                "$HTML$",
+                "$HTTP$",
+                "$XML$",
+                "$PHP$",
+                "$JSON$"
+            ]
+        },
+        {
+            "Id": 184,
+            "Title": "Fill in the gap: …. is a file type created by Adobe Systems Inc.",
+            "Answers": [
+                "$PDF$",
+                "$EXE$",
+                "$TXT$",
+                "$ZIP$",
+                "$DLL$"
+            ]
+        },
+        {
+            "Id": 185,
+            "Title": "Answer the question: What is the meaning of PDF?",
+            "Answers": [
+                "Portable Document Format",
+                "Personal Data File",
+                "Public Digital Folder",
+                "Printed Desktop File",
+                "Permanent Disk Format"
+            ]
+        },
+        {
+            "Id": 186,
+            "Title": "Complete: The most prominent operating system is ….",
+            "Answers": [
+                "Windows",
+                "BIOS",
+                "Intel",
+                "Chrome",
+                "Microsoft Office"
+            ]
+        },
+        {
+            "Id": 187,
+            "Title": "Fill in the gap: …. stands for file transfer protocol",
+            "Answers": [
+                "$FTP$",
+                "$HTTP$",
+                "$IP$",
+                "$TCP$",
+                "$SMTP$"
+            ]
+        },
+        {
+            "Id": 188,
+            "Title": "Fill in the gap: …. stands for internet service provider",
+            "Answers": [
+                "$ISP$",
+                "$IP$",
+                "$WWW$",
+                "$TCP$",
+                "$DNS$"
+            ]
+        },
+        {
+            "Id": 189,
+            "Title": "Fill in the gap: …. stands for operating system",
+            "Answers": [
+                "$OS$",
+                "$UI$",
+                "$UX$",
+                "$API$",
+                "$DB$"
+            ]
+        },
+        {
+            "Id": 190,
+            "Title": "Fill in the gap: …. stands for portable document format",
+            "Answers": [
+                "$PDF$",
+                "$PNG$",
+                "$PPT$",
+                "$PSD$",
+                "$PHP$"
+            ]
+        },
+        {
+            "Id": 191,
+            "Title": "Fill in the gap: …. stands for pages per minute",
+            "Answers": [
+                "$ppm$",
+                "$dpi$",
+                "$kbps$",
+                "$rpm$",
+                "$fps$"
+            ]
+        },
+        {
+            "Id": 192,
+            "Title": "Fill in the gap: …. stands for random access memory",
+            "Answers": [
+                "$RAM$",
+                "$ROM$",
+                "$HDD$",
+                "$SSD$",
+                "$CPU$"
+            ]
+        },
+        {
+            "Id": 193,
+            "Title": "Fill in the gap: …. stands for read-only memory",
+            "Answers": [
+                "$ROM$",
+                "$RAM$",
+                "$BIOS$",
+                "$DIMM$",
+                "$VRAM$"
+            ]
+        },
+        {
+            "Id": 194,
+            "Title": "Fill in the gap: … is the part of a computer's memory that cannot be changed by a user",
+            "Answers": [
+                "ROM",
+                "RAM",
+                "Cache",
+                "Virtual memory",
+                "Buffer"
+            ]
+        },
+        {
+            "Id": 195,
+            "Title": "Answer the question: What is the meaning of ROM?",
+            "Answers": [
+                "Read-only memory",
+                "Random output method",
+                "Remote operating module",
+                "Rapid object management",
+                "Revised office mode"
+            ]
+        },
+        {
+            "Id": 196,
+            "Title": "Answer the question: What is the meaning of RAM?",
+            "Answers": [
+                "Random access memory",
+                "Remote access manual",
+                "Rapid action mode",
+                "Ready archive module",
+                "Runtime applied memory"
+            ]
+        },
+        {
+            "Id": 197,
+            "Title": "Fill in the gap: …. is the unit used to measure the speed of a computer's processor",
+            "Answers": [
+                "Hertz ($Hz$)",
+                "Bytes ($B$)",
+                "Pixels ($px$)",
+                "Dots per inch ($dpi$)",
+                "Volts ($V$)"
+            ]
+        },
+        {
+            "Id": 198,
+            "Title": "Fill in the gaps. .... is a computer which is easy to carry around",
+            "Answers": [
+                "A laptop",
+                "A desktop",
+                "A server",
+                "A workstation",
+                "A mainframe"
+            ]
+        },
+        {
+            "Id": 199,
+            "Title": "Fill in the gap: …. is a company that provides access to the Internet",
+            "Answers": [
+                "ISP",
+                "CPU",
+                "HDD",
+                "OS",
+                "URL"
+            ]
+        },
+        {
+            "Id": 200,
+            "Title": "Answer the question: What is the meaning of ISP?",
+            "Answers": [
+                "Internet Service Provider",
+                "Internal System Port",
+                "Information Security Policy",
+                "Integrated Software Package",
+                "Instant Storage Process"
+            ]
+        },
+        {
+            "Id": 201,
+            "Title": "Answer the question: What is the meaning of HDD?",
+            "Answers": [
+                "Hard Disk Drive",
+                "High Definition Data",
+                "Heavy Digital Disk",
+                "Hardware Design Device",
+                "Hyper Digital Drive"
+            ]
+        },
+        {
+            "Id": 202,
+            "Title": "Complete: The physical place where a computer stores information - applications and files - is known as its ….",
+            "Answers": [
+                "hard drive",
+                "processor",
+                "monitor",
+                "power supply",
+                "keyboard"
+            ]
+        },
+        {
+            "Id": 203,
+            "Title": "Answer the question: What is the meaning of DV?",
+            "Answers": [
+                "Digital Video",
+                "Data View",
+                "Drive Volume",
+                "Digital Version",
+                "Desktop Voice"
+            ]
+        },
+        {
+            "Id": 204,
+            "Title": "Fill in the gap: …. is a set of computers on a network that are managed as a unit",
+            "Answers": [
+                "A domain",
+                "A keyboard",
+                "A pixel",
+                "A bus",
+                "A socket"
+            ]
+        },
+        {
+            "Id": 205,
+            "Title": "Fill in the gap: …. is a small program that allows a peripheral device such as a printer or scanner to connect to your PC",
+            "Answers": [
+                "A driver",
+                "A kernel",
+                "An icon",
+                "A browser",
+                "A spreadsheet"
+            ]
+        },
+        {
+            "Id": 206,
+            "Title": "Fill in the gap: …. is responsible for performing calculations and tasks that make programs work",
+            "Answers": [
+                "The processor",
+                "The monitor",
+                "The mouse",
+                "The printer",
+                "The scanner"
+            ]
+        },
+        {
+            "Id": 207,
+            "Title": "Answer the question: What is the meaning of CPU?",
+            "Answers": [
+                "Central Processing Unit",
+                "Computer Power Unit",
+                "Central Protocol User",
+                "Control Panel Utility",
+                "Core Processing Usage"
+            ]
+        },
+        {
+            "Id": 208,
+            "Title": "Fill in the gap: …. refers to a website's text and information",
+            "Answers": [
+                "Content",
+                "Header",
+                "Footer",
+                "Bandwidth",
+                "Source code"
+            ]
+        },
+        {
+            "Id": 209,
+            "Title": "Fill in the gap: …. includes services such as the world wide web, electronic mail",
+            "Answers": [
+                "The Internet",
+                "Hardware",
+                "The CPU",
+                "RAM",
+                "The BIOS"
+            ]
+        },
+        {
+            "Id": 210,
+            "Title": "Answer the question: What is the meaning of FTP?",
+            "Answers": [
+                "File Transfer Protocol",
+                "Fast Text Process",
+                "Final Test Program",
+                "Folder Transfer Path",
+                "File Table Position"
+            ]
+        },
+        {
+            "Id": 211,
+            "Title": "Fill in the gap: …. is a set of interconnected networks that allow computers in different locations to exchange information",
+            "Answers": [
+                "The Internet",
+                "A local drive",
+                "A motherboard",
+                "A software suite",
+                "A power grid"
+            ]
+        },
+        {
+            "Id": 212,
+            "Title": "Fill in the gap: …. is a set of symbols inserted into files intended for display on the world wide web",
+            "Answers": [
+                "$HTML$",
+                "$FTP$",
+                "$TCP$",
+                "$ISP$",
+                "$RAM$"
+            ]
+        },
+        {
+            "Id": 213,
+            "Title": "Answer the question: What is the meaning of HTML?",
+            "Answers": [
+                "Hyper-Text Markup Language",
+                "High-Tech Media Level",
+                "Hyper-Link Management Logic",
+                "Home Tool Markup List",
+                "Hard Text Memory Language"
+            ]
+        },
+        {
+            "Id": 214,
+            "Title": "Fill in the gap: …. is the page that an Internet browser first opens up to",
+            "Answers": [
+                "Home page",
+                "Error page",
+                "Contact page",
+                "Search page",
+                "Download page"
+            ]
+        },
+        {
+            "Id": 215,
+            "Title": "Fill in the gap: …. is to load and initialize the operating system on a computer",
+            "Answers": [
+                "To boot",
+                "To format",
+                "To zip",
+                "To scroll",
+                "To delete"
+            ]
+        },
+        {
+            "Id": 216,
+            "Title": "Choose the correct variant: CAD",
+            "Answers": [
+                "Computer-aided design",
+                "Central auto data",
+                "Computer assisted drive",
+                "Control access device",
+                "Cyber aided disk"
+            ]
+        },
+        {
+            "Id": 217,
+            "Title": "Fill in the gap: …. is a software program that allows you to surf the web",
+            "Answers": [
+                "A browser",
+                "An antivirus",
+                "A compiler",
+                "A firewall",
+                "A word processor"
+            ]
+        },
+        {
+            "Id": 218,
+            "Title": "Complete: Bit is …….",
+            "Answers": [
+                "Binary digit",
+                "Basic input task",
+                "Big integrated technology",
+                "Binary information tool",
+                "Built-in test"
+            ]
+        },
+        {
+            "Id": 219,
+            "Title": "Fill in the gap: …. the smallest unit of measurement in computing",
+            "Answers": [
+                "A bit",
+                "A byte",
+                "A kilobyte",
+                "A megabyte",
+                "A gigabyte"
+            ]
+        },
+        {
+            "Id": 220,
+            "Title": "Answer the question: What is a bit?",
+            "Answers": [
+                "The smallest unit of data",
+                "A group of 8 bytes",
+                "A computer virus",
+                "A hardware device",
+                "An internet provider"
+            ]
+        },
+        {
+            "Id": 221,
+            "Title": "Fill in the gap: …. is a document sent with an email message",
+            "Answers": [
+                "An attachment",
+                "A browser",
+                "A password",
+                "A server",
+                "A desktop"
+            ]
+        },
+        {
+            "Id": 222,
+            "Title": "Find the appropriate variant: WWW",
+            "Answers": [
+                "World Wide Web",
+                "Wide World Wave",
+                "Web World Wide",
+                "Work Wide Web",
+                "Wireless Web World"
+            ]
+        },
+        {
+            "Id": 223,
+            "Title": "Fill in the gap: …. is technology that allows to connect an electronic device to a computer",
+            "Answers": [
+                "$USB$",
+                "$CPU$",
+                "$RAM$",
+                "$OS$",
+                "$BIOS$"
+            ]
+        },
+        {
+            "Id": 224,
+            "Title": "Answer the question: What is the opposite of \"upload\"?",
+            "Answers": [
+                "download",
+                "install",
+                "delete",
+                "format",
+                "save"
+            ]
+        },
+        {
+            "Id": 225,
+            "Title": "Fill in the gap: …. means getting information from another computer or server",
+            "Answers": [
+                "downloading",
+                "uploading",
+                "booting",
+                "zipping",
+                "tagging"
+            ]
+        },
+        {
+            "Id": 226,
+            "Title": "Answer the question: What is the opposite of \"download\"?",
+            "Answers": [
+                "upload",
+                "restart",
+                "shutdown",
+                "minimize",
+                "refresh"
+            ]
+        },
+        {
+            "Id": 227,
+            "Title": "Fill in the gap: …. is an electronic device that shows pictures for computers",
+            "Answers": [
+                "A monitor",
+                "A mouse",
+                "A scanner",
+                "A printer",
+                "A keyboard"
+            ]
+        },
+        {
+            "Id": 228,
+            "Title": "Fill in the gap: …. is an input device that allows to enter letters, numbers and other symbols",
+            "Answers": [
+                "A keyboard",
+                "A monitor",
+                "A printer",
+                "A plotter",
+                "A microphone"
+            ]
+        },
+        {
+            "Id": 229,
+            "Title": "Fill in the gap: ….. is a data storage device for computers",
+            "Answers": [
+                "A hard disk",
+                "A monitor",
+                "A power cable",
+                "A cooling fan",
+                "A sound card"
+            ]
+        },
+        {
+            "Id": 230,
+            "Title": "Fill in the gap: ………. is a popular way to store digital information",
+            "Answers": [
+                "Cloud storage",
+                "A keyboard",
+                "A screen",
+                "A mouse pad",
+                "A web browser"
+            ]
+        },
+        {
+            "Id": 231,
+            "Title": "Answer the question: What is the other name of \"motherboard\"",
+            "Answers": [
+                "mainboard",
+                "keyboard",
+                "hardboard",
+                "dashboard",
+                "circuitboard"
+            ]
+        },
+        {
+            "Id": 232,
+            "Title": "Find the appropriate answer: computer hardware",
+            "Answers": [
+                "physical parts of a computer",
+                "software programs",
+                "internet signals",
+                "mathematical logic",
+                "digital data"
+            ]
+        },
+        {
+            "Id": 233,
+            "Title": "Answer the question: What is the correct answer for “LAN”",
+            "Answers": [
+                "Local Area Network",
+                "Large Area Network",
+                "Logical Access Node",
+                "Low Application Network",
+                "Local Archive Name"
+            ]
+        },
+        {
+            "Id": 234,
+            "Title": "Answer the question: What is the correct answer for “ISP”?",
+            "Answers": [
+                "Internet Service Provider",
+                "International Software Policy",
+                "Internal System Port",
+                "Integrated System Package",
+                "Internet Support Page"
+            ]
+        },
+        {
+            "Id": 235,
+            "Title": "Answer the question: What is the synonym of “CAT”?",
+            "Answers": [
+                "Computer Assisted Translation",
+                "Central Access Tool",
+                "Computer Aided Task",
+                "Common Application Type",
+                "Control Admin Title"
+            ]
+        },
+        {
+            "Id": 236,
+            "Title": "Find the correct answer: CAT",
+            "Answers": [
+                "Computer Assisted Translation",
+                "Computer Aided Teaching",
+                "Code Analysis Tool",
+                "Central Admin Table",
+                "Cloud Access Technology"
+            ]
+        },
+        {
+            "Id": 237,
+            "Title": "Fill in the gap: ...... is the smallest unit of measurement in computing",
+            "Answers": [
+                "Bit",
+                "Byte",
+                "Kilobyte",
+                "Megabyte",
+                "Gigabyte"
+            ]
+        },
+        {
+            "Id": 238,
+            "Title": "Fill in the gap: .... is a document sent with an email message",
+            "Answers": [
+                "Attachment",
+                "Subject line",
+                "Signature",
+                "Hyperlink",
+                "Header"
+            ]
+        },
+        {
+            "Id": 239,
+            "Title": "Fill in the gap: .... is technology that allows a person to connect on electronic device to a computer.",
+            "Answers": [
+                "$USB$",
+                "$CPU$",
+                "$RAM$",
+                "$ROM$",
+                "$SSD$"
+            ]
+        },
+        {
+            "Id": 240,
+            "Title": "Fill in the gap: ....... is an electronic device that shows pictures for computers",
+            "Answers": [
+                "Monitor",
+                "Keyboard",
+                "Motherboard",
+                "Power supply",
+                "Case"
+            ]
+        },
+        {
+            "Id": 241,
+            "Title": "Complete: Using a keyboard to enter lots of date is called ....",
+            "Answers": [
+                "Data entry",
+                "Data mining",
+                "Data analysis",
+                "Data backup",
+                "Data recovery"
+            ]
+        },
+        {
+            "Id": 242,
+            "Title": "Find the appropriate variant: USB",
+            "Answers": [
+                "Universal Serial Bus",
+                "Uniform Serial Board",
+                "Universal System Bus",
+                "United Serial Bank",
+                "Universal Software Block"
+            ]
+        },
+        {
+            "Id": 243,
+            "Title": "Choose the synonym: motherboard",
+            "Answers": [
+                "mainboard",
+                "central processing unit",
+                "random access memory",
+                "hard disk",
+                "power unit"
+            ]
+        },
+        {
+            "Id": 244,
+            "Title": "Answer the question: What is the correct answer for “e-mail”?",
+            "Answers": [
+                "Electronic mail",
+                "Easy mail",
+                "Electric mail",
+                "Engine mail",
+                "Euro mail"
+            ]
+        },
+        {
+            "Id": 245,
+            "Title": "Answer the question: What is the correct answer for “CPU”",
+            "Answers": [
+                "Central Processing Unit",
+                "Central Printer Unit",
+                "Computer Phone Unit",
+                "Control Panel Unit",
+                "Common Process Utility"
+            ]
+        },
+        {
+            "Id": 246,
+            "Title": "Answer the question: What is the correct answer for “PC”?",
+            "Answers": [
+                "Personal Computer",
+                "Power Computer",
+                "Public Computer",
+                "Point Computer",
+                "Printer Center"
+            ]
+        },
+        {
+            "Id": 247,
+            "Title": "Choose the appropriate answer: Escape is ….",
+            "Answers": [
+                "A key on a keyboard",
+                "A computer virus",
+                "A type of monitor",
+                "A software brand",
+                "A folder name"
+            ]
+        },
+        {
+            "Id": 248,
+            "Title": "Choose the appropriate variant: Computer is ….",
+            "Answers": [
+                "An electronic device for processing data",
+                "A machine for washing clothes",
+                "A vehicle for transport",
+                "A tool for gardening",
+                "A musical instrument"
+            ]
+        },
+        {
+            "Id": 249,
+            "Title": "Find the correct variant: Keyboard is ….",
+            "Answers": [
+                "A peripheral device for data entry",
+                "A device for displaying video",
+                "A part of the processor",
+                "A cooling system",
+                "A type of internet connection"
+            ]
+        },
+        {
+            "Id": 250,
+            "Title": "Answer the question: What does “LCD” stand for?",
+            "Answers": [
+                "Liquid Crystal Display",
+                "Light Circuit Device",
+                "Low Color Design",
+                "Level Control Disk",
+                "Log Current Data"
+            ]
+        },
+        {
+            "Id": 251,
+            "Title": "Answer the question: What does “SVGA” stand for?",
+            "Answers": [
+                "Super Video Graphics Array",
+                "System Video Global Access",
+                "Standard Video Graphics Adapter",
+                "Super Visual General Array",
+                "Static Video Graphic Area"
+            ]
+        },
+        {
+            "Id": 252,
+            "Title": "Fill in the gap: …. stands for Global Positioning System",
+            "Answers": [
+                "$GPS$",
+                "$GPRS$",
+                "$GSM$",
+                "$GPU$",
+                "$GUI$"
+            ]
+        },
+        {
+            "Id": 253,
+            "Title": "Answer the question: What does “UPS” stand for?",
+            "Answers": [
+                "Uninterruptible Power Supply",
+                "Universal Power System",
+                "Unit Power Storage",
+                "United Parcel Service",
+                "Universal Processor Slot"
+            ]
+        },
+        {
+            "Id": 254,
+            "Title": "Answer the question: What does “HDD” stand for?",
+            "Answers": [
+                "Hard Disk Drive",
+                "High Density Disk",
+                "Hardware Data Device",
+                "Hyper Digital Drive",
+                "Heavy Duty Disk"
+            ]
+        },
+        {
+            "Id": 255,
+            "Title": "Answer the question: What is “pixel”?",
+            "Answers": [
+                "The smallest element of a digital image",
+                "A type of computer mouse",
+                "A unit of processor speed",
+                "A storage capacity measure",
+                "A networking protocol"
+            ]
+        },
+        {
+            "Id": 256,
+            "Title": "Answer the question: What does “MPC” stand for?",
+            "Answers": [
+                "Multimedia Personal Computer",
+                "Main Process Control",
+                "Micro Processing Cell",
+                "Memory Power Center",
+                "Multiple Protocol Connection"
+            ]
+        },
+        {
+            "Id": 257,
+            "Title": "Answer the question: What does “IP” stand for?",
+            "Answers": [
+                "Internet Protocol",
+                "Internal Process",
+                "Information Path",
+                "Input Point",
+                "Instruction Provider"
+            ]
+        },
+        {
+            "Id": 258,
+            "Title": "Answer the question: What does “GIF” stand for?",
+            "Answers": [
+                "Graphics Interchange Format",
+                "General Image File",
+                "Global Information Font",
+                "Graphic Interface Folder",
+                "Generated Icon File"
+            ]
+        },
+        {
+            "Id": 259,
+            "Title": "Answer the question: What does “FTP” stand for?",
+            "Answers": [
+                "File Transfer Protocol",
+                "Fast Text Process",
+                "Folder Table Path",
+                "File Tracking Program",
+                "Final Test Protocol"
+            ]
+        },
+        {
+            "Id": 260,
+            "Title": "Answer the question: What does “FAQ” stand for?",
+            "Answers": [
+                "Frequently Asked Questions",
+                "Fast Access Query",
+                "File Analysis Quota",
+                "Final Answer Quality",
+                "Formal Account Query"
+            ]
+        },
+        {
+            "Id": 261,
+            "Title": "Answer the question: What does “FAT” stand for?",
+            "Answers": [
+                "File Allocation Table",
+                "Fast Access Tool",
+                "Final Archive Type",
+                "Folder Allocation Task",
+                "File Array Technical"
+            ]
+        },
+        {
+            "Id": 262,
+            "Title": "Answer the question: What does “DNS” stand for?",
+            "Answers": [
+                "Domain Name System",
+                "Digital Network Service",
+                "Data Node Storage",
+                "Direct Network Serial",
+                "Dynamic Name Server"
+            ]
+        },
+        {
+            "Id": 263,
+            "Title": "Answer the question: What does “CGA” stand for?",
+            "Answers": [
+                "Color Graphics Adapter",
+                "Central Graphics Array",
+                "Computer Generated Art",
+                "Common Gate Access",
+                "Color Graphic Area"
+            ]
+        },
+        {
+            "Id": 264,
+            "Title": "Answer the question: What does “CAD” stand for?",
+            "Answers": [
+                "Computer-Aided Design",
+                "Central Access Data",
+                "Computer Analyst Device",
+                "Control and Design",
+                "Cyber Aided Disk"
+            ]
+        },
+        {
+            "Id": 265,
+            "Title": "Find the correct answer: Bps",
+            "Answers": [
+                "Bits per second",
+                "Bytes per system",
+                "Binary process start",
+                "Bus path speed",
+                "Backup per second"
+            ]
+        },
+        {
+            "Id": 266,
+            "Title": "Choose the correct answer: BIOS",
+            "Answers": [
+                "Basic Input Output System",
+                "Binary Input Output Software",
+                "Board Internal Operating System",
+                "Built-in Input Output Startup",
+                "Basic Instruction Output System"
+            ]
+        },
+        {
+            "Id": 267,
+            "Title": "Answer the question: What does “ALU” stand for?",
+            "Answers": [
+                "Arithmetic Logic Unit",
+                "Advanced Logic Unit",
+                "Alternative Link Utility",
+                "Address Logic Unit",
+                "Access Level Unit"
+            ]
+        },
+        {
+            "Id": 268,
+            "Title": "Choose the correct answer: IBM",
+            "Answers": [
+                "International Business Machines",
+                "Internal Binary Management",
+                "Integrated Business Method",
+                "International Board Makers",
+                "Internet Business Mode"
+            ]
+        },
+        {
+            "Id": 269,
+            "Title": "Answer the question: What does “IT” stand for?",
+            "Answers": [
+                "Information Technology",
+                "Internal Transmission",
+                "Internet Tool",
+                "Instruction Type",
+                "Integrated Technology"
+            ]
+        },
+        {
+            "Id": 270,
+            "Title": "Choose the correct answer: AT",
+            "Answers": [
+                "Advanced Technology",
+                "Access Tool",
+                "Automatic Transmission",
+                "Address Table",
+                "Alternate Task"
+            ]
+        },
+        {
+            "Id": 271,
+            "Title": "Answer the question: What does “ASCII” stand for?",
+            "Answers": [
+                "American Standard Code for Information Interchange",
+                "Advanced Software Code for Internal Interaction",
+                "American System Control for International Information",
+                "Access Standard Code for Image Interface",
+                "Application Server Code for Integrated Interchange"
+            ]
+        },
+        {
+            "Id": 272,
+            "Title": "Choose the correct answer: AI",
+            "Answers": [
+                "Artificial Intelligence",
+                "Applied Information",
+                "Advanced Interface",
+                "Analog Input",
+                "Automated Interaction"
+            ]
+        },
+        {
+            "Id": 273,
+            "Title": "Answer the question: What does “LAN” stand for?",
+            "Answers": [
+                "Local Area Network",
+                "Logical Access Node",
+                "Large Area Network",
+                "Level Area Network",
+                "Light Access Network"
+            ]
+        },
+        {
+            "Id": 274,
+            "Title": "Choose the correct answer: CU",
+            "Answers": [
+                "Control Unit",
+                "Central Utility",
+                "Calculated Unit",
+                "Computer User",
+                "Core Unit"
+            ]
+        },
+        {
+            "Id": 275,
+            "Title": "Choose the correct answer. I miss .......(see) the mountains.",
+            "Answers": [
+                "seeing",
+                "to see",
+                "saw",
+                "seen",
+                "to seeing"
+            ]
+        },
+        {
+            "Id": 276,
+            "Title": "Choose the correct answer. We can't avoid ..... (meet) him.",
+            "Answers": [
+                "meeting",
+                "to meet",
+                "met",
+                "to meeting",
+                "meet"
+            ]
+        },
+        {
+            "Id": 277,
+            "Title": "Choose the correct answer. I've enjoyed ............ (talk) to you.",
+            "Answers": [
+                "talking",
+                "to talk",
+                "talked",
+                "to talking",
+                "talk"
+            ]
+        },
+        {
+            "Id": 278,
+            "Title": "Choose the correct answer. I remember.....(have) a sore throat when I was a child.",
+            "Answers": [
+                "having",
+                "to have",
+                "had",
+                "have",
+                "to having"
+            ]
+        },
+        {
+            "Id": 279,
+            "Title": "Complete the sentence. I can't stop .............. (cough)",
+            "Answers": [
+                "coughing",
+                "to cough",
+                "coughed",
+                "to coughing",
+                "cough"
+            ]
+        },
+        {
+            "Id": 280,
+            "Title": "Choose the correct answer. If you ....... (eat) a lot of junk food, you...... (put) on weight.",
+            "Answers": [
+                "eat / will put",
+                "will eat / put",
+                "ate / put",
+                "eating / putting",
+                "eats / puts"
+            ]
+        },
+        {
+            "Id": 281,
+            "Title": "Complete the sentence. If you need some more money....",
+            "Answers": [
+                "I will lend you some",
+                "I lend you some",
+                "I would lend you some",
+                "I lending you some",
+                "I will lending you some"
+            ]
+        },
+        {
+            "Id": 282,
+            "Title": "Complete the sentence. If you don't want to come out tonight, ....",
+            "Answers": [
+                "we will stay at home",
+                "we stay at home",
+                "we would stay at home",
+                "we staying at home",
+                "we stayed at home"
+            ]
+        },
+        {
+            "Id": 283,
+            "Title": "Choose the correct answer. If I .....(not to go) to bed now, I.....(be) too tired tomorrow.",
+            "Answers": [
+                "don't go / will be",
+                "won't go / am",
+                "didn't go / was",
+                "not go / be",
+                "am not going / will being"
+            ]
+        },
+        {
+            "Id": 284,
+            "Title": "Choose the correct answer. If I .......(pass) my exams, I....... (go) to university",
+            "Answers": [
+                "pass / will go",
+                "will pass / go",
+                "passed / go",
+                "passing / going",
+                "passes / goes"
+            ]
+        },
+        {
+            "Id": 285,
+            "Title": "Choose the correct answer. You ........(not have) good skin if you ......(wear) a lot of make-up.",
+            "Answers": [
+                "won't have / wear",
+                "don't have / will wear",
+                "didn't have / wore",
+                "not have / wear",
+                "won't have / will wear"
+            ]
+        },
+        {
+            "Id": 286,
+            "Title": "Choose the opposites. fair-haired",
+            "Answers": [
+                "dark-haired",
+                "short-haired",
+                "long-haired",
+                "curly-haired",
+                "straight-haired"
+            ]
+        },
+        {
+            "Id": 287,
+            "Title": "Choose the opposites. handsome",
+            "Answers": [
+                "ugly",
+                "beautiful",
+                "pretty",
+                "strong",
+                "tall"
+            ]
+        },
+        {
+            "Id": 288,
+            "Title": "Choose the opposites. ugly",
+            "Answers": [
+                "beautiful",
+                "bad",
+                "mean",
+                "small",
+                "old"
+            ]
+        },
+        {
+            "Id": 289,
+            "Title": "Choose the opposite. dark skinned",
+            "Answers": [
+                "pale skinned",
+                "brown skinned",
+                "blue eyed",
+                "black haired",
+                "thin"
+            ]
+        },
+        {
+            "Id": 290,
+            "Title": "Choose the opposite. tall",
+            "Answers": [
+                "short",
+                "fat",
+                "slim",
+                "old",
+                "young"
+            ]
+        },
+        {
+            "Id": 291,
+            "Title": "Choose the correct word. We haven't got ........ people to help us today.",
+            "Answers": [
+                "enough",
+                "too many",
+                "much",
+                "a little",
+                "some"
+            ]
+        },
+        {
+            "Id": 292,
+            "Title": "Choose the correct word. I need ....... advice about these fruit trees.",
+            "Answers": [
+                "some",
+                "an",
+                "a",
+                "many",
+                "few"
+            ]
+        },
+        {
+            "Id": 293,
+            "Title": "Choose the correct word. There are ......... animals living in my garden.",
+            "Answers": [
+                "many",
+                "much",
+                "a little",
+                "any",
+                "enough"
+            ]
+        },
+        {
+            "Id": 294,
+            "Title": "Choose the correct word. I haven't got .... time to sit in the park today.",
+            "Answers": [
+                "much",
+                "many",
+                "few",
+                "a few",
+                "an"
+            ]
+        },
+        {
+            "Id": 295,
+            "Title": "Choose the line of uncountable nouns.",
+            "Answers": [
+                "water, air, rice",
+                "car, bike, bus",
+                "apple, pear, grape",
+                "student, teacher, book",
+                "house, garden, room"
+            ]
+        },
+        {
+            "Id": 296,
+            "Title": "Choose the line of uncountable nouns.",
+            "Answers": [
+                "information, money, luck",
+                "table, chair, bed",
+                "pen, pencil, paper",
+                "cat, dog, bird",
+                "city, town, village"
+            ]
+        },
+        {
+            "Id": 297,
+            "Title": "Choose the line of countable nouns",
+            "Answers": [
+                "bottle, cup, plate",
+                "sugar, salt, pepper",
+                "milk, juice, tea",
+                "love, hate, peace",
+                "gold, silver, iron"
+            ]
+        },
+        {
+            "Id": 298,
+            "Title": "Choose the correct answer. I'm not sure – I……. see you tomorrow if it's not too cold.",
+            "Answers": [
+                "might",
+                "will",
+                "shall",
+                "must",
+                "would"
+            ]
+        },
+        {
+            "Id": 299,
+            "Title": "Choose the correct answer. She…. go to university if her marks are good enough.",
+            "Answers": [
+                "may",
+                "must",
+                "should",
+                "would",
+                "has to"
+            ]
+        },
+        {
+            "Id": 300,
+            "Title": "Choose the correct answer. I …… go to the cinema if there aren't too many people in the queue.",
+            "Answers": [
+                "might",
+                "must",
+                "should",
+                "have to",
+                "would"
+            ]
+        },
+        {
+            "Id": 301,
+            "Title": "Choose the correct answer. He …… come to the party because he isn't well.",
+            "Answers": [
+                "might not",
+                "must",
+                "should",
+                "could",
+                "will"
+            ]
+        },
+        {
+            "Id": 302,
+            "Title": "Choose the correct answer. It …… rain today so I'm going to take an umbrella.",
+            "Answers": [
+                "might",
+                "must",
+                "shouldn't",
+                "won't",
+                "can"
+            ]
+        },
+        {
+            "Id": 303,
+            "Title": "Complete the sentence. How long ……… with computers?",
+            "Answers": [
+                "have you worked",
+                "did you work",
+                "are you working",
+                "do you work",
+                "had you worked"
+            ]
+        },
+        {
+            "Id": 304,
+            "Title": "Complete the sentence. Has he played on the team … a long time?",
+            "Answers": [
+                "for",
+                "since",
+                "at",
+                "during",
+                "from"
+            ]
+        },
+        {
+            "Id": 305,
+            "Title": "Complete the sentence. She's lived here ………1999.",
+            "Answers": [
+                "since",
+                "for",
+                "in",
+                "at",
+                "from"
+            ]
+        },
+        {
+            "Id": 306,
+            "Title": "Complete the sentence. I've been to China ……… last Thursday.",
+            "Answers": [
+                "since",
+                "for",
+                "during",
+                "on",
+                "at"
+            ]
+        },
+        {
+            "Id": 307,
+            "Title": "Complete the sentence. She's worked for our company ……. seven months",
+            "Answers": [
+                "for",
+                "since",
+                "during",
+                "in",
+                "until"
+            ]
+        },
+        {
+            "Id": 308,
+            "Title": "Complete the sentence. I've had this watch ….. last summer.",
+            "Answers": [
+                "since",
+                "for",
+                "at",
+                "on",
+                "during"
+            ]
+        },
+        {
+            "Id": 309,
+            "Title": "Complete the sentence. They've worked here …… 2007.",
+            "Answers": [
+                "since",
+                "for",
+                "in",
+                "at",
+                "on"
+            ]
+        },
+        {
+            "Id": 310,
+            "Title": "Complete the sentence. I've known him ………. we were at school",
+            "Answers": [
+                "since",
+                "for",
+                "when",
+                "while",
+                "as"
+            ]
+        },
+        {
+            "Id": 311,
+            "Title": "Complete the sentence. She's lived in London …….years.",
+            "Answers": [
+                "for",
+                "since",
+                "during",
+                "at",
+                "on"
+            ]
+        },
+        {
+            "Id": 312,
+            "Title": "Complete the sentence. I…… Susie since we were at primary school.",
+            "Answers": [
+                "have known",
+                "know",
+                "knew",
+                "am knowing",
+                "had known"
+            ]
+        },
+        {
+            "Id": 313,
+            "Title": "Choose the correct modal verb. In Britain, you ………. vote.",
+            "Answers": [
+                "don't have to",
+                "mustn't",
+                "shouldn't",
+                "can't",
+                "might not"
+            ]
+        },
+        {
+            "Id": 314,
+            "Title": "Choose the correct modal verb. I……. get up early tomorrow because my train leaves at 7 a.m.",
+            "Answers": [
+                "have to",
+                "might",
+                "could",
+                "may",
+                "shouldn't"
+            ]
+        },
+        {
+            "Id": 315,
+            "Title": "Choose the correct modal verb. You …… come in here with your shoes on.",
+            "Answers": [
+                "mustn't",
+                "don't have to",
+                "may",
+                "can",
+                "could"
+            ]
+        },
+        {
+            "Id": 316,
+            "Title": "Choose the correct modal verb. He …… learn to drive when he's seventeen in the UK",
+            "Answers": [
+                "can",
+                "shouldn't",
+                "mustn't",
+                "don't have to",
+                "won't"
+            ]
+        },
+        {
+            "Id": 317,
+            "Title": "Choose the correct modal verb. You……. go to bed late before an important exam.",
+            "Answers": [
+                "shouldn't",
+                "can",
+                "have to",
+                "must",
+                "might"
+            ]
+        },
+        {
+            "Id": 318,
+            "Title": "Choose the correct modal verb. You …… wear smart clothes for your job interview.",
+            "Answers": [
+                "should",
+                "don't have to",
+                "mustn't",
+                "might not",
+                "can't"
+            ]
+        },
+        {
+            "Id": 319,
+            "Title": "Choose the correct modal verb. …. I wear a hat to the wedding?",
+            "Answers": [
+                "Should",
+                "Must",
+                "Needn't",
+                "Mustn't",
+                "Might not"
+            ]
+        },
+        {
+            "Id": 320,
+            "Title": "Complete the sentence with adjectives which describe people. They always do what you ask them to do. They're really ……",
+            "Answers": [
+                "reliable",
+                "brave",
+                "confident",
+                "funny",
+                "fit"
+            ]
+        },
+        {
+            "Id": 321,
+            "Title": "Complete the sentence with adjectives which describe people. He has a very dangerous job. He's ………",
+            "Answers": [
+                "brave",
+                "lazy",
+                "quiet",
+                "boring",
+                "careful"
+            ]
+        },
+        {
+            "Id": 322,
+            "Title": "Complete the sentence with adjectives which describe people. She is sure that she is good enough. She's very……",
+            "Answers": [
+                "confident",
+                "shy",
+                "unreliable",
+                "clumsy",
+                "generous"
+            ]
+        },
+        {
+            "Id": 323,
+            "Title": "Complete the sentence with adjectives which describe people. She makes people laugh all the time. She's ……",
+            "Answers": [
+                "funny",
+                "serious",
+                "sad",
+                "clever",
+                "fit"
+            ]
+        },
+        {
+            "Id": 324,
+            "Title": "Complete the sentence with adjectives which describe people. He can run for miles without getting tired. He's very ….",
+            "Answers": [
+                "fit",
+                "lazy",
+                "weak",
+                "funny",
+                "brave"
+            ]
+        },
+        {
+            "Id": 325,
+            "Title": "Complete the sentence with adjectives which describe people. My sister solves problems and understands things easily. She's ……",
+            "Answers": [
+                "clever",
+                "dumb",
+                "generous",
+                "lazy",
+                "unreliable"
+            ]
+        },
+        {
+            "Id": 326,
+            "Title": "Complete the sentence with adjectives which describe people. She gives lots of presents to her friends. She's really………",
+            "Answers": [
+                "generous",
+                "mean",
+                "selfish",
+                "greedy",
+                "clever"
+            ]
+        },
+        {
+            "Id": 327,
+            "Title": "Complete the sentence. You seem …… today, you looked quiet sad yesterday.",
+            "Answers": [
+                "happier",
+                "more happy",
+                "happyest",
+                "happyer",
+                "the happyest"
+            ]
+        },
+        {
+            "Id": 328,
+            "Title": "Complete the sentence. This cafe is very noisy. Can we go somewhere….",
+            "Answers": [
+                "quieter",
+                "more quiet",
+                "more quieter",
+                "quietest",
+                "the quiet"
+            ]
+        },
+        {
+            "Id": 329,
+            "Title": "Choose the correct word. She is the …… of my three sisters",
+            "Answers": [
+                "oldest",
+                "older",
+                "more old",
+                "more oldest",
+                "the older"
+            ]
+        },
+        {
+            "Id": 330,
+            "Title": "Choose the correct word. Their garden is …… than ours.",
+            "Answers": [
+                "bigger",
+                "biggest",
+                "more big",
+                "the biggest",
+                "more bigger"
+            ]
+        },
+        {
+            "Id": 331,
+            "Title": "Choose the correct word. Who is …… person in your family?",
+            "Answers": [
+                "the tallest",
+                "tallest",
+                "taller",
+                "the taller",
+                "more tall"
+            ]
+        },
+        {
+            "Id": 332,
+            "Title": "Choose the correct word. What is …… thing have ever happened to you?",
+            "Answers": [
+                "the most amazing",
+                "more amazing",
+                "the amazingest",
+                "most amazing",
+                "more amazingest"
+            ]
+        },
+        {
+            "Id": 333,
+            "Title": "Choose the correct word. What is …… situation you've ever coped with?",
+            "Answers": [
+                "the most difficult",
+                "more difficult",
+                "most difficultest",
+                "the difficultest",
+                "difficulter"
+            ]
+        },
+        {
+            "Id": 334,
+            "Title": "Choose the correct word. Carla is a bit …. determined than Ali.",
+            "Answers": [
+                "more",
+                "most",
+                "the most",
+                "much",
+                "as"
+            ]
+        },
+        {
+            "Id": 335,
+            "Title": "Choose the correct word. Sandra is much …. motivated than Helen.",
+            "Answers": [
+                "more",
+                "most",
+                "the most",
+                "as",
+                "very"
+            ]
+        },
+        {
+            "Id": 336,
+            "Title": "Choose the correct word. Ann is much …. than Henry.",
+            "Answers": [
+                "faster",
+                "fastest",
+                "fast",
+                "the fastest",
+                "more fast"
+            ]
+        },
+        {
+            "Id": 337,
+            "Title": "Choose the correct word. Helen is … more motivated than Laura.",
+            "Answers": [
+                "far",
+                "as",
+                "very",
+                "many",
+                "most"
+            ]
+        },
+        {
+            "Id": 338,
+            "Title": "Choose the correct word. I want to work in a restaurant as a ….",
+            "Answers": [
+                "waiter",
+                "doctor",
+                "pilot",
+                "engineer",
+                "teacher"
+            ]
+        },
+        {
+            "Id": 339,
+            "Title": "Choose the correct word. It … me feel so happy.",
+            "Answers": [
+                "makes",
+                "does",
+                "lets",
+                "gives",
+                "has"
+            ]
+        },
+        {
+            "Id": 340,
+            "Title": "Choose the correct word. A horse is … than a car.",
+            "Answers": [
+                "slower",
+                "more slow",
+                "slowest",
+                "the slowest",
+                "more slower"
+            ]
+        },
+        {
+            "Id": 341,
+            "Title": "Complete the sentence. She …. having a meeting with him in the afternoon.",
+            "Answers": [
+                "is",
+                "am",
+                "are",
+                "be",
+                "was"
+            ]
+        },
+        {
+            "Id": 342,
+            "Title": "Complete the sentence. My brother … very generous.",
+            "Answers": [
+                "is",
+                "am",
+                "are",
+                "be",
+                "been"
+            ]
+        },
+        {
+            "Id": 343,
+            "Title": "Complete the sentence. Mary … …. lunch with him at two o'clock.",
+            "Answers": [
+                "is having",
+                "are having",
+                "am having",
+                "be having",
+                "have"
+            ]
+        },
+        {
+            "Id": 344,
+            "Title": "Complete the sentence. …. are you going to give up?",
+            "Answers": [
+                "When",
+                "Who",
+                "Which",
+                "Whom",
+                "How long"
+            ]
+        },
+        {
+            "Id": 345,
+            "Title": "Complete the sentence. This is the corner of the road … the accident happened.",
+            "Answers": [
+                "where",
+                "which",
+                "when",
+                "who",
+                "whom"
+            ]
+        },
+        {
+            "Id": 346,
+            "Title": "Complete the sentence. The boy …. robbed the post office escaped in a black BMW.",
+            "Answers": [
+                "who",
+                "which",
+                "where",
+                "when",
+                "whose"
+            ]
+        },
+        {
+            "Id": 347,
+            "Title": "Complete the sentence. The train … goes to the airport runs every twenty minutes.",
+            "Answers": [
+                "which",
+                "who",
+                "where",
+                "when",
+                "whom"
+            ]
+        },
+        {
+            "Id": 348,
+            "Title": "Complete the sentence. This is the restaurant … he asked me to marry him.",
+            "Answers": [
+                "where",
+                "which",
+                "who",
+                "when",
+                "whom"
+            ]
+        },
+        {
+            "Id": 349,
+            "Title": "Complete the sentence. The waiter …. brought us our food was very friendly.",
+            "Answers": [
+                "who",
+                "which",
+                "where",
+                "when",
+                "whose"
+            ]
+        },
+        {
+            "Id": 350,
+            "Title": "Complete the sentence. What … did you get up on Sunday?",
+            "Answers": [
+                "time",
+                "long",
+                "o'clock",
+                "hour",
+                "moment"
+            ]
+        },
+        {
+            "Id": 351,
+            "Title": "Complete the sentence. …. are your biggest influences?",
+            "Answers": [
+                "Who",
+                "What",
+                "Where",
+                "Whose",
+                "Which"
+            ]
+        },
+        {
+            "Id": 352,
+            "Title": "Complete the sentence. Could you tell me …. the coffee shop is?",
+            "Answers": [
+                "where",
+                "what",
+                "who",
+                "whose",
+                "which"
+            ]
+        },
+        {
+            "Id": 353,
+            "Title": "Complete the sentence. My sister introduced me to a man …. has his own software company.",
+            "Answers": [
+                "who",
+                "which",
+                "where",
+                "whom",
+                "whose"
+            ]
+        },
+        {
+            "Id": 354,
+            "Title": "Complete the sentence. That is the woman … offered me her …. on the bus.",
+            "Answers": [
+                "who / seat",
+                "which / place",
+                "where / ticket",
+                "whose / bag",
+                "whom / hand"
+            ]
+        },
+        {
+            "Id": 355,
+            "Title": "Complete the sentence. What newspaper … you read on Sunday?",
+            "Answers": [
+                "do",
+                "are",
+                "does",
+                "is",
+                "have"
+            ]
+        },
+        {
+            "Id": 356,
+            "Title": "Complete the sentence. Your brain …. best in the middle of the day.",
+            "Answers": [
+                "works",
+                "is working",
+                "work",
+                "has worked",
+                "working"
+            ]
+        },
+        {
+            "Id": 357,
+            "Title": "Choose the correct tense. They moved to Korea when they …. married.",
+            "Answers": [
+                "got",
+                "get",
+                "have got",
+                "were getting",
+                "gets"
+            ]
+        },
+        {
+            "Id": 358,
+            "Title": "Choose the correct tense. I … … three major awards.",
+            "Answers": [
+                "have won",
+                "win",
+                "won",
+                "am winning",
+                "has won"
+            ]
+        },
+        {
+            "Id": 359,
+            "Title": "Choose the correct tense. She switched off the television and … to the bed.",
+            "Answers": [
+                "went",
+                "goes",
+                "has gone",
+                "go",
+                "going"
+            ]
+        },
+        {
+            "Id": 360,
+            "Title": "Choose the correct tense. We visited Syria. We …. there before.",
+            "Answers": [
+                "hadn't been",
+                "weren't",
+                "haven't been",
+                "don't be",
+                "not were"
+            ]
+        },
+        {
+            "Id": 361,
+            "Title": "Complete the sentence. Do you remember the restaurant where we … our first …. together?",
+            "Answers": [
+                "had / meal",
+                "ate / food",
+                "took / lunch",
+                "have / dinner",
+                "did / breakfast"
+            ]
+        },
+        {
+            "Id": 362,
+            "Title": "Choose the correct word. When we … on holiday last year, I … a lot of photos.",
+            "Answers": [
+                "went / took",
+                "go / take",
+                "were / did",
+                "went / made",
+                "did / took"
+            ]
+        },
+        {
+            "Id": 363,
+            "Title": "Choose the correct word. Sara … …. the new film five times at the cinema.",
+            "Answers": [
+                "has seen",
+                "saw",
+                "sees",
+                "is seeing",
+                "watched"
+            ]
+        },
+        {
+            "Id": 364,
+            "Title": "Choose the correct word. My father …. me last year.",
+            "Answers": [
+                "visited",
+                "visit",
+                "has visited",
+                "is visiting",
+                "visits"
+            ]
+        },
+        {
+            "Id": 365,
+            "Title": "Choose the correct word. I …. to play the piano when I was a child.",
+            "Answers": [
+                "learned",
+                "learn",
+                "have learned",
+                "am learning",
+                "learns"
+            ]
+        },
+        {
+            "Id": 366,
+            "Title": "Choose the correct word. I felt really good when I …. my piano exam with distinction.",
+            "Answers": [
+                "passed",
+                "past",
+                "pass",
+                "have passed",
+                "failing"
+            ]
+        },
+        {
+            "Id": 367,
+            "Title": "Choose the correct word. My cousin … a lot of money from his clothing business.",
+            "Answers": [
+                "makes",
+                "does",
+                "takes",
+                "has",
+                "gives"
+            ]
+        },
+        {
+            "Id": 368,
+            "Title": "Choose the correct word. The proudest day of my life was when I …. my own company.",
+            "Answers": [
+                "started",
+                "did",
+                "won",
+                "made",
+                "gave"
+            ]
+        },
+        {
+            "Id": 369,
+            "Title": "Choose the correct word. She … a lot of work for charity in her spare time.",
+            "Answers": [
+                "does",
+                "makes",
+                "has",
+                "gives",
+                "takes"
+            ]
+        },
+        {
+            "Id": 370,
+            "Title": "Choose the correct word. When I left school, I … a really good job as an accountant.",
+            "Answers": [
+                "got",
+                "made",
+                "did",
+                "gave",
+                "won"
+            ]
+        },
+        {
+            "Id": 371,
+            "Title": "Choose the correct word. I would really like to learn to …… Japanese. I am sure it's very difficult.",
+            "Answers": [
+                "speak",
+                "tell",
+                "say",
+                "talk",
+                "read"
+            ]
+        },
+        {
+            "Id": 372,
+            "Title": "Choose the correct word. My sister …. a prize for singing when we were on holiday.",
+            "Answers": [
+                "won",
+                "did",
+                "made",
+                "gave",
+                "got"
+            ]
+        },
+        {
+            "Id": 373,
+            "Title": "Choose the correct word. I felt very nervous before I …. speech to my work colleagues.",
+            "Answers": [
+                "gave",
+                "did",
+                "made",
+                "spoke",
+                "said"
+            ]
+        },
+        {
+            "Id": 374,
+            "Title": "Complete the sentence. They have … five world records in the last two years.",
+            "Answers": [
+                "broken",
+                "did",
+                "made",
+                "won",
+                "taken"
+            ]
+        },
+        {
+            "Id": 375,
+            "Title": "Complete the sentence. Have you ever … a prize?",
+            "Answers": [
+                "won",
+                "win",
+                "winning",
+                "did",
+                "make"
+            ]
+        },
+        {
+            "Id": 376,
+            "Title": "Complete the sentence. Have you ever … famous person?",
+            "Answers": [
+                "met",
+                "meet",
+                "meeting",
+                "see",
+                "saw"
+            ]
+        },
+        {
+            "Id": 377,
+            "Title": "Complete the sentence. Have you … eaten hamburgers?",
+            "Answers": [
+                "ever",
+                "never",
+                "yet",
+                "already",
+                "since"
+            ]
+        },
+        {
+            "Id": 378,
+            "Title": "Complete the sentence. Have you ever … sushi?",
+            "Answers": [
+                "tried",
+                "try",
+                "tries",
+                "ate",
+                "eat"
+            ]
+        },
+        {
+            "Id": 379,
+            "Title": "Complete the sentence. How many countries have you …. to?",
+            "Answers": [
+                "been",
+                "gone",
+                "went",
+                "be",
+                "visit"
+            ]
+        },
+        {
+            "Id": 380,
+            "Title": "Complete the sentence. She did not …. her suit to the cleaners.",
+            "Answers": [
+                "take",
+                "took",
+                "taken",
+                "takes",
+                "taking"
+            ]
+        },
+        {
+            "Id": 381,
+            "Title": "Complete the sentence. He is very …., he has got a lot of work at the moment.",
+            "Answers": [
+                "busy",
+                "lazy",
+                "tired",
+                "fit",
+                "reliable"
+            ]
+        },
+        {
+            "Id": 382,
+            "Title": "Complete the sentence. My job is really …., I have many things to worry about.",
+            "Answers": [
+                "stressful",
+                "boring",
+                "easy",
+                "funny",
+                "relaxing"
+            ]
+        },
+        {
+            "Id": 383,
+            "Title": "Complete the sentence. …. you prefer tea or coffee?",
+            "Answers": [
+                "Do",
+                "Are",
+                "Is",
+                "Have",
+                "Does"
+            ]
+        },
+        {
+            "Id": 384,
+            "Title": "Complete the sentence. It …… not rain much in the summer here.",
+            "Answers": [
+                "does",
+                "do",
+                "is",
+                "are",
+                "has"
+            ]
+        },
+        {
+            "Id": 385,
+            "Title": "Complete the sentence. Listen to that man. What language is he ….?",
+            "Answers": [
+                "speaking",
+                "speaks",
+                "speak",
+                "spoke",
+                "spoken"
+            ]
+        },
+        {
+            "Id": 386,
+            "Title": "Complete the sentence. He always … a lie-in on Sunday mornings.",
+            "Answers": [
+                "has",
+                "have",
+                "is having",
+                "having",
+                "had"
+            ]
+        },
+        {
+            "Id": 387,
+            "Title": "Complete the sentence. How often do you …. a bus to work?",
+            "Answers": [
+                "take",
+                "go",
+                "catch",
+                "do",
+                "get"
+            ]
+        },
+        {
+            "Id": 388,
+            "Title": "Complete the sentence. Do you usually …. to the radio at work.",
+            "Answers": [
+                "listen",
+                "hear",
+                "watch",
+                "do",
+                "see"
+            ]
+        },
+        {
+            "Id": 389,
+            "Title": "Complete the sentence. I am working very hard at the ……",
+            "Answers": [
+                "moment",
+                "present",
+                "time",
+                "now",
+                "today"
+            ]
+        },
+        {
+            "Id": 390,
+            "Title": "Complete the sentence. How often do you … to an art exhibition.",
+            "Answers": [
+                "go",
+                "visit",
+                "watch",
+                "see",
+                "do"
+            ]
+        },
+        {
+            "Id": 391,
+            "Title": "Fill in the gap: My parents are waiting …...me",
+            "Answers": [
+                "for",
+                "to",
+                "at",
+                "on",
+                "with"
+            ]
+        },
+        {
+            "Id": 392,
+            "Title": "Fill in the gap: We are crazy … computer games.",
+            "Answers": [
+                "about",
+                "on",
+                "of",
+                "at",
+                "with"
+            ]
+        },
+        {
+            "Id": 393,
+            "Title": "Fill in the gap: He is fond …. computer programs.",
+            "Answers": [
+                "of",
+                "on",
+                "about",
+                "at",
+                "with"
+            ]
+        },
+        {
+            "Id": 394,
+            "Title": "Fill in the gap: This student is satisfied …. our lessons.",
+            "Answers": [
+                "with",
+                "on",
+                "of",
+                "about",
+                "at"
+            ]
+        },
+        {
+            "Id": 395,
+            "Title": "Fill in the gap: She was scared …. wild animals.",
+            "Answers": [
+                "of",
+                "on",
+                "about",
+                "with",
+                "at"
+            ]
+        },
+        {
+            "Id": 396,
+            "Title": "Fill in the gap: We aren't afraid …. exams.",
+            "Answers": [
+                "of",
+                "on",
+                "about",
+                "with",
+                "at"
+            ]
+        },
+        {
+            "Id": 397,
+            "Title": "Fill in the gap: He is responsible …. this computer.",
+            "Answers": [
+                "for",
+                "of",
+                "on",
+                "about",
+                "with"
+            ]
+        },
+        {
+            "Id": 398,
+            "Title": "Fill in the gap: My close friend is good …. computer engineering.",
+            "Answers": [
+                "at",
+                "on",
+                "of",
+                "about",
+                "with"
+            ]
+        },
+        {
+            "Id": 399,
+            "Title": "Fill in the gap: Our students are interested …. computer engineering.",
+            "Answers": [
+                "in",
+                "on",
+                "at",
+                "of",
+                "about"
+            ]
+        },
+        {
+            "Id": 400,
+            "Title": "Complete the preposition: to be crazy …",
+            "Answers": [
+                "about",
+                "on",
+                "of",
+                "at",
+                "with"
+            ]
+        },
+        {
+            "Id": 401,
+            "Title": "Complete the preposition: to be fond ….",
+            "Answers": [
+                "of",
+                "on",
+                "at",
+                "with",
+                "about"
+            ]
+        },
+        {
+            "Id": 402,
+            "Title": "Complete the preposition: to be satisfied ….",
+            "Answers": [
+                "with",
+                "on",
+                "of",
+                "about",
+                "at"
+            ]
+        },
+        {
+            "Id": 403,
+            "Title": "Complete the preposition: to be scared ….",
+            "Answers": [
+                "of",
+                "on",
+                "at",
+                "with",
+                "about"
+            ]
+        },
+        {
+            "Id": 404,
+            "Title": "Complete the preposition: to be afraid ….",
+            "Answers": [
+                "of",
+                "on",
+                "at",
+                "with",
+                "about"
+            ]
+        },
+        {
+            "Id": 405,
+            "Title": "Complete the preposition: to be responsible ….",
+            "Answers": [
+                "for",
+                "of",
+                "on",
+                "at",
+                "with"
+            ]
+        },
+        {
+            "Id": 406,
+            "Title": "Complete the preposition: to be good ….",
+            "Answers": [
+                "at",
+                "on",
+                "in",
+                "of",
+                "with"
+            ]
+        },
+        {
+            "Id": 407,
+            "Title": "Complete the preposition: to be interested ….",
+            "Answers": [
+                "in",
+                "at",
+                "on",
+                "of",
+                "with"
+            ]
+        },
+        {
+            "Id": 408,
+            "Title": "Choose the correct preposition. He hardly ever stays … bed late.",
+            "Answers": [
+                "in",
+                "at",
+                "on",
+                "to",
+                "into"
+            ]
+        },
+        {
+            "Id": 409,
+            "Title": "Choose the correct preposition. I go …. the cinema about once a week.",
+            "Answers": [
+                "to",
+                "at",
+                "in",
+                "into",
+                "on"
+            ]
+        },
+        {
+            "Id": 410,
+            "Title": "Choose the correct preposition. He sometimes goes clubbing …. Saturday.",
+            "Answers": [
+                "on",
+                "at",
+                "in",
+                "to",
+                "into"
+            ]
+        },
+        {
+            "Id": 411,
+            "Title": "Choose the correct preposition. I am quite keen … horror films.",
+            "Answers": [
+                "on",
+                "at",
+                "in",
+                "of",
+                "about"
+            ]
+        },
+        {
+            "Id": 412,
+            "Title": "Choose the correct preposition. I am good … speaking.",
+            "Answers": [
+                "at",
+                "on",
+                "in",
+                "of",
+                "with"
+            ]
+        },
+        {
+            "Id": 413,
+            "Title": "Complete the sentence. What …you studying at the moment?",
+            "Answers": [
+                "are",
+                "do",
+                "is",
+                "am",
+                "were"
+            ]
+        }
+    ]
+}

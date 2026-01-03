@@ -1,8 +1,7 @@
-import { IElementHolder, Page } from "@Purper";
+import { Page } from "@Purper";
 export default class TestingPage extends Page {
     semestrs: Semestr[];
     protected preInit(): Promise<void>;
-    protected preLoad(holder: IElementHolder): Promise<void>;
 }
 declare class Semestr {
     private number;

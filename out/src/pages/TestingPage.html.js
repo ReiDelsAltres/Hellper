@@ -27,16 +27,12 @@ let TestingPage = class TestingPage extends Page {
             new Subject("Web sistemləri və texnologiyaları", "Cəbrayılova G.H", ["759ITS"], "Веб системы и технологии", "s3/Web.json"),
             new Subject("Dövrlər nəzəriyyəsi", "Qax.D.B", ["759KM"], "Теория цепей", "s3/ChainTheory.json"),
             new Subject("Sistem Programlaşdırma", "Gasanova Vusala Ramiz qızı", ["759ITS"], "Системное программирование [EMPTY]", "s3/Vusala.json"),
-            /*new Subject("Xarici dildə işgüzar və akademik kommunikasiya  - 3", "İsmayılova A.A", ["759ITS","759KM"], "Английский язык"),
-            new Subject("Sistem proqramlaşdırma", "Həsənova V.R", ["759ITS"], "Системное программирование"),*/
+            new Subject("Xarici dildə işgüzar və akademik kommunikasiya  - 3", "İsmayılova A.A", ["759ITS", "759KM"], "Английский язык", "s3/Eng.json"),
+            /*new Subject("Sistem proqramlaşdırma", "Həsənova V.R", ["759ITS"], "Системное программирование"),*/
         ]),
     ];
     async preInit() {
         this.semestrs.reverse();
-    }
-    // intentionally empty page — no logic
-    preLoad(holder) {
-        return Promise.resolve();
     }
 };
 TestingPage = __decorate([
@@ -44,7 +40,6 @@ TestingPage = __decorate([
         markupURL: "./src/pages/TestingPage.phtml",
         cssURL: "./src/pages/TestingPage.html.css",
         jsURL: "./src/pages/TestingPage.html.ts",
-        class: TestingPage,
     }, "/testing")
 ], TestingPage);
 export default TestingPage;
