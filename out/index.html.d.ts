@@ -1,4 +1,3 @@
-import "./src/pages/DebuggerPage.html.js";
 import "./src/pages/MainPage.html.js";
 import "./src/pages/PalettePage.html.js";
 import "./src/pages/ComponentShowcasePage.html.js";
