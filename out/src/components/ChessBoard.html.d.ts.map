@@ -1,1 +1,0 @@
-{"version":3,"file":"ChessBoard.html.d.ts","sourceRoot":"","sources":["../../../src/components/ChessBoard.html.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,SAAS,EAAE,MAAM,SAAS,CAAC;AAEpD,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,SAAS;IAC7C,MAAM,CAAC,kBAAkB,QAAM;IAE/B,SAAS,CAAC,OAAO,CAAC,MAAM,EAAE,cAAc,GAAG,OAAO,CAAC,IAAI,CAAC;CAY3D"}
