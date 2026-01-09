@@ -20,6 +20,18 @@ let TestingActualPage = class TestingActualPage extends Page {
         super();
         this.params = JSON.parse(decodeURIComponent(params));
     }
+    async dispose() {
+        // Отключаем ResizeObserver
+        if (this.masonryResizeObserver) {
+            this.masonryResizeObserver.disconnect();
+            this.masonryResizeObserver = undefined;
+        }
+        // Удаляем обработчик resize с window
+        if (this.layoutMasonryHandler) {
+            window.removeEventListener('resize', this.layoutMasonryHandler);
+            this.layoutMasonryHandler = undefined;
+        }
+    }
     async preInit() {
         if (this.params.randomSource === null) {
             const newSeed = (globalThis.crypto && typeof globalThis.crypto.randomUUID === 'function')
@@ -81,6 +93,7 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.initMasonry();
     }
     masonryResizeObserver;
+    layoutMasonryHandler;
     initMasonry() {
         const container = document.querySelector('.questions-container');
         if (!container)
@@ -132,7 +145,8 @@ let TestingActualPage = class TestingActualPage extends Page {
         });
         this.masonryResizeObserver.observe(container);
         // Also listen for window resize as backup
-        window.addEventListener('resize', layoutMasonry);
+        this.layoutMasonryHandler = layoutMasonry;
+        window.addEventListener('resize', this.layoutMasonryHandler);
     }
     resolveEnding(forceShow = false) {
         if (!forceShow && this.statuses.some(s => s === AnswerStatus.UNANSWERED))
@@ -387,7 +401,6 @@ TestingActualPage = __decorate([
         markupURL: "./src/pages/TestingActualPage.hmle",
         cssURL: "./src/pages/TestingActualPage.html.css",
         jsURL: "./src/pages/TestingActualPage.html.ts",
-        class: TestingActualPage,
     }, "/testing/actual"),
     __metadata("design:paramtypes", [String])
 ], TestingActualPage);

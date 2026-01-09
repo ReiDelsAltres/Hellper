@@ -6,9 +6,11 @@ export default class TestingActualPage extends Page {
     private selectedAnswers;
     private isExamMode;
     constructor(params?: string);
+    dispose(): Promise<void>;
     protected preInit(): Promise<void>;
     protected postLoad(holder: IElementHolder): Promise<void>;
     private masonryResizeObserver?;
+    private layoutMasonryHandler?;
     private initMasonry;
     private resolveEnding;
     /**

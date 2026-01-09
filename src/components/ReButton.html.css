@@ -72,6 +72,10 @@
     transform: none;
 }
 
+:host([allow-wrap]) .btn-text {
+    white-space: pre-wrap;
+}
+
 /* Button text */
 .btn-text {
     display: flex;

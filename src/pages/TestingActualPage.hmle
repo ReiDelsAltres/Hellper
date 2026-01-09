@@ -49,7 +49,7 @@
         </paper-component>
         <paper-component class="answers-container">
             @for (aidx, answer in question.Answers) {
-            <re-button color="empty" class="btn" @[ref]="@(index) + '-' + @(aidx)" @[onclick]="handleClick(event,element,{qidx: @(index), aidx: @(aidx), 
+            <re-button allow-wrap color="empty" class="btn" @[ref]="@(index) + '-' + @(aidx)" @[onclick]="handleClick(event,element,{qidx: @(index), aidx: @(aidx), 
                     c0: '@('c' + index + '-' + '0')', 
                     c1: '@('c' + index + '-' + '1')',
                     c2: '@('c' + index + '-' + '2')'

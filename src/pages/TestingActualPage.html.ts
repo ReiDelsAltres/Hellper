@@ -9,7 +9,6 @@ import PopUp from "../components/PopUp.html.js";
     markupURL: "./src/pages/TestingActualPage.hmle",
     cssURL: "./src/pages/TestingActualPage.html.css",
     jsURL: "./src/pages/TestingActualPage.html.ts",
-    class: TestingActualPage,
 }, "/testing/actual")
 export default class TestingActualPage extends Page {
     private params: {
@@ -29,6 +28,19 @@ export default class TestingActualPage extends Page {
     public constructor(params?: string) {
         super();
         this.params = JSON.parse(decodeURIComponent(params));
+    }
+    public async dispose(): Promise<void> {
+        // Отключаем ResizeObserver
+        if (this.masonryResizeObserver) {
+            this.masonryResizeObserver.disconnect();
+            this.masonryResizeObserver = undefined;
+        }
+        
+        // Удаляем обработчик resize с window
+        if (this.layoutMasonryHandler) {
+            window.removeEventListener('resize', this.layoutMasonryHandler);
+            this.layoutMasonryHandler = undefined;
+        }
     }
     protected async preInit(): Promise<void> {
         if (this.params.randomSource === null) {
@@ -99,6 +111,7 @@ export default class TestingActualPage extends Page {
     }
 
     private masonryResizeObserver?: ResizeObserver;
+    private layoutMasonryHandler?: () => void;
 
     private initMasonry() {
         const container = document.querySelector('.questions-container') as HTMLElement;
@@ -157,7 +170,8 @@ export default class TestingActualPage extends Page {
         this.masonryResizeObserver.observe(container);
 
         // Also listen for window resize as backup
-        window.addEventListener('resize', layoutMasonry);
+        this.layoutMasonryHandler = layoutMasonry;
+        window.addEventListener('resize', this.layoutMasonryHandler);
     }
 
     private resolveEnding(forceShow: boolean = false) {

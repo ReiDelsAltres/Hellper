@@ -102,7 +102,7 @@
 }
 
 .tt {
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
 
 /* Finish exam button container */
