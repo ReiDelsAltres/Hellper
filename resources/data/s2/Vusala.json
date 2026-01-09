@@ -322,9 +322,9 @@
     },
     {
       "Id": 30,
-      "Title": "Что выйдет на экран? A= \"Salam dunya\" \na=str (input()) \nprint(A)",
+      "Title": "Что выйдет на экран? A= \"Привет, мир\" \na=str (input()) \nprint(A)",
       "Answers": [
-        "\"Salam dunya\"",
+        "\"Привет, мир\"",
         "\"Hello world\"",
         "\"Привет мир\"",
         "\"Bonjour le monde\"",
