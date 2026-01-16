@@ -9,7 +9,7 @@ import { AccessType, IElementHolder, Page, RePage } from "@Purper";
 export default class TestingPage extends Page {
   public semestrs: Semestr[] = [
     new Semestr("\u2160", [
-      new Subject("Azerbaycan tarixi", "Unknown", ["759ITS","759KM"], "История азербайджана","s1/History.json"),
+      new Subject("Azerbaycan tarixi", "Unknown", ["759ITS", "759KM"], "История азербайджана","s1/History.json"),
       new Subject("Riyazi Analiz", "p.ü.f.d. Səmədzadə F.N",["759ITS", "759KM"], "Математический анализ","s1/Math.json"),
     ]),
     new Semestr("\u2161", [
