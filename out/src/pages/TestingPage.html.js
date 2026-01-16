@@ -7,10 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Page, RePage } from "@Purper";
 let TestingPage = class TestingPage extends Page {
     semestrs = [
-        new Semestr("&#8544;", [
+        new Semestr("\u2160", [
             new Subject("Riyazi Analiz", "p.ü.f.d. Səmədzadə F.N", ["759ITS", "759KM"], "Математический анализ", "s1/Math.json"),
         ]),
-        new Semestr("&#8545;", [
+        new Semestr("\u2161", [
             new Subject("InfTech", "Həsənov Elçin Qafar oğlu", ["759ITS"], "Инфоомационные технологии", "s2/FunOfIT.json"),
             new Subject("BaseProg", "Həsənov Elçin Qafar oğlu", ["759ITS"], "Основы программирования", "s2/Programming.json"),
             new Subject("DiffEqua", "Quliyeva Fətimə Ağayar qızı", ["759ITS", "759KM"], "Дифференциальные уравнения", "s2/DifferentialEquations.json"),
@@ -19,7 +19,7 @@ let TestingPage = class TestingPage extends Page {
             new Subject("LinearAlgebra", "Quliyeva Fətimə Ağayar qızı", ["759ITS", "759KM"], "Линейная алгебра", "s2/LinearAlgebra.json"),
             new Subject("English", "Ismayilova Aybəniz Arif qızı", ["759ITS", "759KM"], "Английский язык", "s2/Eng.json"),
         ]),
-        new Semestr("&#8546;", [
+        new Semestr("\u2162", [
             new Subject("Verilənlər bazası sistemləri", "Kuliyev M.X", ["759ITS", "759KM"], "Базы данных", "s3/MySQL.json"),
             new Subject("Kompüter arxitekturası -1", "Kuliyev M.X", ["759ITS", "759KM"], "Архитектура компьютера", "s3/PCArch.json"),
             new Subject("Ehtimal nəzəriyyəsi və riyazi statistika", "Dos.Əliyeva X.H", ["759ITS", "759KM"], "Математическая статистика", "s3/Math.json"),
