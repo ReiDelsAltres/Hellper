@@ -25,19 +25,15 @@
     color: var(--loc-paper-color);
 }
 
-:host(:not([simple="true"])) {
-    background-size: var(--paper-background-size);
-    background-position: var(--paper-background-position);
-    background-image: var(--paper-background-image);
-}
-
-:host([hover="true"]) {
+:host([interactive="true"]) {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-:host([hover="true"]:hover) {
+:host([interactive="true"]:hover) {
     transform: translateY(-2px);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+:host([color="empty"]) {
+    --loc-paper-color: var(--color-empty);
 }
 
 :host([color="primary"]), :host(:not([color])) {
@@ -70,4 +66,37 @@
 
 :host([color="error"]) {
     --loc-paper-color: var(--color-error);
+}
+
+:host(:is([alternate], [alternate="true"])) {
+    background-color: var(--loc-paper-color);
+    color: var(--loc-paper-background-color, var(--paper-background-color));
+}
+:host(:is([alternate], [alternate="true"])[color="empty"]) {
+    --paper-background-color: var(--color-empty);
+}
+:host(:is([alternate], [alternate="true"])[color="primary"]), 
+:host(:is([alternate], [alternate="true"]):not([color])) {
+    --paper-background-color: var(--color-primary);
+}
+:host(:is([alternate], [alternate="true"])[color="secondary"]) {
+    --paper-background-color: var(--color-secondary);
+}
+:host(:is([alternate], [alternate="true"])[color="tertiary"]) {
+    --paper-background-color: var(--color-tertiary);
+}
+:host(:is([alternate], [alternate="true"])[color="additional"]) {
+    --paper-background-color: var(--color-additional);
+}
+:host(:is([alternate], [alternate="true"])[color="info"]) {
+    --paper-background-color: var(--color-info);
+}
+:host(:is([alternate], [alternate="true"])[color="success"]) {
+    --paper-background-color: var(--color-success);
+}
+:host(:is([alternate], [alternate="true"])[color="warning"]) {
+    --paper-background-color: var(--color-warning);
+}
+:host(:is([alternate], [alternate="true"])[color="error"]) {
+    --paper-background-color: var(--color-error);
 }

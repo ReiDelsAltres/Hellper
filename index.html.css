@@ -1,10 +1,12 @@
-html, body {
+html,
+body {
     min-width: 100%;
     min-height: 100%;
 
     margin: 0;
     padding: 0;
 }
+
 body {
     position: absolute;
     min-height: 100vh;
@@ -17,17 +19,18 @@ body {
     background-color: var(--app-background-color);
 }
 
-navigation-drawer[state="open"] + #page {
+navigation-drawer[state="open"]+#page {
     margin-left: 288px;
 }
-navigation-drawer[state="mini"] + #page {
+
+navigation-drawer[state="mini"]+#page {
     margin-left: 88px;
 }
 
 #page {
     position: relative;
     min-height: calc(100vh - 20px * 2);
-    
+
     margin: 0px;
     padding: 20px;
 
@@ -68,13 +71,13 @@ navigation-drawer li {
 
 @media (max-width: 600px) {
     /* On phones the content should be full width when sidebar is hidden */
-    navigation-drawer[state="open"] + #page,
-    navigation-drawer[state="mini"] + #page,
-    
-    app-layout[sidebar="mini"] + #page,
-    app-layout[sidebar="open"] + #page,
-    app-layout[sidebar="full"] + #page,
-    app-layout[sidebar="hidden"] + #page {
+    navigation-drawer[state="open"]+#page,
+    navigation-drawer[state="mini"]+#page,
+
+    app-layout[sidebar="mini"]+#page,
+    app-layout[sidebar="open"]+#page,
+    app-layout[sidebar="full"]+#page,
+    app-layout[sidebar="hidden"]+#page {
         margin-left: 0 !important;
     }
 

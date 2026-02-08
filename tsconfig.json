@@ -12,7 +12,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@Purper": ["./node_modules/@reidelsaltres/pureper/src/index.js"]
+      "@Purper": ["./node_modules/@reidelsaltres/pureper/src/index.js"],
+      "@material-design-icons": ["./node_modules/@material-design-icons/*"]
     },
 
     "experimentalDecorators": true,

@@ -1,0 +1,41 @@
+@use './core/ComponentCore';
+
+$sizes: (
+    'extra-small': (size: 4px, padding: 2px 4px),
+    'small': (size: 8px, padding: 4px 8px),
+    'medium': (size: 12px, padding: 6px 10px),
+    'large': (size: 16px, padding: 8px 16px),
+    'extra-large': (size: 24px, padding: 12px 18px)
+);
+
+@include ComponentCore.setupFullCore;
+
+@include ComponentCore.supportHidden;
+@include ComponentCore.supportDisabled;
+@include ComponentCore.supportSize($sizes);
+@include ComponentCore.supportColor;
+
+@include ComponentCore.supportVariant('outlined') using ($type) {
+    @if $type ==base {
+        background-color: transparent;
+        border: 1px solid var(--component-bg-color);
+        color: var(--component-bg-color);
+    }
+}
+
+@include ComponentCore.supportVariant('filled', true) using ($type) {
+    @if $type == base {
+        background-color: var(--component-bg-color);
+        color: var(--component-text-color);
+    }
+}
+
+:host {
+    border-radius: 999px;
+
+    /* make chips behave predictably inside flex containers */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

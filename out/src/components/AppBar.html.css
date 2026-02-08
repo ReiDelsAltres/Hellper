@@ -1,0 +1,116 @@
+:host {
+  position: fixed;
+  z-index: 2000;
+  background-color: var(--app-bars-background-color);
+  background-image: var(--app-bars-background-image);
+  background-size: var(--app-bars-background-size);
+  background-position: var(--app-bars-background-position);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  display: var(--app-display);
+}
+
+:host([hidden]) {
+  --app-display: none;
+  --app-bar-vertical-width: 0 !important;
+  --app-bar-horizontal-height: 0 !important;
+}
+
+:host(:is(:not([type]), [type=mini])) {
+  --app-bar-vertical-width: 88px;
+  --app-bar-horizontal-height: 66px;
+}
+
+:host(:is(:not([type]), [type=mini]):hover:is(:not([no-hover]))) {
+  --app-bar-vertical-width: 288px;
+  --app-bar-horizontal-height: 128px;
+}
+
+:host([type=full]) {
+  --app-bar-vertical-width: 288px;
+  --app-bar-horizontal-height: 128px;
+}
+
+:host(:not([orientation])),
+:host([orientation=vertical]) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: var(--app-bar-vertical-width);
+  /**/
+  --app-bar-head-height: 10%;
+  --app-bar-content-height: 80%;
+  --app-bar-foot-height: 10%;
+  --app-bar-head-width: 100%;
+  --app-bar-content-width: 100%;
+  --app-bar-foot-width: 100%;
+  --app-bar-content-direction: column;
+  /**/
+  --app-bar-main-margin: 0 0 2vh 0;
+  --app-bar-sub-margin: 2vh 0 0 0;
+  --app-bar-slots-width: 100%;
+  --app-bar-slots-height: auto;
+}
+
+:host([pos=horizontal]) {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: var(--app-bar-horizontal-height);
+  /**/
+  --app-bar-head-height: 100%;
+  --app-bar-content-height: 100%;
+  --app-bar-foot-height: 100%;
+  --app-bar-head-width: 10%;
+  --app-bar-content-width: 80%;
+  --app-bar-foot-width: 10%;
+  --app-bar-content-direction: row;
+  /**/
+  --app-bar-main-margin: 0 2vw 0 0;
+  --app-bar-sub-margin: 0 0 0 2vw;
+  /**/
+  --app-bar-slots-width: auto;
+  --app-bar-slots-height: 100%;
+}
+
+.dead-zone {
+  max-height: 85px;
+  max-width: 85px;
+  min-height: 85px;
+  min-width: 85px;
+}
+
+.head {
+  height: var(--app-bar-head-height);
+  width: var(--app-bar-head-width);
+}
+
+.content {
+  display: flex;
+  flex-direction: var(--app-bar-content-direction);
+  justify-content: space-between;
+  height: var(--app-bar-content-height);
+  width: var(--app-bar-content-width);
+}
+
+::slotted(*) {
+  width: var(--app-bar-slots-width);
+  height: var(--app-bar-slots-height);
+}
+
+.foot {
+  height: var(--app-bar-foot-height);
+  width: var(--app-bar-foot-width);
+}
+
+.main {
+  margin: var(--app-bar-main-margin);
+}
+
+.sub {
+  margin: var(--app-bar-sub-margin);
+}
+
+/*# sourceMappingURL=AppBar.html.css.map */

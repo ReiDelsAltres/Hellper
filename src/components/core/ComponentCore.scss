@@ -1,0 +1,245 @@
+@use "sass:map";
+@use "sass:list";
+
+$colors-base: (
+    'primary',
+    'secondary',
+    'tertiary',
+    'additional',
+    'empty',
+
+    'info',
+    'warning',
+    'success',
+    'error'
+    ) !default;
+
+$sizes-base: (
+    'extra-small': (size: 16px, font: 0.625rem),
+    'small': (size: 24px, font: 0.75rem),
+    'medium': (size: 32px, font: 0.875rem),
+    'large': (size: 40px, font: 1rem),
+    'extra-large': (size: 60px, font: 1.5rem)) !default;
+
+@layer core, additions, sizes, colors, variants, functions;
+
+@mixin setupFullCore($strict: false) {
+    @include setupSize($strict
+);
+@include setupFont();
+@include setupColor();
+}
+
+@mixin setupSize($strict: false) {
+    @layer core {
+        @if $strict {
+            :host {
+                width: var(--component-size);
+                height: var(--component-size);
+                padding: var(--component-padding);
+            }
+        }
+
+        @else {
+            :host {
+                min-width: var(--component-size);
+                min-height: var(--component-size);
+                padding: var(--component-padding);
+            }
+        }
+    }
+}
+
+@mixin setupFont() {
+    @layer core {
+        :host {
+            font-family: var(--font-family);
+
+            font-size: var(--component-font);
+
+            font-weight: 500;
+            line-height: 1;
+
+            text-decoration: none;
+            white-space: wrap;
+        }
+    }
+}
+
+@mixin setupColor() {
+    @layer core {
+        :host {
+            color: var(--component-text-color);
+            background-color: var(--component-bg-color);
+        }
+    }
+
+    @layer functions {
+        :host(:hover) {
+            background-color: var(--component-hover-bg-color);
+        }
+    }
+}
+
+@mixin supportHidden {
+    @layer additions {
+        :host {
+            transition: opacity 0.3s ease-in-out,
+                width 0.3s ease-in-out,
+                height 0.3s ease-in-out,
+                padding 0.3s ease-in-out;
+        }
+
+        :host(:not([hidden="false"])[hidden]) {
+            visibility: hidden;
+            opacity: 0;
+
+            width: 0px;
+            height: 0px;
+            padding: 0px;
+        }
+
+        :host(:is(:not([hidden]), [hidden="false"])) {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@mixin supportDisabled {
+    @layer additions {
+        :host(:not([disabled="false"])[disabled]) {
+            pointer-events: none;
+            cursor: not-allowed;
+            transform: none;
+
+            opacity: 0.6;
+        }
+    }
+}
+
+@mixin supportMini($class: 'mini') {
+    @layer additions {
+        .#{$class} {
+            transition: opacity 0.3s ease-in-out,
+                width 0.3s ease-in-out,
+                height 0.3s ease-in-out,
+                padding 0.3s ease-in-out;
+        }
+
+        :host(:not([mini="false"])[mini]) .#{$class} {
+            visibility: hidden;
+            opacity: 0;
+
+            width: 0px;
+            height: 0px;
+            padding: 0px;
+        }
+
+        :host(:is(:not([mini]), [mini="false"])) .#{$class} {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@mixin supportSize($custom-sizes: null) {
+    $sizes: (
+    );
+
+@each $key, $props in $sizes-base {
+    $custom: if($custom-sizes !=null and map.has-key($custom-sizes, $key),
+            map.get($custom-sizes, $key),
+            ());
+
+    $sizes: map.merge($sizes,
+            ($key: map.merge($props, $custom)));
+}
+
+$size: map.get($sizes, 'medium');
+
+@layer sizes {
+    :host(:not([size])) {
+        --component-size: #{map.get($size, 'size')};
+        --component-font: #{map.get($size, 'font')};
+        --component-padding: #{map.get($size, 'padding')};
+
+        @content($size);
+    }
+
+    @each $name, $props in $sizes {
+        :host([size="#{$name}"]) {
+            --component-size: #{map.get($props, 'size')};
+            --component-font: #{map.get($props, 'font')};
+            --component-padding: #{map.get($props, 'padding')};
+
+            @content($props);
+        }
+    }
+}
+}
+
+@mixin supportVariant($variant-name: null, $default: false) {
+    @if $default {
+        @layer variants {
+
+            :host(:not([variant])),
+            :host([variant="#{$variant-name}"]) {
+                @content(base);
+            }
+        }
+
+        :host(:not([variant]):hover),
+        :host([variant="#{$variant-name}"]:hover) {
+            @content(hover);
+        }
+    }
+
+    @else {
+        @layer variants {
+            :host([variant="#{$variant-name}"]) {
+                @content(base);
+            }
+        }
+
+        :host([variant="#{$variant-name}"]:hover) {
+            @content(hover);
+        }
+    }
+}
+
+@mixin supportColor($custom-colors: null) {
+    $colors: (
+    );
+
+@each $color in $colors-base {
+    $colors: list.append($colors, $color);
+}
+
+@if $custom-colors !=null {
+    @each $color in $custom-colors {
+        $colors: list.append($colors, $color);
+    }
+}
+
+@layer colors {
+    :host([color="inherit"]) {
+        color: inherit;
+        background-color: inherit;
+    }
+
+    :host(:not([color])) {
+        --component-bg-color: var(--color-primary);
+        --component-text-color: var(--color-primary-contrast);
+        --component-hover-bg-color: var(--color-primary-hover);
+    }
+
+    @each $color in $colors {
+        :host([color="#{$color}"]) {
+            --component-bg-color: var(--color-#{$color});
+            --component-text-color: var(--color-#{$color}-contrast);
+            --component-hover-bg-color: var(--color-#{$color}-hover);
+        }
+    }
+}
+}

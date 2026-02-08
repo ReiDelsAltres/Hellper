@@ -1,45 +1,23 @@
-import { IElementHolder, Component } from "@Purper";
+import { Component, TemplateHolder, Attribute } from "@Purper";
 import ReButton from "./ReButton.html.js";
 export default class ReButtonGroup extends Component {
     private container?;
-    private buttons;
-    static get observedAttributes(): string[];
-    protected preLoad(holder: IElementHolder): Promise<void>;
+    buttonMap: Map<ReButton, boolean>;
+    readonly Orientation: Attribute<"horizontal" | "vertical" | "flex">;
+    readonly Variant: Attribute<"filled" | "outlined" | "text" | null>;
+    readonly Color: Attribute<string>;
+    readonly Size: Attribute<string>;
+    readonly Selection: Attribute<"single" | "multiple" | "none">;
+    readonly Value: Attribute<string | null>;
+    readonly Disabled: Attribute<boolean>;
+    readonly FullWidth: Attribute<boolean>;
+    readonly Mini: Attribute<boolean>;
+    protected preLoad(holder: TemplateHolder): Promise<void>;
+    private update;
     private collectButtons;
     private handleButtonClick;
     private updateGroup;
-    private syncSelectionFromValue;
-    /**
-     * Получить текущее значение (или массив значений для multiple)
-     */
-    getValue(): string | string[] | null;
-    /**
-     * Установить значение
-     */
-    setValue(value: string | string[]): void;
-    /**
-     * Получить выбранные кнопки
-     */
-    getSelectedButtons(): ReButton[];
-    /**
-     * Очистить выбор
-     */
-    clearSelection(): void;
-    /**
-     * Выбрать кнопку по индексу
-     */
-    selectByIndex(index: number): void;
-    /**
-     * Отключить группу
-     */
-    disable(): void;
-    /**
-     * Включить группу
-     */
-    enable(): void;
-    /**
-     * Получить все кнопки в группе
-     */
-    getButtons(): ReButton[];
+    private initButtonMap;
+    getValueSeparated(): string[];
 }
 //# sourceMappingURL=ReButtonGroup.html.d.ts.map

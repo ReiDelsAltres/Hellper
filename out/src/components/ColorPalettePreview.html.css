@@ -1,0 +1,142 @@
+/* Palette Card - compact color preview */
+.palette-card {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--color-primary) 15%, var(--surface-dark, #1e1f26)), var(--surface-dark, #1e1f26));
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: 16px;
+  padding: 16px;
+  min-width: 220px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.palette-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.palette-header {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.palette-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text, #fff);
+  text-transform: capitalize;
+}
+
+.color-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.color-row:last-child {
+  margin-bottom: 0;
+}
+
+.color-block {
+  flex: 1;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.color-block:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Main colors */
+.color-block.primary {
+  background: var(--color-primary, #594ae2);
+}
+
+.color-block.secondary {
+  background: var(--color-secondary, #ff4081);
+}
+
+.color-block.tertiary {
+  background: var(--color-tertiary, #ffc107);
+}
+
+.color-block.additional {
+  background: var(--color-additional, #00bcd4);
+}
+
+/* Accent / Distinctive */
+.color-block.primary-distinctive {
+  background: var(--color-primary-distinctive, #5a47ff);
+}
+
+.color-block.secondary-distinctive {
+  background: var(--color-secondary-distinctive, #cc1854);
+}
+
+.color-block.tertiary-distinctive {
+  background: var(--color-tertiary-distinctive, #19a98c);
+}
+
+.color-block.additional-distinctive {
+  background: var(--color-additional-distinctive, #264f78);
+}
+
+/* Utility */
+.color-block.info {
+  background: var(--color-info, #2196f3);
+}
+
+.color-block.success {
+  background: var(--color-success, #4caf50);
+}
+
+.color-block.warning {
+  background: var(--color-warning, #ff9800);
+}
+
+.color-block.error {
+  background: var(--color-error, #f44336);
+}
+
+/* Surface */
+.color-block.surface {
+  background: var(--color-surface, #32333d);
+}
+
+.color-block.surface-light {
+  background: var(--color-surface-light, #fff);
+}
+
+.color-block.surface-dark {
+  background: var(--color-surface-dark, #27272f);
+}
+
+.color-block.text-color {
+  background: var(--color-text, #c1c1c4);
+}
+
+/* Row styling hints */
+.main-colors .color-block {
+  height: 32px;
+}
+
+.accent-colors .color-block {
+  height: 24px;
+  opacity: 0.85;
+}
+
+.utility-colors .color-block {
+  height: 20px;
+}
+
+.surface-colors .color-block {
+  height: 18px;
+}
+
+/*# sourceMappingURL=ColorPalettePreview.html.css.map */

@@ -1,0 +1,34 @@
+<paper-component simple="true" class="page">
+  <div class="header">
+    <h1>Testing Page</h1>
+    <p>Choose subject for testing</p>
+  </div>
+
+  <for value="semestr" of="semestrs" class="semestr-list">
+    <paper-component simple="true" class="semestr-item">
+      <p>Semestr<exp of="semestr.number"></exp>
+      </p>
+      <for value="subject" of="semestr.subjects" class="subject-list">
+        <re-button class="btn" variant="outlined" color="additional" data-link
+          set[href]="'/testing/sub?subject=' + encodeURIComponent(JSON.stringify(subject))">
+          <div class="content">
+            <div class="meta">
+              <div>
+                <re-typography>
+                  <exp of="subject.translatedName"></exp>
+                </re-typography>
+              </div>
+              <p>Преподаватель: <exp of="subject.teacher"></exp>
+              </p>
+            </div>
+            <for value="group" of="subject.groups" class="chip-column">
+              <re-chip color="additional">
+                <exp of="group"></exp>
+              </re-chip>
+            </for>
+          </div>
+        </re-button>
+      </for>
+    </paper-component>
+  </for>
+</paper-component>

@@ -1,7 +1,7 @@
 // PalettePage.html.js
 // Palette page that auto-discovers themes from /resources folder
 
-import { Fetcher, IElementHolder, Page, RePage, setTheme } from "@Purper";
+import { Fetcher, IElementHolder, Page, RePage, setTheme, TemplateHolder } from "@Purper";
 
 @RePage({
     markupURL: "./src/pages/PalettePage.html",
@@ -13,9 +13,9 @@ export default class PalettePage extends Page {
     private gallery?: HTMLElement;
     private themes: string[] = [];
 
-    protected async preLoad(holder: IElementHolder): Promise<void> {
+    protected async preLoad(holder: TemplateHolder): Promise<void> {
         // Hold a reference to gallery element so we can populate it
-        this.gallery = holder.element.querySelector('.palette-gallery') as HTMLElement | null ?? undefined;
+        this.gallery = holder.documentFragment.querySelector('.palette-gallery') as HTMLElement | null ?? undefined;
 
         // Auto-discover themes from /resources folder
         await this.discoverThemes();

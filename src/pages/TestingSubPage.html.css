@@ -11,181 +11,67 @@
   margin-bottom: 40px;
 }
 
-.header h1 {
-  color: var(--color-text);
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0 0 8px 0;
+.full-width {
+  display: block;
+  width: 100%;
 }
 
-.header h2 {
-  color: var(--color-text-disabled);
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: 0 0 24px 0;
-}
-
-.meta-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.meta-row .label {
-  color: var(--color-text-disabled);
-  font-size: 0.95rem;
-}
-
-/* Mode Selector */
-.mode-selector {
+.mode-group {
   display: flex;
   flex-wrap: wrap;
-  /*row-gap: 8px;
-  column-gap: 0px;*/
-  gap: 0px;
-  margin-bottom: 16px;
+  align-items: stretch;
+  width: 100%;
 }
 
-.mode-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-}
-
-.mode-count {
-  position: absolute;
-  right: 10px;
-}
-
-re-button.mode-item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-radius: 0px;
-
-  padding: 20px 24px;
-}
-
-/* Option block (settings) */
-.optionBlock {
-  min-height: 0px;
-  max-height: 0px;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 200ms ease, opacity 200ms ease;
-  margin-top: 8px;
-  pointer-events: none;
-
+/*.mode-group re-button {
+  flex: 1 1 0;
+  min-width: 220px;
+  max-width: 100%;
   box-sizing: border-box;
 
+  display: block;
+}*/
+
+.cont {
   width: 100%;
-}
-.optionBlock.open {
-  max-height: 400px;
-  min-width: 100%;
-
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Option inputs */
-.option-inputs {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 16px;
-  padding: 0 8px;
+  align-items: stretch;
 }
 
-.option-input-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
-  min-width: 140px;
+.cont re-button {
+  flex: 1 1 0;
+  min-width: 220px;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  border-radius: 0;
+
+  display: block;
+}
+.mode-button re-chip {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
-.option-input-row label {
-  font-size: 0.85rem;
-  color: var(--color-secondary-contrast);
-  font-weight: 500;
-}
-
-.option-input-row re-input {
+.option-block {
   width: 100%;
-}
-.group1 {
-  display: flex;
-  gap: 5px;
-  flex: 2;
+  min-width: 100%;
+
+  border-radius: 0;
+  margin: 0;
+
+  background-color: color-mix(in srgb, var(--paper-background-color) 50%, black);
 }
 
-/* Ensure options and settings button behave nicely on small screens */
 @media (max-width: 480px) {
-  .optionBlock.open {
-    max-height: 1000px;
-  }
-}
-
-/* Mobile / small screens */
-@media (max-width: 900px) {
-  .page {
-    padding: 20px 12px;
+  .mode-group {
+    flex-direction: column;
   }
 
-  .header h1 {
-    font-size: 1.6rem;
-  }
-
-  .header h2 {
-    font-size: 1rem;
-  }
-
-  re-button.mode-item {
-    flex-basis: 100%;
-    min-width: 100%;
+  .mode-group re-button {
+    flex: none;
     width: 100%;
-    padding: 14px 16px;
-    box-sizing: border-box;
-  }
-
-  .mode-content {
-    align-items: stretch;
-  }
-
-  .mode-count {
-    float: right;
-    margin-left: auto;
-  }
-
-  .start-button,
-  .all-questions-button {
-    width: 100%;
-    display: block;
-    margin-top: 12px;
-  }
-
-  /* Reduce overall spacing for very small screens */
-  @media (max-width: 420px) {
-    .page {
-      padding: 12px 10px;
-    }
-
-    .header h1 {
-      font-size: 1.4rem;
-    }
-
-    .header h2 {
-      font-size: 0.9rem;
-    }
-
-    re-button.mode-item {
-      padding: 10px 12px;
-    }
   }
 }

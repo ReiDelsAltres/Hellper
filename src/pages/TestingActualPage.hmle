@@ -1,4 +1,4 @@
-<pop-up @[ref]="resultPopup" modal>
+<pop-up ref="'resultPopup'" modal>
     <re-typography variant="headline" class="popH">Результаты теста</re-typography>
     <!---<svg class="christmas-svg" viewBox="0 0 64 80" width="64" height="80" xmlns="http://www.w3.org/2000/svg" role="img"
         focusable="false">
@@ -17,57 +17,57 @@
         </g>
     </svg>--->
     <div class="result-stats">
-        <re-typography>Правильных: <re-chip color="success" @[ref]="resultCorrect">0</re-chip></re-typography>
-        <re-typography>Неправильных: <re-chip color="error" @[ref]="resultWrong">0</re-chip></re-typography>
-        <re-typography>Пропущено: <re-chip color="warning" @[ref]="resultSkip">0</re-chip></re-typography>
+        <re-typography>Правильных: <re-chip color="success" ref="'resultCorrect'">0</re-chip></re-typography>
+        <re-typography>Неправильных: <re-chip color="error" ref="'resultWrong'">0</re-chip></re-typography>
+        <re-typography>Пропущено: <re-chip color="warning" ref="'resultSkip'">0</re-chip></re-typography>
     </div>
-    <div class="result-score" @[ref]="resultScoreBlock" style="display:none">
-        <re-typography>Баллы: <re-chip @[ref]="resultScore">0</re-chip></re-typography>
+    <div class="result-score" ref="'resultScoreBlock'" style="display:none">
+        <re-typography>Баллы: <re-chip ref="'resultScore'">0</re-chip></re-typography>
     </div>
-    <re-button color="primary" full-width @[onclick]="closeResult()">Закрыть</re-button>
+    <re-button color="primary" full-width on[click]="closeResult()">Закрыть</re-button>
 </pop-up>
 
-<pop-up @[ref]="confirmPopup" modal>
+<pop-up ref="'confirmPopup'" modal>
     <re-typography variant="headline" class="popH">Завершить тест?</re-typography>
     <re-typography class="confirm-text">После завершения вы не сможете изменить ответы.</re-typography>
     <div class="confirm-buttons">
-        <re-button color="empty" variant="filled" @[onclick]="cancelFinish()">Отмена</re-button>
-        <re-button color="error" variant="filled" @[onclick]="confirmFinish()">Завершить</re-button>
+        <re-button color="empty" variant="filled" on[click]="cancelFinish()">Отмена</re-button>
+        <re-button color="error" variant="filled" on[click]="confirmFinish()">Завершить</re-button>
     </div>
 </pop-up>
 
 
 <div id="top" class="questions-container">
-    @for (index, question in questions) {
-    <paper-component class="question-card">
-        <paper-component class="titleBlock">
-            <re-typography @[ref]="@('c' + index + '-' + '2')" color="empty" class="typo">
-                <re-chip class="floated" color="empty" @[ref]="@('c' + index + '-' + '0')">@(index + 1)</re-chip>
-                <re-chip class="floated" color="empty" @[ref]="@('c' + index + '-' + '1')">@(question.Id)</re-chip>
-                <span class="tt">@(question.Title)</span>
-            </re-typography>
+    <for index="index" value="question" of="questions">
+        <paper-component class="question-card">
+            <paper-component class="titleBlock">
+                <re-typography ref="'c' + index + '_' + '2'" color="empty" class="typo">
+                    <re-chip class="floated" color="empty" ref="'c' + index + '_' + '0'"><exp of="index + 1"></exp></re-chip>
+                    <re-chip class="floated" color="empty" ref="'c' + index + '_' + '1'"><exp of="question.Id"></exp></re-chip>
+                    <span class="tt"><exp of="question.Title"></exp></span>
+                </re-typography>
+            </paper-component>
+            <paper-component class="answers-container">
+                <for index="aidx" value="answer" of="question.Answers">
+                    <re-button allow-wrap color="empty" class="btn" ref="'b' + index + '_' + aidx" on[click]="handleClick(event,element,{qidx: index, aidx: aidx, 
+                    c0: 'c' + index + '_' + '0', 
+                    c1: 'c' + index + '_' + '1',
+                    c2: 'c' + index + '_' + '2'
+                    })"><exp of="answer"></exp></re-button>
+                </for>
+            </paper-component>
         </paper-component>
-        <paper-component class="answers-container">
-            @for (aidx, answer in question.Answers) {
-            <re-button allow-wrap color="empty" class="btn" @[ref]="@(index) + '-' + @(aidx)" @[onclick]="handleClick(event,element,{qidx: @(index), aidx: @(aidx), 
-                    c0: '@('c' + index + '-' + '0')', 
-                    c1: '@('c' + index + '-' + '1')',
-                    c2: '@('c' + index + '-' + '2')'
-                    })">@(answer)</re-button>
-            }
-        </paper-component>
-    </paper-component>
-    }
+    </for>
 </div>
 
-<paper-component simple="true" class="finish-exam-container" @[ref]="finishExamContainer">
-    <re-button color="error" variant="filled" size="large" full-width @[onclick]="finishExam()">
+<paper-component simple="true" class="finish-exam-container" ref="'finishExamContainer'">
+    <re-button color="error" variant="filled" size="large" full-width on[click]="finishExam()">
         Завершить тест
     </re-button>
 </paper-component>
 
-<paper-component simple="true" class="restart-container" @[ref]="restartContainer">
-    <re-button color="primary" variant="filled" size="large" full-width icon="refresh" @[onclick]="regenerateShuffle()">
+<paper-component simple="true" class="restart-container" ref="'restartContainer'">
+    <re-button color="primary" variant="filled" size="large" full-width icon="refresh" on[click]="regenerateShuffle()">
         Перезапустить тест
     </re-button>
 </paper-component>

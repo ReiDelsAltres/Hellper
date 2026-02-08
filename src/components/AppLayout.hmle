@@ -1,19 +1,19 @@
 <div class="layout-controls">
     <div class="switchers">
-        <re-button class = "tgl sidebar-toggle" variant="outlined" icon="menu" @[ref]="sidebarBtn" @[onclick]="toggleAppbar(0)"></re-button>
-        <re-button class ="tgl" variant="outlined" size="large" icon="menu" @[ref]="topbarBtn" @[onclick]="toggleAppbar(1)"></re-button>
+        <re-button class = "tgl sidebar-toggle" variant="outlined" icon="menu" ref="'sidebarBtn'" on[click]="toggleAppbar(0)"></re-button>
+        <re-button class ="tgl" variant="outlined" size="large" icon="menu" ref="'topbarBtn'" on[click]="toggleAppbar(1)"></re-button>
     </div>
     <div class="add">
-        <re-button class="tgl setting" variant="outlined" icon="settings" @[ref]="settingsBtn"></re-button>
+        <re-button class="tgl setting" variant="outlined" icon="settings" ref="'settingsBtn'"></re-button>
     </div>
 </div>
 
-<app-bar class="sidebar" pos="vertical" type="mini" @[ref]="sidebar">
+<app-bar class="sidebar" pos="vertical" type="mini" ref="'sidebar'">
     <slot name="sidebar"></slot>
     <slot name="sidebar-sub" slot="sub"></slot>
 </app-bar>
 
-<app-bar class="topbar" pos="horizontal" no-hover type="mini" @[ref]="topbar">
+<app-bar class="topbar" pos="horizontal" no-hover type="mini" ref="'topbar'">
     <slot name="topbar"></slot>
     <slot name="topbar-sub" slot="sub"></slot>
 </app-bar>

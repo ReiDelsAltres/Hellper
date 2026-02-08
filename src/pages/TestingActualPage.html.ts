@@ -1,4 +1,4 @@
-import { AccessType, Fetcher, IElementHolder, Page, RePage, Router } from "@Purper";
+import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder } from "@Purper";
 import { Subject } from "./TestingPage.html";
 import QuestionParser, { Question } from "../../tri/QuestionParser.js";
 import SeededShuffle from "../lib/SeededShuffle.js";
@@ -77,11 +77,11 @@ export default class TestingActualPage extends Page {
         return Promise.resolve();
     }
 
-    protected async postLoad(holder: IElementHolder) {
+    protected async postLoad(holder: TemplateHolder) {
         // Auto-render KaTeX formulas (if any) inside page content after render
         try {
             // KatexUtils.autoRender accepts an Element — holder.element may be a DocumentFragment
-            const el = holder.element as unknown as HTMLElement;
+            const el = holder.documentFragment as unknown as HTMLElement;
             if (el) KatexUtils.autoRender(el);
         } catch (e) {
             // non-fatal — continue without breaking page

@@ -1,28 +1,25 @@
-import { IElementHolder, Page } from "@Purper";
+import { Page, TemplateHolder } from "@Purper";
+import ReButton from "../components/ReButton.html.js";
 export default class TestingSubPage extends Page {
     private subject;
     private testModes;
-    private activeMode;
-    private activeTestType;
+    private testModesGroup?;
+    private modeSettingsButton?;
+    private optionBlock?;
     private inputTestType?;
-    private inputStartFrom?;
-    private inputQuestionCount?;
+    private inputMin?;
+    private inputVal?;
+    private inputMax?;
     private inputNoShuffle?;
     private noShuffle;
-    private inputEndAt?;
-    private totalQuestions;
     private modeElements?;
     private startTestButton?;
     constructor(subject?: string);
-    private getAllParamsForTesting;
-    protected preLoad(holder: IElementHolder): Promise<void>;
-    protected postLoad(holder: IElementHolder): Promise<void>;
-    /**
-     * Extracts data-mode from an event safely.
-     * Uses currentTarget first (listener host), then falls back to event.target.closest('.mode-item').
-     * This avoids issues when clicking child nodes inside the button which would otherwise
-     * produce null on getAttribute('data-mode') and lead to activeMode undefined.
-     */
-    private getModeNameFromEvent;
+    protected preLoad(holder: TemplateHolder): Promise<void>;
+    protected postLoad(holder: TemplateHolder): Promise<void>;
+    onSelectionChange(event: CustomEvent<{}>): void;
+    onTestTypeChange(event: CustomEvent<{}>): void;
+    updateTestTypeChange(buttons: Map<ReButton, boolean>): void;
+    updateTestModeGroup(buttons: Map<ReButton, boolean>): void;
 }
 //# sourceMappingURL=TestingSubPage.html.d.ts.map

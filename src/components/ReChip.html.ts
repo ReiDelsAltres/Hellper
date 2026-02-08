@@ -1,66 +1,18 @@
-import { IElementHolder, Component, ReComponent } from "@Purper";
+import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
+import ComponentCore from "./core/ComponentCore.js";
+
+type ChipVariant = "filled" | "outlined"
 
 @ReComponent({
-  markupURL: "./src/components/ReChip.html",
-  cssURL: "./src/components/ReChip.html.css",
+  markupURL: "./src/components/ReChip.hmle",
+  cssURL: "../../out/src/components/ReChip.html.css",
   jsURL: "./src/components/ReChip.html.js",
-  class: ReChip,
 }, "re-chip")
-export default class ReChip extends Component {
-  private chip?: HTMLElement;
-  private iconSlot?: HTMLElement;
-  private removeSlot?: HTMLElement;
+export default class ReChip extends ComponentCore {
+  public Icon: Attribute<string | null> = new Attribute<string | null>(this, "icon", null);
 
-  static get observedAttributes() {
-    return ['size', 'color', 'icon', 'disabled', 'interactive'];
-  }
+  public Variant: Attribute<ChipVariant> = new Attribute<ChipVariant>(this, "variant", "filled");
 
-  protected preLoad(holder: IElementHolder): Promise<void> {
-    this.chip = holder.element.querySelector('.chip') as HTMLElement;
-    this.iconSlot = holder.element.querySelector('#icon-slot') as HTMLElement;
-    this.removeSlot = holder.element.querySelector('#remove-slot') as HTMLElement;
-
-    if (this.chip) {
-      this.updateChip();
-    }
-
-    this.onAttributeChangedCallback(() => this.updateChip());
-
-    return Promise.resolve();
-  }
-
-  private updateChip() {
-    if (!this.chip) return;
-
-    // classes
-    const classes = ['chip'];
-    const color = this.getAttribute('color') || 'primary';
-    classes.push(color);
-
-    const size = this.getAttribute('size');
-    if (size && size !== 'medium') classes.push(size);
-
-    if (this.hasAttribute('disabled')) classes.push('disabled');
-
-    this.chip.className = classes.join(' ');
-
-    // icon
-    const icon = this.getAttribute('icon');
-    if (icon && this.iconSlot) {
-      let existing = this.iconSlot.querySelector('re-icon');
-      if (existing) {
-        existing.setAttribute('icon', icon);
-      } else {
-        const reIcon = document.createElement('re-icon');
-        reIcon.setAttribute('icon', icon);
-        reIcon.setAttribute('size', 'sm');
-        this.iconSlot.appendChild(reIcon);
-      }
-      this.iconSlot.classList.add('has-icon');
-    } else if (this.iconSlot) {
-      this.iconSlot.innerHTML = '';
-      this.iconSlot.classList.remove('has-icon');
-    }
-  }
-
+  private isIconAbsent: Observable<boolean> = this.Icon.createDependent(value => value === null || value === '');
+  private shouldBeContrast: Observable<boolean> = this.Variant.createDependent(value => value === 'filled');
 }

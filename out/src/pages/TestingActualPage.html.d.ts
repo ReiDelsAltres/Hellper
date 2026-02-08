@@ -1,4 +1,4 @@
-import { IElementHolder, Page } from "@Purper";
+import { Page, TemplateHolder } from "@Purper";
 export default class TestingActualPage extends Page {
     private params;
     private questions;
@@ -8,7 +8,7 @@ export default class TestingActualPage extends Page {
     constructor(params?: string);
     dispose(): Promise<void>;
     protected preInit(): Promise<void>;
-    protected postLoad(holder: IElementHolder): Promise<void>;
+    protected postLoad(holder: TemplateHolder): Promise<void>;
     private masonryResizeObserver?;
     private layoutMasonryHandler?;
     private initMasonry;

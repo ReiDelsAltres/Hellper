@@ -1,6 +1,7 @@
-<span class="input-icon" @[ref]="icon"></span>
+<span class="input-icon" ref="'icon'"></span>
 <span class="input-field">
-    <input part="input" @[ref]="input"/>
+    <input part="input" ref="'input'" set[placeholder]="Placeholder" set[type]="Type" set[min]="Min" set[max]="Max" />
 </span>
-<span class="input-clear" @[ref]="clearBtn"></span>
-<span class="input-ripple"></span>
+<re-chip set[hidden]="hideValidationMessage" size="small" class="validation-message" color="error">
+    <exp of="validationMessage"></exp>
+</re-chip>

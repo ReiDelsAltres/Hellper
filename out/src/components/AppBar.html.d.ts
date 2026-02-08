@@ -1,4 +1,4 @@
-import { Component, IElementHolder } from "@Purper";
+import { Component, TemplateHolder } from "@Purper";
 export default class AppBar extends Component {
     static get observedAttributes(): string[];
     private _type;
@@ -9,7 +9,7 @@ export default class AppBar extends Component {
     get orientation(): "vertical" | "horizontal";
     get hidden(): boolean;
     get noHover(): boolean;
-    protected preLoad(holder: IElementHolder): Promise<void>;
+    protected preLoad(holder: TemplateHolder): Promise<void>;
     set type(value: "mini" | "full");
     set orientation(value: "vertical" | "horizontal");
     set hidden(value: boolean);

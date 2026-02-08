@@ -3,7 +3,7 @@
 
     --color-empty: #32333d;
     --color-empty-contrast: rgb(191, 208, 216);
-    --color-empty-hover: color-mix(in srgb, var(--color-empty) 60%, black);
+    --color-empty-hover: color-mix(in srgb, var(--color-empty) 30%, black);
 
     /* Primary */
     --color-primary: #594ae2;

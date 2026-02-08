@@ -4,9 +4,9 @@
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-        "*.html": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css",
-        "*.phtml": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css",
-        "*.hmle": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css"
+        "*.html": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css,${capture}.html.scss",
+        "*.phtml": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css,${capture}.html.scss",
+        "*.hmle": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css,${capture}.html.scss",
     },
     "liveServer.settings.NoBrowser": true
 }

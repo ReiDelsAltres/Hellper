@@ -11,7 +11,7 @@
     <title>Pureper</title>
 
     <script type="importmap">
-        {"imports": {"@Purper": "./node_modules/@reidelsaltres/pureper/out/index.js"}}
+        {"imports": {"@Purper": "./node_modules/@reidelsaltres/pureper/out/index.js", "@material-design-icons": "./node_modules/@material-design-icons/"}}
     </script>
 
     <link rel="stylesheet" href="./resources/Blazor.theme.css" />
@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="./resources/BrassDark.theme.css" />
     <link rel="stylesheet" href="./resources/Vine.theme.css" />
     <link rel="stylesheet" href="./resources/Chess.theme.css" />
+
+    <!-- Material Symbols Icons -->
+    <link rel="stylesheet" href="./node_modules/material-symbols/index.css" />
 
     <script type="module" defer>
         import { rewriteDomLinks } from "./out/src/redirectRules.js";
@@ -101,6 +104,10 @@
             data-link>
             <span class="onlyin-open">Компоненты</span>
         </re-button>
+        <re-button slot="sidebar-sub" variant="text" icon="component_exchange" icon-animation="spin" color="tertiary" full-width href="playground"
+            data-link>
+            <span class="onlyin-open">Площадка</span>
+        </re-button>
 
         <!-- Topbar (horizontal, top) -->
         <re-button slot="topbar" variant="text" icon="home" color="primary" href="./" data-link></re-button>
@@ -113,7 +120,7 @@
     </app-layout>
     <div id="page">
     </div>
-    
+
     <!-- Snowflake -->
     <!--<style>
         /* customizable snowflake styling */

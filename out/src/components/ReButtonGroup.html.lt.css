@@ -1,0 +1,52 @@
+re-button-group:is(:not([orientation]), [orientation=horizontal]) re-button {
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+re-button-group:is(:not([orientation]), [orientation=horizontal]) re-button.group-first {
+  margin-left: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+re-button-group:is(:not([orientation]), [orientation=horizontal]) re-button.group-last {
+  border-radius: 0 8px 8px 0;
+}
+
+re-button-group:is(:not([orientation]), [orientation=horizontal]) re-button.group-single {
+  border-radius: 8px;
+  margin-left: 0;
+}
+
+re-button-group[orientation=vertical] re-button {
+  border-radius: 0;
+  margin-top: -1px;
+}
+
+re-button-group[orientation=vertical] re-button.group-first {
+  margin-top: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+re-button-group[orientation=vertical] re-button.group-last {
+  border-radius: 0 0 8px 8px;
+}
+
+re-button-group[orientation=vertical] re-button.group-single {
+  border-radius: 8px;
+  margin-top: 0;
+}
+
+re-button-group[orientation=flex] {
+  flex-wrap: wrap;
+}
+
+re-button-group[orientation=flex] re-button {
+  flex: 1 1 0;
+}
+
+re-button-group re-button[selected] {
+  z-index: 1;
+  position: relative;
+}
+
+/*# sourceMappingURL=ReButtonGroup.html.lt.css.map */

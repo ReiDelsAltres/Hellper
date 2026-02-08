@@ -7,22 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Component, ReComponent } from "@Purper";
 let ReTypography = class ReTypography extends Component {
     static get observedAttributes() {
-        return ["variant", "weight", "color", "align", "uppercase", "truncate"];
-    }
-    preLoad(holder) {
-        this.onAttributeChangedCallback(() => this.updateTypography());
-        this.updateTypography();
-        return Promise.resolve();
-    }
-    updateTypography() {
-        const textEl = this.shadowRoot?.querySelector(".typo-text") ?? this.querySelector(".typo-text");
-        if (!textEl)
-            return;
-        // text alignment handled via CSS attribute selectors
-        const isUpper = this.hasAttribute("uppercase");
-        const isTruncate = this.hasAttribute("truncate");
-        textEl.toggleAttribute("data-upper", isUpper);
-        textEl.toggleAttribute("data-truncate", isTruncate);
+        return ["variant", "weight", "color", "uppercase", "truncate"];
     }
 };
 ReTypography = __decorate([
@@ -30,7 +15,6 @@ ReTypography = __decorate([
         markupURL: "./src/components/ReTypography.html",
         cssURL: "./src/components/ReTypography.html.css",
         jsURL: "./src/components/ReTypography.html.ts",
-        class: ReTypography,
     }, "re-typography")
 ], ReTypography);
 export default ReTypography;

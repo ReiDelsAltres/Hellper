@@ -1,4 +1,4 @@
-import { AccessType, Component, IElementHolder, ReComponent } from "@Purper";
+import { AccessType, Component, IElementHolder, ReComponent, TemplateHolder } from "@Purper";
 
 @ReComponent({
     markupURL: "./src/components/AppBar.html",
@@ -28,7 +28,7 @@ export default class AppBar extends Component {
         return this._noHover;
     }
 
-    protected async preLoad(holder: IElementHolder): Promise<void> {
+    protected async preLoad(holder: TemplateHolder): Promise<void> {
         // Ensure children reflect current type on initial load
         this.notifyAllChildren((el) => {
             el.setAttribute("mini", "");

@@ -1,0 +1,6 @@
+<re-icon set[icon]="Icon" set[color]="Color" 
+    set[size]="Size" set[contrast]="iconContrastFlag" set[animation]="IconAnimation"></re-icon>
+<span class="btn-text mini">
+    <slot ref="'slottedContainer'"></slot>
+</span>
+<span class="btn-ripple"></span>

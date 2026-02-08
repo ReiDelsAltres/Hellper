@@ -12,7 +12,6 @@ MainPage = __decorate([
         markupURL: "./src/pages/MainPage.html",
         cssURL: "./src/pages/MainPage.html.css",
         jsURL: "./src/pages/MainPage.html.ts",
-        class: MainPage,
     }, "/")
 ], MainPage);
 export default MainPage;

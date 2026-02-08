@@ -1,0 +1,185 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+:host([color=empty]) {
+  --input-bg-color: var(--color-empty);
+  --input-text-color: var(--color-empty-contrast);
+  --input-focus-color: var(--color-empty);
+}
+
+:host(:is([color=primary], :not([color]))) {
+  --input-bg-color: var(--color-primary);
+  --input-text-color: var(--color-primary-contrast);
+  --input-focus-color: var(--color-primary);
+}
+
+:host([color=secondary]) {
+  --input-bg-color: var(--color-secondary);
+  --input-text-color: var(--color-secondary-contrast);
+  --input-focus-color: var(--color-secondary);
+}
+
+:host([color=tertiary]) {
+  --input-bg-color: var(--color-tertiary);
+  --input-text-color: var(--color-tertiary-contrast);
+  --input-focus-color: var(--color-tertiary);
+}
+
+:host([color=additional]) {
+  --input-bg-color: var(--color-additional);
+  --input-text-color: var(--color-additional-contrast);
+  --input-focus-color: var(--color-additional);
+}
+
+:host([color=info]) {
+  --input-bg-color: var(--color-info);
+  --input-text-color: var(--color-info-contrast);
+  --input-focus-color: var(--color-info);
+}
+
+:host([color=success]) {
+  --input-bg-color: var(--color-success);
+  --input-text-color: var(--color-success-contrast);
+  --input-focus-color: var(--color-success);
+}
+
+:host([color=error]) {
+  --input-bg-color: var(--color-error);
+  --input-text-color: var(--color-error-contrast);
+  --input-focus-color: var(--color-error);
+}
+
+:host([color=warning]) {
+  --input-bg-color: var(--color-warning);
+  --input-text-color: var(--color-warning-contrast);
+  --input-focus-color: var(--color-warning);
+}
+
+:host(:is([variant=filled], :not([variant]))) {
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+  --input-placeholder-color: var(--input-text-color);
+  --input-icon-color: var(--input-text-color);
+}
+
+:host([variant=outlined]) {
+  background-color: transparent;
+  border: 1px solid var(--input-bg-color);
+  color: var(--input-bg-color);
+  --input-placeholder-color: var(--input-bg-color);
+  --input-icon-color: var(--input-bg-color);
+}
+
+:host([variant=text]) {
+  background-color: transparent;
+  border: none;
+  color: var(--input-bg-color);
+  --input-placeholder-color: var(--input-bg-color);
+  --input-icon-color: var(--input-bg-color);
+  border-bottom: 1px solid var(--input-bg-color);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+:host(:focus-within) {
+  border-color: var(--input-bg-color);
+  box-shadow: 0 0 0 3px var(--input-bg-color);
+}
+
+:host(:hover:not([disabled])) {
+  border-color: var(--color-primary-hover, var(--color-primary));
+}
+
+:host([disabled]) {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+:host([invalid]) {
+  border-color: var(--color-error, #d32f2f);
+}
+
+:host([invalid]:focus-within) {
+  box-shadow: 0 0 0 3px var(--color-error-container, rgba(211, 47, 47, 0.2));
+}
+
+/* Icon */
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--input-icon-color);
+}
+
+.input-icon:empty {
+  display: none;
+}
+
+/* Input field container */
+.input-field {
+  flex: 1;
+  display: flex;
+}
+
+/* Input element */
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  min-width: 0;
+}
+
+input::placeholder {
+  color: var(--input-placeholder-color);
+  opacity: 0.7;
+}
+
+/* Size variants */
+:host([size=small]) {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+}
+
+:host([size=medium]),
+:host(:not([size])) {
+  padding: 8px 12px;
+  font-size: 0.875rem;
+}
+
+:host([size=large]) {
+  padding: 12px 16px;
+  font-size: 1rem;
+}
+
+/* Full width */
+:host([full-width]) {
+  width: 100%;
+}
+
+.validation-message {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: 0.55rem;
+}
+
+:host {
+  position: relative;
+}
+
+/*# sourceMappingURL=ReInput.html.css.map */

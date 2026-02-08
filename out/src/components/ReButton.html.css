@@ -1,0 +1,254 @@
+@layer core, additions, sizes, colors, variants, functions;
+@layer core {
+  :host {
+    min-width: var(--component-size);
+    min-height: var(--component-size);
+    padding: var(--component-padding);
+  }
+}
+@layer core {
+  :host {
+    font-family: var(--font-family);
+    font-size: var(--component-font);
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    white-space: wrap;
+  }
+}
+@layer core {
+  :host {
+    color: var(--component-text-color);
+    background-color: var(--component-bg-color);
+  }
+}
+@layer functions {
+  :host(:hover) {
+    background-color: var(--component-hover-bg-color);
+  }
+}
+@layer additions {
+  :host {
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+  :host(:not([hidden=false])[hidden]) {
+    visibility: hidden;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+  }
+  :host(:is(:not([hidden]), [hidden=false])) {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@layer additions {
+  :host(:not([disabled=false])[disabled]) {
+    pointer-events: none;
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.6;
+  }
+}
+@layer additions {
+  .mini {
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+  :host(:not([mini=false])[mini]) .mini {
+    visibility: hidden;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+  }
+  :host(:is(:not([mini]), [mini=false])) .mini {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@layer sizes {
+  :host(:not([size])) {
+    --component-size: 32px;
+    --component-font: 0.875rem;
+    --component-padding: 4px 4px;
+  }
+  :host([size=extra-small]) {
+    --component-size: 16px;
+    --component-font: 0.625rem;
+    --component-padding: 1px 3px;
+  }
+  :host([size=small]) {
+    --component-size: 24px;
+    --component-font: 0.75rem;
+    --component-padding: 2px 4px;
+  }
+  :host([size=medium]) {
+    --component-size: 32px;
+    --component-font: 0.875rem;
+    --component-padding: 4px 4px;
+  }
+  :host([size=large]) {
+    --component-size: 40px;
+    --component-font: 1rem;
+    --component-padding: 4px 8px;
+  }
+  :host([size=extra-large]) {
+    --component-size: 60px;
+    --component-font: 1.5rem;
+    --component-padding: 6px 10px;
+  }
+}
+@layer colors {
+  :host([color=inherit]) {
+    color: inherit;
+    background-color: inherit;
+  }
+  :host(:not([color])) {
+    --component-bg-color: var(--color-primary);
+    --component-text-color: var(--color-primary-contrast);
+    --component-hover-bg-color: var(--color-primary-hover);
+  }
+  :host([color=primary]) {
+    --component-bg-color: var(--color-primary);
+    --component-text-color: var(--color-primary-contrast);
+    --component-hover-bg-color: var(--color-primary-hover);
+  }
+  :host([color=secondary]) {
+    --component-bg-color: var(--color-secondary);
+    --component-text-color: var(--color-secondary-contrast);
+    --component-hover-bg-color: var(--color-secondary-hover);
+  }
+  :host([color=tertiary]) {
+    --component-bg-color: var(--color-tertiary);
+    --component-text-color: var(--color-tertiary-contrast);
+    --component-hover-bg-color: var(--color-tertiary-hover);
+  }
+  :host([color=additional]) {
+    --component-bg-color: var(--color-additional);
+    --component-text-color: var(--color-additional-contrast);
+    --component-hover-bg-color: var(--color-additional-hover);
+  }
+  :host([color=empty]) {
+    --component-bg-color: var(--color-empty);
+    --component-text-color: var(--color-empty-contrast);
+    --component-hover-bg-color: var(--color-empty-hover);
+  }
+  :host([color=info]) {
+    --component-bg-color: var(--color-info);
+    --component-text-color: var(--color-info-contrast);
+    --component-hover-bg-color: var(--color-info-hover);
+  }
+  :host([color=warning]) {
+    --component-bg-color: var(--color-warning);
+    --component-text-color: var(--color-warning-contrast);
+    --component-hover-bg-color: var(--color-warning-hover);
+  }
+  :host([color=success]) {
+    --component-bg-color: var(--color-success);
+    --component-text-color: var(--color-success-contrast);
+    --component-hover-bg-color: var(--color-success-hover);
+  }
+  :host([color=error]) {
+    --component-bg-color: var(--color-error);
+    --component-text-color: var(--color-error-contrast);
+    --component-hover-bg-color: var(--color-error-hover);
+  }
+}
+@layer variants {
+  :host(:not([variant])),
+  :host([variant=filled]) {
+    background-color: var(--component-bg-color);
+    color: var(--component-text-color);
+    border: 1px solid var(--component-bg-color);
+  }
+}
+:host(:not([variant]):hover),
+:host([variant=filled]:hover) {
+  border-color: var(--component-hover-bg-color);
+}
+
+@layer variants {
+  :host([variant=outlined]) {
+    background-color: transparent;
+    border: 1px solid var(--component-bg-color);
+    color: var(--component-bg-color);
+  }
+}
+@layer variants {
+  :host([variant=text]) {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--component-bg-color);
+  }
+}
+/* Button Component Styles */
+:host {
+  border-radius: 8px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* Effects */
+  cursor: pointer;
+  user-select: auto;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:host > * {
+  margin-left: 8px;
+}
+
+:host > :first-child,
+:host > [hidden]:not([hidden=false]) + * {
+  margin-left: 0;
+}
+
+:host([allow-wrap]) .btn-text {
+  white-space: pre-wrap;
+}
+
+/* Button text */
+.btn-text {
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
+  white-space: normal;
+  overflow-wrap: fragile;
+  word-break: break-word;
+}
+
+/* Ripple effect */
+.btn-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.btn-ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+:host(:active) .btn-ripple::after {
+  width: 200px;
+  height: 200px;
+}
+
+/*# sourceMappingURL=ReButton.html.css.map */

@@ -1,4 +1,4 @@
-import { AccessType, Component, IElementHolder, ReComponent } from "@Purper";
+import { AccessType, Component, IElementHolder, ReComponent, TemplateHolder } from "@Purper";
 import AppBar from "./AppBar.html";
 
 @ReComponent({
@@ -6,7 +6,6 @@ import AppBar from "./AppBar.html";
     cssURL: "./src/components/AppLayout.html.css",
     ltCssURL: "./src/components/AppLayout.html.lt.css",
     jsURL: "./src/components/AppLayout.html.ts",
-    class: AppLayout,
 }, "app-layout")
 export default class AppLayout extends Component {
     static get observedAttributes() {
@@ -18,7 +17,7 @@ export default class AppLayout extends Component {
     private sidebar!: AppBar;
     private topbar!: AppBar;
 
-    protected async preLoad(holder: IElementHolder): Promise<void> {
+    protected async preLoad(holder: TemplateHolder): Promise<void> {
         // ensure the host reflects the current sidebar/topbar type so outside CSS (eg. page) can react
         const sType = this.sidebar?.getAttribute('type') ?? null;
         if (sType) this.setAttribute('sidebar', sType);

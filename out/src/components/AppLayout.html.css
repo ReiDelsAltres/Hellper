@@ -1,0 +1,38 @@
+.layout-controls {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2001;
+  gap: 8px;
+  padding: 8px;
+  /*background-color: var(--app-bars-background-color);
+  background-image: var(--app-bars-background-image);
+  background-size: var(--app-bars-background-size);
+  background-position: var(--app-bars-background-position);*/
+}
+
+.switchers {
+  display: flex;
+}
+
+/* On small screens (phones) hide the sidebar toggle button by default */
+@media (max-width: 600px) {
+  .layout-controls .switchers .sidebar-toggle {
+    display: none;
+  }
+  /* Hide the sidebar itself on small screens */
+  app-bar.sidebar {
+    display: none !important;
+    --app-display: none;
+  }
+  .setting {
+    display: none !important;
+    --app-display: none;
+  }
+}
+.add {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=AppLayout.html.css.map */

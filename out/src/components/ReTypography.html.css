@@ -1,0 +1,198 @@
+:host {
+  display: flex;
+  color: var(--typography-color, inherit);
+  font-family: var(--font-family);
+  font-weight: var(--typography-weight, 500);
+  line-height: var(--typography-line-height, 1.4);
+  letter-spacing: var(--typography-letter, 0);
+  text-transform: var(--typography-transform, none);
+  max-width: 100%;
+  min-width: min-content;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Transform */
+:host([uppercase]) {
+  --typography-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+:host([disabled]) {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+:host([original][color=empty]),
+:host([original=true][color=empty]) {
+  --typography-color: var(--color-empty);
+}
+
+:host([original][color=primary]),
+:host([original=true][color=primary]) {
+  --typography-color: var(--color-primary);
+}
+
+:host([original][color=secondary]),
+:host([original=true][color=secondary]) {
+  --typography-color: var(--color-secondary);
+}
+
+:host([original][color=tertiary]),
+:host([original=true][color=tertiary]) {
+  --typography-color: var(--color-tertiary);
+}
+
+:host([original][color=additional]),
+:host([original=true][color=additional]) {
+  --typography-color: var(--color-additional);
+}
+
+:host([original][color=info]),
+:host([original=true][color=info]) {
+  --typography-color: var(--color-info);
+}
+
+:host([original][color=success]),
+:host([original=true][color=success]) {
+  --typography-color: var(--color-success);
+}
+
+:host([original][color=warning]),
+:host([original=true][color=warning]) {
+  --typography-color: var(--color-warning);
+}
+
+:host([original][color=error]),
+:host([original=true][color=error]) {
+  --typography-color: var(--color-error);
+}
+
+/* Color tokens */
+:host([color=empty]) {
+  --typography-color: var(--color-empty-contrast);
+}
+
+:host([color=primary]) {
+  --typography-color: var(--color-primary-contrast);
+}
+
+:host([color=secondary]) {
+  --typography-color: var(--color-secondary-contrast);
+}
+
+:host([color=tertiary]) {
+  --typography-color: var(--color-tertiary-contrast);
+}
+
+:host([color=additional]) {
+  --typography-color: var(--color-additional-contrast);
+}
+
+:host([color=info]) {
+  --typography-color: var(--color-info-contrast);
+}
+
+:host([color=success]) {
+  --typography-color: var(--color-success-contrast);
+}
+
+:host([color=warning]) {
+  --typography-color: var(--color-warning-contrast);
+}
+
+:host([color=error]) {
+  --typography-color: var(--color-error-contrast);
+}
+
+/* Variants */
+:host([variant=display]) {
+  --typography-weight: 800;
+  --typography-line-height: 1.15;
+  --typography-letter: -0.02em;
+  font-size: clamp(2rem, 3vw + 1rem, 3.4rem);
+}
+
+:host([variant=headline]) {
+  --typography-weight: 700;
+  --typography-line-height: 1.2;
+  --typography-letter: -0.01em;
+  font-size: clamp(1.6rem, 2vw + 0.8rem, 2.4rem);
+}
+
+:host([variant=title]) {
+  --typography-weight: 700;
+  --typography-line-height: 1.25;
+  font-size: 1.4rem;
+}
+
+:host([variant=subtitle]) {
+  --typography-weight: 600;
+  --typography-line-height: 1.35;
+  font-size: 1.1rem;
+}
+
+:host([variant=body]),
+:host(:not([variant])) {
+  --typography-weight: 500;
+  --typography-line-height: 1.45;
+  font-size: 1rem;
+}
+
+:host([variant=body-2]) {
+  --typography-weight: 500;
+  --typography-line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+:host([variant=caption]) {
+  --typography-weight: 600;
+  --typography-line-height: 1.4;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+:host([variant=overline]) {
+  --typography-weight: 700;
+  --typography-line-height: 1.4;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Weight overrides */
+:host([weight="400"]) {
+  --typography-weight: 400;
+}
+
+:host([weight="500"]) {
+  --typography-weight: 500;
+}
+
+:host([weight="600"]) {
+  --typography-weight: 600;
+}
+
+:host([weight="700"]) {
+  --typography-weight: 700;
+}
+
+:host([weight="800"]) {
+  --typography-weight: 800;
+}
+
+@media (max-width: 640px) {
+  :host([variant=display]) {
+    font-size: clamp(1.8rem, 4vw + 0.4rem, 2.6rem);
+  }
+  :host([variant=headline]) {
+    font-size: clamp(1.4rem, 3vw + 0.3rem, 2rem);
+  }
+  :host([variant=title]) {
+    font-size: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=ReTypography.html.css.map */

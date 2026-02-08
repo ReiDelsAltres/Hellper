@@ -1,0 +1,113 @@
+.palette-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--color-primary) 8%, var(--surface-dark, #16171c)), var(--surface-dark, #16171c) 60%);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text, #c1c1c4);
+  opacity: 0.8;
+}
+
+.palette-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.palette-item {
+  position: relative;
+  border-radius: 20px;
+  padding: 6px;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--color-primary) 20%, transparent), color-mix(in srgb, var(--color-secondary) 10%, transparent));
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.palette-item:hover,
+.palette-item:focus-visible {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.palette-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.palette-label {
+  margin-top: 6px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-text, #e6e6e9);
+  letter-spacing: 0.02em;
+}
+
+.palette-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, var(--color-success), color-mix(in srgb, var(--color-success) 70%, #000));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.palette-item.active .palette-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-footer {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.hint {
+  color: var(--color-text, #c1c1c4);
+  opacity: 0.6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .palette-page {
+    padding: 1rem;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .palette-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=PalettePage.html.css.map */

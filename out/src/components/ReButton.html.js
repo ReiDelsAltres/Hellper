@@ -4,222 +4,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component, ReComponent } from "@Purper";
-let ReButton = class ReButton extends Component {
-    iconSlot;
-    static get observedAttributes() {
-        return [
-            'variant', 'size', 'color', 'icon', 'disabled',
-            'loading', 'full-width', 'type', 'href', 'mini',
-            'toggle', 'selected'
-        ];
-    }
-    preLoad(holder) {
-        this.iconSlot = holder.element.querySelector('#icon-slot');
-        this.addEventListener('click', this.handleClick);
-        this.updateButton();
-        // Обработка изменений атрибутов
-        this.onAttributeChangedCallback((name, oldValue, newValue) => {
-            this.updateButton();
+import { ReComponent, Attribute, Observable } from "@Purper";
+import ComponentCore from "./core/ComponentCore.js";
+let ReButton = class ReButton extends ComponentCore {
+    slottedContainer;
+    Variant = new Attribute(this, 'variant', 'filled');
+    Icon = new Attribute(this, 'icon', null);
+    IconAnimation = new Attribute(this, 'icon-animation', 'none');
+    Href = new Attribute(this, 'href', null);
+    OptionalValue = new Attribute(this, 'value', null);
+    hideTextFlag = new Observable("hidden");
+    iconContrastFlag = this.Variant.createDependent(val => val === 'filled');
+    async preLoad(holder) {
+        this.hideTextFlag.setObject(!this.textContent.trim() ? "hidden" : "");
+        this.slottedContainer.addEventListener('slotchange', () => {
+            this.hideTextFlag.setObject(!this.textContent.trim() ? "hidden" : "");
         });
-        return Promise.resolve();
-    }
-    updateButton() {
-        // Обновляем классы хоста (для icon-only)
-        this.updateHostClasses();
-        // Обновляем иконку
-        this.updateIcon();
-    }
-    updateHostClasses() {
-        // Только иконка
-        if (this.hasAttribute('icon') && !this.textContent.trim()) {
-            this.classList.add('icon-only');
-        }
-        else {
-            this.classList.remove('icon-only');
-        }
-    }
-    updateIcon() {
-        const iconName = this.getAttribute('icon');
-        const color = this.getAttribute('color') || 'primary';
-        const variant = this.getAttribute('variant') || 'filled';
-        if (iconName) {
-            // Проверяем, есть ли уже re-icon
-            let existingIcon = this.iconSlot.querySelector('re-icon');
-            if (existingIcon) {
-                existingIcon.setAttribute('icon', iconName);
-                // Keep nested re-icon synced with button attributes
-                const btnSize = this.getAttribute('size') || '';
-                const mapSize = btnSize === 'small' ? 'sm' : (btnSize === 'large' ? 'lg' : 'md');
-                existingIcon.setAttribute('size', mapSize);
-                existingIcon.setAttribute('color', color);
-                if (variant === 'filled')
-                    existingIcon.setAttribute('variant', 'contrast');
-                else
-                    existingIcon.removeAttribute('variant');
-            }
-            else {
-                // Создаем новую иконку
-                const reIcon = document.createElement('re-icon');
-                reIcon.setAttribute('icon', iconName);
-                const btnSize = this.getAttribute('size') || '';
-                const mapSize = btnSize === 'small' ? 'sm' : (btnSize === 'large' ? 'lg' : 'md');
-                reIcon.setAttribute('size', mapSize);
-                if (variant === 'filled')
-                    reIcon.setAttribute('variant', 'contrast');
-                reIcon.setAttribute('color', color);
-                this.iconSlot.appendChild(reIcon);
-            }
-            this.iconSlot.classList.add('has-icon');
-        }
-        else {
-            this.iconSlot.innerHTML = '';
-            this.iconSlot.classList.remove('has-icon');
-        }
-    }
-    handleClick(event) {
-        // Предотвращаем клик если кнопка отключена или загружается
-        if (this.hasAttribute('disabled') || this.hasAttribute('loading')) {
-            event.preventDefault();
-            event.stopPropagation();
-            return;
-        }
-        // Toggle mode - переключаем selected
-        if (this.hasAttribute('toggle')) {
-            this.toggleSelected();
-        }
-        // Эмитируем кастомное событие
-        this.dispatchEvent(new CustomEvent('button-click', {
-            detail: {
-                variant: this.getAttribute('variant'),
-                color: this.getAttribute('color'),
-                size: this.getAttribute('size')
-            },
-            bubbles: true,
-            cancelable: true
-        }));
-    }
-    // Публичные методы для управления состоянием кнопки
-    /**
-     * Переключить selected состояние (для toggle режима)
-     */
-    toggleSelected() {
-        if (this.hasAttribute('selected')) {
-            this.removeAttribute('selected');
-        }
-        else {
-            this.setAttribute('selected', '');
-        }
-        this.dispatchEvent(new CustomEvent('toggle-change', {
-            detail: {
-                selected: this.hasAttribute('selected'),
-                value: this.getAttribute('value') || this.textContent?.trim()
-            },
-            bubbles: true,
-            cancelable: true
-        }));
-    }
-    /**
-     * Проверить, выбрана ли кнопка
-     */
-    isSelected() {
-        return this.hasAttribute('selected');
-    }
-    /**
-     * Установить selected состояние
-     */
-    setSelected(selected) {
-        if (selected) {
-            this.setAttribute('selected', '');
-        }
-        else {
-            this.removeAttribute('selected');
-        }
-    }
-    /**
-     * Показать состояние загрузки
-     */
-    showLoading() {
-        this.setAttribute('loading', '');
-    }
-    /**
-     * Скрыть состояние загрузки
-     */
-    hideLoading() {
-        this.removeAttribute('loading');
-    }
-    /**
-     * Отключить кнопку
-     */
-    disable() {
-        this.setAttribute('disabled', '');
-    }
-    /**
-     * Включить кнопку
-     */
-    enable() {
-        this.removeAttribute('disabled');
-    }
-    /**
-     * Установить иконку
-     * @param {string} iconName - название иконки
-     */
-    setIcon(iconName) {
-        if (iconName) {
-            this.setAttribute('icon', iconName);
-        }
-        else {
-            this.removeAttribute('icon');
-        }
-    }
-    /**
-     * Установить вариант кнопки
-     * @param {'filled'|'outlined'|'text'} variant - вариант кнопки
-     */
-    setVariant(variant) {
-        this.setAttribute('variant', variant);
-    }
-    /**
-     * Установить цвет кнопки
-     * @param {'primary'|'secondary'|'tertiary'|'additional'|'success'|'warning'|'error'|'info'} color - цвет кнопки
-     */
-    setColor(color) {
-        this.setAttribute('color', color);
-    }
-    /**
-     * Установить размер кнопки
-     * @param {'small'|'medium'|'large'} size - размер кнопки
-     */
-    setSize(size) {
-        this.setAttribute('size', size);
-    }
-    /**
-     * Программный клик по кнопке
-     */
-    click() {
-        if (!this.hasAttribute('disabled') && !this.hasAttribute('loading')) {
-            super.click();
-        }
-    }
-    /**
-     * Фокус на кнопке
-     */
-    focus() {
-        super.focus();
-    }
-    /**
-     * Снять фокус с кнопки
-     */
-    blur() {
-        super.blur();
     }
 };
 ReButton = __decorate([
     ReComponent({
-        markupURL: "./src/components/ReButton.html",
-        cssURL: "./src/components/ReButton.html.css",
+        markupURL: "./src/components/ReButton.hmle",
+        cssURL: "../../out/src/components/ReButton.html.css",
         jsURL: "./src/components/ReButton.html.js",
-        class: ReButton,
     }, "re-button")
 ], ReButton);
 export default ReButton;

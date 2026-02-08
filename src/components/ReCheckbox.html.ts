@@ -1,4 +1,4 @@
-import { IElementHolder, Component, ReComponent, Attribute } from "@Purper";
+import { IElementHolder, Component, ReComponent, Attribute, TemplateHolder } from "@Purper";
 
 @ReComponent({
     markupURL: "./src/components/ReCheckbox.hmle",
@@ -19,7 +19,7 @@ export default class ReCheckbox extends Component {
     public name = new Attribute<string>(this, 'name');
     public mini = new Attribute<boolean>(this, 'mini');
 
-    protected async preLoad(holder: IElementHolder): Promise<void> {
+    protected async preLoad(holder: TemplateHolder): Promise<void> {
         this.labelEl.textContent = this.label.value;
         this.label.subscribe((name,oldValue,newValue) => this.labelEl.textContent = newValue);
         

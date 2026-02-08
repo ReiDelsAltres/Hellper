@@ -1,0 +1,73 @@
+<paper-component simple="true" class="page">
+    <div class="header">
+        <re-typography original color="primary" variant="h1">
+            <exp of="subject.translatedName"></exp>
+        </re-typography>
+        <re-typography original color="primary" variant="h2">
+            <exp of="subject.name"></exp>
+        </re-typography>
+        <re-typography original color="primary" variant="body">
+            Группа:
+            <for index="idx" value="group" of="subject.groups">
+                <re-chip variant="outlined" set[color]="if(idx === 1) return 'tertiary'; return 'additional';">
+                    <exp of="group"></exp>
+                </re-chip>
+            </for>
+        </re-typography>
+        <re-typography original color="primary" variant="body">
+            Преподаватель:
+            <re-chip color="secondary" variant="outlined" class="tt">
+                <exp of="subject.teacher"></exp>
+            </re-chip>
+        </re-typography>
+
+    </div>
+    <div class="cont">
+        <re-button-group class="full-width" ref="'testModesGroup'" orientation="flex" selection="single" value="normal"
+            on[selection-change]="onSelectionChange(event)">
+            <for value="mode" of="testModes" class="full-width mode-group">
+                <re-button set[value]="mode.signature" class="mode-button">
+                    <re-typography variant="body">
+                        <exp of="mode.name"></exp>
+                    </re-typography>
+                    <re-typography variant="caption">
+                        <exp of="mode.description"></exp>
+                    </re-typography>
+                    <re-chip variant="filled" set[color]="mode.colorP">
+                        <exp of="mode.numQuestions"></exp>
+                    </re-chip>
+                </re-button>
+            </for>
+        </re-button-group>
+        <re-button ref="'modeSettingsButton'" icon="settings">
+            Options
+        </re-button>
+    </div>
+    <paper-component ref="'optionBlock'" alternate class="option-block">
+        <div class="group1">
+            <re-button-group ref="'inputTestType'" selection="single" value="main"
+                on[selection-change]="onTestTypeChange(event)">
+                <re-button value="main" color="tertiary">Основной режим</re-button>
+                <re-button value="exam" color="secondary">Экзаменационный режим</re-button>
+            </re-button-group>
+            <re-checkbox ref="'inputNoShuffle'" label="Без перемешивания вопросов"></re-checkbox>
+        </div>
+
+        <div class="option-inputs">
+            <re-input ref="'inputMin'" type="number" placeholder="1" icon="arrow-right"
+                size="small"></re-input>
+            <re-input ref="'inputVal'" min="1" type="number" placeholder="25" icon="hash"
+                size="small"></re-input>
+            <re-input ref="'inputMax'" type="number" set[placeholder]="testModes[2].numQuestions" icon="arrow-left"
+                size="small"></re-input>
+        </div>
+    </paper-component>
+
+    <re-button ref="'startTestButton'" variant="outlined" color="tertiary" full-width class="start-button" data-link>
+        ЗАПУСТИТЬ
+    </re-button>
+
+    <!--<re-button variant="outlined" color="primary" full-width class="all-questions-button" id="all-questions">
+        ВСЕ ВОПРОСЫ
+    </re-button>-->
+</paper-component>

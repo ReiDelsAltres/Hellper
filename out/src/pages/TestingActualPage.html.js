@@ -64,7 +64,7 @@ let TestingActualPage = class TestingActualPage extends Page {
         // Auto-render KaTeX formulas (if any) inside page content after render
         try {
             // KatexUtils.autoRender accepts an Element — holder.element may be a DocumentFragment
-            const el = holder.element;
+            const el = holder.documentFragment;
             if (el)
                 KatexUtils.autoRender(el);
         }

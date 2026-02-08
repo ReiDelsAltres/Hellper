@@ -1,0 +1,115 @@
+@use './core/ComponentCore';
+
+@include ComponentCore.setupFullCore;
+
+$sizes: (
+    'extra-small': (padding: 1px 3px),
+    'small': (padding: 2px 4px),
+    'medium': (padding: 4px 4px),
+    'large': (padding: 4px 8px),
+    'extra-large': (padding: 6px 10px)
+);
+
+@include ComponentCore.supportHidden;
+@include ComponentCore.supportDisabled;
+@include ComponentCore.supportMini;
+@include ComponentCore.supportSize($sizes);
+@include ComponentCore.supportColor;
+@include ComponentCore.supportVariant('filled', true) using ($type) {
+    @if $type == base {
+        background-color: var(--component-bg-color);
+        color: var(--component-text-color);
+
+        border: 1px solid var(--component-bg-color);
+    }
+    @else {
+        border-color: var(--component-hover-bg-color);
+    }
+}
+@include ComponentCore.supportVariant('outlined') using ($type) {
+    @if $type == base {
+        background-color: transparent;
+        border: 1px solid var(--component-bg-color);
+        color: var(--component-bg-color);
+    }
+}
+@include ComponentCore.supportVariant('text') using ($type) {
+    @if $type == base {
+        background-color: transparent;
+        box-shadow: none;
+        color: var(--component-bg-color);
+    }
+}
+
+/* Button Component Styles */
+:host {
+    border-radius: 8px;
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    /* Effects */
+    cursor: pointer;
+    user-select: auto;
+    overflow: hidden;
+    outline: none;
+
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:host > * {
+    margin-left: 8px;
+}
+:host > :first-child,
+:host > [hidden]:not([hidden="false"]) + * {
+    margin-left: 0;
+}
+
+:host([allow-wrap]) .btn-text {
+    white-space: pre-wrap;
+}
+
+/* Button text */
+.btn-text {
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
+
+    white-space: normal;
+    overflow-wrap: fragile;
+    word-break: break-word;
+}
+
+/* Ripple effect */
+.btn-ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.btn-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+:host(:active) .btn-ripple::after {
+    width: 200px;
+    height: 200px;
+}

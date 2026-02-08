@@ -14,8 +14,8 @@ let PopUp = class PopUp extends Component {
     anchorElement;
     clickOutsideHandler;
     preLoad(holder) {
-        this.overlay = holder.element.querySelector('.popup-overlay');
-        this.container = holder.element.querySelector('.popup-container');
+        this.overlay = holder.documentFragment.querySelector('.popup-overlay');
+        this.container = holder.documentFragment.querySelector('.popup-container');
         // Click overlay to close (unless modal)
         this.overlay?.addEventListener('click', () => {
             if (!this.hasAttribute('modal')) {

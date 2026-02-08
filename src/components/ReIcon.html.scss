@@ -1,0 +1,154 @@
+@use './core/ComponentCore';
+
+@include ComponentCore.setupFullCore(true);
+
+@include ComponentCore.supportHidden;
+@include ComponentCore.supportDisabled;
+
+@include ComponentCore.supportSize;
+@include ComponentCore.supportColor;
+
+@include ComponentCore.supportVariant("block");
+
+@include ComponentCore.supportVariant("sharp") using ($type) {
+    @if $type == base {
+        color: var(--component-bg-color);
+        background-color: transparent;
+    }
+}
+
+@include ComponentCore.supportVariant("rounded") using ($type) {
+    @if $type == base {
+        color: var(--component-bg-color);
+        background-color: transparent;
+    }
+}
+
+@include ComponentCore.supportVariant("filled", true) using ($type) {
+    @if $type == base {
+        color: var(--component-bg-color);
+        background-color: transparent;
+    }
+}
+
+@include ComponentCore.supportVariant("outlined") using ($type) {
+    @if $type == base {
+        color: var(--component-bg-color);
+        background-color: transparent;
+    }
+}
+
+:host(:not([contrast="false"])[contrast]) {
+    color: var(--component-text-color)
+}
+
+:host {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+    pointer-events: none;
+}
+
+.icon-span {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+
+    font-size: var(--component-size);
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga";
+}
+
+:host([variant="rounded"]) .icon-span {
+    font-family: "Material Symbols Rounded";
+}
+
+:host([variant="sharp"]) .icon-span {
+    font-family: "Material Symbols Sharp";
+}
+
+/* Animations */
+@keyframes re-icon-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes re-icon-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes re-icon-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-4px);
+    }
+
+    75% {
+        transform: translateY(2px);
+    }
+}
+
+@keyframes re-icon-shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20%,
+    60% {
+        transform: translateX(-2px);
+    }
+
+    40%,
+    80% {
+        transform: translateX(2px);
+    }
+}
+
+:host([animation="spin"]) .icon-span {
+    animation: re-icon-spin 1s linear infinite;
+}
+
+:host([animation="pulse"]) .icon-span {
+    animation: re-icon-pulse 1.5s ease-in-out infinite;
+}
+
+:host([animation="bounce"]) .icon-span {
+    animation: re-icon-bounce 0.6s ease-in-out infinite;
+}
+
+:host([animation="shake"]) .icon-span {
+    animation: re-icon-shake 0.5s ease-in-out infinite;
+}
