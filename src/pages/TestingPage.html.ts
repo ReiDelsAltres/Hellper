@@ -32,6 +32,9 @@ export default class TestingPage extends Page {
       new Subject("Xarici dildə işgüzar və akademik kommunikasiya  - 3", "İsmayılova A.A", ["759ITS","759KM"], "Английский язык","s3/Eng.json"),
       /*new Subject("Sistem proqramlaşdırma", "Həsənova V.R", ["759ITS"], "Системное программирование"),*/
     ]),
+    new Semestr("?", [
+      new Subject("Vergi qanunvericiliyi?", "?", ["No related"], "Vergi qanunvericiliyi","s_no_idea/qan.json")
+    ])
   ];
   protected async preInit(): Promise<void> {
     this.semestrs.reverse();
