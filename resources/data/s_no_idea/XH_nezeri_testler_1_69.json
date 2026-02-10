@@ -1,0 +1,728 @@
+[
+  {
+    "id": "1",
+    "question": "Aşağıdakılardan hansı Azərbaycan Respublikasında gəlir vergisinin ödəyicisi deyil?",
+    "options": {
+      "A": "rezident fiziki şəxslər",
+      "B": "qeyri-rezident fiziki şəxslər",
+      "C": "rezident müəssisələr",
+      "D": "fərdi sahibkarlar"
+    }
+  },
+  {
+    "id": "2",
+    "question": "Rezident fiziki şəxslərin gəlirləri üzrə vergitutma obyekti nədir?",
+    "options": {
+      "A": "vergi ili üçün rezidentlərin yalnız Azərbaysan mənbəyindən əldə etdiyi gəliri ilə həmin dövr üçün Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ arasındakı fərqdən ibarət olan vergiyə cəlb edilən gəlirdir.",
+      "B": "vergi ili üçün rezidentlərin bütün gəliri ilə həmin dövr üçün Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ nəzərə alınmadan vergiyə cəlb edilən gəlirdir.",
+      "C": "vergi ili üçün rezidentlərin bütün gəliri ilə həmin dövr üçün Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ arasındakı fərqdən ibarət olan vergiyə cəlb edilən gəlirdir.",
+      "D": "İqtisadiyyat Nazirliyi tərəfindən müəyyənləşdirilən dövr üçün rezidentlərin bütün gəliri ilə həmin dövrdə Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ arasındakı fərqdən ibarət olan vergiyə cəlb edilən gəlirdir."
+    }
+  },
+  {
+    "id": "3",
+    "question": "Fiziki şəxslərdən ödəmə mənbəyində vergi tutulduğu halda vergiyə cəlb olunan gəlirdən bir daha vergi tutulurmu?",
+    "options": {
+      "A": "hesab edilir",
+      "B": "hesab edilmir",
+      "C": "bu Nazirlər Kabinetinin qərarı ilə müəyyənləşdirilir",
+      "D": "bu İqtisadiyyat Nazirliyi tərəfindən müəyyənləşdirilir"
+    }
+  },
+  {
+    "id": "4",
+    "question": "Xüsusi notariuslar üzrə vergitutma obyekti nədir?",
+    "options": {
+      "A": "bir ay ərzində gəlirdən gəlirin əldə edilməsi ilə bağlı xərclər çıxılmaqla qalan hissəsi",
+      "B": "notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar ilə çəkilən xərclər arasındakı fərq",
+      "C": "bir ay ərzində aparılan notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar (xərclər nəzərə alınmadan)",
+      "D": "üç ay ərzində aparılan notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar"
+    }
+  },
+  {
+    "id": "5",
+    "question": "Azərbaycan Respublikasında daimi nümayəndəlik vasitəsilə fəaliyyət göstərən qeyri-rezident fiziki şəxsin daimi nümayəndəliyi ilə əlaqədar olan gəlirindən vergi necə tutulur?",
+    "options": {
+      "A": "ödəmə mənbəyində gəlirdən xərclər çıxılmamaqla",
+      "B": "gəlirdən gəlirin əldə edilməsi ilə bağlı xərclər çıxılmaqla",
+      "C": "ödəmə mənbəyində gəlirdən xərclər çıxılmaqla",
+      "D": "gəlirdən Azərbaycan Respublikasının hüdudlarından kənarda çəkilən xərclər çıxılmaqla"
+    }
+  },
+  {
+    "id": "6",
+    "question": "Azərbaycan Respublikasında daimi nümayəndəlik vasitəsilə fəaliyyət göstərən qeyri-rezident vergi ödəyicisi hansı gəlirləri üzrə gəlir vergisinin ödəyicisidir?",
+    "options": {
+      "A": "daimi nümayəndəliyi ilə əlaqədar olan vergiyə cəlb edilən gəlirləri üzrə",
+      "B": "bütün gəlirləri üzrə",
+      "C": "yalnız Azərbaycan Respublikasının hüdudlarından kənarda əldə etdiyi gəlirləri üzrə",
+      "D": "daimi nümayəndəliyi ilə əlaqədar olmayan vergiyə cəlb edilən gəlirləri üzrə"
+    }
+  },
+  {
+    "id": "7",
+    "question": "Qeyri-rezident fiziki şəxsin ödəmə mənbəyində vergiyə cəlb edilməsi nəzərdə tutulan ümumi gəliri hansı qaydada vergitutma obyektidir?",
+    "options": {
+      "A": "gəlirdən çıxılan məbləğ nəzərə alınmadan ödəniş yerində vergitutma obyektidir",
+      "B": "vergitutma obyekti deyil",
+      "C": "gəlirdən çıxılan məbləğ nəzərə alınmaqla ödəniş yerində vergitutma obyektidir",
+      "D": "əgər fiziki şəxsin vergiyə cəlb edilməsi ödəmə mənbəyində nəzərdə tutulan ümumi gəliri, yalnız sahibkarlıq fəaliyyətindən əldə edilmişdirsə, vergitutma obyektidir"
+    }
+  },
+  {
+    "id": "9",
+    "question": "Vergitutma məqsədləri üçün rezident fiziki şəxsin gəliri dedikdə hansı gəlir başa düşülür?",
+    "options": {
+      "A": "ancaq Azərbaycan Respublikasında əldə etdiyi gəlir",
+      "B": "ancaq Azərbaycan Respublikasının hüdudlarından kənarda əldə etdiyi gəlir",
+      "C": "Azərbaycan Respublikasında və Azərbaycan Respublikasının hüdudlarından kənarda əldə etdiyi gəlir",
+      "D": "yalnız sahibkarlıq fəaliyyətindən əldə edilən gəlir"
+    }
+  },
+  {
+    "id": "10",
+    "question": "Vergitutma məqsədləri üçün qeyri-rezident fiziki şəxsin gəliri dedikdə hansı gəlir başa düşülür?",
+    "options": {
+      "A": "Azərbaycan Respublikası mənbələrindən əldə edilən gəlir",
+      "B": "Azərbaycan Respublikasından kənarda əldə edilən gəlir",
+      "C": "Azərbaycan Respublikası mənbələrindən və Respublika hüdudlarından kənarda əldə edilən gəlir.",
+      "D": "rezidenti olduğu ölkədə əldə etdiyi gəlir"
+    }
+  },
+  {
+    "id": "11",
+    "question": "Qeyri-rezident vergi ödəyicisinin gəlirinə aşağıdakılardan hansılar aiddir? 1) muzdlu işlə əlaqədar əldə edilən gəlir 2) faktiki ezamiyyə xərcləri 3) muzdlu işə aid olmayan fəaliyyətdən əldə edilən gəlir 4) vergilərdən azad edilən gəlirlərdən və əsas vəsaitlərin (vəsaitin) yenidən qiymətləndirilməsindən yaranan artımdan başqa bütün digər gəlirlər 5) vergilərdən azad edilən və edilməyən digər gəlirlər",
+    "options": {
+      "A": "1; 2; 3      B) 1; 3; 4       C) 2; 3; 4             D) 3; 4; 5"
+    }
+  },
+  {
+    "id": "12",
+    "question": "Kütləvi təklif edilmiş və tənzimlənən bazarda ticarətə buraxılmış səhmlərin Azərbaycan Respublikasının ərazisində, habelə ölkə hüdudlarından kənarda fond birjasında təqdim edilməsi istisna olmaqla, hüquqi şəxsin nizamnamə kapitalındakı iştirak payı və ya səhmlər xalis aktivlərin iştirak payı və ya səhmlərə mütənasib dəyərindən yuxarı qiymətə təqdim edildikdə vergiyə cəlb edilən gəlir hansı məbləğdən hesablanır?",
+    "options": {
+      "A": "faktiki təqdimetmə qiyməti ilə xalis aktivlərin iştirak payı və ya səhmlərə mütənasib dəyəri arasındakı fərqdən",
+      "B": "alqı-satqı müqaviləsinin bağlandığı tarixə xalis aktivlərin mütənasib dəyəri ilə nizamnamə kapitalındakı iştirak payının nominal dəyəri arasındakı fərqdən",
+      "C": "faktiki təqdimetmə qiyməti ilə nizamnamə kapitalındakı iştirak payının və ya səhmin nominal dəyəri arasındakı fərqdən",
+      "D": "nizamnamə kapitalındakı iştirak payı və ya səhmlərin təqdim edilməsi vergiyə cəlb edilmir"
+    }
+  },
+  {
+    "id": "13",
+    "question": "Kütləvi təklif edilmiş və tənzimlənən bazarda ticarətə buraxılmış səhmlərin Azərbaycan Respublikasının ərazisində, habelə ölkə hüdudlarından kənarda fond birjasında təqdim edilməsi üzrə vergitutma obyekti necə müəyyən edilir?",
+    "options": {
+      "A": "səhmin satış dəyəri ilə alış dəyəri və çəkilən digər xərclər arasındakı fərq",
+      "B": "səhmin satış dəyəri ilə bazar dəyəri və çəkilən digər xərclər arasındakı fərq",
+      "C": "səhmin bazar dəyəri ilə alış dəyəri və çəkilən digər xərclər arasındakı fərq",
+      "D": "səhmin statistik dəyəri ilə nominal dəyəri və çəkilən digər xərclər arasındakı fərq"
+    }
+  },
+  {
+    "id": "14",
+    "question": "Hansı gəlir muzdlu işlə əlaqədar alınan gəlirə aid deyildir?",
+    "options": {
+      "A": "əmək haqqı",
+      "B": "işə götürən tərəfindən verilən maddi yardım",
+      "C": "muzdlu işdən alınan hər hansı ödəmə və ya fayda",
+      "D": "faiz gəliri"
+    }
+  },
+  {
+    "id": "15",
+    "question": "İşəgötürən tərəfindən fiziki şəxsə banklararası kredit hərracında olan faiz dərəcəsindən aşağı faiz dərəcəsi ilə ssuda verildiyi halda hansı məbləğ muzdlu işlə əlaqədar alınan gəlirdir?",
+    "options": {
+      "A": "ssudanın tam məbləği",
+      "B": "bu halda muzdlu işlə əlaqədar gəlir yaranmır",
+      "C": "bu tipli ssudalar üzrə banklararası kredit hərracında olan faiz dərəcəsinə uyğun faizlə ödənməli olan məbləğlə aşağı faiz dərəcəsinə uyğun ödənməli olan məbləğ arasındakı fərq",
+      "D": "bu tipli ssudalar üzrə banklararası kredit hərracında olan faiz dərəcəsinə uyğun faizlə ödənməli olan məbləğlə aşağı faiz dərəcəsinə uyğun ödənməli olan məbləğin cəmi"
+    }
+  },
+  {
+    "id": "16",
+    "question": "İşə götürənin öz işçisinə malı, işi və ya xidməti təqdim etdiyi, yaxud hədiyyə verdiyi halda bu cür malların, işlərin və xidmətlərin bazar qiyməti ilə dəyəri muzdlu işlə əlaqədar alınan gəlirə aid edilə bilərmi?",
+    "options": {
+      "A": "aid edilə bilər",
+      "B": "aid edilə bilməz",
+      "C": "bu cür malların, işlərin və xidmətlərin bazar qiyməti ilə dəyərinin 25 faizi aid edilə bilər",
+      "D": "bunu gəlir əldə edənin özü müəyyənləşdirir"
+    }
+  },
+  {
+    "id": "17",
+    "question": "Muzdlu işlə əlaqədar alınan gəlirlərə aşağıdakılardan hansılar aiddir? 1) Nümayəndəlik xərclərinin, işçilərlə bağlı mənzil və yemək xərclərinin Nazirlər Kabineti tərəfindən müəyyən edilmiş normaları istisna olmaqla işçinin xərclərinin əvəzi ödənildiyi halda ödənən vəsaitin məbləği 2) işçinin işə götürənə olan borcunun və ya öhdəliyinin bağışlanıldığı halda, həmin borcun və ya öhdəliyin məbləği 3) əsas vəsaitlərin təqdim edilməsindən alınan gəlir 4) işəgötürən tərəfindən ödənilən sığorta haqları 5) mediatorun mediasiya fəaliyyətindən əldə etdiyi xidmət haqqı",
+    "options": {
+      "A": "1; 2; 3  B) 2; 3; 4   C) 1; 2; 4      D) 3; 4; 5"
+    }
+  },
+  {
+    "id": "18",
+    "question": "İşçinin işə götürənə olan borcunun və ya öhdəliyinin bağışlanıldığı halda həmin borcun və ya öhdəliyin məbləği hansı gəlirə aiddir?",
+    "options": {
+      "A": "muzdlu işlə əlaqədar alınan gəlirə",
+      "B": "sahibkarlıq fəaliyyətindən gəlirə",
+      "C": "qeyri- sahibkarlıq fəaliyyətindən gəlirə",
+      "D": "həmin məbləğ vergi tutulan gəlirə aid edilmir"
+    }
+  },
+  {
+    "id": "19",
+    "question": "İşəgötürən tərəfindən işçiyə ödənilən sığorta haqları hansı gəlirə aiddir?",
+    "options": {
+      "A": "gəlirə aid deyildir",
+      "B": "sahibkarlıq fəaliyyətindən gəlirə",
+      "C": "qeyri- sahibkarlıq fəaliyyətindən gəlirə",
+      "D": "muzdlu işlə əlaqədar alınan gəlirə"
+    }
+  },
+  {
+    "id": "20",
+    "question": "İşəgötürən tərəfindən işçiyə (təhtəlhesab şəxsə) verilmiş təhtəlhesab vəsait müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən müəyyən edilmiş qaydada geri qaytarılmadıqda həmin vəsaitin məbləği hansı gəlirə aid edilir?",
+    "options": {
+      "A": "Muzdlu işlə əlaqədar gəlirə aid edilir",
+      "B": "Gəlir sayılmır",
+      "C": "Qeyri – sahibkarlıqdan gəlirlərə aid edilir",
+      "D": "Sahibkarlık fəaliyyətindən gəlirə aid edilir"
+    }
+  },
+  {
+    "id": "21",
+    "question": "Faktiki ezamiyyə xərclərinin və ya digər işgüzar xərclərin əvəzinin ödənilməsi hansı gəlirə daxildir?",
+    "options": {
+      "A": "sahibkarlıq fəaliyyətindən gəlirə",
+      "B": "gəlirə daxil deyildir",
+      "C": "muzdlu işlə əlaqədar alınan gəlirə",
+      "D": "qeyri- sahibkarlıq fəaliyyətindən gəlirə"
+    }
+  },
+  {
+    "id": "22",
+    "question": "İşə götürən tərəfindən əyləncə və yemək xərclərinin [müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilmiş normalar daxilində müalicə-profilaktik yeməklərə, süd və ona bərabər tutulan digər məhsullara və vasitələrə sərf olunan xərclər istisna olmaqla], habelə nümayəndəlik, işçilərin mənzil və digər sosial xarakterli xərclərinin çəkilməsinin nəticəsi kimi əldə edilən gəlir vergi tutulan gəlirə aiddirmi?",
+    "options": {
+      "A": "qeyri- sahibkarlıq fəaliyyətindən gəlirə aiddir",
+      "B": "sahibkarlıq fəaliyyətindən gəlirə aiddir",
+      "C": "vergilərdən azad edilən gəlirlərdən başqa digər gəlirlərə aiddir",
+      "D": "vergi tutulan gəlirə aid deyildir"
+    }
+  },
+  {
+    "id": "23",
+    "question": "Muzdlu işə aid olmayan fəaliyyətdən gəlirlər hansı gəlirlərdən ibarətdir?",
+    "options": {
+      "A": "yalnız sahibkarlıq fəaliyyətindən əldə edilən gəlirlərdən",
+      "B": "yalnız qeyri- sahibkarlıq fəaliyyətindən əldə edilən gəlirlərdən",
+      "C": "sahibkarlıq və qeyri-sahibkarlıq fəaliyyətindən əldə edilən gəlirlərdən",
+      "D": "belə bir bölgü nəzərdə tutulmayıb"
+    }
+  },
+  {
+    "id": "24",
+    "question": "Aşağıdakılardan hansı sahibkarlıq fəaliyyətindən gəlirə aiddir?",
+    "options": {
+      "A": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir",
+      "B": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir",
+      "C": "əsas vəsaitlərin köhnəlməsindən əldə olunan gəlir",
+      "D": "faiz gəliri"
+    }
+  },
+  {
+    "id": "25",
+    "question": "Aşağıdakılardan hansı sahibkarlıq fəaliyyətindən gəlirə aiddir?",
+    "options": {
+      "A": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir",
+      "B": "sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir",
+      "C": "faiz gəliri",
+      "D": "heç biri"
+    }
+  },
+  {
+    "id": "26",
+    "question": "Hansı gəlir qeyri-sahibkarlıq fəaliyyətindən gəlirə aid deyildir?",
+    "options": {
+      "A": "sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir",
+      "B": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir",
+      "C": "əmlakın icarəyə verilməsindən gəlir",
+      "D": "həyatın yığım sığortası üzrə sığorta olunanın ödədiyi və ya onun xeyrinə ödənilən sığorta haqları ilə sığorta ödənişləri arasındakı fərq"
+    }
+  },
+  {
+    "id": "27",
+    "question": "Hansı gəlir qeyri-sahibkarlıq fəaliyyətindən gəlirə aid deyildir?",
+    "options": {
+      "A": "faktiki ezamiyyə xərclərinin ödənilməsi",
+      "B": "royalti",
+      "C": "faiz gəliri",
+      "D": "dividend"
+    }
+  },
+  {
+    "id": "28",
+    "question": "Hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirə aiddir? 1) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir 2) gəlirdən çıxılan kompensasiya edilən məbləğlərdən və ya ehtiyatların azalmasından gəlir 3) həyatın yığım sığortası üzrə sığorta olunanın ödədiyi və ya onun xeyrinə ödənilən sığorta haqları ilə sığorta ödənişləri arasındakı fərq. 4) dividend 5) işçinin xərclərinin əvəzi ödənildiyi halda, ödənən vəsaitin məbləği",
+    "options": {
+      "A": "1, 3, 4      B) 1, 4, 5       C) 2, 3, 4         D) 2, 4, 5"
+    }
+  },
+  {
+    "id": "29",
+    "question": "Aşağıdakı hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirlərə aiddir? 1) sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir 2) vergi ödəyicisinin aktivlərinin ilkin qiymətinin artdığını göstərən hər hansı digər gəlir [təqdim olunduğu təqdirdə] — əmək haqqından başqa. 3) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir 4) əmlakın icarəyə verilməsindən gəlir 5) faiz gəliri",
+    "options": {
+      "A": "1, 3, 4    B) 1, 4, 5     C) 2, 3, 4        D) 2, 4, 5"
+    }
+  },
+  {
+    "id": "30",
+    "question": "Aşağıdakı hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirlərə aiddir? 1) sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir 2) vergi ödəyicisinin aktivlərinin ilkin qiymətinin artdığını göstərən hər hansı digər gəlir [təqdim olunduğu təqdirdə] — əmək haqqından başqa. 3) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir 4) idman mərc oyunlarından əldə edilən uduşlar 5) faiz gəliri",
+    "options": {
+      "A": "1, 3, 4    B) 1, 4, 5     C) 2, 3, 4        D) 2, 4, 5"
+    }
+  },
+  {
+    "id": "31",
+    "question": "İdman mərc oyunlarından əldə edilən uduşlar hansı gəlirə aiddir?",
+    "options": {
+      "A": "Sahibkarliq fəaliyyətindən gəlrə",
+      "B": "Qeyri –sahibkarlıq fəaliyyətindən gəlirə",
+      "C": "Muzdlu işdən əldə olunan gəlirə",
+      "D": "Gəlrə aid deyil"
+    }
+  },
+  {
+    "id": "32",
+    "question": "Aşağıdakı hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirlərə aiddir? 1) sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir 2) vergi ödəyicisinin aktivlərinin ilkin qiymətinin artdığını göstərən hər hansı digər gəlir [təqdim olunduğu təqdirdə] — əmək haqqından başqa 3) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir 4) xüsusi notarius tərəfindən aparılan notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar 5) vəkillik fəaliyyəti ilə məşğul olan şəxslər tərəfindən bu fəaliyyətlə bağlı göstərilən xidmətə görə alınan haqq",
+    "options": {
+      "A": "1, 3, 4    B) 1, 4, 5     C) 2, 3, 4        D) 2, 4, 5"
+    }
+  },
+  {
+    "id": "33",
+    "question": "Dövlət sektorunda aylıq gəliri 2500 manatdan artıq olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı ən yüksək dərəcə tətbiq olunur?",
+    "options": {
+      "A": "14 faiz",
+      "B": "20 faiz",
+      "C": "25 faiz",
+      "D": "30 faiz"
+    }
+  },
+  {
+    "id": "34",
+    "question": "Fiziki şəxsin aldığı və Vergi Məcəlləsinə uyğun olaraq Azərbaycan Respublikasında ödəmə mənbəyindən vergi tutulmuş hansı məbləğlər gəlirdən çıxılır?",
+    "options": {
+      "A": "dividend, faiz, təqvim ili ərzində alınan hədiyyə və miraslar",
+      "B": "dividend, faiz, icarə haqqı, royalti gəlirləri və idman oyunları ilə əlaqədar aparılan mərc oyunlarından əldə edilən uduşlar",
+      "C": "dividend, icarə haqqı, royalti, sığorta haqları",
+      "D": "icarə haqqı, faiz, royalti, təqvim ili ərzində alınan hədiyyə və miraslar, sığorta haqları"
+    }
+  },
+  {
+    "id": "35",
+    "question": "Dövlət sektorunda aylıq gəliri 2500 manatadək olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı dərəcə tətbiq olunur?",
+    "options": {
+      "A": "30 faiz",
+      "B": "14 faiz",
+      "C": "280 manat + 2000 manatdan çox olan məbləğin 30 faizi",
+      "D": "350 manat + 2000 manatdan çox olan məbləğin 25 faizi"
+    }
+  },
+  {
+    "id": "35-1",
+    "question": "Muzdlu işçisi olmayan fiziki şəxslərə maddi yardım ödəyən vergi ödəyicisi tərəfindən həmin gəlirə verginin hesablanması zamanı hansı dərəcə tətbiq olunur?",
+    "options": {
+      "A": "20 faiz",
+      "B": "14 faiz",
+      "C": "gəlir vergisi hesablanmayacaq",
+      "D": "350 manat + 2500 manatdan çox olan məbləğin 25 faizi"
+    }
+  },
+  {
+    "id": "36",
+    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin məbləği 2500 manatadək  olduqda 2026-cı il yanvarın 1-dən 2027-ci il yanvarın 1-dək hansı dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "3 faiz",
+      "B": "vergidən azaddır",
+      "C": "14 faiz",
+      "D": "25 faiz"
+    }
+  },
+  {
+    "id": "36-1",
+    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin məbləği 2500 manatadək  olduqda 2027-ci il yanvarın 1-dən 2028-ci il yanvarın 1-dək hansı dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "5 faiz",
+      "B": "vergidən azaddır",
+      "C": "14 faiz",
+      "D": "25 faiz"
+    }
+  },
+  {
+    "id": "36-2",
+    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin məbləği 2500 manatadək  olduqda 2028-ci il yanvarın 1-dən hansı dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "7 faiz",
+      "B": "vergidən azaddır",
+      "C": "14 faiz",
+      "D": "25 faiz"
+    }
+  },
+  {
+    "id": "36-3",
+    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərinin 2500 manatdan 8000 manatadək olan hissəsindən hansı dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "10 faiz",
+      "B": "vergidən azaddır",
+      "C": "14 faiz",
+      "D": "25 faiz"
+    }
+  },
+  {
+    "id": "37",
+    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin\t 8000 manatdan yuxarı hissəsindən hansı dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "0 faiz",
+      "B": "10 faiz",
+      "C": "14 faiz",
+      "D": "25 faiz"
+    }
+  },
+  {
+    "id": "38",
+    "question": "Vəkil qurumlarının tərkibində fəaliyyət göstərən vəkillərə həmin qurum tərəfindən ödənilən gəlirlərdən vergi hansı dərəcə ilə tutulacaq?",
+    "options": {
+      "A": "20 faiz",
+      "B": "350 manat + 2500 manatdan çox olan məbləğin 25 faizi",
+      "C": "gəlir vergisi hesablanmayacaq",
+      "D": "14 faiz"
+    }
+  },
+  {
+    "id": "39",
+    "question": "İki və ya daha çox yerdə muzdla işləyən fiziki şəxslərin gəlirlərindən hansı qaydada gəlir vergisi hesablanır və hansı büdcəyə ödənilir?",
+    "options": {
+      "A": "ən çox əmək haqqı aldığı yerdə hesablanır və dövlət büdcəsinə ödənilir",
+      "B": "hər bir iş yerində ödənilən məbləğdən ayrıca hesablanır və dövlət büdcəsinə ödənilir",
+      "C": "əsas iş yerində gəlirlərin ümumi məbləğindən tutularaq dövlət büdcəsinə ödənilir",
+      "D": "hər bir iş yerində ödənilən məbləğdən ayrıca hesablanır və bələdiyyə büdcəsinə ödənilir"
+    }
+  },
+  {
+    "id": "40",
+    "question": "Qeyri-sahibkarlıq fəaliyyətindən illik gəlirinin məbləği 30.000 manatdan artıq olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı dərəcə tətbiq olunur ?",
+    "options": {
+      "A": "14 faiz",
+      "B": "30 faiz",
+      "C": "25 faiz",
+      "D": "4200 manat + 30000 manatdan çox olan məbləğin 25 faizi"
+    }
+  },
+  {
+    "id": "41",
+    "question": "Hüquqi şəxs yaratmadan sahibkarlıq fəaliyyətini həyata keçirən fiziki şəxslərin vergiyə cəlb edilən gəlirlərindən hansı dərəcə  ilə vergi tutulur",
+    "options": {
+      "A": "14 faiz",
+      "B": "18 faiz",
+      "C": "20 faiz",
+      "D": "25 faiz"
+    }
+  },
+  {
+    "id": "42",
+    "question": "Xüsusi notarius üçün vergitutma obyektindən neçə faiz dərəcə ilə gəlir vergisi tutulur?",
+    "options": {
+      "A": "xərclər çıxılmadan 10 faiz",
+      "B": "xərclər çıxılmaqla 14 faiz",
+      "C": "xərclər çıxılmaqla 20 faiz",
+      "D": "xərclər çıxılmadan 25 faiz"
+    }
+  },
+  {
+    "id": "43",
+    "question": "İdman oyunları ilə əlaqədar aparılan mərc oyunlarından, lotereyaların keçirilməsindən, habelə digər yarışlardan və müsabiqələrdən pul şəklində əldə edilən uduşlardan (mükafatlardan)iştirakla bağlı ödənilən pul vəsaiti (pul qoyuluşu) çıxılmaqla qalan məbləğdən(Azərbaycan Respublikasının hüdudlarından kənarda təşkil edilən mərc oyunlarından, yarışlardan və müsabiqələrdən əldə edilən nağd pul vəsaiti istisna olmaqla) neçə  faiz dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "6 faiz",
+      "B": "10 faiz",
+      "C": "14 faiz",
+      "D": "20 faiz"
+    }
+  },
+  {
+    "id": "44",
+    "question": "Qeyri-sahibkarlıq fəaliyyətindən illik gəliri 30000 manatadək olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı dərəcə tətbiq olunur?",
+    "options": {
+      "A": "25 faiz",
+      "B": "14 faiz",
+      "C": "0 faiz",
+      "D": "10 faiz"
+    }
+  },
+  {
+    "id": "44-1",
+    "question": "Qeyri-rezident müəssisə tərəfindən ödənilən dividenddən rezident fiziki şəxs hansı dərəcə ilə vergi ödəyir?",
+    "options": {
+      "A": "10 faiz",
+      "B": "5 faiz",
+      "C": "20 faiz",
+      "D": "14 faiz"
+    }
+  },
+  {
+    "id": "45",
+    "question": "Vergi ödəyicisi kimi vergi orqanında uçotda olmayan fiziki şəxslərin “Nağdsız hesablaşmalar haqqında” Azərbaycan Respublikasının Qanununun 3.5-ci maddəsində göstərilən malların təqdim edilməsindən əldə edilən gəlirlərindən (Vergi Məcəlləsi ilə vergidən azad olunan gəlirlər istisna olmaqla)  hansı dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "xərclər çıxılmadan 2 faiz",
+      "B": "xərclər çıxılmadan 5 faiz",
+      "C": "xərclər çıxılmadan 14 faiz",
+      "D": "xərclər çıxılmaqla 20 faiz"
+    }
+  },
+  {
+    "id": "46",
+    "question": "Vergi ödəyicisi kimi vergi orqanında uçotda olan fiziki şəxslərin “Nağdsız hesablaşmalar haqqında” Azərbaycan Respublikasının Qanununun 3.5-ci maddəsində göstərilən malların təqdim edilməsindən əldə edilən gəlirlərindən (Vergi Məcəlləsi ilə vergidən azad olunan gəlirlər istisna olmaqla)  hansı dərəcə ilə vergi tutulur",
+    "options": {
+      "A": "xərclər çıxılmaqla 2 faiz",
+      "B": "xərclər çıxılmadan 2 faiz",
+      "C": "xərclər çıxılmadan 14 faiz",
+      "D": "xərclər çıxılmaqla 20 faiz"
+    }
+  },
+  {
+    "id": "47",
+    "question": "Aşağıdakı fiziki şəxslərdən hansıların banklara və digər kredit təşkilatlarına olan borclarının silinməsindən əldə olunan gəliri vergidən azad edilir? 1. vətən müharibəsi iştirakçılarının 2. vətən müharibəsindən əvvəl hərbi təxribatlar nəticəsində əlilliyi müəyyən edilmiş şəxslərin 3. vətən müharibəsində şəhid ailəsi statusu almış şəxslərin 4. vətən müharibəsindən sonra Azərbaycan Respublikasının ərazi bütövlüyü uğrunda döyüş əməliyyatları və hərbi təxribatlar nəticəsində əlilliyi müəyyən edilmiş şəxslərin 5. Azərbaycan Respublikasının ərazi bütövlüyü uğrunda aparılan hərbi əməliyyatlarda iştirak etmiş  şəxslərin",
+    "options": {
+      "A": "1, 3, 5            B) 2, 4, 5                C) 2, 3, 4                                  D) 1, 3, 4"
+    }
+  },
+  {
+    "id": "48",
+    "question": "Fiziki şəxsin təqvim ili ərzində ailə üzvlərindən aldığı hədiyyə, maddi yardım və miraslar hansı faiz dərəcəsi ilə vergiyə cəlb olunur?",
+    "options": {
+      "A": "10 faiz",
+      "B": "14 faiz",
+      "C": "gəlir vergisindən azaddır",
+      "D": "25 faiz"
+    }
+  },
+  {
+    "id": "49",
+    "question": "Xaricdə müalicə haqlarını ödəmək üçün fiziki şəxsə verilən maddi yardımın dəyərinin hansı məbləğindən vergi tutulur?",
+    "options": {
+      "A": "maddi yardımın tam məbləğindən",
+      "B": "maddi yardım məbləğinin 50 faizindən",
+      "C": "50 000 manatdan çox olan hissəsindən",
+      "D": "2000 manatdan çox olan hissəsindən"
+    }
+  },
+  {
+    "id": "50",
+    "question": "Hədiyyələrin hansı məbləğindən gəlir vergisi tutulur?",
+    "options": {
+      "A": "tam məbləğindən",
+      "B": "2500 manatdan çox olan hissəsindən",
+      "C": "1000 manatdan çox olan hissəsindən",
+      "D": "20000 manatdan çox olan hissəsindən"
+    }
+  },
+  {
+    "id": "51",
+    "question": "Mirasların dəyərinin hansı məbləğindən gəlir vergisi tutulur?",
+    "options": {
+      "A": "20000 manatdan çox olan hissəsindən",
+      "B": "2000 manatdan çox olan hissəsindən",
+      "C": "200 manatdan çox olan hissəsindən",
+      "D": "şərti maliyyə vahidinin 1000 mislindən çox olan hissəsindən"
+    }
+  },
+  {
+    "id": "52",
+    "question": "Ölkə daxilində cərrahiyyə əməliyyatının haqqını ödəmək üçün fiziki şəxsə verilmiş maddi yardımın dəyərinin hansı hissəsi gəlir vergisindən azaddır?",
+    "options": {
+      "A": "1000 manatadək olan hissəsi",
+      "B": "50 000 manatadək olan hissəsi",
+      "C": "2000 manatadək olan hissəsi",
+      "D": "10 000 manatadək olan hissəsi"
+    }
+  },
+  {
+    "id": "53",
+    "question": "Təhsil və ya müalicə haqları almış şəxslərə güzəşt hansı halda verilir?",
+    "options": {
+      "A": "həmin məbləğlər dövlət büdcəsinin vəsaiti hesabına ödənildikdə",
+      "B": "təhsil və ya müalicə haqları almış şəxslər vergi ödəyicisi olduqda",
+      "C": "təhsil və ya müalicə haqları yalnız qeyri-rezident şəxslər tərəfindən ödənildikdə",
+      "D": "həmin məbləğlərin təyinatı üzrə ödənildiyini təsdiq edən müvafiq sənədlər təqdim edildikdə"
+    }
+  },
+  {
+    "id": "54",
+    "question": "Hədiyyə və maddi yardım vergi ödəyicisi olan fiziki şəxsin ailə üzvlərindən alındığı halda onun dəyərinin hansı məbləğindən vergi tutulur?",
+    "options": {
+      "A": "vergidən azaddır",
+      "B": "hədiyyə və maddi yardımın 10000 manatdan artıq olan hissəsindən",
+      "C": "hədiyyə və maddi yardımın 1000 manatdan artıq olan hissəsindən",
+      "D": "hədiyyə və maddi yardımın tam məbləğindən"
+    }
+  },
+  {
+    "id": "55",
+    "question": "Miras vergi ödəyicisinin ailə üzvündən alındığı halda mirasın hansı məbləğindən gəlir vergisi tutulur?",
+    "options": {
+      "A": "miras məbləğinin 50 faizindən",
+      "B": "1000 manatdan çox olan hissəsindən",
+      "C": "vergi tutulmur",
+      "D": "20000 manatdan çox olan hissəsindən"
+    }
+  },
+  {
+    "id": "56",
+    "question": "Əmək qabiliyyətinin müvəqqəti itirilməsinə görə ödənilən müavinətdən gəlir vergisi hansı qaydada tutulur?",
+    "options": {
+      "A": "55 manatdan çox olan hissəsindən",
+      "B": "vergi tutulmur",
+      "C": "ümumi qaydada vergiyə cəlb olunur",
+      "D": "50 faizi vergiyə cəlb olunur"
+    }
+  },
+  {
+    "id": "57",
+    "question": "Fiziki şəxslərə ödənilmiş dövlət müavinətləri hansı qaydada vergiyə cəlb edilir?",
+    "options": {
+      "A": "1000 manatdan artıq olan hissəsi vergiyə cəlb olunur",
+      "B": "100 manatdan artıq olan hissəsi vergiyə cəlb edilir",
+      "C": "vergiyə cəlb edilmir",
+      "D": "2000 manatdan artıq olan hissəsindən vergi tutulmur"
+    }
+  },
+  {
+    "id": "57-1",
+    "question": "Fiziki şəxslərə ödənilən hansı ödənişlər gəlir vergisindən azaddır? 1. Əmək qabiliyyətinin müvəqqəti itirilməsinə görə ödənilən müavinətlər 2. hüquqi şəxsin ləğvi ilə əlaqədar olaraq əmək müqaviləsinə xitam verildikdə işçilərə Əmək Məcəlləsinə müvafiq ödənilən təminatlar 3. fərdi sahibkarın fəaliyyətinin ləğvi ilə əlaqədar olaraq əmək müqaviləsinə xitam verildikdə işçilərə Əmək Məcəlləsinə müvafiq ödənilən təminatlar 4. işçinin vəfatı ilə əlaqədar əmək müqaviləsinə xitam verildikdə vəfat edənin vərəsələrinə Əmək Məcəlləsinə müvafiq ödənilən təminatlar 5. hüquqi şəxsin icra orqanının qərarı əsasında işçilərə ödənilən fərdi birdəfəlik ödəmələr",
+    "options": {
+      "A": "1, 3, 5                    B) 2, 4, 5                C) 1, 3, 4                            D) 2, 3, 4"
+    }
+  },
+  {
+    "id": "58",
+    "question": "Alimentlər gəlir vergisinə hansı qaydada cəlb edilir?",
+    "options": {
+      "A": "gəlir vergisindən azaddır",
+      "B": "ümumi qaydada vergiyə cəlb edilir",
+      "C": "qismən cəlb edilir",
+      "D": "vergi aliment ödəyən tərəfindən ödənilir"
+    }
+  },
+  {
+    "id": "59",
+    "question": "Fiziki şəxsin əsas iş yerində hər hansı muzdlu işlə əlaqədar əldə edilən aylıq gəliri 2500 manatadək olduqda, gəlir vergisinə münasibətdə hansı məbləğdə azadolma tətbiq edilir?",
+    "options": {
+      "A": "minimum əmək haqqının 1 misli",
+      "B": "ölkə uzrə yaşayış minimumunun 1 misli",
+      "C": "heç bir güzəşt tətbiq olunmur",
+      "D": "200 manat məbləğində olan hissədən vergi tutulmur"
+    }
+  },
+  {
+    "id": "60",
+    "question": "Fiziki şəxsin əsas iş yerində hər hansı muzdlu işlə əlaqədar əldə edilən illik gəliri 30000 manatadək olduqda, gəlir vergisinə münasibətdə hansı məbləğdə azadolma tətbiq edilir?",
+    "options": {
+      "A": "2400 manat məbləğində olan hissədən vergi tutulmur",
+      "B": "minimum əmək haqqının 12 misli",
+      "C": "heç bir güzəşt tətbiq olunmur",
+      "D": "ölkə uzrə yaşayış minimumunun 12 misli"
+    }
+  },
+  {
+    "id": "61",
+    "question": "Sahibkarlıq fəaliyyətində istifadə edilməyən aşağıdakı daşınan maddi əmlakların hansının təqdim edilməsindən əldə edilən gəlir vergidən azaddır?",
+    "options": {
+      "A": "qiymətli daşların və metalların",
+      "B": "incəsənət əsərlərinin",
+      "C": "nəqliyyat vasitələrinin",
+      "D": "əntiq əşyalarının"
+    }
+  },
+  {
+    "id": "61-1.",
+    "question": "Sahibkarlıq fəaliyyətində istifadə edilməyən aşağıdakı mallardan hansının təqdim edilməsindən əldə edilən gəlir vergidən azaddır?",
+    "options": {
+      "A": "metal qırıntıları",
+      "B": "plastik kütlə",
+      "C": "kənd təsərrüfatı məhsulları",
+      "D": "işlənmiş şinlər"
+    }
+  },
+  {
+    "id": "62",
+    "question": "Kənd təsərrüfatı məhsullarının istehsalı ilə məşğul olan fiziki şəxslərin bu fəaliyyət üzrə hansı gəlirləri vergidən azaddır?",
+    "options": {
+      "A": "satışdankənar gəlirləri",
+      "B": "satış gəlirləri",
+      "C": "dövlət büdcəsinin vəsaiti hesabına verilən subsidiyalar",
+      "D": "yuxarıda göstərilənlərin hamısı"
+    }
+  },
+  {
+    "id": "63",
+    "question": "Fiziki şəxsə dəymiş zərərlərin ödənilməsi ilə bağlı alınan kompensasiya ödənişləri gəlir vergisinə hansı qaydada cəlb olunur?",
+    "options": {
+      "A": "vergidən azaddır",
+      "B": "200 manatdan çox olan hissəsindən vergi tutulur",
+      "C": "tam məbləğdə vergi tutulur",
+      "D": "kompensasiya ödənişlərinın 50 faizi vergiyə cəlb olunur"
+    }
+  },
+  {
+    "id": "64",
+    "question": "Fiziki şəxslərin bilavasitə kənd təsərrüfatı məhsullarının istehsalından əldə etdikləri gəlirləri gəlir vergisinə hansı qaydada cəlb olunur?",
+    "options": {
+      "A": "vergidən azaddır",
+      "B": "200 manatdan çox olan hissəsindən vergi tutulur",
+      "C": "gəlirin 50 faizi vergiyə cəlb olunur",
+      "D": "tam məbləğdən vergi tutulur"
+    }
+  },
+  {
+    "id": "65",
+    "question": "Fiziki şəxslərin xalq musiqi alətlərinin istehsalından əldə etdikləri gəlirləri gəlir vergisinə necə cəlb olunur?",
+    "options": {
+      "A": "gəlirin 50 faizi vergiyə cəlb olunur",
+      "B": "vergi tutulmur",
+      "C": "tam məbləğdən vergi tutulur",
+      "D": "30 manatdan çox olan hissəsindən vergi tutulur"
+    }
+  },
+  {
+    "id": "66",
+    "question": "Ağac materiallardan məişət alətlərinin hazırlanması sahəsində fəaliyyət göstərən fiziki şəxslərin gəliri hansı qaydada vergiyə cəlb olunur?",
+    "options": {
+      "A": "vergidən azaddır",
+      "B": "vergiyə cəlb edilən gəlir 30 manat azaldılır",
+      "C": "100 manatdan artıq olan hissəsindən vergi tutulur",
+      "D": "bələdiyyələr tərəfindən müəyyənləşdirilir"
+    }
+  },
+  {
+    "id": "67",
+    "question": "İdman oyunları ilə əlaqədar aparılan mərc oyunlarından, lotereyaların keçirilməsindən, habelə digər yarışlardan və müsabiqələrdən pul şəklində əldə edilən uduşlardan (mükafatlardan)iştirakla bağlı ödənilən pul vəsaiti (pul qoyuluşu) çıxılmaqla qalan məbləğdən(Azərbaycan Respublikasının hüdudlarından kənarda təşkil edilən mərc oyunlarından, yarışlardan və müsabiqələrdən əldə edilən nağd pul vəsaiti istisna olmaqla) hansı  dərəcə ilə vergi tutulur.",
+    "options": {
+      "A": "tam məbləğdə vergiyə cəlb olunur",
+      "B": "iştirakla bağlı ödənilən pul vəsaiti (pul qoyuluşu) çıxılmaqla qalan məbləğdən 10 faiz",
+      "C": "gəlir vergisindən azaddır",
+      "D": "uduşların dəyəri çıxılmaqla qalan məbləğin 200 manatdan çox olan hissəsi vergiyə cəlb olunur"
+    }
+  },
+  {
+    "id": "68",
+    "question": "Fiziki şəxslərə kompensasiya xarakterli ödəmələr gəlir vergisinə hansı qaydada cəlb olunur?",
+    "options": {
+      "A": "gəlir vergisindən azaddır",
+      "B": "gəlir vergiyə cəlb olunur",
+      "C": "kompensasiyanın xarakterindən asılı olaraq vergiyə cəlb edilə bilər",
+      "D": "ödənilmiş kompensasiyanın məbləğinin 200 manatdan çox olan hissəsi vergiyə cəlb olunur"
+    }
+  },
+  {
+    "id": "69",
+    "question": "İstehsalatdan ayrılmaqla təhsil almağa göndərilmiş tələbələrə, aspirantlara [magistrlərə] müəssisə və təşkilatların hesabına ödənilən təqaüdün hansı hissəsi vergiyə cəlb edilir?",
+    "options": {
+      "A": "30 faizi",
+      "B": "cəlb edilmir",
+      "C": "40 faizi",
+      "D": "50 faizi"
+    }
+  }
+]
