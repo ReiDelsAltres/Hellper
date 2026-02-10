@@ -1,728 +1,1155 @@
-[
-  {
-    "id": "1",
-    "question": "Aşağıdakılardan hansı Azərbaycan Respublikasında gəlir vergisinin ödəyicisi deyil?",
-    "options": {
-      "A": "rezident fiziki şəxslər",
-      "B": "qeyri-rezident fiziki şəxslər",
-      "C": "rezident müəssisələr",
-      "D": "fərdi sahibkarlar"
-    }
-  },
-  {
-    "id": "2",
-    "question": "Rezident fiziki şəxslərin gəlirləri üzrə vergitutma obyekti nədir?",
-    "options": {
-      "A": "vergi ili üçün rezidentlərin yalnız Azərbaysan mənbəyindən əldə etdiyi gəliri ilə həmin dövr üçün Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ arasındakı fərqdən ibarət olan vergiyə cəlb edilən gəlirdir.",
-      "B": "vergi ili üçün rezidentlərin bütün gəliri ilə həmin dövr üçün Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ nəzərə alınmadan vergiyə cəlb edilən gəlirdir.",
-      "C": "vergi ili üçün rezidentlərin bütün gəliri ilə həmin dövr üçün Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ arasındakı fərqdən ibarət olan vergiyə cəlb edilən gəlirdir.",
-      "D": "İqtisadiyyat Nazirliyi tərəfindən müəyyənləşdirilən dövr üçün rezidentlərin bütün gəliri ilə həmin dövrdə Vergi Məcəlləsi ilə müəyyənləşdirilən gəlirdən çıxılan məbləğ arasındakı fərqdən ibarət olan vergiyə cəlb edilən gəlirdir."
-    }
-  },
-  {
-    "id": "3",
-    "question": "Fiziki şəxslərdən ödəmə mənbəyində vergi tutulduğu halda vergiyə cəlb olunan gəlirdən bir daha vergi tutulurmu?",
-    "options": {
-      "A": "hesab edilir",
-      "B": "hesab edilmir",
-      "C": "bu Nazirlər Kabinetinin qərarı ilə müəyyənləşdirilir",
-      "D": "bu İqtisadiyyat Nazirliyi tərəfindən müəyyənləşdirilir"
-    }
-  },
-  {
-    "id": "4",
-    "question": "Xüsusi notariuslar üzrə vergitutma obyekti nədir?",
-    "options": {
-      "A": "bir ay ərzində gəlirdən gəlirin əldə edilməsi ilə bağlı xərclər çıxılmaqla qalan hissəsi",
-      "B": "notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar ilə çəkilən xərclər arasındakı fərq",
-      "C": "bir ay ərzində aparılan notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar (xərclər nəzərə alınmadan)",
-      "D": "üç ay ərzində aparılan notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar"
-    }
-  },
-  {
-    "id": "5",
-    "question": "Azərbaycan Respublikasında daimi nümayəndəlik vasitəsilə fəaliyyət göstərən qeyri-rezident fiziki şəxsin daimi nümayəndəliyi ilə əlaqədar olan gəlirindən vergi necə tutulur?",
-    "options": {
-      "A": "ödəmə mənbəyində gəlirdən xərclər çıxılmamaqla",
-      "B": "gəlirdən gəlirin əldə edilməsi ilə bağlı xərclər çıxılmaqla",
-      "C": "ödəmə mənbəyində gəlirdən xərclər çıxılmaqla",
-      "D": "gəlirdən Azərbaycan Respublikasının hüdudlarından kənarda çəkilən xərclər çıxılmaqla"
-    }
-  },
-  {
-    "id": "6",
-    "question": "Azərbaycan Respublikasında daimi nümayəndəlik vasitəsilə fəaliyyət göstərən qeyri-rezident vergi ödəyicisi hansı gəlirləri üzrə gəlir vergisinin ödəyicisidir?",
-    "options": {
-      "A": "daimi nümayəndəliyi ilə əlaqədar olan vergiyə cəlb edilən gəlirləri üzrə",
-      "B": "bütün gəlirləri üzrə",
-      "C": "yalnız Azərbaycan Respublikasının hüdudlarından kənarda əldə etdiyi gəlirləri üzrə",
-      "D": "daimi nümayəndəliyi ilə əlaqədar olmayan vergiyə cəlb edilən gəlirləri üzrə"
-    }
-  },
-  {
-    "id": "7",
-    "question": "Qeyri-rezident fiziki şəxsin ödəmə mənbəyində vergiyə cəlb edilməsi nəzərdə tutulan ümumi gəliri hansı qaydada vergitutma obyektidir?",
-    "options": {
-      "A": "gəlirdən çıxılan məbləğ nəzərə alınmadan ödəniş yerində vergitutma obyektidir",
-      "B": "vergitutma obyekti deyil",
-      "C": "gəlirdən çıxılan məbləğ nəzərə alınmaqla ödəniş yerində vergitutma obyektidir",
-      "D": "əgər fiziki şəxsin vergiyə cəlb edilməsi ödəmə mənbəyində nəzərdə tutulan ümumi gəliri, yalnız sahibkarlıq fəaliyyətindən əldə edilmişdirsə, vergitutma obyektidir"
-    }
-  },
-  {
-    "id": "9",
-    "question": "Vergitutma məqsədləri üçün rezident fiziki şəxsin gəliri dedikdə hansı gəlir başa düşülür?",
-    "options": {
-      "A": "ancaq Azərbaycan Respublikasında əldə etdiyi gəlir",
-      "B": "ancaq Azərbaycan Respublikasının hüdudlarından kənarda əldə etdiyi gəlir",
-      "C": "Azərbaycan Respublikasında və Azərbaycan Respublikasının hüdudlarından kənarda əldə etdiyi gəlir",
-      "D": "yalnız sahibkarlıq fəaliyyətindən əldə edilən gəlir"
-    }
-  },
-  {
-    "id": "10",
-    "question": "Vergitutma məqsədləri üçün qeyri-rezident fiziki şəxsin gəliri dedikdə hansı gəlir başa düşülür?",
-    "options": {
-      "A": "Azərbaycan Respublikası mənbələrindən əldə edilən gəlir",
-      "B": "Azərbaycan Respublikasından kənarda əldə edilən gəlir",
-      "C": "Azərbaycan Respublikası mənbələrindən və Respublika hüdudlarından kənarda əldə edilən gəlir.",
-      "D": "rezidenti olduğu ölkədə əldə etdiyi gəlir"
-    }
-  },
-  {
-    "id": "11",
-    "question": "Qeyri-rezident vergi ödəyicisinin gəlirinə aşağıdakılardan hansılar aiddir? 1) muzdlu işlə əlaqədar əldə edilən gəlir 2) faktiki ezamiyyə xərcləri 3) muzdlu işə aid olmayan fəaliyyətdən əldə edilən gəlir 4) vergilərdən azad edilən gəlirlərdən və əsas vəsaitlərin (vəsaitin) yenidən qiymətləndirilməsindən yaranan artımdan başqa bütün digər gəlirlər 5) vergilərdən azad edilən və edilməyən digər gəlirlər",
-    "options": {
-      "A": "1; 2; 3      B) 1; 3; 4       C) 2; 3; 4             D) 3; 4; 5"
-    }
-  },
-  {
-    "id": "12",
-    "question": "Kütləvi təklif edilmiş və tənzimlənən bazarda ticarətə buraxılmış səhmlərin Azərbaycan Respublikasının ərazisində, habelə ölkə hüdudlarından kənarda fond birjasında təqdim edilməsi istisna olmaqla, hüquqi şəxsin nizamnamə kapitalındakı iştirak payı və ya səhmlər xalis aktivlərin iştirak payı və ya səhmlərə mütənasib dəyərindən yuxarı qiymətə təqdim edildikdə vergiyə cəlb edilən gəlir hansı məbləğdən hesablanır?",
-    "options": {
-      "A": "faktiki təqdimetmə qiyməti ilə xalis aktivlərin iştirak payı və ya səhmlərə mütənasib dəyəri arasındakı fərqdən",
-      "B": "alqı-satqı müqaviləsinin bağlandığı tarixə xalis aktivlərin mütənasib dəyəri ilə nizamnamə kapitalındakı iştirak payının nominal dəyəri arasındakı fərqdən",
-      "C": "faktiki təqdimetmə qiyməti ilə nizamnamə kapitalındakı iştirak payının və ya səhmin nominal dəyəri arasındakı fərqdən",
-      "D": "nizamnamə kapitalındakı iştirak payı və ya səhmlərin təqdim edilməsi vergiyə cəlb edilmir"
-    }
-  },
-  {
-    "id": "13",
-    "question": "Kütləvi təklif edilmiş və tənzimlənən bazarda ticarətə buraxılmış səhmlərin Azərbaycan Respublikasının ərazisində, habelə ölkə hüdudlarından kənarda fond birjasında təqdim edilməsi üzrə vergitutma obyekti necə müəyyən edilir?",
-    "options": {
-      "A": "səhmin satış dəyəri ilə alış dəyəri və çəkilən digər xərclər arasındakı fərq",
-      "B": "səhmin satış dəyəri ilə bazar dəyəri və çəkilən digər xərclər arasındakı fərq",
-      "C": "səhmin bazar dəyəri ilə alış dəyəri və çəkilən digər xərclər arasındakı fərq",
-      "D": "səhmin statistik dəyəri ilə nominal dəyəri və çəkilən digər xərclər arasındakı fərq"
-    }
-  },
-  {
-    "id": "14",
-    "question": "Hansı gəlir muzdlu işlə əlaqədar alınan gəlirə aid deyildir?",
-    "options": {
-      "A": "əmək haqqı",
-      "B": "işə götürən tərəfindən verilən maddi yardım",
-      "C": "muzdlu işdən alınan hər hansı ödəmə və ya fayda",
-      "D": "faiz gəliri"
-    }
-  },
-  {
-    "id": "15",
-    "question": "İşəgötürən tərəfindən fiziki şəxsə banklararası kredit hərracında olan faiz dərəcəsindən aşağı faiz dərəcəsi ilə ssuda verildiyi halda hansı məbləğ muzdlu işlə əlaqədar alınan gəlirdir?",
-    "options": {
-      "A": "ssudanın tam məbləği",
-      "B": "bu halda muzdlu işlə əlaqədar gəlir yaranmır",
-      "C": "bu tipli ssudalar üzrə banklararası kredit hərracında olan faiz dərəcəsinə uyğun faizlə ödənməli olan məbləğlə aşağı faiz dərəcəsinə uyğun ödənməli olan məbləğ arasındakı fərq",
-      "D": "bu tipli ssudalar üzrə banklararası kredit hərracında olan faiz dərəcəsinə uyğun faizlə ödənməli olan məbləğlə aşağı faiz dərəcəsinə uyğun ödənməli olan məbləğin cəmi"
-    }
-  },
-  {
-    "id": "16",
-    "question": "İşə götürənin öz işçisinə malı, işi və ya xidməti təqdim etdiyi, yaxud hədiyyə verdiyi halda bu cür malların, işlərin və xidmətlərin bazar qiyməti ilə dəyəri muzdlu işlə əlaqədar alınan gəlirə aid edilə bilərmi?",
-    "options": {
-      "A": "aid edilə bilər",
-      "B": "aid edilə bilməz",
-      "C": "bu cür malların, işlərin və xidmətlərin bazar qiyməti ilə dəyərinin 25 faizi aid edilə bilər",
-      "D": "bunu gəlir əldə edənin özü müəyyənləşdirir"
-    }
-  },
-  {
-    "id": "17",
-    "question": "Muzdlu işlə əlaqədar alınan gəlirlərə aşağıdakılardan hansılar aiddir? 1) Nümayəndəlik xərclərinin, işçilərlə bağlı mənzil və yemək xərclərinin Nazirlər Kabineti tərəfindən müəyyən edilmiş normaları istisna olmaqla işçinin xərclərinin əvəzi ödənildiyi halda ödənən vəsaitin məbləği 2) işçinin işə götürənə olan borcunun və ya öhdəliyinin bağışlanıldığı halda, həmin borcun və ya öhdəliyin məbləği 3) əsas vəsaitlərin təqdim edilməsindən alınan gəlir 4) işəgötürən tərəfindən ödənilən sığorta haqları 5) mediatorun mediasiya fəaliyyətindən əldə etdiyi xidmət haqqı",
-    "options": {
-      "A": "1; 2; 3  B) 2; 3; 4   C) 1; 2; 4      D) 3; 4; 5"
-    }
-  },
-  {
-    "id": "18",
-    "question": "İşçinin işə götürənə olan borcunun və ya öhdəliyinin bağışlanıldığı halda həmin borcun və ya öhdəliyin məbləği hansı gəlirə aiddir?",
-    "options": {
-      "A": "muzdlu işlə əlaqədar alınan gəlirə",
-      "B": "sahibkarlıq fəaliyyətindən gəlirə",
-      "C": "qeyri- sahibkarlıq fəaliyyətindən gəlirə",
-      "D": "həmin məbləğ vergi tutulan gəlirə aid edilmir"
-    }
-  },
-  {
-    "id": "19",
-    "question": "İşəgötürən tərəfindən işçiyə ödənilən sığorta haqları hansı gəlirə aiddir?",
-    "options": {
-      "A": "gəlirə aid deyildir",
-      "B": "sahibkarlıq fəaliyyətindən gəlirə",
-      "C": "qeyri- sahibkarlıq fəaliyyətindən gəlirə",
-      "D": "muzdlu işlə əlaqədar alınan gəlirə"
-    }
-  },
-  {
-    "id": "20",
-    "question": "İşəgötürən tərəfindən işçiyə (təhtəlhesab şəxsə) verilmiş təhtəlhesab vəsait müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən müəyyən edilmiş qaydada geri qaytarılmadıqda həmin vəsaitin məbləği hansı gəlirə aid edilir?",
-    "options": {
-      "A": "Muzdlu işlə əlaqədar gəlirə aid edilir",
-      "B": "Gəlir sayılmır",
-      "C": "Qeyri – sahibkarlıqdan gəlirlərə aid edilir",
-      "D": "Sahibkarlık fəaliyyətindən gəlirə aid edilir"
-    }
-  },
-  {
-    "id": "21",
-    "question": "Faktiki ezamiyyə xərclərinin və ya digər işgüzar xərclərin əvəzinin ödənilməsi hansı gəlirə daxildir?",
-    "options": {
-      "A": "sahibkarlıq fəaliyyətindən gəlirə",
-      "B": "gəlirə daxil deyildir",
-      "C": "muzdlu işlə əlaqədar alınan gəlirə",
-      "D": "qeyri- sahibkarlıq fəaliyyətindən gəlirə"
-    }
-  },
-  {
-    "id": "22",
-    "question": "İşə götürən tərəfindən əyləncə və yemək xərclərinin [müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilmiş normalar daxilində müalicə-profilaktik yeməklərə, süd və ona bərabər tutulan digər məhsullara və vasitələrə sərf olunan xərclər istisna olmaqla], habelə nümayəndəlik, işçilərin mənzil və digər sosial xarakterli xərclərinin çəkilməsinin nəticəsi kimi əldə edilən gəlir vergi tutulan gəlirə aiddirmi?",
-    "options": {
-      "A": "qeyri- sahibkarlıq fəaliyyətindən gəlirə aiddir",
-      "B": "sahibkarlıq fəaliyyətindən gəlirə aiddir",
-      "C": "vergilərdən azad edilən gəlirlərdən başqa digər gəlirlərə aiddir",
-      "D": "vergi tutulan gəlirə aid deyildir"
-    }
-  },
-  {
-    "id": "23",
-    "question": "Muzdlu işə aid olmayan fəaliyyətdən gəlirlər hansı gəlirlərdən ibarətdir?",
-    "options": {
-      "A": "yalnız sahibkarlıq fəaliyyətindən əldə edilən gəlirlərdən",
-      "B": "yalnız qeyri- sahibkarlıq fəaliyyətindən əldə edilən gəlirlərdən",
-      "C": "sahibkarlıq və qeyri-sahibkarlıq fəaliyyətindən əldə edilən gəlirlərdən",
-      "D": "belə bir bölgü nəzərdə tutulmayıb"
-    }
-  },
-  {
-    "id": "24",
-    "question": "Aşağıdakılardan hansı sahibkarlıq fəaliyyətindən gəlirə aiddir?",
-    "options": {
-      "A": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir",
-      "B": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir",
-      "C": "əsas vəsaitlərin köhnəlməsindən əldə olunan gəlir",
-      "D": "faiz gəliri"
-    }
-  },
-  {
-    "id": "25",
-    "question": "Aşağıdakılardan hansı sahibkarlıq fəaliyyətindən gəlirə aiddir?",
-    "options": {
-      "A": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir",
-      "B": "sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir",
-      "C": "faiz gəliri",
-      "D": "heç biri"
-    }
-  },
-  {
-    "id": "26",
-    "question": "Hansı gəlir qeyri-sahibkarlıq fəaliyyətindən gəlirə aid deyildir?",
-    "options": {
-      "A": "sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir",
-      "B": "sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir",
-      "C": "əmlakın icarəyə verilməsindən gəlir",
-      "D": "həyatın yığım sığortası üzrə sığorta olunanın ödədiyi və ya onun xeyrinə ödənilən sığorta haqları ilə sığorta ödənişləri arasındakı fərq"
-    }
-  },
-  {
-    "id": "27",
-    "question": "Hansı gəlir qeyri-sahibkarlıq fəaliyyətindən gəlirə aid deyildir?",
-    "options": {
-      "A": "faktiki ezamiyyə xərclərinin ödənilməsi",
-      "B": "royalti",
-      "C": "faiz gəliri",
-      "D": "dividend"
-    }
-  },
-  {
-    "id": "28",
-    "question": "Hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirə aiddir? 1) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan aktivlərin təqdim edilməsindən gəlir 2) gəlirdən çıxılan kompensasiya edilən məbləğlərdən və ya ehtiyatların azalmasından gəlir 3) həyatın yığım sığortası üzrə sığorta olunanın ödədiyi və ya onun xeyrinə ödənilən sığorta haqları ilə sığorta ödənişləri arasındakı fərq. 4) dividend 5) işçinin xərclərinin əvəzi ödənildiyi halda, ödənən vəsaitin məbləği",
-    "options": {
-      "A": "1, 3, 4      B) 1, 4, 5       C) 2, 3, 4         D) 2, 4, 5"
-    }
-  },
-  {
-    "id": "29",
-    "question": "Aşağıdakı hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirlərə aiddir? 1) sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir 2) vergi ödəyicisinin aktivlərinin ilkin qiymətinin artdığını göstərən hər hansı digər gəlir [təqdim olunduğu təqdirdə] — əmək haqqından başqa. 3) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir 4) əmlakın icarəyə verilməsindən gəlir 5) faiz gəliri",
-    "options": {
-      "A": "1, 3, 4    B) 1, 4, 5     C) 2, 3, 4        D) 2, 4, 5"
-    }
-  },
-  {
-    "id": "30",
-    "question": "Aşağıdakı hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirlərə aiddir? 1) sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir 2) vergi ödəyicisinin aktivlərinin ilkin qiymətinin artdığını göstərən hər hansı digər gəlir [təqdim olunduğu təqdirdə] — əmək haqqından başqa. 3) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir 4) idman mərc oyunlarından əldə edilən uduşlar 5) faiz gəliri",
-    "options": {
-      "A": "1, 3, 4    B) 1, 4, 5     C) 2, 3, 4        D) 2, 4, 5"
-    }
-  },
-  {
-    "id": "31",
-    "question": "İdman mərc oyunlarından əldə edilən uduşlar hansı gəlirə aiddir?",
-    "options": {
-      "A": "Sahibkarliq fəaliyyətindən gəlrə",
-      "B": "Qeyri –sahibkarlıq fəaliyyətindən gəlirə",
-      "C": "Muzdlu işdən əldə olunan gəlirə",
-      "D": "Gəlrə aid deyil"
-    }
-  },
-  {
-    "id": "32",
-    "question": "Aşağıdakı hansı gəlirlər qeyri – sahibkarlıq fəaliyyətindən gəlirlərə aiddir? 1) sahibkarlıq fəaliyyətinin məhdudlaşdırılmasına və ya müəssisənin bağlanmasına razılıq verilməsinə görə alınan gəlir 2) vergi ödəyicisinin aktivlərinin ilkin qiymətinin artdığını göstərən hər hansı digər gəlir [təqdim olunduğu təqdirdə] — əmək haqqından başqa 3) sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunan aktivlərin təqdim edilməsindən gəlir 4) xüsusi notarius tərəfindən aparılan notariat hərəkətlərinə, habelə notariat hərəkətləri ilə əlaqədar göstərilən xidmətlərə görə alınan haqlar 5) vəkillik fəaliyyəti ilə məşğul olan şəxslər tərəfindən bu fəaliyyətlə bağlı göstərilən xidmətə görə alınan haqq",
-    "options": {
-      "A": "1, 3, 4    B) 1, 4, 5     C) 2, 3, 4        D) 2, 4, 5"
-    }
-  },
-  {
-    "id": "33",
-    "question": "Dövlət sektorunda aylıq gəliri 2500 manatdan artıq olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı ən yüksək dərəcə tətbiq olunur?",
-    "options": {
-      "A": "14 faiz",
-      "B": "20 faiz",
-      "C": "25 faiz",
-      "D": "30 faiz"
-    }
-  },
-  {
-    "id": "34",
-    "question": "Fiziki şəxsin aldığı və Vergi Məcəlləsinə uyğun olaraq Azərbaycan Respublikasında ödəmə mənbəyindən vergi tutulmuş hansı məbləğlər gəlirdən çıxılır?",
-    "options": {
-      "A": "dividend, faiz, təqvim ili ərzində alınan hədiyyə və miraslar",
-      "B": "dividend, faiz, icarə haqqı, royalti gəlirləri və idman oyunları ilə əlaqədar aparılan mərc oyunlarından əldə edilən uduşlar",
-      "C": "dividend, icarə haqqı, royalti, sığorta haqları",
-      "D": "icarə haqqı, faiz, royalti, təqvim ili ərzində alınan hədiyyə və miraslar, sığorta haqları"
-    }
-  },
-  {
-    "id": "35",
-    "question": "Dövlət sektorunda aylıq gəliri 2500 manatadək olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı dərəcə tətbiq olunur?",
-    "options": {
-      "A": "30 faiz",
-      "B": "14 faiz",
-      "C": "280 manat + 2000 manatdan çox olan məbləğin 30 faizi",
-      "D": "350 manat + 2000 manatdan çox olan məbləğin 25 faizi"
-    }
-  },
-  {
-    "id": "35-1",
-    "question": "Muzdlu işçisi olmayan fiziki şəxslərə maddi yardım ödəyən vergi ödəyicisi tərəfindən həmin gəlirə verginin hesablanması zamanı hansı dərəcə tətbiq olunur?",
-    "options": {
-      "A": "20 faiz",
-      "B": "14 faiz",
-      "C": "gəlir vergisi hesablanmayacaq",
-      "D": "350 manat + 2500 manatdan çox olan məbləğin 25 faizi"
-    }
-  },
-  {
-    "id": "36",
-    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin məbləği 2500 manatadək  olduqda 2026-cı il yanvarın 1-dən 2027-ci il yanvarın 1-dək hansı dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "3 faiz",
-      "B": "vergidən azaddır",
-      "C": "14 faiz",
-      "D": "25 faiz"
-    }
-  },
-  {
-    "id": "36-1",
-    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin məbləği 2500 manatadək  olduqda 2027-ci il yanvarın 1-dən 2028-ci il yanvarın 1-dək hansı dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "5 faiz",
-      "B": "vergidən azaddır",
-      "C": "14 faiz",
-      "D": "25 faiz"
-    }
-  },
-  {
-    "id": "36-2",
-    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin məbləği 2500 manatadək  olduqda 2028-ci il yanvarın 1-dən hansı dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "7 faiz",
-      "B": "vergidən azaddır",
-      "C": "14 faiz",
-      "D": "25 faiz"
-    }
-  },
-  {
-    "id": "36-3",
-    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərinin 2500 manatdan 8000 manatadək olan hissəsindən hansı dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "10 faiz",
-      "B": "vergidən azaddır",
-      "C": "14 faiz",
-      "D": "25 faiz"
-    }
-  },
-  {
-    "id": "37",
-    "question": "Neft-qaz sahəsində fəaliyyəti olmayan və qeyri-dövlət sektoruna aid edilən vergi ödəyicilərində işləyən fiziki şəxslərin muzdlu işdən aylıq vergitutulan gəlirlərindən gəlirin\t 8000 manatdan yuxarı hissəsindən hansı dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "0 faiz",
-      "B": "10 faiz",
-      "C": "14 faiz",
-      "D": "25 faiz"
-    }
-  },
-  {
-    "id": "38",
-    "question": "Vəkil qurumlarının tərkibində fəaliyyət göstərən vəkillərə həmin qurum tərəfindən ödənilən gəlirlərdən vergi hansı dərəcə ilə tutulacaq?",
-    "options": {
-      "A": "20 faiz",
-      "B": "350 manat + 2500 manatdan çox olan məbləğin 25 faizi",
-      "C": "gəlir vergisi hesablanmayacaq",
-      "D": "14 faiz"
-    }
-  },
-  {
-    "id": "39",
-    "question": "İki və ya daha çox yerdə muzdla işləyən fiziki şəxslərin gəlirlərindən hansı qaydada gəlir vergisi hesablanır və hansı büdcəyə ödənilir?",
-    "options": {
-      "A": "ən çox əmək haqqı aldığı yerdə hesablanır və dövlət büdcəsinə ödənilir",
-      "B": "hər bir iş yerində ödənilən məbləğdən ayrıca hesablanır və dövlət büdcəsinə ödənilir",
-      "C": "əsas iş yerində gəlirlərin ümumi məbləğindən tutularaq dövlət büdcəsinə ödənilir",
-      "D": "hər bir iş yerində ödənilən məbləğdən ayrıca hesablanır və bələdiyyə büdcəsinə ödənilir"
-    }
-  },
-  {
-    "id": "40",
-    "question": "Qeyri-sahibkarlıq fəaliyyətindən illik gəlirinin məbləği 30.000 manatdan artıq olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı dərəcə tətbiq olunur ?",
-    "options": {
-      "A": "14 faiz",
-      "B": "30 faiz",
-      "C": "25 faiz",
-      "D": "4200 manat + 30000 manatdan çox olan məbləğin 25 faizi"
-    }
-  },
-  {
-    "id": "41",
-    "question": "Hüquqi şəxs yaratmadan sahibkarlıq fəaliyyətini həyata keçirən fiziki şəxslərin vergiyə cəlb edilən gəlirlərindən hansı dərəcə  ilə vergi tutulur",
-    "options": {
-      "A": "14 faiz",
-      "B": "18 faiz",
-      "C": "20 faiz",
-      "D": "25 faiz"
-    }
-  },
-  {
-    "id": "42",
-    "question": "Xüsusi notarius üçün vergitutma obyektindən neçə faiz dərəcə ilə gəlir vergisi tutulur?",
-    "options": {
-      "A": "xərclər çıxılmadan 10 faiz",
-      "B": "xərclər çıxılmaqla 14 faiz",
-      "C": "xərclər çıxılmaqla 20 faiz",
-      "D": "xərclər çıxılmadan 25 faiz"
-    }
-  },
-  {
-    "id": "43",
-    "question": "İdman oyunları ilə əlaqədar aparılan mərc oyunlarından, lotereyaların keçirilməsindən, habelə digər yarışlardan və müsabiqələrdən pul şəklində əldə edilən uduşlardan (mükafatlardan)iştirakla bağlı ödənilən pul vəsaiti (pul qoyuluşu) çıxılmaqla qalan məbləğdən(Azərbaycan Respublikasının hüdudlarından kənarda təşkil edilən mərc oyunlarından, yarışlardan və müsabiqələrdən əldə edilən nağd pul vəsaiti istisna olmaqla) neçə  faiz dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "6 faiz",
-      "B": "10 faiz",
-      "C": "14 faiz",
-      "D": "20 faiz"
-    }
-  },
-  {
-    "id": "44",
-    "question": "Qeyri-sahibkarlıq fəaliyyətindən illik gəliri 30000 manatadək olan fiziki şəxsin gəlir vergisinin hesablanması zamanı hansı dərəcə tətbiq olunur?",
-    "options": {
-      "A": "25 faiz",
-      "B": "14 faiz",
-      "C": "0 faiz",
-      "D": "10 faiz"
-    }
-  },
-  {
-    "id": "44-1",
-    "question": "Qeyri-rezident müəssisə tərəfindən ödənilən dividenddən rezident fiziki şəxs hansı dərəcə ilə vergi ödəyir?",
-    "options": {
-      "A": "10 faiz",
-      "B": "5 faiz",
-      "C": "20 faiz",
-      "D": "14 faiz"
-    }
-  },
-  {
-    "id": "45",
-    "question": "Vergi ödəyicisi kimi vergi orqanında uçotda olmayan fiziki şəxslərin “Nağdsız hesablaşmalar haqqında” Azərbaycan Respublikasının Qanununun 3.5-ci maddəsində göstərilən malların təqdim edilməsindən əldə edilən gəlirlərindən (Vergi Məcəlləsi ilə vergidən azad olunan gəlirlər istisna olmaqla)  hansı dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "xərclər çıxılmadan 2 faiz",
-      "B": "xərclər çıxılmadan 5 faiz",
-      "C": "xərclər çıxılmadan 14 faiz",
-      "D": "xərclər çıxılmaqla 20 faiz"
-    }
-  },
-  {
-    "id": "46",
-    "question": "Vergi ödəyicisi kimi vergi orqanında uçotda olan fiziki şəxslərin “Nağdsız hesablaşmalar haqqında” Azərbaycan Respublikasının Qanununun 3.5-ci maddəsində göstərilən malların təqdim edilməsindən əldə edilən gəlirlərindən (Vergi Məcəlləsi ilə vergidən azad olunan gəlirlər istisna olmaqla)  hansı dərəcə ilə vergi tutulur",
-    "options": {
-      "A": "xərclər çıxılmaqla 2 faiz",
-      "B": "xərclər çıxılmadan 2 faiz",
-      "C": "xərclər çıxılmadan 14 faiz",
-      "D": "xərclər çıxılmaqla 20 faiz"
-    }
-  },
-  {
-    "id": "47",
-    "question": "Aşağıdakı fiziki şəxslərdən hansıların banklara və digər kredit təşkilatlarına olan borclarının silinməsindən əldə olunan gəliri vergidən azad edilir? 1. vətən müharibəsi iştirakçılarının 2. vətən müharibəsindən əvvəl hərbi təxribatlar nəticəsində əlilliyi müəyyən edilmiş şəxslərin 3. vətən müharibəsində şəhid ailəsi statusu almış şəxslərin 4. vətən müharibəsindən sonra Azərbaycan Respublikasının ərazi bütövlüyü uğrunda döyüş əməliyyatları və hərbi təxribatlar nəticəsində əlilliyi müəyyən edilmiş şəxslərin 5. Azərbaycan Respublikasının ərazi bütövlüyü uğrunda aparılan hərbi əməliyyatlarda iştirak etmiş  şəxslərin",
-    "options": {
-      "A": "1, 3, 5            B) 2, 4, 5                C) 2, 3, 4                                  D) 1, 3, 4"
-    }
-  },
-  {
-    "id": "48",
-    "question": "Fiziki şəxsin təqvim ili ərzində ailə üzvlərindən aldığı hədiyyə, maddi yardım və miraslar hansı faiz dərəcəsi ilə vergiyə cəlb olunur?",
-    "options": {
-      "A": "10 faiz",
-      "B": "14 faiz",
-      "C": "gəlir vergisindən azaddır",
-      "D": "25 faiz"
-    }
-  },
-  {
-    "id": "49",
-    "question": "Xaricdə müalicə haqlarını ödəmək üçün fiziki şəxsə verilən maddi yardımın dəyərinin hansı məbləğindən vergi tutulur?",
-    "options": {
-      "A": "maddi yardımın tam məbləğindən",
-      "B": "maddi yardım məbləğinin 50 faizindən",
-      "C": "50 000 manatdan çox olan hissəsindən",
-      "D": "2000 manatdan çox olan hissəsindən"
-    }
-  },
-  {
-    "id": "50",
-    "question": "Hədiyyələrin hansı məbləğindən gəlir vergisi tutulur?",
-    "options": {
-      "A": "tam məbləğindən",
-      "B": "2500 manatdan çox olan hissəsindən",
-      "C": "1000 manatdan çox olan hissəsindən",
-      "D": "20000 manatdan çox olan hissəsindən"
-    }
-  },
-  {
-    "id": "51",
-    "question": "Mirasların dəyərinin hansı məbləğindən gəlir vergisi tutulur?",
-    "options": {
-      "A": "20000 manatdan çox olan hissəsindən",
-      "B": "2000 manatdan çox olan hissəsindən",
-      "C": "200 manatdan çox olan hissəsindən",
-      "D": "şərti maliyyə vahidinin 1000 mislindən çox olan hissəsindən"
-    }
-  },
-  {
-    "id": "52",
-    "question": "Ölkə daxilində cərrahiyyə əməliyyatının haqqını ödəmək üçün fiziki şəxsə verilmiş maddi yardımın dəyərinin hansı hissəsi gəlir vergisindən azaddır?",
-    "options": {
-      "A": "1000 manatadək olan hissəsi",
-      "B": "50 000 manatadək olan hissəsi",
-      "C": "2000 manatadək olan hissəsi",
-      "D": "10 000 manatadək olan hissəsi"
-    }
-  },
-  {
-    "id": "53",
-    "question": "Təhsil və ya müalicə haqları almış şəxslərə güzəşt hansı halda verilir?",
-    "options": {
-      "A": "həmin məbləğlər dövlət büdcəsinin vəsaiti hesabına ödənildikdə",
-      "B": "təhsil və ya müalicə haqları almış şəxslər vergi ödəyicisi olduqda",
-      "C": "təhsil və ya müalicə haqları yalnız qeyri-rezident şəxslər tərəfindən ödənildikdə",
-      "D": "həmin məbləğlərin təyinatı üzrə ödənildiyini təsdiq edən müvafiq sənədlər təqdim edildikdə"
-    }
-  },
-  {
-    "id": "54",
-    "question": "Hədiyyə və maddi yardım vergi ödəyicisi olan fiziki şəxsin ailə üzvlərindən alındığı halda onun dəyərinin hansı məbləğindən vergi tutulur?",
-    "options": {
-      "A": "vergidən azaddır",
-      "B": "hədiyyə və maddi yardımın 10000 manatdan artıq olan hissəsindən",
-      "C": "hədiyyə və maddi yardımın 1000 manatdan artıq olan hissəsindən",
-      "D": "hədiyyə və maddi yardımın tam məbləğindən"
-    }
-  },
-  {
-    "id": "55",
-    "question": "Miras vergi ödəyicisinin ailə üzvündən alındığı halda mirasın hansı məbləğindən gəlir vergisi tutulur?",
-    "options": {
-      "A": "miras məbləğinin 50 faizindən",
-      "B": "1000 manatdan çox olan hissəsindən",
-      "C": "vergi tutulmur",
-      "D": "20000 manatdan çox olan hissəsindən"
-    }
-  },
-  {
-    "id": "56",
-    "question": "Əmək qabiliyyətinin müvəqqəti itirilməsinə görə ödənilən müavinətdən gəlir vergisi hansı qaydada tutulur?",
-    "options": {
-      "A": "55 manatdan çox olan hissəsindən",
-      "B": "vergi tutulmur",
-      "C": "ümumi qaydada vergiyə cəlb olunur",
-      "D": "50 faizi vergiyə cəlb olunur"
-    }
-  },
-  {
-    "id": "57",
-    "question": "Fiziki şəxslərə ödənilmiş dövlət müavinətləri hansı qaydada vergiyə cəlb edilir?",
-    "options": {
-      "A": "1000 manatdan artıq olan hissəsi vergiyə cəlb olunur",
-      "B": "100 manatdan artıq olan hissəsi vergiyə cəlb edilir",
-      "C": "vergiyə cəlb edilmir",
-      "D": "2000 manatdan artıq olan hissəsindən vergi tutulmur"
-    }
-  },
-  {
-    "id": "57-1",
-    "question": "Fiziki şəxslərə ödənilən hansı ödənişlər gəlir vergisindən azaddır? 1. Əmək qabiliyyətinin müvəqqəti itirilməsinə görə ödənilən müavinətlər 2. hüquqi şəxsin ləğvi ilə əlaqədar olaraq əmək müqaviləsinə xitam verildikdə işçilərə Əmək Məcəlləsinə müvafiq ödənilən təminatlar 3. fərdi sahibkarın fəaliyyətinin ləğvi ilə əlaqədar olaraq əmək müqaviləsinə xitam verildikdə işçilərə Əmək Məcəlləsinə müvafiq ödənilən təminatlar 4. işçinin vəfatı ilə əlaqədar əmək müqaviləsinə xitam verildikdə vəfat edənin vərəsələrinə Əmək Məcəlləsinə müvafiq ödənilən təminatlar 5. hüquqi şəxsin icra orqanının qərarı əsasında işçilərə ödənilən fərdi birdəfəlik ödəmələr",
-    "options": {
-      "A": "1, 3, 5                    B) 2, 4, 5                C) 1, 3, 4                            D) 2, 3, 4"
-    }
-  },
-  {
-    "id": "58",
-    "question": "Alimentlər gəlir vergisinə hansı qaydada cəlb edilir?",
-    "options": {
-      "A": "gəlir vergisindən azaddır",
-      "B": "ümumi qaydada vergiyə cəlb edilir",
-      "C": "qismən cəlb edilir",
-      "D": "vergi aliment ödəyən tərəfindən ödənilir"
-    }
-  },
-  {
-    "id": "59",
-    "question": "Fiziki şəxsin əsas iş yerində hər hansı muzdlu işlə əlaqədar əldə edilən aylıq gəliri 2500 manatadək olduqda, gəlir vergisinə münasibətdə hansı məbləğdə azadolma tətbiq edilir?",
-    "options": {
-      "A": "minimum əmək haqqının 1 misli",
-      "B": "ölkə uzrə yaşayış minimumunun 1 misli",
-      "C": "heç bir güzəşt tətbiq olunmur",
-      "D": "200 manat məbləğində olan hissədən vergi tutulmur"
-    }
-  },
-  {
-    "id": "60",
-    "question": "Fiziki şəxsin əsas iş yerində hər hansı muzdlu işlə əlaqədar əldə edilən illik gəliri 30000 manatadək olduqda, gəlir vergisinə münasibətdə hansı məbləğdə azadolma tətbiq edilir?",
-    "options": {
-      "A": "2400 manat məbləğində olan hissədən vergi tutulmur",
-      "B": "minimum əmək haqqının 12 misli",
-      "C": "heç bir güzəşt tətbiq olunmur",
-      "D": "ölkə uzrə yaşayış minimumunun 12 misli"
-    }
-  },
-  {
-    "id": "61",
-    "question": "Sahibkarlıq fəaliyyətində istifadə edilməyən aşağıdakı daşınan maddi əmlakların hansının təqdim edilməsindən əldə edilən gəlir vergidən azaddır?",
-    "options": {
-      "A": "qiymətli daşların və metalların",
-      "B": "incəsənət əsərlərinin",
-      "C": "nəqliyyat vasitələrinin",
-      "D": "əntiq əşyalarının"
-    }
-  },
-  {
-    "id": "61-1.",
-    "question": "Sahibkarlıq fəaliyyətində istifadə edilməyən aşağıdakı mallardan hansının təqdim edilməsindən əldə edilən gəlir vergidən azaddır?",
-    "options": {
-      "A": "metal qırıntıları",
-      "B": "plastik kütlə",
-      "C": "kənd təsərrüfatı məhsulları",
-      "D": "işlənmiş şinlər"
-    }
-  },
-  {
-    "id": "62",
-    "question": "Kənd təsərrüfatı məhsullarının istehsalı ilə məşğul olan fiziki şəxslərin bu fəaliyyət üzrə hansı gəlirləri vergidən azaddır?",
-    "options": {
-      "A": "satışdankənar gəlirləri",
-      "B": "satış gəlirləri",
-      "C": "dövlət büdcəsinin vəsaiti hesabına verilən subsidiyalar",
-      "D": "yuxarıda göstərilənlərin hamısı"
-    }
-  },
-  {
-    "id": "63",
-    "question": "Fiziki şəxsə dəymiş zərərlərin ödənilməsi ilə bağlı alınan kompensasiya ödənişləri gəlir vergisinə hansı qaydada cəlb olunur?",
-    "options": {
-      "A": "vergidən azaddır",
-      "B": "200 manatdan çox olan hissəsindən vergi tutulur",
-      "C": "tam məbləğdə vergi tutulur",
-      "D": "kompensasiya ödənişlərinın 50 faizi vergiyə cəlb olunur"
-    }
-  },
-  {
-    "id": "64",
-    "question": "Fiziki şəxslərin bilavasitə kənd təsərrüfatı məhsullarının istehsalından əldə etdikləri gəlirləri gəlir vergisinə hansı qaydada cəlb olunur?",
-    "options": {
-      "A": "vergidən azaddır",
-      "B": "200 manatdan çox olan hissəsindən vergi tutulur",
-      "C": "gəlirin 50 faizi vergiyə cəlb olunur",
-      "D": "tam məbləğdən vergi tutulur"
-    }
-  },
-  {
-    "id": "65",
-    "question": "Fiziki şəxslərin xalq musiqi alətlərinin istehsalından əldə etdikləri gəlirləri gəlir vergisinə necə cəlb olunur?",
-    "options": {
-      "A": "gəlirin 50 faizi vergiyə cəlb olunur",
-      "B": "vergi tutulmur",
-      "C": "tam məbləğdən vergi tutulur",
-      "D": "30 manatdan çox olan hissəsindən vergi tutulur"
-    }
-  },
-  {
-    "id": "66",
-    "question": "Ağac materiallardan məişət alətlərinin hazırlanması sahəsində fəaliyyət göstərən fiziki şəxslərin gəliri hansı qaydada vergiyə cəlb olunur?",
-    "options": {
-      "A": "vergidən azaddır",
-      "B": "vergiyə cəlb edilən gəlir 30 manat azaldılır",
-      "C": "100 manatdan artıq olan hissəsindən vergi tutulur",
-      "D": "bələdiyyələr tərəfindən müəyyənləşdirilir"
-    }
-  },
-  {
-    "id": "67",
-    "question": "İdman oyunları ilə əlaqədar aparılan mərc oyunlarından, lotereyaların keçirilməsindən, habelə digər yarışlardan və müsabiqələrdən pul şəklində əldə edilən uduşlardan (mükafatlardan)iştirakla bağlı ödənilən pul vəsaiti (pul qoyuluşu) çıxılmaqla qalan məbləğdən(Azərbaycan Respublikasının hüdudlarından kənarda təşkil edilən mərc oyunlarından, yarışlardan və müsabiqələrdən əldə edilən nağd pul vəsaiti istisna olmaqla) hansı  dərəcə ilə vergi tutulur.",
-    "options": {
-      "A": "tam məbləğdə vergiyə cəlb olunur",
-      "B": "iştirakla bağlı ödənilən pul vəsaiti (pul qoyuluşu) çıxılmaqla qalan məbləğdən 10 faiz",
-      "C": "gəlir vergisindən azaddır",
-      "D": "uduşların dəyəri çıxılmaqla qalan məbləğin 200 manatdan çox olan hissəsi vergiyə cəlb olunur"
-    }
-  },
-  {
-    "id": "68",
-    "question": "Fiziki şəxslərə kompensasiya xarakterli ödəmələr gəlir vergisinə hansı qaydada cəlb olunur?",
-    "options": {
-      "A": "gəlir vergisindən azaddır",
-      "B": "gəlir vergiyə cəlb olunur",
-      "C": "kompensasiyanın xarakterindən asılı olaraq vergiyə cəlb edilə bilər",
-      "D": "ödənilmiş kompensasiyanın məbləğinin 200 manatdan çox olan hissəsi vergiyə cəlb olunur"
-    }
-  },
-  {
-    "id": "69",
-    "question": "İstehsalatdan ayrılmaqla təhsil almağa göndərilmiş tələbələrə, aspirantlara [magistrlərə] müəssisə və təşkilatların hesabına ödənilən təqaüdün hansı hissəsi vergiyə cəlb edilir?",
-    "options": {
-      "A": "30 faizi",
-      "B": "cəlb edilmir",
-      "C": "40 faizi",
-      "D": "50 faizi"
-    }
-  }
-]
+{
+    "UseIndex": true,
+    "Questions": [
+        {
+            "Id": 1,
+            "Title": "Vergi qanunvericiliyinin pozulmasına görə maliyyə sanksiyalarının tətbiqi Azərbaycan Respublikasının hansı qanunvericilik aktı ilə müəyyən edilir?",
+            "Answers": [
+                "Vergi Məcəlləsi ilə",
+                "Azərbaycan Respublikasının Konstitusiyası ilə",
+                "Mülki Məcəllə ilə",
+                "İnzibati Xətalar Məcəlləsi ilə"
+            ]
+        },
+        {
+            "Id": 2,
+            "Title": "Vergi Məcəlləsi ilə müəyyən edilən anlayışlar və qaydalar vergitutma məqsədi ilə müəyyən edilir və",
+            "Answers": [
+                "müstəsna olaraq Vergi Məcəlləsi və onun əsasında qəbul edilmiş digər normativ hüquqi aktlar ilə tənzimlənən vergitutma və vergi nəzarəti ilə bağlı münasibətlər hüdudlarında tətbiq edilir",
+                "müstəsna olaraq Vergi Məcəlləsi ilə tənzimlənən vergitutma və vergi nəzarəti ilə bağlı münasibətlər hüdudlarında tətbiq edilir",
+                "müstəsna olaraq Vergi Məcəlləsi əsasında qəbul edilmiş normativ hüquqi aktlar ilə tənzimlənən yalnız vergitutma ilə bağlı münasibətlər hüdudlarında tətbiq edilir",
+                "müstəsna olaraq Vergi Məcəlləsi və onun əsasında qəbul edilmiş digər normativ hüquqi aktlar ilə tənzimlənən yalnız vergi nəzarəti ilə bağlı münasibətlər hüdudlarında tətbiq edilir"
+            ]
+        },
+        {
+            "Id": 3,
+            "Title": "Azərbaycan Respublikasının vergi qanunvericiliyinin ibarət olduğu hüquqi aktları göstərin.\n1. Azərbaycan Respublikasının Konstitusiyası\n2. Azərbaycan Respublikasının Vergi Məcəlləsi\n3. Azərbaycan Respublikasının Konstitusiyası və Vergi Məcəlləsinə uyğun olaraq qəbul edilmiş Azərbaycan Respublikasının qanunvericilik aktları\n4. Azərbaycan Respublikasının Əmək Məcəlləsi",
+            "Answers": [
+                "1, 2, 3",
+                "1, 2, 4",
+                "2, 3, 4",
+                "1, 3, 4"
+            ]
+        },
+        {
+            "Id": 4,
+            "Title": "Vergi qanunvericiliyi aktları ilə aşağıdakı sahə qanunvericilik aktlarından hansı arasında vergitutma və vergi nəzarəti məsələləri üzrə ziddiyyət yarandıqda Vergi qanunvericilik aktları tətbiq edilir?",
+            "Answers": [
+                "Xarici investisiyaların qorunması haqqında qanun",
+                "Beynəlxalq müqavilələr",
+                "hasilatın pay bölgüsü haqqında sazişlər",
+                "Xüsusi iqtisadi zonalar haqqında qanunlar"
+            ]
+        },
+        {
+            "Id": 5,
+            "Title": "Azərbaycan Respublikasının tərəfdar çıxdığı beynəlxalq müqavilələrdə vergilər haqqında Vergi Məcəlləsi ilə və ona müvafiq olaraq qəbul edilmiş normativ hüquqi aktlarla nəzərdə tutulmuş müddəalardan fərqli müddəalar müəyyən edildikdə, hansı müddəalar tətbiq edilir?",
+            "Answers": [
+                "Beynəlxalq müqavilələrin müddəaları",
+                "Mülki Məcəllənin müddəaları",
+                "Vergi Məcəlləsinin müddəaları",
+                "Azərbaycan Respublikasının Mülki və Vergi Məcəllələrinin müddəaları"
+            ]
+        },
+        {
+            "Id": 6,
+            "Title": "Vergi Məcəlləsi qüvvəyə minənədək və ya o, qüvvəyə mindikdən sonra qanunla təsdiq edilmiş hasilatın pay bölgüsü haqqında, əsas boru kəməri haqqında və digər bu qəbildən olan sazişlərdə və qanunlarda, o cümlədən neft və qaz haqqında, ixrac məqsədli neft-qaz fəaliyyəti və xüsusi iqtisadi zonalar haqqında qanunlarda Vergi Məcəlləsində və vergilər haqqında digər normativ hüquqi aktlarda nəzərdə tutulmuş müddəalardan fərqli müddəalar müəyyən edildikdə, hansı müddəalar tətbiq edilir?",
+            "Answers": [
+                "Sazişlərin və ya qanunların müddəaları",
+                "Yalnız sazişlərin müddəaları",
+                "Vergi Məcəlləsinin müddəaları",
+                "Yalnız qanunların müddəaları"
+            ]
+        },
+        {
+            "Id": 7,
+            "Title": "Vergilər haqqında qanunvericilik vergitutmanın hansı prinsiplərinə əsaslanır?",
+            "Answers": [
+                "ümumi, bərabər və ədalətli olmasına",
+                "yalnız ədalətli olmasına",
+                "yalnız bərabər olmasına",
+                "xüsusi, neytral və ədalətli olmasına"
+            ]
+        },
+        {
+            "Id": 8,
+            "Title": "Aşağıdakılardan hansı vergilərin müəyyən edilməsinin və tutulmasının əsaslarına aiddir?",
+            "Answers": [
+                "vergilər iqtisadi cəhətdən əsaslandırılmalıdır",
+                "mülkiyyət formasından, fiziki şəxslərin vətəndaşlığından və ya kapitalın yerindən asılı olaraq vergilərin müxtəlif dərəcələri müəyyən edilməlidir",
+                "mülkiyyət formasından asılı olaraq vergi dərəcələri müxtəlif olmalıdır",
+                "vergilər siyasi, ideoloji, etnik və digər xüsusiyyətlər əsas götürülməklə müəyyən edilməlidir"
+            ]
+        },
+        {
+            "Id": 9,
+            "Title": "Hansı vergilərin müəyyən edilməsinə yol verilmir?",
+            "Answers": [
+                "Hər kəsin konstitusiya hüquqlarının və azadlıqlarının həyata keçirilməsinə maneçilik törədən vergilərin",
+                "Hər kəsin konstitusiya hüquqlarının və azadlıqlarının həyata keçirilməsinə maneçilik törətməyən vergilərin",
+                "Vergi ödəyicilərinin qanuni fəaliyyətini məhdudlaşdırmayan",
+                "Azərbaycan Respublikasının vahid iqtisadi məkanını pozmayan"
+            ]
+        },
+        {
+            "Id": 10,
+            "Title": "Hansı vergilərin müəyyən edilməsinə yol verilmir?",
+            "Answers": [
+                "Azərbaycan Respublikasının vahid iqtisadi məkanını pozan [xüsusilə, Azərbaycan Respublikasının ərazisində malların [işlərin, xidmətlərin] və pul vəsaitlərinin azad yerdəyişməsini bilavasitə və ya dolayısı ilə məhdudlaşdıran və ya digər yolla vergi ödəyicilərinin qanuni fəaliyyətini məhdudlaşdıran, yaxud maneçilik törədən] vergilərin",
+                "Azərbaycan Respublikasının vahid iqtisadi məkanını pozmayan [xüsusilə, Azərbaycan Respublikasının ərazisində malların [işlərin, xidmətlərin] və pul vəsaitlərinin azad yerdəyişməsini bilavasitə və ya dolayısı ilə məhdudlaşdırmayan və ya digər yolla vergi ödəyicilərinin qanuni fəaliyyətini məhdudlaşdırmayan, yaxud maneçilik törətməyən] vergilərin",
+                "Azərbaycan Respublikasının vahid coğrafi məkanını pozan vergilərin",
+                "Azərbaycan Respublikasının vahid gömrük məkanını pozan [xüsusilə, Azərbaycan Respublikasının ərazisində malların [işlərin, xidmətlərin] və pul vəsaitlərinin azad yerdəyişməsini bilavasitə və ya dolayısı ilə məhdudlaşdıran və ya digər yolla vergi ödəyicilərinin qanuni fəaliyyətini məhdudlaşdıran, yaxud maneçilik törədən] vergilərin"
+            ]
+        },
+        {
+            "Id": 11,
+            "Title": "Hər bir şəxs əldə etdiyi mənfəətdən (gəlirdən) eyni növ vergini neçə dəfə ödəyə bilər?",
+            "Answers": [
+                "bir dəfədən artıq ödəməyə məcbur edilə bilməz",
+                "iki dəfə",
+                "Məcəllədə bununla bağlı hər hansı bir hal müəyyən edilməmişdir",
+                "üç dəfə"
+            ]
+        },
+        {
+            "Id": 12,
+            "Title": "Sahibkarlıq və investisiya fəaliyyətini təşviq edən vergi azadolmaları və güzəştləri vergi ödəyicilərinə münasibətdə necə tətbiq edilməlidir?",
+            "Answers": [
+                "fərdi xarakter daşımamalıdır",
+                "fərdi xarakter daşımalıdır",
+                "müstəsna hallarda ümumi xarakter daşımalıdır",
+                "yalnız istisna hallarda fərdi xarakter daşımalıdır"
+            ]
+        },
+        {
+            "Id": 13,
+            "Title": "Azərbaycan Respublikasının vergiləri hansı qanunvericilik aktı ilə müəyyən edilir?",
+            "Answers": [
+                "Azərbaycan Respublikasının Vergi Məcəlləsi",
+                "İnzibati Xətalar Məcəlləsi",
+                "Azərbaycan Respublikasının Konstitusiyası",
+                "Mülki Məcəllə"
+            ]
+        },
+        {
+            "Id": 14,
+            "Title": "Azərbaycan Respublikasında vergilərin dəyişdirilməsi və ya ləğv edilməsi necə həyata keçirilir?",
+            "Answers": [
+                "Vergi Məcəlləsinə dəyişiklik edilməsi yolu ilə",
+                "Nazirlər Kabinetinin qərarına əsasən",
+                "Beynəlxalq valyuta fondunun tövsiyələrinə əsasən",
+                "Heç bir halda dəyişdirilə bilməz"
+            ]
+        },
+        {
+            "Id": 15,
+            "Title": "Vergilər haqqında qanunvericilik hansı tərzdə formalaşdırılmalıdır?",
+            "Answers": [
+                "hər kəs hansı vergiləri, hansı qaydada, nə vaxt və hansı məbləğdə ödəməli olduğunu dəqiq bilsin",
+                "hər kəs yalnız hansı vergiləri, nə vaxt və hansı məbləğdə ödəməli olduğunu dəqiq bilsin",
+                "hər kəs yalnız hansı vergiləri, hansı qaydada, nə vaxt ödəməli olduğunu dəqiq bilsin",
+                "hər kəs yalnız hansı vergiləri və hansı məbləğdə ödəməli olduğunu dəqiq bilsin"
+            ]
+        },
+        {
+            "Id": 16,
+            "Title": "Vergi sistemi ...",
+            "Answers": [
+                "Sahibkarlıq və investisiya fəaliyyətini təşviq etməlidir",
+                "Sahibkarlıq və investisiya fəaliyyətini təşviq etməməlidir",
+                "Sahibkarlıq və investisiya fəaliyyətini məhdudlaşdırmalıdır",
+                "Sahibkarlıq və investisiya fəaliyyətinin təşviqinə həvəsləndirməlidir"
+            ]
+        },
+        {
+            "Id": 17,
+            "Title": "Vergilər haqqında qanunvericiliyin bütün ziddiyyətləri və aydın olmayan məqamları kimin xeyrinə şərh edilməlidir?",
+            "Answers": [
+                "Vergi ödəyicisinin",
+                "Vergi orqanlarının",
+                "Şərh edilmir",
+                "Heç kimin"
+            ]
+        },
+        {
+            "Id": 18,
+            "Title": "Fiziki və hüquqi şəxslərin vergilərə aid normativ hüquqi aktlarla",
+            "Answers": [
+                "azad tanış olmaq imkanı təmin edilməlidir",
+                "tanış olmaq imkanı məhdudlaşdırılmalıdır",
+                "azad tanış olmaq imkanı təmin edilməməlidir",
+                "tanış olmaq imkanı məhdudlaşdırılmamalıdır"
+            ]
+        },
+        {
+            "Id": 19,
+            "Title": "Azərbaycan Respublikasında vergi sistemi hansı vergilərdən ibarətdir?",
+            "Answers": [
+                "dövlət vergiləri, muxtar respublika vergiləri və yerli vergilər [bələdiyyə vergiləri]",
+                "dövlət vergiləri, yerli vergilər [bələdiyyə vergiləri]",
+                "muxtar respublika və yerli vergilər [bələdiyyə vergiləri]",
+                "dövlət vergiləri və muxtar respublika vergiləri"
+            ]
+        },
+        {
+            "Id": 20,
+            "Title": "Dövlət vergiləri dedikdə hansı vergilər nəzərdə tutulur?",
+            "Answers": [
+                "Vergi Məcəlləsi ilə müəyyən edilən və Azərbaycan Respublikasının bütün ərazisində ödənilməli olan vergilər",
+                "Bələdiyyə vergiləri",
+                "Naxçıvan MR-da tətbiq olunan vergilər",
+                "fiziki şəxslərin torpaq və əmlak vergiləri"
+            ]
+        },
+        {
+            "Id": 21,
+            "Title": "Muxtar respublika vergiləri dedikdə hansı vergilər nəzərdə tutulur?",
+            "Answers": [
+                "Vergi Məcəlləsinə müvafiq olaraq Naxçıvan Muxtar Respublikasının qanunları ilə müəyyən edilən və Naxçıvan Muxtar Respublikasında ödənilən vergilər",
+                "Bələdiyyə mülkiyyətində olan müəssisə və təşkilatlardan tutulan vergilər",
+                "Yalnız yol vergisi",
+                "ƏDV və yol vergisi"
+            ]
+        },
+        {
+            "Id": 22,
+            "Title": "Yerli vergilər dedikdə hansı vergilər başa düşülür?",
+            "Answers": [
+                "Vergi Məcəlləsi və müvafiq qanunla müəyyən edilən, bələdiyyələrin qərarlarına əsasən tətbiq edilən və bələdiyyələrin ərazilərində ödənilən vergilər nəzərdə tutulur",
+                "Bələdiyyələr haqqında müvafiq qanunla müəyyən edilən, bələdiyyələrin qərarlarına əsasən tətbiq edilən və bələdiyyələrin ərazilərində ödənilən vergilər nəzərdə tutulur",
+                "Hüquqi şəxslərin əmlak vergisi",
+                "Hüquqi şəxslərin torpaq vergisi"
+            ]
+        },
+        {
+            "Id": 23,
+            "Title": "Bələdiyyələr öz ərazilərində vergitutmanın hansı məsələləri barədə qərar qəbul edə bilər?",
+            "Answers": [
+                "vergi ödəyicilərinin ayrı-ayrı kateqoriyalarını yerli vergilərdən tam və ya qismən azad etmək, vergi dərəcələrini azaltmaq barədə",
+                "yalnız vergi ödəyicilərinin ayrı-ayrı kateqoriyalarını yerli vergilərdən azad etmək barədə",
+                "yalnız vergi dərəcələrini azaltmaq barədə",
+                "vergi ödəyicilərinin ayrı-ayrı kateqoriyalarını bütün vergilərdən tam və ya qismən azad etmək, vergi dərəcələrini azaltmaq barədə"
+            ]
+        },
+        {
+            "Id": 24,
+            "Title": "Xüsusi vergi rejimi dedikdə nə nəzərdə tutulur ?",
+            "Answers": [
+                "müəyyən dövr ərzində vergilərin hesablanması və ödənilməsinin xüsusi qaydası",
+                "müəyyən dövr ərzində vergilərin ödənilməsinin xüsusi qaydası",
+                "müəyyən dövr ərzində vergilərin hesablanmasının xüsusi qaydası",
+                "müəyyən dövr ərzində vergilərin hesablanması və ödənilməsinin təxirə salınması"
+            ]
+        },
+        {
+            "Id": 25,
+            "Title": "Müvəqqəti vergi rejimi dedikdə nə nəzərdə tutulur ?",
+            "Answers": [
+                "təbii fəlakətlərin, epidemiyaların, epizootiyaların, böyük ekoloji və başqa qəzaların, habelə qlobal iqtisadi mühitdə baş verən hadisələrin təsiri nəticəsində iqtisadi şəraitin əhəmiyyətli şəkildə dəyişməsi ilə əlaqədar bütün və ya bir qism sahibkarlıq subyektlərinə münasibətdə müəyyən dövr ərzində vergilərin hesablanması və ödənilməsinin müvəqqəti qaydası",
+                "Qlobal iqtisadi böhranlar nəticəsində vergilərin hesablanması və ödənilməsinin xüsusi qaydası ",
+                "təbii fəlakətlərin, epidemiyaların, epizootiyaların, böyük ekoloji və başqa qəzaların, habelə qlobal iqtisadi mühitdə baş verən hadisələrin təsiri nəticəsində iqtisadi şəraitin dəyişməməsi ilə əlaqədar bütün və ya bir qism sahibkarlıq subyektlərinə münasibətdə müəyyən dövr ərzində vergilərin hesablanması və ödənilməsinin müvəqqəti qaydası",
+                "təbii fəlakətlərin, epidemiyaların, epizootiyaların, böyük ekoloji və başqa qəzaların, habelə qlobal iqtisadi mühitdə baş verən hadisələrin təsiri nəticəsində iqtisadi şəraitin əhəmiyyətli şəkildə dəyişməsi ilə əlaqədar bütün və ya bir qism sahibkarlıq subyektlərində yoxlamaların müəyyən müddətə təxirə salınması"
+            ]
+        },
+        {
+            "Id": 26,
+            "Title": "Vergitutmanın formaları hansılardır?",
+            "Answers": [
+                "bilavasitə mənbədən, bəyannamə üzrə, bildiriş üzrə",
+                "bəyannamə üzrə, bildiriş üzrə, sərəncam üzrə",
+                "bəyannamə üzrə, bilavasitə mənbədən, şəhadətnamə üzrə",
+                "bilavasitə mənbədən, sərəncam üzrə, şəhadətnamə üzrə"
+            ]
+        },
+        {
+            "Id": 27,
+            "Title": "Vergi məbləğlərinin bəyannamə forması üzrə tutulması dedikdə nə başa düşülür?",
+            "Answers": [
+                "Verginin gəlir və mənfəət əldə edilməsindən sonra tutulması",
+                "Verginin gəlir və mənfəət əldə edilməsinədək tutulması",
+                "Verginin tədiyyə bildirişi əsasında vergi ödəyicisi tərəfindən ödənilməsi",
+                "Verginin tədiyyə bildirişi əsasında gəlir və mənfəət əldə edilməsinədək tutulması"
+            ]
+        },
+        {
+            "Id": 28,
+            "Title": "Vergi məbləğlərinin bilavasitə mənbədən tutulması dedikdə nə başa düşülür?",
+            "Answers": [
+                "Verginin gəlir və mənfəət əldə edilməsinədək tutulması",
+                "Verginin tədiyyə bildirişi əsasında vergi ödəyicisi tərəfindən ödənilməsi",
+                "Verginin gəlir və mənfəət əldə edilməsindən sonra tutulması",
+                "Verginin tədiyyə bildirişi əsasında gəlir və mənfəət əldə edilməsinədək tutulması"
+            ]
+        },
+        {
+            "Id": 29,
+            "Title": "Vergi məbləğlərinin bildiriş üzrə tutulması dedikdə nə başa düşülür?",
+            "Answers": [
+                "Vergi məbləğlərinin vergitutma obyektinin dəyəri və sahəsi əsasında vergi orqanının və ya bələdiyyənin hesabladığı məbləğ üçün təqdim etdiyi tədiyyə bildirişi əsasında vergi ödəyicisi tərəfindən verginin ödənilməsi",
+                "Verginin gəlir və mənfəət əldə edilməsinədək tutulması",
+                "Verginin tədiyyə bildirişi əsasında gəlir və mənfəət əldə edilməsinədək tutulması",
+                "Verginin gəlir və mənfəət əldə edilməsindən sonra tutulması"
+            ]
+        },
+        {
+            "Id": 30,
+            "Title": "Hansı vergi tam olaraq dövlət vergisi hesab edilmir?",
+            "Answers": [
+                "fiziki şəxslərin əmlak vergisi",
+                "yol vergisi",
+                "fiziki şəxslərin gəlir vergisi",
+                "aksizlər"
+            ]
+        },
+        {
+            "Id": 31,
+            "Title": "Vergi Məcəlləsi ilə bütün dövlət vergilərinin dərəcələrinin hansı həddi müəyyən edilir?",
+            "Answers": [
+                "ən yüksək hədləri müəyyən edilir",
+                "aşağı hədləri müəyyən edilir",
+                "optimal hədləri müəyyən edilir",
+                "yüksək olmayan hədləri müəyyən edilir"
+            ]
+        },
+        {
+            "Id": 32,
+            "Title": "Dövlət vergilərinin dərəcələrinin müəyyən edilməsi hansı qaydada həyata keçirilir?",
+            "Answers": [
+                "dövlət vergilərinin hər il üçün tətbiq olunan dərəcələri Vergi Məcəlləsində müəyyən edilən dərəcələrdən yüksək ola bilməz və hər il Azərbaycan Respublikasının dövlət büdcəsi haqqında qanun qəbul edilən zaman həmin dərəcələrə yenidən baxıla bilər",
+                "dövlət vergilərinin hər il üçün tətbiq olunan dərəcələri Vergi Məcəlləsinə müvafiq olaraq İqtisadiyyat Nazirliyi tərəfindən müəyyən edilir və lazım gəldikdə il ərzində həmin dərəcələrə yenidən baxıla bilər",
+                "dövlət vergilərinin hər il üçün tətbiq olunan dərəcələri Nazirlər Kabineti tərəfindən müəyyən edilir və il ərzində istənilən vaxt həmin dərəcələrə yenidən baxıla bilər",
+                "dövlət vergilərinin hər il üçün tətbiq olunan dərəcələri Vergi Məcəlləsində müəyyən edilən dərəcələrdən yüksək olmamaqla, Maliyyə Nazirliyi tərəfindən müəyyən edilir və həmin dərəcələrə yenidən baxıla bilər"
+            ]
+        },
+        {
+            "Id": 33,
+            "Title": "Hansı vergi dövlət vergilərinə aid edilməyə bilər?",
+            "Answers": [
+                "fiziki şəxslərin əmlak vergisi",
+                "mədən vergisi",
+                "hüquqi şəxslərin əmlak vergisi",
+                "əlavə dəyər vergisi"
+            ]
+        },
+        {
+            "Id": 34,
+            "Title": "Hansı vergi yerli vergilərə [bələdiyyə vergilərinə] aid deyildir? 1. hüquqi şəxslərin torpaq vergisi 2. fiziki şəxslərin əmlak vergisi 3. fiziki şəxslərin torpaq vergisi 4. yerli əhəmiyyətli tikinti materialları üzrə mədən vergisi 5. gəlir vergisi",
+            "Answers": [
+                "1, 4, 5",
+                "2, 3, 5",
+                "1, 2, 3",
+                "1, 3, 5"
+            ]
+        },
+        {
+            "Id": 35,
+            "Title": "Azərbaycan Respublikası ərazisində vergilər hansı pul vahidi ilə hesablanır və ödənilir?",
+            "Answers": [
+                "Vergi Məcəlləsinin 169.8-ci və 211.1.1-ci maddələri üzrə vergilərin ödənilməsi istisna olmaqla, Azərbaycan Respublikasının pul vahidi - manatla",
+                "istənilən pul vahidi ilə",
+                "bütün hallarda Azərbaycan Respublikasının pul vahidi - manatla",
+                "şərti pul vahidi ilə"
+            ]
+        },
+        {
+            "Id": 36,
+            "Title": "Azərbaycan Respublikasının Vergi Məcəlləsində vergi anlayışına verilən tərifdə onun səciyyəvi əlamətləri hansılardır?",
+            "Answers": [
+                "məcburilik; fərdilik; əvəzsizlik",
+                "məcburilik; fərdilik; ekvivalentlik",
+                "könüllülük; fərdilik; əvəzsizlik",
+                "məcburilik; fərdilik; dolayısı ilə əvəzi ödənilmək"
+            ]
+        },
+        {
+            "Id": 37,
+            "Title": "Vergi məbləğinin hesablanması üçün vergi dərəcəsi aşağıdakılardan hansına tətbiq olunur?",
+            "Answers": [
+                "vergitutma bazasına",
+                "vergitutma obyektinə",
+                "vergi dövrünün davametmə müddətinə",
+                "vergi güzəştləri məbləğinə"
+            ]
+        },
+        {
+            "Id": 38,
+            "Title": "Vergilərin müəyyən edilməsi dedikdə, nə başa düşülür?",
+            "Answers": [
+                "vergi ödəyicilərinin və vergitutma elementlərinin müəyyən edilməsi",
+                "yalnız vergitutmanın əsas elementlərinin müəyyən edilməsi",
+                "vergitutma elementlərinin bir hissəsinin müəyyən edilməsi",
+                "vergi növlərinin müəyyən edilməsi"
+            ]
+        },
+        {
+            "Id": 39,
+            "Title": "Aşağıdakılardan hansı vergitutma elementlərinə aid deyil?",
+            "Answers": [
+                "vergi güzəşti",
+                "vergitutma bazası",
+                "vergi dərəcəsi",
+                "verginin ödənilməsi qaydası və müddəti"
+            ]
+        },
+        {
+            "Id": 40,
+            "Title": "Vergi müəyyən edildikdə hansı əsaslarla vergi güzəştləri müəyyənləşdirilə bilər?",
+            "Answers": [
+                "Vergi Məcəlləsi ilə nəzərdə tutulan əsaslarla",
+                "Vergi Məcəlləsi və Azərbaycan Respublikasının digər sahə qanunvericilik aktları ilə ilə nəzərdə tutulan əsaslarla",
+                "Vergi Məcəlləsi və Gömrük Məcəlləsi ilə nəzərdə tutulan əsaslarla",
+                "Vergi Məcəlləsi ilə nəzərdə tutulmayan əsaslarla"
+            ]
+        },
+        {
+            "Id": 41,
+            "Title": "Aşağıdakılardan hansı vergitutma obyektlərinə aid deyil?",
+            "Answers": [
+                "xeyriyyəçilik fəaliyyəti",
+                "gəlir",
+                "təqdim edilmiş malların [işin, xidmətin] dəyəri, ticarət əlavəsi",
+                "torpaq, faydalı qazıntılar"
+            ]
+        },
+        {
+            "Id": 42,
+            "Title": "Vergitutma bazası nədir?",
+            "Answers": [
+                "vergitutma obyektinin vergi tutulan hissəsinin kəmiyyətcə ifadəsi",
+                "vergi ödəyicisinin əmlakı",
+                "vergi ödəyicisinin pul vəsaiti",
+                "vergi ödəyicisinin əmlakı və pul vəsaiti"
+            ]
+        },
+        {
+            "Id": 43,
+            "Title": "Vergi Məcəlləsində istifadə olunan mülki, ailə və Azərbaycan Respublikasının digər qanunvericilik sahələrinin anlayışları, Vergi Məcəlləsində digər məna nəzərdə tutulmadığı hallarda necə tətbiq edilir?",
+            "Answers": [
+                "həmin qanunvericilik sahələrində qəbul edilmiş mənada tətbiq edilir",
+                "Vergi Məcəlləsində qəbul edilmiş mənada tətbiq edilir",
+                "Vergi Məcəlləsində digər məna nəzərdə tutulmadığı hallarda bu anlayışlar tətbiq edilmir",
+                "həmin qanunvericilik sahələrində qəbul edilmiş mənada tətbiq edilmir"
+            ]
+        },
+        {
+            "Id": 44,
+            "Title": "Vergitutma məqsədləri üçün şəxs dedikdə, kim nəzərdə tutulur?",
+            "Answers": [
+                "istənilən fiziki və ya hüquqi şəxs, qeyri-rezidentin daimi nümayəndəliyi, filialı və digər bölməsi",
+                "yalnız fiziki şəxs",
+                "yalnız Azərbaycan Respublikasının hüquqi şəxsi",
+                "yalnız qeyri-rezidentin daimi nümayəndəliyi"
+            ]
+        },
+        {
+            "Id": 45,
+            "Title": "Vergitutma məqsədləri üçün hüquqi şəxs dedikdə kim nəzərdə tutulur?",
+            "Answers": [
+                "Azərbaycan Respublikasının və ya xarici dövlətin qanunvericiliyinə uyğun olaraq hüquqi şəxs statusunda yaradılmış müəssisə və təşkilatlar",
+                "Azərbaycan Respublikasının və ya xarici dövlətin qanunvericiliyinə uyğun olaraq hüquqi şəxs yaratmadan sahibkarlıq fəaliyyətini həyata keçirən müəssisə və təşkilatlar",
+                "Azərbaycan Respublikasının və ya xarici dövlətin qanunvericiliyinə uyğun olaraq yaradılmış istənilən şəxs",
+                "yalnız Azərbaycan Respublikasının qanunvericiliyinə uyğun olaraq hüquqi şəxs statusunda yaradılmış müəssisə və təşkilatlar"
+            ]
+        },
+        {
+            "Id": 46,
+            "Title": "Vergitutma məqsədləri üçün fiziki şəxs dedikdə kim nəzərdə tutulur?",
+            "Answers": [
+                "Azərbaycan Respublikasının vətəndaşı, əcnəbi və vətəndaşlığı olmayan şəxs",
+                "yalnız Azərbaycan Respublikasının vətəndaşı",
+                "yalnız əcnəbi və vətəndaşlığı olmayan şəxs",
+                "istənilən fiziki və ya hüquqi şəxs"
+            ]
+        },
+        {
+            "Id": 47,
+            "Title": "Vergitutma məqsədləri üçün vergi ödəyicisi dedikdə kim nəzərdə tutulur?",
+            "Answers": [
+                "Vergi Məcəlləsinə uyğun olaraq müəyyən edilmiş vergitutma obyektlərindən vergini ödəməli olan istənilən şəxs",
+                "Vergi Məcəlləsinə uyğun olaraq müəyyən edilmiş vergitutma obyektlərindən vergini ödəməli olan yalnız rezident hüquqi şəxs",
+                "Vergi Məcəlləsinə uyğun olaraq müəyyən edilmiş vergitutma obyektlərindən vergini ödəməli olan yalnız qeyri-rezident fiziki şəxs",
+                "Vergi Məcəlləsinə uyğun olaraq müəyyən edilmiş vergitutma obyektlərindən vergini ödəməli olan yalnız əcnəbi və vətəndaşlığı olmayan şəxs"
+            ]
+        },
+        {
+            "Id": 48,
+            "Title": "Fiziki şəxs hansı halda Azərbaycan Respublikasının rezidenti sayılır?\n1. Təqvim ilində üst-üstə ən azı 182 gündən artıq vaxtda həqiqətən Azərbaycan Respublikasının ərazisində olan\n2. Təqvim ilində üst-üstə ən azı 180 gündən artıq vaxtda həqiqətən Azərbaycan Respublikasının ərazisində olan\n3. Təqvim ili içərisində, yaxud bir təqvim ili ərzində xarici ölkədə Azərbaycan Respublikasının dövlət xidmətində olan\n4. Təqvim ilində üst-üstə ən azı 192 gündən artıq vaxtda həqiqətən Azərbaycan Respublikasının ərazisində olan\n5. Xarici ölkənin vətəndaşlığı",
+            "Answers": [
+                "1;3",
+                "1;5",
+                "3;4;5",
+                "2;3;4"
+            ]
+        },
+        {
+            "Id": 49,
+            "Title": "Azərbaycan Respublikasının ərazisində və xarici ölkədə (hər hansı birində) fiziki şəxsin olma müddəti 182 gündən artıq olmadıqda, həmin fiziki şəxs hansı meyarlara əsasən Azərbaycan Respublikasının rezidenti sayılır?\n1. xarici ölkənin vətəndaşlığı\n2. daimi yaşayış yeri\n3. həyati mənafelərinin mərkəzi\n4. müvəqqəti yaşayış yeri\n5. adətən yaşadışı yer\n6. Azərbaycan Respublikasının vətəndaşlığı",
+            "Answers": [
+                "2;3;5;6",
+                "1;3;5;6",
+                "1;3;4;5",
+                "1;2;3;6"
+            ]
+        },
+        {
+            "Id": 50,
+            "Title": "Fiziki şəxs vergi ilində Azərbaycan Respublikasının ərazisində qaldığı son gündən etibarən bu vergi ilinin sonunadək olan dövr ərzində hansı şərtlə Azərbaycan Respublikasının qeyri-rezidenti sayılır?",
+            "Answers": [
+                "həmin şəxs bilavasitə növbəti vergi ilində Azərbaycan Respublikasının qeyri-rezidenti olsun",
+                "həmin şəxs bilavasitə cari vergi ilində Azərbaycan Respublikasının qeyri-rezidenti olsun",
+                "həmin şəxs bilavasitə növbəti vergi ilində Azərbaycan Respublikasının rezidenti olsun",
+                "həmin şəxs bilavasitə növbəti vergi ilində Azərbaycan Respublikasının qeyri-rezidenti olmasın"
+            ]
+        },
+        {
+            "Id": 51,
+            "Title": "Qeyri-rezident dedikdə kim nəzərdə tutulur?\n1. Azərbaycan Respublikasının ərazisində diplomatik və ya konsulluq statusu olmayan şəxs və onun ailə üzvləri\n2. məqsədi yalnız Azərbaycan Respublikasının ərazisindən bir xarici dövlətdən digər xarici dövlətə keçmək olan şəxs\n3. rezident anlayışı ilə əhatə edilən digər şəxslər\n4. Azərbaycan Respublikasının ərazisində müəyyən edilmiş qaydada dövlət qeydiyyatından keçmiş beynəlxalq təşkilatın əməkdaşı və ya Azərbaycan Respublikasında xarici ölkənin dövlət xidmətini həyata keçirən şəxs və onların ailə üzvləri\n5. Azərbaycan Respublikasının ərazisində yerləşən diplomatik imtiyazları və immunitetləri olan diplomatik nümayəndəliklər, konsulluq idarələri və xarici ölkələrin digər rəsmi nümayəndəlikləri, beynəlxalq təşkilatlar və onların nümayəndəlikləri, habelə sahibkarlıq fəaliyyəti ilə məşğul olmayan xarici təşkilatların və firmaların nümayəndəlikləri",
+            "Answers": [
+                "2, 4, 5",
+                "1, 2, 3",
+                "2, 3, 4",
+                "1, 3, 5"
+            ]
+        },
+        {
+            "Id": 52,
+            "Title": "Vergi ödəyicisinin ailə üzvlərinə aşağıdakılardan hansılar aiddir? 1. ər-arvadlar, bacı və qardaş övladları 2. ər-arvadların bacıları, qardaşları və valideynləri 3. bacıların ərlərinin və qardaşların arvadlarının valideynləri 4. valideynlərin bacılarının [qardaşlarının] övladları 5. bacıların ərləri və qardaşların arvadları",
+            "Answers": [
+                "1, 2, 5",
+                "2, 3, 4",
+                "3, 4, 5",
+                "1, 3, 5"
+            ]
+        },
+        {
+            "Id": 53,
+            "Title": "Vergitutma məqsədləri üçün mal dedikdə, nə nəzərdə tutulur?",
+            "Answers": [
+                "hər hansı maddi və qeyri-maddi əmlak",
+                "yalnız maddi əmlak və pul vəsaitləri",
+                "satışda və anbarda olan mallar",
+                "yalnız maddi əmlak"
+            ]
+        },
+        {
+            "Id": 54,
+            "Title": "Əlavə dəyər vergisinin (ƏDV) məqsədləri üçün aşağıdakılardan hansılar mal sayılır?",
+            "Answers": [
+                "əsas vəsaitlər",
+                "qeyri-maddi aktivlər",
+                "pul vəsaiti",
+                "torpaq"
+            ]
+        },
+        {
+            "Id": 54,
+            "Title": "Müəssisənin hansı əmlakları üzrə icarə gəlirləri ƏDV-yə cəlb edilmir?",
+            "Answers": [
+                "torpağın icarəyə verilməsi",
+                "binanın icarəyə verilməsi",
+                "avadanlıqın icarəyə verilməsi",
+                "yük avtomobilinin icarəyə verilməsi"
+            ]
+        },
+        {
+            "Id": 55,
+            "Title": "Vergitutma məqsədləri üçün qeyri-maddi aktivlər dedikdə nə nəzərdə tutulmur?",
+            "Answers": [
+                "satışdankənar gəlirlər",
+                "intellektual, o cümlədən ticarət nişanları",
+                "digər sənaye mülkiyyəti obyektləri",
+                "müvafiq qanunvericiliklə müəyyən edilmiş qaydada vergi ödəyicisinin mülkiyyət hüququnun obyekti kimi tanınan digər analoji hüquqlar"
+            ]
+        },
+        {
+            "Id": 56,
+            "Title": "Vergitutma məqsədləri üçün malların təqdim edilməsi dedikdə nə nəzərdə tutulur? 1. mallar üzərində mülkiyyət hüququnun başqasına verilməsi 2. malların satışı, mübadiləsi, hədiyyə verilməsi, 3. əmək haqqı ödənilməsi 4. girov qoyulmuş mallar üzrə mülkiyyət hüququnun girov saxlayana və ya digər şəxsə keçməsi 5. malların təqdim edilməsi sayılmayan, nəticələri maddi ifadə kəsb edən fəaliyyət",
+            "Answers": [
+                "1, 2, 4",
+                "1, 2, 5",
+                "2, 3 ,4",
+                "2, 3, 5"
+            ]
+        },
+        {
+            "Id": 57,
+            "Title": "Vergitutma məqsədləri üçün xidmət [iş] dedikdə nə başa düşülür ?",
+            "Answers": [
+                "malların təqdim edilməsi sayılmayan, nəticələri maddi ifadə kəsb edən fəaliyyət",
+                "malların təqdim edilməsi sayılan, nəticələri maddi ifadə kəsb edən fəaliyyət",
+                "malların təqdim edilməsi sayılmayan, nəticələri maddi ifadə kəsb etməyən fəaliyyət",
+                "malların təqdim edilməsi sayılan, nəticələri maddi ifadə kəsb etməyən fəaliyyət"
+            ]
+        },
+        {
+            "Id": 58,
+            "Title": "ƏDV-nin məqsədləri üçün aşağıdakı xidmətlərdən [işlərdən] hansılar istisna olunur? 1. pul vəsaitinə mülkiyyət hüququnun başqasına verilməsi 2. daşınmaz əmlakla bağlı işlərin görülməsi 3. torpağa mülkiyyət hüququnun başqasına verilməsi 4. daşınan maddi əmlakın təqdim edilməsi 5. işəgötürənə muzdlu işçi kimi xidmət göstərilməsi",
+            "Answers": [
+                "1, 3, 5",
+                "2, 3, 4",
+                "3, 4, 5",
+                "1, 2, 5"
+            ]
+        },
+        {
+            "Id": 59,
+            "Title": "Xidmətlərin göstərilməsi [işlərin görülməsi] zamanı istifadə olunan mallar ayrıca təqdim edilmirsə və ya xidmətin [işin] dəyərinə daxil edilməyən kompensasiyalı xərclər müqavilədə və ya ödəniş sənədlərində ayrıca göstərilmirsə, bu zaman",
+            "Answers": [
+                "həmin mallar və ya xərclər xidmətin [işin] ayrılmaz tərkib hissəsi hesab edilir",
+                "həmin mallar və ya xərclər xidmətin [işin] ayrılmaz tərkib hissəsi hesab edilmir",
+                "müstəsna hallarda həmin mallar və ya xərclər xidmətin [işin] ayrılmaz tərkib hissəsi hesab edilməyə bilər",
+                "vəziyyətdən asılı olaraq həmin malların və ya xərclərin dəyərinin bir hissəsi xidmətin [işin] tərkib hissəsi hesab edilə bilər"
+            ]
+        },
+        {
+            "Id": 60,
+            "Title": "Gəlir dedikdə nə nəzərdə tutulur",
+            "Answers": [
+                "malların (işlərin və xidmətlərin) təqdim edilməsi ilə bağlı əməliyyatların ümumi dəyəri, habelə satışdankənar gəlir",
+                "malların (işlərin və xidmətlərin) təqdim edilməsi ilə bağlı əməliyyatların ümumi dəyərindən xərclər çıxıldıqan sonra qalan dəyəri",
+                "Satışdankənar gəlirlər onunla bağlı xərclər çıxıldiqdan sonra qalan dəyəri",
+                "malların (işlərin və xidmətlərin) təqdim edilməsi ilə bağlı əməliyyatların bazar dəyəri xərclər çəxılmaqla"
+            ]
+        },
+        {
+            "Id": 61,
+            "Title": "Aşağıdakılardan hansı satışdankənar gəlirlərə aiddir: 1. digər müəssisələrin fəaliyyətində payçı kimi iştirakdan gəlir 2. Azərbaycan Respublikasında iş görülməsindən gəlir 3. malların satışı ilə bilavasitə bağlı olmayan xidmətlərin göstərilməsindən gəlirlər 4. qanunvericiliyə müvafiq iddia müddəti keçmiş kreditor və deponent borc məbləğləri",
+            "Answers": [
+                "1, 4",
+                "1, 2",
+                "2, 3",
+                "2, 4"
+            ]
+        },
+        {
+            "Id": 62,
+            "Title": "Aşağıdakılardan hansı maliyyə xidmətlərinə aid deyildir?",
+            "Answers": [
+                "inkassasiya xidmətləri və ya banknotların, sənədli qiymətli kağızların saxlanması və ya onların qorunmasının təmin edilməsi üzrə xidmətlər",
+                "müştərilərin depozitlərinin və hesablarının idarə edilməsi, köçürmələr, borc öhdəlikləri və tədiyyə vasitələri ilə bağlı əməliyyatlar",
+                "səhmlərin, istiqrazların, veksellərin və digər qiymətli kağızların tədavülü ilə bağlı əməliyyatlar",
+                "qanuni tədiyyə vasitələri olan valyutanın, pul vəsaitlərinin və əskinazların [numizmatika əşyalarından başqa] tədavülü ilə bağlı əməliyyatlar"
+            ]
+        },
+        {
+            "Id": 63,
+            "Title": "Aşağıdakılardan hansı maliyyə xidməti sayılmır?",
+            "Answers": [
+                "banknotların, sənədli qiymətli kağızların və ya digər qiymətlilərin saxlanması və ya onların qorunmasının təmin edilməsi üzrə xidmətlər",
+                "kreditlərin, maliyyə lizinqi əməliyyatlarının, kredit təminatlarının və pul-kredit əməliyyatlarında hər hansı girov və ya lombard təminatının təqdim edilməsi (yaxud verilməsi) və qaytarılması, o cümlədən krediti və ya təminatı təqdim etmiş şəxsin kreditləri və kredit təminatlarını idarə etməsi;",
+                "törəmə maliyyə alətləri ilə əqdlərə və analoji sazişlərə aid əməliyyatlar",
+                "sığorta və təkrar sığorta əməliyyatları habelə bu əməliyyatlarla bağlı sığorta agenti və sığorta brokeri xidmətləri"
+            ]
+        },
+        {
+            "Id": 64,
+            "Title": "Vergitutma məqsədləri üçün dividend dedikdə, nə nəzərdə tutulur?",
+            "Answers": [
+                "hüquqi şəxsin öz təsisçilərinin [payçılarının] və yaxud səhmdarlarının xeyrinə xalis mənfəətinin bölüşdürülməsi o cümlədən hüquqi şəxs ləğv edilərkən xalis mənfəəti hesabına formalaşan əmlakın (aktivlərin) bölüşdürülməsi, habelə səhmlərin (payların) xalis mənfəət hesabına artırılan nominal dəyəri hüdudlarında geri alınması ilə bağlı pul və ya digər ödəmələr şəklində etdiyi ödəniş",
+                "fiziki şəxsin xalis mənfəətinin bölüşdürülməsi ilə bağlı pul və ya digər ödəmələr şəklində etdiyi ödəniş",
+                "səhmdarların yalnız hüquqi şəxsin xeyrinə xalis mənfəətin bölüşdürülməsi ilə bağlı pul və ya digər ödəmələr şəklində etdiyi ödəniş",
+                "hüquqi şəxsin öz təsisçilərinə [payçılarına] və yaxud səhmdarlarına natura şəklində əmək haqqı ödənilməsi və natura şəklində digər ödəmələr"
+            ]
+        },
+        {
+            "Id": 65,
+            "Title": "Aşağıdakılardan hansı dividend sayılmır? 1. hüquqi şəxsin ləğvi ilə bağlı əmlakın bölüşdürülməsi nəticəsində əldə edilən gəlir 2. səhmdarların səhmlərinin faiz nisbətini dəyişdirməyən səhmlərin bölüşdürülməsi ilə bağlı edilən ödənişlər 3. səhmlərin [hissələrin, payların] nominal dəyəri hüdudlarında geri alınması ilə bağlı edilən ödənişlər 4. hüquqi şəxsin öz təsisçilərinin [payçılarının] və yaxud səhmdarlarının xeyrinə xalis mənfəətinin bölüşdürülməsi, o cümlədən hüquqi şəxs ləğv edilərkən xalis mənfəəti hesabına formalaşan əmlakın (aktivlərin) bölüşdürülməsi, habelə səhmlərin (payların) xalis mənfəət hesabına artırılan nominal dəyəri hüdudlarında geri alınması ilə bağlı pul və ya digər ödəmələr şəklində etdiyi ödəniş",
+            "Answers": [
+                "1, 2, 3",
+                "1, 3, 4",
+                "2, 3, 4",
+                "1, 2, 4"
+            ]
+        },
+        {
+            "Id": 66,
+            "Title": "Azərbaycan mənbəyindən gəlirə aid deyil:",
+            "Answers": [
+                "Azərbaycan Respublikasının ərazisində daimi nümayəndəliyi və ya əmlakı olmayan şəxsdən alınan faizlər şəklində gəlir",
+                "Azərbaycan Respublikasında saxlanılan və ya istifadə edilən əmlak üçün alınan royalti şəklində gəlir",
+                "Azərbaycan Respublikasında saxlanılan və ya istifadə edilən qeyri-maddi aktivin təqdim edilməsindən gəlir",
+                "Azərbaycan Respublikasında istifadə edilən daşınan əmlakın icarəyə verilməsindən əldə edilən gəlir"
+            ]
+        },
+        {
+            "Id": 67,
+            "Title": "Azərbaycan mənbəyindən gəlirə aid deyil:",
+            "Answers": [
+                "xarici ölkədə mal təqdim olunmasından gəlir",
+                "Azərbaycan Respublikasında muzdlu işdən gəlir",
+                "Azərbaycan Respublikasında istehsal edilmiş malların istehsalçı tərəfindən təqdim edilməsindən gəlir;",
+                "Azərbaycan Respublikasında malların təqdim edilməsindən, iş görülməsindən və xidmət göstərilməsindən gəlir"
+            ]
+        },
+        {
+            "Id": 68,
+            "Title": "Aşağıdakılardan hansı Azərbaycan mənbəyindən gəlirə aid deyil:",
+            "Answers": [
+                "Xaricdə riskin sığortası və ya təkrar sığortası haqqında müqavilə üzrə ödənilən gəlir;",
+                "Azərbaycan Respublikası ilə digər dövlətlər arasında beynəlxalq rabitə və ya daşınmalar həyata keçirilərkən telekommunikasiya və ya nəqliyyat xidmətlərindən gəlir",
+                "mədəniyyət, incəsənət, teatr, kino, radio, televiziya, musiqi, rəssamlıq sahələri üzrə Azərbaycan Respublikasındakı fəaliyyətlə bağlı edilən ödənişlər",
+                "idman, mühəndislik, memarlıq, arxitektura və elm sahələri üzrə Azərbaycan Respublikasındakı fəaliyyətlə bağlı edilən ödənişlər"
+            ]
+        },
+        {
+            "Id": 69,
+            "Title": "Aşağıdakı hansı gəlirlər Azərbaycan mənbəyindən gəlirlərə aid edilir? 1. güzəştli vergi tutulan ölkələrdə (ərazilərdə) təsis edilmiş (qeydiyyatdan keçmiş) subyektlərə rezidentlərin və qeyri-rezidentlərin Azərbaycan Respublikasındakı daimi nümayəndəlikləri tərəfindən birbaşa və ya dolayısı ilə edilən ödənişlər 2. Azərbaycan Respublikasındakı sahibkarlıq fəaliyyəti ilə əlaqədar xərclərin Vergi Məcəlləsinə uyğun olaraq kompensasiya edilməsindən və ya ehtiyatların azalmasından gəlir 3. Azərbaycan Respublikasındakı sahibkarlıq fəaliyyəti ilə əlaqədar vergi ödəyicisinin borclarının onun kreditorları tərəfindən silinməsindən gəlir 4. Azərbaycan Respublikasının hüdudlarından kənardakı sahibkarlıq fəaliyyəti ilə əlaqədar vergi ödəyicisinin borclarının onun kreditorları tərəfindən silinməsindən gəlir",
+            "Answers": [
+                "1, 2, 3",
+                "1, 3, 4",
+                "2, 3, 4",
+                "1, 2, 4"
+            ]
+        },
+        {
+            "Id": 70,
+            "Title": "Aşağıdakı hansı gəlirlər Azərbaycan mənbəyindən gəlirlərə aid deyildir? 1. rezidentlərdən alınan faizlər şəklində gəlir 2. qeyri-rezident hüquqi şəxsdən dividend şəklində əldə edilən gəlir 3. rezident tərəfindən ödənilən pensiya 4. qeyri-rezidentin sahibkarlıq fəaliyyəti ilə bağlı olmayan əmlak təqdim edilməsindən əldə etdiyi digər gəlirlər",
+            "Answers": [
+                "2, 4",
+                "1, 4",
+                "3, 4",
+                "1, 2"
+            ]
+        },
+        {
+            "Id": 71,
+            "Title": "Azərbaycan Respublikasının ərazisində daimi nümayəndəliyi və ya əmlakı olan şəxsdən alınan faizlər şəklində gəlir hansı halda Azərbaycan mənbəyindən gəlirə aid edilir?",
+            "Answers": [
+                "həmin şəxsin bu faizlər üzrə borcu bu cür nümayəndəlik və ya əmlakla bağlı olduqda",
+                "həmin şəxsin bu faizlər üzrə borcu bu cür nümayəndəlik və ya əmlakla bağlı olmadıqda",
+                "heç bir halda aid edilmir",
+                "bütün hallarda aid edilir"
+            ]
+        },
+        {
+            "Id": 72,
+            "Title": "Aktivlərinin neçə faizdən çox olan hissəsi birbaşa və ya dolayısı ilə Azərbaycan Respublikasındakı daşınmaz əmlakdan ibarət olan müəssisənin səhmlərinin və ya iştirak payının təqdim edilməsindən gəlir Azərbaycan mənbəyindən gəlir sayılır?",
+            "Answers": [
+                "50 faizdən",
+                "25 faizdən",
+                "35 faizdən",
+                "45 faizdən"
+            ]
+        },
+        {
+            "Id": 73,
+            "Title": "İdarəetmə və maliyyə xidmətlərinin göstərilməsindən əldə edilən gəlir aşağıdakı hansı hallarda Azərbaycan mənbəyindən gəlirə aid edilir? 1. bu gəlir rezident hüquqi şəxsin və ya qeyri-rezidentin Azərbaycan Respublikasının ərazisində yerləşən daimi nümayəndəliyi tərəfindən ödənilirsə 2. bu gəlir rezident hüquqi şəxsin və ya qeyri-rezidentin Azərbaycan Respublikasının ərazisindən kənarda yerləşən daimi nümayəndəliyi tərəfindən ödənilirsə 3. bu gəlir heç bir halda Azərbaycan mənbəyindən gəlirə aid edilmir 4. bu gəlir müəssisə və ya onun daimi nümayəndəliyi ilə bağlanmış müqaviləyə əsasən əldə edilmişdirsə",
+            "Answers": [
+                "1, 2",
+                "1, 4",
+                "3, 4",
+                "2, 4"
+            ]
+        },
+        {
+            "Id": 74,
+            "Title": "Güzəştli vergi tutulan ölkələrdə (ərazilərdə) təsis edilmiş (qeydiyyatdan keçmiş) şəxslərə, o cümlədən digər ölkələrdə olan filial və ya nümayəndəliklərinə, güzəştli vergi tutulan ölkələrdə (ərazilərdə) olan bank hesablarına rezidentlər və qeyri-rezidentlərin Azərbaycan Respublikasındakı daimi nümayəndəlikləri tərəfindən birbaşa və ya dolayısı ilə edilən ödənişlər Azərbaycan mənbəyində gəlirlərə aid edilirmi?",
+            "Answers": [
+                "Azərbaycan mənbəyində gəlir sayılır",
+                "Digər ölkələrdə olan filial və ya nümayəndəliklərinə edilən ödənişlər aid edilmir",
+                "Azərbaycan mənbəyində gəlir sayılmır",
+                "Qeyri- rezidentləərə ödəmələr gəlir sayılmır"
+            ]
+        },
+        {
+            "Id": 75,
+            "Title": "Aşağıdakı hallardan hansında güzəştli vergi tutulan ölkələrə və ya ərazilərə edilən ödənişlər Azərbaycan mənbəyindən gəlirlərə aid edilir?",
+            "Answers": [
+                "vergi orqanında uçotda olmayan fiziki şəxslər tərəfindən elektron ticarət qaydasında xidmətlər alındıqda",
+                "vergi orqanında uçotda olmayan fiziki şəxslər tərəfindən güzəştli vergi tutulan ölkələrdə və ya ərazilərdə şəxsi istehlak məqsədilə daşınar əmlakların alışı ilə bağlı AR hüdudlarından kənarda ödənişlər edildikdə",
+                "rezident banklar tərəfindən açılan müxbir hesablara ödənişlər edildikdə",
+                "alınmış borclar üzrə ödənilən faiz"
+            ]
+        },
+        {
+            "Id": 76,
+            "Title": "Maddi aktivlərin istifadə müddəti neçə ildən çox olduqda, onlar əsas vəsait sayılır?",
+            "Answers": [
+                "1 ildən",
+                "2 ildən",
+                "3 ildən",
+                "5 ildən"
+            ]
+        },
+        {
+            "Id": 77,
+            "Title": "Maddi aktivlərin dəyəri neçə manatdan çox olduqda, onlar əsas vəsait sayılır?",
+            "Answers": [
+                "500 manatdan",
+                "100 manatdan",
+                "200 manatdan",
+                "300 manatdan"
+            ]
+        },
+        {
+            "Id": 78,
+            "Title": "Vergitutma məqsədləri üçün faizlər dedikdə, nə nəzərdə tutulur?",
+            "Answers": [
+                "borc öhdəlikləri ilə bağlı olan hər hansı ödəmə, o cümlədən kreditlərin [ssudaların] və ya depozitlərin [hesabların] verilməsi üçün ödəmə",
+                "krediti və ya təminatı təqdim etmiş şəxsin kreditləri və kredit təminatlarının idarə edilməsinə görə ödəmə",
+                "valyutanın, pul vəsaitlərinin və əskinasların [numizmatika əşyalarından başqa] tədavülü ilə bağlı ödəmə",
+                "istehsal edilmiş mallara görə ödəmə"
+            ]
+        },
+        {
+            "Id": 79,
+            "Title": "Vergitutma məqsədləri üçün xalis mənfəət dedikdə nə başa düşülür?",
+            "Answers": [
+                "mənfəət vergisi çıxıldıqdan sonra qalan mənfəət",
+                "balans mənfəəti",
+                "mühasibat mənfəəti",
+                "dolayı vergilər çıxıldıqdan sonra qalan mənfəət"
+            ]
+        },
+        {
+            "Id": 81,
+            "Title": "Vergitutma məqsədləri üçün əmlak dedikdə, nə nəzərdə tutulur?",
+            "Answers": [
+                "hər hansı daşınan və ya daşınmaz əmlak, o cümlədən qeyri-maddi aktivlər, dövriyyə vəsaitləri və mülkiyyət hüququnun digər obyektləri",
+                "yalnız istehsal fəaliyyətində istifadə olunan daşınmaz əmlak",
+                "daşınan əmlak, o cümlədən qeyri-maddi aktivlər, dövriyyə vəsaitləri və mülkiyyət hüququnun digər obyektləri",
+                "yalnız sahibkarlıq fəaliyyətində istifadə olunan daşınan və ya daşınmaz əmlak"
+            ]
+        },
+        {
+            "Id": 82,
+            "Title": "Əmlakın qalıq dəyəri dedikdə nə başa düşülür?",
+            "Answers": [
+                "əsas vəsaitlərin ilkin dəyərinin həmin əsas vəsaitlərə hesablanmış amortizasiyanın məbləği qədər azaldılan dəyəri",
+                "əsas vəsaitlərin alınması, gətirilməsi, istehsalı, tikilməsi və quraşdırılması üzrə formalaşan dəyər",
+                "əsas vəsaitlərin hesabat ilinin əvvəlinə olan dəyərinin həmin hesabat ilində təqdim edilmiş və ləğv edilmiş əsas vəsaitlərin məbləği qədər azaldılan dəyəri",
+                "əsas vəsaitlərin ilkin dəyərinin həmin əsas vəsaitlərə hesablanmış amortizasiyanın məbləği qədər artırılan dəyəri"
+            ]
+        },
+        {
+            "Id": 83,
+            "Title": "Vergitutma məqsədləri üçün royalti dedikdə nə başa düşülür?",
+            "Answers": [
+                "ədəbiyyat, incəsənət, yaxud elm əsərləri, proqram təminatı, kinematoqrafik filmlər və digər qeyri-maddi aktivlər üzərində müəllif hüquqlarından istifadə olunması, yaxud istifadə hüquqlarının verilməsinə görə, istənilən patentə, ticarət markasına, dizayn, yaxud modelə, plana, məxfi düstura, yaxud prosesə, sənaye, kommersiya, yaxud elmi təcrübəyə aid olan informasiyaya, sənaye, kommersiya və ya elmi avadanlıqdan istifadə, yaxud istifadə hüquqlarının verilməsinə görə mükafat şəklində alınan ödənişlər",
+                "hüquqi şəxsin öz təsisçilərinin (payçılarının) və yaxud səhmdarlarının xeyrinə xalis mənfəətinin bölüşdürülməsi ilə bağlı pul və ya digər ödəmələr şəklində etdiyi ödəniş",
+                "yalnız proqram təminatından istifadəyə görə verilən ödəniş",
+                "şəxsin qiymətli kağızlar, mallar və ya pul vəsaitləri gələcəkdə müəyyən vaxtda və müəyyən şərtlərlə bu cür kontraktın bağlandığı anda təsbit edilmiş qiymətlə əldə etməyə (satmağa) öhdəliyini təsdiq edən müqavilə"
+            ]
+        },
+        {
+            "Id": 84,
+            "Title": "Fyuçers nədir?",
+            "Answers": [
+                "baza aktivinin müəyyənləşdirilmiş növdə və sayda əvvəlcədən razılaşdırılmış tarixə və qiymətə alqı-satqısı üzrə törəmə maliyyə alətidir",
+                "şəxsin mallar və ya pul vəsaitləri gələcəkdə müəyyən vaxtda və müəyyən şərtlərlə bu cür kontraktının bağlandığı anda təsbit edilmiş qiymətlə əldə etmə öhdəliyini təsdiq edən müqavilədir",
+                "şəxsin mallar və ya pul vəsaitini alınması məqsədi ilə bağlanan müqavilədir",
+                "qiymətli kağızlar, mallar və ya pul vəsaitləri gələcəkdə müəyyən şərtlərlə bu cür əldə etmənin anına satış qiyməti ilə əldə etməyə hüququ təsdiq edən sənəddir"
+            ]
+        },
+        {
+            "Id": 85,
+            "Title": "Aşağıdakılardan hansı maliyyə xidməti sayılmır?",
+            "Answers": [
+                "inkassasiya xidmətləri",
+                "qanuni ödəniş alətləri olan valyutanın, pul vəsaitlərinin və əskinasların tədavülü ilə bağlı əməliyyatlar",
+                "çeklərin tədavülü ilə bağlı əməliyyatlar",
+                "krediti və ya təminatı təqdim etmiş şəxsin kreditləri və kredit təminatlarını idarə etməsi"
+            ]
+        },
+        {
+            "Id": 86,
+            "Title": "Qeyri-kommersiya fəaliyyəti dedikdə, hansı fəaliyyət nəzərdə tutulur?",
+            "Answers": [
+                "məqsədi gəlir götürmək olmayan və əldə etdiyi gəliri yalnız qeyri-kommersiya məqsədləri üçün istifadə etməyi nəzərdə tutan fəaliyyət",
+                "məqsədi gəlir götürmək olan və əldə etdiyi gəliri yalnız kommersiya məqsədləri üçün istifadə etməyi nəzərdə tutan fəaliyyət",
+                "yalnız xeyriyyəçilik fəaliyyəti",
+                "əldə etdiyi gəliri qeyri-kommersiya məqsədləri üçün istifadə etməyi nəzərdə tutmayan fəaliyyət"
+            ]
+        },
+        {
+            "Id": 91,
+            "Title": "Azərbaycan Respublikası ərazisindən tranzit nədir?",
+            "Answers": [
+                "gömrük qanunvericiliyi ilə müəyyən edilmiş qaydada Azərbaycan Respublikası sərhədindəki iki məntəqə arasında Azərbaycan Respublikası ərazisi ilə daşınmadır",
+                "gömrük qanunvericiliyi ilə müəyyən edilmiş qaydada AR sərhədindəki üç və daha çox məntəqə arasında xarici ölkə ərazisi ilə daşınmadır",
+                "gömrük qanunvericiliyi ilə müəyyən edilmiş qaydada AR sərhədindəki üç və daha çox məntəqə arasında AR ərazisi ilə daşınmadır",
+                "gömrük qanunvericiliyi ilə müəyyən edilmiş qaydada AR sərhədindəki iki məntəqə arasında xarici ölkə ərazisi ilə daşınmadır"
+            ]
+        },
+        {
+            "Id": 92,
+            "Title": "Beynəlxalq daşıma dedikdə nə başa düşülür?",
+            "Answers": [
+                "yüklərin, sərnişinlərin, baqajın və poçtun daşıma sənədləri əsasında müxtəlif nəqliyyat növləri ilə Azərbaycan Respublikasında yerləşən göndərilmə məntəqəsi ilə digər dövlətdəki təyinat məntəqəsi arasında daşınması",
+                "yüklərin və sərnişinlərin Azərbaycan Respublikasında iki məntəqə arasında daşınması",
+                "yüklərin və sərnişinlərin daşıma sənədləri əsasında müxtəlif nəqliyyat növləri ilə AR sərhədlərindən digər dövlətlərdəki məntəqə arasında daşınması",
+                "yüklərin, sərnişinlərin, baqajın və poçtun AR-dakı məntəqə ilə digər dövlətlərin sərhədinədək daşınması"
+            ]
+        },
+        {
+            "Id": 97,
+            "Title": "Sahibkarlıq fəaliyyətinin əsas məqsədi nədir?",
+            "Answers": [
+                "şəxsin müstəqil surətdə həyata keçirdiyi, əsas məqsədi əmlak istifadəsindən, malların təqdim edilməsindən, işlər görülməsindən və ya xidmətlər göstərilməsindən mənfəət (fərdi sahibkarlar tərəfindən gəlir) götürülməsi olan fəaliyyətidir",
+                "şəxsin vətənə xidmət göstərməsi ilə əlaqədar olan fəaliyyətidir",
+                "şəxsin müstəqil surətdə, digər şəxslərlə müqavilələr bağladığı fəaliyyətdir",
+                "şəxsin gəlir əldə etməklə bağlı olmayan fəaliyyətidir"
+            ]
+        },
+        {
+            "Id": 98,
+            "Title": "Vergitutma məqsədləri üçün büdcə təşkilatını səciyyələndirən başlıca əlamətlər hansılardır?",
+            "Answers": [
+                "büdcə smetası əsasında fəaliyyətinin tamamilə və ya qismən büdcə vəsaiti hesabına maliyyələşdirilməsi, hesablaşma hesabının olmaması və qeyri-kommersiya təşkilatı olması",
+                "təsərrüfatçılıq fəaliyyəti ilə məşğul olması, gəlir əldə etməsi",
+                "büdcədənkənar vəsaitlərlə özünü maliyyələşdirməsi, hesablaşma hesabının olması",
+                "xərclərini öz vəsaiti hesabına maliyyələşdirilməsi, gəlir götürmək məqsədinin olması"
+            ]
+        },
+        {
+            "Id": 99,
+            "Title": "Vergi Məcəlləsinin məqsədləri üçün müəssisə dedikdə nə nəzərdə tutulur? 1. sahibkarlıq fæaliyyætini hæyata keçiræn væ bu cür fæaliyyæt üçün AR qanunvericiliyinə müvafiq olaraq yaradılmış hüquqi şəxslər 2. sahibkarlıq fəaliyyəti ilə məşğul olan fiziki şəxslər 3. sahibkarlıq fæaliyyætini hæyata keçiræn væ bu cür fæaliyyæt üçün xarici dövlətin qanunvericiliyinə uyğun olaraq yaradılmış hüquqi şəxslər habelə onların filialları 4. sərbəst balansa malik olan filialları, struktur bölmələri",
+            "Answers": [
+                "1, 3, 4",
+                "1, 2, 3",
+                "2, 3, 4",
+                "1, 2, 4"
+            ]
+        },
+        {
+            "Id": 100,
+            "Title": "ƏDV-nin depozit hesabı dedikdə nə nəzərdə tutulur?",
+            "Answers": [
+                "ƏDV-nin mədaxili, uçotu, hərəkəti və dövlət büdcəsinə məxarici ilə bağlı əməliyyatlar aparılan vahid xəzinə hesabı",
+                "vergi ödəyicilərinin özlərinin ƏDV ilə bağlı əməliyyatlarının uçotunun aparılması üçün banklarda açdıqları xüsusi depozit hesabı",
+                "vergi ödəyicilərinin özlərinin vergi öhdəlikləri ilə bağlı əməliyyatlarının uçotunun aparılması üçün banklarda açdıqları xüsusi hesablar",
+                "digər şəxslərlə aparılan təsərrüfat əməliyyatlarında hesablaşmaların uçotunu aparan hesab"
+            ]
+        },
+        {
+            "Id": 117,
+            "Title": "Aşağıdakılardan hansı Publik hüquqi şəxsin xüsusiyyətlərinə aid deyil?",
+            "Answers": [
+                "Azərbaycan Respublikasının və ya xarici dövlətin qanunvericiliyinə uyğun olaraq hüquqi şəxs statusunda yaradılır",
+                "dövlət və bələdiyyə adından hüquqi şəxs statusunda yaradılır",
+                "ümumdövlət və ictimai əhəmiyyət daşıyan fəaliyyətlə məşğul olur",
+                "dövlət və ya bələdiyyə orqanı hesab edilmir"
+            ]
+        },
+        {
+            "Id": 124,
+            "Title": "Könüllü açıqlama nədir? 1. səyyar vergi yoxlaması başa çatanadek vergi öhdəliyinin yaranmasına səbəb olan halların vergi ödəyiciləri tərəfindən vergi orqanlarına könüllü olaraq bəyan edilməsi 2. səyyar vergi yoxlaması başa çatdıqdan sonra yoxlama zamanı aşkar edilən halların vergi ödəyiciləri tərəfindən vergi orqanlarına könüllü olaraq bəyan edilməsi 3. səyyar vergi yoxlaması və ya üfüqi monitorinq başa çatdıqdan sonra yoxlama zamanı aşkar edilməyən və vergi öhdəliyinin, habelə məcburi dövlət sosial sığorta, işsizlikdən sığorta və icbari tibbi sığorta haqları üzrə öhdəliyin yaranmasına səbəb olan halların vergi ödəyiciləri tərəfindən vergi orqanlarına könüllü olaraq bəyan edilməsi 4. səyyar vergi yoxlaması başa çatanadek yoxlama zamanı aşkar edilən və vergi öhdəliyinin yaranmasına səbəb olmayan halların vergi ödəyiciləri tərəfindən vergi orqanlarına könüllü olaraq bəyan edilməsi 5. səyyar vergi yoxlamasının keçirilməsindən asılı olmayaraq həmin halların Vergi Məcəlləsində göstərilən 3 illik müddətdən əvvəlki dövrlər üzrə könüllü olaraq bəyan edilməsi",
+            "Answers": [
+                "3,5",
+                "1,2",
+                "2,3",
+                "4,5"
+            ]
+        },
+        {
+            "Id": 125,
+            "Title": "Əmtəəsiz əməliyyat dedikdə hansı əməliyyatlar nəzərdə tutulur?",
+            "Answers": [
+                "vergi nəzarəti tədbiri zamanı aşkarlanan, başqa əməliyyatı pərdələmək məqsədilə və ya bu cür məqsəd olmadan aparılan və faktiki olaraq mallar, işlər və xidmətlər təqdim edilmədən mənfəət (gəlir) əldə etmək məqsədilə rəsmiləşdirilən uydurma və (və ya) yalan əqd çərçivəsində aparılan əməliyyatlar",
+                "vergi nəzarəti tədbiri zamanı aşkarlanmayan, həmin əməliyyatı pərdələmək məqsədilə aparılan və faktiki olaraq mallar, işlər və xidmətlər təqdim edilmədən mənfəət əldə etmək məqsədilə rəsmiləşdirilən əməliyyatlar",
+                "vergi nəzarəti tədbiri zamanı aşkarlanan, başqa əməliyyatı pərdələmək məqsədilə aparılan və faktiki olaraq mallar, işlər və xidmətlər təqdim edilməklə mənfəət əldə etmək məqsədilə rəsmiləşdirilən əməliyyatlar",
+                "vergi nəzarəti tədbiri zamanı aşkarlanan, başqa əməliyyatı pərdələmək məqsədi güdməyən, mənfəət əldə etməmək məqsədilə rəsmiləşdirilən əməliyyatlar"
+            ]
+        },
+        {
+            "Id": 127,
+            "Title": "Aşağıdakılardan hansı satışdankənar gəlirlərə aiddir: 1. mal və xidmət (iş) istehsalı və satışı ilə bilavasitə bağlı olmayan əməliyyatdan götürülən digər gəlirlər 2. xarici valyuta əməliyyatları üzrə artan məzənnə fərqi 3. qanunvericiliyə müvafiq iddia müddəti keçmiş kreditor və deponent borc məbləğləri 4. Azərbaycan Respublikasında malların təqdim edilməsindən gəlir",
+            "Answers": [
+                "1, 2, 3",
+                "1, 2, 4",
+                "2, 3, 4",
+                "1, 3, 4"
+            ]
+        },
+        {
+            "Id": 129,
+            "Title": "Vergitutma məqsədləri üçün aşağıdakılardan hansı ticarət fəaliyyəti sayılır?",
+            "Answers": [
+                "istehsalçılar tərəfindən özlərinin istehsal etdiyi malların təqdim edilməsi istisna olmaqla, malların təqdim edilməsi ilə əlaqədar sahibkarlıq fəaliyyəti",
+                "istehsalçılar tərəfindən özlərinin istehsal etdiyi malların təqdim edilməsi",
+                "malların təqdim edilməsi sayılmayan, nəticəsi maddi ifadə kəsb edən fəaliyyət",
+                "fəaliyyət göstərdiyi xidmət obyektinin ərazisində və ya səyyar qaydada alıcıya istehlak məqsədilə hazırlanmış (bişirilmiş) qida (yeyinti) məhsullarının təqdim edilməsi ilə əlaqədar sahibkarlıq fəaliyyəti"
+            ]
+        },
+        {
+            "Id": 130,
+            "Title": "Vergitutma məqsədləri üçün aşağıdakılardan hansı ictimai iaşə fəaliyyəti sayılır?",
+            "Answers": [
+                "fəaliyyət göstərdiyi xidmət obyektinin ərazisində və ya səyyar qaydada alıcıya istehlak məqsədilə hazırlanmış (bişirilmiş) qida (yeyinti) məhsullarının təqdim edilməsi ilə əlaqədar sahibkarlıq fəaliyyəti",
+                "istehsalçılar tərəfindən özlərinin istehsal etdiyi malların təqdim edilməsi",
+                "istehsalçılar tərəfindən özlərinin istehsal etdiyi malların təqdim edilməsi istisna olmaqla, malların təqdim edilməsi ilə əlaqədar sahibkarlıq fəaliyyəti",
+                "malların təqdim edilməsi sayılmayan, nəticəsi maddi ifadə kəsb edən fəaliyyət"
+            ]
+        },
+        {
+            "Id": 133,
+            "Title": "Kənd təsərrüfatı məhsullarının istehsalı dedikdə nə nəzərdə tutulur ?",
+            "Answers": [
+                "sənaye üsulu (o cümlədən xüsusi broyler təsərrüfatları, avtomatlaşdırılmış tövlə sistemləri və sair) da daxil olmaqla, heyvanların və quşların yetişdirilməsi, bəslənməsi, diri şəkildə olarkən onlardan məhsulların (ilkin formada, yarımfabrikat kimi istifadə olunaraq yeni məhsula çevrilmədən, kimyəvi tərkibi dəyişdirilmədən, konservləşdirilmədən) əldə edilməsi, bitkiçilik məhsullarının becərilməsi",
+                "heyvanların və quşların yetişdirilməsi, bəslənməsi, diri şəkildə olarkən onlardan məhsulların (ilkin formada, yarımfabrikat kimi istifadə olunaraq yeni məhsula çevrilmədən, kimyəvi tərkibi dəyişdirilmədən, konservləşdirilməklə) əldə edilməsi",
+                "sənaye üsulu (o cümlədən xüsusi broyler təsərrüfatları, avtomatlaşdırılmış tövlə sistemləri və sair) da daxil olmaqla, heyvanların və quşların yetişdirilməsi, bəslənməsi, diri şəkildə olarkən onlardan məhsulların (ilkin formada, yarımfabrikat kimi istifadə olunaraq yeni məhsula çevrilməklə, kimyəvi tərkibi dəyişdirilməklə, konservləşdirilmədən) əldə edilməsi",
+                "bitkiçilik məhsullarının becərilməsi onlarin kimyəvi tərkibi dəyişməklə və ya dəyişdirilmədən təbiətdə olduğu kimi istehsalı"
+            ]
+        },
+        {
+            "Id": 134,
+            "Title": "Kənd təsərrüfatı məhsullarının satışı dedikdə nə nəzərdə tutulur?",
+            "Answers": [
+                "istehsal olunan (o cümlədən sənaye üsulu ilə, xüsusi broyler təsərrüfatlarında, avtomatlaşdırılmış tövlə sistemlərində və digər yerlərdə) canlılar diri şəkildə, habelə onlardan diri şəkildə olarkən əldə edilmiş məhsullar ilkin formada, heç bir kimyəvi təsirə məruz qalmadan təqdim edilməlidir",
+                "istehsal olunan (o cümlədən sənaye üsulu ilə, xüsusi broyler təsərrüfatlarında, avtomatlaşdırılmış tövlə sistemlərində və digər yerlərdə) canlılar diri şəkildə, habelə onlardan diri şəkildə olarkən əldə edilmiş məhsullar ilkin formada, kimyəvi təsirə məruz qalmaqla təqdim edilməsi",
+                "istehsal olunan (o cümlədən sənaye üsulu ilə, xüsusi broyler təsərrüfatlarında, avtomatlaşdırılmış tövlə sistemlərində və digər yerlərdə) canlılar yalnız diri şəkildə təqdim edilməsi",
+                "istehsal olunan canlılar diri şəkildə, habelə onlardan diri şəkildə olarkən əldə edilmiş məhsullar ilkin formada konservləşdirilməklə heç bir kimyəvi təsirə məruz qalmadan təqdim edilməsi"
+            ]
+        },
+        {
+            "Id": 135,
+            "Title": "Kənd təsərrüfatı məhsullarının satışı dedikdə nə nəzərdə tutulur",
+            "Answers": [
+                "bitkiçilik məhsulları və digər kənd təsərrüfatı məhsulları təqdim edilərkən təbiətdə olduğu ilkin formasını saxlamalı, kimyəvi tərkibi dəyişdirilməməli, konservləşdirilməməlidir",
+                "bitkiçilik məhsulları və digər kənd təsərrüfatı məhsulları təqdim edilərkən təbiətdə olduğu ilkin formasını saxlamalı, kimyəvi tərkibi dəyişdirilməklə teqdim edilməsi",
+                "bitkiçilik məhsulları və digər kənd təsərrüfatı məhsulları təqdim edilərkən təbiətdə olduğu ilkin formasını dəyişdirməklə, kimyəvi tərkibi dəyişdirilməməklə teqdim edilməsi",
+                "bitkiçilik məhsulları və digər kənd təsərrüfatı məhsulları təqdim edilərkən təbiətdə olduğu ilkin formasını dəyişdirməklə, kimyəvi tərkibi dəyişdirilməməklə konservləşdirməklə teqdim edilməsi"
+            ]
+        },
+        {
+            "Id": 135,
+            "Title": "Aşağıdakı məhsullardan hansı kənd təsərrüfatı məhsullarının istehsalına bərabər tutulur ?",
+            "Answers": [
+                "balıqyetişdirmə fəaliyyətini həyata keçirən şəxslər tərəfindən kəsilmə və dondurulma əməliyyatlarına məruz qalan balıq məhsulları",
+                "balıq kürüsünün istehsalı",
+                "emal əməliyyatlarına məruz qalan balıq məhsulları",
+                "xarici mənşəli qalan balıq məhsulları"
+            ]
+        },
+        {
+            "Id": 136,
+            "Title": "Pərakəndə satış dedikdə nə nəzərdə tutulur?",
+            "Answers": [
+                "malların alıcıya satışının son istehlak məqsədi ilə və Vergi Məcəlləsində müəyyən edilmiş qaydada qəbz və ya nəzarət-kassa aparatının çeki və ya sahibkarlıq fəaliyyətini həyata keçirən hüquqi və fiziki şəxslərin tələbi ilə elektron-qaimə faktura təqdim edilməklə həyata keçirilən ticarət fəaliyyəti",
+                "malların alıcıya satışının son istehlak məqsədi ilə və yalnız Vergi Məcəlləsində müəyyən edilmiş qaydada ciddi hesabat blankları təqdim edilməklə həyata keçirilən ticarət fəaliyyəti",
+                "malların alıcıya satışının son istehlak məqsədi ilə və yalnız Vergi Məcəlləsində müəyyən edilmiş qaydada qəbz və ya nəzarət-kassa aparatının çeki təqdim edilməklə həyata keçirilməsi üzrə ticarət fəaliyyəti",
+                "malların alıcıya satışının onun sahibkarlıq fəaliyyəti məqsədləri üçün və yalnız Vergi Məcəlləsində müəyyən edilmiş qaydada qəbz və ya nəzarət-kassa aparatının çeki teqdim etmədən həyata keçirilməsi üzrə ticarət fəaliyyəti"
+            ]
+        },
+        {
+            "Id": 137,
+            "Title": "Topdansatış dedikdə nə nəzərdə tutulur?",
+            "Answers": [
+                "malların alıcıya satışının onun sahibkarlıq fəaliyyəti məqsədləri üçün və yalnız Vergi Məcəlləsində müəyyən edilmiş qaydada elektron-qaimə faktura təqdim edilməklə həyata keçirilməsi üzrə ticarət fəaliyyəti",
+                "malların alıcıya satışının son istehlak məqsədi ilə və yalnız Vergi Məcəlləsində müəyyən edilmiş qaydada qəbz və ya nəzarət-kassa aparatının çeki teqdim etmədən həyata keçirilməsi üzrə ticarət fəaliyyəti",
+                "malların alıcıya satışının son istehlak məqsədi ilə və yalnız Vergi Məcəlləsində müəyyən edilmiş qaydada qəbz və ya nəzarət-kassa aparatının çeki (sahibkarlıq fəaliyyətini həyata keçirən hüquqi və fiziki şəxslərin tələbi ilə elektron-qaimə faktura) təqdim edilməklə həyata keçirilməsi üzrə ticarət fəaliyyəti",
+                "malların alıcıya satışının onun sahibkarlıq fəaliyyəti məqsədləri üçün və yalnız Vergi Məcəlləsində müəyyən edilmiş qaydada qəbz və ya nəzarət-kassa aparatının çeki təqdim edilməklə həyata keçirilməsi üzrə ticarət fəaliyyəti"
+            ]
+        },
+        {
+            "Id": 138,
+            "Title": "Ticarət əlavəsi dedikdə nə nəzərdə tutulur?",
+            "Answers": [
+                "malın ƏDV tətbiq edilmədən satış qiyməti (mallar əvəzsiz təqdim edildiyi və ya barter olunduğu halda bazar qiyməti) ilə malgöndərənə ödənilən alış qiyməti arasındakı fərq",
+                "malın ƏDV tətbiq edilməklə pərakəndə satış qiyməti (mallar əvəzsiz təqdim edildiyi və ya barter olunduğu halda bazar qiyməti) ilə malgöndərənə ödənilən alış qiyməti arasındakı fərq",
+                "malın ƏDV tətbiq edilməklə bazar qiyməti (mallar əvəzsiz təqdim edildiyi və ya barter olunduğu halda bazar qiyməti) ilə malgöndərənə ödənilən alış qiyməti arasındakı fərq",
+                "malın ƏDV tətbiq edilmədən pərakəndə satış qiyməti ilə topdansatış qiyməti arasındakı fərq"
+            ]
+        },
+        {
+            "Id": 143,
+            "Title": "Kapital dedikdə nə nəzərdə tutulur",
+            "Answers": [
+                "aktivlərdən bütün öhdəliklər çıxıldıqdan sonra vergi ödəyicisinin xalis aktivlərinin dəyəri;",
+                "gəlirlərdən xərclər çıxıldıqdan sonra vergi ödəyicisinin xalis aktivlərinin dəyəri;",
+                "aktivlərdə gəlirlər çıxıldıqdan sonra vergi ödəyicisinin xalis aktivlərinin dəyəri;",
+                "mənfəətdən mənfəət vergisi çıxıldıqdan sonra qalan aktivin dəyəri"
+            ]
+        },
+        {
+            "Id": 145,
+            "Title": "Vergi Məcəlləsinə əsasən bazar qiyməti nədir?",
+            "Answers": [
+                "malın (işin, xidmətin) tələblə təklifin qarşılıqlı təsiri nəticəsində təşəkkül tapan qiymətidir",
+                "yalnız bazarda mala olan tələbin nəticəsində təşəkkül tapan qiymətidir",
+                "digər ölkə bazarlarının yerli bazara təsiri nəticəsində təşəkkül tapan qiymətidir",
+                "idxal olunan malların qiymətinin daxildə istehsal olunan malların qiymətinə təsiri nəticəsində təşəkkül tapan qiymətidir"
+            ]
+        },
+        {
+            "Id": 146,
+            "Title": "Bazar qiyməti nəzərə alınmaqla vergilərin hesablanması aşağıdakı hansı halda həyata keçirilə bilməz?",
+            "Answers": [
+                "vergitutma məqsədləri üçün malların [işlərin, xidmətlərin] qiyməti tərəflərin əməliyyatda [əqddə] təsbit etdikləri qiymət qəbul edildikdə və bu hal sübuta yetirildikdə",
+                "barter [mal mübadiləsi], idxal-ixrac əməliyyatları aparıldıqda",
+                "təsərrüfat əqdləri qarşılıqlı surətdə asılı olan şəxslər arasında həyata keçirildikdə;",
+                "vergi nəzarəti tədbiri zamanı vergi ödəyicisi tərəfindən malların (işlərin, xidmətlərin) təqdim edilməsinə dair sənədlər təqdim edilmədikdə (mövcud olmadıqda)"
+            ]
+        },
+        {
+            "Id": 147,
+            "Title": "Vergi Məcəlləsində başqa hallar nəzərdə tutulmamışdırsa, vergitutma məqsədləri üçün malların [işlərin, xidmətlərin] qiyməti kimi hansı qiymət qəbul edilir?",
+            "Answers": [
+                "tərəflərin əməliyyatda [əqddə] təsbit etdikləri qiymət",
+                "maya dəyəri və rentabellik norması nəzərə alınmaqla müəyyən edilən qiymət",
+                "statistik qiymət",
+                "bazar qiyməti"
+            ]
+        },
+        {
+            "Id": 148,
+            "Title": "Məlum olduğu kimi, Vergi Məcəlləsində başqa hallar nəzərdə tutulmamışdırsa, vergitutma məqsədləri üçün malların [işlərin, xidmətlərin] qiyməti tərəflərin əməliyyatda [əqddə] təsbit etdikləri qiymət qəbul edilir. Əks hal sübuta yetirilmirsə, bu qiymət bazar qiyməti kimi götürülə bilərmi?",
+            "Answers": [
+                "götürülə bilər",
+                "müstəsna hallarda götürülə bilər",
+                "müstəsna hallarda götürülə bilməz",
+                "heç bir halda götürülə bilməz"
+            ]
+        },
+        {
+            "Id": 149,
+            "Title": "Pərakəndə satış ticarət fəaliyyəti üzrə bazar qiyməti nəzərə alınmaqla vergilərin hesablanması aşağıdakı hansı hallarda həyata keçirilə bilər?\n1. barter [mal mübadiləsi], idxal-ixrac əməliyyatları aparıldıqda\n2. 30 gün ərzində vergi ödəyicilərinin eyni xüsusiyyətli və ya eyni cinsli mallara [işə, xidmətə] tətbiq etdikləri qiymətlərin səviyyəsi 20 faizdən çox [aşağı, yuxarı] dəyişdikdə\n3. təsərrüfat əqdləri qarşılıqlı surətdə asılı olan şəxslər arasında həyata keçirildikdə\n4. 30 gün ərzində vergi ödəyicilərinin eyni xüsusiyyətli və ya eyni cinsli mallara (işə, xidmətə) tətbiq etdikləri qiymətlərin səviyyəsi bazarda eyni (analoji) mal (iş, xidmət) üçün müvafiq əməliyyatlar zamanı təşəkkül tapan qiymətlərin səviyyəsindən 30 faizdən çox (aşağı və yuxarı) fərqləndikdə\n5. təsərrüfat əqdləri oxşar fəaliyyətlə məşğul olan şəxslər arasında həyata keçirildikdə",
+            "Answers": [
+                "1, 3, 4",
+                "2, 3, 4",
+                "1, 2, 5",
+                "2, 4, 5"
+            ]
+        },
+        {
+            "Id": 150,
+            "Title": "Tikinti fəaliyyəti üzrə bazar qiyməti nəzərə alınmaqla vergilərin hesablanması aşağıdakı hansı hallarda həyata keçirilə bilər?\n1. barter [mal mübadiləsi], idxal-ixrac əməliyyatları aparıldıqda\n2. 30 gün ərzində vergi ödəyicilərinin eyni xüsusiyyətli və ya eyni cinsli mallara [işə, xidmətə] tətbiq etdikləri qiymətlərin səviyyəsi 10 faizdən çox [aşağı, yuxarı] dəyişdikdə\n3. təsərrüfat əqdləri qarşılıqlı surətdə asılı olan şəxslər arasında həyata keçirildikdə\n4. 30 gün ərzində vergi ödəyicilərinin eyni xüsusiyyətli mallara tətbiq etdikləri qiymətlərin səviyyəsi, müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilmiş təbii itki normaları daxilində zayolmadan əmələgələn itkilər nəzərə alınmadan, bazarda eyni mal üçün müvafiq əməliyyatlar zamanı təşəkkül tapan qiymətlərin səviyyəsindən 30 faizdən çox fərqləndikdə\n5. müəssisənin əmlakı qalıq dəyərindən artıq qiymətə sığortalandığı halda",
+            "Answers": [
+                "1, 3, 4",
+                "2, 3, 4",
+                "1, 3, 5",
+                "2, 4, 5"
+            ]
+        },
+        {
+            "Id": 151,
+            "Title": "İstehsal fəaliyyəti üzrə bazar qiyməti nəzərə alınmaqla vergilərin hesablanması aşağıdakı hansı hallarda həyata keçirilə bilər?\n1. daşınmaz əmlakın (sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan yaşayış fondu istisna olmaqla) vergitutma məqsədləri üçün aylıq icarə haqqının məbləğinin müəyyən edilməsi zərurəti yarandıqda\n2. 30 gün ərzində vergi ödəyicilərinin eyni xüsusiyyətli və ya eyni cinsli mallara [işə, xidmətə] tətbiq etdikləri qiymətlərin səviyyəsi 10 faizdən çox [aşağı, yuxarı] dəyişdikdə\n3. təsərrüfat əqdləri qarşılıqlı surətdə asılı olan şəxslər arasında həyata keçirildikdə\n4. 30 gün ərzində vergi ödəyicilərinin eyni xüsusiyyətli və ya eyni cinsli mallara [işə, xidmətə] tətbiq etdikləri qiymətlərin səviyyəsi 30 faizdən çox [aşağı, yuxarı] dəyişdikdə\n5. müəssisənin əmlakı qalıq dəyərindən artıq qiymətə sığortalandığı halda",
+            "Answers": [
+                "1, 3, 4",
+                "2, 3, 4",
+                "1, 3, 5",
+                "2, 4, 5"
+            ]
+        },
+        {
+            "Id": 152,
+            "Title": "Neçə gün ərzində vergi ödəyicisinin eyni xüsusiyyətli və ya eyni cinsli mallara [işlərə, xidmətlərə] tətbiq etdikləri qiymətlərin səviyyəsi müvafiq olaraq 10, 20 və 30 %-dən çox dəyişdikdə, bazar qiyməti tətbiq edilir?",
+            "Answers": [
+                "30 gün",
+                "10 gün",
+                "25 gün",
+                "45 gün"
+            ]
+        },
+        {
+            "Id": 153,
+            "Title": "Bazar qiyməti aşağıdakılardan hansılara əsasən müəyyənləşdirilir?\n1. mal [iş, xidmət] satılan anadək, lakin malın [işin, xidmətin] təqdim edildiyi andan çoxu 30 gün keçənədək [əvvəl və ya sonra] ən yaxın tarixdə eyni [analoji] mal [iş, xidmət] üçün müvafiq əməliyyatlar zamanı təşəkkül tapan qiymətlərə əsasən\n2. malın [işin, xidmətin] istehsalına və [və ya] təqdim edilməsinə çəkilən adi məsrəflər [alınma qiyməti və ya qalıq dəyəri], nəqletmə, saxlanma, sığorta və digər bu cür məsrəflər nəzərə alınmaqla\n3. qarşılıqlı surətdə bağlı olmayan şəxslər arasında əməliyyatlar zamanı tələb və təkliflər amilinə əsasən əlavə yığım və güzəştlər nəzərə alınmaqla\n4. vergitutma məqsədləri üçün tərəflərin əməliyyatda mallar [işlər, xidmətlər] üçün təsbit etdikləri qiymət nəzərə alınmaqla",
+            "Answers": [
+                "1, 2, 3",
+                "1, 2, 4",
+                "1, 3, 4",
+                "2, 3, 4"
+            ]
+        }
+    ]
+}
