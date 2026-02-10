@@ -34,7 +34,7 @@ export default class TestingPage extends Page {
     ]),
     new Semestr("?", [
       new Subject("Vergi qanunvericiliyi?", "?", ["No related"], "Vergi qanunvericiliyi","s_no_idea/qan.json"),
-      new Subject("XH nezeri?", "?", ["No related"], "XH nezeri","s_no_idea/qan.json")
+      new Subject("XH nezeri?", "?", ["No related"], "XH nezeri","s_no_idea/qan1.json")
     ])
   ];
   protected async preInit(): Promise<void> {
