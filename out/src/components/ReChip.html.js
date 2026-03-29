@@ -15,7 +15,7 @@ let ReChip = class ReChip extends ComponentCore {
 ReChip = __decorate([
     ReComponent({
         markupURL: "./src/components/ReChip.hmle",
-        cssURL: "./src/components/ReChip.html.css",
+        cssURL: "./out/src/components/ReChip.html.css",
         jsURL: "./src/components/ReChip.html.js",
     }, "re-chip")
 ], ReChip);

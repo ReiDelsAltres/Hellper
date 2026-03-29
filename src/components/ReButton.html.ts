@@ -4,7 +4,7 @@ import ComponentCore from "./core/ComponentCore.js";
 
 @ReComponent({
     markupURL: "./src/components/ReButton.hmle",
-    cssURL: "./src/components/ReButton.html.css",
+    cssURL: "./out/src/components/ReButton.html.css",
     jsURL: "./src/components/ReButton.html.js",
 }, "re-button")
 export default class ReButton extends ComponentCore {

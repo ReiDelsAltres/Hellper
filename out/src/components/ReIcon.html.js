@@ -32,7 +32,7 @@ let ReIcon = class ReIcon extends ComponentCore {
 ReIcon = __decorate([
     ReComponent({
         markupURL: "./src/components/ReIcon.hmle",
-        cssURL: "./src/components/ReIcon.html.css",
+        cssURL: "./out/src/components/ReIcon.html.css",
         jsURL: "./src/components/ReIcon.html.js",
     }, "re-icon")
 ], ReIcon);
