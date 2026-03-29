@@ -45,8 +45,8 @@ let AppLayout = class AppLayout extends ComponentCore {
 AppLayout = __decorate([
     ReComponent({
         markupURL: "./src/components/AppLayout.hmle",
-        cssURL: "../../out/src/components/AppLayout.html.css",
-        ltCssURL: "../../out/src/components/AppLayout.html.lt.css",
+        cssURL: "./out/src/components/AppLayout.html.css",
+        ltCssURL: "./out/src/components/AppLayout.html.lt.css",
         jsURL: "./src/components/AppLayout.html.js",
     }, "app-layout")
 ], AppLayout);

@@ -7,7 +7,7 @@ export type IconAnimation = 'none' | 'spin' | 'pulse' | 'bounce' | 'shake';
 
 @ReComponent({
     markupURL: "./src/components/ReIcon.hmle",
-    cssURL: "../../out/src/components/ReIcon.html.css",
+    cssURL: "./out/src/components/ReIcon.html.css",
     jsURL: "./src/components/ReIcon.html.js",
 }, "re-icon")
 export default class ReIcon extends ComponentCore {

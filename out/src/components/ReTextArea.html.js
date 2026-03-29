@@ -60,7 +60,7 @@ let ReTextArea = class ReTextArea extends ComponentCore {
 ReTextArea = __decorate([
     ReComponent({
         markupURL: "./src/components/ReTextArea.hmle",
-        cssURL: "../../out/src/components/ReTextArea.html.css",
+        cssURL: "./out/src/components/ReTextArea.html.css",
         jsURL: "./src/components/ReTextArea.html.ts",
     }, "re-textarea")
 ], ReTextArea);
