@@ -1,8 +1,8 @@
 import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute } from "@Purper";
 import ComponentCore from "./core/ComponentCore.js";
 
-type IconVariant = "block" | 'filled' |'outlined' | 'rounded' | 'sharp';
-type IconWeight = 100|200|300|400|500|600|700;
+type IconVariant = "block" | 'filled' | 'outlined' | 'rounded' | 'sharp';
+type IconWeight = 100 | 200 | 300 | 400 | 500 | 600 | 700;
 export type IconAnimation = 'none' | 'spin' | 'pulse' | 'bounce' | 'shake';
 
 @ReComponent({
@@ -30,7 +30,7 @@ export default class ReIcon extends ComponentCore {
         if (!this.iconSpan) return;
         this.iconSpan.textContent = this.Icon.value ?? '';
 
-        this.iconSpan.style.fontVariationSettings = 
+        this.iconSpan.style.fontVariationSettings =
             `'FILL' ${this.Variant.value === 'filled' ? 1 : 0}, 
             'wght' ${this.Weight.value}, 
             'GRAD' 0, 
@@ -39,7 +39,7 @@ export default class ReIcon extends ComponentCore {
 }
 
 type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N
-  ? Acc[number]
-  : Enumerate<N, [...Acc, Acc['length']]>
+    ? Acc[number]
+    : Enumerate<N, [...Acc, Acc['length']]>
 
 type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>>
