@@ -43,7 +43,7 @@ let AppBar = class AppBar extends ComponentCore {
 AppBar = __decorate([
     ReComponent({
         markupURL: "./src/components/AppBar.hmle",
-        cssURL: "./out/src/components/AppBar.html.css",
+        cssURL: "./src/components/AppBar.html.css",
         jsURL: "./src/components/AppBar.html.js"
     }, "app-bar")
 ], AppBar);

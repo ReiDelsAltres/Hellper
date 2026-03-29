@@ -5,7 +5,7 @@ type ChipVariant = "filled" | "outlined"
 
 @ReComponent({
   markupURL: "./src/components/ReChip.hmle",
-  cssURL: "./out/src/components/ReChip.html.css",
+  cssURL: "./src/components/ReChip.html.css",
   jsURL: "./src/components/ReChip.html.js",
 }, "re-chip")
 export default class ReChip extends ComponentCore {
