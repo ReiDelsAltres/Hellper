@@ -1,0 +1,120 @@
+.colloquim-page {
+    min-height: 100%;
+    padding: 40px 20px 60px;
+    box-sizing: border-box;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.hero-sub {
+    display: block;
+    opacity: 0.7;
+}
+
+/* Sections */
+.sections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.section-num {
+    flex-shrink: 0;
+}
+
+.section-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: var(--color-primary-contrast, inherit);
+}
+
+/* Grid: outer for wrapper is transparent, cards are direct grid items */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+}
+
+.subject-grid-inner {
+    display: contents;
+}
+
+/* Subject card */
+.subject-card {
+    width: 100%;
+    text-align: left;
+    min-height: 88px;
+    box-sizing: border-box;
+}
+
+.card-body {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.subject-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    color: var(--color-primary);
+}
+
+.subject-teacher {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    overflow-wrap: anywhere;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.group-chip {
+    font-size: 0.75rem;
+}
+
+@media (max-width: 480px) {
+    .colloquim-page {
+        padding: 24px 12px 48px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+}

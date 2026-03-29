@@ -8,6 +8,7 @@ import { Component, ReComponent, Attribute } from "@Purper";
 let ReCheckbox = class ReCheckbox extends Component {
     box;
     labelEl;
+    boundHandleClick = this.handleClick.bind(this);
     checked = new Attribute(this, 'checked');
     indeterminate = new Attribute(this, 'indeterminate');
     disabled = new Attribute(this, 'disabled');
@@ -19,7 +20,10 @@ let ReCheckbox = class ReCheckbox extends Component {
     async preLoad(holder) {
         this.labelEl.textContent = this.label.value;
         this.label.subscribe((name, oldValue, newValue) => this.labelEl.textContent = newValue);
-        this.addEventListener('click', this.handleClick.bind(this));
+        this.addEventListener('click', this.boundHandleClick);
+    }
+    onDisconnected() {
+        this.removeEventListener('click', this.boundHandleClick);
     }
     handleClick(event) {
         if (this.disabled.value) {

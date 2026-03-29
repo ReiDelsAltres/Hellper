@@ -15,7 +15,10 @@ export default class ReInput extends Component {
     private validationMessage;
     private hideValidationMessage;
     private iconName;
+    private inputHandler;
+    private blurHandler;
     protected preLoad(holder: TemplateHolder): Promise<void>;
+    onDisconnected(): void;
     private validate;
     checkValidity(): boolean;
     getValidationMessage(): string;

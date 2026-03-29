@@ -42,9 +42,15 @@
         <paper-component class="question-card">
             <paper-component class="titleBlock">
                 <re-typography ref="'c' + index + '_' + '2'" color="empty" class="typo">
-                    <re-chip class="floated" color="empty" ref="'c' + index + '_' + '0'"><exp of="index + 1"></exp></re-chip>
-                    <re-chip class="floated" color="empty" ref="'c' + index + '_' + '1'"><exp of="question.Id"></exp></re-chip>
-                    <span class="tt"><exp of="question.Title"></exp></span>
+                    <re-chip class="floated" color="empty" ref="'c' + index + '_' + '0'">
+                        <exp of="index + 1"></exp>
+                    </re-chip>
+                    <re-chip class="floated" color="empty" ref="'c' + index + '_' + '1'">
+                        <exp of="question.Id"></exp>
+                    </re-chip>
+                    <span>
+                        <exp of="question.Title" html-injection></exp>
+                    </span>
                 </re-typography>
             </paper-component>
             <paper-component class="answers-container">
@@ -53,7 +59,9 @@
                     c0: 'c' + index + '_' + '0', 
                     c1: 'c' + index + '_' + '1',
                     c2: 'c' + index + '_' + '2'
-                    })"><exp of="answer"></exp></re-button>
+                    })">
+                        <exp of="answer" html-injection></exp>
+                    </re-button>
                 </for>
             </paper-component>
         </paper-component>

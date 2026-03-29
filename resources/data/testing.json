@@ -1,0 +1,180 @@
+[
+    {
+        "number": "Ⅰ",
+        "subjects": [
+            {
+                "name": "Azerbaycan tarixi",
+                "teacher": "Unknown",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "История азербайджана",
+                "file": "s1/History.json"
+            },
+            {
+                "name": "Riyazi Analiz",
+                "teacher": "p.ü.f.d. Səmədzadə F.N",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Математический анализ",
+                "file": "s1/Math.json"
+            }
+        ]
+    },
+    {
+        "number": "Ⅱ",
+        "subjects": [
+            {
+                "name": "InfTech",
+                "teacher": "Həsənov Elçin Qafar oğlu",
+                "groups": [
+                    "759ITS"
+                ],
+                "translatedName": "Инфоомационные технологии",
+                "file": "s2/FunOfIT.json"
+            },
+            {
+                "name": "BaseProg",
+                "teacher": "Həsənov Elçin Qafar oğlu",
+                "groups": [
+                    "759ITS"
+                ],
+                "translatedName": "Основы программирования",
+                "file": "s2/Programming.json"
+            },
+            {
+                "name": "DiffEqua",
+                "teacher": "Quliyeva Fətimə Ağayar qızı",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Дифференциальные уравнения",
+                "file": "s2/DifferentialEquations.json"
+            },
+            {
+                "name": "Instrumental",
+                "teacher": "Gasanova Vusala Ramiz qızı",
+                "groups": [
+                    "759ITS"
+                ],
+                "translatedName": "Инструментальные и прикладные программы",
+                "file": "s2/Vusala.json"
+            },
+            {
+                "name": "Physics",
+                "teacher": "Əlizade Leyla Eldar qızı",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Физика",
+                "file": "s2/Physics.json"
+            },
+            {
+                "name": "LinearAlgebra",
+                "teacher": "Quliyeva Fətimə Ağayar qızı",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Линейная алгебра",
+                "file": "s2/LinearAlgebra.json"
+            },
+            {
+                "name": "English",
+                "teacher": "Ismayilova Aybəniz Arif qızı",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Английский язык",
+                "file": "s2/Eng.json"
+            }
+        ]
+    },
+    {
+        "number": "Ⅲ",
+        "subjects": [
+            {
+                "name": "Verilənlər bazası sistemləri",
+                "teacher": "Kuliyev M.X",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Базы данных",
+                "file": "s3/MySQL.json"
+            },
+            {
+                "name": "Kompüter arxitekturası -1",
+                "teacher": "Kuliyev M.X",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Архитектура компьютера",
+                "file": "s3/PCArch.json"
+            },
+            {
+                "name": "Ehtimal nəzəriyyəsi və riyazi statistika",
+                "teacher": "Dos.Əliyeva X.H",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Математическая статистика",
+                "file": "s3/Math.json"
+            },
+            {
+                "name": "Proqramlaşdırma əsasları - 2",
+                "teacher": "Kuliyev M.X",
+                "groups": [
+                    "759KM"
+                ],
+                "translatedName": "Программирование",
+                "file": "s3/Program.json"
+            },
+            {
+                "name": "Web sistemləri və texnologiyaları",
+                "teacher": "Cəbrayılova G.H",
+                "groups": [
+                    "759ITS"
+                ],
+                "translatedName": "Веб системы и технологии",
+                "file": "s3/Web.json"
+            },
+            {
+                "name": "Dövrlər nəzəriyyəsi",
+                "teacher": "Qax.D.B",
+                "groups": [
+                    "759KM"
+                ],
+                "translatedName": "Теория цепей",
+                "file": "s3/ChainTheory.json"
+            },
+            {
+                "name": "Sistem Programlaşdırma",
+                "teacher": "Gasanova Vusala Ramiz qızı",
+                "groups": [
+                    "759ITS"
+                ],
+                "translatedName": "Системное программирование",
+                "file": "s3/Vusala.json"
+            },
+            {
+                "name": "Xarici dildə işgüzar və akademik kommunikasiya  - 3",
+                "teacher": "İsmayılova A.A",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Английский язык",
+                "file": "s3/Eng.json"
+            }
+        ]
+    }
+]

@@ -19,5 +19,6 @@ export default class ReButtonGroup extends Component {
     private updateGroup;
     private initButtonMap;
     getValueSeparated(): string[];
+    onDisconnected(): void;
 }
 //# sourceMappingURL=ReButtonGroup.html.d.ts.map

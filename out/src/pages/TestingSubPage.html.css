@@ -53,6 +53,10 @@
   right: 8px;
 }
 
+.mode-button {
+  text-align: center;
+}
+
 .option-block {
   width: 100%;
   min-width: 100%;

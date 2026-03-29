@@ -23,6 +23,13 @@ let ReInput = class ReInput extends Component {
     validationMessage = new Observable("");
     hideValidationMessage = new Observable(true);
     iconName = new Observable(null);
+    inputHandler = (e) => {
+        const target = e.target;
+        this.Value.setObject(target.value);
+    };
+    blurHandler = () => {
+        this.validate();
+    };
     async preLoad(holder) {
         this.Disabled.subscribe((key, old, isDisabled) => {
             if (isDisabled) {
@@ -36,18 +43,16 @@ let ReInput = class ReInput extends Component {
             this.input.value = val;
             this.validate();
         });
-        // Sync input events to Value attribute
-        this.input?.addEventListener('input', (e) => {
-            const target = e.target;
-            this.Value.setObject(target.value);
-        });
-        this.input?.addEventListener('blur', () => {
-            this.validate();
-        });
+        this.input?.addEventListener('input', this.inputHandler);
+        this.input?.addEventListener('blur', this.blurHandler);
         this.Min.subscribe(() => this.validate());
         this.Max.subscribe(() => this.validate());
         // Initial validation
         this.validate();
+    }
+    onDisconnected() {
+        this.input?.removeEventListener('input', this.inputHandler);
+        this.input?.removeEventListener('blur', this.blurHandler);
     }
     validate() {
         const value = this.Value.value;

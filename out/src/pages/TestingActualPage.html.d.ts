@@ -9,9 +9,6 @@ export default class TestingActualPage extends Page {
     dispose(): Promise<void>;
     protected preInit(): Promise<void>;
     protected postLoad(holder: TemplateHolder): Promise<void>;
-    private masonryResizeObserver?;
-    private layoutMasonryHandler?;
-    private initMasonry;
     private resolveEnding;
     /**
      * Build a ring of lights around the tree with count equal to number of questions

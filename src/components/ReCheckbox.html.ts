@@ -8,6 +8,7 @@ import { IElementHolder, Component, ReComponent, Attribute, TemplateHolder } fro
 export default class ReCheckbox extends Component {
     private box?: HTMLElement;
     private labelEl?: HTMLElement;
+    private boundHandleClick = this.handleClick.bind(this);
 
     public checked = new Attribute<boolean>(this, 'checked');
     public indeterminate = new Attribute<boolean>(this, 'indeterminate');
@@ -21,10 +22,15 @@ export default class ReCheckbox extends Component {
 
     protected async preLoad(holder: TemplateHolder): Promise<void> {
         this.labelEl.textContent = this.label.value;
-        this.label.subscribe((name,oldValue,newValue) => this.labelEl.textContent = newValue);
-        
-        this.addEventListener('click', this.handleClick.bind(this));
+        this.label.subscribe((name, oldValue, newValue) => this.labelEl.textContent = newValue);
+
+        this.addEventListener('click', this.boundHandleClick);
     }
+
+    public onDisconnected(): void {
+        this.removeEventListener('click', this.boundHandleClick);
+    }
+
     private handleClick(event: MouseEvent) {
         if (this.disabled.value) {
             event.preventDefault();

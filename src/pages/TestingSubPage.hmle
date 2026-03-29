@@ -54,16 +54,16 @@
         </div>
 
         <div class="option-inputs">
-            <re-input ref="'inputMin'" type="number" placeholder="1" icon="arrow-right"
-                size="small"></re-input>
-            <re-input ref="'inputVal'" min="1" type="number" placeholder="25" icon="hash"
-                size="small"></re-input>
-            <re-input ref="'inputMax'" type="number" set[placeholder]="testModes[2].numQuestions" icon="arrow-left"
-                size="small"></re-input>
+            <re-input ref="'inputMin'" type="number" min="1" set[max]="testModes[2].numQuestions" placeholder="1"
+                icon="arrow-right" size="small"></re-input>
+            <re-input ref="'inputVal'" min="1" type="number" placeholder="25" icon="hash" size="small"></re-input>
+            <re-input ref="'inputMax'" type="number" min="1" set[max]="testModes[2].numQuestions"
+                set[placeholder]="testModes[2].numQuestions" icon="arrow-left" size="small"></re-input>
         </div>
     </paper-component>
 
-    <re-button ref="'startTestButton'" variant="outlined" color="tertiary" full-width class="start-button" data-link>
+    <re-button ref="'startTestButton'" variant="outlined" color="tertiary" full-width class="start-button"
+        on[click]="startTest()">
         ЗАПУСТИТЬ
     </re-button>
 

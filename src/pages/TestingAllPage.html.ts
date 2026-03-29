@@ -1,5 +1,5 @@
 import { AccessType, Page, RePage } from "@Purper"
-import { Question } from "tri/QuestionParser"
+import { TestingQuestion } from "../frac/Testing.js"
 
 @RePage({
     markupURL: "./src/pages/TestingAllPage.hmle",
@@ -7,5 +7,5 @@ import { Question } from "tri/QuestionParser"
     jsURL: "./src/pages/TestingAllPage.html.ts"
 }, "/testing/all")
 export default class TestingAllPage extends Page {
-    private questions: Question[] = [];
+    private questions: TestingQuestion[] = [];
 }

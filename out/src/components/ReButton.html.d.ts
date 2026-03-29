@@ -9,7 +9,11 @@ export default class ReButton extends ComponentCore {
     Href: Attribute<string | null>;
     OptionalValue: Attribute<string | null>;
     private hideTextFlag;
-    private iconContrastFlag;
+    private hideIconFlag;
+    private useIconContrast;
+    private slotChangeHandler;
+    private hasSlotContent;
     protected preLoad(holder: TemplateHolder): Promise<void>;
+    onDisconnected(): void;
 }
 //# sourceMappingURL=ReButton.html.d.ts.map

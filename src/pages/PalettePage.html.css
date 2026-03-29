@@ -1,9 +1,9 @@
 .palette-page {
     min-height: 100vh;
     padding: 2rem;
-    background: linear-gradient(160deg, 
-        color-mix(in srgb, var(--color-primary) 8%, var(--surface-dark, #16171c)),
-        var(--surface-dark, #16171c) 60%);
+    background: linear-gradient(160deg,
+            color-mix(in srgb, var(--color-primary) 8%, var(--surface-dark, #16171c)),
+            var(--surface-dark, #16171c) 60%);
 }
 
 .page-header {
@@ -40,12 +40,13 @@
     position: relative;
     border-radius: 20px;
     padding: 6px;
-    background: linear-gradient(145deg, 
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
-        color-mix(in srgb, var(--color-secondary) 10%, transparent));
+    background: linear-gradient(145deg,
+            color-mix(in srgb, var(--color-primary) 20%, transparent),
+            color-mix(in srgb, var(--color-secondary) 10%, transparent));
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     outline: none;
+    will-change: transform;
 }
 
 .palette-item:hover,

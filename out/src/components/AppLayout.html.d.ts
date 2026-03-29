@@ -1,11 +1,17 @@
-import { Component, TemplateHolder } from "@Purper";
-export default class AppLayout extends Component {
-    static get observedAttributes(): string[];
+import { TemplateHolder, Attribute } from "@Purper";
+import ComponentCore from "./core/ComponentCore.js";
+type PanelDirection = "vertical" | "horizontal";
+type PanelState = "mini" | "hidden";
+export default class AppLayout extends ComponentCore {
+    Sidebar: Attribute<PanelState | null>;
+    Topbar: Attribute<PanelState | null>;
     private sidebarBtn;
     private topbarBtn;
-    private sidebar;
-    private topbar;
+    private verticalPanel;
+    private horizontalPanel;
+    private readonly panels;
     protected preLoad(holder: TemplateHolder): Promise<void>;
-    toggleAppbar(barId: number): void;
+    togglePanel(direction: PanelDirection): void;
 }
+export {};
 //# sourceMappingURL=AppLayout.html.d.ts.map

@@ -116,4 +116,10 @@ export default class ReButtonGroup extends Component {
         return this.Value.value ? this.Value.value.split(',') : [];
     }
 
+    public onDisconnected(): void {
+        this.buttonMap.forEach((_, btn) => {
+            btn.removeEventListener('click', this.handleButtonClick);
+        });
+    }
+
 }

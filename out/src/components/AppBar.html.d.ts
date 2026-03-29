@@ -1,19 +1,11 @@
-import { Component, TemplateHolder } from "@Purper";
-export default class AppBar extends Component {
-    static get observedAttributes(): string[];
-    private _type;
-    private _orientation;
-    private _hidden;
-    private _noHover;
-    get type(): "mini" | "full";
-    get orientation(): "vertical" | "horizontal";
-    get hidden(): boolean;
-    get noHover(): boolean;
+import { TemplateHolder, Attribute } from "@Purper";
+import ComponentCore from "./core/ComponentCore.js";
+export default class AppBar extends ComponentCore {
+    Type: Attribute<"mini" | "full" | null>;
+    Pos: Attribute<"vertical" | "horizontal">;
+    Hidden: Attribute<boolean | null>;
+    NoHover: Attribute<boolean | null>;
     protected preLoad(holder: TemplateHolder): Promise<void>;
-    set type(value: "mini" | "full");
-    set orientation(value: "vertical" | "horizontal");
-    set hidden(value: boolean);
-    set noHover(value: boolean);
-    notifyAllChildren(not: (element: Element) => void, holder?: Element | DocumentFragment): void;
+    notifyAllChildren(not: (element: Element) => void): void;
 }
 //# sourceMappingURL=AppBar.html.d.ts.map

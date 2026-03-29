@@ -21,5 +21,6 @@ export default class TestingSubPage extends Page {
     onTestTypeChange(event: CustomEvent<{}>): void;
     updateTestTypeChange(buttons: Map<ReButton, boolean>): void;
     updateTestModeGroup(buttons: Map<ReButton, boolean>): void;
+    startTest(): void;
 }
 //# sourceMappingURL=TestingSubPage.html.d.ts.map

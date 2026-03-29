@@ -49,10 +49,15 @@
 
   display: block;
 }
+
 .mode-button re-chip {
   position: absolute;
   top: 8px;
   right: 8px;
+}
+
+.mode-button {
+  text-align: center;
 }
 
 .option-block {

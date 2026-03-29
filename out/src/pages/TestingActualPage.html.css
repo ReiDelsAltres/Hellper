@@ -31,37 +31,35 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
   max-width: 100%;
-  min-width: 80%;
   box-sizing: border-box;
 }
 
-.questions-container {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
+/* make template <for> wrapper transparent so re-buttons are direct flex items */
+.answers-container > for {
+  display: contents;
 }
 
 .btn {
   flex: 1 1 auto;
-  /*min-width: fit-content;*/
+  min-height: 48px;
+  min-width: 80px;
+}
+
+.questions-container {
+  columns: 320px auto;
+  column-gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .question-card {
-  position: absolute;
+  break-inside: avoid;
   box-sizing: border-box;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Fallback for no-JS: stack vertically */
-.questions-container:not(.masonry-initialized) {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.questions-container:not(.masonry-initialized) .question-card {
-  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .result-stats {
@@ -89,7 +87,7 @@
 }
 
 .typo {
-  text-align: justify;
+  text-align: left;
   display: block;
 }
 
@@ -97,10 +95,6 @@
   float: left;
   margin-right: 8px;
   margin-bottom: -8px;
-}
-
-.tt {
-  white-space: pre-wrap;
 }
 
 /* Finish exam button container */
@@ -138,7 +132,8 @@
 }
 
 .christmas-svg .tree {
-  transform-origin: 32px 52px; /* pivot around trunk base */
+  transform-origin: 32px 52px;
+  /* pivot around trunk base */
   will-change: transform;
   animation: ca-sway 4.8s ease-in-out infinite;
 }

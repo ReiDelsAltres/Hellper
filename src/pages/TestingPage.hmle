@@ -9,8 +9,7 @@
       <p>Semestr<exp of="semestr.number"></exp>
       </p>
       <for value="subject" of="semestr.subjects" class="subject-list">
-        <re-button class="btn" variant="outlined" color="additional" data-link
-          set[href]="'/testing/sub?subject=' + encodeURIComponent(JSON.stringify(subject))">
+        <re-button class="btn" variant="outlined" color="additional" on[click]="goToSubject(subject)">
           <div class="content">
             <div class="meta">
               <div>

@@ -1,6 +1,8 @@
 {
     "files.exclude": {
-        "**/*.js": { "when": "$(basename).ts" },
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
@@ -8,5 +10,6 @@
         "*.phtml": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css,${capture}.html.scss",
         "*.hmle": "${capture}.html.ts,${capture}.html.js,${capture}.html.css,${capture}.html.lt.css,${capture}.html.scss",
     },
-    "liveServer.settings.NoBrowser": true
+    "liveServer.settings.NoBrowser": true,
+    "liveSassCompile.settings.useNewCompiler": false
 }

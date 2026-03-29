@@ -73,6 +73,8 @@
   /**/
   --app-bar-slots-width: auto;
   --app-bar-slots-height: 100%;
+  /*--app-bar-content-main-width: 70%;
+  --app-bar-content-sub-width: 30%;*/
 }
 
 .dead-zone {
@@ -98,6 +100,13 @@
 ::slotted(*) {
   width: var(--app-bar-slots-width);
   height: var(--app-bar-slots-height);
+}
+
+slot {
+  display: flex;
+  height: var(--app-bar-slots-height);
+  width: var(--app-bar-slots-width);
+  flex-direction: var(--app-bar-content-direction);
 }
 
 .foot {

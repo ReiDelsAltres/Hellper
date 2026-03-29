@@ -1,20 +1,9 @@
 import { Page } from "@Purper";
+import { Semestr, Subject } from "../frac/Testing.js";
 export default class TestingPage extends Page {
     semestrs: Semestr[];
     protected preInit(): Promise<void>;
+    goToSubject(subject: Subject): void;
 }
-declare class Semestr {
-    private number;
-    private subjects;
-    constructor(number: string, subjects: Subject[]);
-}
-export declare class Subject {
-    name: string;
-    translatedName?: string;
-    teacher: string;
-    file: string;
-    groups: string[];
-    constructor(name: string, teacher: string, groups: string[], translatedName?: string, file?: string);
-}
-export {};
+export { Semestr, Subject };
 //# sourceMappingURL=TestingPage.html.d.ts.map

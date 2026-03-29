@@ -20,6 +20,22 @@
       ]
     },
     {
+      "type": "node",
+      "request": "launch",
+      "name": "Bullshit",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/serve.js",
+      "preLaunchTask": "watch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "serverReadyAction": {
+        "pattern": "Server running at (https?://[^\\s]+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
       "type": "msedge",
       "request": "launch",
       "name": "Watch",

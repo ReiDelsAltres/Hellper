@@ -18,6 +18,16 @@ export class KatexUtils {
      */
     static renderToString(expression: string, options?: any): string;
     /**
+     * Render LaTeX inline/display delimiters ($...$ and $$...$$) inside a plain-text
+     * string and return the result as an HTML string.
+     * Safe to call before the DOM is ready; falls back to the original text when KaTeX
+     * is not yet loaded.
+     * @param {string} text - Source text that may contain $...$ or $$...$$ regions
+     * @param {Object} options - KaTeX options passed to renderToString
+     * @returns {string} HTML string with math replaced by KaTeX output
+     */
+    static renderInlineString(text: string, options?: any): string;
+    /**
      * Auto-render math expressions in an element
      * @param {HTMLElement} element - Container element to scan for math
      * @param {Object} options - Auto-render options
@@ -27,11 +37,17 @@ export class KatexUtils {
      * Initialize KaTeX auto-rendering for the entire document
      * Call this after page content is loaded
      */
+    static _initRetries: number;
+    static _observer: any;
     static initAutoRender(): void;
     /**
      * Set up mutation observer to auto-render math in dynamically added content
      */
     static setupMutationObserver(): void;
+    /**
+     * Disconnect the mutation observer
+     */
+    static disconnectObserver(): void;
     /**
      * Validate LaTeX expression syntax
      * @param {string} expression - LaTeX expression to validate

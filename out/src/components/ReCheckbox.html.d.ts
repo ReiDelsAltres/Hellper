@@ -2,6 +2,7 @@ import { Component, Attribute, TemplateHolder } from "@Purper";
 export default class ReCheckbox extends Component {
     private box?;
     private labelEl?;
+    private boundHandleClick;
     checked: Attribute<boolean>;
     indeterminate: Attribute<boolean>;
     disabled: Attribute<boolean>;
@@ -11,6 +12,7 @@ export default class ReCheckbox extends Component {
     name: Attribute<string>;
     mini: Attribute<boolean>;
     protected preLoad(holder: TemplateHolder): Promise<void>;
+    onDisconnected(): void;
     private handleClick;
 }
 //# sourceMappingURL=ReCheckbox.html.d.ts.map

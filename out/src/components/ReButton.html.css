@@ -207,8 +207,16 @@
   margin-left: 0;
 }
 
+:host > .btn-text[hidden]:not([hidden=false]),
+:host > .icon[hidden]:not([hidden=false]) {
+  display: none;
+  margin: 0;
+}
+
 :host([allow-wrap]) .btn-text {
-  white-space: pre-wrap;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Button text */

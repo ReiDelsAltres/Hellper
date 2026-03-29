@@ -14,7 +14,8 @@
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
-    "@reidelsaltres/pureper": "^0.2.5",
-    "material-symbols": "^0.40.2"
+    "@huggingface/transformers": "^3.8.1",
+    "@reidelsaltres/pureper": "^0.2.15",
+    "material-symbols": "^0.43.0"
   }
 }

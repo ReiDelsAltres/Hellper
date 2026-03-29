@@ -1,6 +1,5 @@
 import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder } from "@Purper";
-import { Subject } from "./TestingPage.html";
-import QuestionParser, { Question } from "../../tri/QuestionParser.js";
+import { Subject, ExamFile, ExamQuestion } from "../frac/Testing.js";
 import SeededShuffle from "../lib/SeededShuffle.js";
 import { KatexUtils } from "../KatexUtils.js";
 import PopUp from "../components/PopUp.html.js";
@@ -30,17 +29,6 @@ export default class TestingActualPage extends Page {
         this.params = JSON.parse(decodeURIComponent(params));
     }
     public async dispose(): Promise<void> {
-        // Отключаем ResizeObserver
-        if (this.masonryResizeObserver) {
-            this.masonryResizeObserver.disconnect();
-            this.masonryResizeObserver = undefined;
-        }
-        
-        // Удаляем обработчик resize с window
-        if (this.layoutMasonryHandler) {
-            window.removeEventListener('resize', this.layoutMasonryHandler);
-            this.layoutMasonryHandler = undefined;
-        }
     }
     protected async preInit(): Promise<void> {
         if (this.params.randomSource === null) {
@@ -53,7 +41,7 @@ export default class TestingActualPage extends Page {
         const jj = await Fetcher.fetchJSON('./resources/data' + '/' + this.params.subject.file);
 
         var i = 1;
-        this.questions = (jj as QuestionParser).Questions
+        this.questions = (jj as ExamFile).Questions
             .slice(this.params.startFrom ?? 0, this.params.endAt ?? undefined)
             .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
         if (!this.params.noShuffle)
@@ -72,106 +60,30 @@ export default class TestingActualPage extends Page {
             q.shuffleAnswers(seed);
             seed = SeededShuffle.deriveNextSeed(seed);
             q.Answers.push("Пропустить вопрос");
+
+            // Manually render KaTeX inside title and answers so that
+            // the template engine's <exp html-injection> injects ready HTML.
+            q.Title = KatexUtils.renderInlineString(q.Title);
+            q.Answers = q.Answers.map(a => KatexUtils.renderInlineString(a));
         });
 
         return Promise.resolve();
     }
 
     protected async postLoad(holder: TemplateHolder) {
-        // Auto-render KaTeX formulas (if any) inside page content after render
-        try {
-            // KatexUtils.autoRender accepts an Element — holder.element may be a DocumentFragment
-            const el = holder.documentFragment as unknown as HTMLElement;
-            if (el) KatexUtils.autoRender(el);
-        } catch (e) {
-            // non-fatal — continue without breaking page
-            console.warn('KaTeX auto-render failed', e);
-        }
-
         // Update seed display (if present) so user can see the session UUID
         try {
             const seedEl = this['seedDisplay'] as HTMLElement | undefined;
             if (seedEl) seedEl.textContent = String(this.params.randomSource ?? '');
         } catch (_) { }
 
-        // Show/hide finish exam button based on mode
-        const finishContainer = this['finishExamContainer'] as HTMLElement | undefined;
-        if (finishContainer) {
-            finishContainer.style.display = this.isExamMode ? 'block' : 'none';
-        }
+        // Finish button is always visible
 
         // Hide restart button initially
         const restartContainer = this['restartContainer'] as HTMLElement | undefined;
         if (restartContainer) {
             restartContainer.style.display = 'none';
         }
-
-        // Initialize masonry layout
-        this.initMasonry();
-    }
-
-    private masonryResizeObserver?: ResizeObserver;
-    private layoutMasonryHandler?: () => void;
-
-    private initMasonry() {
-        const container = document.querySelector('.questions-container') as HTMLElement;
-        if (!container) return;
-
-        const layoutMasonry = () => {
-            const cards = Array.from(container.querySelectorAll('.question-card')) as HTMLElement[];
-            if (cards.length === 0) return;
-
-            const containerWidth = container.clientWidth;
-            const gap = 20;
-            const minColumnWidth = 320;
-
-            // Calculate number of columns based on container width
-            let columns = Math.max(1, Math.floor((containerWidth + gap) / (minColumnWidth + gap)));
-
-            // Limit columns based on screen size
-            if (containerWidth < 600) columns = 1;
-            else if (containerWidth < 900) columns = Math.min(columns, 2);
-            else if (containerWidth < 1200) columns = Math.min(columns, 3);
-            else if (containerWidth < 1600) columns = Math.min(columns, 4);
-            else columns = Math.min(columns, 5);
-
-            const columnWidth = (containerWidth - gap * (columns - 1)) / columns;
-            const columnHeights = new Array(columns).fill(0);
-
-            cards.forEach((card) => {
-                // Find the shortest column
-                const shortestColumn = columnHeights.indexOf(Math.min(...columnHeights));
-
-                // Position the card
-                const x = shortestColumn * (columnWidth + gap);
-                const y = columnHeights[shortestColumn];
-
-                card.style.width = `${columnWidth}px`;
-                card.style.transform = `translate(${x}px, ${y}px)`;
-
-                // Update column height
-                columnHeights[shortestColumn] += card.offsetHeight + gap;
-            });
-
-            // Set container height
-            container.style.height = `${Math.max(...columnHeights) - gap}px`;
-            container.classList.add('masonry-initialized');
-        };
-
-        // Initial layout after a small delay to ensure cards are rendered
-        requestAnimationFrame(() => {
-            layoutMasonry();
-        });
-
-        // Re-layout on resize
-        this.masonryResizeObserver = new ResizeObserver(() => {
-            layoutMasonry();
-        });
-        this.masonryResizeObserver.observe(container);
-
-        // Also listen for window resize as backup
-        this.layoutMasonryHandler = layoutMasonry;
-        window.addEventListener('resize', this.layoutMasonryHandler);
     }
 
     private resolveEnding(forceShow: boolean = false) {
@@ -304,7 +216,7 @@ export default class TestingActualPage extends Page {
             // Exam mode: just select the answer, don't reveal correctness
             // Remove 'selected' from all answers in this question
             for (let i = 0; i < question.Answers.length; i++) {
-                const btn = this[qidx + "-" + i] as HTMLElement;
+                const btn = this['b' + qidx + '_' + i] as HTMLElement;
                 if (btn) {
                     btn.removeAttribute('selected');
                 }
@@ -315,7 +227,7 @@ export default class TestingActualPage extends Page {
             this.selectedAnswers[qidx] = aidx;
 
             // Update status silently (will be revealed later)
-            if (aidx === question.RDd) {
+            if (aidx === question.RId) {
                 this.statuses[qidx] = AnswerStatus.SUCCESS;
             } else if (aidx === question.Answers.length - 1) {
                 this.statuses[qidx] = AnswerStatus.SKIP;
@@ -328,20 +240,20 @@ export default class TestingActualPage extends Page {
                 const chip = this[c] as HTMLElement;
                 chip.setAttribute("disabled", "true");
             }
-            for (let i = 0; i < 6; i++) {
-                const tt = this[qidx + "-" + i] as HTMLElement;
+            for (let i = 0; i < question.Answers.length; i++) {
+                const tt = this['b' + qidx + '_' + i] as HTMLElement;
                 if (!tt) continue;
                 tt.setAttribute("disabled", "true");
                 if (tt === element) continue;
 
-                if (i === question.RDd) {
+                if (i === question.RId) {
                     tt.setAttribute('color', 'success');
                     tt.setAttribute("variant", "outlined");
                 }
             }
 
             switch (aidx) {
-                case question.RDd:
+                case question.RId:
                     element.setAttribute('color', 'success');
                     this.statuses[qidx] = AnswerStatus.SUCCESS;
                     break;
@@ -362,7 +274,6 @@ export default class TestingActualPage extends Page {
      * Показать popup подтверждения завершения экзамена
      */
     public finishExam(): void {
-        if (!this.isExamMode) return;
         (this['confirmPopup'] as PopUp).open();
     }
 
@@ -393,20 +304,20 @@ export default class TestingActualPage extends Page {
 
             // Disable chips
             for (const suffix of ['0', '1', '2']) {
-                const chip = this['c' + qidx + '-' + suffix] as HTMLElement;
+                const chip = this['c' + qidx + '_' + suffix] as HTMLElement;
                 if (chip) chip.setAttribute('disabled', 'true');
             }
 
             // Process all answer buttons
             for (let i = 0; i < question.Answers.length; i++) {
-                const btn = this[qidx + '-' + i] as HTMLElement;
+                const btn = this['b' + qidx + '_' + i] as HTMLElement;
                 if (!btn) continue;
 
                 btn.setAttribute('disabled', 'true');
                 btn.removeAttribute('selected');
 
                 // Show correct answer
-                if (i === question.RDd) {
+                if (i === question.RId) {
                     if (selectedIdx === i) {
                         // User selected the correct answer
                         btn.setAttribute('color', 'success');
@@ -450,17 +361,17 @@ enum AnswerStatus {
     SKIP = "skip",
     UNANSWERED = "unanswered"
 }
-class TemporaryQuestion implements Question {
+class TemporaryQuestion implements ExamQuestion {
     public Id: number;
-    public RDd: number;
+    public RId: number;
     public Title: string;
     public Answers: string[];
 
     public localId: number
 
-    constructor(data: Question, fallbackId: number, localId: number) {
+    constructor(data: ExamQuestion, fallbackId: number, localId: number) {
         this.Id = data.Id ?? fallbackId;
-        this.RDd = data.RDd ?? 0;
+        this.RId = data.RId ?? 0;
 
         this.Title = data.Title;
         this.Answers = data.Answers;
@@ -469,20 +380,20 @@ class TemporaryQuestion implements Question {
     }
 
     public isCorrect(index: number): boolean {
-        return index === this.RDd;
+        return index === this.RId;
     }
 
     public shuffleAnswers(uuid: string): void {
         if (!uuid || this.Answers.length <= 1) return;
 
         const { shuffled, newIndexForOld } = SeededShuffle.shuffleWithMapping(this.Answers.slice(), uuid);
-        const oldCorrect = this.RDd;
+        const oldCorrect = this.RId;
         this.Answers = shuffled;
-        this.RDd = (newIndexForOld && typeof newIndexForOld[oldCorrect] === 'number') ? newIndexForOld[oldCorrect] : 0;
+        this.RId = (newIndexForOld && typeof newIndexForOld[oldCorrect] === 'number') ? newIndexForOld[oldCorrect] : 0;
     }
 
-    public toJSON(): Question {
-        return { Id: this.Id, RDd: this.RDd, Title: this.Title, Answers: this.Answers.slice() };
+    public toJSON(): ExamQuestion {
+        return { Id: this.Id, RId: this.RId, Title: this.Title, Answers: this.Answers.slice() };
     }
 
 }

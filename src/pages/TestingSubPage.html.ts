@@ -1,10 +1,11 @@
 import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
-import { Subject } from "./TestingPage.html";
+import { Subject } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
 import ReInput from "../components/ReInput.html.js";
 import ReCheckbox from "src/components/ReCheckbox.html.js";
 import Paper from "src/components/PaperComponent.html.js";
+import TestingActualPage from "./TestingActualPage.html.js";
 
 
 @RePage({
@@ -49,19 +50,21 @@ export default class TestingSubPage extends Page {
     this.updateTestModeGroup(this.testModesGroup?.buttonMap);
     this.updateTestTypeChange(this.inputTestType?.buttonMap);
 
-    this.inputMin?.Value.subscribe((key, old, value) => {
-      const minVal = parseInt(value || '1');
-      const maxVal = parseInt(this.inputMax?.Value.value || '300');
+    const totalQuestions = this.testModes[2].numQuestions.getObject() || 300;
 
-      this.inputVal?.Max.setObject(maxVal - minVal);
-      this.inputMax?.Min.setObject(minVal + 1);
+    // Set initial bounds for range inputs
+    this.inputMin?.Min.setObject(1);
+    this.inputMin?.Max.setObject(totalQuestions);
+    this.inputMax?.Min.setObject(1);
+    this.inputMax?.Max.setObject(totalQuestions);
+
+    this.inputMin?.Value.subscribe((key, old, value) => {
+      const minVal = parseInt(value) || 1;
+      this.inputMax?.Min.setObject(minVal);
     });
     this.inputMax?.Value.subscribe((key, old, value) => {
-      const maxVal = parseInt(value || '300');
-      const minVal = parseInt(this.inputMin?.Value.value || '1');
-
-      this.inputVal?.Max.setObject(maxVal - minVal);
-      this.inputMin?.Max.setObject(maxVal - 1);
+      const maxVal = parseInt(value) || totalQuestions;
+      this.inputMin?.Max.setObject(maxVal);
     });
   }
 
@@ -95,7 +98,29 @@ export default class TestingSubPage extends Page {
     this.optionBlock?.Color.setObject(color);
 
     this.inputVal?.Value.setObject(activeMode?.numQuestions.getObject().toString());
-    this.inputVal?.Max.setObject(activeMode?.numQuestions.getObject());
+  }
+
+  public startTest(): void {
+    const activeMode = this.testModes.find(mode => mode.signature === this.testModesGroup?.Value.value);
+    const limits = parseInt(this.inputVal?.Value.value as string) || activeMode?.numQuestions.getObject() || 25;
+    const startFrom = parseInt(this.inputMin?.Value.value as string) - 1 || 0;
+    const endAt = parseInt(this.inputMax?.Value.value as string) || undefined;
+    const testType = this.inputTestType?.Value.value || 'main';
+    const noShuffle = this.inputNoShuffle?.hasAttribute('checked') ?? false;
+
+    const params = {
+      subject: this.subject,
+      type: activeMode?.signature ?? 'normal',
+      limits,
+      startFrom,
+      endAt,
+      randomSource: null,
+      noShuffle,
+      testType
+    };
+
+    const paramsStr = encodeURIComponent(JSON.stringify(params));
+    Router.tryRouteTo(new URL(Fetcher.resolveUrl('/testing/actual?params=' + paramsStr)), true);
   }
 }
 interface TestMode {

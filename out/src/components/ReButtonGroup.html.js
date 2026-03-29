@@ -109,6 +109,11 @@ let ReButtonGroup = class ReButtonGroup extends Component {
     getValueSeparated() {
         return this.Value.value ? this.Value.value.split(',') : [];
     }
+    onDisconnected() {
+        this.buttonMap.forEach((_, btn) => {
+            btn.removeEventListener('click', this.handleButtonClick);
+        });
+    }
 };
 ReButtonGroup = __decorate([
     ReComponent({

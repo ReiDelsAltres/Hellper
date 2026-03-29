@@ -17,7 +17,7 @@ export default class ReInput extends Component {
     public readonly Value: Attribute<string> = new Attribute<string>(this, "value", "");
     public readonly Min: Attribute<number> = new Attribute<number>(this, "min", 0);
     public readonly Max: Attribute<number> = new Attribute<number>(this, "max", 9999);
-    
+
     public readonly Type: Attribute<'text' | 'number' | 'email' | 'password'> = new Attribute(this, "type", "text");
 
     public readonly Disabled: Attribute<boolean> = new Attribute(this, 'disabled', false);
@@ -28,6 +28,14 @@ export default class ReInput extends Component {
     private validationMessage: Observable<string> = new Observable("");
     private hideValidationMessage: Observable<boolean> = new Observable(true);
     private iconName: Observable<string | null> = new Observable(null);
+
+    private inputHandler = (e: Event) => {
+        const target = e.target as HTMLInputElement;
+        this.Value.setObject(target.value);
+    };
+    private blurHandler = () => {
+        this.validate();
+    };
 
     protected async preLoad(holder: TemplateHolder): Promise<void> {
         this.Disabled.subscribe((key, old, isDisabled) => {
@@ -41,21 +49,19 @@ export default class ReInput extends Component {
             this.input.value = val;
             this.validate();
         });
-        // Sync input events to Value attribute
-        this.input?.addEventListener('input', (e) => {
-            const target = e.target as HTMLInputElement;
-            this.Value.setObject(target.value);
-        });
-
-        this.input?.addEventListener('blur', () => {
-            this.validate();
-        });
+        this.input?.addEventListener('input', this.inputHandler);
+        this.input?.addEventListener('blur', this.blurHandler);
 
         this.Min.subscribe(() => this.validate());
         this.Max.subscribe(() => this.validate());
 
         // Initial validation
         this.validate();
+    }
+
+    public onDisconnected(): void {
+        this.input?.removeEventListener('input', this.inputHandler);
+        this.input?.removeEventListener('blur', this.blurHandler);
     }
 
     private validate(): void {
