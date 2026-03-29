@@ -1,0 +1,200 @@
+.showcase-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--color-app-background, #f5f5f5);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary, #1a1a1a);
+  margin: 0 0 0.5rem 0;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary, #666);
+  margin: 0;
+}
+
+.showcase-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Component Section */
+.component-section {
+  background: var(--color-paper-background, #fff);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text-primary, #1a1a1a);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-primary, #6366f1);
+}
+
+/* Subsection */
+.subsection {
+  margin-bottom: 2rem;
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsection-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary, #666);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Component Row */
+.component-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.component-row.align-center {
+  align-items: center;
+}
+
+.component-row.full-width-row {
+  flex-direction: column;
+}
+
+.component-row.mixed-row {
+  align-items: center;
+}
+
+.component-row.action-group {
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .showcase-page {
+    padding: 1rem;
+  }
+  .page-title {
+    font-size: 1.75rem;
+  }
+  .component-section {
+    padding: 1.25rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .component-row {
+    gap: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+  .component-section {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+}
+/* Typography showcase */
+.typography-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.typography-column re-typography {
+  display: block;
+}
+
+.alignment-demo re-typography {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--color-paper-background-alt, rgba(0, 0, 0, 0.03));
+  border-radius: 6px;
+}
+
+.truncate-demo {
+  max-width: 350px;
+  overflow: hidden;
+}
+
+/* Color contrast boxes */
+.color-contrast-row {
+  gap: 8px;
+}
+
+.color-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  min-width: 80px;
+}
+
+.color-box.primary {
+  background: var(--color-primary);
+}
+
+.color-box.secondary {
+  background: var(--color-secondary);
+}
+
+.color-box.tertiary {
+  background: var(--color-tertiary);
+}
+
+.color-box.additional {
+  background: var(--color-additional);
+}
+
+.color-box.success {
+  background: var(--color-success);
+}
+
+.color-box.warning {
+  background: var(--color-warning);
+}
+
+.color-box.error {
+  background: var(--color-error);
+}
+
+.color-box.info {
+  background: var(--color-info);
+}
+
+.color-box.empty {
+  background: var(--color-empty);
+}
+
+/* Icon library row */
+.icon-library-row {
+  gap: 16px;
+}
+
+/*# sourceMappingURL=ComponentShowcasePage.html.css.map */

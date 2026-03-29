@@ -1,11 +1,11 @@
-import { Component, IElementHolder } from "@Purper";
+import { Component, TemplateHolder } from "@Purper";
 export default class PopUp extends Component {
     static get observedAttributes(): string[];
     private overlay?;
     private container?;
     private anchorElement?;
     private clickOutsideHandler?;
-    protected preLoad(holder: IElementHolder): Promise<void>;
+    protected preLoad(holder: TemplateHolder): Promise<void>;
     /** Find anchor element by selector */
     private findAnchor;
     /** Position popup relative to anchor */

@@ -1,0 +1,146 @@
+<pop-up ref="'resultPopup'" modal>
+    <re-typography variant="headline" class="popH">Результаты</re-typography>
+    <div class="result-stats">
+        <re-typography>Правильных: <re-chip color="success" ref="'resultCorrect'">0</re-chip></re-typography>
+        <re-typography>Неправильных: <re-chip color="error" ref="'resultWrong'">0</re-chip></re-typography>
+        <re-typography>Точность: <re-chip color="primary" ref="'resultAccuracy'">0%</re-chip></re-typography>
+    </div>
+    <re-button color="primary" full-width on[click]="closeResult()">Закрыть</re-button>
+</pop-up>
+
+<pop-up ref="'confirmPopup'" modal>
+    <re-typography variant="headline" class="popH">Завершить тест?</re-typography>
+    <re-typography class="confirm-text">После завершения будут показаны все ответы и результаты.</re-typography>
+    <div class="confirm-buttons">
+        <re-button color="empty" variant="filled" on[click]="cancelFinish()">Отмена</re-button>
+        <re-button color="error" variant="filled" on[click]="confirmFinish()">Завершить</re-button>
+    </div>
+</pop-up>
+
+<!-- Bilet mode -->
+<div class="bilets-container">
+    <for index="bidx" value="bilet" of="bilets">
+        <paper-component class="bilet-card">
+            <div class="bilet-header">
+                <div class="bilet-chips">
+                    <re-chip color="primary">
+                        <exp of="bidx + 1"></exp>
+                    </re-chip>
+                    <re-chip color="tertiary" variant="outlined">
+                        <exp of="bilet.Id"></exp>
+                    </re-chip>
+                </div>
+                <re-chip color="empty" ref="'accuracy_' + bidx" style="display:none">0%</re-chip>
+            </div>
+            <for index="qidx" value="question" of="bilet.questions">
+                <paper-component class="question-card">
+                    <re-typography class="question-title">
+                        <div class="question-chips">
+                            <re-chip size="small">
+                                <exp of="qidx + 1"></exp>
+                            </re-chip>
+                            <re-chip size="small" variant="outlined" color="tertiary">
+                                <exp of="question.Id"></exp>
+                            </re-chip>
+                            <re-chip size="small" ref="'score_' + bidx + '_' + qidx" style="display:none">0%</re-chip>
+                        </div>
+                        <exp of="question.Title"></exp>
+                    </re-typography>
+                    <div class="answer-block" ref="'answer_' + bidx + '_' + qidx" style="display:none">
+                        <re-typography color="warning" class="length-warning" ref="'lenwarning_' + bidx + '_' + qidx"
+                            style="display:none"></re-typography>
+                        <div class="user-answer-row">
+                            <re-typography class="ref-answer-label">Ваш ответ:</re-typography>
+                            <re-typography class="user-answer-text"
+                                ref="'useranswer_' + bidx + '_' + qidx"></re-typography>
+                        </div>
+                        <re-typography class="ref-answer-label">Эталонный ответ:</re-typography>
+                        <for value="ans" of="question.Answers">
+                            <re-typography color="additional" class="answer-text">
+                                <exp of="ans"></exp>
+                            </re-typography>
+                        </for>
+                        <div class="keywords-row">
+                            <for value="kw" of="question.Keywords">
+                                <re-chip variant="outlined" color="tertiary" size="small">
+                                    <exp of="kw"></exp>
+                                </re-chip>
+                            </for>
+                        </div>
+                    </div>
+                    <div class="question-input-row" ref="'inputrow_' + bidx + '_' + qidx">
+                        <re-textarea variant="outlined" full-width placeholder="Введите ваш ответ..."
+                            ref="'ta_' + bidx + '_' + qidx"></re-textarea>
+                    </div>
+                </paper-component>
+            </for>
+            <div class="bilet-footer">
+                <re-button color="tertiary" variant="filled" full-width ref="'confirm_' + bidx"
+                    on[click]="confirmBilet(bidx)">Подтвердить</re-button>
+            </div>
+        </paper-component>
+    </for>
+</div>
+
+<!-- Questions mode -->
+<div class="questions-container">
+    <for index="qidx" value="question" of="questions">
+        <paper-component class="question-card">
+            <re-typography class="question-title">
+                <div class="question-chips">
+                    <re-chip size="small">
+                        <exp of="qidx + 1"></exp>
+                    </re-chip>
+                    <re-chip size="small" variant="outlined" color="tertiary">
+                        <exp of="question.Id"></exp>
+                    </re-chip>
+                    <re-chip size="small" ref="'qscore_' + qidx" style="display:none">0%</re-chip>
+                </div>
+                <exp of="question.Title"></exp>
+            </re-typography>
+            <div class="answer-block" ref="'qanswer_' + qidx" style="display:none">
+                <re-typography color="warning" class="length-warning" ref="'qlenwarning_' + qidx"
+                    style="display:none"></re-typography>
+                <div class="user-answer-row">
+                    <re-typography class="ref-answer-label">Ваш ответ:</re-typography>
+                    <re-typography class="user-answer-text" ref="'quseranswer_' + qidx"></re-typography>
+                </div>
+                <re-typography class="ref-answer-label">Эталонный ответ:</re-typography>
+                <for value="ans" of="question.Answers">
+                    <re-typography color="additional" class="answer-text">
+                        <exp of="ans"></exp>
+                    </re-typography>
+                </for>
+                <div class="keywords-row">
+                    <for value="kw" of="question.Keywords">
+                        <re-chip variant="outlined" color="tertiary" size="small">
+                            <exp of="kw"></exp>
+                        </re-chip>
+                    </for>
+                </div>
+            </div>
+            <div class="question-input-row" ref="'qinputrow_' + qidx">
+                <re-textarea color="additional" variant="outlined" full-width placeholder="Введите ваш ответ..."
+                    ref="'qta_' + qidx"></re-textarea>
+                <div class="input-actions">
+                    <re-button color="warning" variant="outlined" size="small" ref="'qskip_' + qidx"
+                        on[click]="skipQuestion(qidx)">Пропустить</re-button>
+                    <re-button color="success" variant="filled" size="small" ref="'qsubmit_' + qidx"
+                        on[click]="submitQuestion(qidx)">Подтвердить</re-button>
+                </div>
+            </div>
+        </paper-component>
+    </for>
+</div>
+
+<paper-component simple="true" class="finish-exam-container" ref="'finishExamContainer'">
+    <re-button color="error" variant="filled" size="large" full-width on[click]="finishExam()">
+        Завершить тест
+    </re-button>
+</paper-component>
+
+<paper-component simple="true" class="restart-container" ref="'restartContainer'">
+    <re-button color="primary" variant="filled" size="large" full-width icon="refresh" on[click]="regenerateShuffle()">
+        Перезапустить
+    </re-button>
+</paper-component>

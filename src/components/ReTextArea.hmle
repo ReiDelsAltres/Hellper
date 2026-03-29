@@ -1,0 +1,4 @@
+<textarea part="textarea" ref="'textarea'" set[placeholder]="Placeholder" rows="4"></textarea>
+<re-chip set[hidden]="hideValidationMessage" size="small" class="validation-message" color="error">
+    <exp of="validationMessage"></exp>
+</re-chip>

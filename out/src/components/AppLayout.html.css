@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+.layout-controls {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2001;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+}
+
+.layout-controls .tgl {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Responsive: hide sidebar toggle and vertical panel on mobile */
+@media (max-width: 600px) {
+  .layout-controls .sidebar-toggle {
+    display: none;
+  }
+  app-bar.panel-vertical {
+    display: none !important;
+    --app-display: none;
+  }
+}
+
+/*# sourceMappingURL=AppLayout.html.css.map */

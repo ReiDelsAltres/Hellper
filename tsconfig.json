@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "allowArbitraryExtensions": true,
-
     "target": "esnext",
     "module": "esnext",
-
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
     "lib": [
       "es2023",
       "DOM",
@@ -12,23 +12,32 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@Purper": ["./node_modules/@reidelsaltres/pureper/src/index.js"]
+      "@huggingface/transformers": [
+        "./node_modules/@huggingface/transformers/types/transformers.d.ts"
+      ],
+      "@Purper": [
+        "./node_modules/@reidelsaltres/pureper/src/index.js"
+      ],
+      "@material-design-icons": [
+        "./node_modules/@material-design-icons/*"
+      ]
     },
-
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
     "allowJs": true,
     "declaration": true,
     "declarationMap": true,
-
     "outDir": "./out",
-
     //"resolveJsonModule": true,
     "rewriteRelativeImportExtensions": true,
-
     "sourceMap": true
   },
-  "include": ["./src","./index.html.ts","./404.html.ts"],
-  "exclude": [ "./test"]
+  "include": [
+    "./src",
+    "./index.html.ts",
+    "./404.html.ts"
+  ],
+  "exclude": [
+    "./test"
+  ]
 }

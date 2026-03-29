@@ -15,6 +15,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
 .testing-actual-page .seed-indicator {
   font-size: 0.9rem;
   opacity: 0.85;
@@ -31,38 +32,36 @@
   flex-wrap: wrap;
   gap: 12px;
 
+  width: 100%;
   max-width: 100%;
-  min-width: 80%;
 
   box-sizing: border-box;
 }
 
-.questions-container {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
+/* make template <for> wrapper transparent so re-buttons are direct flex items */
+.answers-container>for {
+  display: contents;
 }
 
 .btn {
   flex: 1 1 auto;
-  /*min-width: fit-content;*/
+  min-height: 48px;
+  min-width: 80px;
+}
+
+.questions-container {
+  columns: 320px auto;
+  column-gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .question-card {
-  position: absolute;
+  break-inside: avoid;
   box-sizing: border-box;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Fallback for no-JS: stack vertically */
-.questions-container:not(.masonry-initialized) {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.questions-container:not(.masonry-initialized) .question-card {
-  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .result-stats {
@@ -91,7 +90,7 @@
 }
 
 .typo {
-  text-align: justify;
+  text-align: left;
   display: block;
 }
 
@@ -99,10 +98,6 @@
   float: left;
   margin-right: 8px;
   margin-bottom: -8px;
-}
-
-.tt {
-  white-space: pre-wrap;
 }
 
 /* Finish exam button container */
@@ -140,49 +135,110 @@
 }
 
 .christmas-svg .tree {
-  transform-origin: 32px 52px; /* pivot around trunk base */
+  transform-origin: 32px 52px;
+  /* pivot around trunk base */
   will-change: transform;
   animation: ca-sway 4.8s ease-in-out infinite;
 }
 
 @keyframes ca-sway {
-  0%   { transform: rotate(-2.5deg); }
-  25%  { transform: rotate(1.5deg); }
-  50%  { transform: rotate(2.5deg); }
-  75%  { transform: rotate(-1.5deg); }
-  100% { transform: rotate(-2.5deg); }
+  0% {
+    transform: rotate(-2.5deg);
+  }
+
+  25% {
+    transform: rotate(1.5deg);
+  }
+
+  50% {
+    transform: rotate(2.5deg);
+  }
+
+  75% {
+    transform: rotate(-1.5deg);
+  }
+
+  100% {
+    transform: rotate(-2.5deg);
+  }
 }
 
 @keyframes ca-bob {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(3px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .christmas-svg .lights .light {
   transform-origin: center center;
   will-change: opacity, transform;
   opacity: 0.95;
-  filter: drop-shadow(0 0 4px rgba(255,255,255,0.05));
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.05));
 }
 
 /* Staggered blinking for individual lights */
-.christmas-svg .lights .l1 { animation: ca-blink 1.6s linear infinite; }
-.christmas-svg .lights .l2 { animation: ca-blink 1.9s linear infinite; animation-delay: 0.15s; }
-.christmas-svg .lights .l3 { animation: ca-blink 2.3s linear infinite; animation-delay: 0.3s; }
-.christmas-svg .lights .l4 { animation: ca-blink 1.4s linear infinite; animation-delay: 0.05s; }
-.christmas-svg .lights .l5 { animation: ca-blink 2.0s linear infinite; animation-delay: 0.2s; }
+.christmas-svg .lights .l1 {
+  animation: ca-blink 1.6s linear infinite;
+}
+
+.christmas-svg .lights .l2 {
+  animation: ca-blink 1.9s linear infinite;
+  animation-delay: 0.15s;
+}
+
+.christmas-svg .lights .l3 {
+  animation: ca-blink 2.3s linear infinite;
+  animation-delay: 0.3s;
+}
+
+.christmas-svg .lights .l4 {
+  animation: ca-blink 1.4s linear infinite;
+  animation-delay: 0.05s;
+}
+
+.christmas-svg .lights .l5 {
+  animation: ca-blink 2.0s linear infinite;
+  animation-delay: 0.2s;
+}
 
 @keyframes ca-blink {
-  0%   { opacity: 0.12; transform: scale(0.85); }
-  10%  { opacity: 1;    transform: scale(1.12); }
-  20%  { opacity: 0.6;  transform: scale(0.95); }
-  60%  { opacity: 0.18; transform: scale(0.9); }
-  100% { opacity: 0.12; transform: scale(0.85); }
+  0% {
+    opacity: 0.12;
+    transform: scale(0.85);
+  }
+
+  10% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+
+  20% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+
+  60% {
+    opacity: 0.18;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 0.12;
+    transform: scale(0.85);
+  }
 }
 
 /* Respect reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
+
   .christmas-svg,
   .christmas-svg .tree,
   .christmas-svg .lights .light {
@@ -192,18 +248,35 @@
 }
 
 /* Glow intensity levels applied to the whole svg. 0 = no glow, 5 = strongest */
-.christmas-svg.glow-0 { filter: none; }
-.christmas-svg.glow-1 { filter: drop-shadow(0 0 4px rgba(0,230,120,0.12)); }
-.christmas-svg.glow-2 { filter: drop-shadow(0 0 6px rgba(0,230,120,0.18)); }
-.christmas-svg.glow-3 { filter: drop-shadow(0 0 10px rgba(0,230,120,0.26)); }
-.christmas-svg.glow-4 { filter: drop-shadow(0 0 14px rgba(0,230,120,0.36)); }
-.christmas-svg.glow-5 { filter: drop-shadow(0 0 20px rgba(0,230,120,0.55)); }
+.christmas-svg.glow-0 {
+  filter: none;
+}
+
+.christmas-svg.glow-1 {
+  filter: drop-shadow(0 0 4px rgba(0, 230, 120, 0.12));
+}
+
+.christmas-svg.glow-2 {
+  filter: drop-shadow(0 0 6px rgba(0, 230, 120, 0.18));
+}
+
+.christmas-svg.glow-3 {
+  filter: drop-shadow(0 0 10px rgba(0, 230, 120, 0.26));
+}
+
+.christmas-svg.glow-4 {
+  filter: drop-shadow(0 0 14px rgba(0, 230, 120, 0.36));
+}
+
+.christmas-svg.glow-5 {
+  filter: drop-shadow(0 0 20px rgba(0, 230, 120, 0.55));
+}
 
 /* Active (green) lights get a stronger local glow and slightly larger scale */
 .christmas-svg .lights .light.active {
   opacity: 1 !important;
   transform: scale(1.08);
-  filter: drop-shadow(0 0 8px rgba(0,230,120,0.9));
+  filter: drop-shadow(0 0 8px rgba(0, 230, 120, 0.9));
 }
 
 /* Inactive lights dim down */

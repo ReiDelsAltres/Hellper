@@ -1,7 +1,7 @@
-<span class="checkbox-box" @[ref]="box">
+<span class="checkbox-box" ref="'box'">
     <span class="checkbox-check"></span>
 </span>
-<span class="checkbox-label" @[ref]="labelEl">
+<span class="checkbox-label" ref="'labelEl'">
     <slot></slot>
 </span>
 <span class="checkbox-ripple"></span>

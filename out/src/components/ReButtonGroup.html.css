@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* ReButtonGroup Component Styles */
+:host {
+  display: inline-flex;
+  position: relative;
+}
+
+:host([hidden]), :host([hidden=true]) {
+  display: none !important;
+}
+
+:host([full-width]) {
+  display: flex;
+  width: 100%;
+}
+
+.button-group-container {
+  display: flex;
+  gap: 0;
+}
+
+/* Orientation */
+:host([orientation=horizontal]),
+:host(:not([orientation])) {
+  flex-direction: row;
+}
+
+:host([orientation=horizontal]) .button-group-container,
+:host(:not([orientation])) .button-group-container {
+  flex-direction: row;
+}
+
+:host([orientation=vertical]) {
+  flex-direction: column;
+}
+
+:host([orientation=vertical]) .button-group-container {
+  flex-direction: column;
+}
+
+/* Full width distribution */
+:host([full-width]) .button-group-container {
+  width: 100%;
+}
+
+:host([full-width]) ::slotted(re-button) {
+  flex: 1;
+}
+
+/* Disabled state */
+:host([disabled]) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Gap variant (with spacing between buttons)
+   ───────────────────────────────────────────────────────────────── */
+:host([gap]) .button-group-container {
+  gap: 8px;
+}
+
+:host([gap]) ::slotted(re-button) {
+  margin: 0 !important;
+  border-radius: 8px !important;
+}
+
+:host([gap=small]) .button-group-container {
+  gap: 4px;
+}
+
+:host([gap=large]) .button-group-container {
+  gap: 12px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Size variants - adjust border radius
+   ───────────────────────────────────────────────────────────────── */
+:host([size=small][orientation=horizontal]) ::slotted(re-button.group-first),
+:host([size=small]:not([orientation])) ::slotted(re-button.group-first) {
+  border-radius: 6px 0 0 6px;
+}
+
+:host([size=small][orientation=horizontal]) ::slotted(re-button.group-last),
+:host([size=small]:not([orientation])) ::slotted(re-button.group-last) {
+  border-radius: 0 6px 6px 0;
+}
+
+:host([size=small][orientation=vertical]) ::slotted(re-button.group-first) {
+  border-radius: 6px 6px 0 0;
+}
+
+:host([size=small][orientation=vertical]) ::slotted(re-button.group-last) {
+  border-radius: 0 0 6px 6px;
+}
+
+:host([size=large][orientation=horizontal]) ::slotted(re-button.group-first),
+:host([size=large]:not([orientation])) ::slotted(re-button.group-first) {
+  border-radius: 10px 0 0 10px;
+}
+
+:host([size=large][orientation=horizontal]) ::slotted(re-button.group-last),
+:host([size=large]:not([orientation])) ::slotted(re-button.group-last) {
+  border-radius: 0 10px 10px 0;
+}
+
+:host([size=large][orientation=vertical]) ::slotted(re-button.group-first) {
+  border-radius: 10px 10px 0 0;
+}
+
+:host([size=large][orientation=vertical]) ::slotted(re-button.group-last) {
+  border-radius: 0 0 10px 10px;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Mini mode
+   ───────────────────────────────────────────────────────────────── */
+:host([mini]) {
+  transform: scale(0.85);
+  transform-origin: left center;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Responsive
+   ───────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  :host([responsive]) {
+    flex-direction: column;
+  }
+  :host([responsive]) .button-group-container {
+    flex-direction: column;
+  }
+  :host([responsive]) ::slotted(re-button) {
+    border-radius: 0 !important;
+    margin-left: 0 !important;
+    margin-top: -1px;
+  }
+  :host([responsive]) ::slotted(re-button.group-first) {
+    margin-top: 0;
+    border-radius: 8px 8px 0 0 !important;
+  }
+  :host([responsive]) ::slotted(re-button.group-last) {
+    border-radius: 0 0 8px 8px !important;
+  }
+}
+
+/*# sourceMappingURL=ReButtonGroup.html.css.map */

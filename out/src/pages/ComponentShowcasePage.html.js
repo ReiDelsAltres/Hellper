@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Page, RePage } from "@Purper";
 let ComponentShowcasePage = class ComponentShowcasePage extends Page {
     preLoad(holder) {
-        const root = holder.element;
+        const root = holder.documentFragment;
         // PopUp demo handlers
         const demoPopup = root.querySelector('#demo-popup');
         const demoModal = root.querySelector('#demo-modal');
@@ -104,7 +104,6 @@ ComponentShowcasePage = __decorate([
         markupURL: "./src/pages/ComponentShowcasePage.html",
         cssURL: "./src/pages/ComponentShowcasePage.html.css",
         jsURL: "./src/pages/ComponentShowcasePage.html.ts",
-        class: ComponentShowcasePage,
     }, "/components")
 ], ComponentShowcasePage);
 export default ComponentShowcasePage;

@@ -1,4 +1,4 @@
-import { IElementHolder, Page, RePage } from "@Purper";
+import { IElementHolder, Page, RePage, TemplateHolder } from "@Purper";
 import PopUp from "../components/PopUp.html.js";
 import ReInput from "../components/ReInput.html.js";
 
@@ -7,11 +7,10 @@ import ReInput from "../components/ReInput.html.js";
     markupURL: "./src/pages/ComponentShowcasePage.html",
     cssURL: "./src/pages/ComponentShowcasePage.html.css",
     jsURL: "./src/pages/ComponentShowcasePage.html.ts",
-    class: ComponentShowcasePage,
 }, "/components")
 export default class ComponentShowcasePage extends Page {
-    protected preLoad(holder: IElementHolder): Promise<void> {
-        const root = holder.element;
+    protected preLoad(holder: TemplateHolder): Promise<void> {
+        const root = holder.documentFragment;
 
         // PopUp demo handlers
         const demoPopup = root.querySelector('#demo-popup') as PopUp | null;

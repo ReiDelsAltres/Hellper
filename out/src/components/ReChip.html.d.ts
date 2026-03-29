@@ -1,10 +1,11 @@
-import { IElementHolder, Component } from "@Purper";
-export default class ReChip extends Component {
-    private chip?;
-    private iconSlot?;
-    private removeSlot?;
-    static get observedAttributes(): string[];
-    protected preLoad(holder: IElementHolder): Promise<void>;
-    private updateChip;
+import { Attribute } from "@Purper";
+import ComponentCore from "./core/ComponentCore.js";
+type ChipVariant = "filled" | "outlined";
+export default class ReChip extends ComponentCore {
+    Icon: Attribute<string | null>;
+    Variant: Attribute<ChipVariant>;
+    private isIconAbsent;
+    private shouldBeContrast;
 }
+export {};
 //# sourceMappingURL=ReChip.html.d.ts.map

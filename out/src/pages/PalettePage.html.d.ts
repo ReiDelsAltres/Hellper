@@ -1,8 +1,8 @@
-import { IElementHolder, Page } from "@Purper";
+import { Page, TemplateHolder } from "@Purper";
 export default class PalettePage extends Page {
     private gallery?;
     private themes;
-    protected preLoad(holder: IElementHolder): Promise<void>;
+    protected preLoad(holder: TemplateHolder): Promise<void>;
     private discoverThemes;
     private createPaletteItems;
     private setupInteractions;

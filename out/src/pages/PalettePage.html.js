@@ -12,7 +12,7 @@ let PalettePage = class PalettePage extends Page {
     themes = [];
     async preLoad(holder) {
         // Hold a reference to gallery element so we can populate it
-        this.gallery = holder.element.querySelector('.palette-gallery') ?? undefined;
+        this.gallery = holder.documentFragment.querySelector('.palette-gallery') ?? undefined;
         // Auto-discover themes from /resources folder
         await this.discoverThemes();
         // Create palette items dynamically

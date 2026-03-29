@@ -1,0 +1,100 @@
+.page {
+  min-height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.semestr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  .semestr-item {
+    .subject-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      /* make each action card use a two-column layout: content left, chips right */
+      re-button > div.content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* ensure the content doesn't overflow the button area */
+        width: 100%;
+        box-sizing: border-box;
+      }
+      /* vertical stack of chips aligned to the right */
+      re-button > div.content .chip-column {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+        /* don't allow chips column to collapse */
+        flex-shrink: 0;
+        margin-left: 8px;
+      }
+    }
+  }
+  .semestr-item p {
+    text-align: center;
+  }
+}
+
+/* Prevent horizontal overflow on small screens by allowing flex items to shrink and capping widths */
+.semestr-list,
+.semestr-list *,
+.semestr-item,
+.subject-list,
+re-button,
+re-button > div.content,
+re-button > div.content .meta,
+.btn,
+.chip-column {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Make meta area compressible to avoid overflow when chip column exists */
+re-button > div.content .meta {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Allow chip column to shrink on small screens and limit its width */
+re-button > div.content .chip-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 40%;
+  margin-left: 8px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .semestr-list {
+    gap: 12px;
+  }
+  re-button > div.content {
+    gap: 8px;
+  }
+  re-button > div.content .chip-column {
+    max-width: 45%;
+  }
+}
+.btn {
+  flex: 1 1 320px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=TestingPage.html.css.map */

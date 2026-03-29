@@ -1,0 +1,39 @@
+<paper-component simple="true" class="colloquim-page">
+    <div class="hero">
+        <re-typography variant="headline" color="primary" class="hero-title">Коллоквиумы</re-typography>
+        <re-typography variant="body" color="empty" class="hero-sub">Выберите предмет для подготовки</re-typography>
+    </div>
+
+    <for value="section" of="sections" class="sections-list">
+        <div class="section-block">
+            <div class="section-header">
+                <re-chip color="tertiary" variant="filled" class="section-num">
+                    <exp of="section.number"></exp>
+                </re-chip>
+                <span class="section-label">Семестр</span>
+            </div>
+            <div class="subject-grid">
+                <for value="subject" of="section.subjects" class="subject-grid-inner">
+                    <re-button allow-wrap color="primary" variant="outlined" class="subject-card"
+                        on[click]="goToSubject(subject)">
+                        <div class="card-body">
+                            <span class="subject-name">
+                                <exp of="subject.translatedName"></exp>
+                            </span>
+                            <span class="subject-teacher">
+                                <exp of="subject.teacher"></exp>
+                            </span>
+                            <div class="chip-row">
+                                <for value="group" of="subject.groups">
+                                    <re-chip color="secondary" variant="outlined" class="group-chip">
+                                        <exp of="group"></exp>
+                                    </re-chip>
+                                </for>
+                            </div>
+                        </div>
+                    </re-button>
+                </for>
+            </div>
+        </div>
+    </for>
+</paper-component>

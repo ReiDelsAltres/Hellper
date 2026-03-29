@@ -1,5 +1,5 @@
 <paper-component class="page">
-    @for (question in questions) {
-
-    }
+    <re-icon icon="favorite"></re-icon>
+    <re-icon icon="favorite" variant="block"></re-icon>
+    <re-icon icon="favorite" variant="outlined"></re-icon>
 </paper-component>

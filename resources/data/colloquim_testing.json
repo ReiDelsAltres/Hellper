@@ -1,0 +1,17 @@
+[
+    {
+        "number": "Ⅳ",
+        "subjects": [
+            {
+                "name": "Kompüter arxitekturası-2",
+                "teacher": "Quliyev M.M",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Архитектура компьютера",
+                "file": "colloquium/s4/KA.json"
+            }
+        ]
+    }
+]

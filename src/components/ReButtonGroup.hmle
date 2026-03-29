@@ -1,0 +1,3 @@
+<div ref="'container'" class="button-group-container">
+    <slot on[slotchange]="update()"></slot>
+</div>

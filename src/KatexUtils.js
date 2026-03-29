@@ -59,6 +59,43 @@ export class KatexUtils {
     }
 
     /**
+     * Render LaTeX inline/display delimiters ($...$ and $$...$$) inside a plain-text
+     * string and return the result as an HTML string.
+     * Safe to call before the DOM is ready; falls back to the original text when KaTeX
+     * is not yet loaded.
+     * @param {string} text - Source text that may contain $...$ or $$...$$ regions
+     * @param {Object} options - KaTeX options passed to renderToString
+     * @returns {string} HTML string with math replaced by KaTeX output
+     */
+    static renderInlineString(text, options = {}) {
+        if (typeof text !== 'string') return text;
+        if (!this.isKatexLoaded()) return text;
+
+        const parts = [];
+        // Match $$...$$ (display) before $...$ (inline) so we don't split display math
+        const regex = /\$\$([\s\S]+?)\$\$|\$([^\$\n]+?)\$/g;
+        let lastIndex = 0;
+        let match;
+
+        while ((match = regex.exec(text)) !== null) {
+            if (match.index > lastIndex) {
+                parts.push(text.slice(lastIndex, match.index));
+            }
+            if (match[1] !== undefined) {
+                // $$...$$ — display mode
+                parts.push(this.renderToString(match[1].trim(), { ...options, displayMode: true }));
+            } else {
+                // $...$ — inline mode
+                parts.push(this.renderToString(match[2].trim(), options));
+            }
+            lastIndex = regex.lastIndex;
+        }
+
+        parts.push(text.slice(lastIndex));
+        return parts.join('');
+    }
+
+    /**
      * Auto-render math expressions in an element
      * @param {HTMLElement} element - Container element to scan for math
      * @param {Object} options - Auto-render options
@@ -71,10 +108,10 @@ export class KatexUtils {
 
         const defaultOptions = {
             delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', display: false},
-                {left: '\\[', right: '\\]', display: true},
-                {left: '\\(', right: '\\)', display: false}
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\[', right: '\\]', display: true },
+                { left: '\\(', right: '\\)', display: false }
             ],
             throwOnError: false,
             ...options
@@ -91,10 +128,14 @@ export class KatexUtils {
      * Initialize KaTeX auto-rendering for the entire document
      * Call this after page content is loaded
      */
+    static _initRetries = 0;
+    static _observer = null;
+
     static initAutoRender() {
         if (!this.isKatexLoaded() || !window.renderMathInElement) {
-            // Retry after a short delay if KaTeX isn't loaded yet
-            setTimeout(() => this.initAutoRender(), 100);
+            if (this._initRetries++ < 50) {
+                setTimeout(() => this.initAutoRender(), 100);
+            }
             return;
         }
 
@@ -112,7 +153,9 @@ export class KatexUtils {
      * Set up mutation observer to auto-render math in dynamically added content
      */
     static setupMutationObserver() {
-        const observer = new MutationObserver((mutations) => {
+        if (this._observer) return;
+
+        this._observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 mutation.addedNodes.forEach((node) => {
                     if (node.nodeType === Node.ELEMENT_NODE) {
@@ -124,10 +167,20 @@ export class KatexUtils {
 
         const appElement = document.getElementById('app');
         if (appElement) {
-            observer.observe(appElement, {
+            this._observer.observe(appElement, {
                 childList: true,
                 subtree: true
             });
+        }
+    }
+
+    /**
+     * Disconnect the mutation observer
+     */
+    static disconnectObserver() {
+        if (this._observer) {
+            this._observer.disconnect();
+            this._observer = null;
         }
     }
 
@@ -142,7 +195,7 @@ export class KatexUtils {
         }
 
         try {
-            window.katex.renderToString(expression, {throwOnError: true});
+            window.katex.renderToString(expression, { throwOnError: true });
             return true;
         } catch (error) {
             return false;

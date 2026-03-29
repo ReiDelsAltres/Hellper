@@ -1,45 +1,24 @@
 :host {
   display: flex;
-  color: var(--typography-color, var(--color-text, #c1c1c4));
+
+  color: var(--typography-color, inherit);
   font-family: var(--font-family);
   font-weight: var(--typography-weight, 500);
   line-height: var(--typography-line-height, 1.4);
   letter-spacing: var(--typography-letter, 0);
   text-transform: var(--typography-transform, none);
 
+  max-width: 100%;
+  min-width: min-content;
+
+  justify-content: center;
   gap: 5px;
-}
-
-
-/* Alignment */
-:host([align="left"]) .typo-text,
-:host(:not([align])) .typo-text {
-  text-align: left;
-}
-
-:host([align="center"]) .typo-text {
-  text-align: center;
-}
-
-:host([align="right"]) .typo-text {
-  text-align: right;
-}
-
-:host([align="justify"]) .typo-text {
-  text-align: justify;
 }
 
 /* Transform */
 :host([uppercase]) {
   --typography-transform: uppercase;
   letter-spacing: 0.08em;
-}
-
-/* Truncate */
-:host([truncate]) .typo-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 :host([disabled]) {
@@ -99,8 +78,7 @@
   --typography-color: var(--color-empty-contrast);
 }
 
-:host([color="primary"]),
-:host(:not([color])) {
+:host([color="primary"]){
   --typography-color: var(--color-primary-contrast);
 }
 

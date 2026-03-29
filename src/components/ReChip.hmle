@@ -1,0 +1,4 @@
+<re-icon set[hidden]="isIconAbsent" set[contrast]="shouldBeContrast" set[icon]="Icon" set[color]="Color" set[optical-size]="20"></re-icon>
+<span class="chip-text">
+    <slot></slot>
+</span>

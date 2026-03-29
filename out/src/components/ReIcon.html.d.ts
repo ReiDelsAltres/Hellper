@@ -1,77 +1,19 @@
-import { IElementHolder, Component } from "@Purper";
-/**
- * ReIcon — универсальный компонент иконки в стиле ReButton/ReChip
- * Содержит встроенную библиотеку Material Design иконок
- *
- * Атрибуты:
- * - icon: имя иконки из библиотеки
- * - size: xs | sm | md | lg | xl | xxl
- * - color: primary | secondary | tertiary | additional | success | warning | error | info | text | text-secondary | empty
- * - variant: (default) | contrast | outlined
- * - interactive: добавляет hover эффекты
- * - spin: анимация вращения
- * - pulse: анимация пульсации
- * - disabled: отключённое состояние
- * - rotate: 90 | 180 | 270
- * - flip: horizontal | vertical | both
- * - badge: текст или пустая строка для точки
- */
-export default class ReIcon extends Component {
-    private iconWrapper?;
-    private svgElement?;
-    /**
-     * Библиотека предустановленных иконок Material Design
-     */
-    private static readonly iconLibrary;
-    static get observedAttributes(): string[];
-    protected preLoad(holder: IElementHolder): Promise<void>;
-    /**
-     * Создаёт или обновляет SVG элемент с иконкой
-     */
+import { TemplateHolder, Attribute } from "@Purper";
+import ComponentCore from "./core/ComponentCore.js";
+type IconVariant = "block" | 'filled' | 'outlined' | 'rounded' | 'sharp';
+type IconWeight = 100 | 200 | 300 | 400 | 500 | 600 | 700;
+export type IconAnimation = 'none' | 'spin' | 'pulse' | 'bounce' | 'shake';
+export default class ReIcon extends ComponentCore {
+    private iconSpan?;
+    Icon: Attribute<string | null>;
+    Variant: Attribute<IconVariant>;
+    Weight: Attribute<IconWeight>;
+    OpticalSize: Attribute<IntRange<20, 49>>;
+    Animation: Attribute<IconAnimation>;
+    protected preLoad(holder: TemplateHolder): Promise<void>;
     private updateIcon;
-    /**
-     * Apply visual attributes (size, color, variant, spin, pulse, rotate, flip, badge)
-     */
-    private updateVisuals;
-    /**
-     * Получить список всех доступных иконок
-     */
-    static getAvailableIcons(): string[];
-    /**
-     * Проверить, существует ли иконка в библиотеке
-     */
-    static hasIcon(name: string): boolean;
-    /**
-     * Установить иконку
-     */
-    setIcon(name: string): void;
-    /**
-     * Установить размер
-     */
-    setSize(size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'): void;
-    /**
-     * Установить цвет
-     */
-    setColor(color: 'primary' | 'secondary' | 'tertiary' | 'additional' | 'success' | 'warning' | 'error' | 'info' | 'text' | 'empty'): void;
-    /**
-     * Установить вариант
-     */
-    setVariant(variant: 'contrast' | 'outlined' | ''): void;
-    /**
-     * Включить/выключить вращение
-     */
-    setSpin(enabled: boolean): void;
-    /**
-     * Включить/выключить пульсацию
-     */
-    setPulse(enabled: boolean): void;
-    /**
-     * Отключить/включить иконку
-     */
-    setDisabled(disabled: boolean): void;
-    /**
-     * Установить бейдж
-     */
-    setBadge(value: string | null): void;
 }
+type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] extends N ? Acc[number] : Enumerate<N, [...Acc, Acc['length']]>;
+type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>>;
+export {};
 //# sourceMappingURL=ReIcon.html.d.ts.map

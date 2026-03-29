@@ -1,0 +1,80 @@
+@use './core/ComponentCore';
+
+@include ComponentCore.setupFullCore;
+
+@include ComponentCore.supportHidden;
+@include ComponentCore.supportDisabled;
+@include ComponentCore.supportColor;
+
+@include ComponentCore.supportVariant("filled", true) using ($type) {
+    @if $type ==base {
+        background-color: var(--component-bg-color);
+        color: var(--component-text-color);
+        --ta-placeholder-color: var(--component-text-color);
+    }
+}
+
+@include ComponentCore.supportVariant("outlined") using ($type) {
+    @if $type ==base {
+        background-color: transparent;
+        border: 1px solid var(--component-bg-color);
+        color: var(--component-bg-color);
+        --ta-placeholder-color: var(--component-bg-color);
+    }
+}
+
+:host {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+
+    box-sizing: border-box;
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+:host(:focus-within) {
+    border-color: var(--component-bg-color);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--component-bg-color) 30%, transparent);
+}
+
+:host([invalid]) {
+    border-color: var(--color-error, #d32f2f);
+}
+
+:host([invalid]:focus-within) {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-error) 30%, transparent);
+}
+
+:host([full-width]) {
+    width: 100%;
+}
+
+textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font: inherit;
+    color: inherit;
+    padding: 0;
+    resize: vertical;
+    min-height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea::placeholder {
+    color: var(--ta-placeholder-color);
+    opacity: 0.7;
+}
+
+.validation-message {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    font-size: 0.55rem;
+}

@@ -47,56 +47,6 @@
     flex: 1;
 }
 
-/* Button styling within group - horizontal */
-:host([orientation="horizontal"]) ::slotted(re-button),
-:host(:not([orientation])) ::slotted(re-button) {
-    border-radius: 0;
-    margin-left: -1px;
-}
-
-:host([orientation="horizontal"]) ::slotted(re-button:first-child),
-:host(:not([orientation])) ::slotted(re-button:first-child) {
-    margin-left: 0;
-    border-radius: 8px 0 0 8px;
-}
-
-:host([orientation="horizontal"]) ::slotted(re-button:last-child),
-:host(:not([orientation])) ::slotted(re-button:last-child) {
-    border-radius: 0 8px 8px 0;
-}
-
-:host([orientation="horizontal"]) ::slotted(re-button:only-child),
-:host(:not([orientation])) ::slotted(re-button:only-child) {
-    border-radius: 8px;
-    margin-left: 0;
-}
-
-/* Button styling within group - vertical */
-:host([orientation="vertical"]) ::slotted(re-button) {
-    border-radius: 0;
-    margin-top: -1px;
-}
-
-:host([orientation="vertical"]) ::slotted(re-button:first-child) {
-    margin-top: 0;
-    border-radius: 8px 8px 0 0;
-}
-
-:host([orientation="vertical"]) ::slotted(re-button:last-child) {
-    border-radius: 0 0 8px 8px;
-}
-
-:host([orientation="vertical"]) ::slotted(re-button:only-child) {
-    border-radius: 8px;
-    margin-top: 0;
-}
-
-/* Selected state styling */
-::slotted(re-button[selected]) {
-    z-index: 1;
-    position: relative;
-}
-
 /* Disabled state */
 :host([disabled]) {
     opacity: 0.6;
@@ -126,39 +76,39 @@
 /* ─────────────────────────────────────────────────────────────────
    Size variants - adjust border radius
    ───────────────────────────────────────────────────────────────── */
-:host([size="small"][orientation="horizontal"]) ::slotted(re-button:first-child),
-:host([size="small"]:not([orientation])) ::slotted(re-button:first-child) {
+:host([size="small"][orientation="horizontal"]) ::slotted(re-button.group-first),
+:host([size="small"]:not([orientation])) ::slotted(re-button.group-first) {
     border-radius: 6px 0 0 6px;
 }
 
-:host([size="small"][orientation="horizontal"]) ::slotted(re-button:last-child),
-:host([size="small"]:not([orientation])) ::slotted(re-button:last-child) {
+:host([size="small"][orientation="horizontal"]) ::slotted(re-button.group-last),
+:host([size="small"]:not([orientation])) ::slotted(re-button.group-last) {
     border-radius: 0 6px 6px 0;
 }
 
-:host([size="small"][orientation="vertical"]) ::slotted(re-button:first-child) {
+:host([size="small"][orientation="vertical"]) ::slotted(re-button.group-first) {
     border-radius: 6px 6px 0 0;
 }
 
-:host([size="small"][orientation="vertical"]) ::slotted(re-button:last-child) {
+:host([size="small"][orientation="vertical"]) ::slotted(re-button.group-last) {
     border-radius: 0 0 6px 6px;
 }
 
-:host([size="large"][orientation="horizontal"]) ::slotted(re-button:first-child),
-:host([size="large"]:not([orientation])) ::slotted(re-button:first-child) {
+:host([size="large"][orientation="horizontal"]) ::slotted(re-button.group-first),
+:host([size="large"]:not([orientation])) ::slotted(re-button.group-first) {
     border-radius: 10px 0 0 10px;
 }
 
-:host([size="large"][orientation="horizontal"]) ::slotted(re-button:last-child),
-:host([size="large"]:not([orientation])) ::slotted(re-button:last-child) {
+:host([size="large"][orientation="horizontal"]) ::slotted(re-button.group-last),
+:host([size="large"]:not([orientation])) ::slotted(re-button.group-last) {
     border-radius: 0 10px 10px 0;
 }
 
-:host([size="large"][orientation="vertical"]) ::slotted(re-button:first-child) {
+:host([size="large"][orientation="vertical"]) ::slotted(re-button.group-first) {
     border-radius: 10px 10px 0 0;
 }
 
-:host([size="large"][orientation="vertical"]) ::slotted(re-button:last-child) {
+:host([size="large"][orientation="vertical"]) ::slotted(re-button.group-last) {
     border-radius: 0 0 10px 10px;
 }
 
@@ -188,12 +138,12 @@
         margin-top: -1px;
     }
     
-    :host([responsive]) ::slotted(re-button:first-child) {
+    :host([responsive]) ::slotted(re-button.group-first) {
         margin-top: 0;
         border-radius: 8px 8px 0 0 !important;
     }
     
-    :host([responsive]) ::slotted(re-button:last-child) {
+    :host([responsive]) ::slotted(re-button.group-last) {
         border-radius: 0 0 8px 8px !important;
     }
 }

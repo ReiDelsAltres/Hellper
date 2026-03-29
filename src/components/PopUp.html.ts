@@ -1,4 +1,4 @@
-import { Component, IElementHolder, ReComponent } from "@Purper";
+import { Component, IElementHolder, ReComponent, TemplateHolder } from "@Purper";
 
 @ReComponent({
     markupURL: "./src/components/PopUp.html",
@@ -16,9 +16,9 @@ export default class PopUp extends Component {
     private anchorElement?: Element | null;
     private clickOutsideHandler?: (e: MouseEvent) => void;
 
-    protected preLoad(holder: IElementHolder): Promise<void> {
-        this.overlay = holder.element.querySelector('.popup-overlay') as HTMLElement;
-        this.container = holder.element.querySelector('.popup-container') as HTMLElement;
+    protected preLoad(holder: TemplateHolder): Promise<void> {
+        this.overlay = holder.documentFragment.querySelector('.popup-overlay') as HTMLElement;
+        this.container = holder.documentFragment.querySelector('.popup-container') as HTMLElement;
 
         // Click overlay to close (unless modal)
         this.overlay?.addEventListener('click', () => {
