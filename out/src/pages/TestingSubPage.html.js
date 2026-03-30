@@ -11,9 +11,9 @@ import { Fetcher, Page, RePage, Router, Observable } from "@Purper";
 let TestingSubPage = class TestingSubPage extends Page {
     subject;
     testModes = [
-        { signature: "fast", name: "Р‘С‹СЃС‚СЂС‹Р№ С‚РµСЃС‚", description: "РўС‹ С€РєРѕР»СЊРЅРёРє", numQuestions: new Observable(5), colorP: "success" },
-        { signature: "normal", name: "Р­РєР·Р°РјРµРЅ", description: "РўС‹ СЃС‚СѓРґРµРЅС‚", numQuestions: new Observable(25), colorP: "warning" },
-        { signature: "hard", name: "РњР°Р·РѕС…РёР·Рј", description: "РўС‹ Р°РґРµРєРІР°С‚РЅС‹Р№?", numQuestions: new Observable(0), colorP: "error" },
+        { signature: "fast", name: "Быстрый тест", description: "Ты школьник", numQuestions: new Observable(5), colorP: "success" },
+        { signature: "normal", name: "Экзамен", description: "Ты студент", numQuestions: new Observable(25), colorP: "warning" },
+        { signature: "hard", name: "Мазохизм", description: "Ты адекватный?", numQuestions: new Observable(0), colorP: "error" },
     ];
     testModesGroup;
     modeSettingsButton;

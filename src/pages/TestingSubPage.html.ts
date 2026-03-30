@@ -15,9 +15,9 @@ import TestingActualPage from "./TestingActualPage.html.js";
 export default class TestingSubPage extends Page {
   private subject: Subject;
   private testModes: TestMode[] = [
-    { signature: "fast", name: "Р‘С‹СЃС‚СЂС‹Р№ С‚РµСЃС‚", description: "РўС‹ С€РєРѕР»СЊРЅРёРє", numQuestions: new Observable(5), colorP: "success" },
-    { signature: "normal", name: "Р­РєР·Р°РјРµРЅ", description: "РўС‹ СЃС‚СѓРґРµРЅС‚", numQuestions: new Observable(25), colorP: "warning" },
-    { signature: "hard", name: "РњР°Р·РѕС…РёР·Рј", description: "РўС‹ Р°РґРµРєРІР°С‚РЅС‹Р№?", numQuestions: new Observable(0), colorP: "error" },
+    { signature: "fast", name: "Быстрый тест", description: "Ты школьник", numQuestions: new Observable(5), colorP: "success" },
+    { signature: "normal", name: "Экзамен", description: "Ты студент", numQuestions: new Observable(25), colorP: "warning" },
+    { signature: "hard", name: "Мазохизм", description: "Ты адекватный?", numQuestions: new Observable(0), colorP: "error" },
   ];
   private testModesGroup?: ReButtonGroup;
   private modeSettingsButton?: ReButton;

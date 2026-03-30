@@ -49,6 +49,7 @@
                     <div class="answer-block" ref="'answer_' + bidx + '_' + qidx" style="display:none">
                         <re-typography color="warning" class="length-warning" ref="'lenwarning_' + bidx + '_' + qidx"
                             style="display:none"></re-typography>
+                        <div class="score-breakdown" ref="'breakdown_' + bidx + '_' + qidx" style="display:none"></div>
                         <div class="user-answer-row">
                             <re-typography class="ref-answer-label">Ваш ответ:</re-typography>
                             <re-typography class="user-answer-text"
@@ -101,6 +102,7 @@
             <div class="answer-block" ref="'qanswer_' + qidx" style="display:none">
                 <re-typography color="warning" class="length-warning" ref="'qlenwarning_' + qidx"
                     style="display:none"></re-typography>
+                <div class="score-breakdown" ref="'qbreakdown_' + qidx" style="display:none"></div>
                 <div class="user-answer-row">
                     <re-typography class="ref-answer-label">Ваш ответ:</re-typography>
                     <re-typography class="user-answer-text" ref="'quseranswer_' + qidx"></re-typography>

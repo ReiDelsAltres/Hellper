@@ -3,7 +3,7 @@ import { Subject, ColloquiumFile, ColloquiumQuestion, ColloquiumBilet } from "..
 import SeededShuffle from "../lib/SeededShuffle.js";
 import PopUp from "../components/PopUp.html.js";
 import ReTextArea from "../components/ReTextArea.html.js";
-import SimilarityScorer, { ScoreResult } from "../lib/SimilarityScorer.js";
+import SimilarityScorer, { ScoreResult, ScoreBreakdown } from "../lib/SimilarityScorer.js";
 
 @RePage({
     markupURL: "./src/pages/ColloquiumActualPage.hmle",
@@ -60,7 +60,7 @@ export default class ColloquiumActualPage extends Page {
                 const chunk = allQuestions.slice(i, i + BILET_SIZE);
                 const biletIdx = Math.floor(i / BILET_SIZE);
                 const questions = chunk.map((q, qIdx) => new DisplayQuestion(q, qIdx));
-                bilets.push(new DisplayBilet(biletIdx + 1, `Р‘РёР»РµС‚ ${biletIdx + 1}`, questions, biletIdx));
+                bilets.push(new DisplayBilet(biletIdx + 1, `Билет ${biletIdx + 1}`, questions, biletIdx));
             }
 
             if (this.params.limits && this.params.limits > 0) {
@@ -125,7 +125,7 @@ export default class ColloquiumActualPage extends Page {
         const ta = this['ta_' + biletIdx + '_' + questionIdx] as ReTextArea;
         const userText = ta?.Value?.value ?? '';
         const userAnswerEl = this['useranswer_' + biletIdx + '_' + questionIdx] as HTMLElement;
-        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(РЅРµС‚ РѕС‚РІРµС‚Р°)';
+        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(нет ответа)';
         const inputRow = this['inputrow_' + biletIdx + '_' + questionIdx] as HTMLElement;
         if (inputRow) inputRow.style.display = 'none';
         if (ta) ta.setAttribute('disabled', '');
@@ -137,17 +137,17 @@ export default class ColloquiumActualPage extends Page {
         const ta = this['qta_' + questionIdx] as ReTextArea;
         const userText = ta?.Value?.value ?? '';
         const userAnswerEl = this['quseranswer_' + questionIdx] as HTMLElement;
-        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(РЅРµС‚ РѕС‚РІРµС‚Р°)';
+        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(нет ответа)';
         const inputRow = this['qinputrow_' + questionIdx] as HTMLElement;
         if (inputRow) inputRow.style.display = 'none';
         if (ta) ta.setAttribute('disabled', '');
     }
 
-    private async scoreAnswer(userText: string, answers: string[], keywords: string[]): Promise<ScoreResult> {
-        return SimilarityScorer.score(userText, answers, keywords);
+    private async scoreAnswer(userText: string, answers: string[], keywords: string[], questionTitle: string, idealSize: number): Promise<ScoreResult> {
+        return SimilarityScorer.score(userText, answers, keywords, questionTitle, idealSize);
     }
 
-    private showScoreResult(scoreEl: HTMLElement, lengthEl: HTMLElement | undefined, result: ScoreResult): void {
+    private showScoreResult(scoreEl: HTMLElement, lengthEl: HTMLElement | undefined, breakdownEl: HTMLElement | undefined, result: ScoreResult): void {
         scoreEl.style.display = 'inline-flex';
         scoreEl.textContent = result.score + '%';
         if (result.score >= 80) scoreEl.setAttribute('color', 'success');
@@ -158,10 +158,22 @@ export default class ColloquiumActualPage extends Page {
             if (result.lengthMismatch) {
                 lengthEl.style.display = 'block';
                 const pct = Math.round(result.lengthRatio * 100);
-                lengthEl.textContent = `вљ  Р Р°Р·РјРµСЂ РѕС‚РІРµС‚Р° РЅРµРґРѕСЃС‚Р°С‚РѕС‡РµРЅ (${pct}% РѕС‚ СЌС‚Р°Р»РѕРЅР°, РјРёРЅРёРјСѓРј 70%)`;
+                lengthEl.textContent = `⚠ Размер ответа недостаточен (${pct}% от эталона, минимум 70%)`;
             } else {
                 lengthEl.style.display = 'none';
             }
+        }
+
+        if (breakdownEl && result.breakdown) {
+            breakdownEl.style.display = 'block';
+            const b = result.breakdown;
+            const lines: string[] = [];
+            lines.push(`Семантика: ${b.semanticScore}% / ${b.semanticMax}%`);
+            lines.push(`Логика: ${b.logicalScore}% / ${b.logicalMax}%`);
+            if (b.keywordMax > 0) {
+                lines.push(`Ключевые слова: ${b.keywordScore}% / ${b.keywordMax}%`);
+            }
+            breakdownEl.innerHTML = lines.map(l => `<div class="breakdown-line">${l}</div>`).join('');
         }
     }
 
@@ -178,7 +190,7 @@ export default class ColloquiumActualPage extends Page {
 
         const ta = this['ta_' + biletIdx + '_' + questionIdx] as ReTextArea;
         const userText = ta?.Value?.value ?? '';
-        const result = await this.scoreAnswer(userText, question.Answers, question.Keywords);
+        const result = await this.scoreAnswer(userText, question.Answers, question.Keywords, question.Title, question.size);
         question.status = result.score >= 50 ? AnswerStatus.SUCCESS : AnswerStatus.WRONG;
         question.score = result.score;
 
@@ -186,8 +198,9 @@ export default class ColloquiumActualPage extends Page {
 
         const scoreEl = this['score_' + biletIdx + '_' + questionIdx] as HTMLElement;
         const lengthEl = this['lenwarning_' + biletIdx + '_' + questionIdx] as HTMLElement | undefined;
+        const breakdownEl = this['breakdown_' + biletIdx + '_' + questionIdx] as HTMLElement | undefined;
         if (scoreEl) {
-            this.showScoreResult(scoreEl, lengthEl, result);
+            this.showScoreResult(scoreEl, lengthEl, breakdownEl, result);
         }
     }
 
@@ -213,7 +226,7 @@ export default class ColloquiumActualPage extends Page {
 
         const ta = this['qta_' + questionIdx] as ReTextArea;
         const userText = ta?.Value?.value ?? '';
-        const result = await this.scoreAnswer(userText, question.Answers, question.Keywords);
+        const result = await this.scoreAnswer(userText, question.Answers, question.Keywords, question.Title, question.size);
         question.status = result.score >= 50 ? AnswerStatus.SUCCESS : AnswerStatus.WRONG;
         question.score = result.score;
 
@@ -221,8 +234,9 @@ export default class ColloquiumActualPage extends Page {
 
         const scoreEl = this['qscore_' + questionIdx] as HTMLElement;
         const lengthEl = this['qlenwarning_' + questionIdx] as HTMLElement | undefined;
+        const breakdownEl = this['qbreakdown_' + questionIdx] as HTMLElement | undefined;
         if (scoreEl) {
-            this.showScoreResult(scoreEl, lengthEl, result);
+            this.showScoreResult(scoreEl, lengthEl, breakdownEl, result);
         }
     }
 
@@ -245,12 +259,13 @@ export default class ColloquiumActualPage extends Page {
         // Score unanswered questions via NLP, skip ones with no text
         for (let qIdx = 0; qIdx < bilet.questions.length; qIdx++) {
             const q = bilet.questions[qIdx];
-            let result: ScoreResult = { score: 0, lengthMismatch: true, lengthRatio: 0 };
+            const emptyBd: ScoreBreakdown = { semanticScore: 0, semanticMax: 0, logicalScore: 0, logicalMax: 0, keywordScore: 0, keywordMax: 0 };
+            let result: ScoreResult = { score: 0, lengthMismatch: true, lengthRatio: 0, breakdown: emptyBd };
             if (q.status === AnswerStatus.UNANSWERED) {
                 const ta = this['ta_' + biletIdx + '_' + qIdx] as ReTextArea;
                 const userText = ta?.Value?.value ?? '';
                 if (userText.trim().length > 0) {
-                    result = await this.scoreAnswer(userText, q.Answers, q.Keywords);
+                    result = await this.scoreAnswer(userText, q.Answers, q.Keywords, q.Title, q.size);
                     q.status = result.score >= 50 ? AnswerStatus.SUCCESS : AnswerStatus.WRONG;
                     q.score = result.score;
                 } else {
@@ -262,8 +277,9 @@ export default class ColloquiumActualPage extends Page {
 
             const scoreEl = this['score_' + biletIdx + '_' + qIdx] as HTMLElement;
             const lengthEl = this['lenwarning_' + biletIdx + '_' + qIdx] as HTMLElement | undefined;
+            const breakdownEl = this['breakdown_' + biletIdx + '_' + qIdx] as HTMLElement | undefined;
             if (scoreEl && q.score !== undefined) {
-                this.showScoreResult(scoreEl, lengthEl, result);
+                this.showScoreResult(scoreEl, lengthEl, breakdownEl, result);
             }
         }
 
@@ -302,26 +318,28 @@ export default class ColloquiumActualPage extends Page {
                 const bilet = this.bilets[bidx];
                 for (let qidx = 0; qidx < bilet.questions.length; qidx++) {
                     const q = bilet.questions[qidx];
-                    let result: ScoreResult = { score: q.score, lengthMismatch: false, lengthRatio: 1 };
+                    const eBd: ScoreBreakdown = { semanticScore: 0, semanticMax: 0, logicalScore: 0, logicalMax: 0, keywordScore: 0, keywordMax: 0 };
+                    let result: ScoreResult = { score: q.score, lengthMismatch: false, lengthRatio: 1, breakdown: eBd };
                     if (q.status === AnswerStatus.UNANSWERED) {
                         const ta = this['ta_' + bidx + '_' + qidx] as ReTextArea;
                         const userText = ta?.Value?.value ?? '';
                         if (userText.trim().length > 0) {
-                            result = await this.scoreAnswer(userText, q.Answers, q.Keywords);
+                            result = await this.scoreAnswer(userText, q.Answers, q.Keywords, q.Title, q.size);
                             q.status = result.score >= 50 ? AnswerStatus.SUCCESS : AnswerStatus.WRONG;
                             q.score = result.score;
                         } else {
                             q.status = AnswerStatus.WRONG;
                             q.score = 0;
-                            result = { score: 0, lengthMismatch: true, lengthRatio: 0 };
+                            result = { score: 0, lengthMismatch: true, lengthRatio: 0, breakdown: eBd };
                         }
                     }
                     this.revealAnswer(bidx, qidx);
 
                     const scoreEl = this['score_' + bidx + '_' + qidx] as HTMLElement;
                     const lengthEl = this['lenwarning_' + bidx + '_' + qidx] as HTMLElement | undefined;
+                    const breakdownEl = this['breakdown_' + bidx + '_' + qidx] as HTMLElement | undefined;
                     if (scoreEl) {
-                        this.showScoreResult(scoreEl, lengthEl, result);
+                        this.showScoreResult(scoreEl, lengthEl, breakdownEl, result);
                     }
 
                     totalScore += q.score ?? 0;
@@ -348,26 +366,28 @@ export default class ColloquiumActualPage extends Page {
         } else {
             for (let qidx = 0; qidx < this.questions.length; qidx++) {
                 const q = this.questions[qidx];
-                let result: ScoreResult = { score: q.score, lengthMismatch: false, lengthRatio: 1 };
+                const eBd2: ScoreBreakdown = { semanticScore: 0, semanticMax: 0, logicalScore: 0, logicalMax: 0, keywordScore: 0, keywordMax: 0 };
+                let result: ScoreResult = { score: q.score, lengthMismatch: false, lengthRatio: 1, breakdown: eBd2 };
                 if (q.status === AnswerStatus.UNANSWERED) {
                     const ta = this['qta_' + qidx] as ReTextArea;
                     const userText = ta?.Value?.value ?? '';
                     if (userText.trim().length > 0) {
-                        result = await this.scoreAnswer(userText, q.Answers, q.Keywords);
+                        result = await this.scoreAnswer(userText, q.Answers, q.Keywords, q.Title, q.size);
                         q.status = result.score >= 50 ? AnswerStatus.SUCCESS : AnswerStatus.WRONG;
                         q.score = result.score;
                     } else {
                         q.status = AnswerStatus.WRONG;
                         q.score = 0;
-                        result = { score: 0, lengthMismatch: true, lengthRatio: 0 };
+                        result = { score: 0, lengthMismatch: true, lengthRatio: 0, breakdown: eBd2 };
                     }
                 }
                 this.revealQuestionAnswer(qidx);
 
                 const scoreEl = this['qscore_' + qidx] as HTMLElement;
                 const lengthEl = this['qlenwarning_' + qidx] as HTMLElement | undefined;
+                const breakdownEl = this['qbreakdown_' + qidx] as HTMLElement | undefined;
                 if (scoreEl) {
-                    this.showScoreResult(scoreEl, lengthEl, result);
+                    this.showScoreResult(scoreEl, lengthEl, breakdownEl, result);
                 }
 
                 totalScore += q.score ?? 0;
@@ -420,6 +440,7 @@ class DisplayQuestion {
     public Title: string;
     public Answers: string[];
     public Keywords: string[];
+    public size: number;
     public localIdx: number;
     public status: AnswerStatus = AnswerStatus.UNANSWERED;
     public score: number = 0;
@@ -429,6 +450,7 @@ class DisplayQuestion {
         this.Title = data.Title;
         this.Answers = data.Answers ?? [];
         this.Keywords = data.Keywords ?? [];
+        this.size = data.size ? parseInt(data.size, 10) : 0;
         this.localIdx = localIdx;
     }
 }
@@ -441,7 +463,7 @@ class DisplayBilet {
 
     constructor(id: number, title: string | undefined, questions: DisplayQuestion[], localIdx: number) {
         this.Id = id;
-        this.Title = title ?? 'Р‘РёР»РµС‚ ' + id;
+        this.Title = title ?? 'Билет ' + id;
         this.questions = questions;
         this.localIdx = localIdx;
     }

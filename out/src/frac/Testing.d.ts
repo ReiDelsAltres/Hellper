@@ -31,6 +31,7 @@ export interface ExamQuestion extends TestingQuestion {
 }
 export interface ColloquiumQuestion extends TestingQuestion {
     Keywords?: string[];
+    size?: string;
 }
 export interface ColloquiumBilet {
     Id: number;

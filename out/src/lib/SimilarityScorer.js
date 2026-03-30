@@ -19,6 +19,92 @@ function cosineSimilarity(a, b) {
     const denom = Math.sqrt(normA) * Math.sqrt(normB);
     return denom === 0 ? 0 : dot / denom;
 }
+const STOP_WORDS = new Set([
+    "и", "в", "на", "с", "по", "к", "от", "из", "за", "у", "о", "об", "для", "до",
+    "не", "что", "как", "это", "а", "но", "или", "так", "же", "ещё", "еще", "при",
+    "то", "бы", "ли", "он", "она", "оно", "они", "его", "её", "их", "мы", "вы",
+    "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
+    "in", "on", "at", "to", "for", "of", "with", "by", "from", "as",
+    "and", "or", "but", "not", "no", "this", "that", "it", "its",
+]);
+function tokenize(text) {
+    return text.toLowerCase()
+        .replace(/[^\p{L}\p{N}]/gu, ' ')
+        .split(/\s+/)
+        .filter(t => t.length > 2 && !STOP_WORDS.has(t));
+}
+/** Split text into sentences for granular comparison */
+function splitSentences(text) {
+    return text
+        .split(/(?<=[.!?;])\s+|(?<=\n)/)
+        .map(s => s.trim())
+        .filter(s => s.length > 10);
+}
+/**
+ * Embedding-based factual coverage: for each reference answer separately,
+ * measures how well the user's text covers its sentences via semantic similarity.
+ * Returns the best (max) per-answer coverage score (0..1).
+ */
+function nonsensePenalty(userText) {
+    const text = userText.trim();
+    if (text.length === 0)
+        return 0;
+    // Very large repeats: AAAAAAAA или 111111 etc.
+    if (/(.)\1{8,}/u.test(text)) {
+        return 0.75;
+    }
+    const tokens = text.toLowerCase().match(/[\p{L}\p{N}]+/gu) ?? [];
+    if (tokens.length === 0)
+        return 0.6;
+    const repeatTokens = tokens.filter(tok => /^(.)\1+$/u.test(tok)).length;
+    if (repeatTokens / tokens.length > 0.3) {
+        return 0.6;
+    }
+    const nonMeaningfulTokens = tokens.filter(tok => tok.length <= 2).length;
+    if (nonMeaningfulTokens / tokens.length > 0.5) {
+        return 0.4;
+    }
+    return 0;
+}
+async function embeddingCoverage(userText, references) {
+    if (references.length === 0)
+        return 0;
+    // Split user text into sentences for fine-grained matching
+    const userSentences = splitSentences(userText);
+    if (userSentences.length === 0)
+        userSentences.push(userText);
+    const userEmbeddings = await Promise.all(userSentences.map(s => embed(s)));
+    // Also embed the full user text for whole-to-sentence comparison
+    const fullUserEmb = await embed(userText);
+    let bestAnswerScore = 0;
+    for (const ref of references) {
+        const refSentences = splitSentences(ref);
+        if (refSentences.length === 0)
+            refSentences.push(ref);
+        let answerTotal = 0;
+        for (const refSent of refSentences) {
+            const refEmb = await embed(refSent);
+            // Find best matching: user sentence OR full user text
+            let bestSim = cosineSimilarity(fullUserEmb, refEmb);
+            for (const userEmb of userEmbeddings) {
+                const sim = cosineSimilarity(userEmb, refEmb);
+                if (sim > bestSim)
+                    bestSim = sim;
+            }
+            // Remap: sim < 0.45 → 0, sim > 0.80 → 1, power for higher quality
+            const raw = Math.max(0, Math.min(1, (bestSim - 0.45) / 0.35));
+            answerTotal += Math.pow(raw, 1.3);
+        }
+        const answerScore = answerTotal / refSentences.length;
+        if (answerScore > bestAnswerScore)
+            bestAnswerScore = answerScore;
+    }
+    const baseScore = bestAnswerScore;
+    const penalty = nonsensePenalty(userText);
+    const adjustedScore = Math.max(0, baseScore * (1 - penalty));
+    // Slightly ease reaching good logical score for real answers
+    return Math.min(1, adjustedScore * 1.06 + 0.04);
+}
 const embeddingCache = new Map();
 const MAX_CACHE_SIZE = 500;
 async function embed(text) {
@@ -43,33 +129,57 @@ export default class SimilarityScorer {
         await getExtractor();
     }
     /**
-     * Score a user answer against reference answers and keywords.
+     * Score a user answer against reference answers, keywords, and the question itself.
      * Returns 0-100.
      *
-     * @param userText   - the text the user typed
-     * @param answers    - reference correct answers
-     * @param keywords   - expected keywords
+     * @param userText       - the text the user typed
+     * @param answers        - reference correct answers
+     * @param keywords       - expected keywords
+     * @param questionTitle  - the question title (unused, kept for compatibility)
+     * @param idealSize      - ideal answer length in characters (from "size" field)
      */
-    static async score(userText, answers, keywords) {
+    static async score(userText, answers, keywords, questionTitle, idealSize) {
         const trimmed = userText.trim();
+        const emptyBreakdown = { semanticScore: 0, semanticMax: 0, logicalScore: 0, logicalMax: 0, keywordScore: 0, keywordMax: 0 };
         if (trimmed.length === 0)
-            return { score: 0, lengthMismatch: true, lengthRatio: 0 };
-        // Length check against the closest reference answer
+            return { score: 0, lengthMismatch: true, lengthRatio: 0, breakdown: emptyBreakdown };
+        // Length check against idealSize or fallback to average reference length
         let lengthRatio = 1;
         let lengthMismatch = false;
-        if (answers.length > 0) {
+        if (idealSize && idealSize > 0) {
+            lengthRatio = trimmed.length / idealSize;
+            lengthMismatch = lengthRatio < 0.7;
+        }
+        else if (answers.length > 0) {
             const avgRefLength = answers.reduce((sum, a) => sum + a.length, 0) / answers.length;
             lengthRatio = avgRefLength > 0 ? trimmed.length / avgRefLength : 1;
             lengthMismatch = lengthRatio < 0.7;
         }
-        // Keyword matching component (0..1)
+        // Fuzzy keyword matching via embeddings (0..1)
+        // Each keyword is matched by exact substring OR semantic similarity,
+        // so "CPU" matches text about "процессор", "центральный процессор", etc.
         let keywordScore = 0;
         if (keywords.length > 0) {
             const lower = trimmed.toLowerCase();
-            const matched = keywords.filter(kw => lower.includes(kw.toLowerCase())).length;
-            keywordScore = matched / keywords.length;
+            const userEmbedding = await embed(trimmed);
+            let totalKw = 0;
+            for (const kw of keywords) {
+                // Exact substring match = full credit
+                if (lower.includes(kw.toLowerCase())) {
+                    totalKw += 1;
+                    continue;
+                }
+                // Semantic similarity between keyword and user text
+                const kwEmb = await embed(kw);
+                const sim = cosineSimilarity(userEmbedding, kwEmb);
+                // sim < 0.3 → 0, sim >= 0.55 → 1, linear in between
+                if (sim > 0.3) {
+                    totalKw += Math.min(1, (sim - 0.3) / 0.25);
+                }
+            }
+            keywordScore = totalKw / keywords.length;
         }
-        // Semantic similarity component (0..1)
+        // Semantic similarity to reference answers (0..1)
         let semanticScore = 0;
         if (answers.length > 0) {
             const userEmbedding = await embed(trimmed);
@@ -80,22 +190,41 @@ export default class SimilarityScorer {
                 if (sim > maxSim)
                     maxSim = sim;
             }
-            // Remap: similarity < 0.25 → 0, > 0.75 → 1
-            semanticScore = Math.max(0, Math.min(1, (maxSim - 0.25) / 0.5));
+            // Remap: similarity < 0.45 → 0, > 0.85 → 1, then power curve to suppress weak matches
+            const raw = Math.max(0, Math.min(1, (maxSim - 0.45) / 0.40));
+            semanticScore = Math.pow(raw, 1.5);
         }
         else {
-            // No reference answers — rely only on keywords
-            return { score: Math.round(keywordScore * 100), lengthMismatch, lengthRatio };
+            const kwOnly = Math.round(keywordScore * 100);
+            return { score: kwOnly, lengthMismatch, lengthRatio, breakdown: { ...emptyBreakdown, keywordScore: kwOnly, keywordMax: 100 } };
         }
-        // Combine: 75% semantic, 25% keywords (if keywords present)
+        // Logical / factual analysis via embedding-based coverage (0..1)
+        // Splits references into sentences, embeds each, measures how well user covers them
+        const logicalScore = await embeddingCoverage(trimmed, answers);
+        // Combine: 35% semantic, 40% logical, 25% keywords (or 45/55 without keywords)
         let finalScore;
+        let semMax, logMax, kwMax;
         if (keywords.length > 0) {
-            finalScore = semanticScore * 0.75 + keywordScore * 0.25;
+            semMax = 35;
+            logMax = 40;
+            kwMax = 25;
+            finalScore = semanticScore * 0.35 + logicalScore * 0.40 + keywordScore * 0.25;
         }
         else {
-            finalScore = semanticScore;
+            semMax = 45;
+            logMax = 55;
+            kwMax = 0;
+            finalScore = semanticScore * 0.45 + logicalScore * 0.55;
         }
-        return { score: Math.round(finalScore * 100), lengthMismatch, lengthRatio };
+        const breakdown = {
+            semanticScore: Math.round(semanticScore * semMax),
+            semanticMax: semMax,
+            logicalScore: Math.round(logicalScore * logMax),
+            logicalMax: logMax,
+            keywordScore: Math.round(keywordScore * kwMax),
+            keywordMax: kwMax,
+        };
+        return { score: Math.round(finalScore * 100), lengthMismatch, lengthRatio, breakdown };
     }
 }
 //# sourceMappingURL=SimilarityScorer.js.map

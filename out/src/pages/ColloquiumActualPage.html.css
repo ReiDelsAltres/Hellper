@@ -103,6 +103,20 @@
   margin-top: 8px;
 }
 
+.score-breakdown {
+  font-size: 0.82em;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background: rgba(128, 128, 128, 0.06);
+  border: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+.breakdown-line {
+  padding: 2px 0;
+  font-family: monospace;
+}
+
 /* Make template <for> wrapper transparent */
 .keywords-row > for {
   display: contents;
