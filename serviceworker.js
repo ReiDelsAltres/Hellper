@@ -85,7 +85,7 @@ self.addEventListener('fetch', (event) => {
             if (cached) return cached;
 
             return fetch(request).then((response) => {
-                if (response.ok && response.type === 'basic') {
+                if (response.ok && response.type === 'basic' && request.url.startsWith('http')) {
                     const clone = response.clone();
                     caches.open(CACHE_VERSION).then((cache) => cache.put(request, clone));
                 }
