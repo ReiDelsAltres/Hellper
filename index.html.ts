@@ -1,4 +1,4 @@
-import { Router, HOSTING, Triplet, REGISTRY } from "@Purper";
+import { Router, HOSTING, Triplet, REGISTRY, ServiceWorker } from "@Purper";
 
 import "./src/components/ReTypography.html.js"
 import "./src/components/ReInput.html.js"
@@ -29,7 +29,13 @@ import "./src/pages/TestingAllPage.html.js";
 
 export default class Index {
     public static async initialize(): Promise<void> {
-        await Promise.all(REGISTRY.map(register => register()));
+        const promises: Promise<void>[] = [
+            ServiceWorker.register().then(() => { }),
+
+            ...REGISTRY.map(register => register())
+        ];
+
+        await Promise.all(promises);
     }
 }
 
