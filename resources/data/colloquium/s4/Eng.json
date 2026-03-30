@@ -1,0 +1,2405 @@
+{
+    "UseIndex": true,
+    "Questions": [
+        {
+            "Id": 1,
+            "Title": "Translate into Russian: monitor, domain, hosting, bandwidth, download, memory.",
+            "Answers": [
+                "монитор, домен, хостинг, пропускная способность, скачать, память"
+            ],
+            "Keywords": [
+                "монитор",
+                "домен",
+                "хостинг",
+                "пропускная способность",
+                "скачать",
+                "память"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 2,
+            "Title": "Translate into English: защита, маршрутизатор, память, интерфейс, ссылка, графика.",
+            "Answers": [
+                "protection, router, memory, interface, link, graphics"
+            ],
+            "Keywords": [
+                "protection",
+                "router",
+                "memory",
+                "interface",
+                "link",
+                "graphics"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 3,
+            "Title": "Give definitions: system, multimedia, hosting, communication, table, device.",
+            "Answers": [
+                "System: a set of interacting parts forming a complex whole. Multimedia: integration of text, graphics, video, and sound. Hosting: service providing storage for websites. Communication: exchange of information. Table: data arranged in rows and columns. Device: a hardware unit designed for a specific function."
+            ],
+            "Keywords": [
+                "interacting parts",
+                "integration",
+                "service",
+                "exchange",
+                "rows and columns",
+                "hardware unit"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 4,
+            "Title": "Give synonyms: server, speaker, printer, file, communication, design.",
+            "Answers": [
+                "Server - host; Speaker - loudspeaker; Printer - output device; File - document; Communication - interaction; Design - layout."
+            ],
+            "Keywords": [
+                "host",
+                "loudspeaker",
+                "output device",
+                "document",
+                "interaction",
+                "layout"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 5,
+            "Title": "Explain briefly: data, animation, protection, programmer, design, table.",
+            "Answers": [
+                "Data is raw information. Animation is moving images. Protection is security against threats. A programmer writes software code. Design is the planning and appearance of something. A table is a structured set of data."
+            ],
+            "Keywords": [
+                "raw information",
+                "moving images",
+                "security",
+                "software code",
+                "planning",
+                "structured"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 6,
+            "Title": "Translate into Russian: table, domain, data, document, client, effect.",
+            "Answers": [
+                "таблица, домен, данные, документ, клиент, эффект"
+            ],
+            "Keywords": [
+                "таблица",
+                "домен",
+                "данные",
+                "документ",
+                "клиент",
+                "эффект"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 7,
+            "Title": "Translate into English: клавиатура, платформа, технология, изображение, устройство, будущее.",
+            "Answers": [
+                "keyboard, platform, technology, image, device, future"
+            ],
+            "Keywords": [
+                "keyboard",
+                "platform",
+                "technology",
+                "image",
+                "device",
+                "future"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 8,
+            "Title": "Give definitions: data, programmer, machine, folder, application, website.",
+            "Answers": [
+                "Data: quantities or symbols used by a computer. Programmer: a person who creates computer software. Machine: a mechanical or electrical device. Folder: a directory for storing files. Application: a program designed for the user. Website: a set of related web pages."
+            ],
+            "Keywords": [
+                "quantities",
+                "creates software",
+                "electrical device",
+                "directory",
+                "user program",
+                "web pages"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 9,
+            "Title": "Give synonyms: hyperlink, screen, message, signal, email, monitor.",
+            "Answers": [
+                "Hyperlink - link; Screen - display; Message - notification; Signal - transmission; Email - electronic mail; Monitor - VDU."
+            ],
+            "Keywords": [
+                "link",
+                "display",
+                "notification",
+                "transmission",
+                "electronic mail",
+                "VDU"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 10,
+            "Title": "Explain briefly: information, communication, display, programmer, brightness, panel.",
+            "Answers": [
+                "Information is processed data. Communication is the act of sharing info. A display shows visual data. A programmer develops code. Brightness is the intensity of light. A panel is a control or display area."
+            ],
+            "Keywords": [
+                "processed data",
+                "sharing info",
+                "visual data",
+                "develops code",
+                "intensity",
+                "control area"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 11,
+            "Title": "Translate into Russian: webpage, console, screen, programmer, security, data.",
+            "Answers": [
+                "веб-страница, консоль, экран, программист, безопасность, данные"
+            ],
+            "Keywords": [
+                "веб-страница",
+                "консоль",
+                "экран",
+                "программист",
+                "безопасность",
+                "данные"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 12,
+            "Title": "Translate into English: защита, шифрование, камера, ссылка, инновация, страница.",
+            "Answers": [
+                "protection, encryption, camera, link, innovation, page"
+            ],
+            "Keywords": [
+                "protection",
+                "encryption",
+                "camera",
+                "link",
+                "innovation",
+                "page"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 13,
+            "Title": "Give definitions: innovation, connection, download, system, email, search.",
+            "Answers": [
+                "Innovation: a new method or idea. Connection: a link between devices. Download: receiving data from a remote system. System: a complex whole of parts. Email: digital messages. Search: looking for information."
+            ],
+            "Keywords": [
+                "new method",
+                "link",
+                "receiving data",
+                "complex whole",
+                "digital messages",
+                "looking for info"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 14,
+            "Title": "Give synonyms: code, document, laptop, contrast, network, microphone.",
+            "Answers": [
+                "Code - cipher; Document - file; Laptop - notebook; Contrast - difference; Network - grid; Microphone - mic."
+            ],
+            "Keywords": [
+                "cipher",
+                "file",
+                "notebook",
+                "difference",
+                "grid",
+                "mic"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 15,
+            "Title": "Explain briefly: cell, hardware, webpage, camera, application, multimedia.",
+            "Answers": [
+                "A cell is a unit in a spreadsheet. Hardware are physical parts of a computer. A webpage is a single document on the web. A camera captures images. An application is user software. Multimedia combines different content forms."
+            ],
+            "Keywords": [
+                "spreadsheet unit",
+                "physical parts",
+                "single document",
+                "captures images",
+                "user software",
+                "different content"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 16,
+            "Title": "Translate into Russian: engineer, printer, terminal, backup, update, spreadsheet.",
+            "Answers": [
+                "инженер, принтер, терминал, резервная копия, обновление, электронная таблица"
+            ],
+            "Keywords": [
+                "инженер",
+                "принтер",
+                "терминал",
+                "резервная копия",
+                "обновление",
+                "электронная таблица"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 17,
+            "Title": "Translate into English: монитор, микрофон, сайт, ноутбук, инновация, коммуникация.",
+            "Answers": [
+                "monitor, microphone, website, laptop, innovation, communication"
+            ],
+            "Keywords": [
+                "monitor",
+                "microphone",
+                "website",
+                "laptop",
+                "innovation",
+                "communication"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 18,
+            "Title": "Give definitions: panel, document, effect, keyboard, software, device.",
+            "Answers": [
+                "Panel: a flat board for controls. Document: a record of information. Effect: a result or impression. Keyboard: a set of keys for typing. Software: computer programs. Device: a piece of equipment."
+            ],
+            "Keywords": [
+                "flat board",
+                "record",
+                "result",
+                "keys",
+                "programs",
+                "equipment"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 19,
+            "Title": "Give synonyms: search, password, screen, webpage, design, server.",
+            "Answers": [
+                "Search - look for; Password - passcode; Screen - monitor; Webpage - site page; Design - style; Server - mainframe."
+            ],
+            "Keywords": [
+                "look for",
+                "passcode",
+                "monitor",
+                "site page",
+                "style",
+                "mainframe"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 20,
+            "Title": "Explain briefly: document, backup, screen, flash, cell, protection.",
+            "Answers": [
+                "A document stores text or data. Backup is a copy of data for safety. A screen displays output. Flash is a fast storage type. A cell is a box in a grid. Protection keeps data safe from unauthorized access."
+            ],
+            "Keywords": [
+                "stores text",
+                "copy of data",
+                "displays output",
+                "fast storage",
+                "box in a grid",
+                "unauthorized access"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 21,
+            "Title": "Translate into Russian: mouse, search, protocol, bandwidth, website, folder.",
+            "Answers": [
+                "мышь, поиск, протокол, пропускная способность, веб-сайт, папка"
+            ],
+            "Keywords": [
+                "мышь",
+                "поиск",
+                "протокол",
+                "пропускная способность",
+                "веб-сайт",
+                "папка"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 22,
+            "Title": "Translate into English: загрузка, шифрование, компьютер, хранилище, дисплей, экран.",
+            "Answers": [
+                "download, encryption, computer, storage, display, screen"
+            ],
+            "Keywords": [
+                "download",
+                "encryption",
+                "computer",
+                "storage",
+                "display",
+                "screen"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 23,
+            "Title": "Give definitions: spreadsheet, graphics, developer, table, message, animation.",
+            "Answers": [
+                "Spreadsheet: a digital document where data is arranged in a grid. Graphics: visual images or designs. Developer: a person who creates software or systems. Table: an arrangement of data in rows and columns. Message: a short communication. Animation: the technique of creating moving images."
+            ],
+            "Keywords": [
+                "digital document",
+                "visual images",
+                "creates software",
+                "rows and columns",
+                "communication",
+                "moving images"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 24,
+            "Title": "Give synonyms: application, memory, hosting, future, communication, information.",
+            "Answers": [
+                "Application - app; Memory - storage; Hosting - web service; Future - tomorrow; Communication - contact; Information - knowledge."
+            ],
+            "Keywords": [
+                "app",
+                "storage",
+                "web service",
+                "tomorrow",
+                "contact",
+                "knowledge"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 25,
+            "Title": "Explain briefly: screen, protocol, interface, image, cell, virus.",
+            "Answers": [
+                "A screen is the physical surface for visual output. A protocol is a set of rules for data exchange. An interface is a point where two systems interact. An image is a visual representation. A cell is a single data point in a table. A virus is malicious software that replicates."
+            ],
+            "Keywords": [
+                "physical surface",
+                "set of rules",
+                "systems interact",
+                "visual representation",
+                "data point",
+                "malicious software"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 26,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 27,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 28,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a group of interacting elements. Computer: an electronic device for processing data. Application: a program for a specific task. Server: a computer providing services to others. Network: connected computers. Database: an organized collection of data."
+            ],
+            "Keywords": [
+                "interacting elements",
+                "electronic device",
+                "specific task",
+                "providing services",
+                "connected computers",
+                "collection of data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 29,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - machine; Program - software; Data - information; System - complex; Device - unit; Network - web."
+            ],
+            "Keywords": [
+                "machine",
+                "software",
+                "information",
+                "complex",
+                "unit",
+                "web"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 30,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is a global network of computers. Software are the digital programs that run on hardware. Hardware are the physical components. A website is a collection of web pages. Email is electronic messaging. A file is a container for digital information."
+            ],
+            "Keywords": [
+                "global network",
+                "digital programs",
+                "physical components",
+                "web pages",
+                "electronic messaging",
+                "container"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 31,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 32,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 33,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a set of things working together. Computer: a machine that stores and processes data. Application: software for users. Server: a system that handles requests. Network: a set of links. Database: a structure that holds data."
+            ],
+            "Keywords": [
+                "working together",
+                "processes data",
+                "users",
+                "handles requests",
+                "links",
+                "holds data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 34,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - PC; Program - application; Data - records; System - structure; Device - tool; Network - grid."
+            ],
+            "Keywords": [
+                "PC",
+                "application",
+                "records",
+                "structure",
+                "tool",
+                "grid"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 35,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet connects networks. Software consists of instructions. Hardware includes the monitor and CPU. A website lives on a server. Email sends text online. A file has a name and extension."
+            ],
+            "Keywords": [
+                "connects networks",
+                "instructions",
+                "monitor",
+                "CPU",
+                "server",
+                "extension"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 36,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 37,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 38,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: parts forming a whole. Computer: digital processor. Application: executable code for users. Server: resource provider. Network: communication channel. Database: data repository."
+            ],
+            "Keywords": [
+                "forming a whole",
+                "processor",
+                "executable",
+                "resource provider",
+                "communication channel",
+                "repository"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 39,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - workstation; Program - script; Data - content; System - network; Device - hardware; Network - system."
+            ],
+            "Keywords": [
+                "workstation",
+                "script",
+                "content",
+                "network",
+                "hardware",
+                "system"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 40,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: worldwide web. Software: operating system. Hardware: circuits. Website: online presence. Email: digital mail. File: stored item."
+            ],
+            "Keywords": [
+                "worldwide",
+                "operating system",
+                "circuits",
+                "online presence",
+                "digital mail",
+                "stored item"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 41,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 42,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 43,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a set of connected things or parts forming a complex whole. Computer: an electronic device for storing and processing data. Application: a software program designed to perform a specific function for the user. Server: a computer or program that manages access to a centralized resource or service in a network. Network: a group of two or more computer systems linked together. Database: a structured set of data held in a computer."
+            ],
+            "Keywords": [
+                "complex whole",
+                "processing data",
+                "specific function",
+                "centralized resource",
+                "linked together",
+                "structured set"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 44,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - processor, machine; Program - software, application; Data - information, input; System - structure, setup; Device - apparatus, gadget; Network - web, grid."
+            ],
+            "Keywords": [
+                "processor",
+                "software",
+                "information",
+                "structure",
+                "apparatus",
+                "grid"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 45,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: a global computer network providing a variety of information and communication facilities. Software: the programs and other operating information used by a computer. Hardware: the physical parts of a computer system. Website: a set of related web pages located under a single domain name. Email: messages distributed by electronic means from one computer user to one or more recipients. File: a resource for recording data in a computer storage device."
+            ],
+            "Keywords": [
+                "global network",
+                "programs",
+                "physical parts",
+                "domain name",
+                "electronic messages",
+                "recording data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 46,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 47,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 48,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: an organized scheme or method. Computer: a programmable electronic device. Application: an executable software package. Server: a host that provides data to clients. Network: an interconnected group of nodes. Database: a repository for digital information."
+            ],
+            "Keywords": [
+                "organized scheme",
+                "programmable",
+                "software package",
+                "host",
+                "nodes",
+                "repository"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 49,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - PC; Program - code; Data - figures; System - organization; Device - tool; Network - link."
+            ],
+            "Keywords": [
+                "PC",
+                "code",
+                "figures",
+                "organization",
+                "tool",
+                "link"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 50,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is the World Wide Web. Software is non-physical code. Hardware is the monitor and tower. Website is an online page. Email is digital mail. File is a saved document."
+            ],
+            "Keywords": [
+                "World Wide Web",
+                "code",
+                "monitor",
+                "online page",
+                "digital mail",
+                "saved document"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 51,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "ПО"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 52,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 53,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System is a combination of components. Computer is a data processing machine. Application is a task-oriented program. Server is a service-providing unit. Network is a web of devices. Database is a collection of records."
+            ],
+            "Keywords": [
+                "combination",
+                "machine",
+                "task-oriented",
+                "service-providing",
+                "web of devices",
+                "records"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 54,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - mainframe; Program - utility; Data - values; System - arrangement; Device - equipment; Network - interconnection."
+            ],
+            "Keywords": [
+                "mainframe",
+                "utility",
+                "values",
+                "arrangement",
+                "equipment",
+                "interconnection"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 55,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet connects the world. Software executes logic. Hardware takes physical form. Website contains URLs. Email is electronic correspondence. File stores binary data."
+            ],
+            "Keywords": [
+                "connects",
+                "logic",
+                "physical form",
+                "URLs",
+                "correspondence",
+                "binary data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 56,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, софт"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "БД",
+                "браузер",
+                "софт"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 57,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 58,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: functional entity. Computer: silicon-based processor. Application: end-user software. Server: network responder. Network: data link. Database: info bank."
+            ],
+            "Keywords": [
+                "entity",
+                "silicon-based",
+                "end-user",
+                "responder",
+                "link",
+                "info bank"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 59,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - laptop; Program - app; Data - statistics; System - infrastructure; Device - hardware unit; Network - grid."
+            ],
+            "Keywords": [
+                "laptop",
+                "app",
+                "statistics",
+                "infrastructure",
+                "unit",
+                "grid"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 60,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: IP-based network. Software: logical instructions. Hardware: mechanical components. Website: web resource. Email: SMTP message. File: data object."
+            ],
+            "Keywords": [
+                "IP-based",
+                "instructions",
+                "mechanical",
+                "resource",
+                "SMTP",
+                "object"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 61,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 62,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 63,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a set of things working together as parts of a mechanism or an interconnecting network. Computer: an electronic machine that can store, find and arrange information. Application: a program or piece of software designed and written to fulfill a particular purpose. Server: a central computer or program that supplies data or services to other computers. Network: a system of interconnected computers or devices. Database: a structured collection of data held in a computer."
+            ],
+            "Keywords": [
+                "interconnecting network",
+                "electronic machine",
+                "fulfill a purpose",
+                "supplies data",
+                "interconnected computers",
+                "structured collection"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 64,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - processor; Program - software; Data - facts; System - organization; Device - appliance; Network - web."
+            ],
+            "Keywords": [
+                "processor",
+                "software",
+                "facts",
+                "organization",
+                "appliance",
+                "web"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 65,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is the global system of interconnected computer networks. Software is the set of instructions that tells hardware what to do. Hardware refers to the physical elements of a computer. A website is a location on the internet with a unique address. Email is a method of exchanging messages between people using electronic devices. A file is an object on a computer that stores data, information, settings, or commands."
+            ],
+            "Keywords": [
+                "interconnected networks",
+                "instructions",
+                "physical elements",
+                "unique address",
+                "exchanging messages",
+                "stores data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 66,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "ПО"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 67,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 68,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: an organized set of principles or procedures. Computer: a programmable device that processes input. Application: specialized software for users. Server: a computer that provides client access. Network: a group of linked nodes. Database: an electronic filing system."
+            ],
+            "Keywords": [
+                "organized set",
+                "programmable device",
+                "specialized software",
+                "client access",
+                "linked nodes",
+                "filing system"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 69,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - mainframe; Program - script; Data - input; System - method; Device - hardware; Network - system."
+            ],
+            "Keywords": [
+                "mainframe",
+                "script",
+                "input",
+                "method",
+                "hardware",
+                "system"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 70,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is a network of networks. Software is intangible data. Hardware is tangible computer parts. Website is a web resource. Email is electronic mail. File is a named data unit."
+            ],
+            "Keywords": [
+                "network of networks",
+                "intangible",
+                "tangible",
+                "web resource",
+                "electronic mail",
+                "data unit"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 71,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "БД",
+                "браузер",
+                "программы"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 72,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 73,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a coordinated whole. Computer: digital information processor. Application: a tool for the user. Server: a data host. Network: a communication structure. Database: an info store."
+            ],
+            "Keywords": [
+                "coordinated whole",
+                "processor",
+                "user tool",
+                "data host",
+                "structure",
+                "info store"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 74,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - PC; Program - software; Data - info; System - structure; Device - tool; Network - grid."
+            ],
+            "Keywords": [
+                "PC",
+                "software",
+                "info",
+                "structure",
+                "tool",
+                "grid"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 75,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet connects computers globally. Software is digital instructions. Hardware consists of physical parts. Website is a page on the web. Email is digital messaging. File is a collection of bits."
+            ],
+            "Keywords": [
+                "globally",
+                "instructions",
+                "physical parts",
+                "web page",
+                "messaging",
+                "bits"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 76,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "софт"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 77,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 78,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a group of interacting entities. Computer: a calculating machine. Application: software for specific jobs. Server: network resource manager. Network: linked computer systems. Database: organized data store."
+            ],
+            "Keywords": [
+                "interacting entities",
+                "calculating machine",
+                "specific jobs",
+                "resource manager",
+                "linked systems",
+                "data store"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 79,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - laptop; Program - utility; Data - records; System - organization; Device - unit; Network - link."
+            ],
+            "Keywords": [
+                "laptop",
+                "utility",
+                "records",
+                "organization",
+                "unit",
+                "link"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 80,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is the net. Software is programs. Hardware is components. Website is a web location. Email is e-mail. File is a data record."
+            ],
+            "Keywords": [
+                "net",
+                "programs",
+                "components",
+                "web location",
+                "e-mail",
+                "data record"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 81,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 82,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 83,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a set of principles or procedures according to which something is done. Computer: an electronic device for storing and processing data. Application: a program designed to fulfill a particular purpose for the user. Server: a computer that provides data to other computers. Network: a group of interconnected computers. Database: a structured collection of data."
+            ],
+            "Keywords": [
+                "principles",
+                "electronic device",
+                "particular purpose",
+                "provides data",
+                "interconnected",
+                "structured collection"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 84,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - processor; Program - application; Data - info; System - structure; Device - hardware; Network - web."
+            ],
+            "Keywords": [
+                "processor",
+                "application",
+                "info",
+                "structure",
+                "hardware",
+                "web"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 85,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is a global communication network. Software refers to the programs used by a computer. Hardware is the physical component of a computer. A website is a set of pages on the internet. Email is electronic mail. A file is a digital resource for storing data."
+            ],
+            "Keywords": [
+                "global network",
+                "programs",
+                "physical component",
+                "pages on internet",
+                "electronic mail",
+                "storing data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 86,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "ПО"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 87,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 88,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: parts forming a complex whole. Computer: an information processing machine. Application: end-user software. Server: a host providing network services. Network: interconnected system of nodes. Database: an organized info store."
+            ],
+            "Keywords": [
+                "complex whole",
+                "processing machine",
+                "end-user",
+                "host",
+                "nodes",
+                "organized store"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 89,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - machine; Program - software; Data - values; System - method; Device - unit; Network - grid."
+            ],
+            "Keywords": [
+                "machine",
+                "software",
+                "values",
+                "method",
+                "unit",
+                "grid"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 90,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: worldwide computer network. Software: non-physical programs. Hardware: physical computer parts. Website: location on the web. Email: digital messaging. File: unit of stored data."
+            ],
+            "Keywords": [
+                "worldwide network",
+                "non-physical",
+                "physical parts",
+                "location on web",
+                "messaging",
+                "unit of data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 91,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программный код"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 92,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 93,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System is a set of things working together. Computer is a programmable electronic device. Application is software for a specific purpose. Server handles requests in a network. Network is a set of linked devices. Database is a collection of structured data."
+            ],
+            "Keywords": [
+                "working together",
+                "programmable",
+                "specific purpose",
+                "handles requests",
+                "linked devices",
+                "structured data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 94,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - workstation; Program - script; Data - content; System - network; Device - tool; Network - link."
+            ],
+            "Keywords": [
+                "workstation",
+                "script",
+                "content",
+                "network",
+                "tool",
+                "link"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 95,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet connects billions of devices. Software is code that runs on hardware. Hardware includes the CPU and RAM. A website contains web content. Email is short for electronic mail. A file is a named collection of data."
+            ],
+            "Keywords": [
+                "connects devices",
+                "code",
+                "CPU",
+                "web content",
+                "electronic mail",
+                "named collection"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 96,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "софт"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 97,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 98,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: organized set of components. Computer: digital information processor. Application: task-specific program. Server: resource provider. Network: interconnected group. Database: information repository."
+            ],
+            "Keywords": [
+                "components",
+                "processor",
+                "task-specific",
+                "resource provider",
+                "interconnected",
+                "repository"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 99,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - PC; Program - software; Data - information; System - organization; Device - hardware unit; Network - system."
+            ],
+            "Keywords": [
+                "PC",
+                "software",
+                "information",
+                "organization",
+                "unit",
+                "system"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 100,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is a global web. Software is digital logic. Hardware is physical machinery. Website is an online domain. Email is digital correspondence. File is a data object."
+            ],
+            "Keywords": [
+                "global web",
+                "digital logic",
+                "machinery",
+                "online domain",
+                "correspondence",
+                "data object"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 101,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 102,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 103,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a set of components working together. Computer: an electronic machine for data processing. Application: software designed for specific user tasks. Server: a computer providing resources to a network. Network: a group of connected devices. Database: a structured electronic data collection."
+            ],
+            "Keywords": [
+                "components",
+                "machine",
+                "software",
+                "resources",
+                "connected",
+                "structured"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 104,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - processor; Program - software; Data - information; System - organization; Device - appliance; Network - grid."
+            ],
+            "Keywords": [
+                "processor",
+                "software",
+                "information",
+                "organization",
+                "appliance",
+                "grid"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 105,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is a global web of networks. Software is a set of digital instructions. Hardware includes physical components like the CPU. A website is a collection of web pages. Email is electronic correspondence. A file is a unit of digital storage."
+            ],
+            "Keywords": [
+                "global web",
+                "instructions",
+                "physical components",
+                "web pages",
+                "correspondence",
+                "digital storage"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 106,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "ПО"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 107,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 108,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: parts forming a whole. Computer: digital info machine. Application: end-user program. Server: service host. Network: linked systems. Database: data repository."
+            ],
+            "Keywords": [
+                "forming a whole",
+                "machine",
+                "program",
+                "host",
+                "linked",
+                "repository"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 109,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - machine; Program - application; Data - records; System - structure; Device - unit; Network - system."
+            ],
+            "Keywords": [
+                "machine",
+                "application",
+                "records",
+                "structure",
+                "unit",
+                "system"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 110,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: worldwide network. Software: logical programs. Hardware: mechanical parts. Website: online resource. Email: digital mail. File: stored data unit."
+            ],
+            "Keywords": [
+                "worldwide",
+                "logical",
+                "mechanical",
+                "online",
+                "mail",
+                "data unit"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 111,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программные средства"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 112,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 113,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: organized coordination of parts. Computer: electronic data processor. Application: specific task software. Server: network responder. Network: interconnected computers. Database: structured information store."
+            ],
+            "Keywords": [
+                "coordination",
+                "processor",
+                "software",
+                "responder",
+                "interconnected",
+                "store"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 114,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - PC; Program - script; Data - content; System - organization; Device - hardware; Network - web."
+            ],
+            "Keywords": [
+                "PC",
+                "script",
+                "content",
+                "organization",
+                "hardware",
+                "web"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 115,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: global connectivity. Software: digital instructions. Hardware: electronic equipment. Website: web domain. Email: SMTP transmission. File: binary object."
+            ],
+            "Keywords": [
+                "connectivity",
+                "instructions",
+                "equipment",
+                "domain",
+                "transmission",
+                "binary"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 116,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "БД",
+                "браузер",
+                "ПО"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 117,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 118,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a group of interacting elements. Computer: data handling machine. Application: user-oriented code. Server: network node providing services. Network: chain of computers. Database: repository of digital records."
+            ],
+            "Keywords": [
+                "interacting",
+                "machine",
+                "code",
+                "services",
+                "chain",
+                "records"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 119,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - mainframe; Program - utility; Data - info; System - method; Device - tool; Network - link."
+            ],
+            "Keywords": [
+                "mainframe",
+                "utility",
+                "info",
+                "method",
+                "tool",
+                "link"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 120,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: the net. Software: non-physical components. Hardware: physical machinery. Website: site on the web. Email: electronic messaging. File: data container."
+            ],
+            "Keywords": [
+                "net",
+                "non-physical",
+                "machinery",
+                "site",
+                "messaging",
+                "container"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 121,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 122,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 123,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a set of things working together as parts of a mechanism. Computer: an electronic device for storing and processing data. Application: software designed for a specific task. Server: a computer that manages access to a centralized resource. Network: a group of interconnected computers. Database: a structured set of data held in a computer."
+            ],
+            "Keywords": [
+                "mechanism",
+                "electronic device",
+                "specific task",
+                "centralized resource",
+                "interconnected",
+                "structured set"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 124,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - processor; Program - software; Data - information; System - complex; Device - appliance; Network - web."
+            ],
+            "Keywords": [
+                "processor",
+                "software",
+                "information",
+                "complex",
+                "appliance",
+                "web"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 125,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is a global computer network. Software refers to the programs used by a computer. Hardware is the physical parts of a computer. A website is a set of related web pages. Email is electronic mail. A file is a digital resource for recording data."
+            ],
+            "Keywords": [
+                "global network",
+                "programs",
+                "physical parts",
+                "web pages",
+                "electronic mail",
+                "recording data"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 126,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "софт"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 127,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 128,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: an organized whole of components. Computer: digital information processor. Application: task-oriented software. Server: resource provider for clients. Network: interconnected communication system. Database: electronic data repository."
+            ],
+            "Keywords": [
+                "organized whole",
+                "processor",
+                "task-oriented",
+                "resource provider",
+                "communication",
+                "repository"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 129,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - PC; Program - code; Data - facts; System - organization; Device - tool; Network - grid."
+            ],
+            "Keywords": [
+                "PC",
+                "code",
+                "facts",
+                "organization",
+                "tool",
+                "grid"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 130,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet connects networks worldwide. Software consists of logical instructions. Hardware is the mechanical/electronic equipment. Website is an online location. Email is digital messaging. File is a stored data object."
+            ],
+            "Keywords": [
+                "worldwide",
+                "logical instructions",
+                "equipment",
+                "online location",
+                "messaging",
+                "data object"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 131,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "ПО"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 132,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 133,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a group of interacting parts. Computer: a programmable electronic machine. Application: software for specific user functions. Server: a system that responds to requests over a network. Network: two or more linked computers. Database: organized data collection."
+            ],
+            "Keywords": [
+                "interacting parts",
+                "programmable",
+                "user functions",
+                "responds to requests",
+                "linked computers",
+                "organized collection"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 134,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - mainframe; Program - application; Data - input; System - method; Device - unit; Network - link."
+            ],
+            "Keywords": [
+                "mainframe",
+                "application",
+                "input",
+                "method",
+                "unit",
+                "link"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 135,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: the global network infrastructure. Software: non-tangible code. Hardware: tangible components. Website: a web-based document collection. Email: SMTP-based messaging. File: an individual data unit."
+            ],
+            "Keywords": [
+                "infrastructure",
+                "non-tangible",
+                "tangible",
+                "document collection",
+                "SMTP",
+                "data unit"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 136,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "софт"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 137,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 138,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a coordinated whole. Computer: digital information handler. Application: program for end-users. Server: data manager for a network. Network: system of connected nodes. Database: information bank."
+            ],
+            "Keywords": [
+                "coordinated whole",
+                "handler",
+                "end-users",
+                "data manager",
+                "nodes",
+                "information bank"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 139,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - laptop; Program - utility; Data - info; System - structure; Device - hardware; Network - system."
+            ],
+            "Keywords": [
+                "laptop",
+                "utility",
+                "info",
+                "structure",
+                "hardware",
+                "system"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 140,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet: worldwide web. Software: operating instructions. Hardware: circuit boards and parts. Website: online presence. Email: digital mail system. File: specific data record."
+            ],
+            "Keywords": [
+                "worldwide",
+                "instructions",
+                "circuits",
+                "online presence",
+                "mail system",
+                "data record"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 141,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "программное обеспечение"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 142,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 143,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: a set of interacting or interdependent component parts forming a complex or intricate whole. Computer: an electronic machine that can store, find and arrange information, calculate amounts and control other machines. Application: a computer program that is designed for a particular use or for a specific user. Server: a central computer from which other computers get information. Network: a number of computers that are connected together so that they can share information. Database: a large amount of information stored in a computer system in such a way that it can be easily looked at or used."
+            ],
+            "Keywords": [
+                "interdependent",
+                "electronic machine",
+                "particular use",
+                "central computer",
+                "connected together",
+                "easily looked at"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 144,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - processor, workstation; Program - software, application; Data - information, records; System - complex, organization; Device - appliance, unit; Network - web, grid."
+            ],
+            "Keywords": [
+                "processor",
+                "software",
+                "information",
+                "complex",
+                "appliance",
+                "web"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 145,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is the worldwide system of interconnected computer networks. Software is a collection of data or computer instructions that tell the computer how to work. Hardware includes the physical parts of a computer. A website is a collection of web pages and related content that is identified by a common domain name. Email is a method of exchanging messages between people using electronic devices. A file is a self-contained piece of information available to the operating system and programs."
+            ],
+            "Keywords": [
+                "worldwide system",
+                "instructions",
+                "physical parts",
+                "domain name",
+                "exchanging messages",
+                "self-contained"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 146,
+            "Title": "Translate into Russian: server, network, computer, database, browser, software.",
+            "Answers": [
+                "сервер, сеть, компьютер, база данных, браузер, программное обеспечение"
+            ],
+            "Keywords": [
+                "сервер",
+                "сеть",
+                "компьютер",
+                "база данных",
+                "браузер",
+                "ПО"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 147,
+            "Title": "Translate into English: программа, компьютер, сеть, база данных, браузер, файл.",
+            "Answers": [
+                "program, computer, network, database, browser, file"
+            ],
+            "Keywords": [
+                "program",
+                "computer",
+                "network",
+                "database",
+                "browser",
+                "file"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 148,
+            "Title": "Give definitions: system, computer, application, server, network, database.",
+            "Answers": [
+                "System: an organized set of ideas or a particular way of doing something. Computer: a programmable machine. Application: software that performs a specific function for an end-user. Server: a computer that serves information to other computers on a network. Network: a set of nodes connected by communication links. Database: a collection of information that is organized so that it can be easily accessed, managed and updated."
+            ],
+            "Keywords": [
+                "organized set",
+                "programmable machine",
+                "end-user",
+                "serves information",
+                "communication links",
+                "updated"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 149,
+            "Title": "Give synonyms: computer, program, data, system, device, network.",
+            "Answers": [
+                "Computer - mainframe; Program - code; Data - figures; System - setup; Device - tool; Network - link."
+            ],
+            "Keywords": [
+                "mainframe",
+                "code",
+                "figures",
+                "setup",
+                "tool",
+                "link"
+            ],
+            "Size": 500
+        },
+        {
+            "Id": 150,
+            "Title": "Explain briefly: internet, software, hardware, website, email, file.",
+            "Answers": [
+                "Internet is a global communication network. Software consists of digital code. Hardware consists of physical circuits. A website is an online portal. Email is digital correspondence. A file is a named unit of data storage."
+            ],
+            "Keywords": [
+                "global communication",
+                "digital code",
+                "physical circuits",
+                "online portal",
+                "correspondence",
+                "named unit"
+            ],
+            "Size": 500
+        }
+    ]
+}
