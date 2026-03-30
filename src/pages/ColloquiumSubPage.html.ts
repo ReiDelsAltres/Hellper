@@ -1,4 +1,4 @@
-import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
+﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
 import { Subject, ColloquiumFile } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
@@ -9,7 +9,6 @@ import Paper from "src/components/PaperComponent.html.js";
 @RePage({
     markupURL: "./src/pages/ColloquiumSubPage.hmle",
     cssURL: "./src/pages/ColloquiumSubPage.html.css",
-    jsURL: "./src/pages/ColloquiumSubPage.html.ts",
 }, "/colloquim/sub")
 export default class ColloquiumSubPage extends Page {
     private subject: Subject;
@@ -19,9 +18,9 @@ export default class ColloquiumSubPage extends Page {
     private static readonly RUNTIME_BILET_SIZE = 5;
 
     private testModes: TestMode[] = [
-        { signature: "fast", name: "Быстрый", description: "Быстрая проверка", numItems: new Observable(5), colorP: "success" },
-        { signature: "normal", name: "Обычный", description: "Стандартный тест", numItems: new Observable(25), colorP: "warning" },
-        { signature: "hard", name: "Всё", description: "Все вопросы", numItems: new Observable(0), colorP: "error" },
+        { signature: "fast", name: "Р‘С‹СЃС‚СЂС‹Р№", description: "Р‘С‹СЃС‚СЂР°СЏ РїСЂРѕРІРµСЂРєР°", numItems: new Observable(5), colorP: "success" },
+        { signature: "normal", name: "РћР±С‹С‡РЅС‹Р№", description: "РЎС‚Р°РЅРґР°СЂС‚РЅС‹Р№ С‚РµСЃС‚", numItems: new Observable(25), colorP: "warning" },
+        { signature: "hard", name: "Р’СЃС‘", description: "Р’СЃРµ РІРѕРїСЂРѕСЃС‹", numItems: new Observable(0), colorP: "error" },
     ];
 
     private testModesGroup?: ReButtonGroup;

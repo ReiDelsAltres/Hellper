@@ -33,7 +33,6 @@ ReIcon = __decorate([
     ReComponent({
         markupURL: "./src/components/ReIcon.hmle",
         cssURL: "./out/src/components/ReIcon.html.css",
-        jsURL: "./src/components/ReIcon.html.js",
     }, "re-icon")
 ], ReIcon);
 export default ReIcon;

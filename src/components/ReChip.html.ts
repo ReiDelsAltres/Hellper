@@ -1,4 +1,4 @@
-import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
+﻿import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
 import ComponentCore from "./core/ComponentCore.js";
 
 type ChipVariant = "filled" | "outlined"
@@ -6,7 +6,6 @@ type ChipVariant = "filled" | "outlined"
 @ReComponent({
   markupURL: "./src/components/ReChip.hmle",
   cssURL: "./out/src/components/ReChip.html.css",
-  jsURL: "./src/components/ReChip.html.js",
 }, "re-chip")
 export default class ReChip extends ComponentCore {
   public Icon: Attribute<string | null> = new Attribute<string | null>(this, "icon", null);

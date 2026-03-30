@@ -1,9 +1,8 @@
-import { IElementHolder, Component, ReComponent, AccessType } from "@Purper";
+﻿import { IElementHolder, Component, ReComponent, AccessType } from "@Purper";
 
 @ReComponent({
     markupURL: "./src/components/ColorPalettePreview.html",
     cssURL: "./src/components/ColorPalettePreview.html.css",
-    jsURL: "./src/components/ColorPalettePreview.html.js",
     class: ColorPalettePreview,
 }, "color-palette")
 export default class ColorPalettePreview extends Component {
@@ -27,7 +26,7 @@ export default class ColorPalettePreview extends Component {
         const root = this.shadowRoot ?? this;
         const nameEl = root.querySelector<HTMLElement>(".palette-name");
         
-        // Extract theme name from class list (e.g., "blazor-theme" → "Blazor")
+        // Extract theme name from class list (e.g., "blazor-theme" в†’ "Blazor")
         const themeClass = Array.from(this.classList).find(c => c.endsWith("-theme"));
         if (nameEl && themeClass) {
             const themeName = themeClass.replace("-theme", "");

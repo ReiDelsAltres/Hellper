@@ -130,7 +130,6 @@ PopUp = __decorate([
     ReComponent({
         markupURL: "./src/components/PopUp.html",
         cssURL: "./src/components/PopUp.html.css",
-        jsURL: "./src/components/PopUp.html.js",
         class: PopUp,
     }, "pop-up")
 ], PopUp);

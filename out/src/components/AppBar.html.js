@@ -44,7 +44,6 @@ AppBar = __decorate([
     ReComponent({
         markupURL: "./src/components/AppBar.hmle",
         cssURL: "./src/components/AppBar.html.css",
-        jsURL: "./src/components/AppBar.html.js"
     }, "app-bar")
 ], AppBar);
 export default AppBar;

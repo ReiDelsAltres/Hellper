@@ -44,7 +44,7 @@ let ColloquiumActualPage = class ColloquiumActualPage extends Page {
                 const chunk = allQuestions.slice(i, i + BILET_SIZE);
                 const biletIdx = Math.floor(i / BILET_SIZE);
                 const questions = chunk.map((q, qIdx) => new DisplayQuestion(q, qIdx));
-                bilets.push(new DisplayBilet(biletIdx + 1, `Билет ${biletIdx + 1}`, questions, biletIdx));
+                bilets.push(new DisplayBilet(biletIdx + 1, `Р‘РёР»РµС‚ ${biletIdx + 1}`, questions, biletIdx));
             }
             if (this.params.limits && this.params.limits > 0) {
                 bilets = bilets.slice(0, Number(this.params.limits));
@@ -103,7 +103,7 @@ let ColloquiumActualPage = class ColloquiumActualPage extends Page {
         const userText = ta?.Value?.value ?? '';
         const userAnswerEl = this['useranswer_' + biletIdx + '_' + questionIdx];
         if (userAnswerEl)
-            userAnswerEl.textContent = userText.trim() || '(нет ответа)';
+            userAnswerEl.textContent = userText.trim() || '(РЅРµС‚ РѕС‚РІРµС‚Р°)';
         const inputRow = this['inputrow_' + biletIdx + '_' + questionIdx];
         if (inputRow)
             inputRow.style.display = 'none';
@@ -118,7 +118,7 @@ let ColloquiumActualPage = class ColloquiumActualPage extends Page {
         const userText = ta?.Value?.value ?? '';
         const userAnswerEl = this['quseranswer_' + questionIdx];
         if (userAnswerEl)
-            userAnswerEl.textContent = userText.trim() || '(нет ответа)';
+            userAnswerEl.textContent = userText.trim() || '(РЅРµС‚ РѕС‚РІРµС‚Р°)';
         const inputRow = this['qinputrow_' + questionIdx];
         if (inputRow)
             inputRow.style.display = 'none';
@@ -141,7 +141,7 @@ let ColloquiumActualPage = class ColloquiumActualPage extends Page {
             if (result.lengthMismatch) {
                 lengthEl.style.display = 'block';
                 const pct = Math.round(result.lengthRatio * 100);
-                lengthEl.textContent = `⚠ Размер ответа недостаточен (${pct}% от эталона, минимум 70%)`;
+                lengthEl.textContent = `вљ  Р Р°Р·РјРµСЂ РѕС‚РІРµС‚Р° РЅРµРґРѕСЃС‚Р°С‚РѕС‡РµРЅ (${pct}% РѕС‚ СЌС‚Р°Р»РѕРЅР°, РјРёРЅРёРјСѓРј 70%)`;
             }
             else {
                 lengthEl.style.display = 'none';
@@ -381,7 +381,6 @@ ColloquiumActualPage = __decorate([
     RePage({
         markupURL: "./src/pages/ColloquiumActualPage.hmle",
         cssURL: "./src/pages/ColloquiumActualPage.html.css",
-        jsURL: "./src/pages/ColloquiumActualPage.html.ts",
     }, "/colloquim/actual"),
     __metadata("design:paramtypes", [String])
 ], ColloquiumActualPage);
@@ -415,7 +414,7 @@ class DisplayBilet {
     localIdx;
     constructor(id, title, questions, localIdx) {
         this.Id = id;
-        this.Title = title ?? 'Билет ' + id;
+        this.Title = title ?? 'Р‘РёР»РµС‚ ' + id;
         this.questions = questions;
         this.localIdx = localIdx;
     }

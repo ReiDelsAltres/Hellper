@@ -22,7 +22,7 @@ let ColorPalettePreview = class ColorPalettePreview extends Component {
     updatePalette() {
         const root = this.shadowRoot ?? this;
         const nameEl = root.querySelector(".palette-name");
-        // Extract theme name from class list (e.g., "blazor-theme" → "Blazor")
+        // Extract theme name from class list (e.g., "blazor-theme" в†’ "Blazor")
         const themeClass = Array.from(this.classList).find(c => c.endsWith("-theme"));
         if (nameEl && themeClass) {
             const themeName = themeClass.replace("-theme", "");
@@ -46,7 +46,6 @@ ColorPalettePreview = __decorate([
     ReComponent({
         markupURL: "./src/components/ColorPalettePreview.html",
         cssURL: "./src/components/ColorPalettePreview.html.css",
-        jsURL: "./src/components/ColorPalettePreview.html.js",
         class: ColorPalettePreview,
     }, "color-palette")
 ], ColorPalettePreview);

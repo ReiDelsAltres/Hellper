@@ -15,7 +15,6 @@ Paper = __decorate([
         markupURL: "./src/components/PaperComponent.html",
         cssURL: "./src/components/PaperComponent.html.css",
         ltCssURL: "./src/components/PaperComponent.html.lt.css",
-        jsURL: "./src/components/PaperComponent.html.js",
     }, "paper-component")
 ], Paper);
 export default Paper;

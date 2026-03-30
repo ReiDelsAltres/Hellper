@@ -1,4 +1,4 @@
-import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder } from "@Purper";
+﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder } from "@Purper";
 import { Subject, ColloquiumFile, ColloquiumQuestion, ColloquiumBilet } from "../frac/Testing.js";
 import SeededShuffle from "../lib/SeededShuffle.js";
 import PopUp from "../components/PopUp.html.js";
@@ -8,7 +8,6 @@ import SimilarityScorer, { ScoreResult } from "../lib/SimilarityScorer.js";
 @RePage({
     markupURL: "./src/pages/ColloquiumActualPage.hmle",
     cssURL: "./src/pages/ColloquiumActualPage.html.css",
-    jsURL: "./src/pages/ColloquiumActualPage.html.ts",
 }, "/colloquim/actual")
 export default class ColloquiumActualPage extends Page {
     private params: {
@@ -61,7 +60,7 @@ export default class ColloquiumActualPage extends Page {
                 const chunk = allQuestions.slice(i, i + BILET_SIZE);
                 const biletIdx = Math.floor(i / BILET_SIZE);
                 const questions = chunk.map((q, qIdx) => new DisplayQuestion(q, qIdx));
-                bilets.push(new DisplayBilet(biletIdx + 1, `Билет ${biletIdx + 1}`, questions, biletIdx));
+                bilets.push(new DisplayBilet(biletIdx + 1, `Р‘РёР»РµС‚ ${biletIdx + 1}`, questions, biletIdx));
             }
 
             if (this.params.limits && this.params.limits > 0) {
@@ -126,7 +125,7 @@ export default class ColloquiumActualPage extends Page {
         const ta = this['ta_' + biletIdx + '_' + questionIdx] as ReTextArea;
         const userText = ta?.Value?.value ?? '';
         const userAnswerEl = this['useranswer_' + biletIdx + '_' + questionIdx] as HTMLElement;
-        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(нет ответа)';
+        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(РЅРµС‚ РѕС‚РІРµС‚Р°)';
         const inputRow = this['inputrow_' + biletIdx + '_' + questionIdx] as HTMLElement;
         if (inputRow) inputRow.style.display = 'none';
         if (ta) ta.setAttribute('disabled', '');
@@ -138,7 +137,7 @@ export default class ColloquiumActualPage extends Page {
         const ta = this['qta_' + questionIdx] as ReTextArea;
         const userText = ta?.Value?.value ?? '';
         const userAnswerEl = this['quseranswer_' + questionIdx] as HTMLElement;
-        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(нет ответа)';
+        if (userAnswerEl) userAnswerEl.textContent = userText.trim() || '(РЅРµС‚ РѕС‚РІРµС‚Р°)';
         const inputRow = this['qinputrow_' + questionIdx] as HTMLElement;
         if (inputRow) inputRow.style.display = 'none';
         if (ta) ta.setAttribute('disabled', '');
@@ -159,7 +158,7 @@ export default class ColloquiumActualPage extends Page {
             if (result.lengthMismatch) {
                 lengthEl.style.display = 'block';
                 const pct = Math.round(result.lengthRatio * 100);
-                lengthEl.textContent = `⚠ Размер ответа недостаточен (${pct}% от эталона, минимум 70%)`;
+                lengthEl.textContent = `вљ  Р Р°Р·РјРµСЂ РѕС‚РІРµС‚Р° РЅРµРґРѕСЃС‚Р°С‚РѕС‡РµРЅ (${pct}% РѕС‚ СЌС‚Р°Р»РѕРЅР°, РјРёРЅРёРјСѓРј 70%)`;
             } else {
                 lengthEl.style.display = 'none';
             }
@@ -442,7 +441,7 @@ class DisplayBilet {
 
     constructor(id: number, title: string | undefined, questions: DisplayQuestion[], localIdx: number) {
         this.Id = id;
-        this.Title = title ?? 'Билет ' + id;
+        this.Title = title ?? 'Р‘РёР»РµС‚ ' + id;
         this.questions = questions;
         this.localIdx = localIdx;
     }

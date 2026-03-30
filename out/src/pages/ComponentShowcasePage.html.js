@@ -32,7 +32,7 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
         readBtn?.addEventListener('click', () => {
             if (!interactiveInput)
                 return;
-            // the component exposes getValue() but we don't have TS type here – call via any
+            // the component exposes getValue() but we don't have TS type here вЂ“ call via any
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             const val = interactiveInput.getValue?.() ?? '';
@@ -55,7 +55,7 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e) => {
                 const detail = e.detail;
                 if (numberValidationMsg) {
-                    numberValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    numberValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     numberValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });
@@ -67,7 +67,7 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e) => {
                 const detail = e.detail;
                 if (dateValidationMsg) {
-                    dateValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    dateValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     dateValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });
@@ -79,7 +79,7 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e) => {
                 const detail = e.detail;
                 if (lengthValidationMsg) {
-                    lengthValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    lengthValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     lengthValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });
@@ -91,7 +91,7 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e) => {
                 const detail = e.detail;
                 if (patternValidationMsg) {
-                    patternValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    patternValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     patternValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });
@@ -103,7 +103,6 @@ ComponentShowcasePage = __decorate([
     RePage({
         markupURL: "./src/pages/ComponentShowcasePage.html",
         cssURL: "./src/pages/ComponentShowcasePage.html.css",
-        jsURL: "./src/pages/ComponentShowcasePage.html.ts",
     }, "/components")
 ], ComponentShowcasePage);
 export default ComponentShowcasePage;

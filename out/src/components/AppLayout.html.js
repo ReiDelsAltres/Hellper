@@ -47,7 +47,6 @@ AppLayout = __decorate([
         markupURL: "./src/components/AppLayout.hmle",
         cssURL: "./src/components/AppLayout.html.css",
         ltCssURL: "./src/components/AppLayout.html.lt.css",
-        jsURL: "./src/components/AppLayout.html.js",
     }, "app-layout")
 ], AppLayout);
 export default AppLayout;

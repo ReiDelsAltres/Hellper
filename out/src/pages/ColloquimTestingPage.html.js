@@ -19,7 +19,6 @@ ColloquimTestingPage = __decorate([
     RePage({
         markupURL: "./src/pages/ColloquimTestingPage.hmle",
         cssURL: "./src/pages/ColloquimTestingPage.html.css",
-        jsURL: "./src/pages/ColloquimTestingPage.html.ts",
     }, "/colloquim")
 ], ColloquimTestingPage);
 export default ColloquimTestingPage;

@@ -65,13 +65,13 @@ let PalettePage = class PalettePage extends Page {
             const item = document.createElement('div');
             item.className = `palette-item ${themeClass}`;
             item.tabIndex = 0;
-            item.setAttribute('aria-label', `${displayName} тема`);
+            item.setAttribute('aria-label', `${displayName} С‚РµРјР°`);
             item.setAttribute('data-theme', theme);
             item.innerHTML = `
                 <color-palette class="${themeClass}"></color-palette>
                 <div class="palette-info">
                     <div class="palette-label">${displayName}</div>
-                    <re-chip color="success" size="small" class="palette-badge">Активна</re-chip>
+                    <re-chip color="success" size="small" class="palette-badge">РђРєС‚РёРІРЅР°</re-chip>
                 </div>
             `;
             this.gallery.appendChild(item);
@@ -125,7 +125,6 @@ PalettePage = __decorate([
     RePage({
         markupURL: "./src/pages/PalettePage.html",
         cssURL: "./src/pages/PalettePage.html.css",
-        jsURL: "./src/pages/PalettePage.html.ts",
         class: PalettePage,
     }, "/palettes")
 ], PalettePage);

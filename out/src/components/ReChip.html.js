@@ -16,7 +16,6 @@ ReChip = __decorate([
     ReComponent({
         markupURL: "./src/components/ReChip.hmle",
         cssURL: "./out/src/components/ReChip.html.css",
-        jsURL: "./src/components/ReChip.html.js",
     }, "re-chip")
 ], ReChip);
 export default ReChip;

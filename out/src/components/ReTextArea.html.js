@@ -61,7 +61,6 @@ ReTextArea = __decorate([
     ReComponent({
         markupURL: "./src/components/ReTextArea.hmle",
         cssURL: "./out/src/components/ReTextArea.html.css",
-        jsURL: "./src/components/ReTextArea.html.ts",
     }, "re-textarea")
 ], ReTextArea);
 export default ReTextArea;

@@ -1,11 +1,10 @@
-import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
+﻿import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
 import ReIcon, { IconAnimation } from "./ReIcon.html.js";
 import ComponentCore from "./core/ComponentCore.js";
 
 @ReComponent({
     markupURL: "./src/components/ReButton.hmle",
     cssURL: "./out/src/components/ReButton.html.css",
-    jsURL: "./src/components/ReButton.html.js",
 }, "re-button")
 export default class ReButton extends ComponentCore {
     private slottedContainer?: HTMLSlotElement;

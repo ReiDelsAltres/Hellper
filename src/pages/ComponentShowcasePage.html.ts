@@ -1,4 +1,4 @@
-import { IElementHolder, Page, RePage, TemplateHolder } from "@Purper";
+﻿import { IElementHolder, Page, RePage, TemplateHolder } from "@Purper";
 import PopUp from "../components/PopUp.html.js";
 import ReInput from "../components/ReInput.html.js";
 
@@ -6,7 +6,6 @@ import ReInput from "../components/ReInput.html.js";
 @RePage({
     markupURL: "./src/pages/ComponentShowcasePage.html",
     cssURL: "./src/pages/ComponentShowcasePage.html.css",
-    jsURL: "./src/pages/ComponentShowcasePage.html.ts",
 }, "/components")
 export default class ComponentShowcasePage extends Page {
     protected preLoad(holder: TemplateHolder): Promise<void> {
@@ -41,7 +40,7 @@ export default class ComponentShowcasePage extends Page {
 
         readBtn?.addEventListener('click', () => {
             if (!interactiveInput) return;
-            // the component exposes getValue() but we don't have TS type here – call via any
+            // the component exposes getValue() but we don't have TS type here вЂ“ call via any
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             const val = (interactiveInput as any).getValue?.() ?? '';
@@ -63,7 +62,7 @@ export default class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e: Event) => {
                 const detail = (e as CustomEvent).detail;
                 if (numberValidationMsg) {
-                    numberValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    numberValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     numberValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });
@@ -76,7 +75,7 @@ export default class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e: Event) => {
                 const detail = (e as CustomEvent).detail;
                 if (dateValidationMsg) {
-                    dateValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    dateValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     dateValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });
@@ -89,7 +88,7 @@ export default class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e: Event) => {
                 const detail = (e as CustomEvent).detail;
                 if (lengthValidationMsg) {
-                    lengthValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    lengthValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     lengthValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });
@@ -102,7 +101,7 @@ export default class ComponentShowcasePage extends Page {
             input?.addEventListener('input-validate', (e: Event) => {
                 const detail = (e as CustomEvent).detail;
                 if (patternValidationMsg) {
-                    patternValidationMsg.textContent = detail.valid ? '✓ Валидно' : `✗ ${detail.message}`;
+                    patternValidationMsg.textContent = detail.valid ? 'вњ“ Р’Р°Р»РёРґРЅРѕ' : `вњ— ${detail.message}`;
                     patternValidationMsg.style.color = detail.valid ? 'var(--color-success, #4caf50)' : 'var(--color-error, #f44336)';
                 }
             });

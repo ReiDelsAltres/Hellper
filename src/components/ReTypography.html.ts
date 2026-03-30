@@ -1,9 +1,8 @@
-import { IElementHolder, Component, ReComponent, AccessType, TemplateHolder, Attribute } from "@Purper";
+﻿import { IElementHolder, Component, ReComponent, AccessType, TemplateHolder, Attribute } from "@Purper";
 
 @ReComponent({
   markupURL: "./src/components/ReTypography.html",
   cssURL: "./src/components/ReTypography.html.css",
-  jsURL: "./src/components/ReTypography.html.ts",
 },"re-typography")
 export default class ReTypography extends Component {
   static get observedAttributes() {

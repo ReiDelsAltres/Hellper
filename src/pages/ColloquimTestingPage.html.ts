@@ -1,10 +1,9 @@
-import { Fetcher, Page, RePage, Router } from "@Purper";
+﻿import { Fetcher, Page, RePage, Router } from "@Purper";
 import { Semestr, Subject } from "../frac/Testing.js";
 
 @RePage({
     markupURL: "./src/pages/ColloquimTestingPage.hmle",
     cssURL: "./src/pages/ColloquimTestingPage.html.css",
-    jsURL: "./src/pages/ColloquimTestingPage.html.ts",
 }, "/colloquim")
 export default class ColloquimTestingPage extends Page {
     public sections: Semestr[] = [];

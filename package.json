@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@huggingface/transformers": "^3.8.1",
-    "@reidelsaltres/pureper": "^0.2.15",
+    "@reidelsaltres/pureper": "^0.2.23",
     "material-symbols": "^0.43.0"
   }
 }

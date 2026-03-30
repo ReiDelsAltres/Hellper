@@ -1,4 +1,4 @@
-import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder } from "@Purper";
+﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder } from "@Purper";
 import { Subject, ExamFile, ExamQuestion } from "../frac/Testing.js";
 import SeededShuffle from "../lib/SeededShuffle.js";
 import { KatexUtils } from "../KatexUtils.js";
@@ -7,7 +7,6 @@ import PopUp from "../components/PopUp.html.js";
 @RePage({
     markupURL: "./src/pages/TestingActualPage.hmle",
     cssURL: "./src/pages/TestingActualPage.html.css",
-    jsURL: "./src/pages/TestingActualPage.html.ts",
 }, "/testing/actual")
 export default class TestingActualPage extends Page {
     private params: {
@@ -59,7 +58,7 @@ export default class TestingActualPage extends Page {
         this.questions.forEach(q => {
             q.shuffleAnswers(seed);
             seed = SeededShuffle.deriveNextSeed(seed);
-            q.Answers.push("Пропустить вопрос");
+            q.Answers.push("РџСЂРѕРїСѓСЃС‚РёС‚СЊ РІРѕРїСЂРѕСЃ");
 
             // Manually render KaTeX inside title and answers so that
             // the template engine's <exp html-injection> injects ready HTML.
@@ -271,21 +270,21 @@ export default class TestingActualPage extends Page {
     }
 
     /**
-     * Показать popup подтверждения завершения экзамена
+     * РџРѕРєР°Р·Р°С‚СЊ popup РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ Р·Р°РІРµСЂС€РµРЅРёСЏ СЌРєР·Р°РјРµРЅР°
      */
     public finishExam(): void {
         (this['confirmPopup'] as PopUp).open();
     }
 
     /**
-     * Отменить завершение экзамена
+     * РћС‚РјРµРЅРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР°
      */
     public cancelFinish(): void {
         (this['confirmPopup'] as PopUp).close();
     }
 
     /**
-     * Подтвердить завершение экзамена - показать все результаты
+     * РџРѕРґС‚РІРµСЂРґРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР° - РїРѕРєР°Р·Р°С‚СЊ РІСЃРµ СЂРµР·СѓР»СЊС‚Р°С‚С‹
      */
     public confirmFinish(): void {
         (this['confirmPopup'] as PopUp).close();

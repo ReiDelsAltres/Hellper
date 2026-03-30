@@ -40,7 +40,6 @@ ReCheckbox = __decorate([
     ReComponent({
         markupURL: "./src/components/ReCheckbox.hmle",
         cssURL: "./src/components/ReCheckbox.html.css",
-        jsURL: "./src/components/ReCheckbox.html.ts",
     }, "re-checkbox")
 ], ReCheckbox);
 export default ReCheckbox;

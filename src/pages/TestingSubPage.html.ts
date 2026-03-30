@@ -1,4 +1,4 @@
-import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
+﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
 import { Subject } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
@@ -11,14 +11,13 @@ import TestingActualPage from "./TestingActualPage.html.js";
 @RePage({
   markupURL: "./src/pages/TestingSubPage.hmle",
   cssURL: "./src/pages/TestingSubPage.html.css",
-  jsURL: "./src/pages/TestingSubPage.html.ts",
 }, "/testing/sub")
 export default class TestingSubPage extends Page {
   private subject: Subject;
   private testModes: TestMode[] = [
-    { signature: "fast", name: "Быстрый тест", description: "Ты школьник", numQuestions: new Observable(5), colorP: "success" },
-    { signature: "normal", name: "Экзамен", description: "Ты студент", numQuestions: new Observable(25), colorP: "warning" },
-    { signature: "hard", name: "Мазохизм", description: "Ты адекватный?", numQuestions: new Observable(0), colorP: "error" },
+    { signature: "fast", name: "Р‘С‹СЃС‚СЂС‹Р№ С‚РµСЃС‚", description: "РўС‹ С€РєРѕР»СЊРЅРёРє", numQuestions: new Observable(5), colorP: "success" },
+    { signature: "normal", name: "Р­РєР·Р°РјРµРЅ", description: "РўС‹ СЃС‚СѓРґРµРЅС‚", numQuestions: new Observable(25), colorP: "warning" },
+    { signature: "hard", name: "РњР°Р·РѕС…РёР·Рј", description: "РўС‹ Р°РґРµРєРІР°С‚РЅС‹Р№?", numQuestions: new Observable(0), colorP: "error" },
   ];
   private testModesGroup?: ReButtonGroup;
   private modeSettingsButton?: ReButton;

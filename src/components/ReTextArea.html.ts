@@ -1,10 +1,9 @@
-import { ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
+﻿import { ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
 import ComponentCore from "./core/ComponentCore.js";
 
 @ReComponent({
     markupURL: "./src/components/ReTextArea.hmle",
     cssURL: "./out/src/components/ReTextArea.html.css",
-    jsURL: "./src/components/ReTextArea.html.ts",
 }, "re-textarea")
 export default class ReTextArea extends ComponentCore {
     private textarea?: HTMLTextAreaElement;

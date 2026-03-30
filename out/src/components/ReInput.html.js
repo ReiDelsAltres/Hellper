@@ -116,7 +116,6 @@ ReInput = __decorate([
     ReComponent({
         markupURL: "./src/components/ReInput.hmle",
         cssURL: "./src/components/ReInput.html.css",
-        jsURL: "./src/components/ReInput.html.ts",
     }, "re-input")
 ], ReInput);
 export default ReInput;

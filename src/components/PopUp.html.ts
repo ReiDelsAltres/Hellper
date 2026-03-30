@@ -1,9 +1,8 @@
-import { Component, IElementHolder, ReComponent, TemplateHolder } from "@Purper";
+﻿import { Component, IElementHolder, ReComponent, TemplateHolder } from "@Purper";
 
 @ReComponent({
     markupURL: "./src/components/PopUp.html",
     cssURL: "./src/components/PopUp.html.css",
-    jsURL: "./src/components/PopUp.html.js",
     class: PopUp,
 }, "pop-up")
 export default class PopUp extends Component {

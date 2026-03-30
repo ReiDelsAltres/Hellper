@@ -14,7 +14,6 @@ ReTypography = __decorate([
     ReComponent({
         markupURL: "./src/components/ReTypography.html",
         cssURL: "./src/components/ReTypography.html.css",
-        jsURL: "./src/components/ReTypography.html.ts",
     }, "re-typography")
 ], ReTypography);
 export default ReTypography;

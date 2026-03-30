@@ -1,9 +1,8 @@
-import { Component, ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
+﻿import { Component, ReComponent, TemplateHolder, Attribute, Observable } from "@Purper";
 
 @ReComponent({
     markupURL: "./src/components/ReInput.hmle",
     cssURL: "./src/components/ReInput.html.css",
-    jsURL: "./src/components/ReInput.html.ts",
 }, "re-input")
 export default class ReInput extends Component {
     private icon?: HTMLSpanElement;

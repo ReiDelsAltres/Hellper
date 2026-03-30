@@ -20,7 +20,6 @@ TestingPage = __decorate([
     RePage({
         markupURL: "./src/pages/TestingPage.hmle",
         cssURL: "./src/pages/TestingPage.html.css",
-        jsURL: "./src/pages/TestingPage.html.ts",
     }, "/testing")
 ], TestingPage);
 export default TestingPage;

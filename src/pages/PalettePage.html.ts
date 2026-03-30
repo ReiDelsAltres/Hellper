@@ -1,4 +1,4 @@
-// PalettePage.html.js
+﻿// PalettePage.html.js
 // Palette page that auto-discovers themes from /resources folder
 
 import { Fetcher, IElementHolder, Page, RePage, setTheme, TemplateHolder } from "@Purper";
@@ -6,7 +6,6 @@ import { Fetcher, IElementHolder, Page, RePage, setTheme, TemplateHolder } from 
 @RePage({
     markupURL: "./src/pages/PalettePage.html",
     cssURL: "./src/pages/PalettePage.html.css",
-    jsURL: "./src/pages/PalettePage.html.ts",
     class: PalettePage,
 }, "/palettes")
 export default class PalettePage extends Page {
@@ -76,14 +75,14 @@ export default class PalettePage extends Page {
             const item = document.createElement('div');
             item.className = `palette-item ${themeClass}`;
             item.tabIndex = 0;
-            item.setAttribute('aria-label', `${displayName} тема`);
+            item.setAttribute('aria-label', `${displayName} С‚РµРјР°`);
             item.setAttribute('data-theme', theme);
             
             item.innerHTML = `
                 <color-palette class="${themeClass}"></color-palette>
                 <div class="palette-info">
                     <div class="palette-label">${displayName}</div>
-                    <re-chip color="success" size="small" class="palette-badge">Активна</re-chip>
+                    <re-chip color="success" size="small" class="palette-badge">РђРєС‚РёРІРЅР°</re-chip>
                 </div>
             `;
             

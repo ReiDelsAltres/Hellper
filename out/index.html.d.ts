@@ -1,9 +1,7 @@
-import "./src/components/ColorPalettePreview.html.js";
 import "./src/components/ReTypography.html.js";
 import "./src/components/ReInput.html.js";
 import "./src/components/AppBar.html.js";
 import "./src/components/AppLayout.html.js";
-import "./src/components/ColorPalettePreview.html.js";
 import "./src/components/ReButton.html.js";
 import "./src/components/ReButtonGroup.html.js";
 import "./src/components/ReChip.html.js";
@@ -12,6 +10,7 @@ import "./src/components/ReCheckbox.html.js";
 import "./src/components/PopUp.html.js";
 import "./src/components/PaperComponent.html.js";
 import "./src/components/ReTextArea.html.js";
+import "./src/components/ColorPalettePreview.html.js";
 import "./src/pages/MainPage.html.js";
 import "./src/pages/PalettePage.html.js";
 import "./src/pages/ComponentShowcasePage.html.js";

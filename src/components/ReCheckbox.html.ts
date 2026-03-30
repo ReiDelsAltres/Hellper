@@ -1,9 +1,8 @@
-import { IElementHolder, Component, ReComponent, Attribute, TemplateHolder } from "@Purper";
+﻿import { IElementHolder, Component, ReComponent, Attribute, TemplateHolder } from "@Purper";
 
 @ReComponent({
     markupURL: "./src/components/ReCheckbox.hmle",
     cssURL: "./src/components/ReCheckbox.html.css",
-    jsURL: "./src/components/ReCheckbox.html.ts",
 }, "re-checkbox")
 export default class ReCheckbox extends Component {
     private box?: HTMLElement;

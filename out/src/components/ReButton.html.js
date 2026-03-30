@@ -37,7 +37,6 @@ ReButton = __decorate([
     ReComponent({
         markupURL: "./src/components/ReButton.hmle",
         cssURL: "./out/src/components/ReButton.html.css",
-        jsURL: "./src/components/ReButton.html.js",
     }, "re-button")
 ], ReButton);
 export default ReButton;

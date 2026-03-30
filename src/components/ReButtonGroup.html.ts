@@ -1,11 +1,10 @@
-import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute } from "@Purper";
+﻿import { IElementHolder, Component, ReComponent, TemplateHolder, Attribute } from "@Purper";
 import ReButton from "./ReButton.html.js";
 
 @ReComponent({
     markupURL: "./src/components/ReButtonGroup.hmle",
     cssURL: "./src/components/ReButtonGroup.html.css",
     ltCssURL: "./src/components/ReButtonGroup.html.lt.css",
-    jsURL: "./src/components/ReButtonGroup.html.js",
 }, "re-button-group")
 export default class ReButtonGroup extends Component {
     private container?: HTMLDivElement;
@@ -65,7 +64,7 @@ export default class ReButtonGroup extends Component {
         });
         transaction.commit();
 
-        // Эмитируем событие изменения
+        // Р­РјРёС‚РёСЂСѓРµРј СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ
         this.dispatchEvent(new CustomEvent('selection-change', {
             detail: {
                 value: this.Value.value,
@@ -77,7 +76,7 @@ export default class ReButtonGroup extends Component {
     };
     private updateGroup() {
         this.buttonMap.forEach((bool, btn) => {
-            // Добавляем классы позиции для скруглений
+            // Р”РѕР±Р°РІР»СЏРµРј РєР»Р°СЃСЃС‹ РїРѕР·РёС†РёРё РґР»СЏ СЃРєСЂСѓРіР»РµРЅРёР№
             btn.classList.remove('group-first', 'group-middle', 'group-last', 'group-single');
             const index = Array.from(this.buttonMap.keys()).indexOf(btn);
 

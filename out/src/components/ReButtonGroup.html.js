@@ -56,7 +56,7 @@ let ReButtonGroup = class ReButtonGroup extends Component {
                 transaction.updateObject(master => master + (master ? ',' : '') + btn.OptionalValue.value);
         });
         transaction.commit();
-        // Эмитируем событие изменения
+        // Р­РјРёС‚РёСЂСѓРµРј СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ
         this.dispatchEvent(new CustomEvent('selection-change', {
             detail: {
                 value: this.Value.value,
@@ -68,7 +68,7 @@ let ReButtonGroup = class ReButtonGroup extends Component {
     };
     updateGroup() {
         this.buttonMap.forEach((bool, btn) => {
-            // Добавляем классы позиции для скруглений
+            // Р”РѕР±Р°РІР»СЏРµРј РєР»Р°СЃСЃС‹ РїРѕР·РёС†РёРё РґР»СЏ СЃРєСЂСѓРіР»РµРЅРёР№
             btn.classList.remove('group-first', 'group-middle', 'group-last', 'group-single');
             const index = Array.from(this.buttonMap.keys()).indexOf(btn);
             if (this.buttonMap.size === 1) {
@@ -120,7 +120,6 @@ ReButtonGroup = __decorate([
         markupURL: "./src/components/ReButtonGroup.hmle",
         cssURL: "./src/components/ReButtonGroup.html.css",
         ltCssURL: "./src/components/ReButtonGroup.html.lt.css",
-        jsURL: "./src/components/ReButtonGroup.html.js",
     }, "re-button-group")
 ], ReButtonGroup);
 export default ReButtonGroup;

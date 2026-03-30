@@ -11,7 +11,6 @@ MainPage = __decorate([
     RePage({
         markupURL: "./src/pages/MainPage.html",
         cssURL: "./src/pages/MainPage.html.css",
-        jsURL: "./src/pages/MainPage.html.ts",
     }, "/")
 ], MainPage);
 export default MainPage;

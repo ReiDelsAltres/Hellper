@@ -46,7 +46,7 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.questions.forEach(q => {
             q.shuffleAnswers(seed);
             seed = SeededShuffle.deriveNextSeed(seed);
-            q.Answers.push("Пропустить вопрос");
+            q.Answers.push("РџСЂРѕРїСѓСЃС‚РёС‚СЊ РІРѕРїСЂРѕСЃ");
             // Manually render KaTeX inside title and answers so that
             // the template engine's <exp html-injection> injects ready HTML.
             q.Title = KatexUtils.renderInlineString(q.Title);
@@ -239,19 +239,19 @@ let TestingActualPage = class TestingActualPage extends Page {
         }
     }
     /**
-     * Показать popup подтверждения завершения экзамена
+     * РџРѕРєР°Р·Р°С‚СЊ popup РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ Р·Р°РІРµСЂС€РµРЅРёСЏ СЌРєР·Р°РјРµРЅР°
      */
     finishExam() {
         this['confirmPopup'].open();
     }
     /**
-     * Отменить завершение экзамена
+     * РћС‚РјРµРЅРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР°
      */
     cancelFinish() {
         this['confirmPopup'].close();
     }
     /**
-     * Подтвердить завершение экзамена - показать все результаты
+     * РџРѕРґС‚РІРµСЂРґРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР° - РїРѕРєР°Р·Р°С‚СЊ РІСЃРµ СЂРµР·СѓР»СЊС‚Р°С‚С‹
      */
     confirmFinish() {
         this['confirmPopup'].close();
@@ -319,7 +319,6 @@ TestingActualPage = __decorate([
     RePage({
         markupURL: "./src/pages/TestingActualPage.hmle",
         cssURL: "./src/pages/TestingActualPage.html.css",
-        jsURL: "./src/pages/TestingActualPage.html.ts",
     }, "/testing/actual"),
     __metadata("design:paramtypes", [String])
 ], TestingActualPage);
