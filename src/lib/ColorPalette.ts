@@ -2,7 +2,7 @@ export default class ColorPalette {
     constructor(
         public readonly name: string,
         public readonly displayName: string,
-    ) {}
+    ) { }
 }
 
 /** All known color palettes */
