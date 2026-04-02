@@ -8,6 +8,9 @@ import "./src/components/ReChip.html.js";
 import "./src/components/ReIcon.html.js";
 import "./src/components/ReCheckbox.html.js";
 import "./src/components/PopUp.html.js";
+import "./src/components/ReTooltip.html.js";
+import "./src/components/NetworkStatus.html.js";
+import "./src/components/CacheIndicator.html.js";
 import "./src/components/PaperComponent.html.js";
 import "./src/components/ReTextArea.html.js";
 import "./src/components/ColorPalettePreview.html.js";
@@ -22,6 +25,8 @@ import "./src/pages/TestingPage.html.js";
 import "./src/pages/TestingSubPage.html.js";
 import "./src/pages/TestingActualPage.html.js";
 import "./src/pages/TestingAllPage.html.js";
+import "./src/pages/SettingsPage.html.js";
+import "./src/lib/WinterTheme.js";
 export default class Index {
     static initialize(): Promise<void>;
 }

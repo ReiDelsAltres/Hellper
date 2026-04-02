@@ -11,8 +11,11 @@ let AppLayout = class AppLayout extends ComponentCore {
     Topbar = new Attribute(this, "topbar", null);
     sidebarBtn;
     topbarBtn;
+    networkBtn;
     verticalPanel;
     horizontalPanel;
+    networkTooltip;
+    networkStatus;
     panels = new Map();
     async preLoad(holder) {
         this.panels.set("vertical", { bar: () => this.verticalPanel, btn: () => this.sidebarBtn, attr: this.Sidebar });
@@ -40,6 +43,11 @@ let AppLayout = class AppLayout extends ComponentCore {
         bar.Hidden.setObject(!isHidden ? true : null);
         panel.attr.setObject(isHidden ? "mini" : "hidden");
         btn.Variant.setObject(isHidden ? "outlined" : "filled");
+    }
+    toggleNetworkStatus() {
+        this.networkTooltip.setAnchorElement(this.networkBtn);
+        this.networkTooltip.toggle();
+        this.networkBtn.Variant.setObject(this.networkTooltip.isOpen ? 'filled' : 'outlined');
     }
 };
 AppLayout = __decorate([

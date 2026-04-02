@@ -8,8 +8,38 @@ import { Fetcher, Page, RePage, Router } from "@Purper";
 import { Semestr, Subject } from "../frac/Testing.js";
 let TestingPage = class TestingPage extends Page {
     semestrs = [];
+    cacheIndicator;
+    dataUrl = './resources/data/testing.json';
     async preInit() {
-        this.semestrs = (await Fetcher.fetchJSON('./resources/data/testing.json')).reverse();
+        this.semestrs = (await Fetcher.fetchJSON(this.dataUrl)).reverse();
+    }
+    async postLoad() {
+        this.updateCacheIndicator(this.dataUrl, this.semestrs);
+    }
+    updateCacheIndicator(url, data) {
+        if (!this.cacheIndicator)
+            return;
+        this.cacheIndicator.loaded.setObject(true);
+        this.cacheIndicator.fileName.setObject(url);
+        const jsonStr = JSON.stringify(data);
+        const sizeBytes = new Blob([jsonStr]).size;
+        this.cacheIndicator.fileSize.setObject(sizeBytes);
+        const resolvedUrl = Fetcher.resolveUrl(url);
+        const entries = performance.getEntriesByName(resolvedUrl, 'resource');
+        const entry = entries.length > 0 ? entries[entries.length - 1] : null;
+        if (entry) {
+            if (entry.transferSize === 0) {
+                this.cacheIndicator.source.setObject('cache');
+                this.cacheIndicator.networkCost.setObject(0);
+            }
+            else {
+                this.cacheIndicator.source.setObject('network');
+                this.cacheIndicator.networkCost.setObject(entry.transferSize);
+            }
+        }
+        else {
+            this.cacheIndicator.source.setObject('unknown');
+        }
     }
     goToSubject(subject) {
         const params = encodeURIComponent(JSON.stringify(subject));

@@ -1,0 +1,6 @@
+<div class="tooltip-body" ref="'body'">
+    <div class="tooltip-tail" ref="'tail'"></div>
+    <div class="tooltip-content">
+        <slot></slot>
+    </div>
+</div>

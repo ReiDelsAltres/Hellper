@@ -28,5 +28,6 @@ export default class SimilarityScorer {
      * @param idealSize      - ideal answer length in characters (from "size" field)
      */
     static score(userText: string, answers: string[], keywords: string[], questionTitle?: string, idealSize?: number): Promise<ScoreResult>;
+    private static scoreKeywords;
 }
 //# sourceMappingURL=SimilarityScorer.d.ts.map

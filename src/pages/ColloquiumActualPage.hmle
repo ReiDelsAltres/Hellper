@@ -105,7 +105,8 @@
                 <div class="score-breakdown" ref="'qbreakdown_' + qidx" style="display:none"></div>
                 <div class="user-answer-row">
                     <re-typography class="ref-answer-label">Ваш ответ:</re-typography>
-                    <re-typography class="user-answer-text" ref="'quseranswer_' + qidx"></re-typography>
+                    <re-typography color="tertiary" class="user-answer-text"
+                        ref="'quseranswer_' + qidx"></re-typography>
                 </div>
                 <re-typography class="ref-answer-label">Эталонный ответ:</re-typography>
                 <for value="ans" of="question.Answers">

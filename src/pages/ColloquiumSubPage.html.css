@@ -35,9 +35,7 @@
     min-width: 220px;
     max-width: 100%;
     box-sizing: border-box;
-
     border-radius: 0;
-
     display: block;
 }
 
@@ -54,20 +52,90 @@
 .option-block {
     width: 100%;
     min-width: 100%;
-
     border-radius: 0;
     margin: 0;
-
     background-color: color-mix(in srgb, var(--paper-background-color) 50%, black);
 }
 
+.group1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.option-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.option-inputs re-input {
+    flex: 1 1 120px;
+    min-width: 100px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.actions re-button {
+    flex: 1 1 0;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding: 24px 12px;
+    }
+
+    .header {
+        margin-bottom: 24px;
+    }
+}
+
 @media (max-width: 480px) {
+    .page {
+        padding: 16px 8px;
+    }
+
     .mode-group {
         flex-direction: column;
     }
 
-    .mode-group re-button {
+    .cont re-button {
         flex: none;
         width: 100%;
+        min-width: unset;
+    }
+
+    .group1 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .option-inputs {
+        flex-direction: column;
+    }
+
+    .option-inputs re-input {
+        flex: none;
+        width: 100%;
+        min-width: unset;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions re-button {
+        flex: none;
+        width: 100%;
+        min-width: unset;
     }
 }

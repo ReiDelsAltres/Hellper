@@ -1,0 +1,79 @@
+.winter-theme {
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --color-empty: #2a3040;
+    --color-empty-contrast: #c8d6e5;
+    --color-empty-hover: color-mix(in srgb, var(--color-empty) 30%, black);
+
+    /* Primary — icy blue */
+    --color-primary: #5b9bd5;
+    --color-primary-contrast: #fff;
+    --color-primary-hover: color-mix(in srgb, var(--color-primary) 30%, black);
+
+    /* Secondary — frost purple */
+    --color-secondary: #7b68ee;
+    --color-secondary-contrast: #fff;
+    --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 30%, black);
+
+    /* Tertiary — aurora green */
+    --color-tertiary: #48d1cc;
+    --color-tertiary-contrast: #fff;
+    --color-tertiary-hover: color-mix(in srgb, var(--color-tertiary) 30%, black);
+
+    /* Additional — snow silver */
+    --color-additional: #a8c0d6;
+    --color-additional-contrast: #1a2332;
+    --color-additional-hover: color-mix(in srgb, var(--color-additional) 30%, black);
+
+    /* Utility Colors */
+    --color-info: #4fc3f7;
+    --color-info-contrast: #fff;
+    --color-info-hover: color-mix(in srgb, var(--color-info) 30%, black);
+
+    --color-success: #66bb6a;
+    --color-success-contrast: #fff;
+    --color-success-hover: color-mix(in srgb, var(--color-success) 30%, black);
+
+    --color-warning: #ffb74d;
+    --color-warning-contrast: #fff;
+    --color-warning-hover: color-mix(in srgb, var(--color-warning) 30%, black);
+
+    --color-error: #ef5350;
+    --color-error-contrast: #fff;
+    --color-error-hover: color-mix(in srgb, var(--color-error) 30%, black);
+
+    /* Surface */
+    --surface: #1e2a3a;
+    --surface-light: #e8f0f8;
+    --surface-dark: #15202e;
+
+    /* Distinctive */
+    --color-primary-distinctive: #3a7cc0;
+    --color-secondary-distinctive: #6050d0;
+    --color-tertiary-distinctive: #36afa8;
+    --color-additional-distinctive: #8da8c0;
+
+    /* App backgrounds */
+    --app-background-size: none;
+    --app-background-position: none;
+    --app-background-image: none;
+    --app-background-color: #0f1923;
+
+    --app-bars-background-size: none;
+    --app-bars-background-position: none;
+    --app-bars-background-image: none;
+    --app-bars-background-color: var(--surface-dark);
+
+    --paper-background-size: auto;
+    --paper-background-position: auto;
+    --paper-background-image: none;
+    --paper-background-color: var(--surface);
+
+    --paper-border-top-left-radius: 15px;
+    --paper-border-top-right-radius: 15px;
+    --paper-border-bottom-left-radius: 15px;
+    --paper-border-bottom-right-radius: 15px;
+
+    --paper-border-style: none;
+    --paper-border-color: none;
+}

@@ -4,7 +4,7 @@ let extractorPromise = null;
 function getExtractor() {
     if (!extractorPromise) {
         extractorPromise = pipeline("feature-extraction", MODEL_NAME, {
-            dtype: "fp32",
+            dtype: "q8",
         });
     }
     return extractorPromise;
@@ -155,31 +155,8 @@ export default class SimilarityScorer {
             lengthRatio = avgRefLength > 0 ? trimmed.length / avgRefLength : 1;
             lengthMismatch = lengthRatio < 0.7;
         }
-        // Fuzzy keyword matching via embeddings (0..1)
-        // Each keyword is matched by exact substring OR semantic similarity,
-        // so "CPU" matches text about "процессор", "центральный процессор", etc.
-        let keywordScore = 0;
-        if (keywords.length > 0) {
-            const lower = trimmed.toLowerCase();
-            const userEmbedding = await embed(trimmed);
-            let totalKw = 0;
-            for (const kw of keywords) {
-                // Exact substring match = full credit
-                if (lower.includes(kw.toLowerCase())) {
-                    totalKw += 1;
-                    continue;
-                }
-                // Semantic similarity between keyword and user text
-                const kwEmb = await embed(kw);
-                const sim = cosineSimilarity(userEmbedding, kwEmb);
-                // sim < 0.3 → 0, sim >= 0.55 → 1, linear in between
-                if (sim > 0.3) {
-                    totalKw += Math.min(1, (sim - 0.3) / 0.25);
-                }
-            }
-            keywordScore = totalKw / keywords.length;
-        }
-        // Semantic similarity to reference answers (0..1)
+        let keywordScore = await this.scoreKeywords(trimmed, keywords, 0.3, 0.55);
+        //строгий	0.5	0.85 | баланс	0.45	0.8 | мягкий	0.4	0.75
         let semanticScore = 0;
         if (answers.length > 0) {
             const userEmbedding = await embed(trimmed);
@@ -225,6 +202,30 @@ export default class SimilarityScorer {
             keywordMax: kwMax,
         };
         return { score: Math.round(finalScore * 100), lengthMismatch, lengthRatio, breakdown };
+    }
+    static async scoreKeywords(userText, keywords, low, high) {
+        let keywordScore = 0;
+        if (keywords.length > 0) {
+            const lower = userText.toLowerCase();
+            const userEmbedding = await embed(userText);
+            const keywordEmbeddings = await Promise.all(keywords.map(kw => embed(kw)));
+            let totalKw = 0;
+            for (let i = 0; i < keywords.length; i++) {
+                const kw = keywords[i];
+                const regex = new RegExp(`\\b${kw}\\b`, 'i');
+                if (regex.test(lower)) {
+                    totalKw += 1;
+                    continue;
+                }
+                const kwEmb = keywordEmbeddings[i];
+                const sim = cosineSimilarity(userEmbedding, kwEmb);
+                if (sim > low) {
+                    totalKw += Math.min(1, (sim - low) / (high - low));
+                }
+            }
+            keywordScore = totalKw / keywords.length;
+        }
+        return keywordScore;
     }
 }
 //# sourceMappingURL=SimilarityScorer.js.map

@@ -12,6 +12,7 @@ import { Fetcher, Page, RePage, Router, Observable } from "@Purper";
 let ColloquiumSubPage = class ColloquiumSubPage extends Page {
     static { ColloquiumSubPage_1 = this; }
     subject;
+    fetchedData;
     totalQuestions = 0;
     totalBilets = 0;
     hasBilets = false;
@@ -29,20 +30,52 @@ let ColloquiumSubPage = class ColloquiumSubPage extends Page {
     biletsButton;
     inputVal;
     inputNoShuffle;
+    cacheIndicator;
     constructor(subject) {
         super();
         this.subject = JSON.parse(decodeURIComponent(subject));
     }
+    dataUrl = '';
     async preLoad(holder) {
-        const result = await Fetcher.fetchJSON('./resources/data/' + this.subject.file);
+        this.dataUrl = './resources/data/' + this.subject.file;
+        const result = await Fetcher.fetchJSON(this.dataUrl);
+        this.fetchedData = result;
         this.totalQuestions = result.Questions.length;
         this.totalBilets = result.Bilets?.length ?? 0;
         this.hasBilets = (result.Bilets?.length ?? 0) > 0;
         this.testModes[2].numItems.setObject(this.totalQuestions);
     }
+    updateCacheIndicator(url, data) {
+        if (!this.cacheIndicator)
+            return;
+        this.cacheIndicator.loaded.setObject(true);
+        this.cacheIndicator.fileName.setObject(url);
+        const jsonStr = JSON.stringify(data);
+        const sizeBytes = new Blob([jsonStr]).size;
+        this.cacheIndicator.fileSize.setObject(sizeBytes);
+        const resolvedUrl = Fetcher.resolveUrl(url);
+        const entries = performance.getEntriesByName(resolvedUrl, 'resource');
+        const entry = entries.length > 0 ? entries[entries.length - 1] : null;
+        if (entry) {
+            if (entry.transferSize === 0) {
+                this.cacheIndicator.source.setObject('cache');
+                this.cacheIndicator.networkCost.setObject(0);
+            }
+            else {
+                this.cacheIndicator.source.setObject('network');
+                this.cacheIndicator.networkCost.setObject(entry.transferSize);
+            }
+        }
+        else {
+            this.cacheIndicator.source.setObject('unknown');
+        }
+    }
     async postLoad(holder) {
-        this.updateTestModeGroup(this.testModesGroup?.buttonMap);
-        this.updateTestTypeChange(this.inputTestType?.buttonMap);
+        this.updateCacheIndicator(this.dataUrl, this.fetchedData);
+        if (this.testModesGroup?.buttonMap)
+            this.updateTestModeGroup(this.testModesGroup.buttonMap);
+        if (this.inputTestType?.buttonMap)
+            this.updateTestTypeChange(this.inputTestType.buttonMap);
         if (this.inputContentType) {
             this.updateContentTypeChange(this.inputContentType.buttonMap);
         }
@@ -70,7 +103,7 @@ let ColloquiumSubPage = class ColloquiumSubPage extends Page {
         });
         this.updateItemCounts();
         const activeMode = this.testModes.find(mode => mode.signature === this.testModesGroup?.Value.value);
-        this.inputVal?.Value.setObject(activeMode?.numItems.getObject()?.toString());
+        this.inputVal?.Value.setObject(activeMode?.numItems.getObject()?.toString() ?? '');
     }
     updateItemCounts() {
         const contentType = this.inputContentType?.Value.value || 'questions';
@@ -100,7 +133,27 @@ let ColloquiumSubPage = class ColloquiumSubPage extends Page {
         });
         this.modeSettingsButton?.Color.setObject(color);
         this.optionBlock?.Color.setObject(color);
-        this.inputVal?.Value.setObject(activeMode?.numItems.getObject()?.toString());
+        this.inputVal?.Value.setObject(activeMode?.numItems.getObject()?.toString() ?? '');
+    }
+    downloadQuestions() {
+        const questions = this.fetchedData.Questions;
+        const lines = [];
+        for (const q of questions) {
+            lines.push(`${q.Id}. ${q.Title}`);
+            q.Answers.forEach((ans, i) => {
+                const letter = String.fromCharCode(65 + i);
+                const mark = i === 0 ? ' \u2713' : '';
+                lines.push(`   ${letter}. ${ans}${mark}`);
+            });
+            lines.push('');
+        }
+        const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${this.subject.name}_questions.txt`;
+        a.click();
+        URL.revokeObjectURL(url);
     }
     startTest() {
         const activeMode = this.testModes.find(mode => mode.signature === this.testModesGroup?.Value.value);

@@ -7,8 +7,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { Fetcher, Page, RePage, Router } from "@Purper";
 let ColloquimTestingPage = class ColloquimTestingPage extends Page {
     sections = [];
+    cacheIndicator;
+    dataUrl = './resources/data/colloquim_testing.json';
     async preInit() {
-        this.sections = (await Fetcher.fetchJSON('./resources/data/colloquim_testing.json')).reverse();
+        this.sections = (await Fetcher.fetchJSON(this.dataUrl)).reverse();
+    }
+    async postLoad() {
+        this.updateCacheIndicator(this.dataUrl, this.sections);
+    }
+    updateCacheIndicator(url, data) {
+        if (!this.cacheIndicator)
+            return;
+        this.cacheIndicator.loaded.setObject(true);
+        this.cacheIndicator.fileName.setObject(url);
+        const jsonStr = JSON.stringify(data);
+        const sizeBytes = new Blob([jsonStr]).size;
+        this.cacheIndicator.fileSize.setObject(sizeBytes);
+        const resolvedUrl = Fetcher.resolveUrl(url);
+        const entries = performance.getEntriesByName(resolvedUrl, 'resource');
+        const entry = entries.length > 0 ? entries[entries.length - 1] : null;
+        if (entry) {
+            if (entry.transferSize === 0) {
+                this.cacheIndicator.source.setObject('cache');
+                this.cacheIndicator.networkCost.setObject(0);
+            }
+            else {
+                this.cacheIndicator.source.setObject('network');
+                this.cacheIndicator.networkCost.setObject(entry.transferSize);
+            }
+        }
+        else {
+            this.cacheIndicator.source.setObject('unknown');
+        }
     }
     goToSubject(subject) {
         const params = encodeURIComponent(JSON.stringify(subject));

@@ -1,13 +1,11 @@
 import { Page, TemplateHolder } from "@Purper";
 export default class PalettePage extends Page {
-    private gallery?;
-    private themes;
+    private paletteGallery?;
+    private themeGallery?;
     protected preLoad(holder: TemplateHolder): Promise<void>;
-    private discoverThemes;
-    private createPaletteItems;
-    private setupInteractions;
-    private updateActive;
+    private renderPalettes;
+    private renderThemes;
+    private updateActiveState;
     private toKebabCase;
-    private formatDisplayName;
 }
 //# sourceMappingURL=PalettePage.html.d.ts.map

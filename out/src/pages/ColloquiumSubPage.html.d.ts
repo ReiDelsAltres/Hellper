@@ -2,6 +2,7 @@ import { Page, TemplateHolder } from "@Purper";
 import ReButton from "../components/ReButton.html.js";
 export default class ColloquiumSubPage extends Page {
     private subject;
+    private fetchedData;
     private totalQuestions;
     private totalBilets;
     private hasBilets;
@@ -15,8 +16,11 @@ export default class ColloquiumSubPage extends Page {
     private biletsButton?;
     private inputVal?;
     private inputNoShuffle?;
+    private cacheIndicator?;
     constructor(subject?: string);
+    private dataUrl;
     protected preLoad(holder: TemplateHolder): Promise<void>;
+    private updateCacheIndicator;
     protected postLoad(holder: TemplateHolder): Promise<void>;
     onSelectionChange(event: CustomEvent<{}>): void;
     onTestTypeChange(event: CustomEvent<{}>): void;
@@ -25,6 +29,7 @@ export default class ColloquiumSubPage extends Page {
     updateContentTypeChange(buttons: Map<ReButton, boolean>): void;
     private updateItemCounts;
     updateTestModeGroup(buttons: Map<ReButton, boolean>): void;
+    downloadQuestions(): void;
     startTest(): void;
 }
 //# sourceMappingURL=ColloquiumSubPage.html.d.ts.map

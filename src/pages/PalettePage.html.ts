@@ -1,142 +1,136 @@
-﻿// PalettePage.html.js
-// Palette page that auto-discovers themes from /resources folder
-
-import { Fetcher, IElementHolder, Page, RePage, setTheme, TemplateHolder } from "@Purper";
+﻿import { Page, RePage, TemplateHolder, setTheme, activateAppTheme, deactivateAppTheme, activeAppTheme, ACTIVE_THEME_KEY } from "@Purper";
+import { COLOR_PALETTES } from "../lib/ColorPalette.js";
+import { APP_THEMES } from "../lib/AppTheme.js";
 
 @RePage({
     markupURL: "./src/pages/PalettePage.html",
     cssURL: "./src/pages/PalettePage.html.css",
-    class: PalettePage,
 }, "/palettes")
 export default class PalettePage extends Page {
-    private gallery?: HTMLElement;
-    private themes: string[] = [];
+    private paletteGallery?: HTMLElement;
+    private themeGallery?: HTMLElement;
 
     protected async preLoad(holder: TemplateHolder): Promise<void> {
-        // Hold a reference to gallery element so we can populate it
-        this.gallery = holder.documentFragment.querySelector('.palette-gallery') as HTMLElement | null ?? undefined;
+        const root = holder.documentFragment;
+        this.paletteGallery = root.querySelector('#palette-gallery') as HTMLElement;
+        this.themeGallery = root.querySelector('#theme-gallery') as HTMLElement;
 
-        // Auto-discover themes from /resources folder
-        await this.discoverThemes();
-        
-        // Create palette items dynamically
-        this.createPaletteItems();
-        
-        // Setup interactions
-        this.setupInteractions();
+        this.renderPalettes();
+        this.renderThemes();
+        this.updateActiveState();
 
-        return Promise.resolve();
+        // React to theme changes
+        activeAppTheme.subscribe(() => this.updateActiveState());
     }
 
-    private async discoverThemes(): Promise<void> {
-        // Known theme files in /resources (*.theme.css pattern)
-        // Since we can't list directory from browser, we fetch a manifest or use known list
-        try {
-            // Try to fetch directory listing or use fallback
-            const knownThemes = [
-                'Blazor',
-                'Brass', 
-                'BrassDark',
-                'Chess',
-                'Vine'
-            ];
-            
-            // Verify each theme exists by attempting to fetch
-            for (const theme of knownThemes) {
-                try {
-                    const response = await fetch(`./resources/${theme}.theme.css`, { method: 'HEAD' });
-                    if (response.ok) {
-                        this.themes.push(theme);
-                    }
-                } catch {
-                    // Theme file doesn't exist, skip
-                }
-            }
-            
-            // If no themes found, use fallback
-            if (this.themes.length === 0) {
-                this.themes = knownThemes;
-            }
-        } catch (e) {
-            console.warn('Failed to discover themes:', e);
-            this.themes = ['Blazor'];
-        }
-    }
+    private renderPalettes(): void {
+        if (!this.paletteGallery) return;
 
-    private createPaletteItems(): void {
-        if (!this.gallery) return;
+        for (const palette of COLOR_PALETTES) {
+            const themeClass = this.toKebabCase(palette.name) + '-theme';
 
-        this.gallery.innerHTML = '';
-
-        for (const theme of this.themes) {
-            const themeClass = this.toKebabCase(theme) + '-theme';
-            const displayName = this.formatDisplayName(theme);
-            
             const item = document.createElement('div');
-            item.className = `palette-item ${themeClass}`;
+            item.className = `gallery-item palette-item ${themeClass}`;
             item.tabIndex = 0;
-            item.setAttribute('aria-label', `${displayName} С‚РµРјР°`);
-            item.setAttribute('data-theme', theme);
-            
+            item.setAttribute('data-palette', palette.name);
+
             item.innerHTML = `
                 <color-palette class="${themeClass}"></color-palette>
-                <div class="palette-info">
-                    <div class="palette-label">${displayName}</div>
-                    <re-chip color="success" size="small" class="palette-badge">РђРєС‚РёРІРЅР°</re-chip>
+                <div class="item-info">
+                    <span class="item-label">${palette.displayName}</span>
+                    <re-chip color="success" size="small" class="active-badge">Активна</re-chip>
                 </div>
             `;
-            
-            this.gallery.appendChild(item);
-        }
-    }
 
-    private setupInteractions(): void {
-        if (!this.gallery) return;
-
-        const items = Array.from(this.gallery.querySelectorAll<HTMLElement>('.palette-item'));
-        
-        const applyTheme = (themeName: string) => {
-            setTheme(themeName);
-            localStorage.setItem('theme', themeName);
-            this.updateActive(themeName, items);
-        };
-
-        // Set initial active state
-        const stored = localStorage.getItem('theme') ?? 'Blazor';
-        this.updateActive(stored, items);
-
-        items.forEach((item) => {
-            const themeName = item.getAttribute('data-theme');
-            if (!themeName) return;
-
-            const handler = () => applyTheme(themeName);
-            item.addEventListener('click', handler);
+            item.addEventListener('click', () => {
+                setTheme(palette.name);
+                localStorage.setItem('theme', palette.name);
+                this.updateActiveState();
+            });
             item.addEventListener('keydown', (ev: KeyboardEvent) => {
                 if (ev.key === 'Enter' || ev.key === ' ') {
                     ev.preventDefault();
-                    handler();
+                    setTheme(palette.name);
+                    localStorage.setItem('theme', palette.name);
+                    this.updateActiveState();
                 }
             });
-        });
+
+            this.paletteGallery.appendChild(item);
+        }
     }
 
-    private updateActive(themeName: string, items: HTMLElement[]): void {
-        items.forEach((item) => {
-            const itemTheme = item.getAttribute('data-theme');
-            item.classList.toggle('active', itemTheme === themeName);
+    private renderThemes(): void {
+        if (!this.themeGallery) return;
+
+        for (const theme of APP_THEMES) {
+            const themeClass = this.toKebabCase(theme.palette) + '-theme';
+
+            const item = document.createElement('div');
+            item.className = `gallery-item theme-item ${themeClass}`;
+            item.tabIndex = 0;
+            item.setAttribute('data-theme', theme.name);
+
+            item.innerHTML = `
+                <color-palette class="${themeClass}"></color-palette>
+                <div class="item-info">
+                    <div class="item-label-row">
+                        <re-icon icon="auto_awesome" size="small" color="tertiary"></re-icon>
+                        <span class="item-label">${theme.displayName}</span>
+                    </div>
+                    <re-chip color="tertiary" size="small" class="active-badge">Активна</re-chip>
+                </div>
+            `;
+
+            item.addEventListener('click', () => {
+                const current = activeAppTheme.getObject();
+                if (current && current.name === theme.name) {
+                    // Clicking active theme deactivates it
+                    deactivateAppTheme();
+                } else {
+                    activateAppTheme(theme.name);
+                }
+                this.updateActiveState();
+            });
+            item.addEventListener('keydown', (ev: KeyboardEvent) => {
+                if (ev.key === 'Enter' || ev.key === ' ') {
+                    ev.preventDefault();
+                    const current = activeAppTheme.getObject();
+                    if (current && current.name === theme.name) {
+                        deactivateAppTheme();
+                    } else {
+                        activateAppTheme(theme.name);
+                    }
+                    this.updateActiveState();
+                }
+            });
+
+            this.themeGallery.appendChild(item);
+        }
+    }
+
+    private updateActiveState(): void {
+        const currentTheme = activeAppTheme.getObject();
+        const currentPalette = localStorage.getItem('theme') ?? 'Blazor';
+
+        // Update palette items
+        const paletteItems = this.paletteGallery?.querySelectorAll<HTMLElement>('.palette-item') ?? [];
+        paletteItems.forEach((item) => {
+            const name = item.getAttribute('data-palette');
+            const isActive = !currentTheme && name === currentPalette;
+            item.classList.toggle('active', isActive);
+        });
+
+        // Update theme items
+        const themeItems = this.themeGallery?.querySelectorAll<HTMLElement>('.theme-item') ?? [];
+        themeItems.forEach((item) => {
+            const name = item.getAttribute('data-theme');
+            const isActive = currentTheme?.name === name;
+            item.classList.toggle('active', isActive);
         });
     }
 
     private toKebabCase(str: string): string {
-        return str
-            .replace(/([a-z])([A-Z])/g, '$1-$2')
-            .toLowerCase();
-    }
-
-    private formatDisplayName(theme: string): string {
-        // Convert "BrassDark" -> "Brass Dark", "ChineseNewYear" -> "Chinese New Year"
-        return theme
-            .replace(/([a-z])([A-Z])/g, '$1 $2')
-            .replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
+        return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
     }
 }

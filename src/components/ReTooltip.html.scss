@@ -1,0 +1,97 @@
+@use './core/ComponentCore';
+
+$tail-size: 10px;
+
+@layer core {
+    :host {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    :host([open]) {
+        display: block;
+        pointer-events: auto;
+    }
+}
+
+.tooltip-body {
+    position: relative;
+    background-color: var(--paper-background-color);
+    background-image: var(--paper-background-image);
+    background-size: var(--paper-background-size);
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-family);
+    color: var(--color-empty-contrast);
+    max-width: min(90vw, 500px);
+    max-height: 80vh;
+    overflow: auto;
+    transform: scale(0.92);
+    opacity: 0;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+:host([open]) .tooltip-body {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* ── Tail (CSS triangle) ── */
+.tooltip-tail {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Placement: bottom → tail points UP (on top of body) */
+:host([placement="bottom"]) .tooltip-tail,
+:host(:not([placement])) .tooltip-tail {
+    border-width: 0 $tail-size $tail-size $tail-size;
+    border-color: transparent transparent var(--paper-background-color) transparent;
+}
+
+/* Placement: top → tail points DOWN (on bottom of body) */
+:host([placement="top"]) .tooltip-tail {
+    border-width: $tail-size $tail-size 0 $tail-size;
+    border-color: var(--paper-background-color) transparent transparent transparent;
+}
+
+/* Placement: right → tail points LEFT (on left of body) */
+:host([placement="right"]) .tooltip-tail {
+    border-width: $tail-size $tail-size $tail-size 0;
+    border-color: transparent var(--paper-background-color) transparent transparent;
+}
+
+/* Placement: left → tail points RIGHT (on right of body) */
+:host([placement="left"]) .tooltip-tail {
+    border-width: $tail-size 0 $tail-size $tail-size;
+    border-color: transparent transparent transparent var(--paper-background-color);
+}
+
+.tooltip-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Scrollbar styling */
+.tooltip-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.tooltip-body::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--color-empty) 50%, transparent);
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .tooltip-body {
+        padding: 10px 12px;
+        border-radius: 8px;
+        max-width: calc(100vw - 16px);
+    }
+}

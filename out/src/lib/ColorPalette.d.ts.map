@@ -1,0 +1,1 @@
+{"version":3,"file":"ColorPalette.d.ts","sourceRoot":"","sources":["../../../src/lib/ColorPalette.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,YAAY;aAET,IAAI,EAAE,MAAM;aACZ,WAAW,EAAE,MAAM;gBADnB,IAAI,EAAE,MAAM,EACZ,WAAW,EAAE,MAAM;CAE1C;AAED,+BAA+B;AAC/B,eAAO,MAAM,cAAc,EAAE,YAAY,EAMxC,CAAC"}

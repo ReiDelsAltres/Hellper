@@ -59,6 +59,16 @@
                 ],
                 "translatedName": "Здоровье, безопасность и охрана окружающей среды",
                 "file": "colloquium/s4/Health.json"
+            },
+            {
+                "name": "Diskret riyaziyyat",
+                "teacher": "Eyyubov R.",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Дискретная математика",
+                "file": "colloquium/s4/Math.json"
             }
         ]
     }

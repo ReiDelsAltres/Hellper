@@ -1,4 +1,5 @@
 <paper-component simple="true" class="colloquim-page">
+    <cache-indicator ref="'cacheIndicator'"></cache-indicator>
     <div class="hero">
         <re-typography variant="headline" color="primary" class="hero-title">Коллоквиумы</re-typography>
         <re-typography variant="body" color="empty" class="hero-sub">Выберите предмет для подготовки</re-typography>

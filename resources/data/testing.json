@@ -176,5 +176,78 @@
                 "file": "s3/Eng.json"
             }
         ]
+    },
+    {
+        "number": "Ⅳ",
+        "subjects": [
+            {
+                "name": "Kompüter arxitekturası-2",
+                "teacher": "Quliyev M.M",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Архитектура компьютера",
+                "file": "colloquium/s4/---.json"
+            },
+            {
+                "name": "Kompüter şəbəkələri-1",
+                "teacher": "Dmitriy Qax",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Компьютерные сети",
+                "file": "s4/KN.json"
+            },
+            {
+                "name": "İşgüzar texniki ingilis dili",
+                "teacher": "İsmayilova A.",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Английский язык",
+                "file": "colloquium/s4/---.json"
+            },
+            {
+                "name": "Müasir proqramlaşdırma dilləri",
+                "teacher": "Cəbrayılova G.H",
+                "groups": [
+                    "759ITS"
+                ],
+                "translatedName": "Веб-программирование",
+                "file": "colloquium/s4/---.json"
+            },
+            {
+                "name": "Obyekt yönümlü proqramlaşdırma",
+                "teacher": "Həsənov E.Q",
+                "groups": [
+                    "759ITS"
+                ],
+                "translatedName": "Объектно-ориентированное программирование",
+                "file": "colloquium/s4/---.json"
+            },
+            {
+                "name": "Sağlamlıq əmayin təhlükısizliyi və ətraf mühitin mühafizəsi",
+                "teacher": "Dəmirov A.H",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Здоровье, безопасность и охрана окружающей среды",
+                "file": "colloquium/s4/---.json"
+            },
+            {
+                "name": "Diskret riyaziyyat",
+                "teacher": "Eyyubov R.",
+                "groups": [
+                    "759ITS",
+                    "759KM"
+                ],
+                "translatedName": "Дискретная математика",
+                "file": "colloquium/s4/---.json"
+            }
+        ]
     }
 ]

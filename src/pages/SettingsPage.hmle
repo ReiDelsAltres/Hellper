@@ -1,0 +1,53 @@
+<paper-component simple="true" class="settings-page">
+    <div class="header">
+        <re-icon icon="settings" size="large" color="primary"></re-icon>
+        <re-typography variant="headline" color="primary">Настройки</re-typography>
+    </div>
+
+    <paper-component class="settings-section">
+        <div class="section-header">
+            <re-icon icon="engineering" size="medium" color="secondary"></re-icon>
+            <re-typography variant="h2" color="secondary">Service Worker</re-typography>
+        </div>
+
+        <div class="setting-group">
+            <re-typography variant="body" class="setting-title">Стратегия кеширования</re-typography>
+            <re-typography variant="caption" color="empty" class="setting-desc">
+                Определяет приоритет загрузки ресурсов: сначала из кеша или сначала из сети
+            </re-typography>
+            <re-button-group ref="'strategyGroup'" selection="single" value="cache-first"
+                on[selection-change]="onStrategyChange(event)">
+                <re-button value="cache-first" color="warning">
+                    <re-icon icon="cached" size="small"></re-icon>
+                    Cache First
+                </re-button>
+                <re-button value="network-first" color="success">
+                    <re-icon icon="language" size="small"></re-icon>
+                    Network First
+                </re-button>
+            </re-button-group>
+        </div>
+
+        <div class="setting-group">
+            <re-typography variant="body" class="setting-title">Режим кеширования</re-typography>
+            <re-typography variant="caption" color="empty" class="setting-desc">
+                Управляет предварительной загрузкой ресурсов в кеш
+            </re-typography>
+            <re-button-group ref="'precacheGroup'" selection="single" value="normal"
+                on[selection-change]="onPrecacheModeChange(event)">
+                <re-button value="precache" color="info">
+                    <re-icon icon="downloading" size="small"></re-icon>
+                    Pre-cache
+                </re-button>
+                <re-button value="normal" color="primary">
+                    <re-icon icon="sync" size="small"></re-icon>
+                    Normal
+                </re-button>
+                <re-button value="disabled" color="error">
+                    <re-icon icon="block" size="small"></re-icon>
+                    Disabled
+                </re-button>
+            </re-button-group>
+        </div>
+    </paper-component>
+</paper-component>

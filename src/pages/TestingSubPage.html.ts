@@ -1,11 +1,11 @@
 ﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
-import { Subject } from "../frac/Testing.js";
+import { Subject, TestingFile } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
 import ReInput from "../components/ReInput.html.js";
 import ReCheckbox from "src/components/ReCheckbox.html.js";
 import Paper from "src/components/PaperComponent.html.js";
-import TestingActualPage from "./TestingActualPage.html.js";
+import CacheIndicator from "../components/CacheIndicator.html.js";
 
 
 @RePage({
@@ -14,10 +14,11 @@ import TestingActualPage from "./TestingActualPage.html.js";
 }, "/testing/sub")
 export default class TestingSubPage extends Page {
   private subject: Subject;
+  private fetchedData!: TestingFile;
   private testModes: TestMode[] = [
-    { signature: "fast", name: "Быстрый тест", description: "Ты школьник", numQuestions: new Observable(5), colorP: "success" },
-    { signature: "normal", name: "Экзамен", description: "Ты студент", numQuestions: new Observable(25), colorP: "warning" },
-    { signature: "hard", name: "Мазохизм", description: "Ты адекватный?", numQuestions: new Observable(0), colorP: "error" },
+    { signature: "fast", name: "Быстрый тест", description: "Ты школьник", numQuestions: new Observable<number | null>(5), colorP: "success" },
+    { signature: "normal", name: "Экзамен", description: "Ты студент", numQuestions: new Observable<number | null>(25), colorP: "warning" },
+    { signature: "hard", name: "Мазохизм", description: "Ты адекватный?", numQuestions: new Observable<number | null>(0), colorP: "error" },
   ];
   private testModesGroup?: ReButtonGroup;
   private modeSettingsButton?: ReButton;
@@ -35,19 +36,52 @@ export default class TestingSubPage extends Page {
   private modeElements?: NodeListOf<Element>;
 
   private startTestButton?: ReButton;
+  private cacheIndicator?: CacheIndicator;
 
   constructor(subject?: string) {
     super();
-    this.subject = JSON.parse(decodeURIComponent(subject));
+    this.subject = JSON.parse(decodeURIComponent(subject!));
   }
 
+  private dataUrl = '';
+
   protected async preLoad(holder: TemplateHolder): Promise<void> {
-    const result = await Fetcher.fetchJSON('./resources/data' + '/' + this.subject.file);
+    this.dataUrl = './resources/data/' + this.subject.file;
+    const result = await Fetcher.fetchJSON(this.dataUrl) as TestingFile;
+    this.fetchedData = result;
     this.testModes[2].numQuestions.setObject(result.Questions.length);
   }
+
+  private updateCacheIndicator(url: string, data: any): void {
+    if (!this.cacheIndicator) return;
+
+    this.cacheIndicator.loaded.setObject(true);
+    this.cacheIndicator.fileName.setObject(url);
+
+    const jsonStr = JSON.stringify(data);
+    const sizeBytes = new Blob([jsonStr]).size;
+    this.cacheIndicator.fileSize.setObject(sizeBytes);
+
+    const resolvedUrl = Fetcher.resolveUrl(url);
+    const entries = performance.getEntriesByName(resolvedUrl, 'resource') as PerformanceResourceTiming[];
+    const entry = entries.length > 0 ? entries[entries.length - 1] : null;
+
+    if (entry) {
+      if (entry.transferSize === 0) {
+        this.cacheIndicator.source.setObject('cache');
+        this.cacheIndicator.networkCost.setObject(0);
+      } else {
+        this.cacheIndicator.source.setObject('network');
+        this.cacheIndicator.networkCost.setObject(entry.transferSize);
+      }
+    } else {
+      this.cacheIndicator.source.setObject('unknown');
+    }
+  }
   protected async postLoad(holder: TemplateHolder): Promise<void> {
-    this.updateTestModeGroup(this.testModesGroup?.buttonMap);
-    this.updateTestTypeChange(this.inputTestType?.buttonMap);
+    this.updateCacheIndicator(this.dataUrl, this.fetchedData);
+    if (this.testModesGroup?.buttonMap) this.updateTestModeGroup(this.testModesGroup.buttonMap);
+    if (this.inputTestType?.buttonMap) this.updateTestTypeChange(this.inputTestType.buttonMap);
 
     const totalQuestions = this.testModes[2].numQuestions.getObject() || 300;
 
@@ -96,7 +130,28 @@ export default class TestingSubPage extends Page {
     this.modeSettingsButton?.Color.setObject(color);
     this.optionBlock?.Color.setObject(color);
 
-    this.inputVal?.Value.setObject(activeMode?.numQuestions.getObject().toString());
+    this.inputVal?.Value.setObject(activeMode?.numQuestions.getObject()?.toString() ?? '');
+  }
+
+  public downloadQuestions(): void {
+    const questions = this.fetchedData.Questions;
+    const lines: string[] = [];
+    for (const q of questions) {
+      lines.push(`${q.Id}. ${q.Title}`);
+      q.Answers.forEach((ans, i) => {
+        const letter = String.fromCharCode(65 + i);
+        const mark = i === 0 ? ' \u2713' : '';
+        lines.push(`   ${letter}. ${ans}${mark}`);
+      });
+      lines.push('');
+    }
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${this.subject.name}_questions.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
   public startTest(): void {

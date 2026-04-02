@@ -18,6 +18,15 @@
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+/* Network status toggle — fixed top-right */
+.network-status-toggle {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    z-index: 2001;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
 /* Responsive: hide sidebar toggle and vertical panel on mobile */
 @media (max-width: 600px) {
     .layout-controls .sidebar-toggle {

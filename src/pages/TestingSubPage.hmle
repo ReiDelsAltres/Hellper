@@ -1,4 +1,5 @@
 <paper-component simple="true" class="page">
+    <cache-indicator ref="'cacheIndicator'"></cache-indicator>
     <div class="header">
         <re-typography original color="primary" variant="h1">
             <exp of="subject.translatedName"></exp>
@@ -62,10 +63,17 @@
         </div>
     </paper-component>
 
-    <re-button ref="'startTestButton'" variant="outlined" color="tertiary" full-width class="start-button"
-        on[click]="startTest()">
-        ЗАПУСТИТЬ
-    </re-button>
+    <div class="actions">
+        <re-button ref="'startTestButton'" variant="outlined" color="tertiary" full-width class="start-button"
+            on[click]="startTest()">
+            <re-icon icon="play_arrow" contrast></re-icon>
+            ЗАПУСТИТЬ
+        </re-button>
+        <re-button variant="outlined" color="info" full-width class="download-button" on[click]="downloadQuestions()">
+            <re-icon icon="download" contrast></re-icon>
+            СКАЧАТЬ ВОПРОСЫ
+        </re-button>
+    </div>
 
     <!--<re-button variant="outlined" color="primary" full-width class="all-questions-button" id="all-questions">
         ВСЕ ВОПРОСЫ

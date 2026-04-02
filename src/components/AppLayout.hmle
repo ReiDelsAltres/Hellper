@@ -5,6 +5,9 @@
         on[click]="togglePanel('horizontal')"></re-button>
 </div>
 
+<re-button class="network-status-toggle" variant="outlined" icon="monitoring" ref="'networkBtn'"
+    on[click]="toggleNetworkStatus()"></re-button>
+
 <app-bar class="panel panel-vertical" pos="vertical" type="mini" ref="'verticalPanel'">
     <slot name="sidebar"></slot>
     <slot name="sidebar-sub" slot="sub"></slot>
@@ -18,3 +21,7 @@
 <div class="layout-content">
     <slot></slot>
 </div>
+
+<re-tooltip ref="'networkTooltip'" trigger="manual" placement="bottom" align="end">
+    <network-status ref="'networkStatus'"></network-status>
+</re-tooltip>

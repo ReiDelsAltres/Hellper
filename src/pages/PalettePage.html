@@ -1,15 +1,29 @@
 <div class="palette-page">
     <div class="page-header">
-        <re-icon icon="palette" size="xxl" color="primary" class="header-icon"></re-icon>
-        <h1 class="page-title">Цветовые Палитры</h1>
-        <p class="page-subtitle">Выберите тему оформления для приложения</p>
+        <re-icon icon="palette" size="large" color="primary"></re-icon>
+        <h1 class="page-title">Оформление</h1>
+        <p class="page-subtitle">Выберите цветовую палитру или тему для приложения</p>
     </div>
-    
-    <main class="palette-gallery" role="main" @[ref]="gallery">
-        <!-- Themes will be dynamically loaded -->
-    </main>
-    
+
+    <section class="section">
+        <div class="section-header">
+            <re-icon icon="color_lens" size="medium" color="secondary"></re-icon>
+            <h2 class="section-title">Цветовые палитры</h2>
+        </div>
+        <p class="section-desc">Изменяют только цветовую схему. Активная тема будет отключена.</p>
+        <div class="gallery palette-gallery" id="palette-gallery"></div>
+    </section>
+
+    <section class="section">
+        <div class="section-header">
+            <re-icon icon="auto_awesome" size="medium" color="tertiary"></re-icon>
+            <h2 class="section-title">Темы</h2>
+        </div>
+        <p class="section-desc">Изменяют цвета и активируют дополнительные визуальные эффекты.</p>
+        <div class="gallery theme-gallery" id="theme-gallery"></div>
+    </section>
+
     <footer class="page-footer">
-        <re-typography variant="caption" color="empty">Нажмите на палитру чтобы применить тему</re-typography>
+        <re-typography variant="caption" color="empty">Нажмите на палитру или тему чтобы применить</re-typography>
     </footer>
 </div>

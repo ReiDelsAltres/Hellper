@@ -1,0 +1,46 @@
+<div class="chip">
+    <div class="section source-section" ref="'sourceSection'">
+        <re-icon ref="'sourceIcon'" icon="help_outline" size="small"></re-icon>
+    </div>
+    <re-tooltip placement="bottom">
+        <span ref="'sourceTooltip'">Источник данных: неизвестно</span>
+    </re-tooltip>
+
+    <div class="divider"></div>
+
+    <div class="section status-section" ref="'statusSection'">
+        <re-icon ref="'statusIcon'" icon="hourglass_empty" size="small"></re-icon>
+    </div>
+    <re-tooltip placement="bottom">
+        <span ref="'statusTooltip'">Статус: загрузка...</span>
+    </re-tooltip>
+
+    <div class="divider"></div>
+
+    <div class="section filename-section">
+        <re-icon icon="description" size="extra-small"></re-icon>
+        <span class="value filename" ref="'fileNameValue'">—</span>
+    </div>
+    <re-tooltip placement="bottom">
+        <span ref="'fileNameTooltip'">Имя файла неизвестно</span>
+    </re-tooltip>
+
+    <div class="divider"></div>
+
+    <div class="section size-section">
+        <re-icon icon="memory" size="extra-small"></re-icon>
+        <span class="value" ref="'sizeValue'">—</span>
+    </div>
+    <re-tooltip placement="bottom">
+        <span ref="'sizeTooltip'">Размер файла в памяти</span>
+    </re-tooltip>
+
+    <div class="section network-section" ref="'networkSection'">
+        <div class="divider"></div>
+        <re-icon icon="cell_tower" size="extra-small"></re-icon>
+        <span class="value" ref="'networkValue'">—</span>
+    </div>
+    <re-tooltip placement="bottom">
+        <span ref="'networkTooltip'">Затрачено трафика</span>
+    </re-tooltip>
+</div>
