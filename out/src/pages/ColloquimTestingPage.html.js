@@ -13,7 +13,8 @@ let ColloquimTestingPage = class ColloquimTestingPage extends Page {
         this.sections = (await Fetcher.fetchJSON(this.dataUrl)).reverse();
     }
     async postLoad() {
-        this.updateCacheIndicator(this.dataUrl, this.sections);
+        if (this.cacheIndicator)
+            this.updateCacheIndicator(this.dataUrl, this.sections);
     }
     updateCacheIndicator(url, data) {
         if (!this.cacheIndicator)

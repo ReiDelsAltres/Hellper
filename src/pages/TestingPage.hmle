@@ -1,5 +1,7 @@
 <paper-component simple="true" class="page">
-  <cache-indicator ref="'cacheIndicator'"></cache-indicator>
+  <if condition="Debug">
+    <cache-indicator ref="'cacheIndicator'"></cache-indicator>
+  </if>
   <div class="header">
     <h1>Testing Page</h1>
     <p>Choose subject for testing</p>

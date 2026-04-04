@@ -16,7 +16,7 @@ export default class ColloquimTestingPage extends Page {
     }
 
     protected async postLoad(): Promise<void> {
-        this.updateCacheIndicator(this.dataUrl, this.sections);
+        if (this.cacheIndicator) this.updateCacheIndicator(this.dataUrl, this.sections);
     }
 
     private updateCacheIndicator(url: string, data: any): void {

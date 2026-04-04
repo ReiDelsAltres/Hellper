@@ -18,7 +18,6 @@ import "./src/pages/TestingSubPage.html.js";
 import "./src/pages/TestingActualPage.html.js";
 import "./src/pages/TestingAllPage.html.js";
 import "./src/pages/SettingsPage.html.js";
-import "./src/lib/WinterTheme.js";
 export default class Index {
     static initialize(): Promise<void>;
 }

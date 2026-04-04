@@ -35,17 +35,31 @@ self.addEventListener('activate', (event) => {
 });
 
 // ── Fetch ───────────────────────────────────────────────────────────
-// Cache-first for all requests. Never writes to cache.
 self.addEventListener("fetch", (event) => {
     const request = event.request;
 
+    // Navigation requests (SPA): cache-first, network fallback, then serve cached index.html
+    if (request.mode === 'navigate') {
+        event.respondWith(
+            caches.match(request).then((cachedResponse) => {
+                if (cachedResponse) return cachedResponse;
+                return fetch(request).catch(() => {
+                    // Offline: serve index.html from cache so the SPA router can handle the route
+                    return caches.match(new URL('index.html', self.registration.scope).href)
+                        .then((fallback) => fallback || new Response('Offline', { status: 503 }));
+                });
+            })
+        );
+        return;
+    }
+
+    // Sub-resources: cache-first, network fallback, graceful offline error
     event.respondWith(
         caches.match(request).then((cachedResponse) => {
-            if (cachedResponse) {
-                console.log(`[SW]: Cache hit: ${request.url}`);
-                return cachedResponse;
-            }
-            return fetch(request);
+            if (cachedResponse) return cachedResponse;
+            return fetch(request).catch(() =>
+                new Response('', { status: 503, statusText: 'Offline' })
+            );
         })
     );
 });

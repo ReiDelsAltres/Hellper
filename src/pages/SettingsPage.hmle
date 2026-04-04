@@ -14,102 +14,108 @@
             Модули объединяют компоненты и функции сайта. Скачанные модули кешируются и работают офлайн.
             Нескачанные модули можно включить временно — они будут работать только в текущей сессии.
         </re-typography>
-
-        <for value="module" of="modules">
-            <div set[class]="getModuleCardClass(module)">
+        <for value="card" of="cardStructs">
+            <div set[class]="card.class">
                 <div class="module-info">
                     <div class="module-header">
-                        <re-icon set[icon]="module.icon || 'extension'" size="medium"
-                            set[color]="getModuleStatusColor(module)"></re-icon>
+                        <re-icon set[icon]="card.module.icon || 'extension'" size="medium"
+                            set[color]="card.statusColor"></re-icon>
                         <re-typography variant="body" class="module-name">
-                            <exp of="module.name"></exp>
+                            <exp of="card.module.name"></exp>
                         </re-typography>
-                        <if condition="module.core">
+                        <if condition="card.module.core">
                             <re-chip color="info" size="small">Системный</re-chip>
                         </if>
-                        <if condition="isChipDownloadedVisible(module)">
-                            <re-chip color="success" size="small">Скачан</re-chip>
-                        </if>
-                        <if condition="isChipEphemeralVisible(module)">
-                            <re-chip color="tertiary" size="small">Эфемерный</re-chip>
-                        </if>
-                        <if condition="isChipDisabledVisible(module)">
-                            <re-chip color="warning" size="small">Отключен</re-chip>
-                        </if>
-                        <if condition="isChipNotDownloadedVisible(module)">
-                            <re-chip color="empty" size="small">Не скачан</re-chip>
-                        </if>
-                        <if condition="isChipErrorVisible(module)">
-                            <re-chip color="error" size="small">Ошибка скачивания</re-chip>
-                        </if>
-                        <if condition="module.downloaded">
+                        <for value="chip" of="card.chips">
+                            <re-chip set[color]="chip.color" set[size]="chip.size">
+                                <exp of="chip.text"></exp>
+                            </re-chip>
+                        </for>
+                        <if condition="card.module.downloaded">
                             <re-typography variant="caption" color="empty" class="module-size">
-                                <exp of="getModuleSizeText(module)"></exp>
+                                <exp of="card.size"></exp>
+                            </re-typography>
+                            <if condition="card.subsTotal">
+                                <re-typography variant="caption" color="primary" class="module-subsize">+&nbsp;
+                                    <exp of="card.subsTotal"></exp>
+                                </re-typography>
+                            </if>
+                        </if>
+                        <else>
+                            <if condition="card.size">
+                                <re-typography variant="caption" color="empty" class="module-size">
+                                    <exp of="card.size"></exp>
+                                </re-typography>
+                            </if>
+                        </else>
+                        <if condition="card.module.description">
+                            <re-typography variant="caption" color="empty" class="module-desc">
+                                <exp of="card.module.description"></exp>
                             </re-typography>
                         </if>
-                    </div>
-                    <if condition="module.description">
-                        <re-typography variant="caption" color="empty" class="module-desc">
-                            <exp of="module.description"></exp>
-                        </re-typography>
-                    </if>
-                    <if condition="module.downloaded">
-                        <div class="submodule-chips">
-                            <for value="sub" of="module.getSubModules()">
-                                <div set[class]="getSubModuleChipClass(sub)">
-                                    <re-icon icon="database" size="extra-small" color="secondary"></re-icon>
-                                    <span class="submodule-chip-name">
-                                        <exp of="sub.name"></exp>
-                                    </span>
-                                    <if condition="!sub.inbuilt">
-                                        <if condition="sub.downloaded">
-                                            <re-typography variant="caption" color="empty" class="submodule-size">
-                                                <exp of="getSubSizeText(sub)"></exp>
-                                            </re-typography>
-                                            <re-button variant="text" icon="delete" color="error" size="small"
-                                                on[click]="onSubModuleRemove(sub)">
-                                            </re-button>
-                                        </if>
-                                        <else>
-                                            <if condition="getSubProgressActive(sub)">
-                                                <div class="submodule-mini-progress">
-                                                    <div class="submodule-progress-bar-bg">
-                                                        <div class="submodule-progress-bar"
-                                                            set[style]="'width:' + getSubProgressPercent(sub) + '%'">
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <if condition="card.module.downloaded">
+                            <div class="submodule-chips">
+                                <for value="s" of="card.subs">
+                                    <div set[class]="s.class">
+                                        <re-icon icon="database" size="extra-small" color="secondary"></re-icon>
+                                        <span class="submodule-chip-name">
+                                            <exp of="s.sub.name"></exp>
+                                        </span>
+                                        <if condition="!s.sub.inbuilt">
+                                            <if condition="s.sub.downloaded">
+                                                <re-typography variant="caption" color="empty" class="submodule-size">
+                                                    <exp of="s.size"></exp>
+                                                </re-typography>
+                                                <re-button variant="text" icon="delete" color="error" size="small"
+                                                    on[click]="onSubModuleRemove(s.sub)">
+                                                </re-button>
                                             </if>
                                             <else>
-                                                <re-button variant="text" icon="download" color="primary" size="small"
-                                                    on[click]="onSubModuleDownload(sub)">
-                                                </re-button>
+                                                <if condition="s.size">
+                                                    <re-typography variant="caption" color="empty"
+                                                        class="submodule-size">
+                                                        <exp of="s.size"></exp>
+                                                    </re-typography>
+                                                </if>
+                                                <if condition="s.progress.active">
+                                                    <div class="submodule-mini-progress">
+                                                        <div class="submodule-progress-bar-bg">
+                                                            <div class="submodule-progress-bar"
+                                                                set[style]="'width:' + s.progress.percent + '%'">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </if>
+                                                <else>
+                                                    <re-button variant="text" icon="download" color="primary"
+                                                        size="small" on[click]="onSubModuleDownload(s.sub)">
+                                                    </re-button>
+                                                </else>
                                             </else>
-                                        </else>
-                                    </if>
-                                </div>
-                            </for>
-                        </div>
-                    </if>
-                    <if condition="getModuleProgressActive(module)">
+                                        </if>
+                                    </div>
+                                </for>
+                            </div>
+                        </if>
+                    </div>
+                    <if condition="card.progress.active">
                         <div class="download-progress">
                             <div class="download-progress-header">
                                 <re-icon icon="downloading" size="small" color="info" animation="pulse"></re-icon>
                                 <re-typography variant="caption" color="info">
-                                    <exp of="getModuleProgressFile(module)"></exp>
+                                    <exp of="card.progress.file"></exp>
                                 </re-typography>
                             </div>
                             <div class="progress-bar-container">
-                                <div class="progress-bar"
-                                    set[style]="'width:' + getModuleProgressPercent(module) + '%'"></div>
+                                <div class="progress-bar" set[style]="'width:' + card.progress.percent + '%'"></div>
                             </div>
                             <div class="download-details">
                                 <re-typography variant="caption" color="empty">
-                                    <exp of="getModuleProgressText(module)"></exp>
+                                    <exp of="card.progress.text"></exp>
                                 </re-typography>
-                                <if condition="getModuleProgressSpeed(module)">
+                                <if condition="card.progress.speed">
                                     <re-typography variant="caption" color="info">
-                                        <exp of="getModuleProgressSpeed(module)"></exp>
+                                        <exp of="card.progress.speed"></exp>
                                     </re-typography>
                                 </if>
                             </div>
@@ -118,31 +124,33 @@
                 </div>
                 <div class="module-actions">
                     <div class="module-buttons">
-                        <if condition="module.downloaded">
-                            <re-button variant="text" icon="delete" color="error" on[click]="onModuleRemove(module)">
+                        <if condition="card.module.downloaded">
+                            <re-button variant="text" icon="delete" color="error"
+                                on[click]="onModuleRemove(card.module)">
                             </re-button>
                         </if>
                         <else>
                             <re-button variant="text" icon="download" color="primary"
-                                on[click]="onModuleDownload(module)">
+                                on[click]="onModuleDownload(card.module)">
                             </re-button>
                         </else>
-                        <if condition="!module.core">
-                            <re-checkbox set[checked]="module.enabled" on[click]="onModuleToggle(module)"></re-checkbox>
+                        <if condition="!card.module.core">
+                            <re-checkbox set[checked]="card.module.enabled"
+                                on[click]="onModuleToggle(card.module)"></re-checkbox>
                         </if>
                     </div>
                 </div>
             </div>
         </for>
-    </paper-component>
 
-    <pop-up ref="offlineWarningPopup" modal>
-        <paper-component simple="true" class="offline-warning">
-            <re-icon icon="wifi_off" size="large" color="warning"></re-icon>
-            <re-typography variant="body" color="warning">Эфемерный модуль может быть недоступен</re-typography>
-            <re-typography variant="caption" color="empty">Нет подключения к интернету. Компоненты модуля могут не
-                загрузиться.</re-typography>
-            <re-button variant="filled" color="warning" on[click]="closeOfflineWarning()">Понятно</re-button>
-        </paper-component>
-    </pop-up>
+        <pop-up ref="offlineWarningPopup" modal>
+            <paper-component simple="true" class="offline-warning">
+                <re-icon icon="wifi_off" size="large" color="warning"></re-icon>
+                <re-typography variant="body" color="warning">Эфемерный модуль может быть недоступен</re-typography>
+                <re-typography variant="caption" color="empty">Нет подключения к интернету. Компоненты модуля могут не
+                    загрузиться.</re-typography>
+                <re-button variant="filled" color="warning" on[click]="closeOfflineWarning()">Понятно</re-button>
+            </paper-component>
+        </pop-up>
+    </paper-component>
 </paper-component>

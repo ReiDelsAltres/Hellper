@@ -5,239 +5,218 @@ import { Page, RePage, Module, ModuleManager, DownloadProgress, CacheManager, Ob
     cssURL: "./src/pages/SettingsPage.html.css",
 }, "/settings")
 export default class SettingsPage extends Page {
-    public modules: Module[] = ModuleManager.getAll();
+    public modules: Module[] = [];
 
-    // Per-module reactive state
-    private moduleCardClasses: Map<string, Observable<string>> = new Map();
-    private moduleStatusColors: Map<string, Observable<string>> = new Map();
+    public cardStructs: ModuleCardStruct[] = [];
 
-    // Per-module chip visibility (reactive)
-    private chipDownloadedVisible: Map<string, Observable<boolean>> = new Map();
-    private chipEphemeralVisible: Map<string, Observable<boolean>> = new Map();
-    private chipDisabledVisible: Map<string, Observable<boolean>> = new Map();
-    private chipNotDownloadedVisible: Map<string, Observable<boolean>> = new Map();
-    private chipErrorVisible: Map<string, Observable<boolean>> = new Map();
-    private subModuleChipClasses: Map<SubModule, Observable<string>> = new Map();
-
-    // Per-module download progress observables for the template
-    private moduleProgressPercents: Map<string, Observable<number>> = new Map();
-    private moduleProgressTexts: Map<string, Observable<string>> = new Map();
-    private moduleProgressFiles: Map<string, Observable<string>> = new Map();
-    private moduleProgressSpeeds: Map<string, Observable<string>> = new Map();
-    private moduleProgressActive: Map<string, Observable<boolean>> = new Map();
-
-    // Per-module size text
-    private moduleSizeTexts: Map<string, Observable<string>> = new Map();
-
-    // Per-sub-module progress and size
-    private subProgressActive: Map<SubModule, Observable<boolean>> = new Map();
-    private subProgressPercents: Map<SubModule, Observable<number>> = new Map();
-    private subSizeTexts: Map<SubModule, Observable<string>> = new Map();
+    public offlineWarningPopup: any;
 
     constructor() {
         super();
+        this.modules = ModuleManager.getAll();
+    }
+
+    public async preInit(): Promise<void> {
+        // ensure we don't append duplicates if preInit runs multiple times
+        this.cardStructs = [];
+        this.modules = ModuleManager.getAll();
+
         for (const module of this.modules) {
-            const cardClass = new Observable<string>(this.computeCardClass(module));
-            const statusColor = new Observable<string>(this.computeStatusColor(module));
-
-            this.moduleCardClasses.set(module.name, cardClass);
-            this.moduleStatusColors.set(module.name, statusColor);
-
-            const d = module.downloaded.getObject() === true;
-            const a = module.isActive();
-            const c = module.core;
-
-            const chipDownloaded = new Observable<boolean>(d && !c);
-            const chipEphemeral = new Observable<boolean>(a && !d);
-            const chipDisabled = new Observable<boolean>(d && !a && !c);
-            const chipNotDownloaded = new Observable<boolean>(!d && !a);
-
-            this.chipDownloadedVisible.set(module.name, chipDownloaded);
-            this.chipEphemeralVisible.set(module.name, chipEphemeral);
-            this.chipDisabledVisible.set(module.name, chipDisabled);
-            this.chipNotDownloadedVisible.set(module.name, chipNotDownloaded);
-
-            const chipError = new Observable<boolean>(!!module.downloadError.getObject());
-            this.chipErrorVisible.set(module.name, chipError);
-
-            // Module size text (reactive)
-            const sizeText = new Observable<string>(this.computeSizeText(module.totalSize.getObject() ?? 0));
-            this.moduleSizeTexts.set(module.name, sizeText);
-            module.totalSize.subscribe((val) => {
-                sizeText.setObject(this.computeSizeText(val));
-            });
+            const struct = new ModuleCardStruct();
+            struct.module = module;
+            struct.class = new Observable<string>(this.computeCardClass(module));
+            struct.statusColor = new Observable<string>(this.computeStatusColor(module));
+            struct.chips = new Observable<{ color: string, size: string, text: string }[]>([]);
 
             const update = () => {
-                cardClass.setObject(this.computeCardClass(module));
-                statusColor.setObject(this.computeStatusColor(module));
+                struct.class!.setObject(this.computeCardClass(module));
+                struct.statusColor!.setObject(this.computeStatusColor(module));
 
                 const d = module.downloaded.getObject() === true;
                 const a = module.isActive();
                 const c = module.core;
-                chipDownloaded.setObject(d && !c);
-                chipEphemeral.setObject(a && !d);
-                chipDisabled.setObject(d && !a && !c);
-                chipNotDownloaded.setObject(!d && !a);
-                chipError.setObject(!!module.downloadError.getObject());
+
+                const transaction = struct.chips!.transaction();
+                transaction.updateObject(() => {
+                    const chips: { color: string, size: string, text: string }[] = [];
+                    if (d && !c) chips.push({ color: 'success', size: 'small', text: 'Downloaded' });
+                    if (a && !d) chips.push({ color: 'secondary', size: 'small', text: 'Ephemeral' });
+                    if (d && !a && !c) chips.push({ color: 'empty', size: 'small', text: 'Disabled' });
+                    if (!d && !a) chips.push({ color: 'empty', size: 'small', text: 'Not downloaded' });
+                    if (!!module.downloadError.getObject()) chips.push({ color: 'error', size: 'small', text: 'Error' });
+                    return chips;
+                });
+                transaction.commit();
             };
+            update();
+
+            const moduleSize = () => {
+                const val = module.totalSize.getObject() ?? 0;
+                return module.downloaded.getObject() ? this.computeSizeText(val) : this.computeEstimatedSizeText(val);
+            };
+            struct.size = new Observable<string>(moduleSize());
+            module.totalSize.subscribe(() => struct.size!.setObject(moduleSize()));
+            module.downloaded.subscribe(() => struct.size!.setObject(moduleSize()));
 
             module.enabled.subscribe(update);
             module.downloaded.subscribe(update);
-
-            module.downloadError.subscribe((err) => {
-                chipError.setObject(!!err);
-            });
+            module.downloadError.subscribe(update);
 
             // Per-module download progress
-            const pPercent = new Observable<number>(0);
-            const pText = new Observable<string>('');
-            const pFile = new Observable<string>('');
-            const pSpeed = new Observable<string>('');
-            const pActive = new Observable<boolean>(false);
-            this.moduleProgressPercents.set(module.name, pPercent);
-            this.moduleProgressTexts.set(module.name, pText);
-            this.moduleProgressFiles.set(module.name, pFile);
-            this.moduleProgressSpeeds.set(module.name, pSpeed);
-            this.moduleProgressActive.set(module.name, pActive);
+            struct.progress = {
+                active: new Observable<boolean>(false),
+                percent: new Observable<number>(0),
+                text: new Observable<string>(''),
+                file: new Observable<string>(''),
+                speed: new Observable<string>(''),
+            };
+            // flag whether module itself is downloading (gives priority to module downloads)
+            struct.ownActive = false;
 
             module.downloadProgress.subscribe((progress: DownloadProgress) => {
-                pActive.setObject(progress.active);
+                struct.ownActive = progress.active;
+                struct.progress!.active.setObject(progress.active);
                 if (progress.active) {
-                    pFile.setObject(progress.currentFile);
+                    struct.progress!.file.setObject(progress.currentFile);
                     const pct = progress.totalBytes > 0
                         ? Math.round((progress.downloadedBytes / progress.totalBytes) * 100)
                         : (progress.totalFiles > 0 ? Math.round((progress.completedFiles / progress.totalFiles) * 100) : 0);
-                    pPercent.setObject(pct);
-                    pText.setObject(
+                    struct.progress!.percent.setObject(pct);
+                    struct.progress!.text.setObject(
                         `${CacheManager.formatBytes(progress.downloadedBytes)} / ${CacheManager.formatBytes(progress.totalBytes)}`
                     );
-                    pSpeed.setObject(
+                    struct.progress!.speed.setObject(
                         progress.speed > 0 ? `${CacheManager.formatBytes(progress.speed)}/с` : ''
                     );
                 } else {
-                    pPercent.setObject(0);
-                    pText.setObject('');
-                    pFile.setObject('');
-                    pSpeed.setObject('');
+                    struct.progress!.percent.setObject(0);
+                    struct.progress!.text.setObject('');
+                    struct.progress!.file.setObject('');
+                    struct.progress!.speed.setObject('');
                 }
             });
 
             // Sub-modules
+            struct.subs = [];
+            struct.subsTotal = new Observable<string>('');
+            const updateSubsTotal = () => {
+                let total = 0;
+                for (const s of module.getSubModules()) {
+                    if (!s.inbuilt && s.downloaded.getObject()) {
+                        total += (s.totalSize.getObject() ?? 0);
+                    }
+                }
+                struct.subsTotal!.setObject(total > 0 ? this.computeSizeText(total) : '');
+            };
             for (const sub of module.getSubModules()) {
-                const chipClass = new Observable<string>(
-                    sub.inbuilt ? 'submodule-chip submodule-chip-inbuilt' : (sub.downloaded.getObject() ? 'submodule-chip submodule-chip-downloaded' : 'submodule-chip submodule-chip-not-downloaded')
-                );
+                const sStruct: any = {
+                    sub,
+                    class: new Observable<string>(
+                        sub.inbuilt ? 'submodule-chip submodule-chip-inbuilt' : (sub.downloaded.getObject() ? 'submodule-chip submodule-chip-downloaded' : 'submodule-chip submodule-chip-not-downloaded')
+                    )
+                };
+
                 if (!sub.inbuilt) {
                     sub.downloaded.subscribe(() => {
-                        chipClass.setObject(
+                        sStruct.class.setObject(
                             sub.downloaded.getObject() ? 'submodule-chip submodule-chip-downloaded' : 'submodule-chip submodule-chip-not-downloaded'
                         );
                     });
-                }
-                this.subModuleChipClasses.set(sub, chipClass);
 
-                // Sub-module size
-                if (!sub.inbuilt) {
-                    const subSize = new Observable<string>(this.computeSizeText(sub.totalSize.getObject() ?? 0));
-                    sub.totalSize.subscribe((val) => {
-                        subSize.setObject(this.computeSizeText(val));
+                    const subSizeText = () => {
+                        const val = sub.totalSize.getObject() ?? 0;
+                        return sub.downloaded.getObject() ? this.computeSizeText(val) : this.computeEstimatedSizeText(val);
+                    };
+                    sStruct.size = new Observable<string>(subSizeText());
+                    sub.totalSize.subscribe(() => {
+                        sStruct.size!.setObject(subSizeText());
+                        updateSubsTotal();
                     });
-                    this.subSizeTexts.set(sub, subSize);
-                }
+                    sub.downloaded.subscribe(() => {
+                        sStruct.size!.setObject(subSizeText());
+                        updateSubsTotal();
+                    });
 
-                // Sub-module progress
-                if (!sub.inbuilt) {
-                    const subActive = new Observable<boolean>(false);
-                    const subPercent = new Observable<number>(0);
-                    this.subProgressActive.set(sub, subActive);
-                    this.subProgressPercents.set(sub, subPercent);
+                    // also update total when sub list is first populated
+                    updateSubsTotal();
+
+                    sStruct.progress = {
+                        active: new Observable<boolean>(false),
+                        percent: new Observable<number>(0),
+                        file: new Observable<string>(''),
+                        text: new Observable<string>(''),
+                        speed: new Observable<string>('')
+                    };
 
                     sub.downloadProgress.subscribe((progress: DownloadProgress) => {
-                        subActive.setObject(progress.active);
+                        sStruct.progress.active.setObject(progress.active);
                         if (progress.active) {
                             const pct = progress.totalBytes > 0
                                 ? Math.round((progress.downloadedBytes / progress.totalBytes) * 100)
                                 : (progress.totalFiles > 0 ? Math.round((progress.completedFiles / progress.totalFiles) * 100) : 0);
-                            subPercent.setObject(pct);
+                            sStruct.progress.percent.setObject(pct);
+                            sStruct.progress.file.setObject(progress.currentFile || '');
+                            sStruct.progress.text.setObject(`${CacheManager.formatBytes(progress.downloadedBytes)} / ${CacheManager.formatBytes(progress.totalBytes)}`);
+                            sStruct.progress.speed.setObject(progress.speed > 0 ? `${CacheManager.formatBytes(progress.speed)}/с` : '');
+
+                            // reflect submodule progress on module card only when module itself isn't downloading
+                            if (!struct.ownActive) {
+                                struct.progress!.active.setObject(true);
+                                struct.progress!.file.setObject(`${sub.name}${progress.currentFile ? ' — ' + progress.currentFile : ''}`);
+                                struct.progress!.percent.setObject(pct);
+                                struct.progress!.text.setObject(sStruct.progress.text.getObject());
+                                struct.progress!.speed.setObject(sStruct.progress.speed.getObject());
+                            }
                         } else {
-                            subPercent.setObject(0);
+                            sStruct.progress.percent.setObject(0);
+                            sStruct.progress.file.setObject('');
+                            sStruct.progress.text.setObject('');
+                            sStruct.progress.speed.setObject('');
+
+                            // when this sub finished, if no other subs or module downloading — clear module progress
+                            const anyActive = struct.subs!.some((x: any) => x.progress && x.progress.active.getObject());
+                            if (!anyActive && !struct.ownActive) {
+                                struct.progress!.active.setObject(false);
+                                struct.progress!.percent.setObject(0);
+                                struct.progress!.text.setObject('');
+                                struct.progress!.file.setObject('');
+                                struct.progress!.speed.setObject('');
+                            } else if (!struct.ownActive && anyActive) {
+                                // pick first active sub and reflect its progress
+                                const activeSub: any = struct.subs!.find((x: any) => x.progress && x.progress.active.getObject());
+                                if (activeSub) {
+                                    struct.progress!.active.setObject(true);
+                                    struct.progress!.percent.setObject(activeSub.progress.percent.getObject());
+                                    struct.progress!.file.setObject(`${activeSub.sub.name}${activeSub.progress.file.getObject() ? ' — ' + activeSub.progress.file.getObject() : ''}`);
+                                    struct.progress!.text.setObject(activeSub.progress.text.getObject());
+                                    struct.progress!.speed.setObject(activeSub.progress.speed.getObject());
+                                }
+                            }
                         }
                     });
                 }
+
+                struct.subs.push(sStruct);
             }
+
+            this.cardStructs.push(struct);
         }
+    }
+
+    public async preLoad(): Promise<void> {
+        // reserved for async pre-load tasks if needed
+    }
+
+    public async postLoad(): Promise<void> {
+        // reserved for post-load DOM bindings if needed
     }
 
     private computeSizeText(bytes: number): string {
         return bytes > 0 ? CacheManager.formatBytes(bytes) : '';
     }
 
-    public getModuleCardClass(module: Module): Observable<string> {
-        return this.moduleCardClasses.get(module.name)!;
-    }
-
-    public getModuleStatusColor(module: Module): Observable<string> {
-        return this.moduleStatusColors.get(module.name)!;
-    }
-
-    public getSubModuleChipClass(sub: SubModule): Observable<string> {
-        return this.subModuleChipClasses.get(sub)!;
-    }
-
-    public getModuleSizeText(module: Module): Observable<string> {
-        return this.moduleSizeTexts.get(module.name)!;
-    }
-
-    public getModuleProgressActive(module: Module): Observable<boolean> {
-        return this.moduleProgressActive.get(module.name)!;
-    }
-
-    public getModuleProgressPercent(module: Module): Observable<number> {
-        return this.moduleProgressPercents.get(module.name)!;
-    }
-
-    public getModuleProgressText(module: Module): Observable<string> {
-        return this.moduleProgressTexts.get(module.name)!;
-    }
-
-    public getModuleProgressFile(module: Module): Observable<string> {
-        return this.moduleProgressFiles.get(module.name)!;
-    }
-
-    public getModuleProgressSpeed(module: Module): Observable<string> {
-        return this.moduleProgressSpeeds.get(module.name)!;
-    }
-
-    public getSubSizeText(sub: SubModule): Observable<string> {
-        return this.subSizeTexts.get(sub)!;
-    }
-
-    public getSubProgressActive(sub: SubModule): Observable<boolean> {
-        return this.subProgressActive.get(sub)!;
-    }
-
-    public getSubProgressPercent(sub: SubModule): Observable<number> {
-        return this.subProgressPercents.get(sub)!;
-    }
-
-    public isChipDownloadedVisible(module: Module): Observable<boolean> {
-        return this.chipDownloadedVisible.get(module.name)!;
-    }
-
-    public isChipEphemeralVisible(module: Module): Observable<boolean> {
-        return this.chipEphemeralVisible.get(module.name)!;
-    }
-
-    public isChipDisabledVisible(module: Module): Observable<boolean> {
-        return this.chipDisabledVisible.get(module.name)!;
-    }
-
-    public isChipNotDownloadedVisible(module: Module): Observable<boolean> {
-        return this.chipNotDownloadedVisible.get(module.name)!;
-    }
-
-    public isChipErrorVisible(module: Module): Observable<boolean> {
-        return this.chipErrorVisible.get(module.name)!;
+    private computeEstimatedSizeText(bytes: number): string {
+        return bytes > 0 ? `≈ ${CacheManager.formatBytes(bytes)}` : '';
     }
 
     private computeCardClass(module: Module): string {
@@ -296,9 +275,36 @@ export default class SettingsPage extends Page {
         ModuleManager.persistState();
     }
 
-    public offlineWarningPopup: any;
-
     public closeOfflineWarning(): void {
         this.offlineWarningPopup?.close();
     }
+}
+
+class ModuleCardStruct {
+    module!: Module;
+    class?: Observable<string>;
+    statusColor?: Observable<string>;
+    chips?: Observable<{ color: string, size: string, text: string }[]>;
+    size?: Observable<string>;
+    subsTotal?: Observable<string>;
+    progress?: {
+        active: Observable<boolean>;
+        percent: Observable<number>;
+        text: Observable<string>;
+        file: Observable<string>;
+        speed: Observable<string>;
+    };
+    subs?: {
+        sub: SubModule;
+        class: Observable<string>;
+        size?: Observable<string>;
+        progress?: {
+            active: Observable<boolean>;
+            percent: Observable<number>;
+            file?: Observable<string>;
+            text?: Observable<string>;
+            speed?: Observable<string>;
+        };
+    }[];
+    ownActive?: boolean;
 }
