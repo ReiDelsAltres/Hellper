@@ -6,48 +6,143 @@
 
     <paper-component class="settings-section">
         <div class="section-header">
-            <re-icon icon="engineering" size="medium" color="secondary"></re-icon>
-            <re-typography variant="h2" color="secondary">Service Worker</re-typography>
+            <re-icon icon="extension" size="medium" color="secondary"></re-icon>
+            <re-typography variant="h2" color="secondary">Модули</re-typography>
         </div>
 
-        <div class="setting-group">
-            <re-typography variant="body" class="setting-title">Стратегия кеширования</re-typography>
-            <re-typography variant="caption" color="empty" class="setting-desc">
-                Определяет приоритет загрузки ресурсов: сначала из кеша или сначала из сети
-            </re-typography>
-            <re-button-group ref="'strategyGroup'" selection="single" value="cache-first"
-                on[selection-change]="onStrategyChange(event)">
-                <re-button value="cache-first" color="warning">
-                    <re-icon icon="cached" size="small"></re-icon>
-                    Cache First
-                </re-button>
-                <re-button value="network-first" color="success">
-                    <re-icon icon="language" size="small"></re-icon>
-                    Network First
-                </re-button>
-            </re-button-group>
-        </div>
+        <re-typography variant="caption" color="empty" class="setting-desc">
+            Модули объединяют компоненты и функции сайта. Скачанные модули кешируются и работают офлайн.
+            Нескачанные модули можно включить временно — они будут работать только в текущей сессии.
+        </re-typography>
 
-        <div class="setting-group">
-            <re-typography variant="body" class="setting-title">Режим кеширования</re-typography>
-            <re-typography variant="caption" color="empty" class="setting-desc">
-                Управляет предварительной загрузкой ресурсов в кеш
-            </re-typography>
-            <re-button-group ref="'precacheGroup'" selection="single" value="normal"
-                on[selection-change]="onPrecacheModeChange(event)">
-                <re-button value="precache" color="info">
-                    <re-icon icon="downloading" size="small"></re-icon>
-                    Pre-cache
-                </re-button>
-                <re-button value="normal" color="primary">
-                    <re-icon icon="sync" size="small"></re-icon>
-                    Normal
-                </re-button>
-                <re-button value="disabled" color="error">
-                    <re-icon icon="block" size="small"></re-icon>
-                    Disabled
-                </re-button>
-            </re-button-group>
-        </div>
+        <for value="module" of="modules">
+            <div set[class]="getModuleCardClass(module)">
+                <div class="module-info">
+                    <div class="module-header">
+                        <re-icon set[icon]="module.icon || 'extension'" size="medium"
+                            set[color]="getModuleStatusColor(module)"></re-icon>
+                        <re-typography variant="body" class="module-name">
+                            <exp of="module.name"></exp>
+                        </re-typography>
+                        <if condition="module.core">
+                            <re-chip color="info" size="small">Системный</re-chip>
+                        </if>
+                        <if condition="isChipDownloadedVisible(module)">
+                            <re-chip color="success" size="small">Скачан</re-chip>
+                        </if>
+                        <if condition="isChipEphemeralVisible(module)">
+                            <re-chip color="tertiary" size="small">Эфемерный</re-chip>
+                        </if>
+                        <if condition="isChipDisabledVisible(module)">
+                            <re-chip color="warning" size="small">Отключен</re-chip>
+                        </if>
+                        <if condition="isChipNotDownloadedVisible(module)">
+                            <re-chip color="empty" size="small">Не скачан</re-chip>
+                        </if>
+                        <if condition="isChipErrorVisible(module)">
+                            <re-chip color="error" size="small">Ошибка скачивания</re-chip>
+                        </if>
+                        <if condition="module.downloaded">
+                            <re-typography variant="caption" color="empty" class="module-size">
+                                <exp of="getModuleSizeText(module)"></exp>
+                            </re-typography>
+                        </if>
+                    </div>
+                    <if condition="module.description">
+                        <re-typography variant="caption" color="empty" class="module-desc">
+                            <exp of="module.description"></exp>
+                        </re-typography>
+                    </if>
+                    <if condition="module.downloaded">
+                        <div class="submodule-chips">
+                            <for value="sub" of="module.getSubModules()">
+                                <div set[class]="getSubModuleChipClass(sub)">
+                                    <re-icon icon="database" size="extra-small" color="secondary"></re-icon>
+                                    <span class="submodule-chip-name">
+                                        <exp of="sub.name"></exp>
+                                    </span>
+                                    <if condition="!sub.inbuilt">
+                                        <if condition="sub.downloaded">
+                                            <re-typography variant="caption" color="empty" class="submodule-size">
+                                                <exp of="getSubSizeText(sub)"></exp>
+                                            </re-typography>
+                                            <re-button variant="text" icon="delete" color="error" size="small"
+                                                on[click]="onSubModuleRemove(sub)">
+                                            </re-button>
+                                        </if>
+                                        <else>
+                                            <if condition="getSubProgressActive(sub)">
+                                                <div class="submodule-mini-progress">
+                                                    <div class="submodule-progress-bar-bg">
+                                                        <div class="submodule-progress-bar"
+                                                            set[style]="'width:' + getSubProgressPercent(sub) + '%'">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </if>
+                                            <else>
+                                                <re-button variant="text" icon="download" color="primary" size="small"
+                                                    on[click]="onSubModuleDownload(sub)">
+                                                </re-button>
+                                            </else>
+                                        </else>
+                                    </if>
+                                </div>
+                            </for>
+                        </div>
+                    </if>
+                    <if condition="getModuleProgressActive(module)">
+                        <div class="download-progress">
+                            <div class="download-progress-header">
+                                <re-icon icon="downloading" size="small" color="info" animation="pulse"></re-icon>
+                                <re-typography variant="caption" color="info">
+                                    <exp of="getModuleProgressFile(module)"></exp>
+                                </re-typography>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"
+                                    set[style]="'width:' + getModuleProgressPercent(module) + '%'"></div>
+                            </div>
+                            <div class="download-details">
+                                <re-typography variant="caption" color="empty">
+                                    <exp of="getModuleProgressText(module)"></exp>
+                                </re-typography>
+                                <if condition="getModuleProgressSpeed(module)">
+                                    <re-typography variant="caption" color="info">
+                                        <exp of="getModuleProgressSpeed(module)"></exp>
+                                    </re-typography>
+                                </if>
+                            </div>
+                        </div>
+                    </if>
+                </div>
+                <div class="module-actions">
+                    <div class="module-buttons">
+                        <if condition="module.downloaded">
+                            <re-button variant="text" icon="delete" color="error" on[click]="onModuleRemove(module)">
+                            </re-button>
+                        </if>
+                        <else>
+                            <re-button variant="text" icon="download" color="primary"
+                                on[click]="onModuleDownload(module)">
+                            </re-button>
+                        </else>
+                        <if condition="!module.core">
+                            <re-checkbox set[checked]="module.enabled" on[click]="onModuleToggle(module)"></re-checkbox>
+                        </if>
+                    </div>
+                </div>
+            </div>
+        </for>
     </paper-component>
+
+    <pop-up ref="offlineWarningPopup" modal>
+        <paper-component simple="true" class="offline-warning">
+            <re-icon icon="wifi_off" size="large" color="warning"></re-icon>
+            <re-typography variant="body" color="warning">Эфемерный модуль может быть недоступен</re-typography>
+            <re-typography variant="caption" color="empty">Нет подключения к интернету. Компоненты модуля могут не
+                загрузиться.</re-typography>
+            <re-button variant="filled" color="warning" on[click]="closeOfflineWarning()">Понятно</re-button>
+        </paper-component>
+    </pop-up>
 </paper-component>

@@ -1,21 +1,17 @@
 /**
  * Purper Service Worker
- * Handles caching, offline support, and connectivity detection.
+ * Serves cached files (cached by CacheManager/Modules) and falls back to network.
+ * Does NOT cache any files itself.
  *
  * Message API (postMessage from client):
- *   CACHE_URL        { url }              — add a URL to cache
- *   CACHE_URLS       { urls }             — add multiple URLs to cache
- *   REMOVE_URL       { url }              — remove a URL from cache
- *   CLEAR_CACHE      —                    — wipe entire cache
- *   GET_CACHE_KEYS   —                    — list all cached URLs
- *   HAS_URL          { url }              — check if URL is cached
- *   SKIP_WAITING     —                    — activate new SW immediately
- *   GET_VERSION      —                    — return SW version string
- *   IS_ONLINE        —                    — connectivity check from SW context
+ *   SKIP_WAITING             — activate new SW immediately
+ *   GET_VERSION              — return SW version string
+ *   IS_ONLINE        { url } — connectivity check from SW context
+ *   ENABLE_FETCH_TRACKING    — turn on fetch activity broadcasts
+ *   DISABLE_FETCH_TRACKING   — turn off fetch activity broadcasts
  */
 
-const CACHE_VERSION = 'purper-v1';
-const SW_VERSION = '1.0.0';
+const SW_VERSION = '2.0.0';
 
 let fetchCounter = 0;
 let fetchTrackingEnabled = false;
@@ -29,190 +25,37 @@ function broadcastToClients(message) {
 // ── Install ─────────────────────────────────────────────────────────
 self.addEventListener('install', (event) => {
     console.log(`[ServiceWorker ${SW_VERSION}]: Installing...`);
-    event.waitUntil(
-        caches.open(CACHE_VERSION)
-            .then(() => {
-                console.log(`[ServiceWorker ${SW_VERSION}]: Cache "${CACHE_VERSION}" opened`);
-                return self.skipWaiting();
-            })
-    );
+    self.skipWaiting();
 });
 
 // ── Activate ────────────────────────────────────────────────────────
 self.addEventListener('activate', (event) => {
     console.log(`[ServiceWorker ${SW_VERSION}]: Activating...`);
-    event.waitUntil(
-        caches.keys()
-            .then((keys) => {
-                return Promise.all(
-                    keys
-                        .filter((key) => key !== CACHE_VERSION)
-                        .map((key) => {
-                            console.log(`[ServiceWorker ${SW_VERSION}]: Deleting old cache "${key}"`);
-                            return caches.delete(key);
-                        })
-                );
-            })
-            .then(() => {
-                console.log(`[ServiceWorker ${SW_VERSION}]: Claiming clients`);
-                return self.clients.claim();
-            })
-    );
+    event.waitUntil(self.clients.claim());
 });
 
 // ── Fetch ───────────────────────────────────────────────────────────
-// Network-first for navigation, cache-first for assets.
-self.addEventListener('fetch', (event) => {
+// Cache-first for all requests. Never writes to cache.
+self.addEventListener("fetch", (event) => {
     const request = event.request;
 
-    // Only handle GET requests
-    if (request.method !== 'GET') return;
-
-    const tracking = fetchTrackingEnabled;
-    const fetchId = tracking ? ++fetchCounter : 0;
-    const startTime = tracking ? Date.now() : 0;
-
-    if (tracking) {
-        broadcastToClients({ type: 'FETCH_START', id: fetchId, url: request.url, timestamp: startTime });
-    }
-
-    // Navigation requests (HTML pages) — network-first, fall back to cache
-    if (request.mode === 'navigate') {
-        event.respondWith(
-            fetch(request)
-                .then((response) => {
-                    if (response.ok) {
-                        const clone = response.clone();
-                        caches.open(CACHE_VERSION).then((cache) => cache.put(request, clone));
-                    }
-                    broadcastToClients({ type: 'PAGE_SOURCE', url: request.url, source: 'network' });
-                    if (tracking) {
-                        const duration = Date.now() - startTime;
-                        const size = parseInt(response.headers.get('Content-Length')) || -1;
-                        broadcastToClients({ type: 'FETCH_COMPLETE', id: fetchId, url: request.url, size, duration, fromCache: false, timestamp: Date.now() });
-                    }
-                    return response;
-                })
-                .catch(() => {
-                    return caches.match(request).then((cached) => {
-                        const result = cached || caches.match('/index.html');
-                        broadcastToClients({ type: 'PAGE_SOURCE', url: request.url, source: 'cache' });
-                        if (tracking) {
-                            const duration = Date.now() - startTime;
-                            broadcastToClients({ type: 'FETCH_COMPLETE', id: fetchId, url: request.url, size: -1, duration, fromCache: true, timestamp: Date.now() });
-                        }
-                        return result;
-                    });
-                })
-        );
-        return;
-    }
-
-    // Sub-resources (CSS, JS, images, fonts, JSON) — cache-first, fall back to network
     event.respondWith(
-        caches.match(request).then((cached) => {
-            if (cached) {
-                if (tracking) {
-                    const duration = Date.now() - startTime;
-                    const size = parseInt(cached.headers.get('Content-Length')) || -1;
-                    broadcastToClients({ type: 'FETCH_COMPLETE', id: fetchId, url: request.url, size, duration, fromCache: true, timestamp: Date.now() });
-                }
-                return cached;
+        caches.match(request).then((cachedResponse) => {
+            if (cachedResponse) {
+                console.log(`[SW]: Cache hit: ${request.url}`);
+                return cachedResponse;
             }
-
-            return fetch(request)
-                .then((response) => {
-                    if (response.ok && response.type === 'basic') {
-                        const clone = response.clone();
-                        caches.open(CACHE_VERSION).then((cache) => cache.put(request, clone));
-                    }
-                    if (tracking) {
-                        const duration = Date.now() - startTime;
-                        const size = parseInt(response.headers.get('Content-Length')) || -1;
-                        broadcastToClients({ type: 'FETCH_COMPLETE', id: fetchId, url: request.url, size, duration, fromCache: false, timestamp: Date.now() });
-                    }
-                    return response;
-                })
-                .catch((err) => {
-                    if (tracking) {
-                        broadcastToClients({ type: 'FETCH_ERROR', id: fetchId, url: request.url, error: err.message || String(err), timestamp: Date.now() });
-                    }
-                    throw err;
-                });
+            return fetch(request);
         })
     );
 });
 
 // ── Message handling ────────────────────────────────────────────────
 self.addEventListener('message', (event) => {
-    const { type, url, urls } = event.data || {};
+    const { type, url } = event.data || {};
     const port = event.ports?.[0];
 
     switch (type) {
-        case 'CACHE_URL':
-            caches.open(CACHE_VERSION)
-                .then((cache) => cache.add(url))
-                .then(() => console.log(`[ServiceWorker]: Cached "${url}"`))
-                .catch((err) => console.warn(`[ServiceWorker]: Failed to cache "${url}"`, err));
-            break;
-
-        case 'CACHE_URLS':
-            if (Array.isArray(urls)) {
-                caches.open(CACHE_VERSION)
-                    .then((cache) => cache.addAll(urls))
-                    .then(() => console.log(`[ServiceWorker]: Cached ${urls.length} URLs`))
-                    .catch((err) => console.warn('[ServiceWorker]: Failed to cache URLs', err));
-            }
-            break;
-
-        case 'REMOVE_URL':
-            caches.open(CACHE_VERSION)
-                .then((cache) => cache.delete(url))
-                .then((deleted) => {
-                    console.log(`[ServiceWorker]: ${deleted ? 'Removed' : 'Not found'} "${url}" from cache`);
-                    if (port) port.postMessage({ deleted });
-                })
-                .catch((err) => {
-                    console.warn(`[ServiceWorker]: Failed to remove "${url}"`, err);
-                    if (port) port.postMessage({ deleted: false });
-                });
-            break;
-
-        case 'CLEAR_CACHE':
-            caches.delete(CACHE_VERSION)
-                .then(() => caches.open(CACHE_VERSION))
-                .then(() => {
-                    console.log('[ServiceWorker]: Cache cleared');
-                    if (port) port.postMessage({ cleared: true });
-                })
-                .catch((err) => {
-                    console.warn('[ServiceWorker]: Failed to clear cache', err);
-                    if (port) port.postMessage({ cleared: false });
-                });
-            break;
-
-        case 'GET_CACHE_KEYS':
-            caches.open(CACHE_VERSION)
-                .then((cache) => cache.keys())
-                .then((requests) => {
-                    const keys = requests.map((r) => r.url);
-                    if (port) port.postMessage({ keys });
-                })
-                .catch(() => {
-                    if (port) port.postMessage({ keys: [] });
-                });
-            break;
-
-        case 'HAS_URL':
-            caches.match(url)
-                .then((match) => {
-                    if (port) port.postMessage({ cached: !!match });
-                })
-                .catch(() => {
-                    if (port) port.postMessage({ cached: false });
-                });
-            break;
-
         case 'SKIP_WAITING':
             console.log('[ServiceWorker]: Skip waiting requested');
             self.skipWaiting();

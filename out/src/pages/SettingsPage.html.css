@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :host {
   display: block;
   width: 100%;
@@ -30,21 +31,215 @@
   border-bottom: 1px solid var(--outline-variant);
 }
 
-.setting-group {
-  margin-bottom: 28px;
-}
-
-.setting-title {
-  margin-bottom: 4px;
-  font-weight: 500;
-}
-
 .setting-desc {
+  margin-bottom: 16px;
+}
+
+.module-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  transition: all 0.2s;
+}
+
+.module-card:hover {
+  background: var(--surface-container);
+}
+
+/* Core modules */
+.module-core {
+  border-color: var(--primary);
+  border-style: solid;
+  opacity: 0.9;
+}
+
+/* Ephemeral modules — vivid purple highlight */
+.module-ephemeral {
+  border-color: var(--color-secondary);
+  border-style: solid;
+  opacity: 0.9;
+  /*background: color-mix(in srgb, var(--color-secondary) 15%, var(--surface));*/
+  box-shadow: 0 0 16px color-mix(in srgb, var(--color-secondary) 35%, transparent), 0 0 4px color-mix(in srgb, var(--color-secondary) 20%, transparent);
+}
+
+.module-ephemeral:hover {
+  background: color-mix(in srgb, var(--color-secondary) 15%, var(--surface));
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-secondary) 45%, transparent), 0 0 6px color-mix(in srgb, var(--color-secondary) 25%, transparent);
+}
+
+/* Not downloaded modules */
+.module-not-downloaded {
+  opacity: 0.65;
+  border-style: dashed;
+}
+
+.module-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.module-name {
+  font-weight: 600;
+}
+
+.module-desc {
+  margin-left: 34px;
+}
+
+.module-actions {
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.module-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.download-progress {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--info);
+  background: color-mix(in srgb, var(--info) 5%, var(--surface-container-low));
+}
+
+.download-progress-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 12px;
 }
 
-re-button-group {
+.progress-bar-container {
   width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-container-highest);
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--info);
+  transition: width 0.3s ease;
+  min-width: 0;
+}
+
+.download-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.module-size {
+  margin-left: auto;
+}
+
+/* SubModule chips */
+.submodule-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  margin-left: 34px;
+}
+
+.submodule-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px 4px 8px;
+  border-radius: 16px;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container);
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.submodule-chip:hover {
+  background: var(--surface-container-high);
+}
+
+.submodule-chip-downloaded {
+  border-color: var(--success);
+  border-style: solid;
+}
+
+.submodule-chip-not-downloaded {
+  border-style: dashed;
+  opacity: 0.75;
+}
+
+.submodule-chip-inbuilt {
+  opacity: 0.7;
+  border-style: solid;
+}
+
+.submodule-chip-name {
+  white-space: nowrap;
+}
+
+.submodule-size {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.submodule-mini-progress {
+  display: flex;
+  align-items: center;
+  min-width: 40px;
+}
+
+.submodule-progress-bar-bg {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--surface-container-highest);
+  overflow: hidden;
+}
+
+.submodule-progress-bar {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+  min-width: 0;
+}
+
+/* Module error state */
+.module-card.module-error {
+  border-color: var(--error);
+  background: color-mix(in srgb, var(--error) 8%, transparent);
+}
+
+/* Offline warning popup */
+.offline-warning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  max-width: 320px;
 }
 
 /*# sourceMappingURL=SettingsPage.html.css.map */

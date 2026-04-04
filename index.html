@@ -98,34 +98,29 @@
         <re-button slot="sidebar" variant="text" icon="info" color="additional" full-width href="testing" data-link>
             <span class="onlyin-open">Testing</span>
         </re-button>
-        <re-button slot="sidebar" variant="text" icon="info" color="additional" full-width href="colloquim" data-link>
+        <re-button slot="sidebar" variant="text" icon="info" color="additional" full-width href="colloquim" data-link
+            data-module="Colloquium">
             <span class="onlyin-open">Colloquium</span>
-        </re-button>
-        <re-button slot="sidebar" variant="text" icon="school" color="tertiary" full-width href="testing/all" data-link>
-            <span class="onlyin-open">Questions</span>
         </re-button>
 
         <re-button slot="sidebar-sub" variant="text" icon="palette" color="secondary" full-width href="palettes"
-            data-link>
+            data-link data-module="Advanced Design">
             <span class="onlyin-open">Палитры</span>
         </re-button>
         <re-button slot="sidebar-sub" variant="text" icon="view_list" color="tertiary" full-width href="components"
             data-link>
             <span class="onlyin-open">Компоненты</span>
         </re-button>
-        <re-button slot="sidebar-sub" variant="text" icon="component_exchange" icon-animation="spin" color="tertiary"
-            full-width href="playground" data-link>
-            <span class="onlyin-open">Площадка</span>
+        <re-button slot="sidebar-sub" variant="text" icon="settings" color="empty" full-width href="settings" data-link>
+            <span class="onlyin-open">Настройки (in DEV)</span>
         </re-button>
 
         <!-- Topbar (horizontal, top) -->
         <re-button slot="topbar" variant="text" icon="home" color="primary" href="./" data-link></re-button>
         <re-button slot="topbar" variant="text" icon="info" color="additional" href="testing" data-link></re-button>
-        <re-button slot="topbar" variant="text" icon="school" color="tertiary" href="testing/all" data-link></re-button>
-        <re-button slot="topbar-sub" variant="text" icon="palette" color="secondary" href="palettes"
-            data-link></re-button>
-        <re-button slot="topbar-sub" variant="text" icon="view_list" color="tertiary" href="components"
-            data-link></re-button>
+
+        <re-button slot="topbar-sub" variant="text" icon="palette" color="secondary" href="palettes" data-link
+            data-module="Advanced Design"></re-button>
     </app-layout>
     <div id="page">
     </div>
