@@ -1,6 +1,7 @@
 import { Page } from "@Purper";
 import { Semestr, Subject } from "../frac/Testing.js";
 export default class TestingPage extends Page {
+    get Debug(): boolean;
     semestrs: Semestr[];
     private cacheIndicator?;
     private dataUrl;

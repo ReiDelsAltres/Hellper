@@ -1,6 +1,7 @@
 import { Page } from "@Purper";
 import { Semestr, Subject } from "../frac/Testing.js";
 export default class ColloquimTestingPage extends Page {
+    get Debug(): boolean;
     sections: Semestr[];
     private cacheIndicator?;
     private dataUrl;

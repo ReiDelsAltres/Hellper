@@ -168,10 +168,31 @@ export default class ColloquiumActualPage extends Page {
             breakdownEl.style.display = 'block';
             const b = result.breakdown;
             const lines: string[] = [];
-            lines.push(`Семантика: ${b.semanticScore}% / ${b.semanticMax}%`);
-            lines.push(`Логика: ${b.logicalScore}% / ${b.logicalMax}%`);
-            if (b.keywordMax > 0) {
-                lines.push(`Ключевые слова: ${b.keywordScore}% / ${b.keywordMax}%`);
+            lines.push(`Семантика: ${b.similarity}%  <span class="breakdown-weight">×${b.similarityWeight}%</span>`);
+            lines.push(`Покрытие: ${b.coverage}%  <span class="breakdown-weight">×${b.coverageWeight}%</span>`);
+            if (b.hasKeywords) {
+                lines.push(`Ключевые слова: ${b.keyword}%  <span class="breakdown-weight">×${b.keywordWeight}%</span>`);
+            }
+
+            const bonusParts: string[] = [];
+            if (typeof b.similarityBonusPercent === 'number' && b.similarityBonusPercent > 0) bonusParts.push(`Семантика +${b.similarityBonusPercent}%`);
+            if (typeof b.coverageBonusPercent === 'number' && b.coverageBonusPercent > 0) bonusParts.push(`Покрытие +${b.coverageBonusPercent}%`);
+            if (typeof b.keywordBonusPercent === 'number' && b.keywordBonusPercent > 0) bonusParts.push(`Ключевые слова +${b.keywordBonusPercent}%`);
+            if (bonusParts.length > 0) {
+                lines.push(`Бонусы: ${bonusParts.join(', ')}  <span class="breakdown-weight">×${b.bonusMultiplier}</span>`);
+            }
+
+            if ((typeof b.confidenceModifier === 'number' && Math.abs(b.confidenceModifier - 1) > 1e-6) || b.criticalError) {
+                lines.push(`Модификатор: ×${b.confidenceModifier.toFixed(2)}`);
+            }
+            if (b.augmented) {
+                lines.push(`<span style="color:var(--accent-color,#ffb300)">ℹ Оценка дополнена эвристикой короткого ответа</span>`);
+            }
+            if (b.numericMismatch) {
+                lines.push(`<span style="color:var(--error-color,#d32f2f)">⚠ Обнаружено числовое несоответствие с эталоном</span>`);
+            }
+            if (b.criticalError) {
+                lines.push(`<span style="color:var(--error-color,#d32f2f)">⚠ Критическая ошибка: ответ противоречит эталону</span>`);
             }
             breakdownEl.innerHTML = lines.map(l => `<div class="breakdown-line">${l}</div>`).join('');
         }
@@ -259,7 +280,7 @@ export default class ColloquiumActualPage extends Page {
         // Score unanswered questions via NLP, skip ones with no text
         for (let qIdx = 0; qIdx < bilet.questions.length; qIdx++) {
             const q = bilet.questions[qIdx];
-            const emptyBd: ScoreBreakdown = { semanticScore: 0, semanticMax: 0, logicalScore: 0, logicalMax: 0, keywordScore: 0, keywordMax: 0 };
+            const emptyBd: ScoreBreakdown = { similarity: 0, coverage: 0, keyword: 0, hasKeywords: false, confidenceModifier: 1, criticalError: false, augmented: false, numericMismatch: false, similarityBonusPercent: 0, coverageBonusPercent: 0, keywordBonusPercent: 0, bonusMultiplier: 1, similarityWeight: 0, coverageWeight: 0, keywordWeight: 0 };
             let result: ScoreResult = { score: 0, lengthMismatch: true, lengthRatio: 0, breakdown: emptyBd };
             if (q.status === AnswerStatus.UNANSWERED) {
                 const ta = this['ta_' + biletIdx + '_' + qIdx] as ReTextArea;
@@ -318,7 +339,7 @@ export default class ColloquiumActualPage extends Page {
                 const bilet = this.bilets[bidx];
                 for (let qidx = 0; qidx < bilet.questions.length; qidx++) {
                     const q = bilet.questions[qidx];
-                    const eBd: ScoreBreakdown = { semanticScore: 0, semanticMax: 0, logicalScore: 0, logicalMax: 0, keywordScore: 0, keywordMax: 0 };
+                    const eBd: ScoreBreakdown = { similarity: 0, coverage: 0, keyword: 0, hasKeywords: false, confidenceModifier: 1, criticalError: false, augmented: false, numericMismatch: false, similarityBonusPercent: 0, coverageBonusPercent: 0, keywordBonusPercent: 0, bonusMultiplier: 1, similarityWeight: 0, coverageWeight: 0, keywordWeight: 0 };
                     let result: ScoreResult = { score: q.score, lengthMismatch: false, lengthRatio: 1, breakdown: eBd };
                     if (q.status === AnswerStatus.UNANSWERED) {
                         const ta = this['ta_' + bidx + '_' + qidx] as ReTextArea;
@@ -366,7 +387,7 @@ export default class ColloquiumActualPage extends Page {
         } else {
             for (let qidx = 0; qidx < this.questions.length; qidx++) {
                 const q = this.questions[qidx];
-                const eBd2: ScoreBreakdown = { semanticScore: 0, semanticMax: 0, logicalScore: 0, logicalMax: 0, keywordScore: 0, keywordMax: 0 };
+                const eBd2: ScoreBreakdown = { similarity: 0, coverage: 0, keyword: 0, hasKeywords: false, confidenceModifier: 1, criticalError: false, augmented: false, numericMismatch: false, similarityBonusPercent: 0, coverageBonusPercent: 0, keywordBonusPercent: 0, bonusMultiplier: 1, similarityWeight: 0, coverageWeight: 0, keywordWeight: 0 };
                 let result: ScoreResult = { score: q.score, lengthMismatch: false, lengthRatio: 1, breakdown: eBd2 };
                 if (q.status === AnswerStatus.UNANSWERED) {
                     const ta = this['qta_' + qidx] as ReTextArea;

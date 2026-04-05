@@ -8,9 +8,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var ColloquiumSubPage_1;
-import { Fetcher, Page, RePage, Router, Observable } from "@Purper";
+import { Fetcher, ModuleManager, Page, RePage, Router, Observable } from "@Purper";
 let ColloquiumSubPage = class ColloquiumSubPage extends Page {
     static { ColloquiumSubPage_1 = this; }
+    get Debug() { return ModuleManager.isActive("Debug"); }
     subject;
     fetchedData;
     totalQuestions = 0;

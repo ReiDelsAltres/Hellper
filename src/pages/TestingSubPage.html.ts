@@ -1,4 +1,4 @@
-﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
+﻿import { AccessType, Fetcher, IElementHolder, ModuleManager, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
 import { Subject, TestingFile } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
@@ -13,6 +13,7 @@ import CacheIndicator from "../components/CacheIndicator.html.js";
   cssURL: "./src/pages/TestingSubPage.html.css",
 }, "/testing/sub")
 export default class TestingSubPage extends Page {
+  public get Debug(): boolean { return ModuleManager.isActive("Debug"); }
   private subject: Subject;
   private fetchedData!: TestingFile;
   private testModes: TestMode[] = [

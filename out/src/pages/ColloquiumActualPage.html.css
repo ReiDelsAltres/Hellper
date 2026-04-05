@@ -117,6 +117,15 @@
   font-family: monospace;
 }
 
+.breakdown-weight {
+  opacity: 0.5;
+  font-size: 0.9em;
+}
+
+.breakdown-penalty {
+  color: var(--warning-color, #ff9800);
+}
+
 /* Make template <for> wrapper transparent */
 .keywords-row > for {
   display: contents;

@@ -7,8 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Fetcher, Page, RePage, Router, Observable } from "@Purper";
+import { Fetcher, ModuleManager, Page, RePage, Router, Observable } from "@Purper";
 let TestingSubPage = class TestingSubPage extends Page {
+    get Debug() { return ModuleManager.isActive("Debug"); }
     subject;
     fetchedData;
     testModes = [

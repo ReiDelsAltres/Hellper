@@ -209,6 +209,13 @@ async function registerNonCoreModules(): Promise<void> {
             "./out/src/pages/ColloquiumSubPage.html.js",
             "./out/src/pages/ColloquiumActualPage.html.js",
             "./out/src/lib/SimilarityScorer.js",
+            // Template and style source files (fetched at runtime by the engine)
+            "./src/pages/ColloquimTestingPage.hmle",
+            "./src/pages/ColloquimTestingPage.html.css",
+            "./src/pages/ColloquiumSubPage.hmle",
+            "./src/pages/ColloquiumSubPage.html.css",
+            "./src/pages/ColloquiumActualPage.hmle",
+            "./src/pages/ColloquiumActualPage.html.css",
         ],
         subModules: [
             {
@@ -260,11 +267,12 @@ async function registerNonCoreModules(): Promise<void> {
                 async onUndownload() {
                     if ('caches' in window) {
                         const modelCache = await caches.open("transformers-cache");
-                        const keys = await modelCache.keys();
+                        const modelKeys = await modelCache.keys();
                         await Promise.all(
-                            keys.filter(req =>
+                            modelKeys.filter(req =>
                                 req.url.includes("transformers.web.js") ||
                                 req.url.includes("ort.bundle.min.mjs") ||
+                                req.url.includes("onnxruntime-web") ||
                                 (req.url.includes("onnxruntime-common") && req.url.includes("index.js"))
                             ).map(req => modelCache.delete(req))
                         );
@@ -275,85 +283,104 @@ async function registerNonCoreModules(): Promise<void> {
                 name: "Embedding",
                 description: "Модель Xenova/all-MiniLM-L6-v2 для семантического анализа",
                 inbuilt: false,
-                estimatedSize: 23_000_000,
+                estimatedSize: 160_000_000,
                 async onDownload(progress) {
-                    const { pipeline } = await import("@huggingface/transformers");
+                    const { pipeline, env } = await import("@huggingface/transformers");
+
+                    env.useBrowserCache = true;
+                    env.useCustomCache = false;
+                    env.customCache = null;
+                    env.allowRemoteModels = true;
+
                     const fileLoaded = new Map<string, number>();
                     const fileTotals = new Map<string, number>();
-                    const estimatedTotal = 23_000_000;
-                    await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2", {
-                        dtype: "q8",
-                        progress_callback: (info: any) => {
-                            if (info.status === "initiate") {
-                                fileLoaded.set(info.file, 0);
-                            } else if (info.status === "progress") {
-                                fileLoaded.set(info.file, info.loaded ?? 0);
-                                if (info.total) fileTotals.set(info.file, info.total);
-                                const downloadedBytes = Array.from(fileLoaded.values()).reduce((a, b) => a + b, 0);
-                                const knownTotal = Array.from(fileTotals.values()).reduce((a, b) => a + b, 0);
-                                progress.setObject({
-                                    totalFiles: fileLoaded.size, completedFiles: 0,
-                                    currentFile: info.file ?? "Embedding",
-                                    totalBytes: Math.max(estimatedTotal, knownTotal),
-                                    downloadedBytes, speed: 0, active: true,
-                                });
-                            }
-                        },
-                    } as any);
+                    const estimatedTotal = 160_000_000;
+                    try {
+                        await pipeline("feature-extraction", "Xenova/multilingual-e5-small", {
+                            dtype: "q8",
+                            progress_callback: (info: any) => {
+                                if (info.status === "initiate") {
+                                    fileLoaded.set(info.file, 0);
+                                } else if (info.status === "progress") {
+                                    fileLoaded.set(info.file, info.loaded ?? 0);
+                                    if (info.total) fileTotals.set(info.file, info.total);
+                                    const downloadedBytes = Array.from(fileLoaded.values()).reduce((a, b) => a + b, 0);
+                                    const knownTotal = Array.from(fileTotals.values()).reduce((a, b) => a + b, 0);
+                                    progress.setObject({
+                                        totalFiles: fileLoaded.size, completedFiles: 0,
+                                        currentFile: info.file ?? "Embedding",
+                                        totalBytes: Math.max(estimatedTotal, knownTotal),
+                                        downloadedBytes, speed: 0, active: true,
+                                    });
+                                }
+                            },
+                        } as any);
+                    } catch (e) {
+                    }
                 },
                 async onUndownload() {
                     if ('caches' in window) {
                         const modelCache = await caches.open("transformers-cache");
-                        const keys = await modelCache.keys();
+                        const modelKeys = await modelCache.keys();
                         await Promise.all(
-                            keys
-                                .filter(req => req.url.includes("all-MiniLM-L6-v2"))
+                            modelKeys
+                                .filter(req => req.url.includes("multilingual-e5-small"))
                                 .map(req => modelCache.delete(req))
                         );
                     }
                 },
             },
-            {
+            /*{
                 name: "NLI",
-                description: "Модель Xenova/nli-deberta-v3-xsmall для NLI анализа",
+                description: "Модель mDeBERTa-v3-base (multilingual XNLI) для NLI анализа",
                 inbuilt: false,
-                estimatedSize: 90_000_000,
+                estimatedSize: 140_000_000,
                 async onDownload(progress) {
-                    const { pipeline } = await import("@huggingface/transformers");
+                    const { pipeline, env } = await import("@huggingface/transformers");
+
+                    env.useBrowserCache = true;
+                    env.useCustomCache = false;
+                    env.customCache = null;
+                    env.allowRemoteModels = true;
+
                     const fileLoaded = new Map<string, number>();
                     const fileTotals = new Map<string, number>();
-                    const estimatedTotal = 90_000_000;
-                    await pipeline("zero-shot-classification", "Xenova/nli-deberta-v3-xsmall", {
-                        progress_callback: (info: any) => {
-                            if (info.status === "initiate") {
-                                fileLoaded.set(info.file, 0);
-                            } else if (info.status === "progress") {
-                                fileLoaded.set(info.file, info.loaded ?? 0);
-                                if (info.total) fileTotals.set(info.file, info.total);
-                                const downloadedBytes = Array.from(fileLoaded.values()).reduce((a, b) => a + b, 0);
-                                const knownTotal = Array.from(fileTotals.values()).reduce((a, b) => a + b, 0);
-                                progress.setObject({
-                                    totalFiles: fileLoaded.size, completedFiles: 0,
-                                    currentFile: info.file ?? "NLI",
-                                    totalBytes: Math.max(estimatedTotal, knownTotal),
-                                    downloadedBytes, speed: 0, active: true,
-                                });
-                            }
-                        },
-                    } as any);
+                    const estimatedTotal = 140_000_000;
+                    try {
+                        await pipeline("token-classification", "Xenova/bert-base-multilingual-cased-ner-hrl", {
+                            dtype: "q4",
+                            progress_callback: (info: any) => {
+                                if (info.status === "initiate") {
+                                    fileLoaded.set(info.file, 0);
+                                } else if (info.status === "progress") {
+                                    fileLoaded.set(info.file, info.loaded ?? 0);
+                                    if (info.total) fileTotals.set(info.file, info.total);
+                                    const downloadedBytes = Array.from(fileLoaded.values()).reduce((a, b) => a + b, 0);
+                                    const knownTotal = Array.from(fileTotals.values()).reduce((a, b) => a + b, 0);
+                                    progress.setObject({
+                                        totalFiles: fileLoaded.size, completedFiles: 0,
+                                        currentFile: info.file ?? "NLI",
+                                        totalBytes: Math.max(estimatedTotal, knownTotal),
+                                        downloadedBytes, speed: 0, active: true,
+                                    });
+                                }
+                            },
+                        } as any);
+                    } catch (e) {
+                    }
                 },
                 async onUndownload() {
                     if ('caches' in window) {
                         const modelCache = await caches.open("transformers-cache");
-                        const keys = await modelCache.keys();
+                        const modelKeys = await modelCache.keys();
                         await Promise.all(
-                            keys
-                                .filter(req => req.url.includes("nli-deberta-v3-xsmall"))
+                            modelKeys
+                                .filter(req => req.url.includes("bert-base-multilingual-cased-ner-hrl"))
                                 .map(req => modelCache.delete(req))
                         );
                     }
                 },
-            },
+            },*/
         ]
     });
 
@@ -374,6 +401,10 @@ async function registerNonCoreModules(): Promise<void> {
         resources: [
             "./out/src/components/NetworkStatus.html.js",
             "./out/src/components/CacheIndicator.html.js",
+            "./src/components/NetworkStatus.hmle",
+            "./out/src/components/NetworkStatus.html.css",
+            "./src/components/CacheIndicator.hmle",
+            "./out/src/components/CacheIndicator.html.css",
         ],
     });
 
@@ -393,6 +424,10 @@ async function registerNonCoreModules(): Promise<void> {
         resources: [
             "./out/src/components/ColorPalettePreview.html.js",
             "./out/src/pages/PalettePage.html.js",
+            "./src/components/ColorPalettePreview.html",
+            "./src/components/ColorPalettePreview.html.css",
+            "./src/pages/PalettePage.html",
+            "./src/pages/PalettePage.html.css",
         ],
         subModules: [
             {

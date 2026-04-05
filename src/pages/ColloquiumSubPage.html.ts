@@ -1,4 +1,4 @@
-﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
+﻿import { AccessType, Fetcher, IElementHolder, ModuleManager, Page, RePage, Router, TemplateHolder, Observable } from "@Purper";
 import { Subject, ColloquiumFile } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
@@ -12,6 +12,7 @@ import CacheIndicator from "../components/CacheIndicator.html.js";
     cssURL: "./src/pages/ColloquiumSubPage.html.css",
 }, "/colloquim/sub")
 export default class ColloquiumSubPage extends Page {
+    public get Debug(): boolean { return ModuleManager.isActive("Debug"); }
     private subject: Subject;
     private fetchedData!: ColloquiumFile;
     private totalQuestions: number = 0;

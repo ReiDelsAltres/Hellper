@@ -1,6 +1,7 @@
 import { Page, TemplateHolder } from "@Purper";
 import ReButton from "../components/ReButton.html.js";
 export default class TestingSubPage extends Page {
+    get Debug(): boolean;
     private subject;
     private fetchedData;
     private testModes;

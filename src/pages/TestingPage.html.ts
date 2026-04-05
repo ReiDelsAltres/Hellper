@@ -1,4 +1,4 @@
-﻿import { AccessType, Fetcher, IElementHolder, Page, RePage, Router } from "@Purper";
+﻿import { AccessType, Fetcher, IElementHolder, ModuleManager, Page, RePage, Router } from "@Purper";
 import { Semestr, Subject } from "../frac/Testing.js";
 import CacheIndicator from "../components/CacheIndicator.html.js";
 
@@ -8,6 +8,7 @@ import CacheIndicator from "../components/CacheIndicator.html.js";
   cssURL: "./src/pages/TestingPage.html.css",
 }, "/testing")
 export default class TestingPage extends Page {
+  public get Debug(): boolean { return ModuleManager.isActive("Debug"); }
   public semestrs: Semestr[] = [];
   private cacheIndicator?: CacheIndicator;
   private dataUrl = './resources/data/testing.json';

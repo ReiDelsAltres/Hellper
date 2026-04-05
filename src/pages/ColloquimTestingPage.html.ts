@@ -1,4 +1,4 @@
-﻿import { Fetcher, Page, RePage, Router } from "@Purper";
+﻿import { Fetcher, ModuleManager, Page, RePage, Router } from "@Purper";
 import { Semestr, Subject } from "../frac/Testing.js";
 import CacheIndicator from "../components/CacheIndicator.html.js";
 
@@ -7,6 +7,7 @@ import CacheIndicator from "../components/CacheIndicator.html.js";
     cssURL: "./src/pages/ColloquimTestingPage.html.css",
 }, "/colloquim")
 export default class ColloquimTestingPage extends Page {
+    public get Debug(): boolean { return ModuleManager.isActive("Debug"); }
     public sections: Semestr[] = [];
     private cacheIndicator?: CacheIndicator;
     private dataUrl = './resources/data/colloquim_testing.json';
