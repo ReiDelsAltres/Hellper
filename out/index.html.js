@@ -33,7 +33,6 @@ const CoreModule = ModuleManager.register({
         "./index.html.css",
         "./out/index.html.js",
         "./404.html",
-        "./favicon.ico",
         "./resources/oyu_university.png",
         "./serviceworker.js",
         "./out/src/redirectRules.js",
