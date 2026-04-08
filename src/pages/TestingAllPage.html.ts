@@ -59,6 +59,7 @@ export default class TestingAllPage extends Page {
     private visibleCount: number = 0;
     private intersectionObserver: IntersectionObserver | null = null;
     private batchPending: boolean = false;
+    private readonly searchValueListener = () => this.applyFilters();
 
     protected async preInit(): Promise<void> {
         const [examData, colloquiumData] = await Promise.all([
@@ -100,6 +101,10 @@ export default class TestingAllPage extends Page {
             });
         }
 
+        if (this.searchInput) {
+            this.searchInput.Value.subscribe(this.searchValueListener);
+        }
+
         this.updateSubjectOptions();
         this.applyFilters();
         this.setupIntersectionObserver();
@@ -107,6 +112,10 @@ export default class TestingAllPage extends Page {
     }
 
     public async dispose(): Promise<void> {
+        if (this.searchInput) {
+            this.searchInput.Value.unsubscribe(this.searchValueListener);
+        }
+
         if (this.intersectionObserver) {
             this.intersectionObserver.disconnect();
             this.intersectionObserver = null;

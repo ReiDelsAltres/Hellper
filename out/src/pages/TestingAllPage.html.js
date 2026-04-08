@@ -28,6 +28,7 @@ let TestingAllPage = class TestingAllPage extends Page {
     visibleCount = 0;
     intersectionObserver = null;
     batchPending = false;
+    searchValueListener = () => this.applyFilters();
     async preInit() {
         const [examData, colloquiumData] = await Promise.all([
             Fetcher.fetchJSON('./resources/data/testing.json'),
@@ -63,12 +64,18 @@ let TestingAllPage = class TestingAllPage extends Page {
                 btn.Variant.setObject(selected ? 'filled' : 'outlined');
             });
         }
+        if (this.searchInput) {
+            this.searchInput.Value.subscribe(this.searchValueListener);
+        }
         this.updateSubjectOptions();
         this.applyFilters();
         this.setupIntersectionObserver();
         window.addEventListener('scroll', this.onScroll, { passive: true });
     }
     async dispose() {
+        if (this.searchInput) {
+            this.searchInput.Value.unsubscribe(this.searchValueListener);
+        }
         if (this.intersectionObserver) {
             this.intersectionObserver.disconnect();
             this.intersectionObserver = null;

@@ -23,6 +23,7 @@ export default class TestingAllPage extends Page {
     private visibleCount;
     private intersectionObserver;
     private batchPending;
+    private readonly searchValueListener;
     protected preInit(): Promise<void>;
     protected postLoad(holder: TemplateHolder): Promise<void>;
     dispose(): Promise<void>;
