@@ -14,8 +14,7 @@
                 "пропускная способность",
                 "скачать",
                 "память"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 2,
@@ -30,8 +29,7 @@
                 "interface",
                 "link",
                 "graphics"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 3,
@@ -46,8 +44,7 @@
                 "exchange",
                 "rows and columns",
                 "hardware unit"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 4,
@@ -62,8 +59,7 @@
                 "document",
                 "interaction",
                 "layout"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 5,
@@ -78,8 +74,7 @@
                 "software code",
                 "planning",
                 "structured"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 6,
@@ -94,8 +89,7 @@
                 "документ",
                 "клиент",
                 "эффект"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 7,
@@ -110,8 +104,7 @@
                 "image",
                 "device",
                 "future"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 8,
@@ -126,8 +119,7 @@
                 "directory",
                 "user program",
                 "web pages"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 9,
@@ -142,8 +134,7 @@
                 "transmission",
                 "electronic mail",
                 "VDU"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 10,
@@ -158,8 +149,7 @@
                 "develops code",
                 "intensity",
                 "control area"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 11,
@@ -174,8 +164,7 @@
                 "программист",
                 "безопасность",
                 "данные"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 12,
@@ -190,8 +179,7 @@
                 "link",
                 "innovation",
                 "page"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 13,
@@ -206,8 +194,7 @@
                 "complex whole",
                 "digital messages",
                 "looking for info"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 14,
@@ -222,8 +209,7 @@
                 "difference",
                 "grid",
                 "mic"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 15,
@@ -238,8 +224,7 @@
                 "captures images",
                 "user software",
                 "different content"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 16,
@@ -254,8 +239,7 @@
                 "резервная копия",
                 "обновление",
                 "электронная таблица"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 17,
@@ -270,8 +254,7 @@
                 "laptop",
                 "innovation",
                 "communication"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 18,
@@ -286,8 +269,7 @@
                 "keys",
                 "programs",
                 "equipment"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 19,
@@ -302,8 +284,7 @@
                 "site page",
                 "style",
                 "mainframe"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 20,
@@ -318,8 +299,7 @@
                 "fast storage",
                 "box in a grid",
                 "unauthorized access"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 21,
@@ -334,8 +314,7 @@
                 "пропускная способность",
                 "веб-сайт",
                 "папка"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 22,
@@ -350,8 +329,7 @@
                 "storage",
                 "display",
                 "screen"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 23,
@@ -366,8 +344,7 @@
                 "rows and columns",
                 "communication",
                 "moving images"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 24,
@@ -382,8 +359,7 @@
                 "tomorrow",
                 "contact",
                 "knowledge"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 25,
@@ -398,8 +374,7 @@
                 "visual representation",
                 "data point",
                 "malicious software"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 26,
@@ -414,8 +389,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 27,
@@ -430,8 +404,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 28,
@@ -446,8 +419,7 @@
                 "providing services",
                 "connected computers",
                 "collection of data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 29,
@@ -462,8 +434,7 @@
                 "complex",
                 "unit",
                 "web"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 30,
@@ -478,8 +449,7 @@
                 "web pages",
                 "electronic messaging",
                 "container"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 31,
@@ -494,8 +464,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 32,
@@ -510,8 +479,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 33,
@@ -526,8 +494,7 @@
                 "handles requests",
                 "links",
                 "holds data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 34,
@@ -542,8 +509,7 @@
                 "structure",
                 "tool",
                 "grid"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 35,
@@ -558,8 +524,7 @@
                 "CPU",
                 "server",
                 "extension"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 36,
@@ -574,8 +539,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 37,
@@ -590,8 +554,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 38,
@@ -606,8 +569,7 @@
                 "resource provider",
                 "communication channel",
                 "repository"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 39,
@@ -622,8 +584,7 @@
                 "network",
                 "hardware",
                 "system"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 40,
@@ -638,8 +599,7 @@
                 "online presence",
                 "digital mail",
                 "stored item"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 41,
@@ -654,8 +614,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 42,
@@ -670,8 +629,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 43,
@@ -686,8 +644,7 @@
                 "centralized resource",
                 "linked together",
                 "structured set"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 44,
@@ -702,8 +659,7 @@
                 "structure",
                 "apparatus",
                 "grid"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 45,
@@ -718,8 +674,7 @@
                 "domain name",
                 "electronic messages",
                 "recording data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 46,
@@ -734,8 +689,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 47,
@@ -750,8 +704,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 48,
@@ -766,8 +719,7 @@
                 "host",
                 "nodes",
                 "repository"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 49,
@@ -782,8 +734,7 @@
                 "organization",
                 "tool",
                 "link"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 50,
@@ -798,8 +749,7 @@
                 "online page",
                 "digital mail",
                 "saved document"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 51,
@@ -814,8 +764,7 @@
                 "база данных",
                 "браузер",
                 "ПО"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 52,
@@ -830,8 +779,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 53,
@@ -846,8 +794,7 @@
                 "service-providing",
                 "web of devices",
                 "records"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 54,
@@ -862,8 +809,7 @@
                 "arrangement",
                 "equipment",
                 "interconnection"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 55,
@@ -878,8 +824,7 @@
                 "URLs",
                 "correspondence",
                 "binary data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 56,
@@ -894,8 +839,7 @@
                 "БД",
                 "браузер",
                 "софт"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 57,
@@ -910,8 +854,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 58,
@@ -926,8 +869,7 @@
                 "responder",
                 "link",
                 "info bank"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 59,
@@ -942,8 +884,7 @@
                 "infrastructure",
                 "unit",
                 "grid"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 60,
@@ -958,8 +899,7 @@
                 "resource",
                 "SMTP",
                 "object"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 61,
@@ -974,8 +914,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 62,
@@ -990,8 +929,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 63,
@@ -1006,8 +944,7 @@
                 "supplies data",
                 "interconnected computers",
                 "structured collection"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 64,
@@ -1022,8 +959,7 @@
                 "organization",
                 "appliance",
                 "web"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 65,
@@ -1038,8 +974,7 @@
                 "unique address",
                 "exchanging messages",
                 "stores data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 66,
@@ -1054,8 +989,7 @@
                 "база данных",
                 "браузер",
                 "ПО"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 67,
@@ -1070,8 +1004,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 68,
@@ -1086,8 +1019,7 @@
                 "client access",
                 "linked nodes",
                 "filing system"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 69,
@@ -1102,8 +1034,7 @@
                 "method",
                 "hardware",
                 "system"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 70,
@@ -1118,8 +1049,7 @@
                 "web resource",
                 "electronic mail",
                 "data unit"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 71,
@@ -1134,8 +1064,7 @@
                 "БД",
                 "браузер",
                 "программы"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 72,
@@ -1150,8 +1079,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 73,
@@ -1166,8 +1094,7 @@
                 "data host",
                 "structure",
                 "info store"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 74,
@@ -1182,8 +1109,7 @@
                 "structure",
                 "tool",
                 "grid"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 75,
@@ -1198,8 +1124,7 @@
                 "web page",
                 "messaging",
                 "bits"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 76,
@@ -1214,8 +1139,7 @@
                 "база данных",
                 "браузер",
                 "софт"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 77,
@@ -1230,8 +1154,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 78,
@@ -1246,8 +1169,7 @@
                 "resource manager",
                 "linked systems",
                 "data store"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 79,
@@ -1262,8 +1184,7 @@
                 "organization",
                 "unit",
                 "link"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 80,
@@ -1278,8 +1199,7 @@
                 "web location",
                 "e-mail",
                 "data record"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 81,
@@ -1294,8 +1214,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 82,
@@ -1310,8 +1229,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 83,
@@ -1326,8 +1244,7 @@
                 "provides data",
                 "interconnected",
                 "structured collection"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 84,
@@ -1342,8 +1259,7 @@
                 "structure",
                 "hardware",
                 "web"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 85,
@@ -1358,8 +1274,7 @@
                 "pages on internet",
                 "electronic mail",
                 "storing data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 86,
@@ -1374,8 +1289,7 @@
                 "база данных",
                 "браузер",
                 "ПО"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 87,
@@ -1390,8 +1304,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 88,
@@ -1406,8 +1319,7 @@
                 "host",
                 "nodes",
                 "organized store"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 89,
@@ -1422,8 +1334,7 @@
                 "method",
                 "unit",
                 "grid"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 90,
@@ -1438,8 +1349,7 @@
                 "location on web",
                 "messaging",
                 "unit of data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 91,
@@ -1454,8 +1364,7 @@
                 "база данных",
                 "браузер",
                 "программный код"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 92,
@@ -1470,8 +1379,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 93,
@@ -1486,8 +1394,7 @@
                 "handles requests",
                 "linked devices",
                 "structured data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 94,
@@ -1502,8 +1409,7 @@
                 "network",
                 "tool",
                 "link"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 95,
@@ -1518,8 +1424,7 @@
                 "web content",
                 "electronic mail",
                 "named collection"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 96,
@@ -1534,8 +1439,7 @@
                 "база данных",
                 "браузер",
                 "софт"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 97,
@@ -1550,8 +1454,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 98,
@@ -1566,8 +1469,7 @@
                 "resource provider",
                 "interconnected",
                 "repository"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 99,
@@ -1582,8 +1484,7 @@
                 "organization",
                 "unit",
                 "system"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 100,
@@ -1598,8 +1499,7 @@
                 "online domain",
                 "correspondence",
                 "data object"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 101,
@@ -1614,8 +1514,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 102,
@@ -1630,8 +1529,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 103,
@@ -1646,8 +1544,7 @@
                 "resources",
                 "connected",
                 "structured"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 104,
@@ -1662,8 +1559,7 @@
                 "organization",
                 "appliance",
                 "grid"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 105,
@@ -1678,8 +1574,7 @@
                 "web pages",
                 "correspondence",
                 "digital storage"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 106,
@@ -1694,8 +1589,7 @@
                 "база данных",
                 "браузер",
                 "ПО"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 107,
@@ -1710,8 +1604,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 108,
@@ -1726,8 +1619,7 @@
                 "host",
                 "linked",
                 "repository"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 109,
@@ -1742,8 +1634,7 @@
                 "structure",
                 "unit",
                 "system"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 110,
@@ -1758,8 +1649,7 @@
                 "online",
                 "mail",
                 "data unit"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 111,
@@ -1774,8 +1664,7 @@
                 "база данных",
                 "браузер",
                 "программные средства"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 112,
@@ -1790,8 +1679,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 113,
@@ -1806,8 +1694,7 @@
                 "responder",
                 "interconnected",
                 "store"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 114,
@@ -1822,8 +1709,7 @@
                 "organization",
                 "hardware",
                 "web"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 115,
@@ -1838,8 +1724,7 @@
                 "domain",
                 "transmission",
                 "binary"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 116,
@@ -1854,8 +1739,7 @@
                 "БД",
                 "браузер",
                 "ПО"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 117,
@@ -1870,8 +1754,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 118,
@@ -1886,8 +1769,7 @@
                 "services",
                 "chain",
                 "records"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 119,
@@ -1902,8 +1784,7 @@
                 "method",
                 "tool",
                 "link"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 120,
@@ -1918,8 +1799,7 @@
                 "site",
                 "messaging",
                 "container"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 121,
@@ -1934,8 +1814,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 122,
@@ -1950,8 +1829,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 123,
@@ -1966,8 +1844,7 @@
                 "centralized resource",
                 "interconnected",
                 "structured set"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 124,
@@ -1982,8 +1859,7 @@
                 "complex",
                 "appliance",
                 "web"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 125,
@@ -1998,8 +1874,7 @@
                 "web pages",
                 "electronic mail",
                 "recording data"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 126,
@@ -2014,8 +1889,7 @@
                 "база данных",
                 "браузер",
                 "софт"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 127,
@@ -2030,8 +1904,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 128,
@@ -2046,8 +1919,7 @@
                 "resource provider",
                 "communication",
                 "repository"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 129,
@@ -2062,8 +1934,7 @@
                 "organization",
                 "tool",
                 "grid"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 130,
@@ -2078,8 +1949,7 @@
                 "online location",
                 "messaging",
                 "data object"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 131,
@@ -2094,8 +1964,7 @@
                 "база данных",
                 "браузер",
                 "ПО"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 132,
@@ -2110,8 +1979,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 133,
@@ -2126,8 +1994,7 @@
                 "responds to requests",
                 "linked computers",
                 "organized collection"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 134,
@@ -2142,8 +2009,7 @@
                 "method",
                 "unit",
                 "link"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 135,
@@ -2158,8 +2024,7 @@
                 "document collection",
                 "SMTP",
                 "data unit"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 136,
@@ -2174,8 +2039,7 @@
                 "база данных",
                 "браузер",
                 "софт"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 137,
@@ -2190,8 +2054,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 138,
@@ -2206,8 +2069,7 @@
                 "data manager",
                 "nodes",
                 "information bank"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 139,
@@ -2222,8 +2084,7 @@
                 "structure",
                 "hardware",
                 "system"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 140,
@@ -2238,8 +2099,7 @@
                 "online presence",
                 "mail system",
                 "data record"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 141,
@@ -2254,8 +2114,7 @@
                 "база данных",
                 "браузер",
                 "программное обеспечение"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 142,
@@ -2270,8 +2129,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 143,
@@ -2286,8 +2144,7 @@
                 "central computer",
                 "connected together",
                 "easily looked at"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 144,
@@ -2302,8 +2159,7 @@
                 "complex",
                 "appliance",
                 "web"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 145,
@@ -2318,8 +2174,7 @@
                 "domain name",
                 "exchanging messages",
                 "self-contained"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 146,
@@ -2334,8 +2189,7 @@
                 "база данных",
                 "браузер",
                 "ПО"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 147,
@@ -2350,8 +2204,7 @@
                 "database",
                 "browser",
                 "file"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 148,
@@ -2366,8 +2219,7 @@
                 "serves information",
                 "communication links",
                 "updated"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 149,
@@ -2382,8 +2234,7 @@
                 "setup",
                 "tool",
                 "link"
-            ],
-            "Size": 500
+            ]
         },
         {
             "Id": 150,
@@ -2398,8 +2249,7 @@
                 "online portal",
                 "correspondence",
                 "named unit"
-            ],
-            "Size": 500
+            ]
         }
     ]
 }

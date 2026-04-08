@@ -34,6 +34,16 @@
     margin: 0 auto 2.5rem auto;
 }
 
+.section-divider {
+    max-width: 900px;
+    margin: 0 auto 2.5rem auto;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            color-mix(in srgb, var(--color-tertiary) 30%, transparent) 50%,
+            transparent);
+}
+
 .section-header {
     display: flex;
     align-items: center;
@@ -133,6 +143,66 @@
 .page-footer {
     text-align: center;
     margin-top: 2.5rem;
+}
+
+/* Preview overlays inside gallery items */
+.preview-overlay {
+    position: absolute;
+    inset: 8px;
+    border-radius: 14px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.preview-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, var(--color-primary), var(--color-secondary), var(--color-additional));
+    background-size: 200% 200%;
+    opacity: 0.28;
+    filter: blur(14px) saturate(1.03);
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+.preview-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(12px) saturate(1.02);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 78%, rgba(255, 255, 255, 0.04)) 0%, transparent 70%);
+    opacity: 0.9;
+}
+
+.preview-snowflake {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+}
+
+@keyframes previewGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Use animation only for the gradient element (keeps JS simple) */
+.preview-gradient.animated {
+    animation: previewGradient 10s ease-in-out infinite;
 }
 
 @media (max-width: 640px) {

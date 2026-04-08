@@ -1,5 +1,127 @@
-<paper-component class="page">
-    <re-icon icon="favorite"></re-icon>
-    <re-icon icon="favorite" variant="block"></re-icon>
-    <re-icon icon="favorite" variant="outlined"></re-icon>
-</paper-component>
+<div class="all-questions-page">
+    <paper-component class="filter-panel">
+        <re-typography variant="headline" class="page-title">Все вопросы</re-typography>
+
+        <div class="filter-row">
+            <div class="filter-group">
+                <re-typography class="filter-label">Тип</re-typography>
+                <re-button-group ref="'typeFilter'" selection="single" value="all"
+                    on[selection-change]="onTypeChange(event)">
+                    <re-button value="all" color="primary" variant="filled">Все</re-button>
+                    <re-button value="exam" color="primary" variant="outlined">Экзамен</re-button>
+                    <re-button value="colloquium" color="primary" variant="outlined">Коллоквиум</re-button>
+                </re-button-group>
+            </div>
+
+            <div class="filter-group">
+                <re-typography class="filter-label">Семестр</re-typography>
+                <select ref="'semesterSelect'" class="native-select" on[change]="onSemesterChange()">
+                    <option value="">Все семестры</option>
+                    <for value="sem" of="semesters">
+                        <option set[value]="sem">
+                            <exp of="sem"></exp>
+                        </option>
+                    </for>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <re-typography class="filter-label">Предмет</re-typography>
+                <select ref="'subjectSelect'" class="native-select" on[change]="onSubjectChange()">
+                    <option value="">Все предметы</option>
+                    <for value="sname" of="subjectNames">
+                        <option set[value]="sname">
+                            <exp of="sname"></exp>
+                        </option>
+                    </for>
+                </select>
+            </div>
+        </div>
+
+        <div class="search-row">
+            <re-input ref="'searchInput'" placeholder="Поиск по тексту вопроса..." full-width variant="outlined"
+                on[input]="onSearchInput()"></re-input>
+        </div>
+
+        <div class="count-row">
+            <re-chip color="primary">
+                <exp of="countText"></exp>
+            </re-chip>
+        </div>
+    </paper-component>
+
+    <div class="questions-container">
+        <for value="item" of="displayItems">
+            <paper-component class="question-card">
+                <!-- Exam question card -->
+                <if condition="item.isExam">
+                    <div class="titleBlock">
+                        <re-typography class="typo">
+                            <div class="question-chips">
+                                <re-chip size="small">
+                                    <exp of="item.Id"></exp>
+                                </re-chip>
+                                <re-chip size="small" variant="outlined" color="primary">Экзамен</re-chip>
+                                <re-chip size="small" variant="outlined" color="tertiary">
+                                    <exp of="item.subjectName"></exp>
+                                </re-chip>
+                            </div>
+                            <span>
+                                <exp of="item.Title" html-injection></exp>
+                            </span>
+                        </re-typography>
+                    </div>
+                    <div class="answers-container">
+                        <for value="answer" of="item.examAnswers">
+                            <re-button allow-wrap set[color]="answerColor(answer)" set[variant]="answerVariant(answer)"
+                                class="btn" disabled>
+                                <exp of="answer.text" html-injection></exp>
+                            </re-button>
+                        </for>
+                    </div>
+                </if>
+                <!-- Colloquium question card -->
+                <if condition="item.isColloquium">
+                    <re-typography class="question-title">
+                        <div class="question-chips">
+                            <re-chip size="small">
+                                <exp of="item.Id"></exp>
+                            </re-chip>
+                            <re-chip size="small" variant="outlined" color="warning">Коллоквиум</re-chip>
+                            <re-chip size="small" variant="outlined" color="tertiary">
+                                <exp of="item.subjectName"></exp>
+                            </re-chip>
+                        </div>
+                        <exp of="item.Title"></exp>
+                    </re-typography>
+                    <div class="answer-block">
+                        <re-typography class="ref-answer-label">Эталонный ответ:</re-typography>
+                        <for value="ans" of="item.referenceAnswers">
+                            <re-typography color="additional" class="answer-text">
+                                <exp of="ans"></exp>
+                            </re-typography>
+                        </for>
+                        <div class="keywords-row">
+                            <for value="kw" of="item.Keywords">
+                                <re-chip variant="outlined" color="tertiary" size="small">
+                                    <exp of="kw"></exp>
+                                </re-chip>
+                            </for>
+                        </div>
+                    </div>
+                </if>
+            </paper-component>
+        </for>
+    </div>
+
+    <div ref="'scrollSentinel'" class="scroll-sentinel"></div>
+
+    <if condition="showTruncated">
+        <div class="truncated-notice">
+            <re-typography color="empty">
+                <exp of="truncatedText"></exp>
+            </re-typography>
+            <re-button color="primary" variant="outlined" on[click]="loadMore()">Загрузить ещё</re-button>
+        </div>
+    </if>
+</div>

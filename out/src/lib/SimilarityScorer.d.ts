@@ -29,6 +29,6 @@ export interface ScoreResult {
 }
 export default class SimilarityScorer {
     static preload(): Promise<void>;
-    static score(userText: string, answers: string[], keywords: string[], _questionTitle?: string, idealSize?: number): Promise<ScoreResult>;
+    static score(userText: string, answers: string[], keywords: string[], questionTitle?: string, idealSize?: number): Promise<ScoreResult>;
 }
 //# sourceMappingURL=SimilarityScorer.d.ts.map

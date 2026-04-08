@@ -1,4 +1,4 @@
-import { Router, HOSTING, REGISTRY, ServiceWorker, ModuleManager, resetToDefault } from "@Purper";
+import { Router, HOSTING, REGISTRY, ServiceWorker, ModuleManager, resetToDefault, activateAppTheme } from "@Purper";
 // ── Module: Core ──
 // Core module uses static imports since it's always active
 import "./src/components/ReTypography.html.js";
@@ -41,6 +41,8 @@ const CoreModule = ModuleManager.register({
         // ── Library JS ──
         "./out/src/lib/AppTheme.js",
         "./out/src/lib/SeededShuffle.js",
+        "./out/src/lib/LanguageUtility.js",
+        "./out/src/lib/SemanticString.js",
         "./out/src/frac/Testing.js",
         // ── Theme CSS (default theme, loaded by index.html <link>) ──
         "./resources/Blazor.theme.css",
@@ -418,17 +420,21 @@ async function registerNonCoreModules() {
                 estimatedSize: 240_800,
                 resources: [
                     "./resources/Blazor.theme.css",
+                    "./resources/FirePlace.theme.css",
                     "./resources/Brass.theme.css",
                     "./resources/BrassDark.theme.css",
                     "./resources/Chess.theme.css",
                     "./resources/Vine.theme.css",
                     "./resources/Winter.theme.css",
                     "./out/src/lib/WinterTheme.js",
+                    "./out/src/lib/FirePlaceTheme.js",
                 ],
             }
         ]
     });
     AdvancedDesignModule.addRegistration(async () => {
+        await import("./src/lib/WinterTheme.js");
+        await import("./src/lib/FirePlaceTheme.js");
         await import("./src/components/ColorPalettePreview.html.js");
         await import("./src/pages/PalettePage.html.js");
         for (const reg of REGISTRY.splice(0))
@@ -453,7 +459,17 @@ export default class Index {
 }
 const loc = window.location;
 console.log(`[App] initialized at ${loc.href} (origin: ${loc.origin}, path: ${loc.pathname}${loc.search}${loc.hash})`);
-Index.initialize().then(() => {
+Index.initialize().then(async () => {
+    // Restore saved AppTheme (modules are now registered)
+    const savedAppTheme = localStorage.getItem('appTheme');
+    if (savedAppTheme) {
+        try {
+            await activateAppTheme(savedAppTheme);
+        }
+        catch (e) {
+            console.warn('[App] Failed to restore AppTheme:', savedAppTheme, e);
+        }
+    }
     let persistedRoute = Router.getPersistedRoute();
     if (persistedRoute) {
         Router.clearPersistedRoute();
