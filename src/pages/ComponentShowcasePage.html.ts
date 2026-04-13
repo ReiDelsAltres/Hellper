@@ -13,7 +13,6 @@ import ReTypography from "../components/ReTypography.html.js";
     cssURL: "./src/pages/ComponentShowcasePage.html.css",
 }, "/components")
 export default class ComponentShowcasePage extends Page {
-
     // -- Preview refs --
     private btnPreview?: ReButton;
     private iconPreview?: ReIcon;
