@@ -1,0 +1,19 @@
+<div class="slider-container">
+    <div class="slider-track" ref="'track'">
+        <div class="slider-track-fill" ref="'trackFill'"></div>
+        <div class="slider-ticks" ref="'ticksContainer'"></div>
+    </div>
+    <div class="slider-thumb slider-thumb-lower" ref="'thumbLower'" tabindex="0">
+        <span class="slider-label slider-label-lower" ref="'labelLower'"></span>
+    </div>
+    <div class="slider-thumb slider-thumb-upper" ref="'thumbUpper'" tabindex="0">
+        <span class="slider-label slider-label-upper" ref="'labelUpper'"></span>
+    </div>
+    <span class="slider-edge-label slider-edge-min" ref="'edgeLabelMin'"></span>
+    <span class="slider-edge-label slider-edge-max" ref="'edgeLabelMax'"></span>
+    <div class="slider-value-marker" ref="'valueMarker'">
+        <span class="slider-value-marker-label"></span>
+    </div>
+    <input type="hidden" ref="'inputLower'" />
+    <input type="hidden" ref="'inputUpper'" />
+</div>

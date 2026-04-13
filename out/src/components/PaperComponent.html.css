@@ -103,5 +103,3 @@
 :host(:is([alternate], [alternate=true])[color=error]) {
   --paper-background-color: var(--color-error);
 }
-
-/*# sourceMappingURL=PaperComponent.html.css.map */

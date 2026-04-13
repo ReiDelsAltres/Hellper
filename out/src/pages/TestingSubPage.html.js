@@ -21,9 +21,8 @@ let TestingSubPage = class TestingSubPage extends Page {
     modeSettingsButton;
     optionBlock;
     inputTestType;
-    inputMin;
     inputVal;
-    inputMax;
+    questionRange;
     inputNoShuffle;
     noShuffle = false;
     modeElements;
@@ -72,19 +71,18 @@ let TestingSubPage = class TestingSubPage extends Page {
         if (this.inputTestType?.buttonMap)
             this.updateTestTypeChange(this.inputTestType.buttonMap);
         const totalQuestions = this.testModes[2].numQuestions.getObject() || 300;
-        // Set initial bounds for range inputs
-        this.inputMin?.Min.setObject(1);
-        this.inputMin?.Max.setObject(totalQuestions);
-        this.inputMax?.Min.setObject(1);
-        this.inputMax?.Max.setObject(totalQuestions);
-        this.inputMin?.Value.subscribe((key, old, value) => {
-            const minVal = parseInt(value) || 1;
-            this.inputMax?.Min.setObject(minVal);
-        });
-        this.inputMax?.Value.subscribe((key, old, value) => {
-            const maxVal = parseInt(value) || totalQuestions;
-            this.inputMin?.Max.setObject(maxVal);
-        });
+        // Set up range slider
+        if (this.questionRange) {
+            this.questionRange.Min.setObject(1);
+            this.questionRange.Max.setObject(totalQuestions);
+            this.questionRange.Lower.setObject(1);
+            this.questionRange.Upper.setObject(totalQuestions);
+        }
+        // Sync inputVal → range slider ValueMin
+        this.inputVal?.Value.subscribe(() => this.syncValueMin());
+        // Clamp inputVal max to current range span
+        this.questionRange?.addEventListener('change', () => this.syncInputMax());
+        this.syncInputMax();
     }
     onSelectionChange(event) {
         this.updateTestModeGroup(event.detail.buttons);
@@ -117,6 +115,25 @@ let TestingSubPage = class TestingSubPage extends Page {
         this.modeSettingsButton?.Color.setObject(color);
         this.optionBlock?.Color.setObject(color);
         this.inputVal?.Value.setObject(activeMode?.numQuestions.getObject()?.toString() ?? '');
+        this.syncValueMin();
+    }
+    syncValueMin() {
+        if (!this.questionRange)
+            return;
+        const val = parseInt(this.inputVal?.Value.value) || 0;
+        this.questionRange.ValueMin.setObject(val);
+    }
+    syncInputMax() {
+        if (!this.questionRange || !this.inputVal)
+            return;
+        const lower = Number(this.questionRange.Lower.value) || 1;
+        const upper = Number(this.questionRange.Upper.value) || 1;
+        const span = upper - lower + 1;
+        this.inputVal.Max.setObject(span);
+        const current = parseInt(this.inputVal.Value.value) || 0;
+        if (current > span) {
+            this.inputVal.Value.setObject(String(span));
+        }
     }
     downloadQuestions() {
         const questions = this.fetchedData.Questions;
@@ -140,9 +157,11 @@ let TestingSubPage = class TestingSubPage extends Page {
     }
     startTest() {
         const activeMode = this.testModes.find(mode => mode.signature === this.testModesGroup?.Value.value);
+        const lower = Number(this.questionRange?.Lower.value) || 1;
+        const upper = Number(this.questionRange?.Upper.value) || lower;
         const limits = parseInt(this.inputVal?.Value.value) || activeMode?.numQuestions.getObject() || 25;
-        const startFrom = parseInt(this.inputMin?.Value.value) - 1 || 0;
-        const endAt = parseInt(this.inputMax?.Value.value) || undefined;
+        const startFrom = lower - 1;
+        const endAt = upper;
         const testType = this.inputTestType?.Value.value || 'main';
         const noShuffle = this.inputNoShuffle?.hasAttribute('checked') ?? false;
         const params = {

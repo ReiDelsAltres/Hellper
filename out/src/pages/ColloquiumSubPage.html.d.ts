@@ -16,6 +16,7 @@ export default class ColloquiumSubPage extends Page {
     private inputContentType?;
     private biletsButton?;
     private inputVal?;
+    private questionRange?;
     private inputNoShuffle?;
     private cacheIndicator?;
     constructor(subject?: string);
@@ -30,6 +31,9 @@ export default class ColloquiumSubPage extends Page {
     updateContentTypeChange(buttons: Map<ReButton, boolean>): void;
     private updateItemCounts;
     updateTestModeGroup(buttons: Map<ReButton, boolean>): void;
+    /** Keep range slider Max and ValueMin in sync with content type and inputVal. */
+    private syncRangeToContent;
+    private syncValueMin;
     downloadQuestions(): void;
     startTest(): void;
 }

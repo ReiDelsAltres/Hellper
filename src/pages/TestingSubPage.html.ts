@@ -3,6 +3,7 @@ import { Subject, TestingFile } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
 import ReInput from "../components/ReInput.html.js";
+import ReRangeSlider from "../components/ReRangeSlider.html.js";
 import ReCheckbox from "src/components/ReCheckbox.html.js";
 import Paper from "src/components/PaperComponent.html.js";
 import CacheIndicator from "../components/CacheIndicator.html.js";
@@ -28,9 +29,8 @@ export default class TestingSubPage extends Page {
 
   private inputTestType?: ReButtonGroup;
 
-  private inputMin?: ReInput;
   private inputVal?: ReInput;
-  private inputMax?: ReInput;
+  private questionRange?: ReRangeSlider;
 
   private inputNoShuffle?: ReCheckbox;
   private noShuffle: boolean = false;
@@ -86,20 +86,20 @@ export default class TestingSubPage extends Page {
 
     const totalQuestions = this.testModes[2].numQuestions.getObject() || 300;
 
-    // Set initial bounds for range inputs
-    this.inputMin?.Min.setObject(1);
-    this.inputMin?.Max.setObject(totalQuestions);
-    this.inputMax?.Min.setObject(1);
-    this.inputMax?.Max.setObject(totalQuestions);
+    // Set up range slider
+    if (this.questionRange) {
+      this.questionRange.Min.setObject(1);
+      this.questionRange.Max.setObject(totalQuestions);
+      this.questionRange.Lower.setObject(1);
+      this.questionRange.Upper.setObject(totalQuestions);
+    }
 
-    this.inputMin?.Value.subscribe((key, old, value) => {
-      const minVal = parseInt(value) || 1;
-      this.inputMax?.Min.setObject(minVal);
-    });
-    this.inputMax?.Value.subscribe((key, old, value) => {
-      const maxVal = parseInt(value) || totalQuestions;
-      this.inputMin?.Max.setObject(maxVal);
-    });
+    // Sync inputVal → range slider ValueMin
+    this.inputVal?.Value.subscribe(() => this.syncValueMin());
+
+    // Clamp inputVal max to current range span
+    this.questionRange?.addEventListener('change', () => this.syncInputMax());
+    this.syncInputMax();
   }
 
   public onSelectionChange(event: CustomEvent<{}>): void {
@@ -132,6 +132,25 @@ export default class TestingSubPage extends Page {
     this.optionBlock?.Color.setObject(color);
 
     this.inputVal?.Value.setObject(activeMode?.numQuestions.getObject()?.toString() ?? '');
+    this.syncValueMin();
+  }
+
+  private syncValueMin(): void {
+    if (!this.questionRange) return;
+    const val = parseInt(this.inputVal?.Value.value as string) || 0;
+    this.questionRange.ValueMin.setObject(val);
+  }
+
+  private syncInputMax(): void {
+    if (!this.questionRange || !this.inputVal) return;
+    const lower = Number(this.questionRange.Lower.value) || 1;
+    const upper = Number(this.questionRange.Upper.value) || 1;
+    const span = upper - lower + 1;
+    this.inputVal.Max.setObject(span);
+    const current = parseInt(this.inputVal.Value.value as string) || 0;
+    if (current > span) {
+      this.inputVal.Value.setObject(String(span));
+    }
   }
 
   public downloadQuestions(): void {
@@ -157,9 +176,11 @@ export default class TestingSubPage extends Page {
 
   public startTest(): void {
     const activeMode = this.testModes.find(mode => mode.signature === this.testModesGroup?.Value.value);
+    const lower = Number(this.questionRange?.Lower.value) || 1;
+    const upper = Number(this.questionRange?.Upper.value) || lower;
     const limits = parseInt(this.inputVal?.Value.value as string) || activeMode?.numQuestions.getObject() || 25;
-    const startFrom = parseInt(this.inputMin?.Value.value as string) - 1 || 0;
-    const endAt = parseInt(this.inputMax?.Value.value as string) || undefined;
+    const startFrom = lower - 1;
+    const endAt = upper;
     const testType = this.inputTestType?.Value.value || 'main';
     const noShuffle = this.inputNoShuffle?.hasAttribute('checked') ?? false;
 

@@ -1,0 +1,418 @@
+<div class="showcase-page">
+    <div class="page-header">
+        <re-typography variant="headline" original color="primary">Playground компонентов</re-typography>
+        <re-typography variant="body-2">Интерактивная витрина — меняйте параметры и смотрите результат</re-typography>
+    </div>
+
+    <main class="showcase-content">
+
+        <!-- ═══ ReButton ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">ReButton</re-typography>
+            <div class="playground">
+                <div class="playground-preview">
+                    <re-button ref="'btnPreview'" color="primary">Кнопка</re-button>
+                </div>
+                <div class="playground-controls">
+                    <label>variant
+                        <select ref="'btnVariant'" on[change]="updateButton()">
+                            <option value="filled">filled</option>
+                            <option value="outlined">outlined</option>
+                            <option value="text">text</option>
+                        </select>
+                    </label>
+                    <label>color
+                        <select ref="'btnColor'" on[change]="updateButton()">
+                            <option value="primary">primary</option>
+                            <option value="secondary">secondary</option>
+                            <option value="tertiary">tertiary</option>
+                            <option value="additional">additional</option>
+                            <option value="success">success</option>
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                            <option value="info">info</option>
+                            <option value="empty">empty</option>
+                        </select>
+                    </label>
+                    <label>size
+                        <select ref="'btnSize'" on[change]="updateButton()">
+                            <option value="small">small</option>
+                            <option value="medium" selected>medium</option>
+                            <option value="large">large</option>
+                            <option value="extra-large">extra-large</option>
+                        </select>
+                    </label>
+                    <label>icon
+                        <input type="text" ref="'btnIcon'" placeholder="e.g. home" on[input]="updateButton()" />
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'btnDisabled'" on[change]="updateButton()" />
+                        disabled
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'btnLoading'" on[change]="updateButton()" />
+                        loading
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'btnFullWidth'" on[change]="updateButton()" />
+                        full-width
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ ReIcon ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">ReIcon</re-typography>
+            <div class="playground">
+                <div class="playground-preview">
+                    <re-icon ref="'iconPreview'" icon="star" size="extra-large" color="primary"></re-icon>
+                </div>
+                <div class="playground-controls">
+                    <label>icon
+                        <input type="text" ref="'iconName'" value="star" on[input]="updateIcon()" />
+                    </label>
+                    <label>variant
+                        <select ref="'iconVariant'" on[change]="updateIcon()">
+                            <option value="filled">filled</option>
+                            <option value="outlined">outlined</option>
+                            <option value="rounded">rounded</option>
+                            <option value="sharp">sharp</option>
+                            <option value="block">block</option>
+                        </select>
+                    </label>
+                    <label>color
+                        <select ref="'iconColor'" on[change]="updateIcon()">
+                            <option value="primary">primary</option>
+                            <option value="secondary">secondary</option>
+                            <option value="tertiary">tertiary</option>
+                            <option value="additional">additional</option>
+                            <option value="success">success</option>
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                            <option value="info">info</option>
+                            <option value="empty">empty</option>
+                        </select>
+                    </label>
+                    <label>size
+                        <select ref="'iconSize'" on[change]="updateIcon()">
+                            <option value="extra-small">extra-small</option>
+                            <option value="small">small</option>
+                            <option value="medium">medium</option>
+                            <option value="large">large</option>
+                            <option value="extra-large" selected>extra-large</option>
+                            <option value="extra-extra-large">extra-extra-large</option>
+                        </select>
+                    </label>
+                    <label>weight
+                        <select ref="'iconWeight'" on[change]="updateIcon()">
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400" selected>400</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="700">700</option>
+                        </select>
+                    </label>
+                    <label>animation
+                        <select ref="'iconAnim'" on[change]="updateIcon()">
+                            <option value="none">none</option>
+                            <option value="spin">spin</option>
+                            <option value="pulse">pulse</option>
+                            <option value="bounce">bounce</option>
+                            <option value="shake">shake</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ ReChip ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">ReChip</re-typography>
+            <div class="playground">
+                <div class="playground-preview">
+                    <re-chip ref="'chipPreview'" color="primary">Chip</re-chip>
+                </div>
+                <div class="playground-controls">
+                    <label>variant
+                        <select ref="'chipVariant'" on[change]="updateChip()">
+                            <option value="filled">filled</option>
+                            <option value="outlined">outlined</option>
+                        </select>
+                    </label>
+                    <label>color
+                        <select ref="'chipColor'" on[change]="updateChip()">
+                            <option value="primary">primary</option>
+                            <option value="secondary">secondary</option>
+                            <option value="tertiary">tertiary</option>
+                            <option value="additional">additional</option>
+                            <option value="success">success</option>
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                            <option value="info">info</option>
+                            <option value="empty">empty</option>
+                        </select>
+                    </label>
+                    <label>size
+                        <select ref="'chipSize'" on[change]="updateChip()">
+                            <option value="small">small</option>
+                            <option value="medium" selected>medium</option>
+                            <option value="large">large</option>
+                            <option value="extra-large">extra-large</option>
+                        </select>
+                    </label>
+                    <label>icon
+                        <input type="text" ref="'chipIcon'" placeholder="e.g. star" on[input]="updateChip()" />
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'chipDisabled'" on[change]="updateChip()" />
+                        disabled
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ ReTypography ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">ReTypography</re-typography>
+            <div class="playground">
+                <div class="playground-preview typography-preview">
+                    <re-typography ref="'typoPreview'" variant="body" original color="primary">Пример
+                        текста</re-typography>
+                </div>
+                <div class="playground-controls">
+                    <label>variant
+                        <select ref="'typoVariant'" on[change]="updateTypo()">
+                            <option value="display">display</option>
+                            <option value="headline">headline</option>
+                            <option value="title">title</option>
+                            <option value="subtitle">subtitle</option>
+                            <option value="body" selected>body</option>
+                            <option value="body-2">body-2</option>
+                            <option value="caption">caption</option>
+                            <option value="overline">overline</option>
+                        </select>
+                    </label>
+                    <label>color
+                        <select ref="'typoColor'" on[change]="updateTypo()">
+                            <option value="primary">primary</option>
+                            <option value="secondary">secondary</option>
+                            <option value="tertiary">tertiary</option>
+                            <option value="additional">additional</option>
+                            <option value="success">success</option>
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                            <option value="info">info</option>
+                            <option value="empty">empty</option>
+                        </select>
+                    </label>
+                    <label>weight
+                        <select ref="'typoWeight'" on[change]="updateTypo()">
+                            <option value="">default</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="700">700</option>
+                            <option value="800">800</option>
+                        </select>
+                    </label>
+                    <label>align
+                        <select ref="'typoAlign'" on[change]="updateTypo()">
+                            <option value="">default</option>
+                            <option value="left">left</option>
+                            <option value="center">center</option>
+                            <option value="right">right</option>
+                        </select>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'typoUppercase'" on[change]="updateTypo()" />
+                        uppercase
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'typoTruncate'" on[change]="updateTypo()" />
+                        truncate
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ ReInput ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">ReInput</re-typography>
+            <div class="playground">
+                <div class="playground-preview">
+                    <re-input ref="'inputPreview'" placeholder="Введите текст"></re-input>
+                </div>
+                <div class="playground-controls">
+                    <label>variant
+                        <select ref="'inputVariant'" on[change]="updateInput()">
+                            <option value="outlined">outlined</option>
+                            <option value="filled">filled</option>
+                            <option value="text">text</option>
+                        </select>
+                    </label>
+                    <label>color
+                        <select ref="'inputColor'" on[change]="updateInput()">
+                            <option value="primary">primary</option>
+                            <option value="secondary">secondary</option>
+                            <option value="success">success</option>
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                            <option value="info">info</option>
+                        </select>
+                    </label>
+                    <label>size
+                        <select ref="'inputSize'" on[change]="updateInput()">
+                            <option value="small">small</option>
+                            <option value="medium" selected>medium</option>
+                            <option value="large">large</option>
+                        </select>
+                    </label>
+                    <label>type
+                        <select ref="'inputType'" on[change]="updateInput()">
+                            <option value="text">text</option>
+                            <option value="number">number</option>
+                            <option value="email">email</option>
+                            <option value="password">password</option>
+                            <option value="date">date</option>
+                        </select>
+                    </label>
+                    <label>icon
+                        <input type="text" ref="'inputIcon'" placeholder="e.g. search" on[input]="updateInput()" />
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'inputClearable'" on[change]="updateInput()" />
+                        clearable
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'inputDisabled'" on[change]="updateInput()" />
+                        disabled
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ ReRangeSlider ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">ReRangeSlider</re-typography>
+            <div class="playground">
+                <div class="playground-preview" style="width:100%;padding:16px 8px;">
+                    <re-range-slider ref="'rangePreview'" color="primary" min="0" max="100" lower="20" upper="80"
+                        on[change]="onRangeChange()"></re-range-slider>
+                </div>
+                <div class="playground-controls">
+                    <label>variant
+                        <select ref="'rangeVariant'" on[change]="updateRange()">
+                            <option value="line">line</option>
+                            <option value="block">block</option>
+                        </select>
+                    </label>
+                    <label>color
+                        <select ref="'rangeColor'" on[change]="updateRange()">
+                            <option value="primary">primary</option>
+                            <option value="secondary">secondary</option>
+                            <option value="tertiary">tertiary</option>
+                            <option value="additional">additional</option>
+                            <option value="success">success</option>
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                            <option value="info">info</option>
+                        </select>
+                    </label>
+                    <label>size
+                        <select ref="'rangeSize'" on[change]="updateRange()">
+                            <option value="extra-small">extra-small</option>
+                            <option value="small">small</option>
+                            <option value="medium" selected>medium</option>
+                            <option value="large">large</option>
+                            <option value="extra-large">extra-large</option>
+                        </select>
+                    </label>
+                    <label>min
+                        <input type="number" ref="'rangeMin'" value="0" on[change]="updateRange()" />
+                    </label>
+                    <label>max
+                        <input type="number" ref="'rangeMax'" value="100" on[change]="updateRange()" />
+                    </label>
+                    <label>step
+                        <input type="number" ref="'rangeStep'" value="1" min="1" on[change]="updateRange()" />
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'rangeLabels'" on[change]="updateRange()" />
+                        show labels
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'rangeEdgeLabels'" on[change]="updateRange()" />
+                        show edge labels
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'rangeTickMarks'" on[change]="updateRange()" />
+                        tick marks
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'rangeDraggable'" on[change]="updateRange()" />
+                        draggable range
+                    </label>
+                    <label>limit
+                        <select ref="'rangeLimit'" on[change]="updateRange()">
+                            <option value="none">none</option>
+                            <option value="left">left</option>
+                            <option value="right">right</option>
+                            <option value="both">both</option>
+                        </select>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'rangeShowValue'" on[change]="updateRange()" />
+                        show value
+                    </label>
+                    <label>value-min
+                        <input type="number" ref="'rangeValueMin'" value="0" min="0" on[change]="updateRange()" />
+                    </label>
+                    <label>value-max
+                        <input type="number" ref="'rangeValueMax'" value="0" min="0" on[change]="updateRange()" />
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'rangeDisabled'" on[change]="updateRange()" />
+                        disabled
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PopUp ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">PopUp</re-typography>
+            <div class="playground">
+                <div class="playground-preview" style="position:relative;min-height:120px;">
+                    <re-button ref="'popupTrigger'" color="primary" on[click]="togglePopup()">Открыть PopUp</re-button>
+                    <pop-up ref="'popupPreview'">
+                        <div style="padding:8px;">
+                            <re-typography variant="subtitle">Popup</re-typography>
+                            <re-typography variant="body-2">Содержимое попапа</re-typography>
+                            <re-button color="secondary" size="small" on[click]="closePopup()"
+                                style="margin-top:8px;">Закрыть</re-button>
+                        </div>
+                    </pop-up>
+                </div>
+                <div class="playground-controls">
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'popupModal'" on[change]="updatePopup()" />
+                        modal
+                    </label>
+                    <label>placement
+                        <select ref="'popupPlacement'" on[change]="updatePopup()">
+                            <option value="">default</option>
+                            <option value="top">top</option>
+                            <option value="bottom">bottom</option>
+                            <option value="left">left</option>
+                            <option value="right">right</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>

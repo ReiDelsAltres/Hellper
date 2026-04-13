@@ -1,0 +1,415 @@
+@use 'sass:map';
+@use './core/ComponentCore';
+
+$sizes: (
+    'extra-small': (size: 20px, padding: 0, thumb: 12px, track: 2px),
+    'small': (size: 28px, padding: 0, thumb: 16px, track: 3px),
+    'medium': (size: 36px, padding: 0, thumb: 20px, track: 4px),
+    'large': (size: 44px, padding: 0, thumb: 24px, track: 5px),
+    'extra-large': (size: 52px, padding: 0, thumb: 28px, track: 6px)
+);
+
+@include ComponentCore.supportHidden;
+@include ComponentCore.supportDisabled;
+@include ComponentCore.supportColor;
+
+@include ComponentCore.supportSize($sizes) using ($props) {
+    --slider-thumb-size: #{map.get($props, 'thumb')};
+    --slider-track-height: #{map.get($props, 'track')};
+}
+
+// ── Host ──
+:host {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-width: 120px;
+    --slider-thumb-size: 20px;
+    --slider-track-height: 4px;
+    --slider-color: var(--component-bg-color);
+    --slider-track-bg: var(--component-text-color);
+    cursor: pointer;
+    user-select: none;
+    touch-action: none;
+    padding: 8px calc(var(--slider-thumb-size) / 2);
+    box-sizing: border-box;
+}
+
+// Extra space for balloon labels on top
+:host([show-labels]) {
+    padding-top: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+// Extra space for edge labels below
+:host([show-edge-labels]) {
+    padding-bottom: 22px;
+}
+
+// Extra space for value marker below (stacks under edge labels)
+:host([show-value]) {
+    padding-bottom: 22px;
+}
+
+:host(:not([color])) {
+    --slider-color: var(--color-primary);
+}
+
+:host([color]) {
+    --slider-color: var(--component-bg-color);
+}
+
+// ── Container ──
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: var(--slider-thumb-size);
+    display: flex;
+    align-items: center;
+}
+
+// ── Track ──
+.slider-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: var(--slider-track-height);
+    background: var(--slider-track-bg);
+    border-radius: calc(var(--slider-track-height) / 2);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-track-fill {
+    position: absolute;
+    height: 100%;
+    background: var(--slider-color);
+    border-radius: inherit;
+    transition: left 0.05s ease, width 0.05s ease;
+}
+
+// ── Thumb ──
+.slider-thumb {
+    position: absolute;
+    width: var(--slider-thumb-size);
+    height: var(--slider-thumb-size);
+    border-radius: 50%;
+    background: var(--slider-color);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    z-index: 2;
+    transition: left 0.05s ease, bottom 0.05s ease, box-shadow 0.2s ease;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--slider-color) 20%, transparent);
+    }
+
+    &:focus-visible {
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--slider-color) 30%, transparent);
+    }
+
+    &.active {
+        cursor: grabbing;
+        box-shadow: 0 0 0 8px color-mix(in srgb, var(--slider-color) 25%, transparent);
+        transition: left 0s, bottom 0s, box-shadow 0.2s ease;
+    }
+}
+
+// ── Value labels (balloon) ──
+.slider-label {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background: var(--slider-color);
+    color: var(--color-primary-contrast, #fff);
+    font-size: 0.7rem;
+    font-family: var(--font-family);
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    min-width: 24px;
+    text-align: center;
+
+    // Balloon arrow
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        border-top-color: var(--slider-color);
+    }
+}
+
+:host([show-labels]) .slider-label,
+.slider-thumb:hover .slider-label,
+.slider-thumb:focus-visible .slider-label,
+.slider-thumb.active .slider-label {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+// ── Tick marks ──
+.slider-ticks {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.slider-tick {
+    position: absolute;
+    width: 2px;
+    height: calc(var(--slider-track-height) + 6px);
+    background: color-mix(in srgb, var(--slider-track-bg) 50%, var(--slider-color) 50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1px;
+}
+
+:host([tick-marks]) .slider-tick {
+    display: block;
+}
+
+// ── Edge labels (min/max) — hidden by default, shown via attribute ──
+.slider-edge-label {
+    position: absolute;
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--component-bg-color);
+    display: none;
+    white-space: nowrap;
+}
+
+:host([show-edge-labels]) .slider-edge-label {
+    display: block;
+}
+
+.slider-edge-min {
+    left: 0;
+    top: calc(50% + var(--slider-thumb-size) / 2 + 4px);
+}
+
+.slider-edge-max {
+    right: 0;
+    top: calc(50% + var(--slider-thumb-size) / 2 + 4px);
+}
+
+// ── Value marker (shows range span between thumbs) ──
+.slider-value-marker {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    display: none;
+    transform: translateX(-50%);
+    top: calc(50% + var(--slider-thumb-size) / 2);
+}
+
+.slider-value-marker-label {
+    display: inline-block;
+    background: var(--slider-color);
+    color: var(--component-text-color);
+    font-size: 0.65rem;
+    font-family: var(--font-family);
+    padding: 1px 6px;
+    border-radius: 8px;
+    white-space: nowrap;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+:host([show-value]) .slider-value-marker {
+    display: block;
+}
+
+// ── Block variant ──
+:host([variant="block"]) {
+    .slider-track {
+        height: var(--slider-thumb-size);
+        border-radius: 4px;
+    }
+
+    .slider-track-fill {
+        height: 100%;
+        border-radius: 4px;
+        opacity: 0.85;
+    }
+
+    .slider-thumb {
+        z-index: 3;
+    }
+
+    .slider-label {
+        bottom: calc(100% + 4px);
+    }
+
+    .slider-edge-label {
+        top: calc(50% + var(--slider-thumb-size) / 2 + 4px);
+    }
+}
+
+:host([variant="block"][vertical]) {
+    .slider-track {
+        width: var(--slider-thumb-size);
+        height: auto;
+    }
+}
+
+// ── Draggable range fill ──
+:host([draggable-range]) .slider-track-fill {
+    cursor: grab;
+    z-index: 1;
+    border-radius: calc(var(--slider-track-height) / 2);
+    background-image: repeating-linear-gradient(90deg,
+            transparent,
+            transparent 3px,
+            color-mix(in srgb, var(--slider-color) 60%, transparent) 3px,
+            color-mix(in srgb, var(--slider-color) 60%, transparent) 4px);
+    background-color: var(--slider-color);
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+
+    &.active {
+        cursor: grabbing;
+        filter: brightness(0.9);
+    }
+}
+
+// ── Locked thumbs (Limit) ──
+.slider-thumb.locked {
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+    background: var(--slider-track-bg);
+
+    &:hover,
+    &.active {
+        box-shadow: none;
+    }
+
+    .slider-label {
+        display: none;
+    }
+}
+
+// ── Disabled ──
+:host([disabled]) {
+    --slider-color: var(--color-border, #999);
+
+    .slider-thumb {
+        cursor: not-allowed;
+        box-shadow: none;
+
+        &:hover,
+        &.active {
+            box-shadow: none;
+        }
+    }
+}
+
+// ── Vertical mode ──
+:host([vertical]) {
+    width: auto;
+    min-width: unset;
+    height: 200px;
+    min-height: 120px;
+    padding: 0 8px;
+
+    .slider-container {
+        width: var(--slider-thumb-size);
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .slider-track {
+        left: 50%;
+        right: auto;
+        top: 0;
+        bottom: 0;
+        height: auto;
+        width: var(--slider-track-height);
+        transform: translateX(-50%);
+    }
+
+    .slider-track-fill {
+        width: 100%;
+        height: auto;
+        left: 0;
+        transition: bottom 0.05s ease, height 0.05s ease;
+    }
+
+    .slider-thumb {
+        top: auto;
+        left: 50%;
+        transform: translate(-50%, 50%);
+
+        &.active {
+            transition: bottom 0s, box-shadow 0.2s ease;
+        }
+    }
+
+    .slider-label {
+        bottom: auto;
+        left: calc(100% + 10px);
+        top: 50%;
+        transform: translateY(-50%) scale(0);
+
+        &::after {
+            top: 50%;
+            left: auto;
+            right: 100%;
+            transform: translateY(-50%);
+            border: 5px solid transparent;
+            border-right-color: var(--slider-color);
+            border-top-color: transparent;
+        }
+    }
+
+    :host([show-labels]) .slider-label,
+    .slider-thumb:hover .slider-label,
+    .slider-thumb:focus-visible .slider-label,
+    .slider-thumb.active .slider-label {
+        transform: translateY(-50%) scale(1);
+    }
+
+    .slider-tick {
+        width: calc(var(--slider-track-height) + 6px);
+        height: 2px;
+        top: auto;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .slider-edge-min {
+        left: 50%;
+        top: auto;
+        bottom: -20px;
+        transform: translateX(-50%);
+    }
+
+    .slider-edge-max {
+        left: 50%;
+        right: auto;
+        top: -20px;
+        transform: translateX(-50%);
+    }
+
+    .slider-value-marker {
+        top: auto;
+        left: calc(50% + var(--slider-thumb-size) / 2 + 2px);
+        transform: translateY(50%);
+    }
+}

@@ -3,6 +3,7 @@ import { Subject, ColloquiumFile } from "../frac/Testing.js";
 import ReButton from "../components/ReButton.html.js";
 import ReButtonGroup from "../components/ReButtonGroup.html.js";
 import ReInput from "../components/ReInput.html.js";
+import ReRangeSlider from "../components/ReRangeSlider.html.js";
 import ReCheckbox from "src/components/ReCheckbox.html.js";
 import Paper from "src/components/PaperComponent.html.js";
 import CacheIndicator from "../components/CacheIndicator.html.js";
@@ -33,6 +34,7 @@ export default class ColloquiumSubPage extends Page {
     private inputContentType?: ReButtonGroup;
     private biletsButton?: ReButton;
     private inputVal?: ReInput;
+    private questionRange?: ReRangeSlider;
     private inputNoShuffle?: ReCheckbox;
     private cacheIndicator?: CacheIndicator;
 
@@ -92,6 +94,17 @@ export default class ColloquiumSubPage extends Page {
         if (this.biletsButton && !this.hasBilets) {
             this.biletsButton.Disabled.setObject(true);
         }
+
+        // Set up range slider
+        if (this.questionRange) {
+            this.questionRange.Min.setObject(1);
+            this.questionRange.Max.setObject(this.totalQuestions);
+            this.questionRange.Lower.setObject(1);
+            this.questionRange.Upper.setObject(this.totalQuestions);
+        }
+
+        // Sync inputVal → range slider ValueMin
+        this.inputVal?.Value.subscribe(() => this.syncValueMin());
     }
 
     public onSelectionChange(event: CustomEvent<{}>): void {
@@ -117,6 +130,7 @@ export default class ColloquiumSubPage extends Page {
         this.updateItemCounts();
         const activeMode = this.testModes.find(mode => mode.signature === this.testModesGroup?.Value.value);
         this.inputVal?.Value.setObject(activeMode?.numItems.getObject()?.toString() ?? '');
+        this.syncRangeToContent();
     }
 
     private updateItemCounts(): void {
@@ -148,6 +162,24 @@ export default class ColloquiumSubPage extends Page {
         this.optionBlock?.Color.setObject(color);
 
         this.inputVal?.Value.setObject(activeMode?.numItems.getObject()?.toString() ?? '');
+        this.syncValueMin();
+    }
+
+    /** Keep range slider Max and ValueMin in sync with content type and inputVal. */
+    private syncRangeToContent(): void {
+        if (!this.questionRange) return;
+        const total = this.testModes[2].numItems.getObject() || this.totalQuestions;
+        this.questionRange.Min.setObject(1);
+        this.questionRange.Max.setObject(total);
+        this.questionRange.Lower.setObject(1);
+        this.questionRange.Upper.setObject(total);
+        this.syncValueMin();
+    }
+
+    private syncValueMin(): void {
+        if (!this.questionRange) return;
+        const val = parseInt(this.inputVal?.Value.value as string) || 0;
+        this.questionRange.ValueMin.setObject(val);
     }
 
     public downloadQuestions(): void {
@@ -174,6 +206,8 @@ export default class ColloquiumSubPage extends Page {
     public startTest(): void {
         const activeMode = this.testModes.find(mode => mode.signature === this.testModesGroup?.Value.value);
         const contentType = this.inputContentType?.Value.value || 'questions';
+        const lower = Number(this.questionRange?.Lower.value) || 1;
+        const upper = Number(this.questionRange?.Upper.value) || lower;
         const limits = parseInt(this.inputVal?.Value.value as string) || activeMode?.numItems.getObject() || 25;
         const testType = this.inputTestType?.Value.value || 'main';
         const noShuffle = this.inputNoShuffle?.hasAttribute('checked') ?? false;
@@ -183,6 +217,8 @@ export default class ColloquiumSubPage extends Page {
             type: activeMode?.signature ?? 'normal',
             contentType,
             limits,
+            startFrom: lower - 1,
+            endAt: upper,
             randomSource: null,
             noShuffle,
             testType

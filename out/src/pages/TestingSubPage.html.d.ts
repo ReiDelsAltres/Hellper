@@ -9,9 +9,8 @@ export default class TestingSubPage extends Page {
     private modeSettingsButton?;
     private optionBlock?;
     private inputTestType?;
-    private inputMin?;
     private inputVal?;
-    private inputMax?;
+    private questionRange?;
     private inputNoShuffle?;
     private noShuffle;
     private modeElements?;
@@ -26,6 +25,8 @@ export default class TestingSubPage extends Page {
     onTestTypeChange(event: CustomEvent<{}>): void;
     updateTestTypeChange(buttons: Map<ReButton, boolean>): void;
     updateTestModeGroup(buttons: Map<ReButton, boolean>): void;
+    private syncValueMin;
+    private syncInputMax;
     downloadQuestions(): void;
     startTest(): void;
 }

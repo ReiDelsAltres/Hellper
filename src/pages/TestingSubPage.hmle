@@ -57,11 +57,10 @@
         </div>
 
         <div class="option-inputs">
-            <re-input ref="'inputMin'" type="number" min="1" set[max]="testModes[2].numQuestions" placeholder="1"
-                icon="arrow-right" size="small"></re-input>
             <re-input ref="'inputVal'" min="1" type="number" placeholder="25" icon="hash" size="small"></re-input>
-            <re-input ref="'inputMax'" type="number" min="1" set[max]="testModes[2].numQuestions"
-                set[placeholder]="testModes[2].numQuestions" icon="arrow-left" size="small"></re-input>
+            <re-range-slider ref="'questionRange'" min="1" set[max]="testModes[2].numQuestions" lower="1"
+                set[upper]="testModes[2].numQuestions" step="1" variant="block" draggable-range show-labels
+                show-edge-labels show-value color="primary" size="small"></re-range-slider>
         </div>
     </paper-component>
 

@@ -14,8 +14,8 @@ import "./src/components/PopUp.html.js";
 import "./src/components/ReTooltip.html.js";
 import "./src/components/PaperComponent.html.js";
 import "./src/components/ReTextArea.html.js";
+import "./src/components/ReRangeSlider.html.js";
 import "./src/pages/MainPage.html.js";
-import "./src/pages/ComponentShowcasePage.html.js";
 import "./src/pages/TestingPage.html.js";
 import "./src/pages/TestingSubPage.html.js";
 import "./src/pages/TestingActualPage.html.js";
@@ -97,7 +97,8 @@ const CoreModule = ModuleManager.register({
                 "./out/src/components/PopUp.html.js",
                 "./out/src/components/ReTooltip.html.js",
                 "./out/src/components/PaperComponent.html.js",
-                "./out/src/components/ReTextArea.html.js"
+                "./out/src/components/ReTextArea.html.js",
+                "./out/src/components/ReRangeSlider.html.js"
             ],
         },
         {
@@ -105,7 +106,6 @@ const CoreModule = ModuleManager.register({
             description: "Страницы приложения на основе системы компонентов Purper",
             resources: [
                 "./out/src/pages/MainPage.html.js",
-                "./out/src/pages/ComponentShowcasePage.html.js",
                 "./out/src/pages/TestingPage.html.js",
                 "./out/src/pages/TestingSubPage.html.js",
                 "./out/src/pages/TestingActualPage.html.js",
@@ -389,11 +389,15 @@ async function registerNonCoreModules() {
             "./out/src/components/NetworkStatus.html.css",
             "./src/components/CacheIndicator.hmle",
             "./out/src/components/CacheIndicator.html.css",
+            "./out/src/pages/ComponentShowcasePage.html.js",
+            "./src/pages/ComponentShowcasePage.hmle",
+            "./src/pages/ComponentShowcasePage.html.css",
         ],
     });
     DebugModule.addRegistration(async () => {
         await import("./src/components/NetworkStatus.html.js");
         await import("./src/components/CacheIndicator.html.js");
+        await import("./src/pages/ComponentShowcasePage.html.js");
         for (const reg of REGISTRY.splice(0))
             await reg();
     });

@@ -6,6 +6,105 @@
 
 .page-header {
     text-align: center;
+    margin-bottom: 2rem;
+}
+
+.showcase-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ── Playground section ── */
+.playground-section {
+    background: var(--color-paper-background, #fff);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.playground {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* ── Preview area ── */
+.playground-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    border: 1px dashed var(--color-primary-light, #c5cae9);
+    border-radius: 10px;
+    padding: 1rem;
+    background: var(--color-app-background, #f5f5f5);
+}
+
+.typography-preview {
+    min-height: 80px;
+    overflow: hidden;
+}
+
+/* ── Controls area ── */
+.playground-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.playground-controls label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-text-secondary, #666);
+    min-width: 0;
+}
+
+.playground-controls label>select,
+.playground-controls label>input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 4px 6px;
+    border: 1px solid var(--color-primary-light, #ccc);
+    border-radius: 6px;
+    font-size: 0.82rem;
+    background: var(--color-paper-background, #fff);
+    color: var(--color-text-primary, #222);
+}
+
+.playground-controls .checkbox-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.playground-controls .checkbox-label input[type="checkbox"] {
+    accent-color: var(--color-primary, #6366f1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+    .showcase-page {
+        padding: 1rem;
+    }
+
+    .playground {
+        grid-template-columns: 1fr;
+    }
+}
+
+.showcase-page {
+    min-height: 100vh;
+    padding: 2rem;
+    background: var(--color-app-background, #f5f5f5);
+}
+
+.page-header {
+    text-align: center;
     margin-bottom: 3rem;
 }
 
@@ -141,7 +240,7 @@
     display: block;
     width: 100%;
     padding: 8px 12px;
-    background: var(--color-paper-background-alt, rgba(0,0,0,0.03));
+    background: var(--color-paper-background-alt, rgba(0, 0, 0, 0.03));
     border-radius: 6px;
 }
 
@@ -164,15 +263,41 @@
     min-width: 80px;
 }
 
-.color-box.primary { background: var(--color-primary); }
-.color-box.secondary { background: var(--color-secondary); }
-.color-box.tertiary { background: var(--color-tertiary); }
-.color-box.additional { background: var(--color-additional); }
-.color-box.success { background: var(--color-success); }
-.color-box.warning { background: var(--color-warning); }
-.color-box.error { background: var(--color-error); }
-.color-box.info { background: var(--color-info); }
-.color-box.empty { background: var(--color-empty); }
+.color-box.primary {
+    background: var(--color-primary);
+}
+
+.color-box.secondary {
+    background: var(--color-secondary);
+}
+
+.color-box.tertiary {
+    background: var(--color-tertiary);
+}
+
+.color-box.additional {
+    background: var(--color-additional);
+}
+
+.color-box.success {
+    background: var(--color-success);
+}
+
+.color-box.warning {
+    background: var(--color-warning);
+}
+
+.color-box.error {
+    background: var(--color-error);
+}
+
+.color-box.info {
+    background: var(--color-info);
+}
+
+.color-box.empty {
+    background: var(--color-empty);
+}
 
 /* Icon library row */
 .icon-library-row {

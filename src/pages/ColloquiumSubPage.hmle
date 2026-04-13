@@ -62,6 +62,9 @@
         </div>
         <div class="option-inputs">
             <re-input ref="'inputVal'" min="1" type="number" placeholder="25" icon="hash" size="small"></re-input>
+            <re-range-slider ref="'questionRange'" min="1" set[max]="testModes[2].numItems" lower="1"
+                set[upper]="testModes[2].numItems" step="1" show-labels show-edge-labels show-value color="primary"
+                size="medium"></re-range-slider>
         </div>
     </paper-component>
 
