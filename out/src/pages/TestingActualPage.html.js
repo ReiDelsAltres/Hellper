@@ -46,7 +46,7 @@ let TestingActualPage = class TestingActualPage extends Page {
         this.questions.forEach(q => {
             q.shuffleAnswers(seed);
             seed = SeededShuffle.deriveNextSeed(seed);
-            q.Answers.push("РџСЂРѕРїСѓСЃС‚РёС‚СЊ РІРѕРїСЂРѕСЃ");
+            q.Answers.push("Пропустить вопрос");
             // Manually render KaTeX inside title and answers so that
             // the template engine's <exp html-injection> injects ready HTML.
             q.Title = KatexUtils.renderInlineString(q.Title);
