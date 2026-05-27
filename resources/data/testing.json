@@ -188,7 +188,7 @@
                     "759KM"
                 ],
                 "translatedName": "Архитектура компьютера",
-                "file": "colloquium/s4/---.json"
+                "file": "KA.json"
             },
             {
                 "name": "Kompüter şəbəkələri-1",
@@ -208,7 +208,7 @@
                     "759KM"
                 ],
                 "translatedName": "Английский язык",
-                "file": "colloquium/s4/---.json"
+                "file": "s4/ENG.json"
             },
             {
                 "name": "Müasir proqramlaşdırma dilləri",
@@ -216,8 +216,17 @@
                 "groups": [
                     "759ITS"
                 ],
-                "translatedName": "Веб-программирование",
-                "file": "colloquium/s4/---.json"
+                "translatedName": "Современные языки программирования",
+                "file": "s4/MD.json"
+            },
+            {
+                "name": "Müasir proqramlaşdırma dilləri",
+                "teacher": "Cəbrayılova G.H",
+                "groups": [
+                    "759KM"
+                ],
+                "translatedName": "Современные языки программирования",
+                "file": "s4/MDKM.json"
             },
             {
                 "name": "Obyekt yönümlü proqramlaşdırma",
@@ -226,7 +235,16 @@
                     "759ITS"
                 ],
                 "translatedName": "Объектно-ориентированное программирование",
-                "file": "colloquium/s4/---.json"
+                "file": "s4/OOP.json"
+            },
+            {
+                "name": "Kompüter mühəndisliyi ",
+                "teacher": "Həsənov E.Q",
+                "groups": [
+                    "759KM"
+                ],
+                "translatedName": "Объектно-ориентированное программирование",
+                "file": "s4/OOPKM.json"
             },
             {
                 "name": "Sağlamlıq əmayin təhlükısizliyi və ətraf mühitin mühafizəsi",
@@ -236,7 +254,7 @@
                     "759KM"
                 ],
                 "translatedName": "Здоровье, безопасность и охрана окружающей среды",
-                "file": "colloquium/s4/---.json"
+                "file": "s4/SS.json"
             },
             {
                 "name": "Diskret riyaziyyat",
@@ -246,7 +264,7 @@
                     "759KM"
                 ],
                 "translatedName": "Дискретная математика",
-                "file": "colloquium/s4/---.json"
+                "file": "s4/DR.json"
             }
         ]
     }

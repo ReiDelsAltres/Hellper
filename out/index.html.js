@@ -395,7 +395,6 @@ async function registerNonCoreModules() {
         ],
     });
     DebugModule.addRegistration(async () => {
-        await import("./src/components/NetworkStatus.html.js");
         await import("./src/components/CacheIndicator.html.js");
         await import("./src/pages/ComponentShowcasePage.html.js");
         for (const reg of REGISTRY.splice(0))
@@ -464,6 +463,17 @@ export default class Index {
 const loc = window.location;
 console.log(`[App] initialized at ${loc.href} (origin: ${loc.origin}, path: ${loc.pathname}${loc.search}${loc.hash})`);
 Index.initialize().then(async () => {
+    const updatePending = sessionStorage.getItem('purper:updatePending') === 'true';
+    if (updatePending) {
+        sessionStorage.removeItem('purper:updatePending');
+        if (await ServiceWorker.isOnline()) {
+            console.log('[App]: Update detected — reinstalling installed modules');
+            await ModuleManager.refreshDownloadedModules();
+        }
+        else {
+            console.log('[App]: Update detected but offline — skipping module refresh');
+        }
+    }
     // Restore saved AppTheme (modules are now registered)
     const savedAppTheme = localStorage.getItem('appTheme');
     if (savedAppTheme) {

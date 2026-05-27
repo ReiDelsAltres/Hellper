@@ -7,15 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { ReComponent, Attribute } from "@Purper";
 import ComponentCore from "./core/ComponentCore.js";
 let AppLayout = class AppLayout extends ComponentCore {
-    Sidebar = new Attribute(this, "sidebar", null);
-    Topbar = new Attribute(this, "topbar", null);
+    Sidebar = new Attribute(this, "sidebar");
+    Topbar = new Attribute(this, "topbar");
     sidebarBtn;
     topbarBtn;
-    networkBtn;
     verticalPanel;
     horizontalPanel;
-    networkTooltip;
-    networkStatus;
     panels = new Map();
     async preLoad(holder) {
         this.panels.set("vertical", { bar: () => this.verticalPanel, btn: () => this.sidebarBtn, attr: this.Sidebar });
@@ -43,11 +40,6 @@ let AppLayout = class AppLayout extends ComponentCore {
         bar.Hidden.setObject(!isHidden ? true : null);
         panel.attr.setObject(isHidden ? "mini" : "hidden");
         btn.Variant.setObject(isHidden ? "outlined" : "filled");
-    }
-    toggleNetworkStatus() {
-        this.networkTooltip.setAnchorElement(this.networkBtn);
-        this.networkTooltip.toggle();
-        this.networkBtn.Variant.setObject(this.networkTooltip.isOpen ? 'filled' : 'outlined');
     }
 };
 AppLayout = __decorate([

@@ -20,9 +20,8 @@ export default class ReCheckbox extends Component {
     public mini = new Attribute<boolean>(this, 'mini');
 
     protected async preLoad(holder: TemplateHolder): Promise<void> {
-        this.labelEl.textContent = this.label.value;
-        this.label.subscribe((name, oldValue, newValue) => this.labelEl.textContent = newValue);
-
+        this.labelEl!.textContent = this.label.value;
+        this.label.subscribe((name, oldValue, newValue) => this.labelEl!.textContent = newValue);
         this.addEventListener('click', this.boundHandleClick);
     }
 

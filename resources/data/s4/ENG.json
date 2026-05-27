@@ -1,0 +1,3932 @@
+{
+    "UseIndex": true,
+    "Questions": [
+        {
+            "Id": 1,
+            "Title": "Choose the correct answer: What is the main function of a GPU?",
+            "Answers": [
+                "To render graphics and process parallel computing tasks efficiently",
+                "To manage long-term data storage and system backup files",
+                "To route network packets between different local area networks",
+                "To handle primary sequential logic and operating system boot processes",
+                "To regulate power distribution across internal hardware components"
+            ]
+        },
+        {
+            "Id": 2,
+            "Title": "Choose the correct answer: What is scalability in web applications?",
+            "Answers": [
+                "The capability of a system to handle increased load by adding resources",
+                "The visual design adaptability to different screen sizes and ratios",
+                "The process of updating old legacy code to modern frameworks",
+                "The level of encryption applied to data during network transmission",
+                "The physical dimension measurements of the hosting server racks"
+            ]
+        },
+        {
+            "Id": 3,
+            "Title": "Choose the correct answer: What is cloud storage?",
+            "Answers": [
+                "A model of data storage where digital data is stored in logical pools managed by hosting companies",
+                "A physical external hard drive connected directly to a local computer via USB",
+                "A temporary cache system integrated into the central processing unit",
+                "An encrypted database saved strictly inside a local company network",
+                "A software utility that compresses multimedia files to save local disk space"
+            ]
+        },
+        {
+            "Id": 4,
+            "Title": "Choose the correct answer: What is a database management system (DBMS)?",
+            "Answers": [
+                "Software that handles storage, retrieval, and updating of data in a structured system",
+                "A hardware unit responsible for controlling access to local storage drives",
+                "An operating system designed specifically for server infrastructure",
+                "A protocol used to host interactive web pages and media content",
+                "An antivirus tool that scans document folders for malicious patterns"
+            ]
+        },
+        {
+            "Id": 5,
+            "Title": "Choose the correct answer: What is a firewall?",
+            "Answers": [
+                "A network security device that monitors and filters incoming and outgoing network traffic",
+                "A physical cooling system implemented in server rooms to prevent overheating",
+                "A software solution used exclusively to speed up internet connection rates",
+                "A backup database architecture designed to recover deleted user accounts",
+                "An utility that converts text files into universally readable documents"
+            ]
+        },
+        {
+            "Id": 6,
+            "Title": "Choose the correct answer: What is the purpose of encryption in data communication?",
+            "Answers": [
+                "To protect the confidentiality of digital data stored on computer systems or transmitted over networks",
+                "To maximize transmission velocity across optical fiber cables",
+                "To completely remove redundant files and free up cloud capacity",
+                "To convert source code automatically into low-level executable applications",
+                "To handle user identity verification at physical security check points"
+            ]
+        },
+        {
+            "Id": 7,
+            "Title": "Choose the correct answer: Which device is used to connect different networks together?",
+            "Answers": [
+                "A router",
+                "A graphics processing unit",
+                "A continuous power supply unit",
+                "A standard network cable splitter",
+                "A sound card adapter"
+            ]
+        },
+        {
+            "Id": 8,
+            "Title": "Choose the correct answer: What is the main function of an operating system?",
+            "Answers": [
+                "To manage computer hardware, software resources, and provide common services for computer programs",
+                "To build databases and process advanced sql analytical equations",
+                "To run graphics processing units under extreme processing configurations",
+                "To act as a remote cloud storage facility for internet-connected applications",
+                "To provide exclusive firewall rules for corporate wide area networks"
+            ]
+        },
+        {
+            "Id": 9,
+            "Title": "Choose the correct definition: A binary system",
+            "Answers": [
+                "A base-2 number system that uses only two mutually exclusive digits: $0$ and $1$",
+                "A data storage method based on optical disks containing two layout layers",
+                "A network architecture where a user is connected directly to exactly two server setups",
+                "A programming framework built around managing two independent applications simultaneously",
+                "A hardware redundancy scheme involving duplicated primary computing logic units"
+            ]
+        },
+        {
+            "Id": 10,
+            "Title": "Choose the correct definition: A client",
+            "Answers": [
+                "A piece of computer hardware or software that accesses a service made available by a server",
+                "A server computer dedicated to monitoring external security configurations",
+                "An automated routine responsible for compiling mathematical programming algorithms",
+                "A physical peripheral utilized to type and enter instructions manually",
+                "A database indexing component that categorizes active file formats"
+            ]
+        },
+        {
+            "Id": 11,
+            "Title": "Choose the correct definition: A server",
+            "Answers": [
+                "A computer program or device that provides a functionality for other programs or devices",
+                "An interface through which end-users browse standard internet sites",
+                "A portable external flash drive used to transport secure archives",
+                "A localized application designed to edit individual text and document sheets",
+                "A network protocol that changes graphic resolutions depending on network bandwidth"
+            ]
+        },
+        {
+            "Id": 12,
+            "Title": "Choose the correct definition: A version control",
+            "Answers": [
+                "A system that records changes to a file or set of files over time so that you can recall specific versions later",
+                "A software filter that updates operating system drivers to the newest variants automatically",
+                "A database setup used to change text content into multi-language formats",
+                "A process to test if web scale configurations meet modern technical restrictions",
+                "A hardware module that matches clock cycles across graphic components"
+            ]
+        },
+        {
+            "Id": 13,
+            "Title": "Choose the correct definition: A communication in IT",
+            "Answers": [
+                "The electronic transmission of information, encompassing data, voice, and video between computing devices",
+                "The compilation process of low-level operational structures within server nodes",
+                "The interface connecting internal processing caches with random access memories",
+                "The physical storage structure utilized to save unstructured configuration backups",
+                "The execution flow of mathematical formulas inside multi-core graphic processors"
+            ]
+        },
+        {
+            "Id": 14,
+            "Title": "Choose the correct definition: An image",
+            "Answers": [
+                "A visual representation, such as a photo or illustration, stored digitally as a raster or vector file",
+                "A text document detailing system errors and database server crash variables",
+                "A protocol framework which routes communication lines over wide area connections",
+                "A specialized configuration table indicating firewall routing pathways",
+                "A single numeric symbol inside the binary numbering calculation scheme"
+            ]
+        },
+        {
+            "Id": 15,
+            "Title": "Choose the correct definition: A cell in a spreadsheet",
+            "Answers": [
+                "The intersection of a row and a column where data, text, or formulas can be entered",
+                "A security vault used to isolate malicious file formats and dangerous software scripts",
+                "A memory bank allocation within the primary random access storage framework",
+                "A localized server node serving static visual assets across a wide web application",
+                "The foundational unit of an algorithm processing binary structures"
+            ]
+        },
+        {
+            "Id": 16,
+            "Title": "Choose the correct definition: A virus",
+            "Answers": [
+                "A type of malicious software that, when executed, replicates itself by modifying other computer programs",
+                "A sudden drop in energy levels affecting server room performance metrics",
+                "A standard routing configuration conflict on local client interfaces",
+                "An unexpected update failure in data encryption utility programs",
+                "A network traffic overflow resulting from extensive database queries"
+            ]
+        },
+        {
+            "Id": 17,
+            "Title": "Choose the correct definition: Hardware",
+            "Answers": [
+                "The physical components that a computer system requires to function",
+                "The programmatic execution structures that direct database configurations",
+                "The digital instructions written in programming languages to run standard web portals",
+                "The sequence of software backup files organized on cloud assets",
+                "The set of licensing agreements governing free software distributions"
+            ]
+        },
+        {
+            "Id": 18,
+            "Title": "Choose the correct definition: A folder",
+            "Answers": [
+                "A virtual container within a digital file system used to organize files and other directories",
+                "A physical microchip tracking data communication histories over routers",
+                "A complex spreadsheet cell that combines multiple formulas at once",
+                "An algorithm step responsible for encrypting cloud file transfers",
+                "A hardware unit preventing graphics processing units from overheating"
+            ]
+        },
+        {
+            "Id": 19,
+            "Title": "Choose the correct definition: A spreadsheet",
+            "Answers": [
+                "An interactive computer application for organization, analysis, and storage of data in tabular form",
+                "A hardware board designed to hold main memory units and peripheral connection buses",
+                "A secure platform for deploying and scaling containerized cloud computing networks",
+                "A text-based configuration layout utilized to manage enterprise level firewalls",
+                "An asset file format mapping coordinate values for graphics rendering engines"
+            ]
+        },
+        {
+            "Id": 20,
+            "Title": "Choose the correct definition: Multimedia",
+            "Answers": [
+                "Content that uses a combination of different content forms such as text, audio, images, animations, or video",
+                "A system configuration allowing client nodes to connect with multiple database environments simultaneously",
+                "A sequence of identical algorithmic operations running inside modern graphics hardware",
+                "An encryption scheme deploying numerous mathematical algorithms to secure web requests",
+                "A high-speed networking cable designed to link remote corporate branches together"
+            ]
+        },
+        {
+            "Id": 21,
+            "Title": "Choose the correct definition: A webpage",
+            "Answers": [
+                "A hypertext document on the World Wide Web that can be viewed with a web browser",
+                "A hardware unit in server infrastructure controlling long-term file allocation setups",
+                "An isolated local database sector storing temporary login profiles and configuration assets",
+                "A physical interface port connecting external communication systems onto routers",
+                "A version control protocol branch applied during deployment phases"
+            ]
+        },
+        {
+            "Id": 22,
+            "Title": "Choose the correct definition: Encryption",
+            "Answers": [
+                "The process of converting information or data into a code, especially to prevent unauthorized access",
+                "The operational routine of running dual calculations inside standard processing units",
+                "The visual translation of raster assets onto adaptive modern monitor systems",
+                "The diagnostic scan executed to clean malicious registry elements out of client memory",
+                "The automated methodology of moving backup structures to localized storage facilities"
+            ]
+        },
+        {
+            "Id": 23,
+            "Title": "Choose the correct definition: An interface",
+            "Answers": [
+                "A shared boundary across which two or more separate components of a computer system exchange information",
+                "A security layer blocking unwanted data queries from accessing central cloud resources",
+                "A software compilation pipeline transforming functional scripts into binary code files",
+                "The mathematical expression representing storage volume calculations in server nodes",
+                "A dedicated network channel reserved for streaming audio and video multimedia items"
+            ]
+        },
+        {
+            "Id": 24,
+            "Title": "Choose the correct definition: Backup",
+            "Answers": [
+                "A copy of computer data taken and stored elsewhere so that it may be used to restore the original after a data loss event",
+                "A primary processing sequence managing background threads within an operating system layout",
+                "A network utility redirecting incoming web applications traffic during a server crash situation",
+                "An encrypted interface used by database administrations to change system schemas",
+                "The physical replacement of damaged graphics processing hardware on a client computer"
+            ]
+        },
+        {
+            "Id": 25,
+            "Title": "Choose the correct definition: Freeware",
+            "Answers": [
+                "Software that is available for use at no monetary cost, though the source code usually remains proprietary",
+                "An open-source network protocol designed to secure wide-scale data communication pathways",
+                "A tool used to scrub tracking cookies and corrupted temporary folders out of a local system",
+                "A computer operating environment that requires no physical hardware resources to run tasks",
+                "A system utility generating mathematical algorithms for cryptographic database entries"
+            ]
+        },
+        {
+            "Id": 26,
+            "Title": "Choose the correct definition: A hard drive",
+            "Answers": [
+                "A high-capacity self-contained storage device containing a read-write mechanism plus rotating magnetic disks",
+                "A processing engine located on modern graphics components to handle structural data matrices",
+                "A network connection architecture providing secure routing lines between distinct server areas",
+                "A complex spreadsheet operation designed to extract specific database records instantly",
+                "A software component tasked with coordinating background tasks across client interfaces"
+            ]
+        },
+        {
+            "Id": 27,
+            "Title": "Choose the correct definition: A crash",
+            "Answers": [
+                "A condition where a computer program or the entire operating system ceases to function properly and terminates",
+                "A physical connection collision occurring within high-speed fiber-optic routing equipment",
+                "The conversion error that transforms binary code back into unreadable system text layers",
+                "An intentional security reset triggered by local firewalls during suspicious external scans",
+                "A compression process designed to minimize media file sizes for rapid web delivery"
+            ]
+        },
+        {
+            "Id": 28,
+            "Title": "Choose the correct definition: Binary code",
+            "Answers": [
+                "A coding system using the binary digits $0$ and $1$ to represent computer processor instructions or other data",
+                "An encryption standard applying two variable security protocols to web communications data",
+                "A database entry method splitting structural records into two mirroring backend indices",
+                "A scripting framework managing the interactive display models of modern application webpages",
+                "A version control system restricted to saving exactly two development pathways concurrently"
+            ]
+        },
+        {
+            "Id": 29,
+            "Title": "Choose the correct definition: Backend",
+            "Answers": [
+                "The part of a software system or application that manages data, logic, and infrastructure, invisible to the end-user",
+                "The physical design configuration applied to client hardware devices during the construction phase",
+                "The older archival layers of a spreadsheet program holding deactivated historical metrics",
+                "A network boundary interface shielding local office setups from standard cloud traffic patterns",
+                "The display interface used by content teams to adjust graphical properties of multimedia"
+            ]
+        },
+        {
+            "Id": 30,
+            "Title": "Choose the correct definition: An algorithm",
+            "Answers": [
+                "A finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation",
+                "A temporary physical memory segment designed to speed up file delivery inside cloud storage configurations",
+                "A layout style detailing how user interface variables react to scaling on various browser programs",
+                "A malicious computer virus programmed to manipulate structural data configurations inside databases",
+                "A standardized network communication hardware component used to translate raw cable transmissions"
+            ]
+        },
+        {
+            "Id": 31,
+            "Title": "Translate into Russian: “cloud computing”",
+            "Answers": [
+                "облачные вычисления",
+                "туманные вычисления",
+                "удаленное программирование",
+                "сетевое администрирование",
+                "виртуальное хранилище"
+            ]
+        },
+        {
+            "Id": 32,
+            "Title": "Choose the correct answer: What is software?",
+            "Answers": [
+                "A generic term for organized collections of computer data and instructions, often broken into system and application software",
+                "The physical processing boards and memory cells that organize computing processes internally",
+                "A set of routing cables linking global corporate databases over wide area topologies",
+                "An external peripheral used to feed inputs into interactive graphics configurations",
+                "The cooling architecture maintaining optimal operating temperatures inside server racks"
+            ]
+        },
+        {
+            "Id": 33,
+            "Title": "what is the translation of the word «toggle keys»",
+            "Answers": [
+                "клавиши-переключатели",
+                "горячие клавиши",
+                "функциональные клавиши",
+                "системные клавиши",
+                "навигационные клавиши"
+            ]
+        },
+        {
+            "Id": 34,
+            "Title": "what is the translation of the word «presentation»",
+            "Answers": [
+                "презентация",
+                "представительство",
+                "программирование",
+                "производство",
+                "проектирование"
+            ]
+        },
+        {
+            "Id": 35,
+            "Title": "what is the translation of the word «Supplier»",
+            "Answers": [
+                "поставщик",
+                "покупатель",
+                "разработчик",
+                "пользователь",
+                "руководитель"
+            ]
+        },
+        {
+            "Id": 36,
+            "Title": "what is the translation of the word «colleague»",
+            "Answers": [
+                "коллега",
+                "клиент",
+                "конкурент",
+                "директор",
+                "подчиненный"
+            ]
+        },
+        {
+            "Id": 37,
+            "Title": "what is the translation of the word «current job»",
+            "Answers": [
+                "текущая работа",
+                "прошлая вакансия",
+                "поиск работы",
+                "удаленная работа",
+                "основная профессия"
+            ]
+        },
+        {
+            "Id": 38,
+            "Title": "what is the translation of the word «Medium-sized companies»",
+            "Answers": [
+                "средние компании",
+                "международные компании",
+                "малые предприятия",
+                "крупные корпорации",
+                "дочерние фирмы"
+            ]
+        },
+        {
+            "Id": 39,
+            "Title": "what is the translation of the word «Workplace rules»",
+            "Answers": [
+                "правила внутреннего распорядка",
+                "должностные инструкции",
+                "технические условия",
+                "государственные законы",
+                "правила безопасности"
+            ]
+        },
+        {
+            "Id": 40,
+            "Title": "what is «Extensible markup language»?",
+            "Answers": [
+                "XML - a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable",
+                "EML - an encrypted database scheme deployed to parse mathematical equations over multi-cloud environments",
+                "XHTML - an extension framework managing interface style adaptations on remote mobile application systems",
+                "EXL - a low-level coding framework designed to configure backend server hardware routines automatically",
+                "EXML - a specific cloud platform protocol handling high-volume text compression formats during crashes"
+            ]
+        },
+        {
+            "Id": 41,
+            "Title": "what is «Extended Graphics Array»?",
+            "Answers": [
+                "XGA - a high-resolution graphics standard providing specific display resolutions and color depths",
+                "EGA - an external hardware unit processing parallel mathematical algorithms on client environments",
+                "EXG - a version control library handling graphic asset distributions across server deployments",
+                "XAA - an interface framework designed to render multi-dimensional multimedia models in database layouts",
+                "EGAR - a routing configuration optimizing data transmission flow across wide area display connections"
+            ]
+        },
+        {
+            "Id": 42,
+            "Title": "what is «What you see is what you get»?",
+            "Answers": [
+                "WYSIWYG - a system in which content during editing appears in a form closely corresponding to its appearance when printed or displayed",
+                "WYS - a cloud storage monitoring tool tracking precise metric balances across localized client setups",
+                "WSW - a specific database query syntax designed to pull clean matching structural data profiles",
+                "WYG - a version control routine showing exact code comparisons before final application changes are merged",
+                "WYSWYG - an algorithm managing text field scaling properties in adaptive spreadsheet configurations"
+            ]
+        },
+        {
+            "Id": 43,
+            "Title": "what is «Worldwide web»?",
+            "Answers": [
+                "WWW - an information system where documents and other web resources are identified by URLs and accessible over the Internet",
+                "WWEB - a globally distributed database network handling corporate backup storage allocations",
+                "WWN - a specific hardware interface protocol connecting global routing installations together",
+                "WWD - a collection of algorithms designed to filter out malicious software threats across clients",
+                "WWWB - a secure encryption structure protecting enterprise wide multi-user network tunnels"
+            ]
+        },
+        {
+            "Id": 44,
+            "Title": "what is «Word processing»?",
+            "Answers": [
+                "The phrase describing the creation, editing, formatting, and printing of digital text documents using software applications",
+                "The execution speed calculation tracking how many binary terms a central unit parses in $1$ second",
+                "The automated transformation process converting raw programming text into machine language binary code",
+                "The localized database procedure verifying input variables against structural indexing criteria",
+                "The network mechanism that parses textual server domain aliases into numeric routing configurations"
+            ]
+        },
+        {
+            "Id": 45,
+            "Title": "what is «Wireless Fidelity»?",
+            "Answers": [
+                "Wi-Fi - a wireless networking technology that allows devices to connect to a local area network or the internet using radio waves",
+                "WIFI - a proprietary backup encryption software designed to mirror local file folders directly onto cloud platforms",
+                "WIFID - a specialized signal filter module embedded inside modern communication hardware assets",
+                "WF - a database query language optimizing parallel metric processing on high-end server configurations",
+                "WIFI-FI - an automated communication framework matching client device security certificates with router access points"
+            ]
+        },
+        {
+            "Id": 46,
+            "Title": "what is «Wide area network»?",
+            "Answers": [
+                "WAN - a telecommunications network that extends over a large geographic area for the primary purpose of computer networking",
+                "WNET - a localized network of multiple database nodes operating within a single server rack infrastructure",
+                "WANE - a wireless communication protocol managing connections between peripheral hardware tools and a client computer",
+                "WA-NET - a specialized firewall configuration blocking outside traffic entry into internal company folders",
+                "WANET - an algorithm optimizing file distribution pathways across multiple spreadsheet files concurrently"
+            ]
+        },
+        {
+            "Id": 47,
+            "Title": "what is «Web accessibility initiative»?",
+            "Answers": [
+                "WAI - an effort by the W3C to improve the accessibility of the World Wide Web for people with disabilities",
+                "WAIN - a specific cloud computing program authorizing client entries into restricted data networks",
+                "WEB-AI - an artificial intelligence framework automating structural code updates during software version changes",
+                "WATI - a web application security routine testing firewall resilience against concurrent malicious attacks",
+                "WBA - a standardized database indexing model facilitating instantaneous lookup across text collections"
+            ]
+        },
+        {
+            "Id": 48,
+            "Title": "what is «Video Graphics adapter/array»?",
+            "Answers": [
+                "VGA - a standard display interface used to connect computers to monitors, originally introduced by IBM in $1987$",
+                "VIAA - a specific hardware accelerator microchip mounted onto modern parallel graphics cards",
+                "VGAA - a software graphics driver rendering complex visual multimedia content within browser windows",
+                "VA - a localized storage array architecture handling rapid read-write sequences for database log files",
+                "VGD - an algorithmic protocol mapping image color coordinate conversions across client system displays"
+            ]
+        },
+        {
+            "Id": 49,
+            "Title": "what is «Visual display unit»?",
+            "Answers": [
+                "VDU - a device with a screen that displays characters or graphics representing data from a computer memory",
+                "VDUNIT - a technical specification outlining the exact pixel dimensional boundaries of an image file",
+                "VIU - a processing module that translates programming commands into actionable text on modern terminals",
+                "VDS - a cloud-hosted interface platform providing automated video compression algorithms for web teams",
+                "VDU-M - a backup hardware controller tracking configuration operations across multiple monitoring installations"
+            ]
+        },
+        {
+            "Id": 50,
+            "Title": "what is «Videocassette recorder»?",
+            "Answers": [
+                "VCR - an electromechanical device that records analog audio and analog video from television or another source onto a removable magnetic tape cassette",
+                "VCO - an older operating system tool utilized to record live video capture onto early digital computer spreadsheets",
+                "VREC - a multimedia streaming codec optimizing parallel file transmissions over modern wide area networks",
+                "VCR-D - a localized server backup routine capturing system state images to protect against software crashes",
+                "VC-REC - a specific hardware capturing interface that translates raster visuals into low-level binary code strings"
+            ]
+        },
+        {
+            "Id": 51,
+            "Title": "what is «Value added tax»?",
+            "Answers": [
+                "VAT - a consumption tax placed on a product whenever value is added at each stage of the supply chain, from production to the point of sale",
+                "VATA - a specific software calculation library built into spreadsheet programs to check financial database entries",
+                "VTX - an automated business-to-business cloud computing metric tracking operational resource expenditures",
+                "VTAX - a security protocol validating digital transaction compliance levels during online application purchases",
+                "VAT-M - a mathematical logic structure evaluating processing performance costs inside enterprise cloud systems"
+            ]
+        },
+        {
+            "Id": 52,
+            "Title": "what is «Tagged image file format»?",
+            "Answers": [
+                "TIFF - a computer file format for storing raster graphics images, popular among graphic artists and the publishing industry",
+                "TAG-IF - a metadata tag used inside extensible markup languages to identify visual media links within text",
+                "TIFFF - a specialized database structure holding compression keys for large multimedia application archives",
+                "TIFM - an image rendering pipeline configuration standard implemented within modern graphics processing software",
+                "TIMF - a version control tool tracing changes made specifically to image asset dimensions in deployment branches"
+            ]
+        },
+        {
+            "Id": 53,
+            "Title": "what is «Thin film transistor»?",
+            "Answers": [
+                "TFT - a special type of field-effect transistor used in liquid-crystal displays (LCDs) to improve image qualities like addressability and contrast",
+                "TFTR - a microchip component that steps up processing rates inside early central processing units",
+                "TMIN - a software-based layout simulator testing webpage rendering speeds on mobile client browsers",
+                "TFT-AMP - a hardware unit protecting sensitive server data storage drives from electric current fluctuations",
+                "TT-TRANS - a network routing algorithm managing communications flow between distinct wide area connection lines"
+            ]
+        },
+        {
+            "Id": 54,
+            "Title": "what is «Secure sockets layer»?",
+            "Answers": [
+                "SSL - a deprecated cryptographic protocol designed to provide communications security over a computer network, superseded by TLS",
+                "SSLA - an advanced firewall routing layer preventing denial of service incidents on backend databases",
+                "SEC-SL - a software utility framework verifying user identity credentials within secure enterprise cloud platforms",
+                "SSLY - a version control access mechanism locking development code files during production environment deployments",
+                "S-SOCK - a specific hardware connection terminal linking multi-client setups to unified server structures"
+            ]
+        },
+        {
+            "Id": 55,
+            "Title": "what is «Structured query language»?",
+            "Answers": [
+                "SQL - a domain-specific language used in programming and designed for managing data held in a relational database management system",
+                "STQL - a specialized text-parsing script designed to convert word files into extensible markup language documents",
+                "S-QUERY - a communication line protocol optimizing mathematical command deliveries to graphics processors",
+                "SQLR - a cloud automation toolkit scaling out parallel storage arrays during extreme web application loads",
+                "SQ-LANG - an operating system resource allocation index monitoring background software configuration edits"
+            ]
+        },
+        {
+            "Id": 56,
+            "Title": "what is «Simple mail transfer protocol»?",
+            "Answers": [
+                "SMTP - an internet standard communication protocol for electronic mail transmission",
+                "SMPT - a database utility algorithm verifying email record layouts within storage systems",
+                "S-MAIL - an encrypted messaging interface setup utilized by client nodes to send remote system logs",
+                "SMTP-S - a secure wide area network firewall rule designed to completely block unencrypted text transfers",
+                "SMTRP - a specific version control automation routine delivering automated bug report cards to teams"
+            ]
+        },
+        {
+            "Id": 57,
+            "Title": "what is «Short message service»?",
+            "Answers": [
+                "SMS - a text messaging service component of most telephone, Internet, and mobile device systems, using standardized communication protocols",
+                "SMSRV - a cloud storage platform subsystem processing temporary short text updates from application users",
+                "SMSG - a low-level processor flag denoting simple instruction sequences inside hardware logic gates",
+                "SH-MSG - a specific network script transmitting automated crash warnings from servers to technical teams",
+                "SMS-NET - a routing layout optimizing brief data packet exchanges between wide area connection links"
+            ]
+        },
+        {
+            "Id": 58,
+            "Title": "what is «Subscriber Identity module»?",
+            "Answers": [
+                "SIM - an integrated circuit that is intended to securely store the international mobile subscriber identity (IMSI) number and its related key",
+                "SIMOD - a software module managing profile synchronization tasks on enterprise web application portals",
+                "S-ID - a localized database table tracking active client login privileges inside a secure firewall environment",
+                "SIMUL - a computer hardware emulator allowing parallel execution of distinct mobile operating environments",
+                "SIM-CARD - a version control repository path tracking identification script variations across multi-tenant nodes"
+            ]
+        },
+        {
+            "Id": 59,
+            "Title": "what is «Read only memory»?",
+            "Answers": [
+                "ROM - a type of non-volatile memory used in computers and other electronic devices that cannot be easily modified after manufacture",
+                "RMON - a specialized network management utility measuring data traffic metrics on wide area router nodes",
+                "RO-MEM - a temporary memory buffer utilized by graphics engines to cache static raster image coordinates",
+                "RMY - a specific database storage designation preventing user rows from being deleted during backups",
+                "RO-MEDIA - an administrative interface format restricting multimedia folder updates to view-only access modes"
+            ]
+        },
+        {
+            "Id": 60,
+            "Title": "what is «Research in motion»?",
+            "Answers": [
+                "RIM - the former name of BlackBerry Limited, a Canadian wireless telecommunications software and mobile device company",
+                "RIMO - an algorithmic concept tracking the propagation velocity of optical signals through network lines",
+                "RES-MOT - a development testing process examining how web interfaces adapt when scaling across moving device views",
+                "R-MOTION - a computer graphics rendering method updating frame configurations based on sequential data logic",
+                "RIM-SYS - an automated cloud framework dynamically shifting operational server workloads during peak application traffic"
+            ]
+        },
+        {
+            "Id": 61,
+            "Title": "what is «Reduced instruction set computer»?",
+            "Answers": [
+                "RISC - a computer CPU design strategy based on the insight that simplified instructions can provide higher performance",
+                "RI-COMP - an operating system setup optimized to execute simple automation formulas on small client engines",
+                "RISCC - a high-speed hardware bus structure routing binary commands directly to modern graphics processing units",
+                "RSET - a software framework minimizing the code overhead required to run complex database operations",
+                "RIC - a network layout method minimizing router pathways across interconnected local communications systems"
+            ]
+        },
+        {
+            "Id": 62,
+            "Title": "what is «Radio-Frequency identification»?",
+            "Answers": [
+                "RFID - a technology that uses electromagnetic fields in the radio frequency range to automatically identify and track tags attached to objects",
+                "RF-IDEN - an encrypted communication script verifying device profiles before granting cloud access",
+                "RFI - a hardware component checking radio signal interference levels inside corporate wireless network hubs",
+                "RF-DATA - a database index structure categorizing incoming wireless logs generated by field sensors",
+                "RFID-M - an automated tool pushing software updates to connected terminal devices via wireless broadcast channels"
+            ]
+        },
+        {
+            "Id": 63,
+            "Title": "what is «Random access memory»?",
+            "Answers": [
+                "RAM - a form of computer data storage that stores data and machine code currently being used, allowing data items to be read or written in almost the same amount of time",
+                "RM-STOR - a cloud computing backup tier moving secondary files to remote archive directories automatically",
+                "RAMA - a mathematical scheduling algorithm controlling processor task queues within multi-core system environments",
+                "R-ACCESS - a security protocol checking user privileges before exposing internal structured database arrays",
+                "RAM-DRV - a software system mirroring local file modifications directly onto physical hard drives for safety"
+            ]
+        },
+        {
+            "Id": 64,
+            "Title": "what is «Point to point protocol»?",
+            "Answers": [
+                "PPP - a data link layer communication protocol used to establish a direct connection between two nodes over a wide area network",
+                "PPPRO - a specific encryption algorithm wrapping data exchanges inside corporate cloud architectures",
+                "P-LINK - an interface module managing direct data delivery between a central client application and its backend",
+                "PPP-NET - a specialized firewall framework filtering packet routes across matching server connections",
+                "PTOP - a version control routine synchronizing code differences between two localized software asset folders"
+            ]
+        },
+        {
+            "Id": 65,
+            "Title": "what is «Pages per minute»?",
+            "Answers": [
+                "PPM - a measure of the printing speed of inkjet and laser printers, indicating how many text sheets can be processed in $60$ seconds",
+                "PP-MIN - a cloud infrastructure performance metric recording how many webpage assets serve out every minute",
+                "PPM-SYS - an operating system benchmark tracking the volume of database files parsed during background execution cycles",
+                "PM - a communication standard measuring text packet delivery counts over corporate wide area network connections",
+                "PP-MET - an algorithm analyzing user input response durations inside complex interface spreadsheets"
+            ]
+        },
+        {
+            "Id": 66,
+            "Title": "what is «Portable network graphic»?",
+            "Answers": [
+                "PNG - a raster-graphics file format that supports lossless data compression and was created as an improved, non-patented replacement for GIF",
+                "P-NET - a wireless communication protocol framework running lightweight multimedia applications over local nodes",
+                "PNGR - an enterprise level cloud server designed exclusively to store and distribute large-scale vector assets",
+                "PNTG - a software layout utility converting text-based graphics instructions into basic binary image layers",
+                "PORT-NG - a network interface option establishing secure communication connections for active client applications"
+            ]
+        },
+        {
+            "Id": 67,
+            "Title": "what is «picture element»?",
+            "Answers": [
+                "Pixel - a minute area of illumination on a display screen, one of many from which an image is composed",
+                "PELM - a basic text format used to write structural layout code inside modern web application templates",
+                "PIX - a hardware module calculating coordinate equations within high-end graphics processing setups",
+                "P-ELEM - an asset node containing graphic properties inside an extensible markup language configuration file",
+                "PIXEL-E - a localized software filter checking image clarity parameters before uploading them into database tables"
+            ]
+        },
+        {
+            "Id": 68,
+            "Title": "what is «Personal Identification number»?",
+            "Answers": [
+                "PIN - a numeric password used in the process of authenticating a user accessing a system",
+                "PINUM - an encrypted client profile identity tag stored inside localized security firewall registers",
+                "PI-NUM - a specific database primary key layout indexing customer records automatically across cloud arrays",
+                "PID - an operating system process tracker indicating which application tool is actively demanding memory resources",
+                "PIN-SYS - an automated authorization protocol running security handshakes across wide area network nodes"
+            ]
+        },
+        {
+            "Id": 69,
+            "Title": "What is «Pretty good privacy»?",
+            "Answers": [
+                "PGP - an encryption program that provides cryptographic privacy and authentication for data communication",
+                "PGPRIV - a localized firewall policy establishing baseline network safety access settings for client groups",
+                "PPY - a corporate cloud storage service tier offering baseline access speeds for archive file configurations",
+                "PG-PRO - a version control framework ensuring code integrity during major server software updates",
+                "PRE-PRIV - a database privacy configuration option masking sensitive customer spreadsheet columns automatically"
+            ]
+        },
+        {
+            "Id": 70,
+            "Title": "what is «Page Description language»?",
+            "Answers": [
+                "PDL - a computer language that describes the appearance of a printed page in a higher level than an actual output raster bitmap",
+                "PAGED - an extensible markup language sub-variant used to define structural properties of web application portals",
+                "PDLANG - a script library managing adaptive text configurations inside multi-user spreadsheet calculations",
+                "PLD - an algorithm running layout optimizations on multi-media content before it deploys onto client monitors",
+                "PG-DESC - a backend database schema tracking text dimensions and graphic asset links inside configuration charts"
+            ]
+        },
+        {
+            "Id": 71,
+            "Title": "what is «Personal Digital Assistant»?",
+            "Answers": [
+                "PDA - a variety of mobile device which functions as a personal information manager, largely superseded by smartphones",
+                "PDAS - an automated software routine providing technical help options to users experiencing computer crashes",
+                "P-ASSIST - a cloud computing utility optimizing resource balances across multiple client server applications",
+                "PDAT - a specialized hardware adapter establishing communication links between computers and peripheral devices",
+                "PER-DA - a secure database storage directory containing local identity setups and configuration settings"
+            ]
+        },
+        {
+            "Id": 72,
+            "Title": "what is «Printer control language»?",
+            "Answers": [
+                "PCL - a page description language developed by Hewlett-Packard as a printer protocol and become a de facto industry standard",
+                "PR-CTRL - an operating system background utility scheduling parallel document processing tasks across local networks",
+                "PCLC - a software driver package converting text files into binary format for specialized hardware processing",
+                "PLANG - an interface coding standard determining how layout assets map onto physical output media sheets",
+                "PRN-LANG - a database routine translating transaction summaries into readable log files for server teams"
+            ]
+        },
+        {
+            "Id": 73,
+            "Title": "what is «Personal Area network»?",
+            "Answers": [
+                "PAN - a computer network for interconnecting electronic devices centered on an individual person's workspace",
+                "P-NET - an isolated local network line connecting client systems to corporate backup storage units",
+                "PANET - a cloud-hosted framework managing user profile directories across wide area system locations",
+                "PAR-NET - a specific hardware bus structure running dual mathematical calculation logic within central microchips",
+                "PAN-WIRE - a secure firewall configuration layer isolating sensitive office hardware nodes from standard web traffic"
+            ]
+        },
+        {
+            "Id": 74,
+            "Title": "what is «Portable document format»?",
+            "Answers": [
+                "PDF - a file format developed by Adobe in $1992$ to present documents, including text formatting and images, independent of application software, hardware, and operating systems",
+                "P-DOC - an encrypted text data layout applied strictly for moving secure spreadsheet files over wide network tunnels",
+                "PDFF - a specific cloud database table framework handling high-volume asset archives during application updates",
+                "PORT-DOC - a version control tool packaging executable application files alongside system documentation summaries",
+                "PDMT - an algorithmic specification detailing how graphic raster files scale when rendered inside web browsers"
+            ]
+        },
+        {
+            "Id": 75,
+            "Title": "what is «Operating System»?",
+            "Answers": [
+                "OS - system software that manages computer hardware, software resources, and provides common services for computer programs",
+                "OPS - an automated cloud configuration manager scaling database server processing parameters under load",
+                "OPSYS - a specific network security device blocking unauthorized client connections across wide area infrastructure",
+                "OSY - a low-level programming language used to construct foundational mathematical logic inside graphics cards",
+                "O-SYS - an external hardware unit managing backup procedures across secondary network storage configurations"
+            ]
+        },
+        {
+            "Id": 76,
+            "Title": "what is «Object oriented programming»?",
+            "Answers": [
+                "OOP - a programming paradigm based on the concept of \"objects\", which can contain data and code: data in the form of fields, and code, in the form of procedures",
+                "O-PROG - an algorithmic scripting methodology designed solely for compiling low-level binary calculations efficiently",
+                "OOPL - a specific text validation format checking database schema compliance during application updates",
+                "OBJ-P - a version control system protocol managing visual asset variations across multiple deployment pipelines",
+                "OOPM - a cloud architecture strategy distributing software load operations over separate physical server installations"
+            ]
+        },
+        {
+            "Id": 77,
+            "Title": "what is «Microsoft`s object linking and embedding standard»?",
+            "Answers": [
+                "OLE - a proprietary technology developed by Microsoft that allows embedding and linking to documents and other objects",
+                "MOLE - a specialized database query language optimizing row connections within complex relational tables",
+                "MSOE - an operating system security configuration blocking unauthorized data transfers within local folders",
+                "OL-EMB - an interface design routine managing how multimedia variables dynamically scale inside web applications",
+                "OLE-STD - a version control setup tracking component integration variations across enterprise software branches"
+            ]
+        },
+        {
+            "Id": 78,
+            "Title": "what is «Optical character recognition»?",
+            "Answers": [
+                "OCR - the electronic or mechanical conversion of images of typed, handwritten or printed text into machine-encoded text",
+                "OPCR - a specific hardware scanner tool verifying identification numbers on security check gates",
+                "OC-REC - an algorithm separating background noise elements from voice recordings in multimedia applications",
+                "O-CHAR - an extensible markup language parsing routine that categorizes text fonts inside document files",
+                "OCRG - a database index routine structuring unstructured image metadata files into ordered information layouts"
+            ]
+        },
+        {
+            "Id": 79,
+            "Title": "what is «Network Interface Card»?",
+            "Answers": [
+                "NIC - a computer hardware component that connects a computer to a computer network",
+                "NETC - a specialized firewall administration module checking web communication protocols dynamically",
+                "N-CARD - an encrypted physical memory expansion unit built to speed up analytical computations in database servers",
+                "NICA - a software application utility routing background data backups directly onto cloud-hosted arrays",
+                "NI-CHIP - a configuration profile inside the operating system layer handling peripheral hardware setup configurations"
+            ]
+        },
+        {
+            "Id": 80,
+            "Title": "what is «Modulator/Demodulator»?",
+            "Answers": [
+                "Modem - a hardware device that converts data from a digital format into a format suitable for an analog transmission medium like telephone or radio",
+                "MDM - a cloud-based server management tool tracking application deployment versions across remote server systems",
+                "MOD-DEM - an algorithm within graphics processing software scaling visual layout resolutions dynamically",
+                "M-DEM - a network communication line routing data traffic between separate wide area local network nodes",
+                "MODEM-X - a security firewall architecture examining query code patterns to prevent remote database crashes"
+            ]
+        },
+        {
+            "Id": 81,
+            "Title": "What is «Metropolitan area network»?",
+            "Answers": [
+                "MAN - a computer network that interconnects users with computer resources in a geographic region or area larger than that covered by a large local area network but smaller than the area covered by a wide area network",
+                "MAN - a specialized database engine handling multi-threading operations across cloud architectures",
+                "MAN - a high-speed hardware bus linking central processing memory to primary graphics cards",
+                "MAN - a wireless protocol establishing client synchronization routines over short tracking ranges",
+                "MAN - an automated interface designed to compress multimedia file folders before a server crash"
+            ]
+        },
+        {
+            "Id": 82,
+            "Title": "What is «Liquid-crystal display»?",
+            "Answers": [
+                "LCD - a flat-panel display or other electronically modulated optical device that uses the light-modulating properties of liquid crystals combined with polarizers",
+                "LCD - a software rendering pipeline adjusting image transparency variables within web applications",
+                "LCD - a configuration layer monitoring data communication packets inside local network systems",
+                "LCD - an algorithm calculating the lowest shared divisor for complex mathematical variables",
+                "LCD - a backup hardware controller tracking operating system version metrics automatically"
+            ]
+        },
+        {
+            "Id": 83,
+            "Title": "What is «Local area network»?",
+            "Answers": [
+                "LAN - a computer network that interconnects computers within a limited area such as a residence, school, laboratory, university campus or office building",
+                "LAN - a cloud platform architecture managing distributed structured database arrays globally",
+                "LAN - a programming paradigm optimizing memory allocation speeds for active server tasks",
+                "LAN - an interface security protocol filtering unencrypted textual traffic to prevent viruses",
+                "LAN - a text description standard rendering web layout dimensions on mobile client engines"
+            ]
+        },
+        {
+            "Id": 84,
+            "Title": "What is «Information technology»?",
+            "Answers": [
+                "IT - the set of tools, processes, and methodologies and associated equipment used to collect, process, and present information",
+                "IT - a dedicated framework establishing communication pipelines between two specific router units",
+                "IT - a low-level binary programming language used to build hardware instruction sets",
+                "IT - a software utility handling automatic data compression sequences inside spreadsheet cells",
+                "IT - a specific type of cryptographic firewall shielding backend storage systems from crashes"
+            ]
+        },
+        {
+            "Id": 85,
+            "Title": "What is «Internet service provider»?",
+            "Answers": [
+                "ISP - an organization that provides services for accessing, using, or participating in the Internet",
+                "ISP - an interactive application hosting user profiles inside structural database layouts",
+                "ISP - a peripheral hardware component amplifying wireless signal frequencies for local users",
+                "ISP - an automated testing system measuring page description rendering speeds on clients",
+                "ISP - a configuration protocol managing data version logs across remote cloud networks"
+            ]
+        },
+        {
+            "Id": 86,
+            "Title": "What is «Instruction register»?",
+            "Answers": [
+                "IR - the part of a CPU's control unit that holds the instruction currently being executed or decoded",
+                "IR - a tracking file recording continuous communication histories between networks",
+                "IR - a software interface linking spreadsheet charts to external cloud computing directories",
+                "IR - an analytical index organizing data table schemas inside relational databases",
+                "IR - a security rule verifying client authenticity signatures prior to executing a download"
+            ]
+        },
+        {
+            "Id": 87,
+            "Title": "What is «Internet protocol»?",
+            "Answers": [
+                "IP - the network layer communications protocol in the Internet protocol suite for relaying datagrams across network boundaries",
+                "IP - a localized server utility designed to render complex multimedia text sheets",
+                "IP - an automated backup loop saving operating system configurations onto physical hard drives",
+                "IP - a visual display calibration script tracking pixel positioning layouts on monitors",
+                "IP - a version control library merging development source pathways during software builds"
+            ]
+        },
+        {
+            "Id": 88,
+            "Title": "What is «Instant messaging»?",
+            "Answers": [
+                "IM - a type of online chat that offers real-time text transmission over the Internet or other computer networks",
+                "IM - an internal system cache designed to store heavy graphic assets dynamically",
+                "IM - an automated database indexing method executing data lookup speeds in $1$ millisecond",
+                "IM - a low-level hardware interrupt command alerting the processor to a device connection",
+                "IM - a file transfer compression standard shrinking media dimensions for web application scale"
+            ]
+        },
+        {
+            "Id": 89,
+            "Title": "What is «Information and communications technologies»?",
+            "Answers": [
+                "ICT - an extensional term for information technology that stresses the role of unified communications and the integration of telecommunications and computers",
+                "ICT - a specialized cryptographic routine masking textual entries inside cloud backup environments",
+                "ICT - a hardware validation board synchronizing core memory operations across server arrays",
+                "ICT - a software layout template detailing interactive animation variables within browser engines",
+                "ICT - an interface driver resolving communication conflicts between central processors and routers"
+            ]
+        },
+        {
+            "Id": 90,
+            "Title": "What is «International business machines»?",
+            "Answers": [
+                "IBM - an American multinational technology corporation headquartered in Armonk, New York, nicknamed \"Big Blue\"",
+                "IBM - an older binary calculations structure allocating dual math threads on client nodes",
+                "IBM - a network protocol routing complex database queries across wide area connections",
+                "IBM - a version control utility tracking software asset modifications inside public clouds",
+                "IBM - a specialized firewall framework filtering malicious background processes from crashing"
+            ]
+        },
+        {
+            "Id": 91,
+            "Title": "What is «Input/output»?",
+            "Answers": [
+                "I/O - the communication between an information processing system, such as a computer, and the outside world, possibly a human or another information processing system",
+                "I/O - a specific calculation ratio measuring processing efficiency changes inside graphic units",
+                "I/O - an automated backup software engine cloning user document folders onto cloud storage",
+                "I/O - a binary digit evaluation algorithm processing sequential $0$ and $1$ logic strings",
+                "I/O - an active network firewall state indicating open port communication lines"
+            ]
+        },
+        {
+            "Id": 92,
+            "Title": "What is «Hypertext transfer protocol»?",
+            "Answers": [
+                "HTTP - an application layer protocol in the Internet protocol suite model for distributed, collaborative, hypermedia information systems",
+                "HTTP - a hardware controller card managing disk storage read configurations inside server units",
+                "HTTP - an operating system resource index tracking memory usages across client applications",
+                "HTTP - a visual compilation utility translating script code into compressed raster images",
+                "HTTP - a specialized database administration framework formatting structured table cells"
+            ]
+        },
+        {
+            "Id": 93,
+            "Title": "What is «Hard disk drive»?",
+            "Answers": [
+                "HDD - an electro-mechanical data storage device that uses magnetic storage to store and retrieve digital information using one or more rigid rapidly rotating platters",
+                "HDD - a high-speed temporary software cache located directly within central arithmetic processors",
+                "HDD - a network diagnostic utility tracking communication packet routing patterns across gateways",
+                "HDD - an open-source development package utilized to compile programming code into binary",
+                "HDD - an adaptive user interface standard scaling web pages to specific screen sizes"
+            ]
+        },
+        {
+            "Id": 94,
+            "Title": "What is «Graphical user interface»?",
+            "Answers": [
+                "GUI - a form of user interface that allows users to interact with electronic devices through graphical icons and audio indicators such as primary notation",
+                "GUI - a backend infrastructure layer coordinating data transactions between multiple servers",
+                "GUI - an encrypted script methodology protecting information transfers over wide networks",
+                "GUI - a hardware acceleration protocol matching system clock speeds during extreme loads",
+                "GUI - a backup automation schedule duplicating spreadsheet database directories"
+            ]
+        },
+        {
+            "Id": 95,
+            "Title": "What is «Global positioning system»?",
+            "Answers": [
+                "GPS - a satellite-based radionavigation system owned by the United States government and operated by the United States Space Force",
+                "GPS - a global cloud routing network tracking active data transfer paths between client nodes",
+                "GPS - a structural database indexing method using geographical coordinates to scale servers",
+                "GPS - an interface layout language aligning multimedia text and raster file dimensions",
+                "GPS - a software version control manager synchronizing code commits across geographic boundaries"
+            ]
+        },
+        {
+            "Id": 96,
+            "Title": "What is «Gigabyte»?",
+            "Answers": [
+                "GB - a unit of digital information equal to $10^9$ bytes or $2^{30}$ bytes, depending on the context of measurement standards",
+                "GB - a processing cycle standard indicating how many mathematical formulas a GPU finishes in $1$ second",
+                "GB - a network transfer metrics indicator showing the current data bandwidth speed over an optical cable",
+                "GB - a database volume limit determining how many individual text rows can occupy a cell block",
+                "GB - a file encryption level applying highly complex binary calculations to safeguard records"
+            ]
+        },
+        {
+            "Id": 97,
+            "Title": "What is «Digital video interface»?",
+            "Answers": [
+                "DVI - a video display interface developed by the Digital Display Working Group used to connect a video source to a display device",
+                "DVI - a continuous communication standard transmitting digital audio assets across localized routers",
+                "DVI - an administrative cloud platform panel providing interface scaling adjustments for software",
+                "DVI - an operating system driver translating program configurations into database tables",
+                "DVI - an automated compression tool packing multimedia files into minimized archives"
+            ]
+        },
+        {
+            "Id": 98,
+            "Title": "What is «Digital versatile disc- read only memory»?",
+            "Answers": [
+                "DVD-ROM - a read-only digital versatile disc commonly used for storing large software applications that cannot be modified or erased",
+                "DVD-ROM - a localized data storage block caching dynamic database query histories on client nodes",
+                "DVD-ROM - a high-end network firewall utility analyzing incoming binary code profiles for viruses",
+                "DVD-ROM - a hardware interface controller handling streaming video transfers over wide networks",
+                "DVD-ROM - a spreadsheet calculation framework processing cell matrix configurations in real time"
+            ]
+        },
+        {
+            "Id": 99,
+            "Title": "What is «Digital versatile disc- recordable»?",
+            "Answers": [
+                "DVD-R - a write-once digital versatile disc format that can record data exactly one time and then behaves as a read-only medium",
+                "DVD-R - an automated software backup pipeline copying cloud storage structures into remote folders",
+                "DVD-R - a hardware processing routine tracking client operating state balances during crashes",
+                "DVD-R - a communication network router matching device configurations automatically over Wi-Fi",
+                "DVD-R - an extensible markup language code generator building web page interface templates"
+            ]
+        },
+        {
+            "Id": 100,
+            "Title": "What is «Digital versatile disc or digital video disc»?",
+            "Answers": [
+                "DVD - a digital optical disc data storage format invented and developed in $1995$ and used to store high-capacity data and high-definition video",
+                "DVD - a continuous processing pipeline that synchronizes graphics cards operations across client machines",
+                "DVD - a backend software database module designed to organize tabular information layouts",
+                "DVD - a network configuration framework optimizing internet routing tracks across wide geographic locations",
+                "DVD - a version control script automating code builds before deploying application assets"
+            ]
+        },
+        {
+            "Id": 101,
+            "Title": "What is «Digital versatile disc- rewritable»?",
+            "Answers": [
+                "DVD-RW - a digital optical disc storage format that can be written, erased, and rewritten multiple times",
+                "DVD-RW - an advanced database server configuration permitting real-time schema modifications",
+                "DVD-RW - a network protocol updating client firewall rule tables without dropping communication connections",
+                "DVD-RW - an automated compilation pipeline regenerating binary files whenever version control logs change",
+                "DVD-RW - a specialized graphic rendering routine altering picture aspect ratios inside multimedia web pages"
+            ]
+        },
+        {
+            "Id": 102,
+            "Title": "What is «Domain name system»?",
+            "Answers": [
+                "DNS - a hierarchical and distributed naming system for computers, services, or other resources connected to the Internet or a private network",
+                "DNS - a security encryption methodology securing text strings inside operational data folders",
+                "DNS - a hardware processing component translating analog visual signals into digital graphics frames",
+                "DNS - a database application platform tracking employee workspace rules and holiday tables",
+                "DNS - a software cache algorithm checking if client operating platforms require version patches"
+            ]
+        },
+        {
+            "Id": 103,
+            "Title": "What is «Digital multimedia broadcasting»?",
+            "Answers": [
+                "DMB - a digital radio transmission technology for sending multimedia data such as TV, radio and data casting to mobile devices",
+                "DMB - a high-volume cloud storage layer caching uncompressed raster images for web developers",
+                "DMB - a communication line protocol connecting enterprise database engines across distant server nodes",
+                "DMB - an architectural web scalability framework tracking active load balances on backend systems",
+                "DMB - an automation script parsing spreadsheet column variables into unified text document files"
+            ]
+        },
+        {
+            "Id": 104,
+            "Title": "What is «Digital-light processing»?",
+            "Answers": [
+                "DLP - a set of chipsets based on optical micro-electromechanical technology that uses a digital micromirror device, mostly used in front projectors",
+                "DLP - a security software utility searching client document files for potential virus patterns",
+                "DLP - a data processing standard transforming binary calculations into clear mathematical formulas",
+                "DLP - a specialized routing configuration maximizing communication velocity over wide networks",
+                "DLP - a backend server operating system component handling memory scheduling during crashes"
+            ]
+        },
+        {
+            "Id": 105,
+            "Title": "What is «Double data rate»?",
+            "Answers": [
+                "DDR - a data transfer technology that transfers data on both the rising and falling edges of the clock signal, doubling performance metrics",
+                "DDR - an active backup strategy saving duplicated copies of database tables onto two cloud installations",
+                "DDR - a version control routine enforcing two engineers to authorize a software deployment script",
+                "DDR - an interface style definition layout adapting web application visuals to dual-screen monitors",
+                "DDR - a communication firewall configuration inspecting incoming and outgoing packet histories simultaneously"
+            ]
+        },
+        {
+            "Id": 106,
+            "Title": "What is «Database Management System»?",
+            "Answers": [
+                "DBMS - software that handles storage, retrieval, and updating of data in a structured system",
+                "DBMS - a hardware component regulating energy currents inside graphics processing configurations",
+                "DBMS - an internet connection protocol mapping dynamic server domain labels to target router nodes",
+                "DBMS - an administrative file system sorting multimedia image assets inside separate folders",
+                "DBMS - a text document application tracking corporate workplace rules and supplier information"
+            ]
+        },
+        {
+            "Id": 107,
+            "Title": "What is «Digital audio workstation»?",
+            "Answers": [
+                "DAW - an electronic device or application software used for recording, editing and producing audio files",
+                "DAW - a server rack unit tracking hardware cooling status configurations within a data center",
+                "DAW - a specific network security rule blocking malicious sound files from entering local systems",
+                "DAW - a database indexing layout sorting audio text descriptions inside column rows",
+                "DAW - a communication interface transforming digital code files into analog phone lines"
+            ]
+        },
+        {
+            "Id": 108,
+            "Title": "What is «Digital audio broadcasting»?",
+            "Answers": [
+                "DAB - a digital radio standard for broadcasting digital audio radio services, used in several countries across Europe and Asia-Pacific",
+                "DAB - an automated database synchronization routine backing up client profile logs to cloud directories",
+                "DAB - a hardware accelerator microchip expediting arithmetic calculations inside graphics cards",
+                "DAB - an application scalability technique spreading processing requirements across multiple server rooms",
+                "DAB - a software encryption utility scrambling text strings during secure data communication lines"
+            ]
+        },
+        {
+            "Id": 109,
+            "Title": "What is «Control unit»?",
+            "Answers": [
+                "CU - a component of a computer's central processing unit that directs the operation of the processor",
+                "CU - a localized backup folder storing user interface style configuration documents",
+                "CU - a specific network switch managing router connections inside wide area topologies",
+                "CU - a database metric evaluating cell execution times across automated spreadsheet tables",
+                "CU - an antivirus tool testing software packages within isolated system testing cells"
+            ]
+        },
+        {
+            "Id": 110,
+            "Title": "What is «Cathode ray tube»?",
+            "Answers": [
+                "CRT - a vacuum tube containing one or more electron guns, the images of which are focused on a phosphorescent screen used to display images",
+                "CRT - a text-based programming syntax framework utilized to build early database records",
+                "CRT - a high-speed network communication line linking primary client terminals to backend servers",
+                "CRT - an encrypted cloud storage safety protocol tracking software version changes automatically",
+                "CRT - an algorithmic equation analyzing pixel density configurations on flat-panel web views"
+            ]
+        },
+        {
+            "Id": 111,
+            "Title": "What is «Central processing unit»?",
+            "Answers": [
+                "CPU - the primary electronic circuitry that executes instructions comprising a computer program, performing basic arithmetic, logic, controlling, and input/output operations",
+                "CPU - a physical hard drive sector dedicated exclusively to hosting local software configuration files",
+                "CPU - a specific wide area network protocol matching data transmission paths with external routers",
+                "CPU - an active database schema manager editing tabular information structures within real-time applications",
+                "CPU - an interface software utility compressing multimedia video assets to maximize cloud storage capacity"
+            ]
+        },
+        {
+            "Id": 112,
+            "Title": "What is «Compact disc-rewritable»?",
+            "Answers": [
+                "CD-RW - a digital optical disc storage format that can be written, read, erased, and written to again",
+                "CD-RW - an automated network monitoring service tracking bandwidth scaling metrics across gateways",
+                "CD-RW - a backend database platform organizing customer information rows into separate tables",
+                "CD-RW - a hardware component tracking central memory clock frequencies inside graphics equipment",
+                "CD-RW - a version control system tracking text file updates across internal engineering branches"
+            ]
+        },
+        {
+            "Id": 113,
+            "Title": "What is «Compact disc- read only memory»?",
+            "Answers": [
+                "CD-ROM - a pre-pressed optical compact disc that contains data accessible to a computer for reading but not writing or erasing",
+                "CD-ROM - a localized data storage cache maintaining temporary web application profile settings",
+                "CD-ROM - a specific network interface routing data communication streams through local firewalls",
+                "CD-ROM - an executable software program automatically correcting system registry errors after crashes",
+                "CD-ROM - a hardware graphic processor optimized to render multi-dimensional multimedia files"
+            ]
+        },
+        {
+            "Id": 114,
+            "Title": "What is «Compact disc-recordable»?",
+            "Answers": [
+                "CD-R - a variation of the compact disc optical storage format that can be written to once and read multiple times",
+                "CD-R - a specialized server backup script archiving database updates to cloud spaces every evening",
+                "CD-R - a network protocol managing information transfers between distinct corporate branches",
+                "CD-R - a software validation toolkit auditing programming code before compiling it into binary systems",
+                "CD-R - an adaptive user layout strategy configuring webpage display properties dynamically"
+            ]
+        },
+        {
+            "Id": 115,
+            "Title": "What is «Compact disc»?",
+            "Answers": [
+                "CD - a digital optical disc data storage format co-developed by Philips and Sony to store and play digital audio recordings and data files",
+                "CD - a central data hub coordinating message routing routines between remote client applications",
+                "CD - an operating system resource monitoring tool tracking processor thread loads during calculations",
+                "CD - an advanced encryption standard applying algorithmic variables to protect database entries",
+                "CD - a layout structure definition managing how multimedia elements fit inside a spreadsheet cell"
+            ]
+        },
+        {
+            "Id": 116,
+            "Title": "What is «Computer-aided design»?",
+            "Answers": [
+                "CAD - the use of computers to aid in the creation, modification, analysis, or optimization of a design, increasing engineer productivity",
+                "CAD - a software compiler routine transforming text instructions into actionable binary code packages",
+                "CAD - a specialized cloud computing system scaling server capacities during high application traffic",
+                "CAD - a database management tool tracking client transaction paths across secure web nodes",
+                "CAD - an entry-level networking hardware component linking individual office nodes to a router"
+            ]
+        },
+        {
+            "Id": 117,
+            "Title": "What is «binary digit»?",
+            "Answers": [
+                "Bit - the smallest unit of data in a computer, representing a single logical state with one of two possible values, typically $0$ or $1$",
+                "Bit - an interactive software widget rendering visual progress markers inside web applications",
+                "Bit - a specific network communication packet holding configuration data for router nodes",
+                "Bit - an administrative table cell locking security credentials inside an database framework",
+                "Bit - a version control branch identifier tracking localized code file updates"
+            ]
+        },
+        {
+            "Id": 118,
+            "Title": "What is «Basic Input/output system»?",
+            "Answers": [
+                "BIOS - firmware used to provide runtime services for operating systems and programs and to perform hardware initialization during the booting process",
+                "BIOS - an automated cloud platform utility optimizing database storage allocations based on active load",
+                "BIOS - a network security software suite checking incoming multimedia files for potential virus patterns",
+                "BIOS - a text processing application helping office teams build scalable data presentation layouts",
+                "BIOS - a hardware graphics component accelerating calculation matrices within client monitors"
+            ]
+        },
+        {
+            "Id": 119,
+            "Title": "What is «Bulletin board system»?",
+            "Answers": [
+                "BBS - a computer server running software that allows users to connect to the system using a terminal program to upload and download data and exchange messages",
+                "BBS - a backend database tool optimizing multi-user text queries within enterprise web structures",
+                "BBS - a hardware safety mechanism shutting down client operating installations when electric overloads happen",
+                "BBS - a secure communication pipeline encrypting data exchanges across wide network frameworks",
+                "BBS - a version control automation tracking source development stages during high scalability adjustments"
+            ]
+        },
+        {
+            "Id": 120,
+            "Title": "What is «Audio video interface»?",
+            "Answers": [
+                "AVI - a multimedia container format introduced by Microsoft in $1992$ as part of its Video for Windows technology",
+                "AVI - a data interface channel synchronizing cloud storage databases across wide regional architectures",
+                "AVI - an operating system utility updating peripheral hardware drivers to resolve system crashes",
+                "AVI - an automated script converting spreadsheet tables into extensible markup language document strings",
+                "AVI - a specific network firewall mechanism analyzing router communications to detect outside threats"
+            ]
+        },
+        {
+            "Id": 121,
+            "Title": "What is «Automated teller machine»?",
+            "Answers": [
+                "ATM - an electronic telecommunications device that enables customers of financial institutions to perform financial transactions without a human clerk",
+                "ATM - a specialized data compression protocol minimizing image sizes for high-speed cloud delivery",
+                "ATM - an asynchronous network transmission standard dividing communication strings into fixed-size processing segments",
+                "ATM - a hardware monitoring card measuring core temperature variances inside multi-core graphic systems",
+                "ATM - a database tracking matrix logging user profile configurations within secure client portals"
+            ]
+        },
+        {
+            "Id": 122,
+            "Title": "What is «Analogue Telephone adaptor»?",
+            "Answers": [
+                "ATA - a device used to connect one or more standard analog telephones to a digital voice-over-IP telephone system or non-IP network",
+                "ATA - a specialized storage interface format reading binary files from early physical hard drives",
+                "ATA - an automated backend code optimizer removing redundant command steps inside software setups",
+                "ATA - a security encryption script hiding communication logs inside corporate spreadsheet files",
+                "ATA - a web scalability validation script evaluating application performance metrics during system crashes"
+            ]
+        },
+        {
+            "Id": 123,
+            "Title": "What is «Artificial Intelligence»?",
+            "Answers": [
+                "AI - intelligence demonstrated by machines, as opposed to intelligence of humans, involving the simulation of human intelligence processes by computers",
+                "AI - a dedicated network hardware adapter regulating data flow rates through local area routers",
+                "AI - an open-source operating system standard built to optimize background cloud server structures",
+                "AI - an automated data backup routine tracking version logs inside localized enterprise folders",
+                "AI - a file format specification mapping structural matrix fields inside advanced spreadsheet engines"
+            ]
+        },
+        {
+            "Id": 124,
+            "Title": "What is «Advanced micro devices»?",
+            "Answers": [
+                "AMD - an American multinational semiconductor company that develops computer processors and related technologies for business and consumer markets",
+                "AMD - a software layout architecture handling adaptive element scaling configurations across distinct web applications",
+                "AMD - an analytical database protocol tracking customer transaction tables across cloud storage assets",
+                "AMD - a security firewall instruction path filtering malicious network traffic patterns before a server crash",
+                "AMD - a version control automation checking programmatic source code consistency prior to release"
+            ]
+        },
+        {
+            "Id": 125,
+            "Title": "What is «Arithmetic logic unit»?",
+            "Answers": [
+                "ALU - a combinational digital circuit that performs arithmetic and bitwise operations on integer binary numbers inside a processor",
+                "ALU - a local file configuration layout mapping visual asset paths inside a web design project",
+                "ALU - an external hardware routing card sorting data packets across wide corporate communication channels",
+                "ALU - a backup utility software running automatic file compression sequences onto secondary drives",
+                "ALU - a security authentication script establishing credential checks for client database applications"
+            ]
+        },
+        {
+            "Id": 126,
+            "Title": "What is «Asymmetric digital subscriber line»?",
+            "Answers": [
+                "ADSL - a type of digital subscriber line technology that facilitates faster data transmission over copper telephone lines than a conventional voiceband modem can provide",
+                "ADSL - an advanced data encryption routine wrapping text elements inside multi-tenant database systems",
+                "ADSL - an automated cloud software scaling tool spinning up additional server environments during high load",
+                "ADSL - a layout template structure checking webpage interface accessibility properties on modern clients",
+                "ADSL - a specialized version control procedure synchronizing code assets across distinct development sites"
+            ]
+        },
+        {
+            "Id": 127,
+            "Title": "What does «CAT» stand for?",
+            "Answers": [
+                "Category - often used in networking context to describe Ethernet cable specifications like Cat5e or Cat6",
+                "Computer Access Terminal - a specialized physical hardware module handling client database inputs",
+                "Cloud Automation Toolkit - a software suite managing web application scalability states automatically",
+                "Central Asset Tracker - a local file structure listing multimedia configuration layers inside folders",
+                "Communication Analysis Tool - an administrative network firewall measuring packet transmission logs"
+            ]
+        },
+        {
+            "Id": 128,
+            "Title": "What does «ICC» stand for?",
+            "Answers": [
+                "International Color Consortium - an organization that promotes the standardization and evolution of an open, vendor-neutral, cross-platform color management system architecture",
+                "Integrated Communication Circuit - a microchip hardware unit routing data packets over local area networks",
+                "Internal Cloud Controller - an administrative software backend balancing request processing lines inside servers",
+                "Indexed Database Command - a structured query string language extracting cell variables out of spreadsheets",
+                "Interface Configuration Check - a diagnostic routine checking if operating system versions match client monitors"
+            ]
+        },
+        {
+            "Id": 129,
+            "Title": "What does «Esc» stand for?",
+            "Answers": [
+                "Escape - a key on computer keyboards used to terminate an active operational task, close a dialog box, or cancel a command input",
+                "Encryption Security Code - a cryptographic algorithm parsing encrypted text rows inside cloud structures",
+                "Extended System Cache - a primary storage block accelerating sequential calculation steps inside hardware microchips",
+                "External Server Connection - an active routing gateway connecting a client node to remote database networks",
+                "Extensible Software Component - a reusable software package managed through automated version control applications"
+            ]
+        },
+        {
+            "Id": 130,
+            "Title": "What does «Ctrl» stand for?",
+            "Answers": [
+                "Control - a modifier key on a computer keyboard which, when pressed in conjunction with another key, performs a special operation",
+                "Central Router Line - a specialized network communication channel routing data paths across wide networks",
+                "Cloud Transfer Record - a backup utility tracking file upload metrics onto remote host storage facilities",
+                "Core Task Registry - an operating system index tracking background software processes to prevent crashes",
+                "Cell Table Resource - a spreadsheet layout component managing formula parameters inside structural cells"
+            ]
+        },
+        {
+            "Id": 131,
+            "Title": "What does «DV» stand for?",
+            "Answers": [
+                "Digital Video - a format for recording and playing back digital video, introduced in $1995$ by a consortium of video camera manufacturers",
+                "Database Verification - a software tool validating schema data consistency inside relational environments",
+                "Domain Validation - an automated certificate rule checked by firewalls to ensure client communication safety",
+                "Data Volume - a performance variable measuring storage scale limits across cloud infrastructure nodes",
+                "Deployment Version - a release tag generated inside version control software during system updates"
+            ]
+        },
+        {
+            "Id": 132,
+            "Title": "What does «E-mail» stand for?",
+            "Answers": [
+                "Electronic mail - a method of exchanging messages between people using electronic devices over a communication network",
+                "Encrypted mail - a specialized security protocol masking textual files prior to cloud file transfers",
+                "Enterprise mail - a backend server framework tracking workflow paths and workplace rules across companies",
+                "Extended mail - a high-speed data transmission technique grouping text files into single binary streams",
+                "Embedded mail - an automated notification script triggering error logs during server crash incidents"
+            ]
+        },
+        {
+            "Id": 133,
+            "Title": "What does «SEO» stand for?",
+            "Answers": [
+                "Search Engine Optimization - the process of improving the quality and quantity of website traffic to a website or a web page from search engines",
+                "Secure Encryption Option - a cryptographic security standard applied to protect sensitive database connection lines",
+                "Server Execution Order - an operating system scheduling logic tracking processor thread priorities",
+                "System Error Output - a diagnostic log layout listing software failure states during an active crash",
+                "Spreadsheet Object Interface - an automated script compiling row formulas into structured web application files"
+            ]
+        },
+        {
+            "Id": 134,
+            "Title": "What does «CW» stand for?",
+            "Answers": [
+                "Continuous Wave - an electromagnetic wave of constant amplitude and frequency, typically a sine wave, used in radio communications",
+                "Cloud Workspace - an integrated development interface allowing engineers to write software scripts remotely",
+                "Code Writer - a low-level programming utility compiling human-readable text into binary processor operations",
+                "Core Web - a set of performance metrics measuring scalability levels across standard internet environments",
+                "Control Word - a structural data instruction block defining operational rules within a CPU routing core"
+            ]
+        },
+        {
+            "Id": 135,
+            "Title": "What does «ESN» stand for?",
+            "Answers": [
+                "Electronic Serial Number - a unique identification number created by manufacturers to identify mobile client devices inside communications systems",
+                "Enterprise Storage Network - a high-capacity architecture coordinating corporate backup files across multi-cloud setups",
+                "Encrypted Server Node - an isolated database instance running strict data security firewall parameters",
+                "Extensible Syntax Notation - a text-based format detailing structural rules for encoding code applications",
+                "Error State Notification - an automated operating system message alert reporting active hardware failures"
+            ]
+        },
+        {
+            "Id": 136,
+            "Title": "What does «NFC» stand for?",
+            "Answers": [
+                "Near-Field Communication - a set of communication protocols that enables two electronic devices to establish communication by bringing them close together",
+                "Network Firewall Configuration - a software utility script setting data packet routing rules across routers",
+                "Node File Cache - a temporary storage directory speeding up asset retrieval on web application platforms",
+                "Numeric Formula Cell - a spreadsheet field performing algorithmic calculations across structural columns",
+                "Native Binary Compiler - a software execution line translating development source files into processor code"
+            ]
+        },
+        {
+            "Id": 137,
+            "Title": "What does «DRM» stand for?",
+            "Answers": [
+                "Digital Rights Management - the use of technology to control and manage access to copyrighted material, ensuring content protection",
+                "Database Replication Model - an automated utility routine copying structured files across separate storage hubs",
+                "Distributed Resource Monitor - a cloud computing platform subsystem tracking web application scalability loads",
+                "Data Recovery Mechanism - a backup process rebuilding corrupted files after a severe computer crash",
+                "Driver Routing Module - an operating system software manager communicating between processors and graphics cards"
+            ]
+        },
+        {
+            "Id": 138,
+            "Title": "What does «EDI» stand for?",
+            "Answers": [
+                "Electronic Data Interchange - the transfer of structured data, by agreed message standards, from one computer application to another electronic system",
+                "Encryption Device Interface - a hardware microchip component executing cryptographic processes inside communication lines",
+                "Extended Directory Index - a database structure layout cataloging target location folders on cloud file assets",
+                "External Driver Installation - a software system utility updating peripheral device code sets automatically",
+                "Embedded Display Instruction - a graphics card script defining pixel rendering pathways on client monitor environments"
+            ]
+        },
+        {
+            "Id": 139,
+            "Title": "What does «B2C» stand for?",
+            "Answers": [
+                "Business-to-Consumer - a business model that involves transactions directly between a company and the end consumers who are the ultimate users of its products",
+                "Binary-to-Code - a software parsing mechanism converting low-level processor files back into readable script documents",
+                "Backup-to-Cloud - an automated storage schedule mirroring local hard drive data folders onto secure cloud facilities",
+                "Backend-to-Client - a communication network design optimizing structural data delivery across web applications",
+                "Base-2-Calculation - an algorithmic formula calculating multi-core computational load balances utilizing binary digits"
+            ]
+        },
+        {
+            "Id": 140,
+            "Title": "What does «B2B» stand for?",
+            "Answers": [
+                "Business-to-Business - a situation where one business makes a commercial transaction with another, such as a company purchasing raw materials from a supplier",
+                "Backup-to-Backup - a redundant storage policy copying archival database files across two distinct physical infrastructure sites",
+                "Binary-to-Binary - a low-level communication connection streaming exact processor instruction sets between paired server nodes",
+                "Backend-to-Backend - an interface protocol synchronization routine linking separate enterprise cloud platforms together",
+                "Browser-to-Browser - a peer-to-peer web application architecture transmitting data packets without passing through a middle host"
+            ]
+        },
+        {
+            "Id": 141,
+            "Title": "What does «MCU» stand for?",
+            "Answers": [
+                "Microcontroller Unit - a small computer on a single integrated circuit containing a processor core, memory, and programmable input/output peripherals",
+                "Multimedia Codec Utility - a software compression engine minimizing video file sizes for rapid wide area network streams",
+                "Master Control Unit - an administrative hardware module tracking electric distribution across server rack frames",
+                "Multi-Cloud Utility - an automation script balancing enterprise data operations over various hosting companies",
+                "Main Database Utility - a database management tool scanning table indices to repair corrupted entry cells"
+            ]
+        },
+        {
+            "Id": 142,
+            "Title": "What does «CMS» stand for?",
+            "Answers": [
+                "Content Management System - computer software used to manage the creation and modification of digital content, typically used for web content development",
+                "Cloud Memory Scale - an infrastructure scaling strategy expanding random access memory pools during intense data processing loads",
+                "Cryptographic Message Standard - an encryption protocol securing text communications over public internet channels",
+                "Client Monitoring Software - a local background routine tracking operating system crashes and hardware diagnostics",
+                "Core Matrix Spreadsheet - a calculation layout model organizing mathematical algorithms across relational tables"
+            ]
+        },
+        {
+            "Id": 143,
+            "Title": "What does «TCO» stand for?",
+            "Answers": [
+                "Total Cost of Ownership - a financial estimate intended to help buyers and owners determine the direct and indirect costs of a product or system, like computing infrastructure",
+                "Thread Control Option - an operating system resource scheduler managing multi-threaded algorithm distributions",
+                "Traffic Compression Optimizer - a network router configuration squeezing communication packet sizes to save bandwidth",
+                "Tabular Cell Organization - a database management system setting specifying structural row hierarchies",
+                "Terminal Connection Timeout - an automated security firewall rule disconnecting inactive client nodes from host access"
+            ]
+        },
+        {
+            "Id": 144,
+            "Title": "What does «NAS» stand for?",
+            "Answers": [
+                "Network-Attached Storage - a file-level computer data storage server connected to a computer network providing data access to a heterogeneous group of clients",
+                "Native Application Scalability - the inherent capacity of web programming code to execute efficiently across heavier user demands",
+                "Network Authentication Service - a central security identity verification framework approving client access through firewalls",
+                "Node Allocation Script - a cloud computing automation logic routing computing workloads onto secondary server environments",
+                "Null Array Symbol - a binary notation character used inside database software to mark empty entry cells"
+            ]
+        },
+        {
+            "Id": 145,
+            "Title": "What does «Fn» stand for?",
+            "Answers": [
+                "Function - a modifier key on many keyboards, especially on laptops, used to perform special actions in combination with other keys",
+                "Folder Name - a metadata identifier used inside digital file systems to organize structural directory paths",
+                "File Node - a foundational storage element representing an active data block within a cloud computing setup",
+                "Firewall Network - a localized network architecture where all communication lines pass through rigorous filtering rules",
+                "Formula Notation - a syntax standard specifying mathematical expression rules inside spreadsheet software cells"
+            ]
+        },
+        {
+            "Id": 146,
+            "Title": "What does “DW” stand for?",
+            "Answers": [
+                "Data Warehouse - a system used for reporting and data analysis, considered a core component of business intelligence architectures",
+                "Digital Workspace - an enterprise cloud software platform gathering employee collaboration tools inside one interface",
+                "Deployment Wizard - an automated software installer utility configuring application settings onto client computers",
+                "Driver Writer - a development programming toolkit used to construct low-level instructions for hardware components",
+                "Domain Wrapper - a specialized network protocol routing internet communication steps across isolated firewalls"
+            ]
+        },
+        {
+            "Id": 147,
+            "Title": "What does “SP” stand for?",
+            "Answers": [
+                "Service Pack - a collection of updates, fixes, or enhancements to a software program delivered in the form of a single installable package",
+                "Scalability Protocol - a web application methodology adjusting cloud hosting resource balances based on load",
+                "Structured Parsing - an algorithmic sequence converting extensible markup language data strings into clean database rows",
+                "Storage Pool - a collection of physical hard drives grouped together within a unified cloud storage infrastructure",
+                "System Peripheral - any external hardware device connecting into a client computer interface to input instructions"
+            ]
+        },
+        {
+            "Id": 148,
+            "Title": "What does “HR” stand for?",
+            "Answers": [
+                "Human Resources - the division of a business that is charged with finding, screening, recruiting, and training job applicants, as well as administering employee-relations programs",
+                "Hardware Reset - a physical signal triggering computer hardware units to reinitialize their binary instruction configurations",
+                "High Resolution - a graphic display specification indicating massive pixel dimension metrics on client monitors",
+                "Host Router - a primary network device managing communication pathways between local assets and wide internet systems",
+                "Hypertext Registry - a central database tracking dynamic web page links inside application configurations"
+            ]
+        },
+        {
+            "Id": 149,
+            "Title": "What does “WLAN” stand for?",
+            "Answers": [
+                "Wireless Local Area Network - a wireless computer network that links two or more devices using wireless communication to form a local area network within a limited area",
+                "Wide Logical Array Node - a localized cloud computing storage architecture organizing backup files across server racks",
+                "Web Layout Accessibility Network - an industry group promoting user interface scalability standards on client browsers",
+                "Word Language Automation Network - a specialized text processing application framework managing international font dictionaries",
+                "Web Application Logging Node - a backend database tracking script entry records to record system crash histories"
+            ]
+        },
+        {
+            "Id": 150,
+            "Title": "What does “WAF” stand for?",
+            "Answers": [
+                "Web Application Firewall - a specific form of application firewall that filters, monitors, and blocks HTTP traffic to and from a web service",
+                "Wireless Audio Format - a high-compression multimedia file specification designed to stream sound data over local networks",
+                "Wide Area Framework - a cloud computing network layout linking multiple corporate office nodes together securely",
+                "Word Automation Format - an extensible markup language template standard formatting text document properties",
+                "Workplace Allocation File - a localized spreadsheet tracking tool registering supplier info and colleague job records"
+            ]
+        },
+        {
+            "Id": 151,
+            "Title": "What is the synonym of the word «Back up»?",
+            "Answers": [
+                "Copy data to another place",
+                "Restart the operating system",
+                "Disconnect from a local router",
+                "Delete a structured database index",
+                "Scale up a web application cluster"
+            ]
+        },
+        {
+            "Id": 152,
+            "Title": "What is the synonym of the word «Restart»?",
+            "Answers": [
+                "Start again",
+                "Plug out",
+                "Make an archive copy",
+                "Format a drive",
+                "Translate text inputs"
+            ]
+        },
+        {
+            "Id": 153,
+            "Title": "What is the synonym of the word «Unplug»?",
+            "Answers": [
+                "Disconnect",
+                "Backup database",
+                "Incorporate code changes",
+                "Boot up hardware",
+                "Render graphics file"
+            ]
+        },
+        {
+            "Id": 154,
+            "Title": "What is the synonym of the word «Power socket»?",
+            "Answers": [
+                "Electricity socket",
+                "Network connection cable",
+                "Graphics rendering core",
+                "Central software interface",
+                "Database data row cell"
+            ]
+        },
+        {
+            "Id": 155,
+            "Title": "What is the synonym of the word «Put into»?",
+            "Answers": [
+                "Insert",
+                "Unplug wire",
+                "Crash system",
+                "Encrypt text file",
+                "Scale application server"
+            ]
+        },
+        {
+            "Id": 156,
+            "Title": "What is the synonym of the word «connector»?",
+            "Answers": [
+                "Adapter",
+                "Hard drive platter",
+                "Binary logic program",
+                "Cloud file storage pool",
+                "Spreadsheet formula error"
+            ]
+        },
+        {
+            "Id": 157,
+            "Title": "What is the synonym of the word «Copy data to another place»?",
+            "Answers": [
+                "Back up",
+                "Toggle hardware settings",
+                "Compress multimedia image",
+                "Compile structural query code",
+                "Route network packages"
+            ]
+        },
+        {
+            "Id": 158,
+            "Title": "What is the synonym of the word «Start again»?",
+            "Answers": [
+                "Restart",
+                "Disconnect communication lines",
+                "Decrypt data transfers",
+                "Initialize database software schemas",
+                "Deploy code versions into production"
+            ]
+        },
+        {
+            "Id": 159,
+            "Title": "What is the synonym of the word «Disconnect»?",
+            "Answers": [
+                "Unplug",
+                "Save file records",
+                "Optimize web scale systems",
+                "Run math algorithm equations",
+                "Incorporate presentation styles"
+            ]
+        },
+        {
+            "Id": 160,
+            "Title": "What is the synonym of the word «electricity socket»?",
+            "Answers": [
+                "Power socket",
+                "Network switch module",
+                "Central processing hardware unit",
+                "Cloud platform storage drive",
+                "User display interface monitor"
+            ]
+        },
+        {
+            "Id": 161,
+            "Title": "What is the synonym of the word «plug into»?",
+            "Answers": [
+                "Connect to an electricity or data socket",
+                "Disconnect from a local infrastructure node",
+                "Restart the operating system during a crash",
+                "Backup personal database table configurations",
+                "Compress multimedia image file dimensions"
+            ]
+        },
+        {
+            "Id": 162,
+            "Title": "What is the synonym of the word «Cable»?",
+            "Answers": [
+                "Wire or cord used for data transmission or power",
+                "Peripheral graphics processing expansion board",
+                "Relational database management structure indexing",
+                "Cloud platform virtualization system protocol",
+                "Hypertext translation interface utility layout"
+            ]
+        },
+        {
+            "Id": 163,
+            "Title": "What does “KB” stand for?",
+            "Answers": [
+                "Kilobyte - a unit of digital memory size equal to $10^3$ or $2^{10}$ bytes",
+                "Kernel Buffer - a dedicated memory space for CPU boot tasks",
+                "Keyboard Bus - a physical connection linking typing hardware",
+                "Key Block - an encrypted index category in database cells",
+                "Kilo-Bandwidth - a metrics calculation for local routers"
+            ]
+        },
+        {
+            "Id": 164,
+            "Title": "What does “XML” stand for?",
+            "Answers": [
+                "Extensible Markup Language",
+                "Extended Matrix Library",
+                "External Management Layer",
+                "Executable Machine Logic",
+                "Exascale Modeling Line"
+            ]
+        },
+        {
+            "Id": 165,
+            "Title": "What does “XGA” stand for?",
+            "Answers": [
+                "Extended Graphics Array",
+                "External Gateway Architecture",
+                "Extensible Graphics API",
+                "X-ray Graphic Accelerator",
+                "Extended Grid Array"
+            ]
+        },
+        {
+            "Id": 166,
+            "Title": "What does “WWW” stand for?",
+            "Answers": [
+                "World Wide Web",
+                "Wide Wireless Wave",
+                "Web Workflow Wizard",
+                "Worldwide Workspace",
+                "Wireless Web Window"
+            ]
+        },
+        {
+            "Id": 167,
+            "Title": "What does “WP” stand for?",
+            "Answers": [
+                "Word Processing",
+                "Wireless Protocol",
+                "Web Portal",
+                "Workplace Policy",
+                "Workspace Protection"
+            ]
+        },
+        {
+            "Id": 168,
+            "Title": "What does “Wi-Fi” stand for?",
+            "Answers": [
+                "Wireless Fidelity",
+                "Wired Filter",
+                "Wireless Firewall",
+                "Wave Frequency Index",
+                "Wide File Interface"
+            ]
+        },
+        {
+            "Id": 169,
+            "Title": "What does “WAN” stand for?",
+            "Answers": [
+                "Wide Area Network",
+                "Wireless Access Node",
+                "Web Application Network",
+                "Word Automation Network",
+                "Workflow Allocation Node"
+            ]
+        },
+        {
+            "Id": 170,
+            "Title": "What does “WAI” stand for?",
+            "Answers": [
+                "Web Accessibility Initiative",
+                "Wireless Access Interface",
+                "Wide Area Integration",
+                "Web Automation Identity",
+                "Workflow Analysis Index"
+            ]
+        },
+        {
+            "Id": 171,
+            "Title": "What does “VoIP” stand for?",
+            "Answers": [
+                "Voice over Internet Protocol",
+                "Visual Object Integration Platform",
+                "Vector Output Interface Protocol",
+                "Virtual Operating Infrastructure Platform",
+                "Volume Optimized Internet Pathway"
+            ]
+        },
+        {
+            "Id": 172,
+            "Title": "What does “Voice XML” stand for?",
+            "Answers": [
+                "Voice Extensible Markup Language",
+                "Vector Operational Extensible Machine Language",
+                "Virtual Object Indexing Matrix Language",
+                "Visual Output Integrated Exchange Language",
+                "Volume Optimized Executable Markup Language"
+            ]
+        },
+        {
+            "Id": 173,
+            "Title": "What does “VGA” stand for?",
+            "Answers": [
+                "Video Graphics Array",
+                "Virtual Gateway Adapter",
+                "Visual Vector Graphics Accelerator",
+                "Vector Graphics Allocation",
+                "Volume Graphic Array"
+            ]
+        },
+        {
+            "Id": 174,
+            "Title": "What does “VDU” stand for?",
+            "Answers": [
+                "Visual Display Unit",
+                "Virtual Data Utility",
+                "Vector Directory Unit",
+                "Video Deployment Utility",
+                "Volume Data Unit"
+            ]
+        },
+        {
+            "Id": 175,
+            "Title": "What does “VAT” stand for?",
+            "Answers": [
+                "Value Added Tax",
+                "Virtual Address Table",
+                "Vector Allocation Toolkit",
+                "Visual Automation Technology",
+                "Volume Analysis Template"
+            ]
+        },
+        {
+            "Id": 176,
+            "Title": "What does “USB” stand for?",
+            "Answers": [
+                "Universal Serial Bus",
+                "Unified Storage Backup",
+                "User Security Boundary",
+                "Virtual System Bus",
+                "Universal System Buffer"
+            ]
+        },
+        {
+            "Id": 177,
+            "Title": "What does “URL” stand for?",
+            "Answers": [
+                "Uniform Resource Locator",
+                "Universal Registry Link",
+                "User Resource Layer",
+                "Unified Routing Line",
+                "Unstructured Record Layout"
+            ]
+        },
+        {
+            "Id": 178,
+            "Title": "What does “UMTS” stand for?",
+            "Answers": [
+                "Universal Mobile Telecommunications System",
+                "Unified Multi-Tenant Storage",
+                "Unstructured Multimedia Transmission Standard",
+                "Universal Memory Management Toolkit",
+                "User Management and Tracking Software"
+            ]
+        },
+        {
+            "Id": 179,
+            "Title": "What does “TIFF” stand for?",
+            "Answers": [
+                "Tagged Image File Format",
+                "Temporary Interface File Framework",
+                "Tabular Information File Format",
+                "Textual Image Filter Framework",
+                "Threaded Instruction File Format"
+            ]
+        },
+        {
+            "Id": 180,
+            "Title": "What does “TFT” stand for?",
+            "Answers": [
+                "Thin Film Transistor",
+                "Tabular Formula Template",
+                "Total File Transfer",
+                "Thread Filtering Tool",
+                "Terminal File Tracker"
+            ]
+        },
+        {
+            "Id": 181,
+            "Title": "What does “TB” stand for?",
+            "Answers": [
+                "Terabyte - a unit of digital information storage equal to $10^{12}$ or $2^{40}$ bytes",
+                "Task Buffer - a temporary memory sequence running processor threads",
+                "Terminal Bus - a communication channel linking regional network routing lines",
+                "Table Block - a data configuration layout structure inside structured query files",
+                "Tracking Backup - an automated archival system saving database metrics"
+            ]
+        },
+        {
+            "Id": 182,
+            "Title": "What does “TAN” stand for?",
+            "Answers": [
+                "Transaction Authentication Number",
+                "Total Area Network",
+                "Tabular Array Node",
+                "Terminal Access Node",
+                "Textual Analysis Network"
+            ]
+        },
+        {
+            "Id": 183,
+            "Title": "What does “SSL” stand for?",
+            "Answers": [
+                "Secure Sockets Layer",
+                "System Storage Library",
+                "Server Scalability Layer",
+                "Structured Script Language",
+                "Software Security Line"
+            ]
+        },
+        {
+            "Id": 184,
+            "Title": "What does “SQL” stand for?",
+            "Answers": [
+                "Structured Query Language",
+                "System Query Logic",
+                "Server Queue Library",
+                "Sequential Query Layout",
+                "Statistical Query Language"
+            ]
+        },
+        {
+            "Id": 185,
+            "Title": "What does “SMTP” stand for?",
+            "Answers": [
+                "Simple Mail Transfer Protocol",
+                "Server Message Tracking Protocol",
+                "Secure Management Transfer Protocol",
+                "System Maintenance Task Protocol",
+                "Sequential Media Transmission Protocol"
+            ]
+        },
+        {
+            "Id": 186,
+            "Title": "What does “SMS” stand for?",
+            "Answers": [
+                "Short Message Service",
+                "System Management Server",
+                "Storage Management Subsystem",
+                "Secure Messaging Software",
+                "Server Metric Scale"
+            ]
+        },
+        {
+            "Id": 187,
+            "Title": "What does “SIM(card)” stand for?",
+            "Answers": [
+                "Subscriber Identity Module",
+                "System Integration Module",
+                "Secure Identity Matrix",
+                "Server Interface Mechanism",
+                "Subscriber Internet Module"
+            ]
+        },
+        {
+            "Id": 188,
+            "Title": "What does “RSI” stand for?",
+            "Answers": [
+                "Repetitive Strain Injury",
+                "Remote System Interface",
+                "Radical Software Innovation",
+                "Router Signal Indicator",
+                "Relational Storage Index"
+            ]
+        },
+        {
+            "Id": 189,
+            "Title": "What does “.rpm” stand for?",
+            "Answers": [
+                "Red Hat Package Manager - a recursive acronym for a package management system",
+                "Revolutions Per Minute - an engineering calculation monitoring internal computing fans",
+                "Remote Process Monitor - an operating system utility tracking browser background execution threads",
+                "Raster Picture Map - a graphic data layout standard rendering compressed multi-media images",
+                "Relational Primary Matrix - a structured database index categorizing customer table cells"
+            ]
+        },
+        {
+            "Id": 190,
+            "Title": "What does “RISC” stand for?",
+            "Answers": [
+                "Reduced Instruction Set Computer",
+                "Relational Index Storage Component",
+                "Remote Interface Security Configuration",
+                "Raster Image Scaling Codec",
+                "Router Integrated System Connection"
+            ]
+        },
+        {
+            "Id": 191,
+            "Title": "What does “RIP” stand for?",
+            "Answers": [
+                "Routing Information Protocol",
+                "Raster Image Processor",
+                "Recovery Interface Program",
+                "Remote Internet Pathway",
+                "Relational Index Parsing"
+            ]
+        },
+        {
+            "Id": 192,
+            "Title": "What does “RIM” stand for?",
+            "Answers": [
+                "Research In Motion",
+                "Relational Index Manager",
+                "Remote Interface Module",
+                "Raster Image Matrix",
+                "Routing Infrastructure Model"
+            ]
+        },
+        {
+            "Id": 193,
+            "Title": "What does “RFID” stand for?",
+            "Answers": [
+                "Radio-Frequency Identification",
+                "Remote File Interface Directory",
+                "Relational Format Identifier",
+                "Raster Frequency Image Display",
+                "Router Firewall Intrusion Detection"
+            ]
+        },
+        {
+            "Id": 194,
+            "Title": "What does “RGB” stand for?",
+            "Answers": [
+                "Red Green Blue - an additive color model based on the three primary colors of light",
+                "Raster Graphics Buffer - a hardware memory chunk tracking pixel data maps on graphics processing units",
+                "Remote Gateway Bus - a physical connection component routing communication across cloud networks",
+                "Relational Graph Database - an advanced structured data workspace saving complex schema configurations",
+                "Recovery General Backup - an automated system routine protecting files from server terminal crashes"
+            ]
+        },
+        {
+            "Id": 195,
+            "Title": "What does “RAM” stand for?",
+            "Answers": [
+                "Random Access Memory",
+                "Remote Access Module",
+                "Relational Array Matrix",
+                "Routing Automation Manager",
+                "Recovery Archive Model"
+            ]
+        },
+        {
+            "Id": 196,
+            "Title": "What does “PPP” stand for?",
+            "Answers": [
+                "Point-to-Point Protocol",
+                "Parallel Processing Pipeline",
+                "Private Privacy Protection",
+                "Peripheral Power Port",
+                "Programmable Packet Processor"
+            ]
+        },
+        {
+            "Id": 197,
+            "Title": "What does “ppm” stand for?",
+            "Answers": [
+                "Pages Per Minute",
+                "Pixels Per Millimeter",
+                "Packets Per Minute",
+                "Processes Per Module",
+                "Programs Per Monitor"
+            ]
+        },
+        {
+            "Id": 198,
+            "Title": "What does “png” stand for?",
+            "Answers": [
+                "Portable Network Graphic",
+                "Private Network Gateway",
+                "Programmable Network Graphic",
+                "Peripheral Network Group",
+                "Process Network Graph"
+            ]
+        },
+        {
+            "Id": 199,
+            "Title": "What does “pixel” stand for?",
+            "Answers": [
+                "Picture Element",
+                "Pixel Information Exchange Link",
+                "Programmable Image Cell",
+                "Processing Interface Matrix Unit",
+                "Picture Execution Layout"
+            ]
+        },
+        {
+            "Id": 200,
+            "Title": "What does “PIN” stand for?",
+            "Answers": [
+                "Personal Identification Number",
+                "Private Network Interface",
+                "Processor Instruction Node",
+                "Peripheral Integration Network",
+                "Primary Index Number"
+            ]
+        },
+        {
+            "Id": 201,
+            "Title": "What does “PGP” stand for?",
+            "Answers": [
+                "Pretty Good Privacy",
+                "Parallel Graphics Pipeline",
+                "Private Gateway Protocol",
+                "Programmable Graphics Processor",
+                "Primary Gateway Path"
+            ]
+        },
+        {
+            "Id": 202,
+            "Title": "What does “PDL” stand for?",
+            "Answers": [
+                "Page Description Language",
+                "Program Design Logic",
+                "Private Data Library",
+                "Packet Delivery Layer",
+                "Processor Description Layout"
+            ]
+        },
+        {
+            "Id": 203,
+            "Title": "What does “PDA” stand for?",
+            "Answers": [
+                "Personal Digital Assistant",
+                "Private Directory Allocation",
+                "Programmable Data Array",
+                "Peripheral Device Adapter",
+                "Process Diagnostic Automation"
+            ]
+        },
+        {
+            "Id": 204,
+            "Title": "What does “PCL” stand for?",
+            "Answers": [
+                "Printer Control Language",
+                "Peripheral Connection Library",
+                "Private Cloud Layout",
+                "Program Control Logic",
+                "Packet Communication Layer"
+            ]
+        },
+        {
+            "Id": 205,
+            "Title": "What does “PAN” stand for?",
+            "Answers": [
+                "Personal Area Network",
+                "Private Access Node",
+                "Programmable Array Network",
+                "Peripheral Area Network",
+                "Protocol Analysis Node"
+            ]
+        },
+        {
+            "Id": 206,
+            "Title": "What does “.pdf” stand for?",
+            "Answers": [
+                "Portable Document Format",
+                "Private Data File",
+                "Programmable Document Framework",
+                "Peripheral Data Format",
+                "Personal Document Folder"
+            ]
+        },
+        {
+            "Id": 207,
+            "Title": "What does “OS” stand for?",
+            "Answers": [
+                "Operating System",
+                "Open Source",
+                "Output Storage",
+                "Optical Sensor",
+                "Operation Scale"
+            ]
+        },
+        {
+            "Id": 208,
+            "Title": "What does “OOP” stand for?",
+            "Answers": [
+                "Object-Oriented Programming",
+                "Operational Output Protocol",
+                "Online Optimization Platform",
+                "Object Operational Parsing",
+                "Open Organization Protocol"
+            ]
+        },
+        {
+            "Id": 209,
+            "Title": "What does “OLED” stand for?",
+            "Answers": [
+                "Organic Light-Emitting Diode",
+                "Optical Logic Encryption Device",
+                "Output Layout Evaluation Display",
+                "Object Linking and Embedding Directory",
+                "Operational Light Emitting Display"
+            ]
+        },
+        {
+            "Id": 210,
+            "Title": "What does “OCR” stand for?",
+            "Answers": [
+                "Optical Character Recognition",
+                "Open Configuration Registry",
+                "Object Code Repository",
+                "Output Control Routine",
+                "Optical Code Reader"
+            ]
+        },
+        {
+            "Id": 211,
+            "Title": "What does “NUI” stand for?",
+            "Answers": [
+                "Natural User Interface",
+                "Network User Identity",
+                "Native Utility Interface",
+                "Node Update Indicator",
+                "Network Unit Interface"
+            ]
+        },
+        {
+            "Id": 212,
+            "Title": "What does “NIC” stand for?",
+            "Answers": [
+                "Network Interface Card",
+                "Native Interface Codec",
+                "Node Interconnect Cable",
+                "Network Information Center",
+                "Numeric Instruction Code"
+            ]
+        },
+        {
+            "Id": 213,
+            "Title": "What does “MS” stand for?",
+            "Answers": [
+                "Microsoft - a multinational technology corporation",
+                "Millisecond - a unit of mathematical runtime calibration equal to $10^{-3}$ seconds",
+                "Memory Storage - an internal cache matrix holding active layout spreadsheet profiles",
+                "Master Server - a primary infrastructure node directing localized client network arrays",
+                "Management System - a software suite handling administrative workflow data tables"
+            ]
+        },
+        {
+            "Id": 214,
+            "Title": "What does “MPEG” stand for?",
+            "Answers": [
+                "Moving Picture Experts Group",
+                "Multi-Purpose Encryption Gateway",
+                "Multimedia Processing Engine Group",
+                "Memory Parallel Execution Graph",
+                "Mobile Picture Encoding Guide"
+            ]
+        },
+        {
+            "Id": 215,
+            "Title": "What does “MMS” stand for?",
+            "Answers": [
+                "Multimedia Messaging Service",
+                "Memory Management Subsystem",
+                "Master Management Server",
+                "Multi-Node Matrix System",
+                "Mobile Messaging Software"
+            ]
+        },
+        {
+            "Id": 216,
+            "Title": "What does “MIPS” stand for?",
+            "Answers": [
+                "Million Instructions Per Second",
+                "Matrix Interface Processing System",
+                "Multi-Threaded Instruction Processing Standard",
+                "Memory Integration Platform Software",
+                "Mobile Internet Protocol Suite"
+            ]
+        },
+        {
+            "Id": 217,
+            "Title": "What does “MIDI” stand for?",
+            "Answers": [
+                "Musical Instrument Digital Interface",
+                "Multimedia Input Data Interface",
+                "Matrix Integration Digital Interface",
+                "Mobile Information Device Interface",
+                "Memory Integrated Data Index"
+            ]
+        },
+        {
+            "Id": 218,
+            "Title": "What does “MHz” stand for?",
+            "Answers": [
+                "Megahertz - a unit of frequency equal to $10^6$ cycles per second",
+                "Matrix Hardware Zone - an implementation layout partitioning processing hardware",
+                "Memory High Zone - a physical storage cache structure allocating system resources",
+                "Multi-channel Hub Zone - a high-speed networking cable standard connecting routers",
+                "Media Hosting Zone - an adaptive server framework distributing graphic files over web applications"
+            ]
+        },
+        {
+            "Id": 219,
+            "Title": "What does “MB” stand for?",
+            "Answers": [
+                "Megabyte - a unit of digital information storage equal to $10^6$ or $2^{20}$ bytes",
+                "Motherboard - the primary integrated circuit board configuring central processing hardware",
+                "Memory Buffer - a localized cache holding transient algorithm parameters to avoid crashes",
+                "Management Bus - a communication routing channel syncing network firewall parameters",
+                "Matrix Block - a multi-dimensional array layout containing spreadsheet database rows"
+            ]
+        },
+        {
+            "Id": 220,
+            "Title": "What does “MAN” stand for?",
+            "Answers": [
+                "Metropolitan Area Network",
+                "Main Access Node",
+                "Matrix Array Network",
+                "Memory Allocation Node",
+                "Multi-Tenant Application Network"
+            ]
+        },
+        {
+            "Id": 221,
+            "Title": "What does “Mac” stand for?",
+            "Answers": [
+                "Macintosh - a family of personal computers designed, manufactured, and marketed by Apple Inc.",
+                "Media Access Control - a unique sub-layer identifier code assigned to network interface hardware",
+                "Memory Allocation Command - a low-level software utility setting up random storage blocks",
+                "Matrix Analytical Compiler - an automation template translating complex data rows into scripts",
+                "Multi-User Access Cell - a secure database storage partition isolating client profile archives"
+            ]
+        },
+        {
+            "Id": 222,
+            "Title": "What does “LAN” stand for?",
+            "Answers": [
+                "Local Area Network",
+                "Logical Array Node",
+                "Layout Automation Network",
+                "Layered Access Node",
+                "Legacy Application Network"
+            ]
+        },
+        {
+            "Id": 223,
+            "Title": "What does “IT” stand for?",
+            "Answers": [
+                "Information Technology",
+                "Interface Template",
+                "Instruction Tracking",
+                "Infrastructure Tuning",
+                "Integrated Testing"
+            ]
+        },
+        {
+            "Id": 224,
+            "Title": "What does “ISP” stand for?",
+            "Answers": [
+                "Internet Service Provider",
+                "Interface Security Protocol",
+                "Information Storage Platform",
+                "Instruction Set Processor",
+                "Integrated Scalability Program"
+            ]
+        },
+        {
+            "Id": 225,
+            "Title": "What does “IrDA” stand for?",
+            "Answers": [
+                "Infrared Data Association",
+                "Integrated Routing Data Architecture",
+                "Internal Record Deployment Automation",
+                "Interface Resource Description Array",
+                "Instruction Register Diagnostics Algorithm"
+            ]
+        },
+        {
+            "Id": 226,
+            "Title": "What does “IR” stand for?",
+            "Answers": [
+                "Instruction Register",
+                "Information Retrieval",
+                "Interface Router",
+                "Internal Registry",
+                "Infrastructure Resilience"
+            ]
+        },
+        {
+            "Id": 227,
+            "Title": "What does “IP” stand for?",
+            "Answers": [
+                "Internet Protocol",
+                "Interface Program",
+                "Instruction Pointer",
+                "Information Pathway",
+                "Infrastructure Platform"
+            ]
+        },
+        {
+            "Id": 228,
+            "Title": "What does “IM” stand for?",
+            "Answers": [
+                "Instant Messaging",
+                "Interface Module",
+                "Instruction Matrix",
+                "Information Management",
+                "Internal Memory"
+            ]
+        },
+        {
+            "Id": 229,
+            "Title": "What does “ICT” stand for?",
+            "Answers": [
+                "Information and Communications Technologies",
+                "Integrated Cloud Terminal",
+                "Interface Configuration Toolkit",
+                "Internal Cyber Security Team",
+                "Indexed Code Translation"
+            ]
+        },
+        {
+            "Id": 230,
+            "Title": "What does “IBM” stand for?",
+            "Answers": [
+                "International Business Machines",
+                "Integrated Buffer Module",
+                "Internet Backbone Matrix",
+                "Interface Build Manager",
+                "Indexed Binary Method"
+            ]
+        },
+        {
+            "Id": 231,
+            "Title": "What does “I/O” stand for?",
+            "Answers": [
+                "Input/Output",
+                "Internal Optimization",
+                "Interface Operation",
+                "Instruction Order",
+                "Index Organization"
+            ]
+        },
+        {
+            "Id": 232,
+            "Title": "What does “Hz” stand for?",
+            "Answers": [
+                "Hertz - a unit of frequency defined as one cycle per second",
+                "Hardware Zone - a specific section within server cooling infrastructure blueprints",
+                "Host Zero - the primary root gateway handling configuration logs inside localized networks",
+                "High-Z - an impedance state expression applied to graphics engine calculation systems",
+                "Hyper-Zone - an automated scheduling layout distributing data processing workloads across clouds"
+            ]
+        },
+        {
+            "Id": 233,
+            "Title": "What does “HTTP” stand for?",
+            "Answers": [
+                "Hypertext Transfer Protocol",
+                "Hardware Tracking Task Protocol",
+                "High Traffic Terminal Protocol",
+                "Hypermedia Translation Parsing Tool",
+                "Host Terminal Transfer Protocol"
+            ]
+        },
+        {
+            "Id": 234,
+            "Title": "What does “HTML” stand for?",
+            "Answers": [
+                "Hypertext Markup Language",
+                "Hardware Testing Machine Language",
+                "High Traffic Management Layout",
+                "Hypermedia Translation Management Language",
+                "Host Terminal Modeling Layout"
+            ]
+        },
+        {
+            "Id": 235,
+            "Title": "What does “HP” stand for?",
+            "Answers": [
+                "Hewlett-Packard - an American multinational information technology company",
+                "High Performance - a processing capability description denoting high computing execution speed",
+                "Host Protocol - an interface framework coordinating routing lines between networks",
+                "Hypertext Parsing - an automated coding routine unpacking markup files into backend databases",
+                "Hardware Protection - a structural firewall scheme guarding memory modules from crashes"
+            ]
+        },
+        {
+            "Id": 236,
+            "Title": "What does “HDTV” stand for?",
+            "Answers": [
+                "High-Definition Television",
+                "Hardware Driver Testing Variant",
+                "High Data Transfer Volume",
+                "Hypermedia Digital Transmission Video",
+                "Host Database Tracking Validation"
+            ]
+        },
+        {
+            "Id": 237,
+            "Title": "What does “HD-DVD” stand for?",
+            "Answers": [
+                "High-Definition Digital Versatile Disc",
+                "Hardware Driver Digital Video Directory",
+                "High-Density Data Vector Database",
+                "Hypermedia Deployment Digital Video Disc",
+                "Host Directory Digital Video Device"
+            ]
+        },
+        {
+            "Id": 238,
+            "Title": "What does “HDD” stand for?",
+            "Answers": [
+                "Hard Disk Drive",
+                "High-Density Database",
+                "Hardware Driver Directory",
+                "Host Deployment Device",
+                "Hypertext Document Directory"
+            ]
+        },
+        {
+            "Id": 239,
+            "Title": "What does “GUI” stand for?",
+            "Answers": [
+                "Graphical User Interface",
+                "Gateway User Identity",
+                "Graphics Utility Integration",
+                "Global User Index",
+                "General User Interface"
+            ]
+        },
+        {
+            "Id": 240,
+            "Title": "What does “GSM” stand for?",
+            "Answers": [
+                "Global System for Mobile Communications",
+                "Gateway Security Module",
+                "Graphics Storage Matrix",
+                "General System Management",
+                "Grid Scalability Model"
+            ]
+        },
+        {
+            "Id": 241,
+            "Title": "What does “GPS” stand for ?",
+            "Answers": [
+                "Global Positioning System",
+                "Global Cloud Routing Network",
+                "Geographical Server Indexing",
+                "Graphic Pixel Scaling",
+                "Global Version Control Manager"
+            ]
+        },
+        {
+            "Id": 242,
+            "Title": "What does “GNU” stand for ?",
+            "Answers": [
+                "GNU's Not Unix",
+                "Graphical Network Utility",
+                "General Network Unit",
+                "Global Network Utility",
+                "Gateway Network Optimization"
+            ]
+        },
+        {
+            "Id": 243,
+            "Title": "What does “GIS” stand for ?",
+            "Answers": [
+                "Geographic Information System",
+                "Gateway Interface System",
+                "Graphical Indexing Server",
+                "Global Infrastructure Storage",
+                "General Information Script"
+            ]
+        },
+        {
+            "Id": 244,
+            "Title": "What does “GIF” stand for ?",
+            "Answers": [
+                "Graphics Interchange Format",
+                "Gateway Interface File",
+                "Graphical Image Filter",
+                "General Information Format",
+                "Global Internet Framework"
+            ]
+        },
+        {
+            "Id": 245,
+            "Title": "What does “GHz” stand for ?",
+            "Answers": [
+                "Gigahertz - a unit of frequency equal to $10^9$ cycles per second",
+                "Graphic Hardware Zone - a partition layer inside dedicated monitors",
+                "Gigabyte Host Zone - a storage indexing system used by cloud networks",
+                "Global Hub Zone - a high-speed telecommunications framework for routers",
+                "Gateway Hosting Zone - a scalable architecture managing web files"
+            ]
+        },
+        {
+            "Id": 246,
+            "Title": "What does “GB” stand for ?",
+            "Answers": [
+                "Gigabyte - a unit of digital information equal to $10^9$ or $2^{30}$ bytes",
+                "Graphics Bus - a high-speed communication channel linking processors",
+                "Gateway Bandwidth - a metrics tracking loop across regional networks",
+                "General Backup - an automated archival utility saving database cells",
+                "Global Block - a data configuration standard encrypting system rows"
+            ]
+        },
+        {
+            "Id": 247,
+            "Title": "What does “FTP” stand for ?",
+            "Answers": [
+                "File Transfer Protocol",
+                "Firewall Transmission Path",
+                "Fast Text Processing",
+                "Format Translation Program",
+                "Framework Tuning Platform"
+            ]
+        },
+        {
+            "Id": 248,
+            "Title": "What does “FORTRAN” stand for ?",
+            "Answers": [
+                "Formula Translation",
+                "Format Tracking Network",
+                "Forecasting Resource Terminal",
+                "Framework Routing Architecture",
+                "File Organization Repository"
+            ]
+        },
+        {
+            "Id": 249,
+            "Title": "What does “FAQ” stand for ?",
+            "Answers": [
+                "Frequently Asked Questions",
+                "File Access Queue",
+                "Format Automation Quality",
+                "Firewall Authentication Query",
+                "Framework Analysis Query"
+            ]
+        },
+        {
+            "Id": 250,
+            "Title": "What does “EPS” stand for ?",
+            "Answers": [
+                "Encapsulated PostScript",
+                "Encryption Processing Standard",
+                "Extended Portal Storage",
+                "Enterprise Programming Script",
+                "External Process Scheduler"
+            ]
+        },
+        {
+            "Id": 251,
+            "Title": "What does “EEPROM” stand for ?",
+            "Answers": [
+                "Electrically Erasable Programmable Read-Only Memory",
+                "Extended Enterprise Processing Resource Optimization Model",
+                "External Encryption Protocol for Relational Object Matrices",
+                "Embedded Execution Pipeline for Router Operating Modules",
+                "Electronic Engineering Program for Relational Output Management"
+            ]
+        },
+        {
+            "Id": 252,
+            "Title": "What does “DVI” stand for ?",
+            "Answers": [
+                "Digital Video Interface",
+                "Data Verification Index",
+                "Distributed Voice Interface",
+                "Deployment Version Indicator",
+                "Dynamic Virtual Infrastructure"
+            ]
+        },
+        {
+            "Id": 253,
+            "Title": "What does “DVD-ROM” stand for ?",
+            "Answers": [
+                "Digital Versatile Disc-Read Only Memory",
+                "Database Verification Directory - Random Operating Module",
+                "Distributed Video Device - Router Optimization Mechanism",
+                "Dynamic Virtual Drive - Relational Object Matrix",
+                "Digital Volume Deployment - Resource Organization Method"
+            ]
+        },
+        {
+            "Id": 254,
+            "Title": "What does “DVD-R” stand for ?",
+            "Answers": [
+                "Digital Versatile Disc-Recordable",
+                "Database Verification Directory-Replication",
+                "Distributed Video Device-Router",
+                "Dynamic Virtual Drive-Recovery",
+                "Digital Volume Deployment-Registry"
+            ]
+        },
+        {
+            "Id": 255,
+            "Title": "What does “DVD” stand for ?",
+            "Answers": [
+                "Digital Versatile Disc or Digital Video Disc",
+                "Distributed Virtual Database",
+                "Dynamic Video Deployment",
+                "Data Volume Driver",
+                "Deployment Verification Directory"
+            ]
+        },
+        {
+            "Id": 256,
+            "Title": "What does “DVD-/+RW” stand for ?",
+            "Answers": [
+                "Digital Versatile Disc-Rewritable",
+                "Distributed Video Device-Routing Workspace",
+                "Database Verification Directory-Relational Workspace",
+                "Dynamic Virtual Drive-Registry Writer",
+                "Digital Volume Deployment-Raster Widget"
+            ]
+        },
+        {
+            "Id": 257,
+            "Title": "What does “DVB-H” stand for ?",
+            "Answers": [
+                "Digital Video Broadcasting-Handheld",
+                "Distributed Virtual Bus-Host",
+                "Database Verification Block-Hierarchy",
+                "Dynamic Volume Buffer-Hardware",
+                "Deployment Version Branch-Header"
+            ]
+        },
+        {
+            "Id": 258,
+            "Title": "What does “DTTV” stand for ?",
+            "Answers": [
+                "Digital Terrestrial Television",
+                "Data Transmission Task Verification",
+                "Distributed Terminal Text Viewer",
+                "Dynamic Task Translation Variable",
+                "Deployment Tracking Table Version"
+            ]
+        },
+        {
+            "Id": 259,
+            "Title": "What does “DTP” stand for ?",
+            "Answers": [
+                "Desktop Publishing",
+                "Data Transmission Protocol",
+                "Distributed Task Processing",
+                "Dynamic Translation Platform",
+                "Deployment Toolkit Path"
+            ]
+        },
+        {
+            "Id": 260,
+            "Title": "What does “dpi” stand for ?",
+            "Answers": [
+                "Dots Per Inch",
+                "Data Packet Index",
+                "Digital Picture Interface",
+                "Distributed Processing Instance",
+                "Deployment Program Installation"
+            ]
+        },
+        {
+            "Id": 261,
+            "Title": "What does “DNS” stand for ?",
+            "Answers": [
+                "Domain Name System",
+                "Data Network Security",
+                "Distributed Node Storage",
+                "Dynamic Navigation Script",
+                "Deployment Name Standard"
+            ]
+        },
+        {
+            "Id": 262,
+            "Title": "What does “DMB” stand for ?",
+            "Answers": [
+                "Digital Multimedia Broadcasting",
+                "Database Management Block",
+                "Distributed Memory Buffer",
+                "Dynamic Matrix Builder",
+                "Deployment Monitor Branch"
+            ]
+        },
+        {
+            "Id": 263,
+            "Title": "What does “DLP” stand for ?",
+            "Answers": [
+                "Digital Light Processing",
+                "Data Loss Prevention",
+                "Distributed Logic Platform",
+                "Dynamic Layout Protocol",
+                "Deployment Lifecycle Program"
+            ]
+        },
+        {
+            "Id": 264,
+            "Title": "What does “DIMM” stand for ?",
+            "Answers": [
+                "Dual In-line Memory Module",
+                "Distributed Information Management Model",
+                "Dynamic Interface Mapping Matrix",
+                "Data Integration Monitor Module",
+                "Deployment Instance Management Method"
+            ]
+        },
+        {
+            "Id": 265,
+            "Title": "What does “DDR” stand for ?",
+            "Answers": [
+                "Double Data Rate",
+                "Distributed Database Replication",
+                "Dynamic Driver Routing",
+                "Data Delivery Routine",
+                "Deployment Resource Registry"
+            ]
+        },
+        {
+            "Id": 266,
+            "Title": "What does “DBMS” stand for ?",
+            "Answers": [
+                "Database Management System",
+                "Data Bus Monitoring Software",
+                "Distributed Backup Matrix Storage",
+                "Dynamic Binary Modeling Structure",
+                "Deployment Business Management Software"
+            ]
+        },
+        {
+            "Id": 267,
+            "Title": "What does “DAW” stand for ?",
+            "Answers": [
+                "Digital Audio Workstation",
+                "Data Analysis Workflow",
+                "Distributed Application Workspace",
+                "Dynamic Array Window",
+                "Deployment Automation Wizard"
+            ]
+        },
+        {
+            "Id": 268,
+            "Title": "What does “DAB” stand for ?",
+            "Answers": [
+                "Digital Audio Broadcasting",
+                "Database Access Buffer",
+                "Distributed Application Bus",
+                "Dynamic Array Builder",
+                "Deployment Automation Branch"
+            ]
+        },
+        {
+            "Id": 269,
+            "Title": "What does “CU” stand for ?",
+            "Answers": [
+                "Control Unit",
+                "Cloud Utility",
+                "Core User",
+                "Calculation Unit",
+                "Configuration Utility"
+            ]
+        },
+        {
+            "Id": 270,
+            "Title": "What does “CTP” stand for ?",
+            "Answers": [
+                "Computer-to-Plate",
+                "Cloud Transfer Protocol",
+                "Central Task Processor",
+                "Core Technology Platform",
+                "Client Transaction Portal"
+            ]
+        },
+        {
+            "Id": 271,
+            "Title": "What does “CSS” stand for ?",
+            "Answers": [
+                "Cascading Style Sheets",
+                "Cloud Storage System",
+                "Computer Security Standard",
+                "Core System Software",
+                "Client Server Script"
+            ]
+        },
+        {
+            "Id": 272,
+            "Title": "What does “CRT” stand for ?",
+            "Answers": [
+                "Cathode Ray Tube",
+                "Cloud Reinitialization Tool",
+                "Core Runtime Task",
+                "Configuration Registry Table",
+                "Client Response Tracking"
+            ]
+        },
+        {
+            "Id": 273,
+            "Title": "What does “CPU” stand for ?",
+            "Answers": [
+                "Central Processing Unit",
+                "Cloud Processing Utility",
+                "Core Programming Unit",
+                "Central Power Utility",
+                "Client Platform Unit"
+            ]
+        },
+        {
+            "Id": 274,
+            "Title": "What does “COBOL” stand for ?",
+            "Answers": [
+                "Common Business-Oriented Language",
+                "Core Object-Based Operating Library",
+                "Computer Optimization Binary Oriented Logic",
+                "Central Organizational Business Operating System",
+                "Cloud Oriented Binary Optimization Language"
+            ]
+        },
+        {
+            "Id": 275,
+            "Title": "What does “CERN” stand for ?",
+            "Answers": [
+                "Conseil Européen pour la Recherche Nucléaire",
+                "Cloud Enterprise Resource Network",
+                "Computer Engineering Research Node",
+                "Central Electronic Routing Network",
+                "Core Encryption Resource Node"
+            ]
+        },
+        {
+            "Id": 276,
+            "Title": "What does “CD-RW” stand for ?",
+            "Answers": [
+                "Compact Disc-Rewritable",
+                "Cloud Directory-Routing Workspace",
+                "Core Driver-Registration Toolkit",
+                "Central Database-Relational Writer",
+                "Client Device-Registry Worker"
+            ]
+        },
+        {
+            "Id": 277,
+            "Title": "What does “CD-R” stand for ?",
+            "Answers": [
+                "Compact Disc-Recordable",
+                "Cloud Directory-Replication",
+                "Core Driver-Registry",
+                "Central Database-Repository",
+                "Client Device-Recovery"
+            ]
+        },
+        {
+            "Id": 278,
+            "Title": "What does “cd/m2” stand for ?",
+            "Answers": [
+                "Candela per square meter - a unit of luminance measuring display brightness",
+                "Compact Disc per square meter - a metric tracking early layout operations",
+                "Core Directory / Management Zone - an infrastructure scaling classification code",
+                "Cloud Deployment / Matrix Version - a release validation parameter tag",
+                "Central Database / Metadata Zone - a structured storage categorization standard"
+            ]
+        },
+        {
+            "Id": 279,
+            "Title": "What does “CD” stand for ?",
+            "Answers": [
+                "Compact Disc",
+                "Cloud Directory",
+                "Core Driver",
+                "Central Database",
+                "Client Device"
+            ]
+        },
+        {
+            "Id": 280,
+            "Title": "What does “CCD” stand for ?",
+            "Answers": [
+                "Charge-Coupled Device",
+                "Cloud Computing Directory",
+                "Core Connection Driver",
+                "Central Data Buffer",
+                "Client Configuration Display"
+            ]
+        },
+        {
+            "Id": 281,
+            "Title": "What does “Cc” stand for ?",
+            "Answers": [
+                "Carbon copy - a secondary recipient line in email systems",
+                "Core control - an internal software routine managing processor threads",
+                "Cloud cache - a local directory directory speeding up data retrieval",
+                "Client configuration - an administrative layout rule folder",
+                "Central compiler - an automation routine executing code packages"
+            ]
+        },
+        {
+            "Id": 282,
+            "Title": "What does “CAD” stand for ?",
+            "Answers": [
+                "Computer-Aided Design",
+                "Cloud Application Deployment",
+                "Central Array Directory",
+                "Core Architecture Development",
+                "Client Access Driver"
+            ]
+        },
+        {
+            "Id": 283,
+            "Title": "What does “bps” stand for ?",
+            "Answers": [
+                "Bits Per Second",
+                "Bytes Processing Sequence",
+                "Backup Protection System",
+                "Binary Parsing Script",
+                "Buffer Processing Stage"
+            ]
+        },
+        {
+            "Id": 284,
+            "Title": "What does “bit” stand for ?",
+            "Answers": [
+                "Binary Digit",
+                "Basic Information Technology",
+                "Buffer Integration Terminal",
+                "Binary Interface Toolkit",
+                "Background Indexing Task"
+            ]
+        },
+        {
+            "Id": 285,
+            "Title": "What does “BIOS” stand for ?",
+            "Answers": [
+                "Basic Input/Output System",
+                "Binary Integration Operating Software",
+                "Backup Information Storage System",
+                "Backend Interface Optimization Software",
+                "Boundary Interface Operating Standard"
+            ]
+        },
+        {
+            "Id": 286,
+            "Title": "What does “Bcc” stand for ?",
+            "Answers": [
+                "Blind carbon copy - a hidden secondary recipient line in email systems",
+                "Backup core connection - a redundant communication path for routers",
+                "Binary code compiler - an automated system processing raw code files",
+                "Backend cloud cache - a localized directory tracking system operations",
+                "Buffer configuration command - a setup rule modifying hardware speed"
+            ]
+        },
+        {
+            "Id": 287,
+            "Title": "What does “BBS” stand for ?",
+            "Answers": [
+                "Bulletin Board System",
+                "Backup Buffer System",
+                "Binary Broadcast Server",
+                "Backend Business Software",
+                "Boundary Bridge Switch"
+            ]
+        },
+        {
+            "Id": 288,
+            "Title": "What does “BASIC” stand for ?",
+            "Answers": [
+                "Beginner's All-purpose Symbolic Instruction Code",
+                "Binary Array Storage and Integration Controller",
+                "Backend Application Security and Interface Configuration",
+                "Boundary Automation Software for Information Communication",
+                "Basic Architecture for Structured Information Computation"
+            ]
+        },
+        {
+            "Id": 289,
+            "Title": "What does “AVI” stand for ?",
+            "Answers": [
+                "Audio Video Interleave",
+                "Advanced Virtual Interface",
+                "Automated Vector Index",
+                "Application Volume Indicator",
+                "Adaptive Video Integration"
+            ]
+        },
+        {
+            "Id": 290,
+            "Title": "What does “ATM” stand for ?",
+            "Answers": [
+                "Automated Teller Machine or Asynchronous Transfer Mode",
+                "Advanced Traffic Monitor or Application Testing Module",
+                "Automated Task Manager or Archive Tracking Matrix",
+                "Asynchronous Transmission Manager or Adaptive Technical Module",
+                "Analytical Text Matrix or Auxiliary Terminal Module"
+            ]
+        },
+        {
+            "Id": 291,
+            "Title": "What does “ATA” stand for ?",
+            "Answers": [
+                "Advanced Technology Attachment",
+                "Automated Traffic Analysis",
+                "Application Tuning Architecture",
+                "Analytical Task Allocation",
+                "Auxiliary Terminal Adapter"
+            ]
+        },
+        {
+            "Id": 292,
+            "Title": "What does “AT&T” stand for ?",
+            "Answers": [
+                "American Telephone and Telegraph",
+                "Advanced Technology and Telecommunications",
+                "Automated Tracking and Transmission Network",
+                "Analytical Tool and Technology Company",
+                "American Terminal and Transmission Network"
+            ]
+        },
+        {
+            "Id": 293,
+            "Title": "What does “AMD” stand for ?",
+            "Answers": [
+                "Advanced Micro Devices",
+                "Application Model Deployment",
+                "Automated Matrix Database",
+                "Analytical Memory Drive",
+                "Auxiliary Monitor Driver"
+            ]
+        },
+        {
+            "Id": 294,
+            "Title": "What does “ALU” stand for ?",
+            "Answers": [
+                "Arithmetic Logic Unit",
+                "Advanced Layout Utility",
+                "Application Linking Unit",
+                "Automated Logic Utility",
+                "Array Location Unit"
+            ]
+        },
+        {
+            "Id": 295,
+            "Title": "What does “AIM” stand for ?",
+            "Answers": [
+                "AOL Instant Messenger",
+                "Advanced Indexing Method",
+                "Automated Interface Module",
+                "Application Integration Monitor",
+                "Array Information Matrix"
+            ]
+        },
+        {
+            "Id": 296,
+            "Title": "What does “AI” stand for ?",
+            "Answers": [
+                "Artificial Intelligence",
+                "Application Interface",
+                "Automated Integration",
+                "Advanced Infrastructure",
+                "Array Indexing"
+            ]
+        },
+        {
+            "Id": 297,
+            "Title": "What does “ADSL” stand for ?",
+            "Answers": [
+                "Asymmetric Digital Subscriber Line",
+                "Advanced Data Storage Library",
+                "Automated Device Synchronization Logic",
+                "Application Deployment Security Layer",
+                "Analytical Database Structure Layout"
+            ]
+        },
+        {
+            "Id": 298,
+            "Title": "What does “LCD” stand for ?",
+            "Answers": [
+                "Liquid-Crystal Display",
+                "Local Configuration Directory",
+                "Logical Calculation Device",
+                "Layered Communication Driver",
+                "Layout Control Definition"
+            ]
+        },
+        {
+            "Id": 299,
+            "Title": "What does “PC” stand for ?",
+            "Answers": [
+                "Personal Computer",
+                "Processor Core",
+                "Protocol Controller",
+                "Private Cloud",
+                "Program Counter"
+            ]
+        },
+        {
+            "Id": 300,
+            "Title": "What does “VCR” stand for ?",
+            "Answers": [
+                "Video Cassette Recorder",
+                "Virtual Connection Router",
+                "Vector Configuration Registry",
+                "Volume Control Routine",
+                "Visual Code Renderer"
+            ]
+        },
+        {
+            "Id": 301,
+            "Title": "What does “ASCII” stand for?",
+            "Answers": [
+                "American Standard Code for Information Interchange",
+                "Advanced System Configuration for Internet Integration",
+                "Automated Software Coding for Information Interchange",
+                "Analytical Security Command for Internet Infrastructure",
+                "American Software Compiler for Information Interchange"
+            ]
+        },
+        {
+            "Id": 302,
+            "Title": "Choose the correct answer: What does PAN stand for?",
+            "Answers": [
+                "Personal Area Network",
+                "Private Access Node",
+                "Programmable Array Network",
+                "Peripheral Area Network",
+                "Protocol Analysis Node"
+            ]
+        },
+        {
+            "Id": 303,
+            "Title": "Choose the correct answer: What does MPEG stand for?",
+            "Answers": [
+                "Moving Picture Experts Group",
+                "Multi-Purpose Encryption Gateway",
+                "Multimedia Processing Engine Group",
+                "Memory Parallel Execution Graph",
+                "Mobile Picture Encoding Guide"
+            ]
+        },
+        {
+            "Id": 304,
+            "Title": "Choose the correct answer: What does MAN stand for?",
+            "Answers": [
+                "Metropolitan Area Network",
+                "Main Access Node",
+                "Matrix Array Network",
+                "Memory Allocation Node",
+                "Multi-Tenant Application Network"
+            ]
+        },
+        {
+            "Id": 305,
+            "Title": "Choose the correct answer: What does CTP stand for?",
+            "Answers": [
+                "Computer-to-Plate",
+                "Cloud Transfer Protocol",
+                "Central Task Processor",
+                "Core Technology Platform",
+                "Client Transaction Portal"
+            ]
+        },
+        {
+            "Id": 306,
+            "Title": "Choose the correct answer: What does RIM stand for?",
+            "Answers": [
+                "Research In Motion",
+                "Relational Index Manager",
+                "Remote Interface Module",
+                "Raster Image Matrix",
+                "Routing Infrastructure Model"
+            ]
+        },
+        {
+            "Id": 307,
+            "Title": "what is the translation of the word «Technician»?",
+            "Answers": [
+                "Техник",
+                "Инженер",
+                "Программист",
+                "Аналитик",
+                "Менеджер"
+            ]
+        },
+        {
+            "Id": 308,
+            "Title": "what is the translation of the word «Educational organizations»?",
+            "Answers": [
+                "Образовательные организации",
+                "Коммерческие предприятия",
+                "Государственные учреждения",
+                "Технические центры",
+                "Научные лаборатории"
+            ]
+        },
+        {
+            "Id": 309,
+            "Title": "what is the translation of the word «Project manager»?",
+            "Answers": [
+                "Руководитель проекта",
+                "Системный администратор",
+                "Разработчик программного обеспечения",
+                "Инженер по безопасности",
+                "Технический писатель"
+            ]
+        },
+        {
+            "Id": 310,
+            "Title": "what is the translation of the word «Systems analyst»?",
+            "Answers": [
+                "Системный аналитик",
+                "Базовый программист",
+                "Сетевой инженер",
+                "Специалист поддержки",
+                "Администратор данных"
+            ]
+        },
+        {
+            "Id": 311,
+            "Title": "what is the translation of the word «company equipment»?",
+            "Answers": [
+                "Оборудование компании",
+                "Программное обеспечение",
+                "Рабочее пространство",
+                "Офисная мебель",
+                "Сетевая инфраструктура"
+            ]
+        },
+        {
+            "Id": 312,
+            "Title": "what is the translation of the word «Software developer»?",
+            "Answers": [
+                "Разработчик программного обеспечения",
+                "Системный администратор",
+                "Технический специалист",
+                "Менеджер базы данных",
+                "Аналитик безопасности"
+            ]
+        },
+        {
+            "Id": 313,
+            "Title": "what is the translation of the word «Digital world»?",
+            "Answers": [
+                "Цифровой мир",
+                "Информационная среда",
+                "Виртуальная реальность",
+                "Глобальная сеть",
+                "Компьютерная система"
+            ]
+        },
+        {
+            "Id": 314,
+            "Title": "what is the translation of the word «Security»?",
+            "Answers": [
+                "Безопасность",
+                "Управление",
+                "Разработка",
+                "Интеграция",
+                "Стандартизация"
+            ]
+        },
+        {
+            "Id": 315,
+            "Title": "what is the translation of the word «password»?",
+            "Answers": [
+                "Пароль",
+                "Имя пользователя",
+                "Ключ шифрования",
+                "Идентификатор",
+                "Сертификат"
+            ]
+        },
+        {
+            "Id": 316,
+            "Title": "what is the translation of the word «Database administrator»?",
+            "Answers": [
+                "Администратор базы данных",
+                "Разработчик интерфейсов",
+                "Сетевой архитектор",
+                "Системный инженер",
+                "Аналитик данных"
+            ]
+        },
+        {
+            "Id": 317,
+            "Title": "what is the translation of the word «Service Report»?",
+            "Answers": [
+                "Отчет об обслуживании",
+                "Техническое задание",
+                "Системный журнал",
+                "Руководство пользователя",
+                "Протокол тестирования"
+            ]
+        },
+        {
+            "Id": 318,
+            "Title": "what is the translation of the word «Operating system»?",
+            "Answers": [
+                "Операционная система",
+                "Офисное приложение",
+                "Сетевой протокол",
+                "Драйвер устройства",
+                "Вычислительная среда"
+            ]
+        },
+        {
+            "Id": 319,
+            "Title": "what is the translation of the word «Dimension»?",
+            "Answers": [
+                "Измерение / Размер",
+                "Расширение",
+                "Масштабирование",
+                "Вычисление",
+                "Определение"
+            ]
+        },
+        {
+            "Id": 320,
+            "Title": "what is the translation of the word «Customer service»?",
+            "Answers": [
+                "Обслуживание клиентов",
+                "Отдел разработки",
+                "Управление продажами",
+                "Техническая поддержка",
+                "Маркетинговая служба"
+            ]
+        },
+        {
+            "Id": 321,
+            "Title": "what is the translation of the word «Space»?",
+            "Answers": [
+                "Пространство / Пробел",
+                "Ограничение",
+                "Разделение",
+                "Хранилище",
+                "Каталог"
+            ]
+        },
+        {
+            "Id": 322,
+            "Title": "what is the translation of the word «Restore»?",
+            "Answers": [
+                "Восстановить",
+                "Перезагрузить",
+                "Удалить",
+                "Сохранить",
+                "Изменить"
+            ]
+        },
+        {
+            "Id": 323,
+            "Title": "what is the translation of the word «Accelerator»?",
+            "Answers": [
+                "Ускоритель",
+                "Преобразователь",
+                "Контроллер",
+                "Процессор",
+                "Модулятор"
+            ]
+        },
+        {
+            "Id": 324,
+            "Title": "what is the translation of the word «Copyright»?",
+            "Answers": [
+                "Авторское право",
+                "Лицензионное соглашение",
+                "Товарный знак",
+                "Патент",
+                "Сертификат соответствия"
+            ]
+        },
+        {
+            "Id": 325,
+            "Title": "what is the translation of the word «Add»?",
+            "Answers": [
+                "Добавить",
+                "Удалить",
+                "Редактировать",
+                "Отменить",
+                "Вставить"
+            ]
+        },
+        {
+            "Id": 326,
+            "Title": "what is the translation of the word «Access»?",
+            "Answers": [
+                "Доступ",
+                "Блокировка",
+                "Подключение",
+                "Управление",
+                "Выполнение"
+            ]
+        },
+        {
+            "Id": 327,
+            "Title": "what is the translation of the word «attachment»?",
+            "Answers": [
+                "Вложение",
+                "Сообщение",
+                "Заголовок",
+                "Адресат",
+                "Уведомление"
+            ]
+        },
+        {
+            "Id": 328,
+            "Title": "what is the translation of the word «Table»?",
+            "Answers": [
+                "Таблица",
+                "Индекс",
+                "Форма",
+                "Запрос",
+                "Строка"
+            ]
+        },
+        {
+            "Id": 329,
+            "Title": "what is the translation of the word «Save»?",
+            "Answers": [
+                "Сохранить",
+                "Удалить",
+                "Закрыть",
+                "Печать",
+                "Экспорт"
+            ]
+        },
+        {
+            "Id": 330,
+            "Title": "what is the translation of the word «Print»?",
+            "Answers": [
+                "Печать",
+                "Отображение",
+                "Сканирование",
+                "Копирование",
+                "Форматирование"
+            ]
+        },
+        {
+            "Id": 331,
+            "Title": "what is the translation of the word «Interrupt»?",
+            "Answers": [
+                "Прерывание",
+                "Выполнение",
+                "Ожидание",
+                "Запуск",
+                "Перенаправление"
+            ]
+        },
+        {
+            "Id": 332,
+            "Title": "what is the translation of the word «Insert»?",
+            "Answers": [
+                "Вставить",
+                "Удалить",
+                "Вырезать",
+                "Копировать",
+                "Заменить"
+            ]
+        },
+        {
+            "Id": 333,
+            "Title": "what is the translation of the word «Install»?",
+            "Answers": [
+                "Установить",
+                "Удалить",
+                "Обновить",
+                "Настроить",
+                "Запустить"
+            ]
+        },
+        {
+            "Id": 334,
+            "Title": "what is the translation of the word «Input»?",
+            "Answers": [
+                "Ввод",
+                "Вывод",
+                "Обработка",
+                "Хранение",
+                "Передача"
+            ]
+        },
+        {
+            "Id": 335,
+            "Title": "what is the translation of the word «Font style»?",
+            "Answers": [
+                "Стиль шрифта",
+                "Размер шрифта",
+                "Цвет текста",
+                "Выравнивание абзаца",
+                "Тип начертания"
+            ]
+        },
+        {
+            "Id": 336,
+            "Title": "what is the translation of the word «Font size»?",
+            "Answers": [
+                "Размер шрифта",
+                "Стиль шрифта",
+                "Интервал текста",
+                "Ширина символов",
+                "Выравнивание строк"
+            ]
+        },
+        {
+            "Id": 337,
+            "Title": "what is the translation of the word «Edit»?",
+            "Answers": [
+                "Редактировать",
+                "Сохранить",
+                "Просмотреть",
+                "Удалить",
+                "Создать"
+            ]
+        },
+        {
+            "Id": 338,
+            "Title": "what is the translation of the word «power supply»?",
+            "Answers": [
+                "Блок питания",
+                "Материнская плата",
+                "Жесткий диск",
+                "Процессорный кулер",
+                "Сетевой адаптер"
+            ]
+        },
+        {
+            "Id": 339,
+            "Title": "what is the translation of the word «upload»?",
+            "Answers": [
+                "Загрузить (на сервер)",
+                "Скачать (с сервера)",
+                "Удалить файлы",
+                "Архивировать папки",
+                "Синхронизировать диски"
+            ]
+        },
+        {
+            "Id": 340,
+            "Title": "what is the translation of the word «Download»?",
+            "Answers": [
+                "Скачать (с сервера)",
+                "Загрузить (на сервер)",
+                "Удалить локально",
+                "Переименовать файл",
+                "Заблокировать доступ"
+            ]
+        },
+        {
+            "Id": 341,
+            "Title": "what is the translation of the word «Digital»?",
+            "Answers": [
+                "Цифровой",
+                "Аналоговый",
+                "Текстовый",
+                "Графический",
+                "Звуковой"
+            ]
+        },
+        {
+            "Id": 342,
+            "Title": "what is the translation of the word «Delete»?",
+            "Answers": [
+                "Удалить",
+                "Восстановить",
+                "Копировать",
+                "Переместить",
+                "Переименовать"
+            ]
+        },
+        {
+            "Id": 343,
+            "Title": "what is the translation of the word «Cancel»?",
+            "Answers": [
+                "Отмена",
+                "Подтверждение",
+                "Повтор",
+                "Применение",
+                "Завершение"
+            ]
+        },
+        {
+            "Id": 344,
+            "Title": "what is the translation of the word «Database language»?",
+            "Answers": [
+                "Язык базы данных",
+                "Язык программирования",
+                "Язык гипертекста",
+                "Язык разметки",
+                "Системный язык"
+            ]
+        },
+        {
+            "Id": 345,
+            "Title": "what is the translation of the word «Word processing»?",
+            "Answers": [
+                "Обработка текстов",
+                "Анализ данных",
+                "Создание таблиц",
+                "Редактирование изображений",
+                "Управление файлами"
+            ]
+        },
+        {
+            "Id": 346,
+            "Title": "what is the translation of the word «Capacity»?",
+            "Answers": [
+                "Емкость / Вместимость",
+                "Скорость передачи",
+                "Разрешение экрана",
+                "Тактовая частота",
+                "Вычислительная мощность"
+            ]
+        },
+        {
+            "Id": 347,
+            "Title": "what is the translation of the word «Equipment»?",
+            "Answers": [
+                "Оборудование",
+                "Программы",
+                "Интерфейсы",
+                "Документы",
+                "Устройства"
+            ]
+        },
+        {
+            "Id": 348,
+            "Title": "what is the translation of the word «Device»?",
+            "Answers": [
+                "Устройство",
+                "Программа",
+                "Протокол",
+                "Алгоритм",
+                "Инструкция"
+            ]
+        },
+        {
+            "Id": 349,
+            "Title": "what is the translation of the word «Software»?",
+            "Answers": [
+                "Программное обеспечение",
+                "Аппаратное обеспечение",
+                "Сетевое оборудование",
+                "Документация системы",
+                "Компьютерные компоненты"
+            ]
+        },
+        {
+            "Id": 350,
+            "Title": "what is the translation of the word «Desktop»?",
+            "Answers": [
+                "Рабочий стол",
+                "Панель задач",
+                "Главное меню",
+                "Проводник файлов",
+                "Директория системы"
+            ]
+        },
+        {
+            "Id": 351,
+            "Title": "what is the translation of the word «Database»?",
+            "Answers": [
+                "База данных",
+                "Хранилище файлов",
+                "Информационная панель",
+                "Табличный редактор",
+                "Сетевой архив"
+            ]
+        },
+        {
+            "Id": 352,
+            "Title": "what is the translation of the word «Data»?",
+            "Answers": [
+                "Данные",
+                "Программы",
+                "Команды",
+                "Индексы",
+                "Файлы"
+            ]
+        },
+        {
+            "Id": 353,
+            "Title": "what is the translation of the word «Keyboard»?",
+            "Answers": [
+                "Клавиатура",
+                "Монитор",
+                "Мышь",
+                "Принтер",
+                "Сканер"
+            ]
+        },
+        {
+            "Id": 354,
+            "Title": "what is a company that provides access to the internet?",
+            "Answers": [
+                "Internet Service Provider (ISP)",
+                "Web Hosting Service",
+                "Domain Name Registrar",
+                "Cloud Infrastructure Provider",
+                "Network Equipment Manufacturer"
+            ]
+        },
+        {
+            "Id": 355,
+            "Title": "what is a way of sending messages over the internet?",
+            "Answers": [
+                "Electronic mail (E-mail)",
+                "File Transfer Protocol (FTP)",
+                "Hypertext Transfer Protocol (HTTP)",
+                "Domain Name System (DNS)",
+                "Simple Network Management Protocol"
+            ]
+        },
+        {
+            "Id": 356,
+            "Title": "what is a document sent with an email message?",
+            "Answers": [
+                "Attachment",
+                "Hyperlink",
+                "Header",
+                "Signature",
+                "Subject line"
+            ]
+        },
+        {
+            "Id": 357,
+            "Title": "what is the smallest unit of measurement in computing?",
+            "Answers": [
+                "Bit",
+                "Byte",
+                "Kilobyte",
+                "Character",
+                "Pixel"
+            ]
+        }
+    ]
+}
