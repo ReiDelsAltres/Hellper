@@ -220,12 +220,12 @@
                 "file": "s4/MD.json"
             },
             {
-                "name": "Müasir proqramlaşdırma dilləri",
+                "name": "Müasir proqramlaşdırma dilləri ",
                 "teacher": "Cəbrayılova G.H",
                 "groups": [
                     "759KM"
                 ],
-                "translatedName": "Современные языки программирования",
+                "translatedName": "Современные языки программирования (KM)",
                 "file": "s4/MDKM.json"
             },
             {
@@ -243,7 +243,7 @@
                 "groups": [
                     "759KM"
                 ],
-                "translatedName": "Объектно-ориентированное программирование",
+                "translatedName": "Объектно-ориентированное программирование (KM)",
                 "file": "s4/OOPKM.json"
             },
             {
