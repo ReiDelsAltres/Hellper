@@ -40,7 +40,7 @@
                                     <exp of="card.subsTotal"></exp>
                                 </re-typography>
                             </if>
-                            <re-typography variant="caption" color="info">
+                            <re-typography variant="caption" color="info" class="module-version">
                                 <exp of="card.version"></exp>
                             </re-typography>
                         </if>

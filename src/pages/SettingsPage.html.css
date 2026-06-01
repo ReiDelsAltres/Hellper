@@ -165,6 +165,10 @@
     color: var(--on-surface-variant);
 }
 
+.module-version {
+    color: var(--color-info);
+}
+
 .module-subsize {
     color: var(--primary);
     font-weight: 600;
