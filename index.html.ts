@@ -30,7 +30,7 @@ const CoreModule = ModuleManager.register({
     icon: "inventory_2",
     estimatedSize: 13_200_000,
     core: true,
-    version: "v0.0.1",
+    version: "v0.0.2",
     resources: [
         // ── Root files ──
         "./index.html",
