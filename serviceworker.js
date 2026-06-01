@@ -11,7 +11,7 @@
  *   DISABLE_FETCH_TRACKING   — turn off fetch activity broadcasts
  */
 
-const SW_VERSION = '2.0.0';
+const SW_VERSION = '2.1.0';
 
 let fetchCounter = 0;
 let fetchTrackingEnabled = false;
@@ -49,6 +49,21 @@ self.addEventListener("fetch", (event) => {
                         .then((fallback) => fallback || new Response('Offline', { status: 503 }));
                 });
             })
+        );
+        return;
+    }
+
+    // Force-fresh requests (module download/refresh & version manifest):
+    // network-first with cache fallback. CacheManager issues these with
+    // `cache: 'reload'`/'no-store' so updates fetch the latest bytes instead of
+    // being served the stale cached copy.
+    if (request.cache === 'reload' || request.cache === 'no-store') {
+        event.respondWith(
+            fetch(request).catch(() =>
+                caches.match(request).then((cached) =>
+                    cached || new Response('', { status: 503, statusText: 'Offline' })
+                )
+            )
         );
         return;
     }
