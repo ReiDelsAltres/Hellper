@@ -29,6 +29,7 @@ declare class ModuleCardStruct {
     }[]>;
     size?: Observable<string>;
     subsTotal?: Observable<string>;
+    version?: string;
     progress?: {
         active: Observable<boolean>;
         percent: Observable<number>;

@@ -6,6 +6,7 @@ import ReInput from "../components/ReInput.html.js";
 import PopUp from "../components/PopUp.html.js";
 import ReRangeSlider from "../components/ReRangeSlider.html.js";
 import ReTypography from "../components/ReTypography.html.js";
+import ReCheckbox from "../components/ReCheckbox.html.js";
 
 
 @RePage({
@@ -81,6 +82,18 @@ export default class ComponentShowcasePage extends Page {
     private rangeValueMin?: HTMLInputElement;
     private rangeValueMax?: HTMLInputElement;
     private rangeDisabled?: HTMLInputElement;
+
+    // -- ReCheckbox refs --
+    private cbxDefault?: ReCheckbox;
+    private cbxChecked?: ReCheckbox;
+    private cbxIndeterminate?: ReCheckbox;
+    private cbxDisabled?: ReCheckbox;
+    private cbxPreview?: ReCheckbox;
+    private cbxColor?: HTMLSelectElement;
+    private cbxSize?: HTMLSelectElement;
+    private cbxLabel?: HTMLInputElement;
+    private cbxMini?: HTMLInputElement;
+    private cbxDisabledCtrl?: HTMLInputElement;
 
     // -- PopUp controls --
     private popupModal?: HTMLInputElement;
@@ -190,6 +203,21 @@ export default class ComponentShowcasePage extends Page {
 
     public onRangeChange(): void {
         this.updateRangeLabel();
+    }
+
+    // -- ReCheckbox playground --
+    public updateCheckbox(): void {
+        const el = this.cbxPreview;
+        if (!el) return;
+        el.color.value = this.cbxColor?.value ?? 'primary';
+        el.size.value = this.cbxSize?.value ?? 'medium';
+        el.label.value = this.cbxLabel?.value ?? '';
+        el.mini.value = this.cbxMini?.checked ?? false;
+        el.disabled.value = this.cbxDisabledCtrl?.checked ?? false;
+    }
+
+    public onCbxChange(el: ReCheckbox, event: CustomEvent): void {
+        el.checked.value = event.detail.checked;
     }
 
     // -- PopUp playground --

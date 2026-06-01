@@ -30,6 +30,7 @@ const CoreModule = ModuleManager.register({
     icon: "inventory_2",
     estimatedSize: 13_200_000,
     core: true,
+    version: "v0.0.1",
     resources: [
         // ── Root files ──
         "./index.html",
@@ -205,6 +206,7 @@ async function registerNonCoreModules(): Promise<void> {
         icon: "school",
         enabled: false,
         estimatedSize: 1_500_000,
+        version: "v0.0.1",
         resources: [
             "./out/src/pages/ColloquimTestingPage.html.js",
             "./out/src/pages/ColloquiumSubPage.html.js",
@@ -399,6 +401,7 @@ async function registerNonCoreModules(): Promise<void> {
         icon: "bug_report",
         estimatedSize: 10_400,
         enabled: false,
+        version: "v0.0.1",
         resources: [
             "./out/src/components/NetworkStatus.html.js",
             "./out/src/components/CacheIndicator.html.js",
@@ -425,6 +428,7 @@ async function registerNonCoreModules(): Promise<void> {
         icon: "palette",
         estimatedSize: 80_000,
         enabled: false,
+        version: "v0.0.2",
         resources: [
             "./out/src/components/ColorPalettePreview.html.js",
             "./out/src/pages/PalettePage.html.js",

@@ -68,6 +68,17 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
     rangeValueMin;
     rangeValueMax;
     rangeDisabled;
+    // -- ReCheckbox refs --
+    cbxDefault;
+    cbxChecked;
+    cbxIndeterminate;
+    cbxDisabled;
+    cbxPreview;
+    cbxColor;
+    cbxSize;
+    cbxLabel;
+    cbxMini;
+    cbxDisabledCtrl;
     // -- PopUp controls --
     popupModal;
     popupPlacement;
@@ -177,6 +188,20 @@ let ComponentShowcasePage = class ComponentShowcasePage extends Page {
     }
     onRangeChange() {
         this.updateRangeLabel();
+    }
+    // -- ReCheckbox playground --
+    updateCheckbox() {
+        const el = this.cbxPreview;
+        if (!el)
+            return;
+        el.color.value = this.cbxColor?.value ?? 'primary';
+        el.size.value = this.cbxSize?.value ?? 'medium';
+        el.label.value = this.cbxLabel?.value ?? '';
+        el.mini.value = this.cbxMini?.checked ?? false;
+        el.disabled.value = this.cbxDisabledCtrl?.checked ?? false;
+    }
+    onCbxChange(el, event) {
+        el.checked.value = event.detail.checked;
     }
     // -- PopUp playground --
     togglePopup() {

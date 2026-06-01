@@ -23,6 +23,7 @@ export default class SettingsPage extends Page {
 
         for (const module of this.modules) {
             const struct = new ModuleCardStruct();
+            struct.version = module.version;
             struct.module = module;
             struct.class = new Observable<string>(this.computeCardClass(module));
             struct.statusColor = new Observable<string>(this.computeStatusColor(module));
@@ -287,6 +288,7 @@ class ModuleCardStruct {
     chips?: Observable<{ color: string, size: string, text: string }[]>;
     size?: Observable<string>;
     subsTotal?: Observable<string>;
+    version?: string;
     progress?: {
         active: Observable<boolean>;
         percent: Observable<number>;

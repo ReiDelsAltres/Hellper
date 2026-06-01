@@ -2,7 +2,7 @@
 .showcase-page {
   min-height: 100vh;
   padding: 2rem;
-  background: var(--color-app-background, #f5f5f5);
+  background: var(--app-background-color);
 }
 
 .page-header {
@@ -20,7 +20,7 @@
 
 /* ── Playground section ── */
 .playground-section {
-  background: var(--color-paper-background, #fff);
+  background: var(--paper-background-color);
   border-radius: 14px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
@@ -39,10 +39,10 @@
   align-items: center;
   justify-content: center;
   min-height: 100px;
-  border: 1px dashed var(--color-primary-light, #c5cae9);
+  border: 1px dashed var(--color-primary);
   border-radius: 10px;
   padding: 1rem;
-  background: var(--color-app-background, #f5f5f5);
+  background: var(--app-background-color);
 }
 
 .typography-preview {
@@ -62,7 +62,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.82rem;
-  color: var(--color-text-secondary, #666);
+  color: var(--color-secondary-contrast);
   min-width: 0;
 }
 
@@ -71,11 +71,11 @@
   flex: 1;
   min-width: 0;
   padding: 4px 6px;
-  border: 1px solid var(--color-primary-light, #ccc);
+  border: 1px solid var(--color-primary-contrast);
   border-radius: 6px;
   font-size: 0.82rem;
-  background: var(--color-paper-background, #fff);
-  color: var(--color-text-primary, #222);
+  background: var(--paper-background-color);
+  color: var(--text-primary-color);
 }
 
 .playground-controls .checkbox-label {
@@ -84,7 +84,7 @@
 }
 
 .playground-controls .checkbox-label input[type=checkbox] {
-  accent-color: var(--color-primary, #6366f1);
+  accent-color: var(--color-primary);
 }
 
 /* ── Responsive ── */
@@ -96,17 +96,6 @@
     grid-template-columns: 1fr;
   }
 }
-.showcase-page {
-  min-height: 100vh;
-  padding: 2rem;
-  background: var(--color-app-background, #f5f5f5);
-}
-
-.page-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
 .page-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -294,3 +283,5 @@
 .icon-library-row {
   gap: 16px;
 }
+
+/*# sourceMappingURL=ComponentShowcasePage.html.css.map */

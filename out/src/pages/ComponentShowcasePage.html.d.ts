@@ -1,4 +1,5 @@
 import { Page } from "@Purper";
+import ReCheckbox from "../components/ReCheckbox.html.js";
 export default class ComponentShowcasePage extends Page {
     private btnPreview?;
     private iconPreview?;
@@ -55,6 +56,16 @@ export default class ComponentShowcasePage extends Page {
     private rangeValueMin?;
     private rangeValueMax?;
     private rangeDisabled?;
+    private cbxDefault?;
+    private cbxChecked?;
+    private cbxIndeterminate?;
+    private cbxDisabled?;
+    private cbxPreview?;
+    private cbxColor?;
+    private cbxSize?;
+    private cbxLabel?;
+    private cbxMini?;
+    private cbxDisabledCtrl?;
     private popupModal?;
     private popupPlacement?;
     private setAttr;
@@ -67,6 +78,8 @@ export default class ComponentShowcasePage extends Page {
     updateRange(): void;
     private updateRangeLabel;
     onRangeChange(): void;
+    updateCheckbox(): void;
+    onCbxChange(el: ReCheckbox, event: CustomEvent): void;
     togglePopup(): void;
     closePopup(): void;
     updatePopup(): void;

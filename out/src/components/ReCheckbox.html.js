@@ -31,9 +31,14 @@ let ReCheckbox = class ReCheckbox extends Component {
             event.stopPropagation();
             return;
         }
+        event.preventDefault();
+        const next = this.indeterminate.value ? true : !this.checked.value;
         if (this.indeterminate.value)
             this.indeterminate.value = false;
-        this.checked.value = !this.checked.value;
+        this.dispatchEvent(new CustomEvent('change', {
+            bubbles: true,
+            detail: { checked: next }
+        }));
     }
 };
 ReCheckbox = __decorate([

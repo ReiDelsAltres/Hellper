@@ -381,6 +381,54 @@
             </div>
         </section>
 
+        <!-- ═══ ReCheckbox ═══ -->
+        <section class="playground-section">
+            <re-typography variant="title" original color="primary">ReCheckbox</re-typography>
+            <div class="playground">
+                <div class="playground-preview" style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+                    <re-checkbox ref="'cbxDefault'" label="Unchecked" color="primary"></re-checkbox>
+                    <re-checkbox ref="'cbxChecked'" label="Checked" color="primary" checked on[change]="onCbxChange(cbxChecked, event)"></re-checkbox>
+                    <re-checkbox ref="'cbxIndeterminate'" label="Indeterminate" color="secondary" indeterminate on[change]="onCbxChange(cbxIndeterminate, event)"></re-checkbox>
+                    <re-checkbox ref="'cbxDisabled'" label="Disabled" disabled></re-checkbox>
+                    <re-typography variant="caption" color="empty" style="margin-top:8px;">Настраиваемый:</re-typography>
+                    <re-checkbox ref="'cbxPreview'" label="Preview" color="primary" on[change]="onCbxChange(cbxPreview, event)"></re-checkbox>
+                </div>
+                <div class="playground-controls">
+                    <label>color
+                        <select ref="'cbxColor'" on[change]="updateCheckbox()">
+                            <option value="primary">primary</option>
+                            <option value="secondary">secondary</option>
+                            <option value="tertiary">tertiary</option>
+                            <option value="additional">additional</option>
+                            <option value="success">success</option>
+                            <option value="warning">warning</option>
+                            <option value="error">error</option>
+                            <option value="info">info</option>
+                            <option value="empty">empty</option>
+                        </select>
+                    </label>
+                    <label>size
+                        <select ref="'cbxSize'" on[change]="updateCheckbox()">
+                            <option value="small">small</option>
+                            <option value="medium" selected>medium</option>
+                            <option value="large">large</option>
+                        </select>
+                    </label>
+                    <label>label
+                        <input type="text" ref="'cbxLabel'" value="Preview" on[input]="updateCheckbox()" />
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'cbxMini'" on[change]="updateCheckbox()" />
+                        mini
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" ref="'cbxDisabledCtrl'" on[change]="updateCheckbox()" />
+                        disabled
+                    </label>
+                </div>
+            </div>
+        </section>
+
         <!-- ═══ PopUp ═══ -->
         <section class="playground-section">
             <re-typography variant="title" original color="primary">PopUp</re-typography>

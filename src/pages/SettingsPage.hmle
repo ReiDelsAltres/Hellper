@@ -40,6 +40,9 @@
                                     <exp of="card.subsTotal"></exp>
                                 </re-typography>
                             </if>
+                            <re-typography variant="caption" color="info">
+                                <exp of="card.version"></exp>
+                            </re-typography>
                         </if>
                         <else>
                             <if condition="card.size">
@@ -136,7 +139,7 @@
                         </else>
                         <if condition="!card.module.core">
                             <re-checkbox set[checked]="card.module.enabled"
-                                on[click]="onModuleToggle(card.module)"></re-checkbox>
+                                on[change]="onModuleToggle(card.module)"></re-checkbox>
                         </if>
                     </div>
                 </div>

@@ -22,6 +22,7 @@ let SettingsPage = class SettingsPage extends Page {
         this.modules = ModuleManager.getAll();
         for (const module of this.modules) {
             const struct = new ModuleCardStruct();
+            struct.version = module.version;
             struct.module = module;
             struct.class = new Observable(this.computeCardClass(module));
             struct.statusColor = new Observable(this.computeStatusColor(module));
@@ -272,6 +273,7 @@ class ModuleCardStruct {
     chips;
     size;
     subsTotal;
+    version;
     progress;
     subs;
     ownActive;
