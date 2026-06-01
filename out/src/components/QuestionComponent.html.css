@@ -1,0 +1,119 @@
+:host {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Draggable mode (opt-in via the `drag` attribute) */
+:host([draggable=true]) {
+  cursor: grab;
+}
+
+:host([draggable=true]) .qc-card {
+  cursor: grab;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+:host([draggable=true]:hover) .qc-card {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+:host(.qc-dragging) {
+  opacity: 0.45;
+  cursor: grabbing;
+}
+
+if {
+  display: contents;
+}
+
+.qc-paper {
+  text-align: left;
+  display: block;
+  max-width: 100%;
+}
+
+.qc-paper-tags {
+  text-align: center;
+  display: block;
+  max-width: 100%;
+}
+
+.qc-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+paper-component paper-component {
+  --loc-paper-background-color: color-mix(in srgb, var(--paper-background-color) 90%, black);
+  /*--loc-paper-background-color: color-mix(in srgb,
+          var(--loc-paper-background-color, --paper-background-color), 70%, black);*/
+}
+
+.floated {
+  float: left;
+}
+
+exp re-chip {
+  display: inli;
+  flex: 0 0 auto;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.chip {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.typo {
+  text-align: left;
+  display: block;
+}
+
+.qc-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: left;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.qc-answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* keep template <for> wrappers transparent so buttons are direct flex items */
+.qc-answers > for {
+  display: contents;
+}
+
+.qc-answer {
+  flex: 1 1 auto;
+  min-height: 48px;
+  min-width: 80px;
+  margin: 0;
+}
+
+.qc-skip {
+  flex: 1 1 100%;
+  min-height: 44px;
+}
+
+.qc-star {
+  float: right;
+  margin-top: 2px;
+  margin-left: 4px;
+  flex: 0 0 auto;
+}
+
+/*# sourceMappingURL=QuestionComponent.html.css.map */

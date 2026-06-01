@@ -24,7 +24,7 @@ $sizes: (
 }
 
 @include ComponentCore.supportVariant('filled', true) using ($type) {
-    @if $type == base {
+    @if $type ==base {
         background-color: var(--component-bg-color);
         color: var(--component-text-color);
     }

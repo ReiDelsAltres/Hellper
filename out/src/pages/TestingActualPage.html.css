@@ -2,6 +2,10 @@
   min-width: 399px;
 }
 
+for {
+  display: contents;
+}
+
 .testing-actual-page {
   min-width: 100%;
   min-height: 100%;
@@ -266,3 +270,5 @@
   opacity: 0.22;
   transform: scale(0.9);
 }
+
+/*# sourceMappingURL=TestingActualPage.html.css.map */

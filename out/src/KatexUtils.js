@@ -107,6 +107,7 @@ export class KatexUtils {
                 { left: '\\(', right: '\\)', display: false }
             ],
             throwOnError: false,
+            output: 'html',
             ...options
         };
         try {

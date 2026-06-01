@@ -50,38 +50,15 @@
         </div>
     </paper-component>
 
-    <div class="questions-container">
+    <div ref="'questionsContainer'" class="questions-container">
         <for value="item" of="displayItems">
-            <paper-component class="question-card">
-                <!-- Exam question card -->
-                <if condition="item.isExam">
-                    <div class="titleBlock">
-                        <re-typography class="typo">
-                            <div class="question-chips">
-                                <re-chip size="small">
-                                    <exp of="item.Id"></exp>
-                                </re-chip>
-                                <re-chip size="small" variant="outlined" color="primary">Экзамен</re-chip>
-                                <re-chip size="small" variant="outlined" color="tertiary">
-                                    <exp of="item.subjectName"></exp>
-                                </re-chip>
-                            </div>
-                            <span>
-                                <exp of="item.Title" html-injection></exp>
-                            </span>
-                        </re-typography>
-                    </div>
-                    <div class="answers-container">
-                        <for value="answer" of="item.examAnswers">
-                            <re-button allow-wrap set[color]="answerColor(answer)" set[variant]="answerVariant(answer)"
-                                class="btn" disabled>
-                                <exp of="answer.text" html-injection></exp>
-                            </re-button>
-                        </for>
-                    </div>
-                </if>
-                <!-- Colloquium question card -->
-                <if condition="item.isColloquium">
+            <!-- Exam question — handled by the universal QuestionComponent (read-only) -->
+            <if condition="item.isExam">
+                <question-component class="question-card" mode="view"></question-component>
+            </if>
+            <!-- Colloquium question card -->
+            <if condition="item.isColloquium">
+                <paper-component class="question-card">
                     <re-typography class="question-title">
                         <div class="question-chips">
                             <re-chip size="small">
@@ -109,8 +86,8 @@
                             </for>
                         </div>
                     </div>
-                </if>
-            </paper-component>
+                </paper-component>
+            </if>
         </for>
     </div>
 

@@ -10,11 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Fetcher, Page, RePage, Router } from "@Purper";
 import SeededShuffle from "../lib/SeededShuffle.js";
 import { KatexUtils } from "../KatexUtils.js";
+import QuestionLibrary from "../lib/QuestionLibrary.js";
 let TestingActualPage = class TestingActualPage extends Page {
     params;
-    questions;
-    statuses = [];
-    selectedAnswers = []; // Track selected answer index per question (for exam mode)
+    questions = [];
+    /** Reveal strategy passed to each <question-component>. */
+    revealMode = "immediate";
     isExamMode = false;
     constructor(params) {
         super();
@@ -29,53 +30,137 @@ let TestingActualPage = class TestingActualPage extends Page {
                 : String(Date.now()) + '-' + Math.random().toString(36).slice(2, 8);
             this.params.randomSource = newSeed;
         }
-        const jj = await Fetcher.fetchJSON('./resources/data' + '/' + this.params.subject.file);
-        var i = 1;
-        this.questions = jj.Questions
-            .slice(this.params.startFrom ?? 0, this.params.endAt ?? undefined)
-            .map((q, idx) => new TemporaryQuestion(q, idx + 1, i++));
-        if (!this.params.noShuffle)
-            this.questions = SeededShuffle.shuffle(this.questions, this.params.randomSource);
-        if (this.params.limits && this.params.limits > 0) {
-            this.questions = this.questions.slice(0, Number(this.params.limits));
-        }
-        this.statuses = new Array(this.questions.length).fill(AnswerStatus.UNANSWERED);
-        this.selectedAnswers = new Array(this.questions.length).fill(null);
         this.isExamMode = this.params.testType === 'exam';
-        var seed = this.params.randomSource;
-        this.questions.forEach(q => {
-            q.shuffleAnswers(seed);
-            seed = SeededShuffle.deriveNextSeed(seed);
-            q.Answers.push("Пропустить вопрос");
-            // Manually render KaTeX inside title and answers so that
-            // the template engine's <exp html-injection> injects ready HTML.
-            q.Title = KatexUtils.renderInlineString(q.Title);
-            q.Answers = q.Answers.map(a => KatexUtils.renderInlineString(a));
+        // Exam: hide correctness until the user finishes. Main: reveal per question.
+        this.revealMode = this.isExamMode ? 'deferred' : 'immediate';
+        // Load the catalog so recorded headers carry the right semester / subject name.
+        await QuestionLibrary.ensureCatalog();
+        const jj = await Fetcher.fetchJSON('./resources/data' + '/' + this.params.subject.file);
+        let pool = jj.Questions
+            .slice(this.params.startFrom ?? 0, this.params.endAt ?? undefined)
+            .map((q, idx) => this.toModel(q, idx + 1));
+        // Generator presets: drop banned questions, force-include required ones, then
+        // fill the remaining slots from the sampled pool. When no preset lists are given,
+        // this collapses to the original "shuffle → slice(limit)" behaviour.
+        const excluded = new Set((this.params.excludedIds ?? []).map(String));
+        const required = new Set((this.params.forcedIds ?? []).map(String));
+        if (excluded.size > 0) {
+            pool = pool.filter(m => !excluded.has(String(m.id)));
+        }
+        const forced = required.size > 0 ? pool.filter(m => required.has(String(m.id))) : [];
+        let rest = required.size > 0 ? pool.filter(m => !required.has(String(m.id))) : pool;
+        if (!this.params.noShuffle)
+            rest = SeededShuffle.shuffle(rest, this.params.randomSource);
+        const limit = this.params.limits && this.params.limits > 0 ? Number(this.params.limits) : pool.length;
+        const remaining = Math.max(0, limit - forced.length);
+        let models = forced.concat(rest.slice(0, remaining));
+        // Mix the forced questions into the body of the test instead of pinning them first.
+        if (!this.params.noShuffle && forced.length > 0)
+            models = SeededShuffle.shuffle(models, this.params.randomSource);
+        // Shuffle the answers of every question with a derived seed, render KaTeX,
+        // then assign the final display position.
+        let seed = this.params.randomSource;
+        models.forEach((model, i) => {
+            if (!this.params.noShuffle) {
+                model.answers = SeededShuffle.shuffle(model.answers, seed);
+                seed = SeededShuffle.deriveNextSeed(seed);
+            }
+            model.index = i + 1;
+            model.title = KatexUtils.renderInlineString(model.title);
+            model.answers.forEach(a => a.text = KatexUtils.renderInlineString(a.text));
         });
+        this.questions = models;
         return Promise.resolve();
     }
+    /** Convert a raw exam question into a JSON-agnostic QuestionModel. */
+    toModel(q, fallbackId) {
+        const correct = q.RId ?? 0;
+        return {
+            id: q.Id ?? fallbackId,
+            title: q.Title,
+            answers: (q.Answers ?? []).map((text, i) => ({ text, correct: i === correct })),
+        };
+    }
     async postLoad(holder) {
-        // Update seed display (if present) so user can see the session UUID
+        const subjectFile = this.params.subject.file;
+        // Push data into each question block (refs are resolved during template processing).
+        this.questions.forEach((model, i) => {
+            const comp = this[('qc' + i)];
+            comp?.setQuestion(model);
+            comp?.setStarred(QuestionLibrary.isFavorite(subjectFile, model.id));
+        });
+        // Seed display (if present)
         try {
             const seedEl = this['seedDisplay'];
             if (seedEl)
                 seedEl.textContent = String(this.params.randomSource ?? '');
         }
         catch (_) { }
-        // Finish button is always visible
-        // Hide restart button initially
+        // The "finish test" button is only relevant for the deferred (exam) flow.
+        const finishContainer = this['finishExamContainer'];
+        if (finishContainer)
+            finishContainer.style.display = this.isExamMode ? 'block' : 'none';
         const restartContainer = this['restartContainer'];
-        if (restartContainer) {
+        if (restartContainer)
             restartContainer.style.display = 'none';
+    }
+    /** All question blocks, in display order. */
+    components() {
+        return this.questions
+            .map((_, i) => this['qc' + i])
+            .filter((c) => !!c);
+    }
+    /** Build the library header for a question of this test's subject. */
+    headerFor(id) {
+        return {
+            subjectFile: this.params.subject.file,
+            subjectName: this.params.subject.translatedName || this.params.subject.name,
+            questionId: id,
+        };
+    }
+    /**
+     * A question reported its result. Record the outcome in the library (both flows fire
+     * `answered` exactly once per question — immediately on pick, or on reveal at finish).
+     * In the immediate (main) flow, also show the results popup once everything is answered.
+     */
+    onAnswered(event) {
+        const detail = event.detail;
+        const result = QuestionLibrary.statusToResult(detail.status);
+        if (result)
+            QuestionLibrary.recordAnswer(this.headerFor(detail.id), result);
+        if (this.isExamMode)
+            return; // deferred flow finishes via the button
+        if (this.components().every(c => c.isAnswered())) {
+            this.resolveEnding();
         }
     }
-    resolveEnding(forceShow = false) {
-        if (!forceShow && this.statuses.some(s => s === AnswerStatus.UNANSWERED))
-            return;
-        const correct = this.statuses.filter(s => s === AnswerStatus.SUCCESS).length;
-        const wrong = this.statuses.filter(s => s === AnswerStatus.WRONG).length;
-        const skip = this.statuses.filter(s => s === AnswerStatus.SKIP).length;
-        // Update popup content
+    /** Deferred (exam) flow: track selections (kept for future progress UI / hooks). */
+    onSelectionChange(event) {
+        // No-op for now; selection is owned by each question block.
+    }
+    onFavoriteToggle(event) {
+        const { id, starred } = event.detail;
+        QuestionLibrary.setFavorite(this.headerFor(id), starred);
+    }
+    gatherCounts() {
+        let correct = 0, wrong = 0, skip = 0;
+        for (const c of this.components()) {
+            switch (c.getStatus()) {
+                case 'success':
+                    correct++;
+                    break;
+                case 'wrong':
+                    wrong++;
+                    break;
+                case 'skip':
+                    skip++;
+                    break;
+            }
+        }
+        return { correct, wrong, skip };
+    }
+    resolveEnding() {
+        const { correct, wrong, skip } = this.gatherCounts();
         this['resultCorrect'].textContent = String(correct);
         this['resultWrong'].textContent = String(wrong);
         this['resultSkip'].textContent = String(skip);
@@ -85,12 +170,10 @@ let TestingActualPage = class TestingActualPage extends Page {
             this['resultScore'].textContent = String(score);
             this['resultScoreBlock'].style.display = 'block';
         }
-        // Update christmas lights (rebuild ring and mark active lights)
         try {
             this.updateChristmasLights(correct);
         }
         catch (_) { }
-        // Open result popup
         this['resultPopup'].open();
     }
     /**
@@ -176,133 +259,19 @@ let TestingActualPage = class TestingActualPage extends Page {
             finishContainer.style.display = 'none';
         }
     }
-    handleClick(event, element, params) {
-        const { qidx, aidx, c0, c1, c2 } = params;
-        console.log('Clicked answer:', params);
-        const question = this.questions[qidx];
-        if (this.isExamMode) {
-            // Exam mode: just select the answer, don't reveal correctness
-            // Remove 'selected' from all answers in this question
-            for (let i = 0; i < question.Answers.length; i++) {
-                const btn = this['b' + qidx + '_' + i];
-                if (btn) {
-                    btn.removeAttribute('selected');
-                }
-            }
-            // Mark clicked answer as selected
-            element.setAttribute('selected', '');
-            this.selectedAnswers[qidx] = aidx;
-            // Update status silently (will be revealed later)
-            if (aidx === question.RId) {
-                this.statuses[qidx] = AnswerStatus.SUCCESS;
-            }
-            else if (aidx === question.Answers.length - 1) {
-                this.statuses[qidx] = AnswerStatus.SKIP;
-            }
-            else {
-                this.statuses[qidx] = AnswerStatus.WRONG;
-            }
-        }
-        else {
-            // Normal mode: disable and show colors immediately
-            for (const c of [c0, c1, c2]) {
-                const chip = this[c];
-                chip.setAttribute("disabled", "true");
-            }
-            for (let i = 0; i < question.Answers.length; i++) {
-                const tt = this['b' + qidx + '_' + i];
-                if (!tt)
-                    continue;
-                tt.setAttribute("disabled", "true");
-                if (tt === element)
-                    continue;
-                if (i === question.RId) {
-                    tt.setAttribute('color', 'success');
-                    tt.setAttribute("variant", "outlined");
-                }
-            }
-            switch (aidx) {
-                case question.RId:
-                    element.setAttribute('color', 'success');
-                    this.statuses[qidx] = AnswerStatus.SUCCESS;
-                    break;
-                case question.Answers.length - 1:
-                    element.setAttribute('color', 'warning');
-                    this.statuses[qidx] = AnswerStatus.SKIP;
-                    break;
-                default:
-                    element.setAttribute('color', 'error');
-                    this.statuses[qidx] = AnswerStatus.WRONG;
-                    break;
-            }
-            this.resolveEnding();
-        }
-    }
-    /**
-     * РџРѕРєР°Р·Р°С‚СЊ popup РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ Р·Р°РІРµСЂС€РµРЅРёСЏ СЌРєР·Р°РјРµРЅР°
-     */
+    /** Show the confirmation popup before finishing the exam. */
     finishExam() {
         this['confirmPopup'].open();
     }
-    /**
-     * РћС‚РјРµРЅРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР°
-     */
+    /** Cancel finishing the exam. */
     cancelFinish() {
         this['confirmPopup'].close();
     }
-    /**
-     * РџРѕРґС‚РІРµСЂРґРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР° - РїРѕРєР°Р·Р°С‚СЊ РІСЃРµ СЂРµР·СѓР»СЊС‚Р°С‚С‹
-     */
+    /** Confirm finishing the exam — reveal every question and show the results. */
     confirmFinish() {
         this['confirmPopup'].close();
-        // Mark unanswered questions as skipped
-        for (let qidx = 0; qidx < this.questions.length; qidx++) {
-            if (this.selectedAnswers[qidx] === null) {
-                this.statuses[qidx] = AnswerStatus.SKIP;
-            }
-        }
-        // Reveal all answers
-        for (let qidx = 0; qidx < this.questions.length; qidx++) {
-            const question = this.questions[qidx];
-            const selectedIdx = this.selectedAnswers[qidx];
-            // Disable chips
-            for (const suffix of ['0', '1', '2']) {
-                const chip = this['c' + qidx + '_' + suffix];
-                if (chip)
-                    chip.setAttribute('disabled', 'true');
-            }
-            // Process all answer buttons
-            for (let i = 0; i < question.Answers.length; i++) {
-                const btn = this['b' + qidx + '_' + i];
-                if (!btn)
-                    continue;
-                btn.setAttribute('disabled', 'true');
-                btn.removeAttribute('selected');
-                // Show correct answer
-                if (i === question.RId) {
-                    if (selectedIdx === i) {
-                        // User selected the correct answer
-                        btn.setAttribute('color', 'success');
-                    }
-                    else {
-                        // Show correct answer that wasn't selected
-                        btn.setAttribute('color', 'success');
-                        btn.setAttribute('variant', 'outlined');
-                    }
-                }
-                else if (selectedIdx === i) {
-                    // User selected this wrong answer
-                    if (i === question.Answers.length - 1) {
-                        btn.setAttribute('color', 'warning'); // Skip
-                    }
-                    else {
-                        btn.setAttribute('color', 'error'); // Wrong
-                    }
-                }
-            }
-        }
-        // Show results popup
-        this.resolveEnding(true);
+        this.components().forEach(c => c.reveal());
+        this.resolveEnding();
     }
     // Regenerate a new randomSource and reload this page via SPA router (no full browser reload)
     regenerateShuffle() {
@@ -323,39 +292,4 @@ TestingActualPage = __decorate([
     __metadata("design:paramtypes", [String])
 ], TestingActualPage);
 export default TestingActualPage;
-var AnswerStatus;
-(function (AnswerStatus) {
-    AnswerStatus["SUCCESS"] = "success";
-    AnswerStatus["WRONG"] = "wrong";
-    AnswerStatus["SKIP"] = "skip";
-    AnswerStatus["UNANSWERED"] = "unanswered";
-})(AnswerStatus || (AnswerStatus = {}));
-class TemporaryQuestion {
-    Id;
-    RId;
-    Title;
-    Answers;
-    localId;
-    constructor(data, fallbackId, localId) {
-        this.Id = data.Id ?? fallbackId;
-        this.RId = data.RId ?? 0;
-        this.Title = data.Title;
-        this.Answers = data.Answers;
-        this.localId = localId;
-    }
-    isCorrect(index) {
-        return index === this.RId;
-    }
-    shuffleAnswers(uuid) {
-        if (!uuid || this.Answers.length <= 1)
-            return;
-        const { shuffled, newIndexForOld } = SeededShuffle.shuffleWithMapping(this.Answers.slice(), uuid);
-        const oldCorrect = this.RId;
-        this.Answers = shuffled;
-        this.RId = (newIndexForOld && typeof newIndexForOld[oldCorrect] === 'number') ? newIndexForOld[oldCorrect] : 0;
-    }
-    toJSON() {
-        return { Id: this.Id, RId: this.RId, Title: this.Title, Answers: this.Answers.slice() };
-    }
-}
 //# sourceMappingURL=TestingActualPage.html.js.map

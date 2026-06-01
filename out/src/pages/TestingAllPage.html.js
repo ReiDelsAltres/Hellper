@@ -59,6 +59,7 @@ let TestingAllPage = class TestingAllPage extends Page {
         this.updateCounters();
     }
     async postLoad(holder) {
+        console.log('[DBG postLoad] called; container=', !!this['questionsContainer'], 'typeFilter=', !!this.typeFilter, 'searchInput=', !!this.searchInput);
         if (this.typeFilter?.buttonMap) {
             this.typeFilter.buttonMap.forEach((selected, btn) => {
                 btn.Variant.setObject(selected ? 'filled' : 'outlined');
@@ -172,6 +173,7 @@ let TestingAllPage = class TestingAllPage extends Page {
         }
     }
     applyFilters() {
+        console.log('[DBG applyFilters] called');
         const searchText = (this.searchInput?.Value?.value ?? '').toLowerCase().trim();
         const rawTypeValue = this.typeFilter?.Value?.value || '';
         const typeValue = (rawTypeValue === 'exam' || rawTypeValue === 'colloquium') ? rawTypeValue : 'all';
@@ -241,9 +243,40 @@ let TestingAllPage = class TestingAllPage extends Page {
             : this.visibleCount + TestingAllPage_1.BATCH_STEP;
         this.visibleCount = Math.min(nextSize, this.filteredItems.length);
         this.displayItems.setObject(this.filteredItems.slice(0, this.visibleCount));
+        this.bindVisibleExamQuestions();
         this.updateCounters();
         requestAnimationFrame(() => {
             this.batchPending = false;
+        });
+    }
+    /** Map an exam DisplayItem into the JSON-agnostic QuestionComponent model. */
+    toModel(item) {
+        return {
+            id: item.Id,
+            title: item.Title,
+            answers: item.examAnswers.map(a => ({ text: a.text, correct: a.isCorrect })),
+            tags: [
+                { text: "Экзамен", color: "primary" },
+                { text: item.subjectName, color: "tertiary" },
+            ],
+        };
+    }
+    /**
+     * Feed the currently visible exam questions into their <question-component> blocks.
+     * The blocks appear in the same relative order as the exam items in the visible slice,
+     * so we can zip them positionally.
+     */
+    bindVisibleExamQuestions() {
+        const container = this['questionsContainer'];
+        console.log('[DBG bind] container=', !!container, 'visibleCount=', this.visibleCount);
+        if (!container)
+            return;
+        const comps = Array.from(container.querySelectorAll('question-component'));
+        const examItems = this.filteredItems.slice(0, this.visibleCount).filter(it => it.isExam);
+        console.log('[DBG bind] comps=', comps.length, 'examItems=', examItems.length, 'hasSetQ=', comps[0] ? typeof comps[0].setQuestion : 'n/a');
+        comps.forEach((comp, i) => {
+            if (examItems[i])
+                comp.setQuestion(this.toModel(examItems[i]));
         });
     }
     updateCounters() {
@@ -255,12 +288,6 @@ let TestingAllPage = class TestingAllPage extends Page {
         else {
             this.showTruncated.setObject(false);
         }
-    }
-    answerColor(answer) {
-        return answer.isCorrect ? 'success' : 'empty';
-    }
-    answerVariant(answer) {
-        return answer.isCorrect ? 'outlined' : 'filled';
     }
 };
 TestingAllPage = TestingAllPage_1 = __decorate([

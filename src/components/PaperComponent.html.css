@@ -2,7 +2,6 @@
     display: block;
 
     padding: 8px;
-    margin: 8px;
 
     box-sizing: border-box;
 
@@ -28,15 +27,18 @@
 :host([interactive="true"]) {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 :host([interactive="true"]:hover) {
     transform: translateY(-2px);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 :host([color="empty"]) {
     --loc-paper-color: var(--color-empty);
 }
 
-:host([color="primary"]), :host(:not([color])) {
+:host([color="primary"]),
+:host(:not([color])) {
     --loc-paper-color: var(--color-primary);
 }
 
@@ -72,31 +74,40 @@
     background-color: var(--loc-paper-color);
     color: var(--loc-paper-background-color, var(--paper-background-color));
 }
+
 :host(:is([alternate], [alternate="true"])[color="empty"]) {
     --paper-background-color: var(--color-empty);
 }
-:host(:is([alternate], [alternate="true"])[color="primary"]), 
+
+:host(:is([alternate], [alternate="true"])[color="primary"]),
 :host(:is([alternate], [alternate="true"]):not([color])) {
     --paper-background-color: var(--color-primary);
 }
+
 :host(:is([alternate], [alternate="true"])[color="secondary"]) {
     --paper-background-color: var(--color-secondary);
 }
+
 :host(:is([alternate], [alternate="true"])[color="tertiary"]) {
     --paper-background-color: var(--color-tertiary);
 }
+
 :host(:is([alternate], [alternate="true"])[color="additional"]) {
     --paper-background-color: var(--color-additional);
 }
+
 :host(:is([alternate], [alternate="true"])[color="info"]) {
     --paper-background-color: var(--color-info);
 }
+
 :host(:is([alternate], [alternate="true"])[color="success"]) {
     --paper-background-color: var(--color-success);
 }
+
 :host(:is([alternate], [alternate="true"])[color="warning"]) {
     --paper-background-color: var(--color-warning);
 }
+
 :host(:is([alternate], [alternate="true"])[color="error"]) {
     --paper-background-color: var(--color-error);
 }

@@ -49,6 +49,21 @@ function injectStyles() {
     pointer-events: none;
     box-shadow: 0 0 4px rgba(255,140,56,0.4);
 }
+
+/* Neon preview (glowing bouncing particles) */
+.neon-preview {
+    position: absolute;
+    inset: 8px;
+    pointer-events: none;
+    z-index: 18;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.neon-preview .neon-particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
 `;
     const el = document.createElement('style');
     el.dataset.themePreviews = '1';
@@ -157,6 +172,64 @@ export const PREVIEW_RENDERERS = {
             }
             catch { }
         };
-    }
+    },
+    Neon(container) {
+        injectStyles();
+        const overlay = document.createElement('div');
+        overlay.className = 'neon-preview';
+        overlay.style.pointerEvents = 'none';
+        container.appendChild(overlay);
+        const COLORS = ['#00ff88', '#ff00ff', '#00ccff', '#ff0088'];
+        const particles = [];
+        const count = Math.max(3, Math.min(6, Math.floor(container.clientWidth / 50)));
+        const w = overlay.clientWidth || 240;
+        const h = overlay.clientHeight || 160;
+        for (let i = 0; i < count; i++) {
+            const el = document.createElement('div');
+            el.className = 'neon-particle';
+            const r = 1 + Math.random() * 2;
+            const color = COLORS[Math.floor(Math.random() * COLORS.length)];
+            const intensity = 0.5 + Math.random() * 0.5;
+            el.style.width = `${r * 2}px`;
+            el.style.height = `${r * 2}px`;
+            el.style.background = color;
+            el.style.boxShadow = `0 0 ${r * 6}px ${color}, 0 0 ${r * 10}px ${color}88`;
+            el.style.filter = 'blur(0.5px)';
+            overlay.appendChild(el);
+            particles.push({ el, x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - 0.5) * 1, vy: (Math.random() - 0.5) * 1, radius: r, color, intensity });
+        }
+        let raf = null;
+        function animate() {
+            for (const p of particles) {
+                p.x += p.vx;
+                p.y += p.vy;
+                // Bounce
+                if (p.x <= 0 || p.x >= w)
+                    p.vx *= -1;
+                if (p.y <= 0 || p.y >= h)
+                    p.vy *= -1;
+                p.x = Math.max(0, Math.min(w, p.x));
+                p.y = Math.max(0, Math.min(h, p.y));
+                // Pulse
+                const pulse = Math.sin(Date.now() * 0.003) * 0.3 + 0.7;
+                p.el.style.opacity = String(p.intensity * pulse);
+                p.el.style.transform = `translate(${Math.round(p.x)}px, ${Math.round(p.y)}px)`;
+            }
+            raf = requestAnimationFrame(animate);
+        }
+        raf = requestAnimationFrame(animate);
+        return () => {
+            if (raf)
+                cancelAnimationFrame(raf);
+            particles.forEach(p => { try {
+                p.el.remove();
+            }
+            catch { } });
+            try {
+                overlay.remove();
+            }
+            catch { }
+        };
+    },
 };
 //# sourceMappingURL=ThemePreviews.js.map

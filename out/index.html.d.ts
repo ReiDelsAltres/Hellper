@@ -12,11 +12,13 @@ import "./src/components/ReTooltip.html.js";
 import "./src/components/PaperComponent.html.js";
 import "./src/components/ReTextArea.html.js";
 import "./src/components/ReRangeSlider.html.js";
+import "./src/components/QuestionComponent.html.js";
 import "./src/pages/MainPage.html.js";
 import "./src/pages/TestingPage.html.js";
 import "./src/pages/TestingSubPage.html.js";
 import "./src/pages/TestingActualPage.html.js";
 import "./src/pages/TestingAllPage.html.js";
+import "./src/pages/GeneratorsPage.html.js";
 import "./src/pages/SettingsPage.html.js";
 export default class Index {
     static initialize(): Promise<void>;

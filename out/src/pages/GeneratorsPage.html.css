@@ -1,0 +1,17 @@
+/* Error: Silent comments aren't allowed in plain CSS.
+ *     ,
+ * 425 | ``` // filepath: c:\Projects\Hellper\src\pages\GeneratorsPage.html.css
+ *     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   src\pages\GeneratorsPage.html.css 425:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Silent comments aren't allowed in plain CSS.\a     \2577 \a 425 \2502  ``` // filepath: c:\\Projects\\Hellper\\src\\pages\\GeneratorsPage.html.css\a     \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   src\\pages\\GeneratorsPage.html.css 425:5  root stylesheet";
+}

@@ -1,0 +1,297 @@
+<paper-component simple="true" class="gen-page">
+    <div class="gen-header">
+        <re-typography color="primary" variant="h1">Генератор тестов (Бета)</re-typography>
+        <re-typography color="primary" variant="body">
+            Соберите собственный пресет: выберите предмет, задайте выборку и количество вопросов,
+            перетащите вопросы в «Обязательные» или «Исключённые», затем сохраните пресет — он
+            останется в браузере.
+        </re-typography>
+    </div>
+
+    <div class="gen-layout">
+        <div class="gen-left">
+
+            <!-- ── Default presets ── -->
+            <if condition="hasDefaultPresets">
+                <paper-component class="gen-section">
+                    <div class="gen-section-head">
+                        <re-typography variant="headline">Встроенные пресеты</re-typography>
+                    </div>
+
+                    <div class="preset-grid">
+                        <for value="preset" of="defaultPresets">
+                            <paper-component alternate class="preset-card preset-card--default">
+                                <re-typography color="primary" variant="body" class="preset-name">
+                                    <exp of="preset.name"></exp>
+                                </re-typography>
+                                <div class="preset-meta">
+                                    <re-chip size="small" variant="outlined" color="tertiary">
+                                        <exp of="preset.subjectName"></exp>
+                                    </re-chip>
+                                    <re-chip size="small" color="primary">
+                                        <exp of="preset.countLabel"></exp>
+                                    </re-chip>
+                                    <re-chip size="small" variant="outlined" color="success">
+                                        <exp of="preset.requiredLabel"></exp>
+                                    </re-chip>
+                                    <re-chip size="small" variant="outlined" color="error">
+                                        <exp of="preset.excludedLabel"></exp>
+                                    </re-chip>
+                                </div>
+                                <div class="preset-actions">
+                                    <re-button size="small" color="success" variant="filled" icon="play_arrow"
+                                        on[click]="runDefaultPreset(preset.id)">Запустить</re-button>
+                                    <re-button size="small" color="tertiary" variant="filled" icon="download"
+                                        on[click]="loadDefaultPreset(preset.id)">Использовать</re-button>
+                                </div>
+                            </paper-component>
+                        </for>
+                    </div>
+                </paper-component>
+            </if>
+
+            <!-- ── Saved presets ── -->
+            <paper-component class="gen-section">
+                <div class="gen-section-head">
+                    <re-typography variant="headline">Мои пресеты</re-typography>
+                    <re-chip color="primary">
+                        <exp of="presetCountText"></exp>
+                    </re-chip>
+                </div>
+
+                <if condition="hasPresets">
+                    <div class="preset-grid">
+                        <for value="preset" of="presetList">
+                            <paper-component alternate class="preset-card">
+                                <re-typography color="primary" variant="body" class="preset-name">
+                                    <exp of="preset.name"></exp>
+                                </re-typography>
+                                <div class="preset-meta">
+                                    <re-chip size="small" variant="outlined" color="tertiary">
+                                        <exp of="preset.subjectName"></exp>
+                                    </re-chip>
+                                    <re-chip size="small" color="primary">
+                                        <exp of="preset.countLabel"></exp>
+                                    </re-chip>
+                                    <re-chip size="small" variant="outlined" color="success">
+                                        <exp of="preset.requiredLabel"></exp>
+                                    </re-chip>
+                                    <re-chip size="small" variant="outlined" color="error">
+                                        <exp of="preset.excludedLabel"></exp>
+                                    </re-chip>
+                                </div>
+                                <div class="preset-actions">
+                                    <re-button size="small" color="success" variant="filled" icon="play_arrow"
+                                        on[click]="runPreset(preset)">Запустить</re-button>
+                                    <re-button size="small" color="tertiary" variant="outlined" icon="edit"
+                                        on[click]="loadPreset(preset)">Изменить</re-button>
+                                    <re-button size="small" color="error" variant="text" icon="delete"
+                                        on[click]="deletePreset(preset)">Удалить</re-button>
+                                </div>
+                            </paper-component>
+                        </for>
+                    </div>
+                </if>
+                <if condition="noPresets">
+                    <re-typography color="empty" class="empty-hint">
+                        Пока нет сохранённых пресетов. Создайте первый ниже.
+                    </re-typography>
+                </if>
+            </paper-component>
+
+            <!-- ── Preset editor ── -->
+            <paper-component class="gen-section">
+                <div class="gen-section-head">
+                    <re-typography variant="headline">
+                        <exp of="editorTitle"></exp>
+                    </re-typography>
+                    <re-button size="small" color="empty" variant="outlined" icon="add" on[click]="newPreset()">
+                        Новый
+                    </re-button>
+                </div>
+
+                <div class="editor-row">
+                    <re-input ref="'nameInput'" placeholder="Название пресета" full-width icon="badge"></re-input>
+                </div>
+
+                <div class="editor-row">
+                    <div class="filter-group">
+                        <re-typography class="filter-label">Режим теста</re-typography>
+                        <re-button-group ref="'testTypeGroup'" selection="single" value="main">
+                            <re-button value="main" color="tertiary">Основной</re-button>
+                            <re-button value="exam" color="secondary">Экзамен</re-button>
+                        </re-button-group>
+                    </div>
+                </div>
+
+                <div class="editor-row option-inputs">
+                    <re-checkbox ref="'noShuffleCheckbox'" label="Без перемешивания"
+                        on[change]="onNoShuffleToggle(event)"></re-checkbox>
+                    <div class="count-field">
+                        <re-typography class="filter-label">Количество вопросов</re-typography>
+                        <re-input ref="'countInput'" min="1" type="number" placeholder="25" icon="hash"
+                            size="small"></re-input>
+                    </div>
+                    <div class="range-field">
+                        <re-typography class="filter-label">Диапазон выборки</re-typography>
+                        <re-range-slider ref="'rangeSlider'" min="1" max="1" lower="1" upper="1" step="1"
+                            variant="block" draggable-range show-labels show-edge-labels show-value color="primary"
+                            size="small"></re-range-slider>
+                    </div>
+                </div>
+
+                <div class="dropzones">
+                    <div class="dropzone dropzone-required" ref="'requiredZone'">
+                        <div class="dropzone-head">
+                            <re-icon icon="push_pin" contrast></re-icon>
+                            <re-typography variant="body">Обязательные</re-typography>
+                            <re-chip size="small" color="success">
+                                <exp of="requiredCountText"></exp>
+                            </re-chip>
+                        </div>
+                        <re-typography color="empty" class="dropzone-hint">
+                            Перетащите сюда вопросы, которые должны быть в тесте.
+                        </re-typography>
+                        <div class="chip-list">
+                            <for value="item" of="requiredItems">
+                                <div class="picked-chip picked-required">
+                                    <span class="picked-id">
+                                        <exp of="item.id"></exp>
+                                    </span>
+                                    <span class="picked-title">
+                                        <exp of="item.title"></exp>
+                                    </span>
+                                    <re-button size="small" variant="text" color="error" icon="close"
+                                        on[click]="removeRequired(item)"></re-button>
+                                </div>
+                            </for>
+                        </div>
+                    </div>
+
+                    <div class="dropzone dropzone-excluded" ref="'excludedZone'">
+                        <div class="dropzone-head">
+                            <re-icon icon="block" contrast></re-icon>
+                            <re-typography variant="body">Исключённые</re-typography>
+                            <re-chip size="small" color="error">
+                                <exp of="excludedCountText"></exp>
+                            </re-chip>
+                        </div>
+                        <re-typography color="empty" class="dropzone-hint">
+                            Перетащите сюда вопросы, которые не должны появляться.
+                        </re-typography>
+                        <div class="chip-list">
+                            <for value="item" of="excludedItems">
+                                <div class="picked-chip picked-excluded">
+                                    <span class="picked-id">
+                                        <exp of="item.id"></exp>
+                                    </span>
+                                    <span class="picked-title">
+                                        <exp of="item.title"></exp>
+                                    </span>
+                                    <re-button size="small" variant="text" color="error" icon="close"
+                                        on[click]="removeExcluded(item)"></re-button>
+                                </div>
+                            </for>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="editor-actions">
+                    <re-button color="primary" variant="filled" full-width icon="save" on[click]="savePreset()">
+                        Сохранить пресет
+                    </re-button>
+                    <re-button color="tertiary" variant="outlined" full-width icon="play_arrow"
+                        on[click]="runCurrent()">
+                        Запустить сейчас
+                    </re-button>
+                    <re-button color="secondary" variant="outlined" full-width icon="download"
+                        on[click]="exportPreset()">
+                        Экспортировать
+                    </re-button>
+                    <re-button color="secondary" variant="outlined" full-width icon="upload" on[click]="importPreset()">
+                        Импортировать
+                    </re-button>
+                </div>
+                <re-typography color="empty" class="status-text">
+                    <exp of="statusText"></exp>
+                </re-typography>
+            </paper-component>
+
+        </div><!-- /.gen-left -->
+
+        <div class="gen-right">
+            <!-- ── Question library ── -->
+            <paper-component class="gen-section gen-section--library">
+                <div class="gen-section-head">
+                    <re-typography variant="headline">Библиотека вопросов</re-typography>
+                    <re-chip color="primary">
+                        <exp of="libraryCountText"></exp>
+                    </re-chip>
+                </div>
+
+                <div class="lib-filter-row">
+                    <div class="filter-group">
+                        <re-typography class="filter-label">Семестр</re-typography>
+                        <select ref="'librarySemesterSelect'" class="native-select"
+                            on[change]="onLibrarySemesterChange()">
+                            <option value="">Все семестры</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <re-typography class="filter-label">Предмет</re-typography>
+                        <select ref="'librarySubjectSelect'" class="native-select"
+                            on[change]="onLibrarySubjectChange()">
+                            <option value="">— выберите предмет —</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="search-row">
+                    <re-input ref="'searchInput'" placeholder="Поиск по тексту вопроса..." full-width variant="outlined"
+                        on[input]="onSearchInput()"></re-input>
+                </div>
+
+                <if condition="noSubject">
+                    <re-typography color="empty" class="empty-hint">
+                        Выберите предмет выше для просмотра вопросов.
+                    </re-typography>
+                </if>
+                <if condition="hasSubject">
+                    <re-typography color="empty" class="library-hint">
+                        Перетащите карточку вопроса в одну из зон выше.
+                    </re-typography>
+                </if>
+
+                <div ref="'libraryContainer'" class="library-container">
+                    <for value="model" of="libraryModels">
+                        <question-component class="library-card" mode="view" drag star
+                            on[favorite-toggle]="onFavoriteToggle(event, element)"></question-component>
+                    </for>
+                </div>
+            </paper-component>
+
+
+            <!-- ── Favourites sub-panel ── -->
+            <paper-component class="gen-section gen-section--favorites">
+                <div class="gen-section-head">
+                    <re-typography variant="headline">Избранные</re-typography>
+                    <re-chip color="warning">
+                        <exp of="favoritesCountText"></exp>
+                    </re-chip>
+                </div>
+                <if condition="noFavorites">
+                    <re-typography color="empty" class="empty-hint">
+                        Нажмите ★ на карточке, чтобы добавить вопрос в избранное.
+                    </re-typography>
+                </if>
+                <div ref="'favoritesContainer'" class="library-container">
+                    <for value="fav" of="favoritesView">
+                        <question-component class="library-card" mode="view" drag star
+                            on[favorite-toggle]="onFavoriteToggle(event, element)"></question-component>
+                    </for>
+                </div>
+            </paper-component>
+
+        </div><!-- /.gen-right -->
+    </div><!-- /.gen-layout -->
+</paper-component>

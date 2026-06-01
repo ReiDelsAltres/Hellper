@@ -178,8 +178,15 @@ let PalettePage = class PalettePage extends Page {
         if (name === 'Winter') {
             this.createSnowPreview(preview);
         }
-        else if (name === 'DyBlazor' || theme.palette === 'DyBlazor') {
-            this.createDyBlazorPreview(preview);
+        else if (name === 'Neon') {
+            const renderer = PREVIEW_RENDERERS['Neon'];
+            if (typeof renderer === 'function') {
+                const stop = renderer(preview);
+                if (typeof stop === 'function') {
+                    this.previewHandles.set(preview, { cleanup: stop });
+                    return;
+                }
+            }
         }
         else {
             // simple animated gradient for other themes

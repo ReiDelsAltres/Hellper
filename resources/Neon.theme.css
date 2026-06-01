@@ -1,0 +1,99 @@
+.neon-theme {
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --color-empty: #0a0e27;
+    --color-empty-contrast: #5fe0cc;
+    --color-empty-hover: color-mix(in srgb, var(--color-empty) 30%, black);
+
+    /* Primary — soft cyan */
+    --color-primary: #5fe0cc;
+    --color-primary-contrast: #0a0e27;
+    --color-primary-hover: #3cc9b8;
+
+    /* Primary distinctive — soft teal */
+    --color-primary-distinctive: #4dd4c4;
+
+    /* Secondary — soft magenta */
+    --color-secondary: #dd55ff;
+    --color-secondary-contrast: #0a0e27;
+    --color-secondary-hover: #cc33ff;
+
+    /* Secondary distinctive — soft violet */
+    --color-secondary-distinctive: #d966ff;
+
+    /* Tertiary — soft blue */
+    --color-tertiary: #55d4ff;
+    --color-tertiary-contrast: #0a0e27;
+    --color-tertiary-hover: #33bbff;
+
+    /* Tertiary distinctive — soft cyan bright */
+    --color-tertiary-distinctive: #44e6ff;
+
+    /* Additional — soft pink */
+    --color-additional: #ff5588;
+    --color-additional-contrast: #0a0e27;
+    --color-additional-hover: #ff3366;
+
+    /* Additional distinctive — soft rose */
+    --color-additional-distinctive: #ff7799;
+
+    /* Utility Colors */
+    --color-info: #55d4ff;
+    --color-info-contrast: #0a0e27;
+    --color-info-hover: #33bbff;
+
+    --color-success: #5fe0cc;
+    --color-success-contrast: #0a0e27;
+    --color-success-hover: #3cc9b8;
+
+    --color-warning: #ffdd66;
+    --color-warning-contrast: #0a0e27;
+    --color-warning-hover: #ffcc33;
+
+    --color-error: #ff7766;
+    --color-error-contrast: #0a0e27;
+    --color-error-hover: #ff5544;
+
+    /* Surface — dark with soft neon accents */
+    --surface: #0f1229;
+    --surface-light: #1a1f3a;
+    --surface-dark: #0a0e27;
+
+    /* Text */
+    --color-text: #e0e6ff;
+
+    /* App background — dark with soft neon glow gradient */
+    --app-background-size: 100% 100%;
+    --app-background-position: center;
+    --app-background-image: linear-gradient(160deg,
+            #0a0e27 0%,
+            #0f1229 35%,
+            color-mix(in srgb, #5fe0cc 3%, #0a0e27) 70%,
+            #0a0e27 100%);
+    --app-background-color: #0a0e27;
+
+    /* Bars — dark with subtle soft neon trim */
+    --app-bars-background-size: 100% 100%;
+    --app-bars-background-position: center;
+    --app-bars-background-image: linear-gradient(90deg,
+            var(--surface-dark),
+            color-mix(in srgb, #5fe0cc 2%, var(--surface-dark)),
+            var(--surface-dark));
+    --app-bars-background-color: var(--surface-dark);
+
+    /* Paper — subtle glow from soft neon accent */
+    --paper-background-size: 100% 100%;
+    --paper-background-position: center;
+    --paper-background-image: linear-gradient(135deg,
+            color-mix(in srgb, #55d4ff 2%, var(--surface)),
+            var(--surface) 60%);
+    --paper-background-color: var(--surface);
+
+    --paper-border-top-left-radius: 12px;
+    --paper-border-top-right-radius: 12px;
+    --paper-border-bottom-left-radius: 12px;
+    --paper-border-bottom-radius: 12px;
+
+    --paper-border-style: solid;
+    --paper-border-color: color-mix(in srgb, #5fe0cc 8%, transparent);
+}

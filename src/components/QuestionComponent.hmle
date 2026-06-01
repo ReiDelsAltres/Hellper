@@ -1,0 +1,43 @@
+<paper-component class="qc-card">
+    <if condition="HasTags">
+        <paper-component class="qc-paper-tags">
+            <for value="tag" of="tags">
+                <re-chip size="medium" variant="outlined" set[color]="tag.color || 'tertiary'">
+                    <exp of="tag.text"></exp>
+                </re-chip>
+            </for>
+        </paper-component>
+    </if>
+    <paper-component class="qc-paper">
+        <re-chip class="chip floated" size="medium" color="empty" set[hidden]="indexHidden">
+            <exp of="displayIndex"></exp>
+        </re-chip>
+        <re-chip class="chip floated" size="medium" color="empty">
+            <exp of="questionId"></exp>
+        </re-chip>
+        <if condition="StarVisible">
+            <re-button class="qc-star" variant="text" size="small" on[click]="onStarClick()">
+                <re-icon variant="outlined" set[color]="starColor" size="small" set[icon]="starIcon"></re-icon>
+            </re-button>
+        </if>
+        <re-typography color="empty" class="typo">
+            <span class="qc-title">
+                <exp of="titleHtml" html-injection></exp>
+            </span>
+        </re-typography>
+    </paper-component>
+    <paper-component class="qc-answers">
+        <for index="i" value="ans" of="decoratedAnswers">
+            <re-button allow-wrap class="qc-answer" set[color]="ans.color" set[variant]="ans.variant"
+                set[disabled]="ans.disabled" on[click]="onAnswerClick(event, element, i)">
+                <exp of="ans.text" html-injection></exp>
+            </re-button>
+        </for>
+        <if condition="IsExamMode">
+            <re-button allow-wrap class="qc-skip" variant="filled" set[color]="skipColor" set[hidden]="skipHidden"
+                set[disabled]="skipDisabled" on[click]="onSkipClick(event, element)">
+                <exp of="skipLabel"></exp>
+            </re-button>
+        </if>
+    </paper-component>
+</paper-component>

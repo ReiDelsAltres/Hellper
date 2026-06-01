@@ -161,6 +161,11 @@
   display: contents;
 }
 
+/* <if> wrappers are transparent so the card inside becomes the grid item */
+.questions-container > for > if {
+  display: contents;
+}
+
 /* Truncated notice */
 .truncated-notice {
   text-align: center;
@@ -195,3 +200,5 @@
     width: 100%;
   }
 }
+
+/*# sourceMappingURL=TestingAllPage.html.css.map */

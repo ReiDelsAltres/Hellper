@@ -1,8 +1,4 @@
 import { Page, TemplateHolder } from "@Purper";
-interface DisplayAnswer {
-    text: string;
-    isCorrect: boolean;
-}
 export default class TestingAllPage extends Page {
     private allSubjects;
     private allItems;
@@ -38,9 +34,14 @@ export default class TestingAllPage extends Page {
     private readonly onScroll;
     loadMore(): void;
     private appendNextBatch;
+    /** Map an exam DisplayItem into the JSON-agnostic QuestionComponent model. */
+    private toModel;
+    /**
+     * Feed the currently visible exam questions into their <question-component> blocks.
+     * The blocks appear in the same relative order as the exam items in the visible slice,
+     * so we can zip them positionally.
+     */
+    private bindVisibleExamQuestions;
     private updateCounters;
-    answerColor(answer: DisplayAnswer): string;
-    answerVariant(answer: DisplayAnswer): string;
 }
-export {};
 //# sourceMappingURL=TestingAllPage.html.d.ts.map

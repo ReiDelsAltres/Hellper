@@ -16,12 +16,14 @@ import "./src/components/ReTooltip.html.js";
 import "./src/components/PaperComponent.html.js";
 import "./src/components/ReTextArea.html.js";
 import "./src/components/ReRangeSlider.html.js";
+import "./src/components/QuestionComponent.html.js";
 
 import "./src/pages/MainPage.html.js";
 import "./src/pages/TestingPage.html.js"
 import "./src/pages/TestingSubPage.html.js"
 import "./src/pages/TestingActualPage.html.js"
 import "./src/pages/TestingAllPage.html.js";
+import "./src/pages/GeneratorsPage.html.js";
 import "./src/pages/SettingsPage.html.js";
 
 const CoreModule = ModuleManager.register({
@@ -45,6 +47,7 @@ const CoreModule = ModuleManager.register({
         // ── Library JS ──
         "./out/src/lib/AppTheme.js",
         "./out/src/lib/SeededShuffle.js",
+        "./out/src/lib/PresetStore.js",
         "./out/src/lib/LanguageUtility.js",
         "./out/src/lib/SemanticString.js",
         "./out/src/frac/Testing.js",
@@ -104,7 +107,10 @@ const CoreModule = ModuleManager.register({
                 "./out/src/components/ReTooltip.html.js",
                 "./out/src/components/PaperComponent.html.js",
                 "./out/src/components/ReTextArea.html.js",
-                "./out/src/components/ReRangeSlider.html.js"
+                "./out/src/components/ReRangeSlider.html.js",
+                "./out/src/components/QuestionComponent.html.js",
+                "./src/components/QuestionComponent.hmle",
+                "./src/components/QuestionComponent.html.css"
             ],
         },
         {
@@ -116,6 +122,7 @@ const CoreModule = ModuleManager.register({
                 "./out/src/pages/TestingSubPage.html.js",
                 "./out/src/pages/TestingActualPage.html.js",
                 "./out/src/pages/TestingAllPage.html.js",
+                "./out/src/pages/GeneratorsPage.html.js",
                 "./out/src/pages/SettingsPage.html.js"
             ],
         },
@@ -449,6 +456,7 @@ async function registerNonCoreModules(): Promise<void> {
                     "./resources/Winter.theme.css",
                     "./out/src/lib/WinterTheme.js",
                     "./out/src/lib/FirePlaceTheme.js",
+                    "./out/src/lib/NeonTheme.js"
                 ],
             }
         ]
@@ -457,6 +465,7 @@ async function registerNonCoreModules(): Promise<void> {
     AdvancedDesignModule.addRegistration(async () => {
         await import("./src/lib/WinterTheme.js");
         await import("./src/lib/FirePlaceTheme.js");
+        await import("./src/lib/NeonTheme.js");
         await import("./src/components/ColorPalettePreview.html.js");
         await import("./src/pages/PalettePage.html.js");
         for (const reg of REGISTRY.splice(0)) await reg();

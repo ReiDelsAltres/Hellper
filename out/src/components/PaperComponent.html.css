@@ -1,7 +1,6 @@
 :host {
   display: block;
   padding: 8px;
-  margin: 8px;
   box-sizing: border-box;
   min-width: min-content;
   max-width: fit-content;
@@ -30,7 +29,8 @@
   --loc-paper-color: var(--color-empty);
 }
 
-:host([color=primary]), :host(:not([color])) {
+:host([color=primary]),
+:host(:not([color])) {
   --loc-paper-color: var(--color-primary);
 }
 
@@ -103,3 +103,5 @@
 :host(:is([alternate], [alternate=true])[color=error]) {
   --paper-background-color: var(--color-error);
 }
+
+/*# sourceMappingURL=PaperComponent.html.css.map */

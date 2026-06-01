@@ -2,13 +2,29 @@ import { Page, TemplateHolder } from "@Purper";
 export default class TestingActualPage extends Page {
     private params;
     private questions;
-    private statuses;
-    private selectedAnswers;
+    /** Reveal strategy passed to each <question-component>. */
+    private revealMode;
     private isExamMode;
     constructor(params?: string);
     dispose(): Promise<void>;
     protected preInit(): Promise<void>;
+    /** Convert a raw exam question into a JSON-agnostic QuestionModel. */
+    private toModel;
     protected postLoad(holder: TemplateHolder): Promise<void>;
+    /** All question blocks, in display order. */
+    private components;
+    /** Build the library header for a question of this test's subject. */
+    private headerFor;
+    /**
+     * A question reported its result. Record the outcome in the library (both flows fire
+     * `answered` exactly once per question — immediately on pick, or on reveal at finish).
+     * In the immediate (main) flow, also show the results popup once everything is answered.
+     */
+    onAnswered(event: CustomEvent): void;
+    /** Deferred (exam) flow: track selections (kept for future progress UI / hooks). */
+    onSelectionChange(event: CustomEvent): void;
+    onFavoriteToggle(event: CustomEvent): void;
+    private gatherCounts;
     private resolveEnding;
     /**
      * Build a ring of lights around the tree with count equal to number of questions
@@ -16,24 +32,11 @@ export default class TestingActualPage extends Page {
      */
     private updateChristmasLights;
     closeResult(): void;
-    handleClick(event: Event, element: HTMLElement, params: {
-        qidx: number;
-        aidx: number;
-        c0: string;
-        c1: string;
-        c2: string;
-    }): void;
-    /**
-     * РџРѕРєР°Р·Р°С‚СЊ popup РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ Р·Р°РІРµСЂС€РµРЅРёСЏ СЌРєР·Р°РјРµРЅР°
-     */
+    /** Show the confirmation popup before finishing the exam. */
     finishExam(): void;
-    /**
-     * РћС‚РјРµРЅРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР°
-     */
+    /** Cancel finishing the exam. */
     cancelFinish(): void;
-    /**
-     * РџРѕРґС‚РІРµСЂРґРёС‚СЊ Р·Р°РІРµСЂС€РµРЅРёРµ СЌРєР·Р°РјРµРЅР° - РїРѕРєР°Р·Р°С‚СЊ РІСЃРµ СЂРµР·СѓР»СЊС‚Р°С‚С‹
-     */
+    /** Confirm finishing the exam — reveal every question and show the results. */
     confirmFinish(): void;
     private regenerateShuffle;
 }

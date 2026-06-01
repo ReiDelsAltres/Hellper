@@ -1,0 +1,849 @@
+.gen-page {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    max-width: 1680px;
+}
+
+.gen-header {
+    text-align: center;
+    margin: 0 auto 28px;
+    max-width: 920px;
+}
+
+.gen-header re-typography[variant="body"] {
+    display: block;
+    max-width: 760px;
+    margin: 8px auto 0;
+    opacity: 0.75;
+}
+
+/* ── Two-column layout ── */
+.gen-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.gen-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.gen-right {
+    min-width: 0;
+}
+
+/* On wide screens: left (editor) | right (library) side-by-side.
+   Library becomes a sticky column so it stays in view while scrolling the form. */
+@media (min-width: 1100px) {
+    .gen-layout {
+        grid-template-columns: minmax(0, 1.45fr) minmax(360px, 420px);
+        gap: 28px;
+    }
+
+    .gen-right {
+        position: sticky;
+        top: 20px;
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(128, 128, 128, 0.35) transparent;
+    }
+
+    .gen-right::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .gen-right::-webkit-scrollbar-thumb {
+        background: rgba(128, 128, 128, 0.35);
+        border-radius: 3px;
+    }
+}
+
+.gen-section {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.gen-section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gen-section-head re-typography {
+    flex: 1 1 auto;
+    min-width: 180px;
+}
+
+.empty-hint,
+.library-hint {
+    display: block;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.library-hint {
+    margin-bottom: 12px;
+}
+
+/* ── Saved presets ── */
+.preset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.preset-grid>for {
+    display: contents;
+}
+
+.preset-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.preset-name {
+    font-weight: 600;
+}
+
+.preset-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.preset-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.preset-actions re-button {
+    flex: 1 1 auto;
+}
+
+/* ── Editor ── */
+.editor-row {
+    margin-bottom: 16px;
+}
+
+.editor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 200px;
+    flex: 1 1 220px;
+}
+
+.filter-label {
+    font-size: 0.78em;
+    opacity: 0.55;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.native-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    background: transparent;
+    color: inherit;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    min-height: 40px;
+    width: 100%;
+}
+
+.native-select:focus {
+    outline: 2px solid var(--color-primary, #6750a4);
+    outline-offset: -1px;
+}
+
+.option-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.count-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 160px;
+    flex: 1 1 180px;
+}
+
+.count-field re-input {
+    max-width: 220px;
+}
+
+.range-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1 1 320px;
+    min-width: 240px;
+}
+
+.range-field re-range-slider {
+    width: 100%;
+}
+
+/* ── Drop zones ── */
+.dropzones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.dropzone {
+    box-sizing: border-box;
+    border: 2px dashed rgba(128, 128, 128, 0.4);
+    border-radius: 12px;
+    padding: 14px;
+    min-height: 120px;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+    background: var(--paper-surface, transparent);
+}
+
+.dropzone-required {
+    border-color: color-mix(in srgb, var(--color-success, #2e7d32) 55%, transparent);
+}
+
+.dropzone-excluded {
+    border-color: color-mix(in srgb, var(--color-error, #c62828) 55%, transparent);
+}
+
+.dropzone.drag-over {
+    background-color: rgba(128, 128, 128, 0.12);
+    border-style: solid;
+}
+
+.dropzone-required.drag-over {
+    border-color: var(--color-success, #2e7d32);
+    background-color: color-mix(in srgb, var(--color-success, #2e7d32) 14%, transparent);
+}
+
+.dropzone-excluded.drag-over {
+    border-color: var(--color-error, #c62828);
+    background-color: color-mix(in srgb, var(--color-error, #c62828) 14%, transparent);
+}
+
+.dropzone-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+.dropzone-hint {
+    display: block;
+    font-size: 0.82em;
+    opacity: 0.55;
+    margin-bottom: 8px;
+}
+
+.chip-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.chip-list>for {
+    display: contents;
+}
+
+.picked-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 6px 4px 10px;
+    border-radius: 8px;
+    background-color: color-mix(in srgb, var(--paper-background-color) 80%, black);
+}
+
+.picked-id {
+    flex: 0 0 auto;
+    font-weight: 700;
+    font-size: 0.82em;
+    opacity: 0.8;
+    min-width: 28px;
+}
+
+.picked-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.88em;
+}
+
+.picked-chip re-button {
+    flex: 0 0 auto;
+}
+
+.editor-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.editor-actions re-button {
+    min-width: 0;
+}
+
+.status-text {
+    display: block;
+    margin-top: 10px;
+    min-height: 1.2em;
+}
+
+/* ── Favourites ── */
+.gen-section--favorites {
+    margin-top: 0;
+}
+
+/* ── Library filters ── */
+.lib-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.lib-filter-row .filter-group {
+    flex: 1 1 180px;
+    min-width: 160px;
+}
+
+/* ── Library ── */
+.gen-section--library {
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 0;
+}
+
+.search-row {
+    margin-bottom: 12px;
+}
+
+.library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.library-container>for {
+    display: contents;
+}
+
+.library-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 1099px) {
+
+    .gen-left {
+        gap: 16px;
+    }
+
+    .gen-right {
+        margin-top: 0;
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    .gen-page {
+        padding: 24px 12px;
+    }
+
+    .dropzones {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group,
+    .count-field,
+    .range-field {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .gen-page {
+        padding: 16px 8px;
+    }
+
+    .editor-grid,
+    .option-inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .editor-actions re-button {
+        width: 100%;
+    }
+}
+
+``` // filepath: c:\Projects\Hellper\src\pages\GeneratorsPage.html.css
+
+.gen-page {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    max-width: 1680px;
+}
+
+.gen-header {
+    text-align: center;
+    margin: 0 auto 28px;
+    max-width: 920px;
+}
+
+.gen-header re-typography[variant="body"] {
+    display: block;
+    max-width: 760px;
+    margin: 8px auto 0;
+    opacity: 0.75;
+}
+
+/* ── Two-column layout ── */
+.gen-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.gen-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.gen-right {
+    min-width: 0;
+}
+
+/* On wide screens: left (editor) | right (library) side-by-side.
+   Library becomes a sticky column so it stays in view while scrolling the form. */
+@media (min-width: 1100px) {
+    .gen-layout {
+        grid-template-columns: minmax(0, 1.45fr) minmax(360px, 420px);
+        gap: 28px;
+    }
+
+    .gen-right {
+        position: sticky;
+        top: 20px;
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(128, 128, 128, 0.35) transparent;
+    }
+
+    .gen-right::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .gen-right::-webkit-scrollbar-thumb {
+        background: rgba(128, 128, 128, 0.35);
+        border-radius: 3px;
+    }
+}
+
+.gen-section {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.gen-section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gen-section-head re-typography {
+    flex: 1 1 auto;
+    min-width: 180px;
+}
+
+.empty-hint,
+.library-hint {
+    display: block;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.library-hint {
+    margin-bottom: 12px;
+}
+
+/* ── Saved presets ── */
+.preset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.preset-grid>for {
+    display: contents;
+}
+
+.preset-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.preset-name {
+    font-weight: 600;
+}
+
+.preset-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.preset-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.preset-actions re-button {
+    flex: 1 1 auto;
+}
+
+/* ── Editor ── */
+.editor-row {
+    margin-bottom: 16px;
+}
+
+.editor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 200px;
+    flex: 1 1 220px;
+}
+
+.filter-label {
+    font-size: 0.78em;
+    opacity: 0.55;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.native-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    background: transparent;
+    color: inherit;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    min-height: 40px;
+    width: 100%;
+}
+
+.native-select:focus {
+    outline: 2px solid var(--color-primary, #6750a4);
+    outline-offset: -1px;
+}
+
+.option-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.count-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 160px;
+    flex: 1 1 180px;
+}
+
+.count-field re-input {
+    max-width: 220px;
+}
+
+.range-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1 1 320px;
+    min-width: 240px;
+}
+
+.range-field re-range-slider {
+    width: 100%;
+}
+
+/* ── Drop zones ── */
+.dropzones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.dropzone {
+    box-sizing: border-box;
+    border: 2px dashed rgba(128, 128, 128, 0.4);
+    border-radius: 12px;
+    padding: 14px;
+    min-height: 120px;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+    background: var(--paper-surface, transparent);
+}
+
+.dropzone-required {
+    border-color: color-mix(in srgb, var(--color-success, #2e7d32) 55%, transparent);
+}
+
+.dropzone-excluded {
+    border-color: color-mix(in srgb, var(--color-error, #c62828) 55%, transparent);
+}
+
+.dropzone.drag-over {
+    background-color: rgba(128, 128, 128, 0.12);
+    border-style: solid;
+}
+
+.dropzone-required.drag-over {
+    border-color: var(--color-success, #2e7d32);
+    background-color: color-mix(in srgb, var(--color-success, #2e7d32) 14%, transparent);
+}
+
+.dropzone-excluded.drag-over {
+    border-color: var(--color-error, #c62828);
+    background-color: color-mix(in srgb, var(--color-error, #c62828) 14%, transparent);
+}
+
+.dropzone-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+.dropzone-hint {
+    display: block;
+    font-size: 0.82em;
+    opacity: 0.55;
+    margin-bottom: 8px;
+}
+
+.chip-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.chip-list>for {
+    display: contents;
+}
+
+.picked-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 6px 4px 10px;
+    border-radius: 8px;
+    background-color: color-mix(in srgb, var(--paper-background-color) 80%, black);
+}
+
+.picked-id {
+    flex: 0 0 auto;
+    font-weight: 700;
+    font-size: 0.82em;
+    opacity: 0.8;
+    min-width: 28px;
+}
+
+.picked-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.88em;
+}
+
+.picked-chip re-button {
+    flex: 0 0 auto;
+}
+
+.editor-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.editor-actions re-button {
+    min-width: 0;
+}
+
+.status-text {
+    display: block;
+    margin-top: 10px;
+    min-height: 1.2em;
+}
+
+/* ── Favourites ── */
+.gen-section--favorites {
+    margin-top: 0;
+}
+
+/* ── Library filters ── */
+.lib-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.lib-filter-row .filter-group {
+    flex: 1 1 180px;
+    min-width: 160px;
+}
+
+/* ── Library ── */
+.gen-section--library {
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 0;
+}
+
+.search-row {
+    margin-bottom: 12px;
+}
+
+.library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.library-container>for {
+    display: contents;
+}
+
+.library-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 1099px) {
+
+    .gen-left {
+        gap: 16px;
+    }
+
+    .gen-right {
+        margin-top: 0;
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    .gen-page {
+        padding: 24px 12px;
+    }
+
+    .dropzones {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-group,
+    .count-field,
+    .range-field {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    .gen-page {
+        padding: 16px 8px;
+    }
+
+    .editor-grid,
+    .option-inputs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .editor-actions re-button {
+        width: 100%;
+    }
+}
