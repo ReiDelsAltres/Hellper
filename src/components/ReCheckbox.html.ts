@@ -37,7 +37,8 @@ export default class ReCheckbox extends Component {
         }
         event.preventDefault();
         const next = this.indeterminate.value ? true : !this.checked.value;
-        if (this.indeterminate.value) this.indeterminate.value = false;
+        if (this.indeterminate.value) this.indeterminate.setObject(false);
+        this.checked.setObject(next);
         this.dispatchEvent(new CustomEvent('change', {
             bubbles: true,
             detail: { checked: next }

@@ -1664,7 +1664,7 @@
         },
         {
             "Id": 152,
-            "Title": "Найдите обратную функцию: $f: \\mathbb{P} \\to \\mathbb{P}$, $f(x)=\\frac{1}{2}(2x+4)$ <re-chip color='error'></re-chip>",
+            "Title": "Найдите обратную функцию: $f: \\mathbb{P} \\to \\mathbb{P}$, $f(x)=\\frac{1}{2}(2x+4)$ <re-chip color='error'>Ошибка</re-chip>",
             "Answers": [
                 "$f^{-1}(x)=x-2$",
                 "$f^{-1}(x)=x+2$",
