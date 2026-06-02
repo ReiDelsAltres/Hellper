@@ -88,10 +88,9 @@ export default class TestingActualPage extends Page {
         // then assign the final display position.
         let seed = this.params.randomSource;
         models.forEach((model, i) => {
-            if (!this.params.noShuffle) {
-                model.answers = SeededShuffle.shuffle(model.answers, seed);
-                seed = SeededShuffle.deriveNextSeed(seed);
-            }
+            model.answers = SeededShuffle.shuffle(model.answers, seed);
+            seed = SeededShuffle.deriveNextSeed(seed);
+
             model.index = i + 1;
             model.title = KatexUtils.renderInlineString(model.title);
             model.answers.forEach(a => a.text = KatexUtils.renderInlineString(a.text));
