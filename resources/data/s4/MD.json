@@ -1411,10 +1411,10 @@
         },
         {
             "Id": 129,
-            "Title": "Verilmiş massiv üzərində əməliyyat aparıldıqda nəticə nə olur:\nconst numbers = [2, 4, 6, 8]; let result = numbers[numbers.length - 2]; alert(result);",
+            "Title": "Verilmiş massiv üzərində əməliyyat aparıldıqda nəticə nə olur:\nconst numbers = [2, 4, 6, 8]; let result = numbers[numbers.length - 2]; alert(result); <re-chip color='error'>Ошибка</re-chip>",
             "Answers": [
-                "6",
                 "8",
+                "6",
                 "4",
                 "2",
                 "undefined"
