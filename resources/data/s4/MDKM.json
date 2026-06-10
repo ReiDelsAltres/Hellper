@@ -734,7 +734,7 @@
                 "{} Фигурные скобки",
                 "[] Квадратные скобки",
                 "() Круглые скобки",
-                "<> Угловые скобки",
+                "&lt; > Угловые скобки",
                 "\"\" Кавычки"
             ]
         },
@@ -2767,9 +2767,9 @@
             "Title": "Как правильно написать однострочный комментарий в JavaScript",
             "Answers": [
                 "// Это комментарий",
-                "<!-- Это комментарий",
+                "&lt; !-- Это комментарий",
                 "/* Это комментарий",
-                "<< Это комментарий",
+                "&lt; &lt;  Это комментарий",
                 "** Это комментарий"
             ]
         },
@@ -3215,7 +3215,7 @@
         },
         {
             "Id": 293,
-            "Title": "Для чего используется Fragment (<> </>)?",
+            "Title": "Для чего используется Fragment (&lt; > &lt; />)?",
             "Answers": [
                 "Позволяет группировать элементы без добавления лишнего DOM-узла",
                 "Используется только для добавления стилей к элементам",
@@ -3382,10 +3382,10 @@
             "Id": 308,
             "Title": "Какой правильный вариант кода для кнопки с onclick?",
             "Answers": [
-                "<button onclick=\"myFunction()\">Нажать</button>",
-                "<button onclick=myFunction()>Нажать</button>",
-                "<button onclick=\"myFunction()\">Нажать",
-                "<button onclick \"Function()\">Нажать</button>",
+                "&lt; button onclick=\"myFunction()\">Нажать&lt; /button>",
+                "&lt; button onclick=myFunction()>Нажать&lt; /button>",
+                "&lt; button onclick=\"myFunction()\">Нажать",
+                "&lt; button onclick \"Function()\">Нажать&lt; /button>",
                 "button onclick=\"myFunction()\">Нажать /button"
             ]
         },
