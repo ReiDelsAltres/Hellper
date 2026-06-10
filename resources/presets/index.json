@@ -1,5 +1,6 @@
 {
     "presets": [
-        "a1.json"
+        "a1.json",
+        "a2.json"
     ]
 }
